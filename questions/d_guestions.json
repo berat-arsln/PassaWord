@@ -1,1 +1,7 @@
-
+[
+  {
+    "soru": "Okulu bitirdikten sonra alınan belge",
+    "cevap": "Diploma",
+    "alternatifler": ["diploma", "DİPLOMA"]
+  }
+]
