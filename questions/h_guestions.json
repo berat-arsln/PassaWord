@@ -1,1 +1,7 @@
-
+[
+  {
+    "soru": "Harry Potter'ın büyücülük okulu",
+    "cevap": "Hogwarts",
+    "alternatifler": ["hogwarts", "HOGWARTS"]
+  }
+]
