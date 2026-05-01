@@ -1,1 +1,7 @@
-
+[
+  {
+    "soru": "Şehirlerarası otobüslerin yolcu alıp bıraktığı yer",
+    "cevap": "Otogar",
+    "alternatifler": ["otogar", "OTOGAR"]
+  }
+]
