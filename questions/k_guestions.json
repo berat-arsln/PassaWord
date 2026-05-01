@@ -1,1 +1,7 @@
-
+[
+  {
+    "soru": "Fotoğrafçılıkta görüntüyü çerçeve içine alma",
+    "cevap": "Kadraj",
+    "alternatifler": ["kadraj", "KADRAJ"]
+  }
+]
