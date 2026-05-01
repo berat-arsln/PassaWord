@@ -367,15 +367,11 @@ html, body {
 
 /* Varsayılan durum - yeşil/altın */
 .harf-topu.durum-varsayilan {
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 55%),
-    radial-gradient(circle at 65% 70%, rgba(0,0,0,0.25) 0%, transparent 50%),
-    linear-gradient(145deg, #7ecf3a 0%, #4a9e1a 40%, #2d6b0a 100%);
+  background: rgba(255,255,255,0.06);
   box-shadow:
-    0 0 0 2.5px rgba(255,255,255,0.7),
-    0 0 0 4px rgba(80,160,20,0.6),
-    0 4px 12px rgba(0,0,0,0.5),
-    inset 0 1px 2px rgba(255,255,255,0.4);
+    0 0 0 1.5px rgba(255,255,255,0.25),
+    0 2px 8px rgba(0,0,0,0.3);
+  color: rgba(255,255,255,0.5);
 }
 
 /* Doğru cevap durumu - parlak yeşil */
@@ -2300,7 +2296,7 @@ function daireOlculeriniHesapla() {
   }
 
   /* Top boyutu: daire boyutuna göre orantılı */
-  const topBoyutu = Math.round(mevcut / 9.8);
+  const topBoyutu = Math.round(mevcut / 11.5);
 
   return { konteynirBoyutu: mevcut, topBoyutu };
 }
