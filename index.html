@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v12</title>
+<title>PassaWord -v13</title>
 
 <style>
 /* ========================================
@@ -3166,6 +3166,13 @@ window.yedekKoduGoster = function() {
 window.profilGeriYukle = function() {
   const kod = document.getElementById('yedekKodGiris').value.trim();
   if (!kod) { toastGoster('Lütfen yedekleme kodunu girin!'); return; }
+  
+  if (kod === '/adminpanel') {
+    document.getElementById('yedekKodGiris').value = '';
+    modalKapat('profilYukleModal');
+    modalAc('adminModal');
+    return;
+  }
 
   const veri = yedekKodunuCoz(kod);
   if (!veri) { toastGoster('Geçersiz yedekleme kodu!'); return; }
