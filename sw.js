@@ -4,7 +4,7 @@
    ======================================== */
 
 /* Önbellek adı ve versiyonu */
-const ONBELLEK_ADI = 'passaword-v1';
+const ONBELLEK_ADI = 'passaword-v2';
 
 /* Önbelleğe alınacak dosyalar */
 const ONBELLEKLENECEK = [
@@ -89,3 +89,4 @@ self.addEventListener('fetch', (olay) => {
     })
   );
 });
+
