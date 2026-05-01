@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v18</title>
+<title>PassaWord -v19</title>
 
 <style>
 /* =======================================
@@ -775,6 +775,26 @@ html, body {
   background: rgba(255,255,255,0.18);
   border-radius: 2px;
   margin: 12px auto 18px;
+}
+   .modal-kapat {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal-sayfa {
+  position: relative;
 }
 
 /* Modal başlığı */
@@ -1582,6 +1602,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="ayarlarModal" onclick="disaTiklaKapat(event,'ayarlarModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">⚙️ AYARLAR</div>
 
     <!-- Aktif profil bilgisi -->
@@ -1661,6 +1683,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="skorModal" onclick="disaTiklaKapat(event,'skorModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">🏆 SKOR TABLOSU</div>
 
     <div class="sekmeler">
@@ -1684,6 +1708,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="bilgiModal" onclick="disaTiklaKapat(event,'bilgiModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">ℹ️ NASIL OYNANIR?</div>
     <div class="bilgi-icerik">
       <div class="bilgi-blok">
@@ -1756,6 +1782,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="geriBildirimModal" onclick="disaTiklaKapat(event,'geriBildirimModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">💬 GERİ BİLDİRİM</div>
     <div class="alt-modal">
       <div class="form-grup">
@@ -1808,6 +1836,8 @@ textarea.giris-alani {
 <!-- Profil Ekle Modali -->
 <div class="modal-arkaplan" id="profilEkleModal" onclick="disaTiklaKapat(event,'profilEkleModal')">
   <div class="modal-sayfa">
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-cubuk"></div>
     <div class="modal-baslik">➕ YENİ PROFİL</div>
     <div class="alt-modal">
@@ -1832,6 +1862,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="profilSecModal" onclick="disaTiklaKapat(event,'profilSecModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">👤 PROFİL SEÇ</div>
     <div class="profil-liste" id="profilListesi"></div>
   </div>
@@ -1841,6 +1873,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="yedekKodModal" onclick="disaTiklaKapat(event,'yedekKodModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">🔑 YEDEKLEME KODU</div>
     <div class="alt-modal">
       <p style="font-size:13px;color:var(--metin-soluk);margin-bottom:12px;line-height:1.6;">
@@ -1856,6 +1890,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="profilYukleModal" onclick="disaTiklaKapat(event,'profilYukleModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">📥 PROFİL GERİ YÜKLE</div>
     <div class="alt-modal">
       <div class="form-grup">
@@ -1878,6 +1914,8 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="adminModal" onclick="disaTiklaKapat(event,'adminModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
+     <div class="modal-cubuk"></div>
+<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
     <div class="modal-baslik">🔐 ADMİN PANELİ</div>
 
     <!-- Şifre giriş ekranı -->
