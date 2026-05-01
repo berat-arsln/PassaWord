@@ -4,7 +4,7 @@
    ======================================== */
 
 /* Önbellek adı ve versiyonu */
-const ONBELLEK_ADI = 'passaword-v2';
+const ONBELLEK_ADI = 'passaword-v3';
 
 /* Önbelleğe alınacak dosyalar */
 const ONBELLEKLENECEK = [
