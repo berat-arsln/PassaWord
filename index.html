@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v14</title>
+<title>PassaWord -v15</title>
 
 <style>
 /* ========================================
@@ -1771,7 +1771,7 @@ textarea.giris-alani {
     placeholder="Mesajınızı buraya yazın..."
   ></textarea>
 </div>
-<div class="form-grup" id="alternatifGrup" style="display:none;">
+<div class="form-grup" id="alternatifGrup" style="display:block;">
   <span class="form-etiket">Doğru Cevap</span>
   <input
     type="text"
@@ -3036,11 +3036,13 @@ window.altTurGuncelle = function(kategori) {
   const grup = document.getElementById('altTurGrubu');
   grup.innerHTML = '';
    /* Soru önerisi seçilince alternatif alanını göster */
-  document.getElementById('alternatifGrup').style.display = 
-    kategori === 'oneri' ? 'block' : 'none';
+  const seciliAltTur = document.querySelector('#altTurGrubu .secim-cipi.secili');
+const soruOneriMi = seciliAltTur && seciliAltTur.textContent.includes('Soru');
+document.getElementById('alternatifGrup').style.display = soruOneriMi ? 'block' : 'none';
+   
 
   const secenekler = kategori === 'oneri'
-    ? [['❓ Soru Önerisi', true], ['🎮 Oyun Önerisi', false]]
+    ? [['❓ Soru Önerisi', true], ['🎮 Oyunla İlgili Öneri', false]]
     : [['🐛 Soru Hatası', true], ['⚙️ Teknik Hata', false], ['🔤 Harf/Soru Uyumsuzluğu', false]];
 
   secenekler.forEach(([metin, secili]) => {
@@ -3059,6 +3061,11 @@ window.cipSec = function(el, grupId) {
   el.closest('.secim-grubu').querySelectorAll('.secim-cipi')
     .forEach(c => c.classList.remove('secili'));
   el.classList.add('secili');
+
+  if (grupId === 'altTurGrubu') {
+    const soruOneriMi = el.textContent.includes('Soru');
+    document.getElementById('alternatifGrup').style.display = soruOneriMi ? 'block' : 'none';
+  }
 };
 
 /* ========================================
