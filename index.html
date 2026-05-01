@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v16</title>
+<title>PassaWord -v17</title>
 
 <style>
-/* ========================================
+/* =======================================
    GENEL SIFERLAMA VE TEMEL DEĞİŞKENLER
    Tüm elemanlarda tutarlı stil için
    ======================================== */
@@ -275,6 +275,7 @@ html, body {
   padding: 10px 14px 6px;
   flex-shrink: 0;
   z-index: 10;
+  position: relative;
 }
 
 /* Header başlık yazısı */
@@ -1450,7 +1451,7 @@ textarea.giris-alani {
 <div class="ekran gizli" id="baslangicEkrani">
   <div class="header">
     <button class="header-buton" onclick="modalAc('ayarlarModal')" aria-label="Ayarlar">⚙️</button>
-    <span class="header-baslik">PassaWord</span>
+    <span class="header-baslik" style="visibility:hidden;">PassaWord</span>
     <div class="header-sag">
       <button class="header-buton" onclick="modalAc('skorModal')" aria-label="Skor Tablosu">🏆</button>
       <button class="header-buton" onclick="modalAc('bilgiModal')" aria-label="Nasıl Oynanır">ℹ️</button>
