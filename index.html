@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v9</title>
+<title>PassaWord -v10</title>
 
 <style>
 /* ========================================
@@ -2586,7 +2586,7 @@ function oyunuBitir() {
   oyunDurumu.calisiyor = false;
 
   /* Süre bonusu */
-  const bonus = Math.max(0, oyunDurumu.kalanSure);
+  const bonus = Math.max(0, Math.floor(oyunDurumu.kalanSure / 5));
   oyunDurumu.puan += bonus;
 
   /* Skoru kaydet */
