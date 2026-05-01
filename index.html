@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v8</title>
+<title>PassaWord -v9</title>
 
 <style>
 /* ========================================
@@ -2832,8 +2832,27 @@ function ozelKlavyeOlustur() {
             <line x1="21" y1="4" x2="14" y2="11"
               stroke="white" stroke-width="2" stroke-linecap="round"/>
           </svg>`;
-        tusEl.addEventListener('click', () => tusaBasildi('SİL'));
-
+        let silZamanlayi = null;
+let silBaslangic = null;
+tusEl.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  silBaslangic = setTimeout(() => {
+    silZamanlayi = setInterval(() => tusaBasildi('SİL'), 80);
+  }, 400);
+});
+tusEl.addEventListener('touchend', () => {
+  clearTimeout(silBaslangic);
+  clearInterval(silZamanlayi);
+  silZamanlayi = null;
+  tusaBasildi('SİL');
+});
+tusEl.addEventListener('touchcancel', () => {
+  clearTimeout(silBaslangic);
+  clearInterval(silZamanlayi);
+  silZamanlayi = null;
+});
+tusEl.addEventListener('click', () => {});
+         
       } else if (tus === '↵') {
         /* Enter tuşu - SVG */
         tusEl.classList.add('tus-enter');
