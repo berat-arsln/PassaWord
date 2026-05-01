@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v13</title>
+<title>PassaWord -v14</title>
 
 <style>
 /* ========================================
@@ -2990,13 +2990,18 @@ window.geriBildirimGonder = async function() {
   /* Firebase'e kaydet */
   try {
     const geriBildirimRef = ref(veritabani, 'geribildirimler');
-    await push(geriBildirimRef, {
-      profilAdi,
-      kategori,
-      altTur,
-      mesaj,
-      tarih: new Date().toISOString()
-    });
+    const cevap = document.getElementById('geriBildirimCevap').value.trim();
+const alternatif = document.getElementById('geriBildirimAlternatif').value.trim();
+
+await push(geriBildirimRef, {
+  profilAdi,
+  kategori,
+  altTur,
+  mesaj,
+  cevap: cevap || '',
+  alternatifler: alternatif || '',
+  tarih: new Date().toISOString()
+});
   } catch (hata) {
     console.warn('Firebase kayıt hatası:', hata);
   }
@@ -3030,6 +3035,9 @@ window.geriBildirimGonder = async function() {
 window.altTurGuncelle = function(kategori) {
   const grup = document.getElementById('altTurGrubu');
   grup.innerHTML = '';
+   /* Soru önerisi seçilince alternatif alanını göster */
+  document.getElementById('alternatifGrup').style.display = 
+    kategori === 'oneri' ? 'block' : 'none';
 
   const secenekler = kategori === 'oneri'
     ? [['❓ Soru Önerisi', true], ['🎮 Oyun Önerisi', false]]
