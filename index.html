@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v7</title>
+<title>PassaWord -v8</title>
 
 <style>
 /* ========================================
@@ -2069,7 +2069,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let sonDokunma = 0;
   document.addEventListener('touchend', (e) => {
     const simdi = Date.now();
-    if (simdi - sonDokunma < 300) e.preventDefault();
+    if (simdi - sonDokunma < 1) e.preventDefault();
     sonDokunma = simdi;
   }, { passive: false });
 });
