@@ -1764,13 +1764,33 @@ textarea.giris-alani {
         </div>
       </div>
       <div class="form-grup">
-        <span class="form-etiket">Mesajınız</span>
-        <textarea
-          class="giris-alani"
-          id="geriBildirimMesaj"
-          placeholder="Mesajınızı buraya yazın..."
-        ></textarea>
-      </div>
+  <span class="form-etiket">Mesajınız</span>
+  <textarea
+    class="giris-alani"
+    id="geriBildirimMesaj"
+    placeholder="Mesajınızı buraya yazın..."
+  ></textarea>
+</div>
+<div class="form-grup" id="alternatifGrup" style="display:none;">
+  <span class="form-etiket">Doğru Cevap</span>
+  <input
+    type="text"
+    class="giris-alani"
+    id="geriBildirimCevap"
+    placeholder="Doğru cevabı yazın..."
+    style="text-align:left;"
+    autocomplete="off"
+  >
+  <span class="form-etiket" style="margin-top:10px;display:block;">Alternatif Cevaplar</span>
+  <input
+    type="text"
+    class="giris-alani"
+    id="geriBildirimAlternatif"
+    placeholder="Virgülle ayırın: cevap1, cevap2..."
+    style="text-align:left;"
+    autocomplete="off"
+  >
+</div>
       <button class="gonder-buton" onclick="geriBildirimGonder()">Gönder ✉️</button>
     </div>
   </div>
