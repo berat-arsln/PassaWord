@@ -1,1 +1,2592 @@
-
+[
+  {
+    "soru": "Yarışta bronz madalya alan sıralamanın sahibi",
+    "cevap": "Üçüncü",
+    "alternatifler": [
+      "ÜÇÜNCÜ",
+      "ucuncu",
+      "üçüncü",
+      "UCUNCU"
+    ]
+  },
+  {
+    "soru": "Yarışı burada bitiren bronz madalyayı alır",
+    "cevap": "Üçüncü",
+    "alternatifler": [
+      "ÜÇÜNCÜ",
+      "ucuncu",
+      "üçüncü",
+      "UCUNCU"
+    ]
+  },
+  {
+    "soru": "Afrika'nın güney ucu Agulhas ile karıştırılan yer",
+    "cevap": "Ümit burnu",
+    "alternatifler": [
+      "ümit burnu",
+      "ÜMIT BURNU",
+      "umit burnu",
+      "UMIT BURNU"
+    ]
+  },
+  {
+    "soru": "Güney Afrika’da yer alan, ana karanın en güney ucu",
+    "cevap": "Ümit burnu",
+    "alternatifler": [
+      "ümit burnu",
+      "ÜMIT BURNU",
+      "umit burnu",
+      "UMIT BURNU"
+    ]
+  },
+  {
+    "soru": "İdrar yolları ve üreme sistemlerine bakan tıp dalı",
+    "cevap": "Üroloji",
+    "alternatifler": [
+      "üroloji",
+      "ÜROLOJI",
+      "uroloji",
+      "UROLOJI"
+    ]
+  },
+  {
+    "soru": "Kız Kulesi'nin bağlı olduğu ilçe",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "Kız Kulesi'nin yanıbaşındaki ilçe",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "Türkçede sesli harflerin arasındaki ahenk",
+    "cevap": "Ünlü uyumu",
+    "alternatifler": [
+      "ÜNLÜ UYUMU",
+      "ünlü uyumu",
+      "unlu uyumu",
+      "UNLU UYUMU"
+    ]
+  },
+  {
+    "soru": "Gerçekleşmesi çok zor ya da imkansız düşünce",
+    "cevap": "Ütopya",
+    "alternatifler": [
+      "ütopya",
+      "UTOPYA",
+      "ÜTOPYA",
+      "utopya"
+    ]
+  },
+  {
+    "soru": "Bir şeyi yapmak için istek duymayan kişi",
+    "cevap": "Üşengeç",
+    "alternatifler": [
+      "USENGEC",
+      "üşengeç",
+      "ÜŞENGEÇ",
+      "usengec"
+    ]
+  },
+  {
+    "soru": "2008 yapımı Nuri Bilge Ceylan filmi",
+    "cevap": "Üç maymun",
+    "alternatifler": [
+      "üç maymun",
+      "uc maymun",
+      "ÜÇ MAYMUN",
+      "UC MAYMUN"
+    ]
+  },
+  {
+    "soru": "Gömlekteki kırışıklıkların buharla açıldığı yüzey",
+    "cevap": "Ütü masası",
+    "alternatifler": [
+      "UTU MASASI",
+      "ÜTÜ MASASI",
+      "utu masasi",
+      "ütü masası"
+    ]
+  },
+  {
+    "soru": "Kırışıklıkların buharla açıldığı yer",
+    "cevap": "Ütü masası",
+    "alternatifler": [
+      "UTU MASASI",
+      "ÜTÜ MASASI",
+      "utu masasi",
+      "ütü masası"
+    ]
+  },
+  {
+    "soru": "Gazap __, John Steinbeck'in bir kitabı",
+    "cevap": "Üzümleri",
+    "alternatifler": [
+      "üzümleri",
+      "ÜZÜMLERI",
+      "UZUMLERI",
+      "uzumleri"
+    ]
+  },
+  {
+    "soru": "İstanbul Anadolu Yakası'nın en kalabalık ilçesi",
+    "cevap": "Ümraniye",
+    "alternatifler": [
+      "ümraniye",
+      "ÜMRANIYE",
+      "UMRANIYE",
+      "umraniye"
+    ]
+  },
+  {
+    "soru": "Tamircilerin kullandığı, ip yumağını andıran bez",
+    "cevap": "Üstüpü",
+    "alternatifler": [
+      "üstüpü",
+      "USTUPU",
+      "ÜSTÜPÜ",
+      "ustupu"
+    ]
+  },
+  {
+    "soru": "Ustaların kullandığı, ip yumağını andıran bir bez",
+    "cevap": "Üstüpü",
+    "alternatifler": [
+      "üstüpü",
+      "USTUPU",
+      "ÜSTÜPÜ",
+      "ustupu"
+    ]
+  },
+  {
+    "soru": "Bir şeyden umudu olmayan",
+    "cevap": "Ümitsiz",
+    "alternatifler": [
+      "ümitsiz",
+      "umitsiz",
+      "UMITSIZ",
+      "ÜMITSIZ"
+    ]
+  },
+  {
+    "soru": "Bir Kemalettin Tuğcu eserine dayanan yerli dizi",
+    "cevap": "Üvey baba",
+    "alternatifler": [
+      "ÜVEY BABA",
+      "UVEY BABA",
+      "uvey baba",
+      "üvey baba"
+    ]
+  },
+  {
+    "soru": "Nefesle çalınan enstrümanlar",
+    "cevap": "Üflemeli",
+    "alternatifler": [
+      "üflemeli",
+      "ÜFLEMELI",
+      "uflemeli",
+      "UFLEMELI"
+    ]
+  },
+  {
+    "soru": "Nefesle çalınan çalgı türünün genel adı",
+    "cevap": "Üflemeli",
+    "alternatifler": [
+      "üflemeli",
+      "ÜFLEMELI",
+      "uflemeli",
+      "UFLEMELI"
+    ]
+  },
+  {
+    "soru": "Adını yetiştirdiği meyveden alan Erzincan ilçesi",
+    "cevap": "Üzümlü",
+    "alternatifler": [
+      "üzümlü",
+      "UZUMLU",
+      "uzumlu",
+      "ÜZÜMLÜ"
+    ]
+  },
+  {
+    "soru": "Bir şeyi bölüştürme, paylaştırma",
+    "cevap": "Üleştirme",
+    "alternatifler": [
+      "ULESTIRME",
+      "ÜLEŞTIRME",
+      "ulestirme",
+      "üleştirme"
+    ]
+  },
+  {
+    "soru": "Elbiselerin buruşukluğunu gidermek",
+    "cevap": "Ütülemek",
+    "alternatifler": [
+      "ütülemek",
+      "ÜTÜLEMEK",
+      "utulemek",
+      "UTULEMEK"
+    ]
+  },
+  {
+    "soru": "Bir devletin başka bir devlete verdiği nota",
+    "cevap": "Ültimatom",
+    "alternatifler": [
+      "ÜLTIMATOM",
+      "ULTIMATOM",
+      "ültimatom",
+      "ultimatom"
+    ]
+  },
+  {
+    "soru": "Çekiç ve örs dışındaki orta kulak kemiği",
+    "cevap": "Üzengi",
+    "alternatifler": [
+      "uzengi",
+      "UZENGI",
+      "ÜZENGI",
+      "üzengi"
+    ]
+  },
+  {
+    "soru": "Güvercingillerden göçmen bir kuş",
+    "cevap": "Üveyik",
+    "alternatifler": [
+      "UVEYIK",
+      "uveyik",
+      "ÜVEYIK",
+      "üveyik"
+    ]
+  },
+  {
+    "soru": "Fabrikanın Türkçe kökenli karşılığı",
+    "cevap": "Üretimevi",
+    "alternatifler": [
+      "uretimevi",
+      "üretimevi",
+      "ÜRETIMEVI",
+      "URETIMEVI"
+    ]
+  },
+  {
+    "soru": "Matrix ve Yüzüklerin Efendisi bu türe örnektir",
+    "cevap": "Üçleme",
+    "alternatifler": [
+      "üçleme",
+      "ucleme",
+      "UCLEME",
+      "ÜÇLEME"
+    ]
+  },
+  {
+    "soru": "Merkeziyetçi devlet yapısı",
+    "cevap": "Üniter",
+    "alternatifler": [
+      "ÜNITER",
+      "üniter",
+      "UNITER",
+      "uniter"
+    ]
+  },
+  {
+    "soru": "Kırışıklıkları açarken kumaş yanmasın diye serilir",
+    "cevap": "Ütü bezi",
+    "alternatifler": [
+      "UTU BEZI",
+      "utu bezi",
+      "ütü bezi",
+      "ÜTÜ BEZI"
+    ]
+  },
+  {
+    "soru": "Soğuğa maruz kalma sonucu hastalanmak",
+    "cevap": "Üşütmek",
+    "alternatifler": [
+      "üşütmek",
+      "ÜŞÜTMEK",
+      "USUTMEK",
+      "usutmek"
+    ]
+  },
+  {
+    "soru": "Dua okuyarak hastalık iyleştirdiğine inanılan kişi",
+    "cevap": "Üfürükçü",
+    "alternatifler": [
+      "ufurukcu",
+      "üfürükçü",
+      "UFURUKCU",
+      "ÜFÜRÜKÇÜ"
+    ]
+  },
+  {
+    "soru": "Avrupa Yakası'nın Cem'i, Levent __",
+    "cevap": "Üzümcü",
+    "alternatifler": [
+      "uzumcu",
+      "UZUMCU",
+      "üzümcü",
+      "ÜZÜMCÜ"
+    ]
+  },
+  {
+    "soru": "Tüketime olanak sağlayan faaliyet",
+    "cevap": "Üretim",
+    "alternatifler": [
+      "URETIM",
+      "üretim",
+      "ÜRETIM",
+      "uretim"
+    ]
+  },
+  {
+    "soru": "Tek tip kostüm",
+    "cevap": "Üniforma",
+    "alternatifler": [
+      "uniforma",
+      "ÜNIFORMA",
+      "UNIFORMA",
+      "üniforma"
+    ]
+  },
+  {
+    "soru": "Un, tuz ve şekerin ortak adı",
+    "cevap": "Üç beyaz",
+    "alternatifler": [
+      "üç beyaz",
+      "ÜÇ BEYAZ",
+      "uc beyaz",
+      "UC BEYAZ"
+    ]
+  },
+  {
+    "soru": "Hile ile karşısındakini kandıran, dolandırıcı",
+    "cevap": "Üçkağıtçı",
+    "alternatifler": [
+      "uckagitci",
+      "üçkağıtçı",
+      "UCKAGITCI",
+      "ÜÇKAĞITÇI"
+    ]
+  },
+  {
+    "soru": "Gölgesizler'i sinemaya uyarlayan Türk yönetmen",
+    "cevap": "Ümit ünal",
+    "alternatifler": [
+      "UMIT UNAL",
+      "ÜMIT ÜNAL",
+      "umit unal",
+      "ümit ünal"
+    ]
+  },
+  {
+    "soru": "El elden __",
+    "cevap": "Üstündür",
+    "alternatifler": [
+      "üstündür",
+      "USTUNDUR",
+      "ustundur",
+      "ÜSTÜNDÜR"
+    ]
+  },
+  {
+    "soru": "El elden __; Bir atasözü",
+    "cevap": "Üstündür",
+    "alternatifler": [
+      "üstündür",
+      "USTUNDUR",
+      "ustundur",
+      "ÜSTÜNDÜR"
+    ]
+  },
+  {
+    "soru": "Yolun üzerinden geçen merdivenli yaya yolu",
+    "cevap": "Üstgeçit",
+    "alternatifler": [
+      "ÜSTGEÇIT",
+      "üstgeçit",
+      "USTGECIT",
+      "ustgecit"
+    ]
+  },
+  {
+    "soru": "İstemediği bir durum karşısında canı sıkılmak",
+    "cevap": "Üzülmek",
+    "alternatifler": [
+      "ÜZÜLMEK",
+      "üzülmek",
+      "uzulmek",
+      "UZULMEK"
+    ]
+  },
+  {
+    "soru": "Atı alanın geçtiği İstanbul ilçesi",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "Kırışık giderme tezgahı",
+    "cevap": "Ütü masası",
+    "alternatifler": [
+      "UTU MASASI",
+      "ÜTÜ MASASI",
+      "utu masasi",
+      "ütü masası"
+    ]
+  },
+  {
+    "soru": "Cemal Süreya'nın kitabına ismini veren şiiri",
+    "cevap": "Üvercinka",
+    "alternatifler": [
+      "UVERCINKA",
+      "uvercinka",
+      "ÜVERCINKA",
+      "üvercinka"
+    ]
+  },
+  {
+    "soru": "İkinciden sonra gelen",
+    "cevap": "Üçüncü",
+    "alternatifler": [
+      "ÜÇÜNCÜ",
+      "ucuncu",
+      "üçüncü",
+      "UCUNCU"
+    ]
+  },
+  {
+    "soru": "Biri görmez, biri duymaz, biri bilmez",
+    "cevap": "Üç maymun",
+    "alternatifler": [
+      "üç maymun",
+      "uc maymun",
+      "ÜÇ MAYMUN",
+      "UC MAYMUN"
+    ]
+  },
+  {
+    "soru": "İdrar ve üreme hastalıkları uzmanı",
+    "cevap": "Ürolog",
+    "alternatifler": [
+      "UROLOG",
+      "ürolog",
+      "urolog",
+      "ÜROLOG"
+    ]
+  },
+  {
+    "soru": "Orduda en yetkili takım komutanı",
+    "cevap": "Üsteğmen",
+    "alternatifler": [
+      "USTEGMEN",
+      "ustegmen",
+      "ÜSTEĞMEN",
+      "üsteğmen"
+    ]
+  },
+  {
+    "soru": "Astsubaylığın ikinci aşaması olan rütbe",
+    "cevap": "Üstçavuş",
+    "alternatifler": [
+      "USTCAVUS",
+      "üstçavuş",
+      "ÜSTÇAVUŞ",
+      "ustcavus"
+    ]
+  },
+  {
+    "soru": "Para vermeden, bedava",
+    "cevap": "Ücretsiz",
+    "alternatifler": [
+      "ÜCRETSIZ",
+      "ucretsiz",
+      "ücretsiz",
+      "UCRETSIZ"
+    ]
+  },
+  {
+    "soru": "Gerçekleşmesi imkansız düşünce, tasarı",
+    "cevap": "Ütopya",
+    "alternatifler": [
+      "ütopya",
+      "UTOPYA",
+      "ÜTOPYA",
+      "utopya"
+    ]
+  },
+  {
+    "soru": "Orta kulakta bulunan küçük kemik",
+    "cevap": "Üzengi",
+    "alternatifler": [
+      "uzengi",
+      "UZENGI",
+      "ÜZENGI",
+      "üzengi"
+    ]
+  },
+  {
+    "soru": "Nikah Masası şarkısı meşhurdur",
+    "cevap": "Ümit besen",
+    "alternatifler": [
+      "UMIT BESEN",
+      "umit besen",
+      "ümit besen",
+      "ÜMIT BESEN"
+    ]
+  },
+  {
+    "soru": "Keder, gam",
+    "cevap": "Üzüntü",
+    "alternatifler": [
+      "üzüntü",
+      "ÜZÜNTÜ",
+      "uzuntu",
+      "UZUNTU"
+    ]
+  },
+  {
+    "soru": "Nazardan korunmak için kurusu yakılan bitki",
+    "cevap": "Üzerlik",
+    "alternatifler": [
+      "ÜZERLIK",
+      "üzerlik",
+      "UZERLIK",
+      "uzerlik"
+    ]
+  },
+  {
+    "soru": "Böbrek ve idrar yolları hastalıklarına bakan bölüm",
+    "cevap": "Üroloji",
+    "alternatifler": [
+      "üroloji",
+      "ÜROLOJI",
+      "uroloji",
+      "UROLOJI"
+    ]
+  },
+  {
+    "soru": "Matrix ve Yüzüklerin Efendisi bu formda çekildi",
+    "cevap": "Üçleme",
+    "alternatifler": [
+      "üçleme",
+      "ucleme",
+      "UCLEME",
+      "ÜÇLEME"
+    ]
+  },
+  {
+    "soru": "Kız Kulesi'nin bulunduğu ilçe",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "Deri döküntüsü yapan alerjik hastalık",
+    "cevap": "Ürtiker",
+    "alternatifler": [
+      "ÜRTIKER",
+      "ürtiker",
+      "urtiker",
+      "URTIKER"
+    ]
+  },
+  {
+    "soru": "Nefesle çalınan sazların genel adı",
+    "cevap": "Üflemeli",
+    "alternatifler": [
+      "üflemeli",
+      "ÜFLEMELI",
+      "uflemeli",
+      "UFLEMELI"
+    ]
+  },
+  {
+    "soru": "Farklı bir enerjiyi elektrik enerjisine çevirir",
+    "cevap": "Üreteç",
+    "alternatifler": [
+      "uretec",
+      "URETEC",
+      "üreteç",
+      "ÜRETEÇ"
+    ]
+  },
+  {
+    "soru": "Tekstil ürünlerinin kırışıklarını giderme işi",
+    "cevap": "Ütücülük",
+    "alternatifler": [
+      "ÜTÜCÜLÜK",
+      "ütücülük",
+      "utuculuk",
+      "UTUCULUK"
+    ]
+  },
+  {
+    "soru": "Erkek için ropdöşambır buna örnektir",
+    "cevap": "Üstlük",
+    "alternatifler": [
+      "üstlük",
+      "USTLUK",
+      "ÜSTLÜK",
+      "ustluk"
+    ]
+  },
+  {
+    "soru": "Fransız bayrağından esinlenen Kieslowski filmleri",
+    "cevap": "Üç renk",
+    "alternatifler": [
+      "ÜÇ RENK",
+      "uc renk",
+      "UC RENK",
+      "üç renk"
+    ]
+  },
+  {
+    "soru": "Basketbolda rakibin boyalı bölge ihlali",
+    "cevap": "Üç saniye",
+    "alternatifler": [
+      "uc saniye",
+      "üç saniye",
+      "UC SANIYE",
+      "ÜÇ SANIYE"
+    ]
+  },
+  {
+    "soru": "Cannes En İyi Yönetmen ödüllü Nuri Bilge filmi",
+    "cevap": "Üç maymun",
+    "alternatifler": [
+      "üç maymun",
+      "uc maymun",
+      "ÜÇ MAYMUN",
+      "UC MAYMUN"
+    ]
+  },
+  {
+    "soru": "Harry Potter'ı Türkçeye ilk kazandıran çevirmen",
+    "cevap": "Ülkü tamer",
+    "alternatifler": [
+      "ülkü tamer",
+      "ULKU TAMER",
+      "ÜLKÜ TAMER",
+      "ulku tamer"
+    ]
+  },
+  {
+    "soru": "Bitmemiş cümlelerin sonuna konan noktalama işareti",
+    "cevap": "Üç nokta",
+    "alternatifler": [
+      "ÜÇ NOKTA",
+      "uc nokta",
+      "üç nokta",
+      "UC NOKTA"
+    ]
+  },
+  {
+    "soru": "Belli mesleklerde, tüzükle belirtilmiş kıyafet",
+    "cevap": "Üniforma",
+    "alternatifler": [
+      "uniforma",
+      "ÜNIFORMA",
+      "UNIFORMA",
+      "üniforma"
+    ]
+  },
+  {
+    "soru": "Cemal Süreya'nın ilk şiir kitabı",
+    "cevap": "Üvercinka",
+    "alternatifler": [
+      "UVERCINKA",
+      "uvercinka",
+      "ÜVERCINKA",
+      "üvercinka"
+    ]
+  },
+  {
+    "soru": "İmalathane, fabrika",
+    "cevap": "Üretimevi",
+    "alternatifler": [
+      "uretimevi",
+      "üretimevi",
+      "ÜRETIMEVI",
+      "URETIMEVI"
+    ]
+  },
+  {
+    "soru": "Ata binmek için ayağın basıldığı yer",
+    "cevap": "Üzengi",
+    "alternatifler": [
+      "uzengi",
+      "UZENGI",
+      "ÜZENGI",
+      "üzengi"
+    ]
+  },
+  {
+    "soru": "Eski adı Yalnız Selvi olan İstanbul ilçesi",
+    "cevap": "Ümraniye",
+    "alternatifler": [
+      "ümraniye",
+      "ÜMRANIYE",
+      "UMRANIYE",
+      "umraniye"
+    ]
+  },
+  {
+    "soru": "Kurtlar Vadisi'nde Testere Necmi idi, Tarık __",
+    "cevap": "Ünlüoğlu",
+    "alternatifler": [
+      "ÜNLÜOĞLU",
+      "ünlüoğlu",
+      "UNLUOGLU",
+      "unluoglu"
+    ]
+  },
+  {
+    "soru": "Kız Kulesi, İstanbul'un bu ilçesinde yer alır",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "Sylvia Plath'ın yazdığı tek oyun",
+    "cevap": "Üç kadın",
+    "alternatifler": [
+      "üç kadın",
+      "uc kadin",
+      "UC KADIN",
+      "ÜÇ KADIN"
+    ]
+  },
+  {
+    "soru": "Soğuk havada, ince giyinenler bu durumu yaşar",
+    "cevap": "Üşümek",
+    "alternatifler": [
+      "üşümek",
+      "USUMEK",
+      "ÜŞÜMEK",
+      "usumek"
+    ]
+  },
+  {
+    "soru": "Bu izin türünde, maaşta kesinti olmaz",
+    "cevap": "Ücretli",
+    "alternatifler": [
+      "ucretli",
+      "ücretli",
+      "UCRETLI",
+      "ÜCRETLI"
+    ]
+  },
+  {
+    "soru": "İş ve hizmet karşılığı çalıştırılan kimse",
+    "cevap": "Ücretli",
+    "alternatifler": [
+      "ucretli",
+      "ücretli",
+      "UCRETLI",
+      "ÜCRETLI"
+    ]
+  },
+  {
+    "soru": "Bir derneğe ya da siyasi partiye kayıt yaptırmak",
+    "cevap": "Üye olmak",
+    "alternatifler": [
+      "ÜYE OLMAK",
+      "UYE OLMAK",
+      "uye olmak",
+      "üye olmak"
+    ]
+  },
+  {
+    "soru": "İmalatçı",
+    "cevap": "Üretici",
+    "alternatifler": [
+      "URETICI",
+      "üretici",
+      "uretici",
+      "ÜRETICI"
+    ]
+  },
+  {
+    "soru": "Nikah Masası'nın bestecisi olan piyanist şantör",
+    "cevap": "Ümit besen",
+    "alternatifler": [
+      "UMIT BESEN",
+      "umit besen",
+      "ümit besen",
+      "ÜMIT BESEN"
+    ]
+  },
+  {
+    "soru": "Hayat Bilgisi'nde Arif karakterini oynadı",
+    "cevap": "Ümit erdim",
+    "alternatifler": [
+      "UMIT ERDIM",
+      "ümit erdim",
+      "umit erdim",
+      "ÜMIT ERDIM"
+    ]
+  },
+  {
+    "soru": "\"Bul karoyu al parayı\" diye seslenen dolandırıcı",
+    "cevap": "Üçkağıtçı",
+    "alternatifler": [
+      "uckagitci",
+      "üçkağıtçı",
+      "UCKAGITCI",
+      "ÜÇKAĞITÇI"
+    ]
+  },
+  {
+    "soru": "Devamlı yeni eserler çıkaran sanatçı; verimli",
+    "cevap": "Üretken",
+    "alternatifler": [
+      "üretken",
+      "URETKEN",
+      "ÜRETKEN",
+      "uretken"
+    ]
+  },
+  {
+    "soru": "İçine miskinlik işlemiş kişi",
+    "cevap": "Üşengeç",
+    "alternatifler": [
+      "USENGEC",
+      "üşengeç",
+      "ÜŞENGEÇ",
+      "usengec"
+    ]
+  },
+  {
+    "soru": "Eşin, önceki eşinden olan çocuk",
+    "cevap": "Üveyevlat",
+    "alternatifler": [
+      "UVEYEVLAT",
+      "ÜVEYEVLAT",
+      "uveyevlat",
+      "üveyevlat"
+    ]
+  },
+  {
+    "soru": "İdrar yoluyla vücuttan atılan kimyasal bir bileşik",
+    "cevap": "Ürikasit",
+    "alternatifler": [
+      "urikasit",
+      "ÜRIKASIT",
+      "ürikasit",
+      "URIKASIT"
+    ]
+  },
+  {
+    "soru": "__ cam, usta tarafından nefes verilerek üretilir",
+    "cevap": "Üfleme",
+    "alternatifler": [
+      "üfleme",
+      "ufleme",
+      "UFLEME",
+      "ÜFLEME"
+    ]
+  },
+  {
+    "soru": "Lehim yaparken kullanılan sabitleme ekipmanı",
+    "cevap": "Üçüncü el",
+    "alternatifler": [
+      "UCUNCU EL",
+      "ucuncu el",
+      "üçüncü el",
+      "ÜÇÜNCÜ EL"
+    ]
+  },
+  {
+    "soru": "Bronz madalya alan bir sporcunun sıralamadaki yeri",
+    "cevap": "Üçüncü",
+    "alternatifler": [
+      "ÜÇÜNCÜ",
+      "ucuncu",
+      "üçüncü",
+      "UCUNCU"
+    ]
+  },
+  {
+    "soru": "Kalkınma için ülkelerin ihtiyaç duyduğu faaliyet",
+    "cevap": "Üretim",
+    "alternatifler": [
+      "URETIM",
+      "üretim",
+      "ÜRETIM",
+      "uretim"
+    ]
+  },
+  {
+    "soru": "Merdivenden çıkan bir insanı içeren trafik levhası",
+    "cevap": "Üst geçit",
+    "alternatifler": [
+      "UST GECIT",
+      "üst geçit",
+      "ÜST GEÇIT",
+      "ust gecit"
+    ]
+  },
+  {
+    "soru": "Skorda öne geçme, avantaj elde etme",
+    "cevap": "Üstünlük",
+    "alternatifler": [
+      "ÜSTÜNLÜK",
+      "üstünlük",
+      "USTUNLUK",
+      "ustunluk"
+    ]
+  },
+  {
+    "soru": "Çiçek Taksi dizisinde Şeker Kazım'ı oynadı",
+    "cevap": "Ümit yesin",
+    "alternatifler": [
+      "umit yesin",
+      "UMIT YESIN",
+      "ÜMIT YESIN",
+      "ümit yesin"
+    ]
+  },
+  {
+    "soru": "Ata binerken ayakların konulduğu demir halka",
+    "cevap": "Üzengi",
+    "alternatifler": [
+      "uzengi",
+      "UZENGI",
+      "ÜZENGI",
+      "üzengi"
+    ]
+  },
+  {
+    "soru": "Altın Portakal ödüllü Böcek filminin yönetmeni",
+    "cevap": "Ümit elçi",
+    "alternatifler": [
+      "ümit elçi",
+      "ÜMIT ELÇI",
+      "UMIT ELCI",
+      "umit elci"
+    ]
+  },
+  {
+    "soru": "Karşılığında ödeme istenmeyen",
+    "cevap": "Ücretsiz",
+    "alternatifler": [
+      "ÜCRETSIZ",
+      "ucretsiz",
+      "ücretsiz",
+      "UCRETSIZ"
+    ]
+  },
+  {
+    "soru": "Aydemir Akbaş'ın Horoz Nuri'yi oynadığı film",
+    "cevap": "Üşütük",
+    "alternatifler": [
+      "üşütük",
+      "usutuk",
+      "ÜŞÜTÜK",
+      "USUTUK"
+    ]
+  },
+  {
+    "soru": "İş yapma konusunda isteksiz olan, tembel",
+    "cevap": "Üşengeç",
+    "alternatifler": [
+      "USENGEC",
+      "üşengeç",
+      "ÜŞENGEÇ",
+      "usengec"
+    ]
+  },
+  {
+    "soru": "Un, tuz ve şekere verilen ad",
+    "cevap": "Üç beyaz",
+    "alternatifler": [
+      "üç beyaz",
+      "ÜÇ BEYAZ",
+      "uc beyaz",
+      "UC BEYAZ"
+    ]
+  },
+  {
+    "soru": "1488 yılında Bartolomeu Dias tarafından keşfedildi",
+    "cevap": "Ümit burnu",
+    "alternatifler": [
+      "ümit burnu",
+      "ÜMIT BURNU",
+      "umit burnu",
+      "UMIT BURNU"
+    ]
+  },
+  {
+    "soru": "Kemal Sunal bu filmde belediye başkanı oluyor",
+    "cevap": "Üç kağıtçı",
+    "alternatifler": [
+      "UC KAGITCI",
+      "üç kağıtçı",
+      "ÜÇ KAĞITÇI",
+      "uc kagitci"
+    ]
+  },
+  {
+    "soru": "Tralleis Antik Kenti'nde ayakta kalan tek yapı",
+    "cevap": "Üç gözler",
+    "alternatifler": [
+      "üç gözler",
+      "uc gozler",
+      "ÜÇ GÖZLER",
+      "UC GOZLER"
+    ]
+  },
+  {
+    "soru": "Semih Saygıner'in usta olduğu bilardo türü",
+    "cevap": "Üç bant",
+    "alternatifler": [
+      "ÜÇ BANT",
+      "UC BANT",
+      "üç bant",
+      "uc bant"
+    ]
+  },
+  {
+    "soru": "Kemal Sunal'ın yağmur yağacak zamanı bildiği film",
+    "cevap": "Üç kağıtçı",
+    "alternatifler": [
+      "UC KAGITCI",
+      "üç kağıtçı",
+      "ÜÇ KAĞITÇI",
+      "uc kagitci"
+    ]
+  },
+  {
+    "soru": "İnce bir kabuğa sahip erik türü",
+    "cevap": "Üryani",
+    "alternatifler": [
+      "üryani",
+      "uryani",
+      "URYANI",
+      "ÜRYANI"
+    ]
+  },
+  {
+    "soru": "Aynı işi yapanların giydiği aynı tip giysi",
+    "cevap": "Üniforma",
+    "alternatifler": [
+      "uniforma",
+      "ÜNIFORMA",
+      "UNIFORMA",
+      "üniforma"
+    ]
+  },
+  {
+    "soru": "2002 FIFA Dünya Kupası'nda Türkiye'nin derecesi",
+    "cevap": "Üçüncülük",
+    "alternatifler": [
+      "üçüncülük",
+      "UCUNCULUK",
+      "ucunculuk",
+      "ÜÇÜNCÜLÜK"
+    ]
+  },
+  {
+    "soru": "Elde edilen avantaj, galebe",
+    "cevap": "Üstünlük",
+    "alternatifler": [
+      "ÜSTÜNLÜK",
+      "üstünlük",
+      "USTUNLUK",
+      "ustunluk"
+    ]
+  },
+  {
+    "soru": "Pek özenmeden, baştan savma yapılan iş",
+    "cevap": "Üstünkörü",
+    "alternatifler": [
+      "ustunkoru",
+      "üstünkörü",
+      "ÜSTÜNKÖRÜ",
+      "USTUNKORU"
+    ]
+  },
+  {
+    "soru": "Basketbolda potadan 8 metre uzaktan atılan şut",
+    "cevap": "Üç sayılık",
+    "alternatifler": [
+      "üç sayılık",
+      "UC SAYILIK",
+      "uc sayilik",
+      "ÜÇ SAYILIK"
+    ]
+  },
+  {
+    "soru": "90 günde bir ödenen emekli maaşı",
+    "cevap": "Üç aylık",
+    "alternatifler": [
+      "uc aylik",
+      "üç aylık",
+      "UC AYLIK",
+      "ÜÇ AYLIK"
+    ]
+  },
+  {
+    "soru": "Yaya köprüsü",
+    "cevap": "Üst geçit",
+    "alternatifler": [
+      "UST GECIT",
+      "üst geçit",
+      "ÜST GEÇIT",
+      "ust gecit"
+    ]
+  },
+  {
+    "soru": "Ben Tabii ki ve Mai albümlerini yapan şarkıcı",
+    "cevap": "Ümit sayın",
+    "alternatifler": [
+      "ÜMIT SAYIN",
+      "ümit sayın",
+      "UMIT SAYIN",
+      "umit sayin"
+    ]
+  },
+  {
+    "soru": "Korku gibi nedenlerle tüylerin kabarması durumu",
+    "cevap": "Ürperti",
+    "alternatifler": [
+      "ÜRPERTI",
+      "URPERTI",
+      "ürperti",
+      "urperti"
+    ]
+  },
+  {
+    "soru": "Yıkanan giysilerdeki kırışıklıkları düzeltme işi",
+    "cevap": "Ütücülük",
+    "alternatifler": [
+      "ÜTÜCÜLÜK",
+      "ütücülük",
+      "utuculuk",
+      "UTUCULUK"
+    ]
+  },
+  {
+    "soru": "Argoda dolap, hile",
+    "cevap": "Üçkağıt",
+    "alternatifler": [
+      "uckagit",
+      "üçkağıt",
+      "UCKAGIT",
+      "ÜÇKAĞIT"
+    ]
+  },
+  {
+    "soru": "Sinemada herkese gözlük taktıran film teknolojisi",
+    "cevap": "Üç boyutlu",
+    "alternatifler": [
+      "uc boyutlu",
+      "UC BOYUTLU",
+      "ÜÇ BOYUTLU",
+      "üç boyutlu"
+    ]
+  },
+  {
+    "soru": "Sakar Şakir filminde Gardrop Fuat'ı canlandırdı",
+    "cevap": "Ünal gürel",
+    "alternatifler": [
+      "UNAL GUREL",
+      "ÜNAL GÜREL",
+      "unal gurel",
+      "ünal gürel"
+    ]
+  },
+  {
+    "soru": "Bir işi yapmak için his istek duymamak, erinmek",
+    "cevap": "Üşenmek",
+    "alternatifler": [
+      "üşenmek",
+      "usenmek",
+      "ÜŞENMEK",
+      "USENMEK"
+    ]
+  },
+  {
+    "soru": "Bir konu üzerinde diretmek, ısrar etmek",
+    "cevap": "Üstelemek",
+    "alternatifler": [
+      "USTELEMEK",
+      "ustelemek",
+      "ÜSTELEMEK",
+      "üstelemek"
+    ]
+  },
+  {
+    "soru": "Ayrıntılara dikkat etmeden yapılan, gelişigüzel",
+    "cevap": "Üstünkörü",
+    "alternatifler": [
+      "ustunkoru",
+      "üstünkörü",
+      "ÜSTÜNKÖRÜ",
+      "USTUNKORU"
+    ]
+  },
+  {
+    "soru": "Yeni bir hizmet, ürün veya fikir yaratma",
+    "cevap": "Üretim",
+    "alternatifler": [
+      "URETIM",
+      "üretim",
+      "ÜRETIM",
+      "uretim"
+    ]
+  },
+  {
+    "soru": "İmalat ile aynı anlama gelen kelime",
+    "cevap": "Üretim",
+    "alternatifler": [
+      "URETIM",
+      "üretim",
+      "ÜRETIM",
+      "uretim"
+    ]
+  },
+  {
+    "soru": "Nikah Masası aldı parçayla tanınan erkek şarkıcı",
+    "cevap": "Ümit besen",
+    "alternatifler": [
+      "UMIT BESEN",
+      "umit besen",
+      "ümit besen",
+      "ÜMIT BESEN"
+    ]
+  },
+  {
+    "soru": "İstenilen ama gerçekleşmesi imkansız tasarı",
+    "cevap": "Ütopya",
+    "alternatifler": [
+      "ütopya",
+      "UTOPYA",
+      "ÜTOPYA",
+      "utopya"
+    ]
+  },
+  {
+    "soru": "Mecaz anlamda yaratmak, bir şeyi oluşturmak",
+    "cevap": "Üretmek",
+    "alternatifler": [
+      "uretmek",
+      "üretmek",
+      "URETMEK",
+      "ÜRETMEK"
+    ]
+  },
+  {
+    "soru": "Saksafon, flüt, klarnet gibi çalgılar",
+    "cevap": "Üflemeli",
+    "alternatifler": [
+      "üflemeli",
+      "ÜFLEMELI",
+      "uflemeli",
+      "UFLEMELI"
+    ]
+  },
+  {
+    "soru": "Basketbolda, kısa forvetler için kullanılan ad",
+    "cevap": "Üç numara",
+    "alternatifler": [
+      "ÜÇ NUMARA",
+      "UC NUMARA",
+      "üç numara",
+      "uc numara"
+    ]
+  },
+  {
+    "soru": "Bu ücretli olduğunda aidat ödenir",
+    "cevap": "Üyelik",
+    "alternatifler": [
+      "uyelik",
+      "ÜYELIK",
+      "üyelik",
+      "UYELIK"
+    ]
+  },
+  {
+    "soru": "__ ücreti;Kayıtlı olunan kuruluşa ödenen ücret",
+    "cevap": "Üyelik",
+    "alternatifler": [
+      "uyelik",
+      "ÜYELIK",
+      "üyelik",
+      "UYELIK"
+    ]
+  },
+  {
+    "soru": "__ devlet, tek bir merkezi yönetime sahiptir",
+    "cevap": "Üniter",
+    "alternatifler": [
+      "ÜNITER",
+      "üniter",
+      "UNITER",
+      "uniter"
+    ]
+  },
+  {
+    "soru": "Soğukta fazla kalarak hastalanmak, soğuk almak",
+    "cevap": "Üşütmek",
+    "alternatifler": [
+      "üşütmek",
+      "ÜŞÜTMEK",
+      "USUTMEK",
+      "usutmek"
+    ]
+  },
+  {
+    "soru": "Bartolomeu Dias'ın bulduğu, Afrika'nın güney ucu",
+    "cevap": "Ümit burnu",
+    "alternatifler": [
+      "ümit burnu",
+      "ÜMIT BURNU",
+      "umit burnu",
+      "UMIT BURNU"
+    ]
+  },
+  {
+    "soru": "Kumaş buruşukluklarını ısıtarak gideren araçlar",
+    "cevap": "Ütüler",
+    "alternatifler": [
+      "ÜTÜLER",
+      "ütüler",
+      "utuler",
+      "UTULER"
+    ]
+  },
+  {
+    "soru": "Hilafet 1924'te bu tarihte kaldırılmıştır",
+    "cevap": "Üç mart",
+    "alternatifler": [
+      "UC MART",
+      "ÜÇ MART",
+      "üç mart",
+      "uc mart"
+    ]
+  },
+  {
+    "soru": "Osmanlı'nın Lale Devri padişahı, __ Ahmed",
+    "cevap": "Üçüncü",
+    "alternatifler": [
+      "ÜÇÜNCÜ",
+      "ucuncu",
+      "üçüncü",
+      "UCUNCU"
+    ]
+  },
+  {
+    "soru": "Bugünün Saraylısı romanında Ata Bey'in eşi",
+    "cevap": "Üftade",
+    "alternatifler": [
+      "uftade",
+      "ÜFTADE",
+      "üftade",
+      "UFTADE"
+    ]
+  },
+  {
+    "soru": "Mersin'in işgalden kurtuluşunun yıl dönümü",
+    "cevap": "Üç ocak",
+    "alternatifler": [
+      "ÜÇ OCAK",
+      "üç ocak",
+      "uc ocak",
+      "UC OCAK"
+    ]
+  },
+  {
+    "soru": "Mecazen insanın üzerine giydiği kıyafet, elbise",
+    "cevap": "Üst baş",
+    "alternatifler": [
+      "UST BAS",
+      "üst baş",
+      "ust bas",
+      "ÜST BAŞ"
+    ]
+  },
+  {
+    "soru": "Tükürmek kelimesinin her harfine sahip; korkutmak",
+    "cevap": "Ürkütmek",
+    "alternatifler": [
+      "ürkütmek",
+      "ÜRKÜTMEK",
+      "URKUTMEK",
+      "urkutmek"
+    ]
+  },
+  {
+    "soru": "Böbrek hastalıklarına bakan hastane bölümü",
+    "cevap": "Üroloji",
+    "alternatifler": [
+      "üroloji",
+      "ÜROLOJI",
+      "uroloji",
+      "UROLOJI"
+    ]
+  },
+  {
+    "soru": "Bir ana renkle bir ara rengin birleşimi olan renk",
+    "cevap": "Üçüncül",
+    "alternatifler": [
+      "ucuncul",
+      "üçüncül",
+      "ÜÇÜNCÜL",
+      "UCUNCUL"
+    ]
+  },
+  {
+    "soru": "Önde bir, arkada iki lastiği olan çocuk bisikleti",
+    "cevap": "Üçteker",
+    "alternatifler": [
+      "UCTEKER",
+      "ucteker",
+      "ÜÇTEKER",
+      "üçteker"
+    ]
+  },
+  {
+    "soru": "Soğuk havalarda duyulan his",
+    "cevap": "Üşümek",
+    "alternatifler": [
+      "üşümek",
+      "USUMEK",
+      "ÜŞÜMEK",
+      "usumek"
+    ]
+  },
+  {
+    "soru": "Acı ya da sıkıntı içeren durumlarda oluşan his",
+    "cevap": "Üzülmek",
+    "alternatifler": [
+      "ÜZÜLMEK",
+      "üzülmek",
+      "uzulmek",
+      "UZULMEK"
+    ]
+  },
+  {
+    "soru": "Ömrün kısa olduğunu tarif eden söz, __ dünya/ömür",
+    "cevap": "Üç günlük",
+    "alternatifler": [
+      "UC GUNLUK",
+      "üç günlük",
+      "uc gunluk",
+      "ÜÇ GÜNLÜK"
+    ]
+  },
+  {
+    "soru": "İdrar borusunun tıptaki adı",
+    "cevap": "Üreter",
+    "alternatifler": [
+      "ureter",
+      "üreter",
+      "URETER",
+      "ÜRETER"
+    ]
+  },
+  {
+    "soru": "Bir şeyin gerçekleşeceğine inanma, umutlanma",
+    "cevap": "Ümitlenme",
+    "alternatifler": [
+      "UMITLENME",
+      "umitlenme",
+      "ÜMITLENME",
+      "ümitlenme"
+    ]
+  },
+  {
+    "soru": "Belirli bir para verilerek çalıştırılan kişi",
+    "cevap": "Ücretli",
+    "alternatifler": [
+      "ucretli",
+      "ücretli",
+      "UCRETLI",
+      "ÜCRETLI"
+    ]
+  },
+  {
+    "soru": "Kıyafetlerin kırışıklığının giderildiği tahta",
+    "cevap": "Ütü masası",
+    "alternatifler": [
+      "UTU MASASI",
+      "ÜTÜ MASASI",
+      "utu masasi",
+      "ütü masası"
+    ]
+  },
+  {
+    "soru": "Güvercingillerden, ormanlarda yaşayan yabani kuş",
+    "cevap": "Üveyik",
+    "alternatifler": [
+      "UVEYIK",
+      "uveyik",
+      "ÜVEYIK",
+      "üveyik"
+    ]
+  },
+  {
+    "soru": "Ekonomi terimi ÜFE'deki Ü harfinin açılımı",
+    "cevap": "Üretici",
+    "alternatifler": [
+      "URETICI",
+      "üretici",
+      "uretici",
+      "ÜRETICI"
+    ]
+  },
+  {
+    "soru": "Rakamın, kendiyle çarpımını gösteren ifade",
+    "cevap": "Üslü sayı",
+    "alternatifler": [
+      "üslü sayı",
+      "uslu sayi",
+      "ÜSLÜ SAYI",
+      "USLU SAYI"
+    ]
+  },
+  {
+    "soru": "Eser Yenenler'in iki arkadaşıyla sunduğu şov",
+    "cevap": "Üç adam",
+    "alternatifler": [
+      "ÜÇ ADAM",
+      "UC ADAM",
+      "üç adam",
+      "uc adam"
+    ]
+  },
+  {
+    "soru": "Seviye olarak daha nitelikli olma durumu, avantaj",
+    "cevap": "Üstünlük",
+    "alternatifler": [
+      "ÜSTÜNLÜK",
+      "üstünlük",
+      "USTUNLUK",
+      "ustunluk"
+    ]
+  },
+  {
+    "soru": "Makinelerle imalat gerçekleştiren kuruluş, fabrika",
+    "cevap": "Üretimevi",
+    "alternatifler": [
+      "uretimevi",
+      "üretimevi",
+      "ÜRETIMEVI",
+      "URETIMEVI"
+    ]
+  },
+  {
+    "soru": "Bir şeyin baştan savma, gelişi güzel yapılması",
+    "cevap": "Üstünkörü",
+    "alternatifler": [
+      "ustunkoru",
+      "üstünkörü",
+      "ÜSTÜNKÖRÜ",
+      "USTUNKORU"
+    ]
+  },
+  {
+    "soru": "Tembellikten bir işi yapmaya bir türlü başlamamak",
+    "cevap": "Üşenmek",
+    "alternatifler": [
+      "üşenmek",
+      "usenmek",
+      "ÜŞENMEK",
+      "USENMEK"
+    ]
+  },
+  {
+    "soru": "Bir ürün elde etmek için yapılan iş",
+    "cevap": "Üretim",
+    "alternatifler": [
+      "URETIM",
+      "üretim",
+      "ÜRETIM",
+      "uretim"
+    ]
+  },
+  {
+    "soru": "Genelde askere giderken uygulanan saç kesim şekli",
+    "cevap": "Üç numara",
+    "alternatifler": [
+      "ÜÇ NUMARA",
+      "UC NUMARA",
+      "üç numara",
+      "uc numara"
+    ]
+  },
+  {
+    "soru": "Baskül Ailesi dizisinde Terbiye karakterini oynadı",
+    "cevap": "Ülkü duru",
+    "alternatifler": [
+      "ülkü duru",
+      "ÜLKÜ DURU",
+      "ulku duru",
+      "ULKU DURU"
+    ]
+  },
+  {
+    "soru": "Kaygısızlar dizisinde Terbiye karakterini oynadı",
+    "cevap": "Ülkü duru",
+    "alternatifler": [
+      "ülkü duru",
+      "ÜLKÜ DURU",
+      "ulku duru",
+      "ULKU DURU"
+    ]
+  },
+  {
+    "soru": "Doğum günü pastasındaki mumlara yapılır",
+    "cevap": "Üflemek",
+    "alternatifler": [
+      "uflemek",
+      "UFLEMEK",
+      "ÜFLEMEK",
+      "üflemek"
+    ]
+  },
+  {
+    "soru": "İstenilen bir şey için gereğinden çok ödeme yapma",
+    "cevap": "Üste verme",
+    "alternatifler": [
+      "USTE VERME",
+      "uste verme",
+      "üste verme",
+      "ÜSTE VERME"
+    ]
+  },
+  {
+    "soru": "Dünya Bisiklet Günü'nün kutlandığı tarih",
+    "cevap": "Üç haziran",
+    "alternatifler": [
+      "UC HAZIRAN",
+      "uc haziran",
+      "üç haziran",
+      "ÜÇ HAZIRAN"
+    ]
+  },
+  {
+    "soru": "Organize İşler'de Erdal Tosun'un canlandırdığı rol",
+    "cevap": "Üzeyir abi",
+    "alternatifler": [
+      "UZEYIR ABI",
+      "üzeyir abi",
+      "uzeyir abi",
+      "ÜZEYIR ABI"
+    ]
+  },
+  {
+    "soru": "Para gerektirmeyen, karşılıksız",
+    "cevap": "Ücretsiz",
+    "alternatifler": [
+      "ÜCRETSIZ",
+      "ucretsiz",
+      "ücretsiz",
+      "UCRETSIZ"
+    ]
+  },
+  {
+    "soru": "Bu 1988 yapımında Tarık Akan bir film yönetmeni",
+    "cevap": "Üçüncü göz",
+    "alternatifler": [
+      "üçüncü göz",
+      "UCUNCU GOZ",
+      "ÜÇÜNCÜ GÖZ",
+      "ucuncu goz"
+    ]
+  },
+  {
+    "soru": "Yarım kalan cümlenin sonuna konur",
+    "cevap": "Üç nokta",
+    "alternatifler": [
+      "ÜÇ NOKTA",
+      "uc nokta",
+      "üç nokta",
+      "UC NOKTA"
+    ]
+  },
+  {
+    "soru": "XOX diye bilinen oyun",
+    "cevap": "Üç oyun",
+    "alternatifler": [
+      "uc oyun",
+      "ÜÇ OYUN",
+      "üç oyun",
+      "UC OYUN"
+    ]
+  },
+  {
+    "soru": "Tripod için kullanılan Türkçe kelime",
+    "cevap": "Üçayak",
+    "alternatifler": [
+      "ucayak",
+      "üçayak",
+      "ÜÇAYAK",
+      "UCAYAK"
+    ]
+  },
+  {
+    "soru": "Bedava olmayan, para karşılığında yapılan",
+    "cevap": "Ücretli",
+    "alternatifler": [
+      "ucretli",
+      "ücretli",
+      "UCRETLI",
+      "ÜCRETLI"
+    ]
+  },
+  {
+    "soru": "Argoda aklını kaybetmek",
+    "cevap": "Üşütmek",
+    "alternatifler": [
+      "üşütmek",
+      "ÜŞÜTMEK",
+      "USUTMEK",
+      "usutmek"
+    ]
+  },
+  {
+    "soru": "Yavuz Bingöl'ün rol aldığı Nuri Bilge Ceylan filmi",
+    "cevap": "Üç maymun",
+    "alternatifler": [
+      "üç maymun",
+      "uc maymun",
+      "ÜÇ MAYMUN",
+      "UC MAYMUN"
+    ]
+  },
+  {
+    "soru": "Afrika'daki Cape Town'ın güney ucu",
+    "cevap": "Ümit burnu",
+    "alternatifler": [
+      "ümit burnu",
+      "ÜMIT BURNU",
+      "umit burnu",
+      "UMIT BURNU"
+    ]
+  },
+  {
+    "soru": "Tıbbi terminolojide idrar yolu",
+    "cevap": "Üretra",
+    "alternatifler": [
+      "uretra",
+      "ÜRETRA",
+      "üretra",
+      "URETRA"
+    ]
+  },
+  {
+    "soru": "Dünya Engelliler Günü'nün tarihi",
+    "cevap": "Üç aralık",
+    "alternatifler": [
+      "uc aralik",
+      "üç aralık",
+      "ÜÇ ARALIK",
+      "UC ARALIK"
+    ]
+  },
+  {
+    "soru": "Teyzem filminin senaristi ünlü sinemacı",
+    "cevap": "Ümit ünal",
+    "alternatifler": [
+      "UMIT UNAL",
+      "ÜMIT ÜNAL",
+      "umit unal",
+      "ümit ünal"
+    ]
+  },
+  {
+    "soru": "Asker ve polisin giydiği kıyafet",
+    "cevap": "Üniforma",
+    "alternatifler": [
+      "uniforma",
+      "ÜNIFORMA",
+      "UNIFORMA",
+      "üniforma"
+    ]
+  },
+  {
+    "soru": "İngiltere Milli Futbol Takımı'nın takma adı",
+    "cevap": "Üç aslan",
+    "alternatifler": [
+      "UC ASLAN",
+      "uc aslan",
+      "üç aslan",
+      "ÜÇ ASLAN"
+    ]
+  },
+  {
+    "soru": "Otobüs yolculuklarında sunulan bir atıştırmalık",
+    "cevap": "Üzümlü kek",
+    "alternatifler": [
+      "ÜZÜMLÜ KEK",
+      "uzumlu kek",
+      "UZUMLU KEK",
+      "üzümlü kek"
+    ]
+  },
+  {
+    "soru": "İkişer, beşer gibi sayı sıfatlarının adı",
+    "cevap": "Üleştirme",
+    "alternatifler": [
+      "ULESTIRME",
+      "ÜLEŞTIRME",
+      "ulestirme",
+      "üleştirme"
+    ]
+  },
+  {
+    "soru": "Tarık Akan'ın gerçek soyadı",
+    "cevap": "Üregül",
+    "alternatifler": [
+      "ÜREGÜL",
+      "üregül",
+      "UREGUL",
+      "uregul"
+    ]
+  },
+  {
+    "soru": "Basketbolda kısa forvet oyuncusunun diğer adı",
+    "cevap": "Üç numara",
+    "alternatifler": [
+      "ÜÇ NUMARA",
+      "UC NUMARA",
+      "üç numara",
+      "uc numara"
+    ]
+  },
+  {
+    "soru": "Hint üniversitelerini eleştiren Aamir Khan filmi",
+    "cevap": "Üç aptal",
+    "alternatifler": [
+      "uc aptal",
+      "UC APTAL",
+      "ÜÇ APTAL",
+      "üç aptal"
+    ]
+  },
+  {
+    "soru": "Edebiyatta ideal ve hayali dünya",
+    "cevap": "Ütopya",
+    "alternatifler": [
+      "ütopya",
+      "UTOPYA",
+      "ÜTOPYA",
+      "utopya"
+    ]
+  },
+  {
+    "soru": "Kız Kulesi bu İstanbul ilçesinin sembolüdür",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "Dünya Basın Özgürlüğü Günü'nün tarihi",
+    "cevap": "Üç mayıs",
+    "alternatifler": [
+      "UC MAYIS",
+      "ÜÇ MAYIS",
+      "uc mayis",
+      "üç mayıs"
+    ]
+  },
+  {
+    "soru": "Osmanlı'da Anadolu seferleri buradan başlardı",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "Yüzbaşıya \"komutanım\" diyen en yüksek rütbe",
+    "cevap": "Üsteğmen",
+    "alternatifler": [
+      "USTEGMEN",
+      "ustegmen",
+      "ÜSTEĞMEN",
+      "üsteğmen"
+    ]
+  },
+  {
+    "soru": "Halk ağzında, bir oyunda rakibe mağlup olmak",
+    "cevap": "Ütülmek",
+    "alternatifler": [
+      "utulmek",
+      "ÜTÜLMEK",
+      "UTULMEK",
+      "ütülmek"
+    ]
+  },
+  {
+    "soru": "İnsanda bulunan en küçük ve en hafif kemik",
+    "cevap": "Üzengi",
+    "alternatifler": [
+      "uzengi",
+      "UZENGI",
+      "ÜZENGI",
+      "üzengi"
+    ]
+  },
+  {
+    "soru": "İnsanların üreme sistemlerini inceleyen bilim dalı",
+    "cevap": "Üroloji",
+    "alternatifler": [
+      "üroloji",
+      "ÜROLOJI",
+      "uroloji",
+      "UROLOJI"
+    ]
+  },
+  {
+    "soru": "Penguen dergisinin çizeri, Metin __",
+    "cevap": "Üstündağ",
+    "alternatifler": [
+      "USTUNDAG",
+      "ÜSTÜNDAĞ",
+      "ustundag",
+      "üstündağ"
+    ]
+  },
+  {
+    "soru": "İş yapmada isteksiz olan kişi, tembel",
+    "cevap": "Üşengeç",
+    "alternatifler": [
+      "USENGEC",
+      "üşengeç",
+      "ÜŞENGEÇ",
+      "usengec"
+    ]
+  },
+  {
+    "soru": "Argoda akli dengeyi yitirme, saçmalama",
+    "cevap": "Üşütme",
+    "alternatifler": [
+      "usutme",
+      "USUTME",
+      "ÜŞÜTME",
+      "üşütme"
+    ]
+  },
+  {
+    "soru": "Köpeğin yüksek sesle bağırması, havlamak",
+    "cevap": "Ürümek",
+    "alternatifler": [
+      "URUMEK",
+      "ürümek",
+      "ÜRÜMEK",
+      "urumek"
+    ]
+  },
+  {
+    "soru": "Siyek de denen, idrar torbasının en dış kısmı",
+    "cevap": "Üretra",
+    "alternatifler": [
+      "uretra",
+      "ÜRETRA",
+      "üretra",
+      "URETRA"
+    ]
+  },
+  {
+    "soru": "Fatih Sultan Mehmet Köprüsü'nün açılış yıl dönümü",
+    "cevap": "Üç temmuz",
+    "alternatifler": [
+      "uc temmuz",
+      "üç temmuz",
+      "ÜÇ TEMMUZ",
+      "UC TEMMUZ"
+    ]
+  },
+  {
+    "soru": "Tanınmış aktör Tarık Akan'ın asıl soyadı",
+    "cevap": "Üregül",
+    "alternatifler": [
+      "ÜREGÜL",
+      "üregül",
+      "UREGUL",
+      "uregul"
+    ]
+  },
+  {
+    "soru": "Umut etmeyi bırakma anlamındaki deyim",
+    "cevap": "Ümit kesme",
+    "alternatifler": [
+      "umit kesme",
+      "ümit kesme",
+      "UMIT KESME",
+      "ÜMIT KESME"
+    ]
+  },
+  {
+    "soru": "Dünya Yaban Hayatı Günü'nün tarihi",
+    "cevap": "Üç mart",
+    "alternatifler": [
+      "UC MART",
+      "ÜÇ MART",
+      "üç mart",
+      "uc mart"
+    ]
+  },
+  {
+    "soru": "Siyasal alanda bütünlük yanlısı olan, birlikçi",
+    "cevap": "Üniter",
+    "alternatifler": [
+      "ÜNITER",
+      "üniter",
+      "UNITER",
+      "uniter"
+    ]
+  },
+  {
+    "soru": "Kütahya'daki Başkomutanlık Meydan Savaşı şehitliği",
+    "cevap": "Üç tepeler",
+    "alternatifler": [
+      "üç tepeler",
+      "UC TEPELER",
+      "uc tepeler",
+      "ÜÇ TEPELER"
+    ]
+  },
+  {
+    "soru": "Futboda kaleyi çevreleyen üç parçadan en uzunu",
+    "cevap": "Üst direk",
+    "alternatifler": [
+      "üst direk",
+      "UST DIREK",
+      "ÜST DIREK",
+      "ust direk"
+    ]
+  },
+  {
+    "soru": "Aktris Zeynep Aksu, bu filmle Altın Portakal aldı",
+    "cevap": "Üvey ana",
+    "alternatifler": [
+      "üvey ana",
+      "UVEY ANA",
+      "uvey ana",
+      "ÜVEY ANA"
+    ]
+  },
+  {
+    "soru": "Tamamlanmamış cümlelerin sonuna konan işaret",
+    "cevap": "Üç nokta",
+    "alternatifler": [
+      "ÜÇ NOKTA",
+      "uc nokta",
+      "üç nokta",
+      "UC NOKTA"
+    ]
+  },
+  {
+    "soru": "Buruşuklukları giderilmemiş kıyafet",
+    "cevap": "Ütüsüz",
+    "alternatifler": [
+      "ÜTÜSÜZ",
+      "utusuz",
+      "ütüsüz",
+      "UTUSUZ"
+    ]
+  },
+  {
+    "soru": "Basketbolda boyalı alanda azami kalma süresi",
+    "cevap": "Üç saniye",
+    "alternatifler": [
+      "uc saniye",
+      "üç saniye",
+      "UC SANIYE",
+      "ÜÇ SANIYE"
+    ]
+  },
+  {
+    "soru": "Cisimlere derinlik katan sinema teknolojisi",
+    "cevap": "Üç boyutlu",
+    "alternatifler": [
+      "uc boyutlu",
+      "UC BOYUTLU",
+      "ÜÇ BOYUTLU",
+      "üç boyutlu"
+    ]
+  },
+  {
+    "soru": "Nikaha çağrılma konusunda ısrarcı olan şarkıcı",
+    "cevap": "Ümit besen",
+    "alternatifler": [
+      "UMIT BESEN",
+      "umit besen",
+      "ümit besen",
+      "ÜMIT BESEN"
+    ]
+  },
+  {
+    "soru": "Lig maçlarının daha yukarı seviyesi, play-off",
+    "cevap": "Üst küme",
+    "alternatifler": [
+      "üst küme",
+      "ust kume",
+      "ÜST KÜME",
+      "UST KUME"
+    ]
+  },
+  {
+    "soru": "Erkeklerin üreme sistemi ile ilgilenen tıp dalı",
+    "cevap": "Üroloji",
+    "alternatifler": [
+      "üroloji",
+      "ÜROLOJI",
+      "uroloji",
+      "UROLOJI"
+    ]
+  },
+  {
+    "soru": "Bir okulda tüm öğrencilerin giydiği ortak kıyafet",
+    "cevap": "Üniforma",
+    "alternatifler": [
+      "uniforma",
+      "ÜNIFORMA",
+      "UNIFORMA",
+      "üniforma"
+    ]
+  },
+  {
+    "soru": "Akli yeterliliği yüksek düzeyde olan",
+    "cevap": "Üstün zeka",
+    "alternatifler": [
+      "ÜSTÜN ZEKA",
+      "üstün zeka",
+      "ustun zeka",
+      "USTUN ZEKA"
+    ]
+  },
+  {
+    "soru": "Mızıka, klarnet ve ney enstrümanlarının grubu",
+    "cevap": "Üflemeli",
+    "alternatifler": [
+      "üflemeli",
+      "ÜFLEMELI",
+      "uflemeli",
+      "UFLEMELI"
+    ]
+  },
+  {
+    "soru": "Hüzün içindeki kişiye, telkin amaçlı söylenir",
+    "cevap": "Üzülme",
+    "alternatifler": [
+      "ÜZÜLME",
+      "UZULME",
+      "üzülme",
+      "uzulme"
+    ]
+  },
+  {
+    "soru": "Virginia Woolf'un makalelerini içeren kitap",
+    "cevap": "Üç gine",
+    "alternatifler": [
+      "üç gine",
+      "UC GINE",
+      "uc gine",
+      "ÜÇ GINE"
+    ]
+  },
+  {
+    "soru": "Aynı anda ikiden fazla dörtten az fiş takılabilir",
+    "cevap": "Üçlü priz",
+    "alternatifler": [
+      "ÜÇLÜ PRIZ",
+      "üçlü priz",
+      "uclu priz",
+      "UCLU PRIZ"
+    ]
+  },
+  {
+    "soru": "Çok uğraşmadan, özensizce yapılan",
+    "cevap": "Üstünkörü",
+    "alternatifler": [
+      "ustunkoru",
+      "üstünkörü",
+      "ÜSTÜNKÖRÜ",
+      "USTUNKORU"
+    ]
+  },
+  {
+    "soru": "Ayçiçeği tanesi yiyen, avcı güvercingiller üyesi",
+    "cevap": "Üveyik",
+    "alternatifler": [
+      "UVEYIK",
+      "uveyik",
+      "ÜVEYIK",
+      "üveyik"
+    ]
+  },
+  {
+    "soru": "Asker veya polislerin giydiği tek tip resmi giysi",
+    "cevap": "Üniforma",
+    "alternatifler": [
+      "uniforma",
+      "ÜNIFORMA",
+      "UNIFORMA",
+      "üniforma"
+    ]
+  },
+  {
+    "soru": "Nikah Masası adlı şarkısıyla ünlü şarkıcı",
+    "cevap": "Ümit besen",
+    "alternatifler": [
+      "UMIT BESEN",
+      "umit besen",
+      "ümit besen",
+      "ÜMIT BESEN"
+    ]
+  },
+  {
+    "soru": "Bir kuruluşa kayıt yaparak girme durumu",
+    "cevap": "Üyelik",
+    "alternatifler": [
+      "uyelik",
+      "ÜYELIK",
+      "üyelik",
+      "UYELIK"
+    ]
+  },
+  {
+    "soru": "Mutluluğa zıt düşen bir duygu, gam",
+    "cevap": "Üzüntü",
+    "alternatifler": [
+      "üzüntü",
+      "ÜZÜNTÜ",
+      "uzuntu",
+      "UZUNTU"
+    ]
+  },
+  {
+    "soru": "Cannes'da senaryo ödülü alan Cafer Penahi filmi",
+    "cevap": "Üç hayat",
+    "alternatifler": [
+      "UC HAYAT",
+      "ÜÇ HAYAT",
+      "üç hayat",
+      "uc hayat"
+    ]
+  },
+  {
+    "soru": "Verimli çalışan, çok ürün elde eden",
+    "cevap": "Üretken",
+    "alternatifler": [
+      "üretken",
+      "URETKEN",
+      "ÜRETKEN",
+      "uretken"
+    ]
+  },
+  {
+    "soru": "Gazap __, Steinbeck'e Pulitzer getiren roman",
+    "cevap": "Üzümleri",
+    "alternatifler": [
+      "üzümleri",
+      "ÜZÜMLERI",
+      "UZUMLERI",
+      "uzumleri"
+    ]
+  },
+  {
+    "soru": "Mumu söndürmek için nefes vermek",
+    "cevap": "Üflemek",
+    "alternatifler": [
+      "uflemek",
+      "UFLEMEK",
+      "ÜFLEMEK",
+      "üflemek"
+    ]
+  },
+  {
+    "soru": "Geleceğe dair beklentisi olan, umut taşıyan",
+    "cevap": "Ümitli",
+    "alternatifler": [
+      "ümitli",
+      "umitli",
+      "UMITLI",
+      "ÜMITLI"
+    ]
+  },
+  {
+    "soru": "Parasız hizmet",
+    "cevap": "Ücretsiz",
+    "alternatifler": [
+      "ÜCRETSIZ",
+      "ucretsiz",
+      "ücretsiz",
+      "UCRETSIZ"
+    ]
+  },
+  {
+    "soru": "Halk arasında kurdeşen denen deri hastalığı",
+    "cevap": "Ürtiker",
+    "alternatifler": [
+      "ÜRTIKER",
+      "ürtiker",
+      "urtiker",
+      "URTIKER"
+    ]
+  },
+  {
+    "soru": "Soğuk havadan etkilenmek, ısı kaybetmek",
+    "cevap": "Üşümek",
+    "alternatifler": [
+      "üşümek",
+      "USUMEK",
+      "ÜŞÜMEK",
+      "usumek"
+    ]
+  },
+  {
+    "soru": "Kıyafet kırışıklıklarını alet yardımı ile açmak",
+    "cevap": "Ütülemek",
+    "alternatifler": [
+      "ütülemek",
+      "ÜTÜLEMEK",
+      "utulemek",
+      "UTULEMEK"
+    ]
+  },
+  {
+    "soru": "NBA yıldızı Stephen Curry'nin usta olduğu atış",
+    "cevap": "Üç sayı",
+    "alternatifler": [
+      "üç sayı",
+      "uc sayi",
+      "ÜÇ SAYI",
+      "UC SAYI"
+    ]
+  },
+  {
+    "soru": "__ hesabını yapmak, gereksiz bir cimrilik",
+    "cevap": "Üçün beşin",
+    "alternatifler": [
+      "ucun besin",
+      "ÜÇÜN BEŞIN",
+      "üçün beşin",
+      "UCUN BESIN"
+    ]
+  },
+  {
+    "soru": "Thomas More'un en ünlü eseri; imkansız tasarı",
+    "cevap": "Ütopya",
+    "alternatifler": [
+      "ütopya",
+      "UTOPYA",
+      "ÜTOPYA",
+      "utopya"
+    ]
+  },
+  {
+    "soru": "İstanbulda Kız Kulesi'nin bulunduğu semt",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "__ dünya, kafaya takmamaya teşvik edici söz",
+    "cevap": "Üç günlük",
+    "alternatifler": [
+      "UC GUNLUK",
+      "üç günlük",
+      "uc gunluk",
+      "ÜÇ GÜNLÜK"
+    ]
+  },
+  {
+    "soru": "İbrahim Büyükak, Eser Yenenler, Oğuzhan Koç ekibi",
+    "cevap": "Üç adam",
+    "alternatifler": [
+      "ÜÇ ADAM",
+      "UC ADAM",
+      "üç adam",
+      "uc adam"
+    ]
+  },
+  {
+    "soru": "Sütten ağzı yanan, yoğurdu __ yer; Bir atasözü",
+    "cevap": "Üfleyerek",
+    "alternatifler": [
+      "ÜFLEYEREK",
+      "ufleyerek",
+      "üfleyerek",
+      "UFLEYEREK"
+    ]
+  },
+  {
+    "soru": "Sabah, öğle, akşam yemeklerine verilen genel isim",
+    "cevap": "Üç öğün",
+    "alternatifler": [
+      "UC OGUN",
+      "ÜÇ ÖĞÜN",
+      "üç öğün",
+      "uc ogun"
+    ]
+  },
+  {
+    "soru": "Kurşun karbonat, boya yapımında kullanılır",
+    "cevap": "Üstübeç",
+    "alternatifler": [
+      "ÜSTÜBEÇ",
+      "USTUBEC",
+      "üstübeç",
+      "ustubec"
+    ]
+  },
+  {
+    "soru": "Cimri insanların bunların lafını yaptığı söylenir",
+    "cevap": "Üçün beşin",
+    "alternatifler": [
+      "ucun besin",
+      "ÜÇÜN BEŞIN",
+      "üçün beşin",
+      "UCUN BESIN"
+    ]
+  },
+  {
+    "soru": "Masal sonunda gökten düşen elmanın sayısı ve rengi",
+    "cevap": "Üç kırmızı",
+    "alternatifler": [
+      "ÜÇ KIRMIZI",
+      "UC KIRMIZI",
+      "uc kirmizi",
+      "üç kırmızı"
+    ]
+  },
+  {
+    "soru": "Yavuz Sultan Selim Köprüsü'nün halk arasındaki adı",
+    "cevap": "Üçüncü",
+    "alternatifler": [
+      "ÜÇÜNCÜ",
+      "ucuncu",
+      "üçüncü",
+      "UCUNCU"
+    ]
+  },
+  {
+    "soru": "Kötü enerjiyi kovduğu sanılan, evde yakılan bir ot",
+    "cevap": "Üzerlik",
+    "alternatifler": [
+      "ÜZERLIK",
+      "üzerlik",
+      "UZERLIK",
+      "uzerlik"
+    ]
+  },
+  {
+    "soru": "Beylerbeyi Sarayı bu ilçededir",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  },
+  {
+    "soru": "İdrar yolları tedavisiyle ilgilenen cerrahi alanı",
+    "cevap": "Üroloji",
+    "alternatifler": [
+      "üroloji",
+      "ÜROLOJI",
+      "uroloji",
+      "UROLOJI"
+    ]
+  },
+  {
+    "soru": "Hiç bilgi vermeyen insan, mecazen bunu oynar",
+    "cevap": "Üç maymun",
+    "alternatifler": [
+      "üç maymun",
+      "uc maymun",
+      "ÜÇ MAYMUN",
+      "UC MAYMUN"
+    ]
+  },
+  {
+    "soru": "Nazarı kovduğuna inanılan bitki tohumu",
+    "cevap": "Üzerlik",
+    "alternatifler": [
+      "ÜZERLIK",
+      "üzerlik",
+      "UZERLIK",
+      "uzerlik"
+    ]
+  },
+  {
+    "soru": "2021'de, Show TV'de başlayan, Balat'ta geçen dizi",
+    "cevap": "Üç kuruş",
+    "alternatifler": [
+      "üç kuruş",
+      "UC KURUS",
+      "uc kurus",
+      "ÜÇ KURUŞ"
+    ]
+  },
+  {
+    "soru": "Futbolda, amatör kümenin hemen üzerindeki klasman",
+    "cevap": "Üçüncü lig",
+    "alternatifler": [
+      "ÜÇÜNCÜ LIG",
+      "UCUNCU LIG",
+      "üçüncü lig",
+      "ucuncu lig"
+    ]
+  },
+  {
+    "soru": "Levent __; Avrupa Yakası'nda Cem rolünü oynadı",
+    "cevap": "Üzümcü",
+    "alternatifler": [
+      "uzumcu",
+      "UZUMCU",
+      "üzümcü",
+      "ÜZÜMCÜ"
+    ]
+  },
+  {
+    "soru": "Beylerbeyi Sarayı bu semttedir",
+    "cevap": "Üsküdar",
+    "alternatifler": [
+      "USKUDAR",
+      "uskudar",
+      "üsküdar",
+      "ÜSKÜDAR"
+    ]
+  }
+]
