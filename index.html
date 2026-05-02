@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v33</title>
+<title>PassaWord -v34</title>
 
 <style>
 /* =======================================
@@ -1623,14 +1623,14 @@ textarea.giris-alani {
     <div class="ayar-bolum">
       <div class="ayar-etiket">Aktif Profil</div>
       <div class="ayar-kart">
-        <div class="ayar-satir">
-          <div class="ayar-ikon">👤</div>
-          <div class="ayar-icerik">
-            <div class="ayar-baslik" id="aktifProfilAdi">—</div>
-            <div class="ayar-alt">Şu an aktif profil</div>
-          </div>
-          <span class="rozet-aktif">AKTİF</span>
-        </div>
+       <div class="ayar-satir" id="aktifProfilSatir">
+  <div class="ayar-ikon">👤</div>
+  <div class="ayar-icerik">
+    <div class="ayar-baslik" id="aktifProfilAdi">—</div>
+    <div class="ayar-alt">Şu an aktif profil • Silmek için basılı tut</div>
+  </div>
+  <span class="rozet-aktif">AKTİF</span>
+</div>
       </div>
     </div>
 
@@ -2131,6 +2131,25 @@ window.addEventListener('DOMContentLoaded', () => {
     ekraniGoster('baslangicEkrani');
   }
 
+/* Aktif profil satırına uzun basma ile silme */
+const aktifSatir = document.getElementById('aktifProfilSatir');
+let aktifSatirZamanlayi;
+aktifSatir.addEventListener('mousedown', () => {
+  aktifSatirZamanlayi = setTimeout(() => {
+    const profil = aktifProfiliGetir();
+    if (profil) profilSilOnay(profil);
+  }, 1000);
+});
+aktifSatir.addEventListener('mouseup', () => clearTimeout(aktifSatirZamanlayi));
+aktifSatir.addEventListener('mouseleave', () => clearTimeout(aktifSatirZamanlayi));
+aktifSatir.addEventListener('touchstart', () => {
+  aktifSatirZamanlayi = setTimeout(() => {
+    const profil = aktifProfiliGetir();
+    if (profil) profilSilOnay(profil);
+  }, 1000);
+});
+aktifSatir.addEventListener('touchend', () => clearTimeout(aktifSatirZamanlayi));
+   
   /* Firebase skor tablosunu dinle */
   genelSkorTablosunuDinle();
 
