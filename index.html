@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v32</title>
+<title>PassaWord -v33</title>
 
 <style>
 /* =======================================
@@ -3281,7 +3281,17 @@ function profilSilOnay(profil) {
       }
 
       profilListesiniGuncelle();
-      toastGoster(`"${profil.ad}" silindi`);
+toastGoster(`"${profil.ad}" silindi`);
+
+/* Hiç profil kalmadıysa profil oluştur ekranına geç */
+const kalanProfiller = profilleriGetir();
+if (kalanProfiller.length === 0) {
+  modalKapat('profilSecModal');
+  modalKapat('ayarlarModal');
+  document.getElementById('hazirEkrani').style.display = 'none';
+  document.getElementById('profilOlusturKutu').style.display = 'block';
+  document.getElementById('hosgeldinIsim').textContent = '';
+}
     }
   );
 }
