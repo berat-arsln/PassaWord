@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v31</title>
+<title>PassaWord -v32</title>
 
 <style>
 /* =======================================
@@ -3235,7 +3235,7 @@ function profilListesiniGuncelle() {
       toastGoster(`"${profil.ad}" profili seçildi`);
     });
 
-    /* Uzun basma: profil sil */
+    /* Uzun basma: profil sil (dokunmatik) */
     let uzunBasmaZamanlayi;
     satir.addEventListener('touchstart', () => {
       uzunBasmaZamanlayi = setTimeout(() => {
@@ -3244,6 +3244,16 @@ function profilListesiniGuncelle() {
     });
     satir.addEventListener('touchend', () => clearTimeout(uzunBasmaZamanlayi));
     satir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZamanlayi));
+
+    /* Uzun basma: profil sil (bilgisayar) */
+    let mouseBasmaZamanlayi;
+    satir.addEventListener('mousedown', () => {
+      mouseBasmaZamanlayi = setTimeout(() => {
+        profilSilOnay(profil);
+      }, 1000);
+    });
+    satir.addEventListener('mouseup', () => clearTimeout(mouseBasmaZamanlayi));
+    satir.addEventListener('mouseleave', () => clearTimeout(mouseBasmaZamanlayi));
 
     liste.appendChild(satir);
   });
