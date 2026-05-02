@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v23</title>
+<title>PassaWord -v24</title>
 
 <style>
 /* =======================================
@@ -3151,8 +3151,8 @@ window.yeniProfilEkle = function() {
 window.modalAc = function(id) {
   if (id === 'skorModal') kisiselSkorTablosunuGuncelle();
   if (id === 'profilSecModal') profilListesiniGuncelle();
+if (id === 'geriBildirimModal') altTurGuncelle('oneri');
   if (id === 'adminModal') {
-  if (id === 'geriBildirimModal') altTurGuncelle('oneri');
     /* Admin modalı açılınca şifre ekranını göster */
     document.getElementById('adminSifreEkrani').classList.remove('gizli');
     document.getElementById('adminIcerik').classList.add('gizli');
