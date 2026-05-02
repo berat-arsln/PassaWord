@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v20</title>
+<title>PassaWord -v21</title>
 
 <style>
 /* =======================================
@@ -2012,7 +2012,7 @@ const HARF_DOSYA_ESLEME = {
 
 /* EmailJS yapılandırması */
 const EMAILJS_SERVICE_ID = 'service_ojr0p6q';
-const EMAILJS_TEMPLATE_ID = 'template_f071lnh';
+const EMAILJS_TEMPLATE_ID = 'template_dlmjr0w';
 const EMAILJS_PUBLIC_KEY = 'D01aRDtRbWdqpLIjm';
 
 /* Oyun süresi (saniye) */
@@ -3065,7 +3065,9 @@ await push(geriBildirimRef, {
         kategori,
         alt_tur: altTur,
         mesaj,
-        tarih
+        tarih,
+        name: profilAdi,
+        email:
       }
     );
     toastGoster('Geri bildiriminiz gönderildi! Teşekkürler 🙏');
