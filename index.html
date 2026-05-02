@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v24</title>
+<title>PassaWord -v25</title>
 
 <style>
 /* =======================================
@@ -550,7 +550,7 @@ html, body {
   letter-spacing: 0.5px;
   outline: none;
   /* Cihaz klavyesini engelle, sadece özel klavye kullanılsın */
-  caret-color: transparent;
+  caret-color: #fff;
 }
 
 #cevapGiris::placeholder {
@@ -1429,10 +1429,13 @@ textarea.giris-alani {
    1025px ve üzeri ekranlar
    ======================================== */
 @media (min-width: 1025px) {
-  /* Mobil klavye gizlenir */
-  .giris-klavye-alani { display: none !important; }
-  /* Bilgisayar cevap alanı gösterilir */
-  #bilgisayarCevapAlani { display: block !important; }
+  .giris-klavye-alani { 
+    padding: 12px 16px;
+  }
+  #cevapGiris {
+    height: 50px;
+    font-size: 17px;
+  }
 }
 
 /* ========================================
@@ -1538,34 +1541,19 @@ textarea.giris-alani {
     </div>
   </div>
 
-  <!-- Mobil/Tablet klavye alanı -->
+ <!-- Cevap alanı - tüm cihazlar -->
   <div class="giris-klavye-alani">
     <div class="cevap-satiri">
       <input
         type="text"
         id="cevapGiris"
         placeholder="Cevabınızı yazın..."
-        readonly
         autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
       >
       <button id="pasButon" onclick="pasCek()">PAS</button>
     </div>
-    <!-- Özel Türkçe klavye - JS tarafından oluşturulur -->
-    <div id="ozelKlavye"></div>
-  </div>
-
-  <!-- Bilgisayar cevap alanı (klavye yok) -->
-  <div id="bilgisayarCevapAlani">
-    <div class="bilgisayar-cevap-satiri">
-      <input
-        type="text"
-        id="bilgisayarCevapGiris"
-        placeholder="Cevabınızı yazın ve Enter'a basın..."
-        autocomplete="off"
-      >
-      <button id="bilgisayarPasButon" onclick="pasCek()">PAS</button>
-    </div>
-    <div class="bilgisayar-ipucu">Enter ile cevapla • Boşluk ile pas geç</div>
   </div>
 </div>
 
@@ -2144,23 +2132,13 @@ window.addEventListener('DOMContentLoaded', () => {
    CİHAZ MODU AYARLAMA
    ======================================== */
 function bilgisayarModunuAyarla() {
-  const dokunmatik = window._dokunmatik;
-  const genislik = window.innerWidth;
-
-  /* Bilgisayar: dokunmatik değil VE geniş ekran */
-  const bilgisayarMi = !dokunmatik && genislik >= 1025;
-
-  if (bilgisayarMi) {
-    /* Bilgisayar: fiziksel klavye, input normal çalışsın */
-    document.getElementById('bilgisayarCevapAlani').style.display = 'block';
-    document.querySelector('.giris-klavye-alani').style.display = 'none';
-
-    /* Bilgisayar input'una enter dinleyicisi ekle */
-    const bcGiris = document.getElementById('bilgisayarCevapGiris');
-    bcGiris.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') cevapVer();
-    });
-  }
+  const giris = document.getElementById('cevapGiris');
+  giris.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      cevapVer();
+    }
+  });
 }
 
 /* ========================================
@@ -2362,7 +2340,7 @@ function daireOlculeriniHesapla() {
   } else {
     /* Mobil/Tablet: klavye var */
     /* Header ~55px, klavye+input alanı ~230px */
-    const kullanilabilir = Math.min(vg, vy - 55 - 235);
+    const kullanilabilir = Math.min(vg, vy - 55 - 100);
     mevcut = Math.max(240, Math.min(kullanilabilir, 420));
   }
 
@@ -2469,13 +2447,7 @@ function sureyiGuncelle() {
    CEVAP VERME
    ======================================== */
 window.cevapVer = function() {
-  /* Hangi input aktif? Bilgisayar mı mobil mi? */
-  const dokunmatik = window._dokunmatik;
-  const bilgisayarMi = !dokunmatik && window.innerWidth >= 1025;
-
-  const ham = bilgisayarMi
-    ? document.getElementById('bilgisayarCevapGiris').value.trim()
-    : document.getElementById('cevapGiris').value.trim();
+  const ham = document.getElementById('cevapGiris').value.trim();
 
   if (!ham) return;
 
@@ -2641,7 +2613,6 @@ function cevapKontrol(verilen, dogru, alternatifler) {
    ======================================== */
 function cevapAlaniniTemizle() {
   document.getElementById('cevapGiris').value = '';
-  document.getElementById('bilgisayarCevapGiris').value = '';
 }
 
 /* ========================================
@@ -2964,31 +2935,13 @@ function tusaBasildi(tus) {
    Bilgisayar için
    ======================================== */
 document.addEventListener('keydown', (e) => {
-  /* Oyun ekranı aktif değilse çalışma */
   if (document.getElementById('oyunEkrani').classList.contains('gizli')) return;
-  /* Modal açıksa çalışma */
   if (document.querySelector('.modal-arkaplan.acik')) return;
+  if (document.activeElement === document.getElementById('cevapGiris')) return;
 
-  const dokunmatik = window._dokunmatik;
-  const bilgisayarMi = !dokunmatik && window.innerWidth >= 1025;
-
-  if (bilgisayarMi) {
-    /* Bilgisayarda Enter ile cevapla */
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      cevapVer();
-    }
-    /* Bilgisayarda boşluk ile pas (input dışında) */
-    if (e.key === ' ' && document.activeElement !== document.getElementById('bilgisayarCevapGiris')) {
-      e.preventDefault();
-      pasCek();
-    }
-  } else {
-    /* Mobilde fiziksel klavye desteği (isteğe bağlı) */
-    if (e.key === 'Enter') { cevapVer(); return; }
-    if (e.key === 'Backspace') { tusaBasildi('SİL'); e.preventDefault(); return; }
-    if (e.key === ' ') { tusaBasildi(' '); e.preventDefault(); return; }
-    if (e.key.length === 1) tusaBasildi(e.key.toUpperCase());
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    cevapVer();
   }
 });
 
@@ -3151,8 +3104,7 @@ window.yeniProfilEkle = function() {
 window.modalAc = function(id) {
   if (id === 'skorModal') kisiselSkorTablosunuGuncelle();
   if (id === 'profilSecModal') profilListesiniGuncelle();
-if (id === 'geriBildirimModal') altTurGuncelle('oneri');
-  if (id === 'adminModal') {
+  if (id === 'geriBildirimModal') altTurGuncelle('oneri');
     /* Admin modalı açılınca şifre ekranını göster */
     document.getElementById('adminSifreEkrani').classList.remove('gizli');
     document.getElementById('adminIcerik').classList.add('gizli');
