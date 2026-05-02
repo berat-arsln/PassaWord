@@ -1,1 +1,4022 @@
-
+[
+  {
+    "soru": "Bir şeyden evvel gelen",
+    "cevap": "Önceki",
+    "alternatifler": [
+      "onceki",
+      "ONCEKI",
+      "ÖNCEKI",
+      "önceki"
+    ]
+  },
+  {
+    "soru": "Çalışanların yemek yiyip dinlendiği zaman dilimi",
+    "cevap": "Öğle arası",
+    "alternatifler": [
+      "ÖĞLE ARASI",
+      "ogle arasi",
+      "OGLE ARASI",
+      "öğle arası"
+    ]
+  },
+  {
+    "soru": "İstanbul'un Çekmeköy ilçesindeki baraj",
+    "cevap": "Ömerli",
+    "alternatifler": [
+      "omerli",
+      "ÖMERLI",
+      "OMERLI",
+      "ömerli"
+    ]
+  },
+  {
+    "soru": "Bir sonu olan, fani",
+    "cevap": "Ölümlü",
+    "alternatifler": [
+      "olumlu",
+      "ÖLÜMLÜ",
+      "OLUMLU",
+      "ölümlü"
+    ]
+  },
+  {
+    "soru": "Bir şahsa veya şirkete ait uçak",
+    "cevap": "Özel jet",
+    "alternatifler": [
+      "ozel jet",
+      "ÖZEL JET",
+      "OZEL JET",
+      "özel jet"
+    ]
+  },
+  {
+    "soru": "Şahsi hava aracı",
+    "cevap": "Özel jet",
+    "alternatifler": [
+      "ozel jet",
+      "ÖZEL JET",
+      "OZEL JET",
+      "özel jet"
+    ]
+  },
+  {
+    "soru": "Türklerin çıkış noktası olan tarihi şehir",
+    "cevap": "Ötüken",
+    "alternatifler": [
+      "ötüken",
+      "otuken",
+      "ÖTÜKEN",
+      "OTUKEN"
+    ]
+  },
+  {
+    "soru": "Vergi idaresinden görüş almak için talep edilir",
+    "cevap": "Özelge",
+    "alternatifler": [
+      "ozelge",
+      "OZELGE",
+      "özelge",
+      "ÖZELGE"
+    ]
+  },
+  {
+    "soru": "Kahramanı Çiçikov olan Nikolay Gogol romanı",
+    "cevap": "Ölü canlar",
+    "alternatifler": [
+      "ÖLÜ CANLAR",
+      "OLU CANLAR",
+      "olu canlar",
+      "ölü canlar"
+    ]
+  },
+  {
+    "soru": "Sinirli, kızgın",
+    "cevap": "Öfkeli",
+    "alternatifler": [
+      "ÖFKELI",
+      "öfkeli",
+      "OFKELI",
+      "ofkeli"
+    ]
+  },
+  {
+    "soru": "Bir işe başvururken verilen kişisel kariyer özeti",
+    "cevap": "Öz geçmiş",
+    "alternatifler": [
+      "ÖZ GEÇMIŞ",
+      "OZ GECMIS",
+      "oz gecmis",
+      "öz geçmiş"
+    ]
+  },
+  {
+    "soru": "Bir amaç için çıkarlarından vazgeçme; Fedakarlık",
+    "cevap": "Özveri",
+    "alternatifler": [
+      "ozveri",
+      "OZVERI",
+      "özveri",
+      "ÖZVERI"
+    ]
+  },
+  {
+    "soru": "Kendi çıkarını düşünmeden yapılan fedakarlık",
+    "cevap": "Özveri",
+    "alternatifler": [
+      "ozveri",
+      "OZVERI",
+      "özveri",
+      "ÖZVERI"
+    ]
+  },
+  {
+    "soru": "Cengiz Han öldükten sonra yerine geçen oğlu",
+    "cevap": "Ögeday",
+    "alternatifler": [
+      "ÖGEDAY",
+      "OGEDAY",
+      "ogeday",
+      "ögeday"
+    ]
+  },
+  {
+    "soru": "Beyaz Show programının sunucusunun soyadı",
+    "cevap": "Öztürk",
+    "alternatifler": [
+      "ÖZTÜRK",
+      "ozturk",
+      "OZTURK",
+      "öztürk"
+    ]
+  },
+  {
+    "soru": "Boğaz, orta kulak ve burnu birbirine bağlayan boru",
+    "cevap": "Östaki",
+    "alternatifler": [
+      "ostaki",
+      "östaki",
+      "ÖSTAKI",
+      "OSTAKI"
+    ]
+  },
+  {
+    "soru": "Doktor Jivago'yu canlandıran Lübnan asıllı aktör",
+    "cevap": "Ömer şerif",
+    "alternatifler": [
+      "omer serif",
+      "OMER SERIF",
+      "ömer şerif",
+      "ÖMER ŞERIF"
+    ]
+  },
+  {
+    "soru": "Kahve, baharat çekmekte kullanılan makine",
+    "cevap": "Öğütücü",
+    "alternatifler": [
+      "OGUTUCU",
+      "ÖĞÜTÜCÜ",
+      "öğütücü",
+      "ogutucu"
+    ]
+  },
+  {
+    "soru": "Johnny Depp'in Victor Van Dort olduğu animasyon",
+    "cevap": "Ölü gelin",
+    "alternatifler": [
+      "olu gelin",
+      "OLU GELIN",
+      "ÖLÜ GELIN",
+      "ölü gelin"
+    ]
+  },
+  {
+    "soru": "Tedavisi genelde şurupla yapılan rahatsızlık",
+    "cevap": "Öksürük",
+    "alternatifler": [
+      "oksuruk",
+      "öksürük",
+      "OKSURUK",
+      "ÖKSÜRÜK"
+    ]
+  },
+  {
+    "soru": "Çok önemli olmayan, ufak tefek şeyler",
+    "cevap": "Öteberi",
+    "alternatifler": [
+      "OTEBERI",
+      "oteberi",
+      "öteberi",
+      "ÖTEBERI"
+    ]
+  },
+  {
+    "soru": "Grip olunca yapılan, hapşırmaya benzeyen hareket",
+    "cevap": "Öksürmek",
+    "alternatifler": [
+      "oksurmek",
+      "ÖKSÜRMEK",
+      "OKSURMEK",
+      "öksürmek"
+    ]
+  },
+  {
+    "soru": "Bir kurumun belirli bir iş için ayırdığı para",
+    "cevap": "Ödenek",
+    "alternatifler": [
+      "odenek",
+      "ODENEK",
+      "ÖDENEK",
+      "ödenek"
+    ]
+  },
+  {
+    "soru": "Ferzan __; Cahil Periler'in yönetmeni",
+    "cevap": "Özpetek",
+    "alternatifler": [
+      "özpetek",
+      "OZPETEK",
+      "ozpetek",
+      "ÖZPETEK"
+    ]
+  },
+  {
+    "soru": "Alınan eşyanın ücretini ya da borcu vermek",
+    "cevap": "Ödemek",
+    "alternatifler": [
+      "ODEMEK",
+      "odemek",
+      "ödemek",
+      "ÖDEMEK"
+    ]
+  },
+  {
+    "soru": "Sonsuza dek yaşayacak olan",
+    "cevap": "Ölümsüz",
+    "alternatifler": [
+      "ÖLÜMSÜZ",
+      "OLUMSUZ",
+      "ölümsüz",
+      "olumsuz"
+    ]
+  },
+  {
+    "soru": "Söz gelişi, mesela",
+    "cevap": "Örneğin",
+    "alternatifler": [
+      "örneğin",
+      "ornegin",
+      "ÖRNEĞIN",
+      "ORNEGIN"
+    ]
+  },
+  {
+    "soru": "Karaciğerden çıkan safranın toplandığı organ",
+    "cevap": "Öd kesesi",
+    "alternatifler": [
+      "OD KESESI",
+      "od kesesi",
+      "öd kesesi",
+      "ÖD KESESI"
+    ]
+  },
+  {
+    "soru": "Otelin resepsiyonunun bulunduğu bölüm",
+    "cevap": "Ön büro",
+    "alternatifler": [
+      "ON BURO",
+      "ön büro",
+      "ÖN BÜRO",
+      "on buro"
+    ]
+  },
+  {
+    "soru": "Bir yazının yazılmadan önce hazırlanan taslağı",
+    "cevap": "Önörgü",
+    "alternatifler": [
+      "önörgü",
+      "ÖNÖRGÜ",
+      "onorgu",
+      "ONORGU"
+    ]
+  },
+  {
+    "soru": "Doğaçlama tiyatroda oyun çatısını oluşturan taslak",
+    "cevap": "Önörgü",
+    "alternatifler": [
+      "önörgü",
+      "ÖNÖRGÜ",
+      "onorgu",
+      "ONORGU"
+    ]
+  },
+  {
+    "soru": "Yol yürümekle, borç __ biter",
+    "cevap": "Ödemekle",
+    "alternatifler": [
+      "ODEMEKLE",
+      "ÖDEMEKLE",
+      "ödemekle",
+      "odemekle"
+    ]
+  },
+  {
+    "soru": "Gustav Klimt tarafından resmedilmiş bir tablo",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Kahve, karabiber gibi şeyleri un ufak hale getirme",
+    "cevap": "Öğütme",
+    "alternatifler": [
+      "öğütme",
+      "ÖĞÜTME",
+      "ogutme",
+      "OGUTME"
+    ]
+  },
+  {
+    "soru": "Peter Parker'ı ısıran eklembacaklı",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Kontörü bitenler atarlar",
+    "cevap": "Ödemeli",
+    "alternatifler": [
+      "ODEMELI",
+      "ÖDEMELI",
+      "ödemeli",
+      "odemeli"
+    ]
+  },
+  {
+    "soru": "Telefonda para kalmayınca yapılan bir arama türü",
+    "cevap": "Ödemeli",
+    "alternatifler": [
+      "ODEMELI",
+      "ÖDEMELI",
+      "ödemeli",
+      "odemeli"
+    ]
+  },
+  {
+    "soru": "Fethiye'nin ünlü sahili",
+    "cevap": "Ölüdeniz",
+    "alternatifler": [
+      "ÖLÜDENIZ",
+      "ölüdeniz",
+      "OLUDENIZ",
+      "oludeniz"
+    ]
+  },
+  {
+    "soru": "Yatak __, karyola süsü",
+    "cevap": "Örtüsü",
+    "alternatifler": [
+      "ÖRTÜSÜ",
+      "ortusu",
+      "ORTUSU",
+      "örtüsü"
+    ]
+  },
+  {
+    "soru": "Okulda derslere giren eğitimci",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Okulda öğrencileri eğiten görevli",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Değersiz, ehemmiyetsiz",
+    "cevap": "Önemsiz",
+    "alternatifler": [
+      "onemsiz",
+      "ÖNEMSIZ",
+      "önemsiz",
+      "ONEMSIZ"
+    ]
+  },
+  {
+    "soru": "Telepati",
+    "cevap": "Öteduyum",
+    "alternatifler": [
+      "öteduyum",
+      "OTEDUYUM",
+      "ÖTEDUYUM",
+      "oteduyum"
+    ]
+  },
+  {
+    "soru": "Telepati yerine kullanılan Türkçe kelime",
+    "cevap": "Öteduyum",
+    "alternatifler": [
+      "öteduyum",
+      "OTEDUYUM",
+      "ÖTEDUYUM",
+      "oteduyum"
+    ]
+  },
+  {
+    "soru": "Bir işte olabilecekleri kestirme",
+    "cevap": "Öngörü",
+    "alternatifler": [
+      "öngörü",
+      "ÖNGÖRÜ",
+      "ongoru",
+      "ONGORU"
+    ]
+  },
+  {
+    "soru": "Kurtlar Vadisi'nde Avukat Elif rolündeki oyuncu",
+    "cevap": "Özgü namal",
+    "alternatifler": [
+      "OZGU NAMAL",
+      "özgü namal",
+      "ÖZGÜ NAMAL",
+      "ozgu namal"
+    ]
+  },
+  {
+    "soru": "Bir olayın üzerini örtmek, gizlemek",
+    "cevap": "Örtbas",
+    "alternatifler": [
+      "ÖRTBAS",
+      "örtbas",
+      "ORTBAS",
+      "ortbas"
+    ]
+  },
+  {
+    "soru": "Kadınlık hormonu",
+    "cevap": "Östrojen",
+    "alternatifler": [
+      "östrojen",
+      "OSTROJEN",
+      "ostrojen",
+      "ÖSTROJEN"
+    ]
+  },
+  {
+    "soru": "Dudak dudağa temas ederek selamlaşmak",
+    "cevap": "Öpüşmek",
+    "alternatifler": [
+      "OPUSMEK",
+      "ÖPÜŞMEK",
+      "öpüşmek",
+      "opusmek"
+    ]
+  },
+  {
+    "soru": "Dudak ve yanaklar yoluyla selamlaşmak",
+    "cevap": "Öpüşmek",
+    "alternatifler": [
+      "OPUSMEK",
+      "ÖPÜŞMEK",
+      "öpüşmek",
+      "opusmek"
+    ]
+  },
+  {
+    "soru": "Korkaklık, cesaretsizlik",
+    "cevap": "Ödleklik",
+    "alternatifler": [
+      "ODLEKLIK",
+      "odleklik",
+      "ÖDLEKLIK",
+      "ödleklik"
+    ]
+  },
+  {
+    "soru": "Çok hasta olan birisinin ölme hakkı",
+    "cevap": "Ötanazi",
+    "alternatifler": [
+      "OTANAZI",
+      "ötanazi",
+      "otanazi",
+      "ÖTANAZI"
+    ]
+  },
+  {
+    "soru": "2006 yılında dünyanın en güzeli seçilen kumsalımız",
+    "cevap": "Ölüdeniz",
+    "alternatifler": [
+      "ÖLÜDENIZ",
+      "ölüdeniz",
+      "OLUDENIZ",
+      "oludeniz"
+    ]
+  },
+  {
+    "soru": "Başarısızlığı, başka alandaki başarıyla kapatma",
+    "cevap": "Ödünleme",
+    "alternatifler": [
+      "ODUNLEME",
+      "ÖDÜNLEME",
+      "odunleme",
+      "ödünleme"
+    ]
+  },
+  {
+    "soru": "Mühim; dikkate değer",
+    "cevap": "Önemli",
+    "alternatifler": [
+      "ÖNEMLI",
+      "onemli",
+      "önemli",
+      "ONEMLI"
+    ]
+  },
+  {
+    "soru": "Eti yenebilen, uzun ve kalın gagalı bir kuş",
+    "cevap": "Öküzburnu",
+    "alternatifler": [
+      "öküzburnu",
+      "OKUZBURNU",
+      "ÖKÜZBURNU",
+      "okuzburnu"
+    ]
+  },
+  {
+    "soru": "Filmlerde altında duran iki kişiyi öpüştüren bitki",
+    "cevap": "Ökse otu",
+    "alternatifler": [
+      "OKSE OTU",
+      "ÖKSE OTU",
+      "okse otu",
+      "ökse otu"
+    ]
+  },
+  {
+    "soru": "İş başvurusunda adaylardan istenir",
+    "cevap": "Özgeçmiş",
+    "alternatifler": [
+      "özgeçmiş",
+      "OZGECMIS",
+      "ozgecmis",
+      "ÖZGEÇMIŞ"
+    ]
+  },
+  {
+    "soru": "Eğitim gören kişi, talebe",
+    "cevap": "Öğrenci",
+    "alternatifler": [
+      "öğrenci",
+      "ogrenci",
+      "ÖĞRENCI",
+      "OGRENCI"
+    ]
+  },
+  {
+    "soru": "İşin gidişatına göre olacakları önceden kestirme",
+    "cevap": "Öngörme",
+    "alternatifler": [
+      "ONGORME",
+      "ÖNGÖRME",
+      "öngörme",
+      "ongorme"
+    ]
+  },
+  {
+    "soru": "Hiç borcu olmayan ilçe",
+    "cevap": "Ödemiş",
+    "alternatifler": [
+      "ödemiş",
+      "odemis",
+      "ÖDEMIŞ",
+      "ODEMIS"
+    ]
+  },
+  {
+    "soru": "Kavuk'un Şevket Çoruh'tan önceki sahibi, Rasim __",
+    "cevap": "Öztekin",
+    "alternatifler": [
+      "oztekin",
+      "öztekin",
+      "OZTEKIN",
+      "ÖZTEKIN"
+    ]
+  },
+  {
+    "soru": "Tiyatromuzun simgesi Kavuk'un son sahibi, Rasim __",
+    "cevap": "Öztekin",
+    "alternatifler": [
+      "oztekin",
+      "öztekin",
+      "OZTEKIN",
+      "ÖZTEKIN"
+    ]
+  },
+  {
+    "soru": "Peter Parker'ı ısıran radyoaktif hayvan",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Paul Walker'ın oynadığı seri, Hızlı ve __",
+    "cevap": "Öfkeli",
+    "alternatifler": [
+      "ÖFKELI",
+      "öfkeli",
+      "OFKELI",
+      "ofkeli"
+    ]
+  },
+  {
+    "soru": "\"Yeşşe\" sözüyle bilinen oyuncu, __ Serengil",
+    "cevap": "Öztürk",
+    "alternatifler": [
+      "ÖZTÜRK",
+      "ozturk",
+      "OZTURK",
+      "öztürk"
+    ]
+  },
+  {
+    "soru": "Bir şeyin olacağını baştan hissetme, altıncı his",
+    "cevap": "Önsezi",
+    "alternatifler": [
+      "ÖNSEZI",
+      "ONSEZI",
+      "önsezi",
+      "onsezi"
+    ]
+  },
+  {
+    "soru": "Siyah renkli ve kalın kabuklu bir üzüm türü",
+    "cevap": "Öküzgözü",
+    "alternatifler": [
+      "okuzgozu",
+      "öküzgözü",
+      "OKUZGOZU",
+      "ÖKÜZGÖZÜ"
+    ]
+  },
+  {
+    "soru": "Cumhurbaşkanına tanınan özel bir ödenek",
+    "cevap": "Örtülü",
+    "alternatifler": [
+      "ORTULU",
+      "örtülü",
+      "ÖRTÜLÜ",
+      "ortulu"
+    ]
+  },
+  {
+    "soru": "İçselleştirme",
+    "cevap": "Özümseme",
+    "alternatifler": [
+      "özümseme",
+      "ozumseme",
+      "ÖZÜMSEME",
+      "OZUMSEME"
+    ]
+  },
+  {
+    "soru": "Mesleği okulda ders vermek olan kimse",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Mesleği, okulda eğitim vermek olan uzman",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Çalışkan öğrenciler sınıfta buraya oturur",
+    "cevap": "Ön sıra",
+    "alternatifler": [
+      "ON SIRA",
+      "on sira",
+      "ÖN SIRA",
+      "ön sıra"
+    ]
+  },
+  {
+    "soru": "Pekala, sen bilirsin anlamlarına gelen söz",
+    "cevap": "Öyle olsun",
+    "alternatifler": [
+      "ÖYLE OLSUN",
+      "oyle olsun",
+      "OYLE OLSUN",
+      "öyle olsun"
+    ]
+  },
+  {
+    "soru": "Selfie'nin Türkçe karşılığı",
+    "cevap": "Özçekim",
+    "alternatifler": [
+      "özçekim",
+      "OZCEKIM",
+      "ozcekim",
+      "ÖZÇEKIM"
+    ]
+  },
+  {
+    "soru": "İstediği gibi davranabilme hakkı",
+    "cevap": "Özgürlük",
+    "alternatifler": [
+      "OZGURLUK",
+      "özgürlük",
+      "ozgurluk",
+      "ÖZGÜRLÜK"
+    ]
+  },
+  {
+    "soru": "İstediği gibi davranabilme hakkı; Kölelerin en büyük hayali",
+    "cevap": "Özgürlük",
+    "alternatifler": [
+      "OZGURLUK",
+      "özgürlük",
+      "ozgurluk",
+      "ÖZGÜRLÜK"
+    ]
+  },
+  {
+    "soru": "Kendini üstün göstererek hava atmaya çalışma",
+    "cevap": "Övünme",
+    "alternatifler": [
+      "ÖVÜNME",
+      "OVUNME",
+      "ovunme",
+      "övünme"
+    ]
+  },
+  {
+    "soru": "Sakil, kaba",
+    "cevap": "Özensiz",
+    "alternatifler": [
+      "özensiz",
+      "OZENSIZ",
+      "ozensiz",
+      "ÖZENSIZ"
+    ]
+  },
+  {
+    "soru": "Alacak ya da verecek bırakmamak",
+    "cevap": "Ödeşmek",
+    "alternatifler": [
+      "ödeşmek",
+      "odesmek",
+      "ODESMEK",
+      "ÖDEŞMEK"
+    ]
+  },
+  {
+    "soru": "Hastanın isteği ile yapılan ölüm işlemi",
+    "cevap": "Ötanazi",
+    "alternatifler": [
+      "OTANAZI",
+      "ötanazi",
+      "otanazi",
+      "ÖTANAZI"
+    ]
+  },
+  {
+    "soru": "İkili öğretimde okula sabah gitmeyen öğrenci",
+    "cevap": "Öğlenci",
+    "alternatifler": [
+      "oglenci",
+      "öğlenci",
+      "ÖĞLENCI",
+      "OGLENCI"
+    ]
+  },
+  {
+    "soru": "Nasihat etme, salık verme",
+    "cevap": "Öğütleme",
+    "alternatifler": [
+      "öğütleme",
+      "ogutleme",
+      "OGUTLEME",
+      "ÖĞÜTLEME"
+    ]
+  },
+  {
+    "soru": "Muck sesiyle tarif edilir",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Ağ örebilen eklemli hayvan",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Bir topluluğun kendini özgürce yönetme hakkı",
+    "cevap": "Özerklik",
+    "alternatifler": [
+      "ÖZERKLIK",
+      "özerklik",
+      "OZERKLIK",
+      "ozerklik"
+    ]
+  },
+  {
+    "soru": "Aynı anne babadan doğan; gerçek, orijinal",
+    "cevap": "Özbeöz",
+    "alternatifler": [
+      "ozbeoz",
+      "OZBEOZ",
+      "özbeöz",
+      "ÖZBEÖZ"
+    ]
+  },
+  {
+    "soru": "Bir şeyin karşılığını verme",
+    "cevap": "Ödeşme",
+    "alternatifler": [
+      "ODESME",
+      "ÖDEŞME",
+      "ödeşme",
+      "odesme"
+    ]
+  },
+  {
+    "soru": "Chicago Bulls'ta oynamış eski basketbolcu",
+    "cevap": "Ömer aşık",
+    "alternatifler": [
+      "OMER ASIK",
+      "omer asik",
+      "ömer aşık",
+      "ÖMER AŞIK"
+    ]
+  },
+  {
+    "soru": "Chicago Bulls'ta oynayan milli basketbolcu",
+    "cevap": "Ömer aşık",
+    "alternatifler": [
+      "OMER ASIK",
+      "omer asik",
+      "ömer aşık",
+      "ÖMER AŞIK"
+    ]
+  },
+  {
+    "soru": "Bir şeyin kendine has niteliklerinden her biri",
+    "cevap": "Özellik",
+    "alternatifler": [
+      "özellik",
+      "OZELLIK",
+      "ozellik",
+      "ÖZELLIK"
+    ]
+  },
+  {
+    "soru": "Şu Çılgın Türkler kitabının yazarı, Turgut __",
+    "cevap": "Özakman",
+    "alternatifler": [
+      "ÖZAKMAN",
+      "ozakman",
+      "OZAKMAN",
+      "özakman"
+    ]
+  },
+  {
+    "soru": "İzel, Çelik ve Ercan üçlüsünün ilk albümü",
+    "cevap": "Özledim",
+    "alternatifler": [
+      "ozledim",
+      "ÖZLEDIM",
+      "OZLEDIM",
+      "özledim"
+    ]
+  },
+  {
+    "soru": "Gerçek aşkın ve vampirlerin böyle olduğu söylenir",
+    "cevap": "Ölümsüz",
+    "alternatifler": [
+      "ÖLÜMSÜZ",
+      "OLUMSUZ",
+      "ölümsüz",
+      "olumsuz"
+    ]
+  },
+  {
+    "soru": "Öğrencilere ders veren uzman kişi",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Belirli bir amaç için insanları bir araya getirme",
+    "cevap": "Örgütleme",
+    "alternatifler": [
+      "örgütleme",
+      "ÖRGÜTLEME",
+      "orgutleme",
+      "ORGUTLEME"
+    ]
+  },
+  {
+    "soru": "Emsal meydana getirme, model oluşturma",
+    "cevap": "Örnek olma",
+    "alternatifler": [
+      "örnek olma",
+      "ornek olma",
+      "ÖRNEK OLMA",
+      "ORNEK OLMA"
+    ]
+  },
+  {
+    "soru": "Zeki Alasya'nın Yeşilçam filmleri parodisi",
+    "cevap": "Ömerçip",
+    "alternatifler": [
+      "omercip",
+      "OMERCIP",
+      "ömerçip",
+      "ÖMERÇIP"
+    ]
+  },
+  {
+    "soru": "Oylanarak karar verilmesi için sunulan görüş",
+    "cevap": "Önerge",
+    "alternatifler": [
+      "önerge",
+      "onerge",
+      "ONERGE",
+      "ÖNERGE"
+    ]
+  },
+  {
+    "soru": "Kadınlık hormonu olarak da bilinir",
+    "cevap": "Östrojen",
+    "alternatifler": [
+      "östrojen",
+      "OSTROJEN",
+      "ostrojen",
+      "ÖSTROJEN"
+    ]
+  },
+  {
+    "soru": "Halk arasında çok sağlam eşyalara verilen isim",
+    "cevap": "Ölmezoğlu",
+    "alternatifler": [
+      "olmezoglu",
+      "ölmezoğlu",
+      "ÖLMEZOĞLU",
+      "OLMEZOGLU"
+    ]
+  },
+  {
+    "soru": "Ağ ören sekiz bacaklı hayvan",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Her Şey Çok Güzel Olacak filminin yönetmeni",
+    "cevap": "Ömer vargı",
+    "alternatifler": [
+      "OMER VARGI",
+      "omer vargi",
+      "ömer vargı",
+      "ÖMER VARGI"
+    ]
+  },
+  {
+    "soru": "Selfie sözcüğünün TDK'daki karşılığı",
+    "cevap": "Özçekim",
+    "alternatifler": [
+      "özçekim",
+      "OZCEKIM",
+      "ozcekim",
+      "ÖZÇEKIM"
+    ]
+  },
+  {
+    "soru": "Dudaklarla bir kişiye dokunma, buse",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "İlahi Komedya'dan ilham alan ünlü Gogol romanı",
+    "cevap": "Ölü canlar",
+    "alternatifler": [
+      "ÖLÜ CANLAR",
+      "OLU CANLAR",
+      "olu canlar",
+      "ölü canlar"
+    ]
+  },
+  {
+    "soru": "Kişinin iş tecrübelerini belirttiği belge",
+    "cevap": "Öz geçmiş",
+    "alternatifler": [
+      "ÖZ GEÇMIŞ",
+      "OZ GECMIS",
+      "oz gecmis",
+      "öz geçmiş"
+    ]
+  },
+  {
+    "soru": "Bu hayvandan korkmaya araknofobya adı verilir",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Johnny Depp'in William Blake'i canlandırdığı film",
+    "cevap": "Ölü adam",
+    "alternatifler": [
+      "ölü adam",
+      "ÖLÜ ADAM",
+      "OLU ADAM",
+      "olu adam"
+    ]
+  },
+  {
+    "soru": "Bir Yudum İnsan'ı sunan gazeteci, Nebil __",
+    "cevap": "Özgentürk",
+    "alternatifler": [
+      "ÖZGENTÜRK",
+      "ozgenturk",
+      "özgentürk",
+      "OZGENTURK"
+    ]
+  },
+  {
+    "soru": "Altıncı his",
+    "cevap": "Önsezi",
+    "alternatifler": [
+      "ÖNSEZI",
+      "ONSEZI",
+      "önsezi",
+      "onsezi"
+    ]
+  },
+  {
+    "soru": "Şovmen Beyaz'ın soyadı",
+    "cevap": "Öztürk",
+    "alternatifler": [
+      "ÖZTÜRK",
+      "ozturk",
+      "OZTURK",
+      "öztürk"
+    ]
+  },
+  {
+    "soru": "Hürriyet kelimesi ile aynı anlamı taşıyan kelime",
+    "cevap": "Özgürlük",
+    "alternatifler": [
+      "OZGURLUK",
+      "özgürlük",
+      "ozgurluk",
+      "ÖZGÜRLÜK"
+    ]
+  },
+  {
+    "soru": "Tim Burton'ın ilk uzun metrajlı çizgi filmi",
+    "cevap": "Ölü gelin",
+    "alternatifler": [
+      "olu gelin",
+      "OLU GELIN",
+      "ÖLÜ GELIN",
+      "ölü gelin"
+    ]
+  },
+  {
+    "soru": "Futbolda defansif orta saha oyuncusu",
+    "cevap": "Ön libero",
+    "alternatifler": [
+      "ÖN LIBERO",
+      "ön libero",
+      "ON LIBERO",
+      "on libero"
+    ]
+  },
+  {
+    "soru": "Ciddiye alma, değer verme",
+    "cevap": "Önemseme",
+    "alternatifler": [
+      "ONEMSEME",
+      "ÖNEMSEME",
+      "önemseme",
+      "onemseme"
+    ]
+  },
+  {
+    "soru": "Bir kişiye, intikam duygusu ile karşılık vermek",
+    "cevap": "Öç almak",
+    "alternatifler": [
+      "öç almak",
+      "OC ALMAK",
+      "oc almak",
+      "ÖÇ ALMAK"
+    ]
+  },
+  {
+    "soru": "Birini veya bir şeyi tavsiye etmek",
+    "cevap": "Önermek",
+    "alternatifler": [
+      "onermek",
+      "ÖNERMEK",
+      "ONERMEK",
+      "önermek"
+    ]
+  },
+  {
+    "soru": "Başka bir açıdan, diğer taraftan",
+    "cevap": "Öte yandan",
+    "alternatifler": [
+      "öte yandan",
+      "ÖTE YANDAN",
+      "ote yandan",
+      "OTE YANDAN"
+    ]
+  },
+  {
+    "soru": "Geri vermek üzere kabul etme, geçici ittihaz",
+    "cevap": "Ödünç alma",
+    "alternatifler": [
+      "ÖDÜNÇ ALMA",
+      "odunc alma",
+      "ödünç alma",
+      "ODUNC ALMA"
+    ]
+  },
+  {
+    "soru": "Lider olma durumu, öncülük",
+    "cevap": "Önderlik",
+    "alternatifler": [
+      "ÖNDERLIK",
+      "ONDERLIK",
+      "onderlik",
+      "önderlik"
+    ]
+  },
+  {
+    "soru": "Paralı eğitim kurumu; Kolej",
+    "cevap": "Özelokul",
+    "alternatifler": [
+      "ozelokul",
+      "ÖZELOKUL",
+      "OZELOKUL",
+      "özelokul"
+    ]
+  },
+  {
+    "soru": "Üzeri bir şeyle kapalı; gizli",
+    "cevap": "Örtülü",
+    "alternatifler": [
+      "ORTULU",
+      "örtülü",
+      "ÖRTÜLÜ",
+      "ortulu"
+    ]
+  },
+  {
+    "soru": "Kent FM, Türkiye'de bunun ilk örneğidir",
+    "cevap": "Özel radyo",
+    "alternatifler": [
+      "ÖZEL RADYO",
+      "ozel radyo",
+      "özel radyo",
+      "OZEL RADYO"
+    ]
+  },
+  {
+    "soru": "Bir konuyu, olduğundan kısa şekilde anlatma",
+    "cevap": "Özetleme",
+    "alternatifler": [
+      "ozetleme",
+      "özetleme",
+      "OZETLEME",
+      "ÖZETLEME"
+    ]
+  },
+  {
+    "soru": "Dikkat ederek yapılmış, itinalı",
+    "cevap": "Özenli",
+    "alternatifler": [
+      "ÖZENLI",
+      "özenli",
+      "ozenli",
+      "OZENLI"
+    ]
+  },
+  {
+    "soru": "İşlenen suçun üstünü kapatma",
+    "cevap": "Örtbas",
+    "alternatifler": [
+      "ÖRTBAS",
+      "örtbas",
+      "ORTBAS",
+      "ortbas"
+    ]
+  },
+  {
+    "soru": "Bir hedef doğrultusunda fedakarca çalışma",
+    "cevap": "Özveri",
+    "alternatifler": [
+      "ozveri",
+      "OZVERI",
+      "özveri",
+      "ÖZVERI"
+    ]
+  },
+  {
+    "soru": "Halk arasında güvelek denen asalak bitki",
+    "cevap": "Ökse otu",
+    "alternatifler": [
+      "OKSE OTU",
+      "ÖKSE OTU",
+      "okse otu",
+      "ökse otu"
+    ]
+  },
+  {
+    "soru": "Hanımın Çiftliği dizisinin kadın başoyuncusu",
+    "cevap": "Özgü namal",
+    "alternatifler": [
+      "OZGU NAMAL",
+      "özgü namal",
+      "ÖZGÜ NAMAL",
+      "ozgu namal"
+    ]
+  },
+  {
+    "soru": "İlerideki bir tarihe kadar ertelemek",
+    "cevap": "Ötelemek",
+    "alternatifler": [
+      "OTELEMEK",
+      "ötelemek",
+      "otelemek",
+      "ÖTELEMEK"
+    ]
+  },
+  {
+    "soru": "O değil, diğeri",
+    "cevap": "Ötekisi",
+    "alternatifler": [
+      "otekisi",
+      "ötekisi",
+      "OTEKISI",
+      "ÖTEKISI"
+    ]
+  },
+  {
+    "soru": "İki yıllık üniversite bölümlerinin diğer adı",
+    "cevap": "Ön lisans",
+    "alternatifler": [
+      "ÖN LISANS",
+      "on lisans",
+      "ön lisans",
+      "ON LISANS"
+    ]
+  },
+  {
+    "soru": "Akciğerde sekresyonun atılmasını sağlayan refleks",
+    "cevap": "Öksürük",
+    "alternatifler": [
+      "oksuruk",
+      "öksürük",
+      "OKSURUK",
+      "ÖKSÜRÜK"
+    ]
+  },
+  {
+    "soru": "Bilgi edinmek, beceri kazanmak",
+    "cevap": "Öğrenmek",
+    "alternatifler": [
+      "öğrenmek",
+      "OGRENMEK",
+      "ogrenmek",
+      "ÖĞRENMEK"
+    ]
+  },
+  {
+    "soru": "__ Heykeli, Fransa'nın ABD'ye hediye ettiği anıt",
+    "cevap": "Özgürlük",
+    "alternatifler": [
+      "OZGURLUK",
+      "özgürlük",
+      "ozgurluk",
+      "ÖZGÜRLÜK"
+    ]
+  },
+  {
+    "soru": "Değer arz etmeyen, ehemmiyetsiz",
+    "cevap": "Önemsiz",
+    "alternatifler": [
+      "onemsiz",
+      "ÖNEMSIZ",
+      "önemsiz",
+      "ONEMSIZ"
+    ]
+  },
+  {
+    "soru": "Çocuklar Duymasın'da Selami'yi oynayan aktör",
+    "cevap": "Özgür ozan",
+    "alternatifler": [
+      "özgür ozan",
+      "ozgur ozan",
+      "ÖZGÜR OZAN",
+      "OZGUR OZAN"
+    ]
+  },
+  {
+    "soru": "Arkeolojik kalıntıların bulunduğu alan",
+    "cevap": "Ören yeri",
+    "alternatifler": [
+      "OREN YERI",
+      "ören yeri",
+      "ÖREN YERI",
+      "oren yeri"
+    ]
+  },
+  {
+    "soru": "Tıbbi terminolojide yemek borusu",
+    "cevap": "Özefagus",
+    "alternatifler": [
+      "OZEFAGUS",
+      "özefagus",
+      "ozefagus",
+      "ÖZEFAGUS"
+    ]
+  },
+  {
+    "soru": "Vefat etmekle sonuçlanacak kadar tehlikeli olan",
+    "cevap": "Ölümcül",
+    "alternatifler": [
+      "olumcul",
+      "ÖLÜMCÜL",
+      "OLUMCUL",
+      "ölümcül"
+    ]
+  },
+  {
+    "soru": "Lafın gelişi; o kadar çok",
+    "cevap": "Öylesine",
+    "alternatifler": [
+      "oylesine",
+      "öylesine",
+      "OYLESINE",
+      "ÖYLESINE"
+    ]
+  },
+  {
+    "soru": "Bir şeyden veya birisinden çok korkmak",
+    "cevap": "Ödü kopmak",
+    "alternatifler": [
+      "ÖDÜ KOPMAK",
+      "ödü kopmak",
+      "ODU KOPMAK",
+      "odu kopmak"
+    ]
+  },
+  {
+    "soru": "Kişinin okula gitmeden kendini yetiştirmesi",
+    "cevap": "Öz öğrenim",
+    "alternatifler": [
+      "ÖZ ÖĞRENIM",
+      "OZ OGRENIM",
+      "oz ogrenim",
+      "öz öğrenim"
+    ]
+  },
+  {
+    "soru": "Kahve çekirdeklerini minik parçalara bölen cihaz",
+    "cevap": "Öğütücü",
+    "alternatifler": [
+      "OGUTUCU",
+      "ÖĞÜTÜCÜ",
+      "öğütücü",
+      "ogutucu"
+    ]
+  },
+  {
+    "soru": "İş insanlarının tercih ettiği hususi hava aracı",
+    "cevap": "Özel jet",
+    "alternatifler": [
+      "ozel jet",
+      "ÖZEL JET",
+      "OZEL JET",
+      "özel jet"
+    ]
+  },
+  {
+    "soru": "Tökezleme kelimesinin anagramı",
+    "cevap": "Özetlemek",
+    "alternatifler": [
+      "özetlemek",
+      "ÖZETLEMEK",
+      "ozetlemek",
+      "OZETLEMEK"
+    ]
+  },
+  {
+    "soru": "Eldeki veriyi kullanıp olacakları tahmin etmek",
+    "cevap": "Öngörmek",
+    "alternatifler": [
+      "ONGORMEK",
+      "ÖNGÖRMEK",
+      "ongormek",
+      "öngörmek"
+    ]
+  },
+  {
+    "soru": "Yetişen nesil onların eseri olacaktır",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Türkiye'de ilk tam yüz naklini yapan doktor",
+    "cevap": "Ömer özkan",
+    "alternatifler": [
+      "omer ozkan",
+      "OMER OZKAN",
+      "ömer özkan",
+      "ÖMER ÖZKAN"
+    ]
+  },
+  {
+    "soru": "Türkiye'de yüz naklini ilk gerçekleştiren doktor",
+    "cevap": "Ömer özkan",
+    "alternatifler": [
+      "omer ozkan",
+      "OMER OZKAN",
+      "ömer özkan",
+      "ÖMER ÖZKAN"
+    ]
+  },
+  {
+    "soru": "Bir işi itinalı biçimde yapmak",
+    "cevap": "Özenmek",
+    "alternatifler": [
+      "ozenmek",
+      "OZENMEK",
+      "ÖZENMEK",
+      "özenmek"
+    ]
+  },
+  {
+    "soru": "İşletme sahibinden gelen sermaye yatırımı",
+    "cevap": "Özkaynak",
+    "alternatifler": [
+      "OZKAYNAK",
+      "özkaynak",
+      "ozkaynak",
+      "ÖZKAYNAK"
+    ]
+  },
+  {
+    "soru": "İtalya'da yaşayan Türk yönetmen, Ferzan __",
+    "cevap": "Özpetek",
+    "alternatifler": [
+      "özpetek",
+      "OZPETEK",
+      "ozpetek",
+      "ÖZPETEK"
+    ]
+  },
+  {
+    "soru": "Kadınlarda bulunan temel hormon",
+    "cevap": "Östrojen",
+    "alternatifler": [
+      "östrojen",
+      "OSTROJEN",
+      "ostrojen",
+      "ÖSTROJEN"
+    ]
+  },
+  {
+    "soru": "Bilhassa",
+    "cevap": "Özellikle",
+    "alternatifler": [
+      "OZELLIKLE",
+      "özellikle",
+      "ÖZELLIKLE",
+      "ozellikle"
+    ]
+  },
+  {
+    "soru": "Olacak bir şeyi önceden hissetme, altıncı his",
+    "cevap": "Önsezi",
+    "alternatifler": [
+      "ÖNSEZI",
+      "ONSEZI",
+      "önsezi",
+      "onsezi"
+    ]
+  },
+  {
+    "soru": "Fethiye'nin dünyaca ünlü mahallesi",
+    "cevap": "Ölüdeniz",
+    "alternatifler": [
+      "ÖLÜDENIZ",
+      "ölüdeniz",
+      "OLUDENIZ",
+      "oludeniz"
+    ]
+  },
+  {
+    "soru": "Sesin güçlü ve kaliteli çıktığını ifade eden terim",
+    "cevap": "Ötümlü",
+    "alternatifler": [
+      "ÖTÜMLÜ",
+      "otumlu",
+      "ötümlü",
+      "OTUMLU"
+    ]
+  },
+  {
+    "soru": "Başkasının davranışını yineleme, taklit",
+    "cevap": "Öykünme",
+    "alternatifler": [
+      "OYKUNME",
+      "öykünme",
+      "oykunme",
+      "ÖYKÜNME"
+    ]
+  },
+  {
+    "soru": "Sabah ile akşam arasındaki zaman, gün ortası",
+    "cevap": "Öğle vakti",
+    "alternatifler": [
+      "öğle vakti",
+      "ÖĞLE VAKTI",
+      "ogle vakti",
+      "OGLE VAKTI"
+    ]
+  },
+  {
+    "soru": "Sibel Kekilli'nin oynadığı Eve Dönüş'ün yönetmeni",
+    "cevap": "Ömer uğur",
+    "alternatifler": [
+      "ömer uğur",
+      "OMER UGUR",
+      "omer ugur",
+      "ÖMER UĞUR"
+    ]
+  },
+  {
+    "soru": "Yıllar geçse de eskimeyecek olan",
+    "cevap": "Ölümsüz",
+    "alternatifler": [
+      "ÖLÜMSÜZ",
+      "OLUMSUZ",
+      "ölümsüz",
+      "olumsuz"
+    ]
+  },
+  {
+    "soru": "Özge Gürel'in Kiraz Mevsimi dizisindeki karakteri",
+    "cevap": "Öykü acar",
+    "alternatifler": [
+      "OYKU ACAR",
+      "ÖYKÜ ACAR",
+      "öykü acar",
+      "oyku acar"
+    ]
+  },
+  {
+    "soru": "Bronşit veya astımı olanlarda sık görülen semptom",
+    "cevap": "Öksürük",
+    "alternatifler": [
+      "oksuruk",
+      "öksürük",
+      "OKSURUK",
+      "ÖKSÜRÜK"
+    ]
+  },
+  {
+    "soru": "Bir kişiye, yere kavuşmak istemek",
+    "cevap": "Özlemek",
+    "alternatifler": [
+      "ÖZLEMEK",
+      "ozlemek",
+      "OZLEMEK",
+      "özlemek"
+    ]
+  },
+  {
+    "soru": "1908 yılına ait meşhur Gustav Klimt tablosu",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Anayurt Oteli filminin ünlü yönetmeni",
+    "cevap": "Ömer kavur",
+    "alternatifler": [
+      "omer kavur",
+      "ömer kavur",
+      "ÖMER KAVUR",
+      "OMER KAVUR"
+    ]
+  },
+  {
+    "soru": "Daha sonra geri vermek üzere bir şeyi kabul etme",
+    "cevap": "Ödünç alma",
+    "alternatifler": [
+      "ÖDÜNÇ ALMA",
+      "odunc alma",
+      "ödünç alma",
+      "ODUNC ALMA"
+    ]
+  },
+  {
+    "soru": "Burun boşluğu ve orta kulak arasındaki borumsu yol",
+    "cevap": "Östaki",
+    "alternatifler": [
+      "ostaki",
+      "östaki",
+      "ÖSTAKI",
+      "OSTAKI"
+    ]
+  },
+  {
+    "soru": "Eğitim veren kişi, muallim",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Satın alınan bir ürünün ücretini vermek",
+    "cevap": "Ödemek",
+    "alternatifler": [
+      "ODEMEK",
+      "odemek",
+      "ödemek",
+      "ÖDEMEK"
+    ]
+  },
+  {
+    "soru": "Lacivert ile yeşil arasında bir renk",
+    "cevap": "Ördekbaşı",
+    "alternatifler": [
+      "ÖRDEKBAŞI",
+      "ördekbaşı",
+      "ORDEKBASI",
+      "ordekbasi"
+    ]
+  },
+  {
+    "soru": "Ara eleman yetiştiren eğitim programı",
+    "cevap": "Önlisans",
+    "alternatifler": [
+      "onlisans",
+      "ONLISANS",
+      "ÖNLISANS",
+      "önlisans"
+    ]
+  },
+  {
+    "soru": "Döşeme kelimesinin anagramı",
+    "cevap": "Ödeşme",
+    "alternatifler": [
+      "ODESME",
+      "ÖDEŞME",
+      "ödeşme",
+      "odesme"
+    ]
+  },
+  {
+    "soru": "Topuk içeren ayakkabı, topuklu",
+    "cevap": "Ökçeli",
+    "alternatifler": [
+      "ökçeli",
+      "okceli",
+      "OKCELI",
+      "ÖKÇELI"
+    ]
+  },
+  {
+    "soru": "Kötülüğün acısını kötülükle çıkarmak",
+    "cevap": "Öç almak",
+    "alternatifler": [
+      "öç almak",
+      "OC ALMAK",
+      "oc almak",
+      "ÖÇ ALMAK"
+    ]
+  },
+  {
+    "soru": "Başkaları için faydalı olmaya gayret gösterme hali",
+    "cevap": "Özgecilik",
+    "alternatifler": [
+      "ÖZGECILIK",
+      "özgecilik",
+      "ozgecilik",
+      "OZGECILIK"
+    ]
+  },
+  {
+    "soru": "Böyle faturalar hizmetin kısıtlanmasına neden olur",
+    "cevap": "Ödenmemiş",
+    "alternatifler": [
+      "ödenmemiş",
+      "ÖDENMEMIŞ",
+      "ODENMEMIS",
+      "odenmemis"
+    ]
+  },
+  {
+    "soru": "Tavsiye etmek",
+    "cevap": "Önermek",
+    "alternatifler": [
+      "onermek",
+      "ÖNERMEK",
+      "ONERMEK",
+      "önermek"
+    ]
+  },
+  {
+    "soru": "Henüz mal satın alınmadan verilen kapora",
+    "cevap": "Ön ödeme",
+    "alternatifler": [
+      "ön ödeme",
+      "on odeme",
+      "ON ODEME",
+      "ÖN ÖDEME"
+    ]
+  },
+  {
+    "soru": "Çömlek sözünün bütün harflerini içerir; tartmak",
+    "cevap": "Ölçmek",
+    "alternatifler": [
+      "ÖLÇMEK",
+      "ölçmek",
+      "olcmek",
+      "OLCMEK"
+    ]
+  },
+  {
+    "soru": "Teoman, Portakal Orda Kal'ı bu şarkıcı ile söyledi",
+    "cevap": "Ömür gedik",
+    "alternatifler": [
+      "omur gedik",
+      "ömür gedik",
+      "ÖMÜR GEDIK",
+      "OMUR GEDIK"
+    ]
+  },
+  {
+    "soru": "İzel-Çelik-Ercan üçlüsünün ilk klip şarkısı",
+    "cevap": "Özledim",
+    "alternatifler": [
+      "ozledim",
+      "ÖZLEDIM",
+      "OZLEDIM",
+      "özledim"
+    ]
+  },
+  {
+    "soru": "Geleceğe yönelik yapılan tahmin, kestirim",
+    "cevap": "Öngörü",
+    "alternatifler": [
+      "öngörü",
+      "ÖNGÖRÜ",
+      "ongoru",
+      "ONGORU"
+    ]
+  },
+  {
+    "soru": "Çamaşır makinelerindeki ekstra temizlik programı",
+    "cevap": "Ön yıkama",
+    "alternatifler": [
+      "ON YIKAMA",
+      "ön yıkama",
+      "on yikama",
+      "ÖN YIKAMA"
+    ]
+  },
+  {
+    "soru": "Çamaşır makinelerinin başlangıç temizlik programı",
+    "cevap": "Ön yıkama",
+    "alternatifler": [
+      "ON YIKAMA",
+      "ön yıkama",
+      "on yikama",
+      "ÖN YIKAMA"
+    ]
+  },
+  {
+    "soru": "Devletin olmayan, paralı eğitim kurumu",
+    "cevap": "Özel okul",
+    "alternatifler": [
+      "özel okul",
+      "ÖZEL OKUL",
+      "OZEL OKUL",
+      "ozel okul"
+    ]
+  },
+  {
+    "soru": "Anlaşmaya varmak için bazı haklardan vazgeçme",
+    "cevap": "Ödün verme",
+    "alternatifler": [
+      "ODUN VERME",
+      "ödün verme",
+      "ÖDÜN VERME",
+      "odun verme"
+    ]
+  },
+  {
+    "soru": "Ücreti alıcının ödeyeceği telefon araması",
+    "cevap": "Ödemeli",
+    "alternatifler": [
+      "ODEMELI",
+      "ÖDEMELI",
+      "ödemeli",
+      "odemeli"
+    ]
+  },
+  {
+    "soru": "Bilge Karasu'nun ödüllü D. H. Lawrence çevirisi",
+    "cevap": "Ölen adam",
+    "alternatifler": [
+      "olen adam",
+      "ölen adam",
+      "OLEN ADAM",
+      "ÖLEN ADAM"
+    ]
+  },
+  {
+    "soru": "Kurtlar Vadisi dizisinde Elif Eylül'ü oynayan kişi",
+    "cevap": "Özgü namal",
+    "alternatifler": [
+      "OZGU NAMAL",
+      "özgü namal",
+      "ÖZGÜ NAMAL",
+      "ozgu namal"
+    ]
+  },
+  {
+    "soru": "Turgut __, Şu Çılgın Türkler'in yazarı",
+    "cevap": "Özakman",
+    "alternatifler": [
+      "ÖZAKMAN",
+      "ozakman",
+      "OZAKMAN",
+      "özakman"
+    ]
+  },
+  {
+    "soru": "İçinde çekirdek ve organeller olan hücre tipi",
+    "cevap": "Ökaryot",
+    "alternatifler": [
+      "OKARYOT",
+      "ökaryot",
+      "okaryot",
+      "ÖKARYOT"
+    ]
+  },
+  {
+    "soru": "Satın alınan bir şeyin parasını satıcıya vermek",
+    "cevap": "Ödemek",
+    "alternatifler": [
+      "ODEMEK",
+      "odemek",
+      "ödemek",
+      "ÖDEMEK"
+    ]
+  },
+  {
+    "soru": "Alacak vereceğin kalmaması durumu",
+    "cevap": "Ödeşme",
+    "alternatifler": [
+      "ODESME",
+      "ÖDEŞME",
+      "ödeşme",
+      "odesme"
+    ]
+  },
+  {
+    "soru": "Boğazdan çıkan bu gürültülü sese ıhlamur iyi gelir",
+    "cevap": "Öksürük",
+    "alternatifler": [
+      "oksuruk",
+      "öksürük",
+      "OKSURUK",
+      "ÖKSÜRÜK"
+    ]
+  },
+  {
+    "soru": "Karaciğerin altında bulunan, safra içeren organ",
+    "cevap": "Öd kesesi",
+    "alternatifler": [
+      "OD KESESI",
+      "od kesesi",
+      "öd kesesi",
+      "ÖD KESESI"
+    ]
+  },
+  {
+    "soru": "En başta belirtilmesi gerektiğini vurgulayan söz",
+    "cevap": "Öncelikle",
+    "alternatifler": [
+      "oncelikle",
+      "ÖNCELIKLE",
+      "ONCELIKLE",
+      "öncelikle"
+    ]
+  },
+  {
+    "soru": "Bir malın hiç para kazandırmadan satıldığı ücret",
+    "cevap": "Ölü fiyat",
+    "alternatifler": [
+      "ölü fiyat",
+      "ÖLÜ FIYAT",
+      "olu fiyat",
+      "OLU FIYAT"
+    ]
+  },
+  {
+    "soru": "Bununla telefonda kendi fotoğrafımızı çekebiliriz",
+    "cevap": "Ön kamera",
+    "alternatifler": [
+      "ÖN KAMERA",
+      "ON KAMERA",
+      "ön kamera",
+      "on kamera"
+    ]
+  },
+  {
+    "soru": "Mesaide hiçbir işin çıkmadığı zaman aralığı",
+    "cevap": "Ölü saat",
+    "alternatifler": [
+      "ölü saat",
+      "OLU SAAT",
+      "olu saat",
+      "ÖLÜ SAAT"
+    ]
+  },
+  {
+    "soru": "Devletin üniversitelere yıllık olarak sunduğu para",
+    "cevap": "Ödenek",
+    "alternatifler": [
+      "odenek",
+      "ODENEK",
+      "ÖDENEK",
+      "ödenek"
+    ]
+  },
+  {
+    "soru": "Arka Sokaklar dizisinde Hüsnü Çoban'ı oynuyor",
+    "cevap": "Özgür ozan",
+    "alternatifler": [
+      "özgür ozan",
+      "ozgur ozan",
+      "ÖZGÜR OZAN",
+      "OZGUR OZAN"
+    ]
+  },
+  {
+    "soru": "Bir canlının hayatına son verecek nitelikte olan",
+    "cevap": "Ölümcül",
+    "alternatifler": [
+      "olumcul",
+      "ÖLÜMCÜL",
+      "OLUMCUL",
+      "ölümcül"
+    ]
+  },
+  {
+    "soru": "Apartmanlarda ortak gider için alınan para, aidat",
+    "cevap": "Ödenti",
+    "alternatifler": [
+      "odenti",
+      "ödenti",
+      "ÖDENTI",
+      "ODENTI"
+    ]
+  },
+  {
+    "soru": "Sıkıyönetim anlamında, sık kullanılmayan bir söz",
+    "cevap": "Örfi idare",
+    "alternatifler": [
+      "orfi idare",
+      "ÖRFI IDARE",
+      "örfi idare",
+      "ORFI IDARE"
+    ]
+  },
+  {
+    "soru": "Bir yerde eğitim alan kişi; talebe",
+    "cevap": "Öğrenci",
+    "alternatifler": [
+      "öğrenci",
+      "ogrenci",
+      "ÖĞRENCI",
+      "OGRENCI"
+    ]
+  },
+  {
+    "soru": "Fazla bir değer taşımayan, ehemmiyetsiz",
+    "cevap": "Önemsiz",
+    "alternatifler": [
+      "onemsiz",
+      "ÖNEMSIZ",
+      "önemsiz",
+      "ONEMSIZ"
+    ]
+  },
+  {
+    "soru": "Bir süreliğine sonraya bırakmak, ertelemek",
+    "cevap": "Ötelemek",
+    "alternatifler": [
+      "OTELEMEK",
+      "ötelemek",
+      "otelemek",
+      "ÖTELEMEK"
+    ]
+  },
+  {
+    "soru": "Bir işe vesile olmak, __ olmak",
+    "cevap": "Önayak",
+    "alternatifler": [
+      "önayak",
+      "ÖNAYAK",
+      "ONAYAK",
+      "onayak"
+    ]
+  },
+  {
+    "soru": "Teşkilatlı biçimde gerçekleştirilen suç türü",
+    "cevap": "Örgütlü",
+    "alternatifler": [
+      "ÖRGÜTLÜ",
+      "ORGUTLU",
+      "örgütlü",
+      "orgutlu"
+    ]
+  },
+  {
+    "soru": "Şarkıcı Gökhan Özen'in ilk albümü",
+    "cevap": "Özelsin",
+    "alternatifler": [
+      "OZELSIN",
+      "ÖZELSIN",
+      "özelsin",
+      "ozelsin"
+    ]
+  },
+  {
+    "soru": "Kölemen kelimesinin anagramı; bir şeye mani olmak",
+    "cevap": "Önlemek",
+    "alternatifler": [
+      "ONLEMEK",
+      "onlemek",
+      "ÖNLEMEK",
+      "önlemek"
+    ]
+  },
+  {
+    "soru": "Bir işi yaparken olabildiğince itinalı olmak",
+    "cevap": "Özenmek",
+    "alternatifler": [
+      "ozenmek",
+      "OZENMEK",
+      "ÖZENMEK",
+      "özenmek"
+    ]
+  },
+  {
+    "soru": "Titizlik gösterilerek yapılan, itinalı",
+    "cevap": "Özenli",
+    "alternatifler": [
+      "ÖZENLI",
+      "özenli",
+      "ozenli",
+      "OZENLI"
+    ]
+  },
+  {
+    "soru": "Çok çabuk bir şekilde korkma durumu, yüreksizlik",
+    "cevap": "Ödleklik",
+    "alternatifler": [
+      "ODLEKLIK",
+      "odleklik",
+      "ÖDLEKLIK",
+      "ödleklik"
+    ]
+  },
+  {
+    "soru": "Bir denklemde iki tarafın da eşit değerli olması",
+    "cevap": "Özdeşlik",
+    "alternatifler": [
+      "ÖZDEŞLIK",
+      "ozdeslik",
+      "özdeşlik",
+      "OZDESLIK"
+    ]
+  },
+  {
+    "soru": "Yönetmeni Tim Burton olan animasyon filmi",
+    "cevap": "Ölü gelin",
+    "alternatifler": [
+      "olu gelin",
+      "OLU GELIN",
+      "ÖLÜ GELIN",
+      "ölü gelin"
+    ]
+  },
+  {
+    "soru": "Yüksek __, Ömer Seyfettin'in bir eseri",
+    "cevap": "Ökçeler",
+    "alternatifler": [
+      "okceler",
+      "OKCELER",
+      "ökçeler",
+      "ÖKÇELER"
+    ]
+  },
+  {
+    "soru": "Bir konuyu veya olayı kısaca anlatmak",
+    "cevap": "Özetlemek",
+    "alternatifler": [
+      "özetlemek",
+      "ÖZETLEMEK",
+      "ozetlemek",
+      "OZETLEMEK"
+    ]
+  },
+  {
+    "soru": "İç işlerinde bağımsız olma, yarı bağımsızlık",
+    "cevap": "Özerklik",
+    "alternatifler": [
+      "ÖZERKLIK",
+      "özerklik",
+      "OZERKLIK",
+      "ozerklik"
+    ]
+  },
+  {
+    "soru": "Kahve çekirdeklerini toz haline getirmek",
+    "cevap": "Öğütmek",
+    "alternatifler": [
+      "ogutmek",
+      "ÖĞÜTMEK",
+      "OGUTMEK",
+      "öğütmek"
+    ]
+  },
+  {
+    "soru": "Kişinin kendine itimat etme duygusu",
+    "cevap": "Öz güven",
+    "alternatifler": [
+      "OZ GUVEN",
+      "ÖZ GÜVEN",
+      "öz güven",
+      "oz guven"
+    ]
+  },
+  {
+    "soru": "Nevşehir'in Derinkuyu ilçesindeki yer altı kenti",
+    "cevap": "Özlüce",
+    "alternatifler": [
+      "ÖZLÜCE",
+      "ozluce",
+      "OZLUCE",
+      "özlüce"
+    ]
+  },
+  {
+    "soru": "Mutluluk filmiyle Altın Portakal kazanan aktris",
+    "cevap": "Özgü namal",
+    "alternatifler": [
+      "OZGU NAMAL",
+      "özgü namal",
+      "ÖZGÜ NAMAL",
+      "ozgu namal"
+    ]
+  },
+  {
+    "soru": "Bir düşünce sistemini oluşturan kavramların bütünü",
+    "cevap": "Öğreti",
+    "alternatifler": [
+      "öğreti",
+      "OGRETI",
+      "ogreti",
+      "ÖĞRETI"
+    ]
+  },
+  {
+    "soru": "Gölcük Gölü'nün yer aldığı İzmir ilçesi",
+    "cevap": "Ödemiş",
+    "alternatifler": [
+      "ödemiş",
+      "odemis",
+      "ÖDEMIŞ",
+      "ODEMIS"
+    ]
+  },
+  {
+    "soru": "Henüz piyasaya çıkmamış bir ürünü ısmarlama",
+    "cevap": "Ön sipariş",
+    "alternatifler": [
+      "ön sipariş",
+      "on siparis",
+      "ÖN SIPARIŞ",
+      "ON SIPARIS"
+    ]
+  },
+  {
+    "soru": "Kilis'te yer alan Türkiye-Suriye sınır kapısı",
+    "cevap": "Öncüpınar",
+    "alternatifler": [
+      "öncüpınar",
+      "ÖNCÜPINAR",
+      "ONCUPINAR",
+      "oncupinar"
+    ]
+  },
+  {
+    "soru": "Shyamalan'ın Glass serisinin başlangıç filmi",
+    "cevap": "Ölümsüz",
+    "alternatifler": [
+      "ÖLÜMSÜZ",
+      "OLUMSUZ",
+      "ölümsüz",
+      "olumsuz"
+    ]
+  },
+  {
+    "soru": "Yapıların kalıntılarını barındıran yer, harabelik",
+    "cevap": "Örenlik",
+    "alternatifler": [
+      "orenlik",
+      "örenlik",
+      "ÖRENLIK",
+      "ORENLIK"
+    ]
+  },
+  {
+    "soru": "Bir yetenek ya da kişisel özellikle iftihar etmek",
+    "cevap": "Övünmek",
+    "alternatifler": [
+      "OVUNMEK",
+      "övünmek",
+      "ÖVÜNMEK",
+      "ovunmek"
+    ]
+  },
+  {
+    "soru": "Beğenilen bir şeye benzeme gayreti, taklitçilik",
+    "cevap": "Özenti",
+    "alternatifler": [
+      "ozenti",
+      "özenti",
+      "OZENTI",
+      "ÖZENTI"
+    ]
+  },
+  {
+    "soru": "Dolunay adlı dizide Nazlı'yı canlandırdı",
+    "cevap": "Özge gürel",
+    "alternatifler": [
+      "ÖZGE GÜREL",
+      "OZGE GUREL",
+      "ozge gurel",
+      "özge gürel"
+    ]
+  },
+  {
+    "soru": "Hikayesini kısa tutan edebiyatçı; hikayeci",
+    "cevap": "Öykücü",
+    "alternatifler": [
+      "ÖYKÜCÜ",
+      "OYKUCU",
+      "öykücü",
+      "oykucu"
+    ]
+  },
+  {
+    "soru": "Titizlikle yapmak, itina göstermek",
+    "cevap": "Özenmek",
+    "alternatifler": [
+      "ozenmek",
+      "OZENMEK",
+      "ÖZENMEK",
+      "özenmek"
+    ]
+  },
+  {
+    "soru": "Bir çalışma taslağının ilk biçimi",
+    "cevap": "Ön proje",
+    "alternatifler": [
+      "ÖN PROJE",
+      "ön proje",
+      "ON PROJE",
+      "on proje"
+    ]
+  },
+  {
+    "soru": "Burnunda tütmek",
+    "cevap": "Özlemek",
+    "alternatifler": [
+      "ÖZLEMEK",
+      "ozlemek",
+      "OZLEMEK",
+      "özlemek"
+    ]
+  },
+  {
+    "soru": "Bir konuyu kısaltarak ifade etme",
+    "cevap": "Özetleme",
+    "alternatifler": [
+      "ozetleme",
+      "özetleme",
+      "OZETLEME",
+      "ÖZETLEME"
+    ]
+  },
+  {
+    "soru": "Bu ödeneği sadece cumhurbaşkanı kullanabilir",
+    "cevap": "Örtülü",
+    "alternatifler": [
+      "ORTULU",
+      "örtülü",
+      "ÖRTÜLÜ",
+      "ortulu"
+    ]
+  },
+  {
+    "soru": "Amaca ulaşmak için yapılan fedakarlık",
+    "cevap": "Özveri",
+    "alternatifler": [
+      "ozveri",
+      "OZVERI",
+      "özveri",
+      "ÖZVERI"
+    ]
+  },
+  {
+    "soru": "Farklı bir niteliğe sahip olma durumu, orijinallik",
+    "cevap": "Özgünlük",
+    "alternatifler": [
+      "OZGUNLUK",
+      "ÖZGÜNLÜK",
+      "ozgunluk",
+      "özgünlük"
+    ]
+  },
+  {
+    "soru": "New York'un simgesi anıt, __ Heykeli",
+    "cevap": "Özgürlük",
+    "alternatifler": [
+      "OZGURLUK",
+      "özgürlük",
+      "ozgurluk",
+      "ÖZGÜRLÜK"
+    ]
+  },
+  {
+    "soru": "İş öncesi verilen malumat",
+    "cevap": "Ön bilgi",
+    "alternatifler": [
+      "on bilgi",
+      "ON BILGI",
+      "ÖN BILGI",
+      "ön bilgi"
+    ]
+  },
+  {
+    "soru": "Doktrin",
+    "cevap": "Öğreti",
+    "alternatifler": [
+      "öğreti",
+      "OGRETI",
+      "ogreti",
+      "ÖĞRETI"
+    ]
+  },
+  {
+    "soru": "Seren Serengil'in sanatçı olan babasının adı",
+    "cevap": "Öztürk",
+    "alternatifler": [
+      "ÖZTÜRK",
+      "ozturk",
+      "OZTURK",
+      "öztürk"
+    ]
+  },
+  {
+    "soru": "Bir şeyin ya da kişinin üzerini bezle kapatmak",
+    "cevap": "Örtmek",
+    "alternatifler": [
+      "ORTMEK",
+      "ÖRTMEK",
+      "örtmek",
+      "ortmek"
+    ]
+  },
+  {
+    "soru": "Bol samimiyet içeren 2018 çıkışlı Simge şarkısı",
+    "cevap": "Öpücem",
+    "alternatifler": [
+      "opucem",
+      "OPUCEM",
+      "öpücem",
+      "ÖPÜCEM"
+    ]
+  },
+  {
+    "soru": "Mesleği, iş vereninin aracını kullanmak olan kişi",
+    "cevap": "Özel şoför",
+    "alternatifler": [
+      "ÖZEL ŞOFÖR",
+      "özel şoför",
+      "OZEL SOFOR",
+      "ozel sofor"
+    ]
+  },
+  {
+    "soru": "Jet Sosyete dizisindeki tekstil şirketinin adı",
+    "cevap": "Özpamuk",
+    "alternatifler": [
+      "ÖZPAMUK",
+      "özpamuk",
+      "ozpamuk",
+      "OZPAMUK"
+    ]
+  },
+  {
+    "soru": "Hukukta bir mala ederi kadar para ödeme, şufa",
+    "cevap": "Ön alım",
+    "alternatifler": [
+      "ön alım",
+      "ÖN ALIM",
+      "ON ALIM",
+      "on alim"
+    ]
+  },
+  {
+    "soru": "Nikolay Vasilyeviç Gogol'un tamamlayamadığı romanı",
+    "cevap": "Ölü canlar",
+    "alternatifler": [
+      "ÖLÜ CANLAR",
+      "OLU CANLAR",
+      "olu canlar",
+      "ölü canlar"
+    ]
+  },
+  {
+    "soru": "Kamu harcamaları için ayrılan bütçe",
+    "cevap": "Ödenek",
+    "alternatifler": [
+      "odenek",
+      "ODENEK",
+      "ÖDENEK",
+      "ödenek"
+    ]
+  },
+  {
+    "soru": "Tarkan'ın \"Yaktın beni hain\" dediği şarkı, __ Sana",
+    "cevap": "Ölürüm",
+    "alternatifler": [
+      "ÖLÜRÜM",
+      "ölürüm",
+      "OLURUM",
+      "olurum"
+    ]
+  },
+  {
+    "soru": "Kişinin yaşam öyküsünün kısa anlatımı",
+    "cevap": "Özgeçmiş",
+    "alternatifler": [
+      "özgeçmiş",
+      "OZGECMIS",
+      "ozgecmis",
+      "ÖZGEÇMIŞ"
+    ]
+  },
+  {
+    "soru": "Tunceli'nin merkezinde yer alan tabiat parkı",
+    "cevap": "Örenönü",
+    "alternatifler": [
+      "orenonu",
+      "ORENONU",
+      "ÖRENÖNÜ",
+      "örenönü"
+    ]
+  },
+  {
+    "soru": "Kurtlar Vadisi'nin Elif'i",
+    "cevap": "Özgü namal",
+    "alternatifler": [
+      "OZGU NAMAL",
+      "özgü namal",
+      "ÖZGÜ NAMAL",
+      "ozgu namal"
+    ]
+  },
+  {
+    "soru": "Vücut salgısı ile ağ ören sekiz bacaklı hayvan",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Hızlı ve __, sokak yarışı konulu film serisi",
+    "cevap": "Öfkeli",
+    "alternatifler": [
+      "ÖFKELI",
+      "öfkeli",
+      "OFKELI",
+      "ofkeli"
+    ]
+  },
+  {
+    "soru": "Osmanlı'daki iki kanun yapısından gelenekçi olanı",
+    "cevap": "Örfi hukuk",
+    "alternatifler": [
+      "ORFI HUKUK",
+      "orfi hukuk",
+      "ÖRFI HUKUK",
+      "örfi hukuk"
+    ]
+  },
+  {
+    "soru": "Dişilerde yüksek seviyede bulunan hormon",
+    "cevap": "Östrojen",
+    "alternatifler": [
+      "östrojen",
+      "OSTROJEN",
+      "ostrojen",
+      "ÖSTROJEN"
+    ]
+  },
+  {
+    "soru": "2013 yapımı Çalıkuşu'nda oynayan aktör, Burak __",
+    "cevap": "Özçivit",
+    "alternatifler": [
+      "OZCIVIT",
+      "ÖZÇIVIT",
+      "özçivit",
+      "ozcivit"
+    ]
+  },
+  {
+    "soru": "Ay Tedirginliği oyununun ödüllü yazarı",
+    "cevap": "Özen yula",
+    "alternatifler": [
+      "ÖZEN YULA",
+      "özen yula",
+      "OZEN YULA",
+      "ozen yula"
+    ]
+  },
+  {
+    "soru": "Dünyada Karşılaşmış Gibi oyununun Mevlüt'ü",
+    "cevap": "Öner erkan",
+    "alternatifler": [
+      "ONER ERKAN",
+      "oner erkan",
+      "ÖNER ERKAN",
+      "öner erkan"
+    ]
+  },
+  {
+    "soru": "Gustav Klimt'in ünlü sembolist tablosu",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Bireyler arasındaki ilişkileri tayin eden tüze",
+    "cevap": "Özel hukuk",
+    "alternatifler": [
+      "OZEL HUKUK",
+      "ÖZEL HUKUK",
+      "özel hukuk",
+      "ozel hukuk"
+    ]
+  },
+  {
+    "soru": "Karabaş, Akgerdanlı gibi türleri olan kuş sınıfı",
+    "cevap": "Ötleğen",
+    "alternatifler": [
+      "otlegen",
+      "ÖTLEĞEN",
+      "OTLEGEN",
+      "ötleğen"
+    ]
+  },
+  {
+    "soru": "Orta kulakla burun arasındaki borunun adı",
+    "cevap": "Östaki",
+    "alternatifler": [
+      "ostaki",
+      "östaki",
+      "ÖSTAKI",
+      "OSTAKI"
+    ]
+  },
+  {
+    "soru": "Eski dilde, kişinin yaşamda geçirdiği tüm süre",
+    "cevap": "Ömrühayat",
+    "alternatifler": [
+      "ÖMRÜHAYAT",
+      "OMRUHAYAT",
+      "omruhayat",
+      "ömrühayat"
+    ]
+  },
+  {
+    "soru": "Uzun anlatıma vakti olmayan birinin yaptığı uyarı",
+    "cevap": "Özet geç",
+    "alternatifler": [
+      "ÖZET GEÇ",
+      "OZET GEC",
+      "özet geç",
+      "ozet gec"
+    ]
+  },
+  {
+    "soru": "Öğrencinin rapor almadan yaptığı devamsızlık türü",
+    "cevap": "Özürsüz",
+    "alternatifler": [
+      "ozursuz",
+      "ÖZÜRSÜZ",
+      "OZURSUZ",
+      "özürsüz"
+    ]
+  },
+  {
+    "soru": "Yarından sonraki zaman",
+    "cevap": "Öbür gün",
+    "alternatifler": [
+      "öbür gün",
+      "ÖBÜR GÜN",
+      "OBUR GUN",
+      "obur gun"
+    ]
+  },
+  {
+    "soru": "Matematik dersinde p, q, r harfleriyle anlatılır",
+    "cevap": "Önerme",
+    "alternatifler": [
+      "ÖNERME",
+      "onerme",
+      "önerme",
+      "ONERME"
+    ]
+  },
+  {
+    "soru": "Bir hizmet için başlangıçta verilen para, avans",
+    "cevap": "Öndelik",
+    "alternatifler": [
+      "ONDELIK",
+      "öndelik",
+      "ondelik",
+      "ÖNDELIK"
+    ]
+  },
+  {
+    "soru": "Türklerin Orta Asya'daki kutsal başkenti",
+    "cevap": "Ötüken",
+    "alternatifler": [
+      "ötüken",
+      "otuken",
+      "ÖTÜKEN",
+      "OTUKEN"
+    ]
+  },
+  {
+    "soru": "Edebiyatın usta kalemi Orhan Kemal'in asıl soyadı",
+    "cevap": "Öğütçü",
+    "alternatifler": [
+      "OGUTCU",
+      "ÖĞÜTÇÜ",
+      "ogutcu",
+      "öğütçü"
+    ]
+  },
+  {
+    "soru": "Mükellefin talebi üzerine oluşturulan yazılı görüş",
+    "cevap": "Özelge",
+    "alternatifler": [
+      "ozelge",
+      "OZELGE",
+      "özelge",
+      "ÖZELGE"
+    ]
+  },
+  {
+    "soru": "Yaşar Kemal'in Dağın Öte Yüzü serisinin son kitabı",
+    "cevap": "Ölmez otu",
+    "alternatifler": [
+      "olmez otu",
+      "ÖLMEZ OTU",
+      "OLMEZ OTU",
+      "ölmez otu"
+    ]
+  },
+  {
+    "soru": "Arka Sokaklar'da Başkomiser Hüsnü rolündeki aktör",
+    "cevap": "Özgür ozan",
+    "alternatifler": [
+      "özgür ozan",
+      "ozgur ozan",
+      "ÖZGÜR OZAN",
+      "OZGUR OZAN"
+    ]
+  },
+  {
+    "soru": "Asıl adı Peter Parker olan süper kahraman, __ Adam",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "DSÖ'nün Ö'sü bu anlama gelir",
+    "cevap": "Örgütü",
+    "alternatifler": [
+      "ORGUTU",
+      "ÖRGÜTÜ",
+      "örgütü",
+      "orgutu"
+    ]
+  },
+  {
+    "soru": "Bir görüşe veya topluluğa öncülük etme, liderlik",
+    "cevap": "Önderlik",
+    "alternatifler": [
+      "ÖNDERLIK",
+      "ONDERLIK",
+      "onderlik",
+      "önderlik"
+    ]
+  },
+  {
+    "soru": "Aşırı derecede korkmak",
+    "cevap": "Ödü kopmak",
+    "alternatifler": [
+      "ÖDÜ KOPMAK",
+      "ödü kopmak",
+      "ODU KOPMAK",
+      "odu kopmak"
+    ]
+  },
+  {
+    "soru": "Gogol'un 1842'de yazıp tamamlayamadığı eser",
+    "cevap": "Ölü canlar",
+    "alternatifler": [
+      "ÖLÜ CANLAR",
+      "OLU CANLAR",
+      "olu canlar",
+      "ölü canlar"
+    ]
+  },
+  {
+    "soru": "Olası bir tehlikeyi fark ederek onu engelleme",
+    "cevap": "Önleme",
+    "alternatifler": [
+      "onleme",
+      "ÖNLEME",
+      "önleme",
+      "ONLEME"
+    ]
+  },
+  {
+    "soru": "Bilgiyi, hafızaya kaydetme",
+    "cevap": "Öğrenme",
+    "alternatifler": [
+      "ogrenme",
+      "ÖĞRENME",
+      "OGRENME",
+      "öğrenme"
+    ]
+  },
+  {
+    "soru": "Bire bir verilen, hususi eğitim",
+    "cevap": "Özel ders",
+    "alternatifler": [
+      "ozel ders",
+      "özel ders",
+      "ÖZEL DERS",
+      "OZEL DERS"
+    ]
+  },
+  {
+    "soru": "İşe başvururken gönderilen dosya",
+    "cevap": "Özgeçmiş",
+    "alternatifler": [
+      "özgeçmiş",
+      "OZGECMIS",
+      "ozgecmis",
+      "ÖZGEÇMIŞ"
+    ]
+  },
+  {
+    "soru": "Hakan: Muhafız dizisindeki kötü karakterlerin türü",
+    "cevap": "Ölümsüz",
+    "alternatifler": [
+      "ÖLÜMSÜZ",
+      "OLUMSUZ",
+      "ölümsüz",
+      "olumsuz"
+    ]
+  },
+  {
+    "soru": "Buse isminin anlamı",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Toplu taşımada gençlerin indirimli tarifesi",
+    "cevap": "Öğrenci",
+    "alternatifler": [
+      "öğrenci",
+      "ogrenci",
+      "ÖĞRENCI",
+      "OGRENCI"
+    ]
+  },
+  {
+    "soru": "Cismin kilosunun hacmine oranı, yoğunluk",
+    "cevap": "Özkütle",
+    "alternatifler": [
+      "OZKUTLE",
+      "ozkutle",
+      "özkütle",
+      "ÖZKÜTLE"
+    ]
+  },
+  {
+    "soru": "Ötücü kuşlardan bir kuş, çalı bülbülü",
+    "cevap": "Ötleğen",
+    "alternatifler": [
+      "otlegen",
+      "ÖTLEĞEN",
+      "OTLEGEN",
+      "ötleğen"
+    ]
+  },
+  {
+    "soru": "Değer verilmeyen, önceliği olmayan",
+    "cevap": "Önemsiz",
+    "alternatifler": [
+      "onemsiz",
+      "ÖNEMSIZ",
+      "önemsiz",
+      "ONEMSIZ"
+    ]
+  },
+  {
+    "soru": "Fransa'nın ABD'ye hediye ettiği heykelin adı",
+    "cevap": "Özgürlük",
+    "alternatifler": [
+      "OZGURLUK",
+      "özgürlük",
+      "ozgurluk",
+      "ÖZGÜRLÜK"
+    ]
+  },
+  {
+    "soru": "Uzman birisinden alınan tek kişilik eğitim",
+    "cevap": "Özel ders",
+    "alternatifler": [
+      "ozel ders",
+      "özel ders",
+      "ÖZEL DERS",
+      "OZEL DERS"
+    ]
+  },
+  {
+    "soru": "İş yerlerindeki yemek yeme ve dinlenme paydosu",
+    "cevap": "Öğle arası",
+    "alternatifler": [
+      "ÖĞLE ARASI",
+      "ogle arasi",
+      "OGLE ARASI",
+      "öğle arası"
+    ]
+  },
+  {
+    "soru": "Karşı tarafın parasını verdiği telefon konuşması",
+    "cevap": "Ödemeli",
+    "alternatifler": [
+      "ODEMELI",
+      "ÖDEMELI",
+      "ödemeli",
+      "odemeli"
+    ]
+  },
+  {
+    "soru": "Yaşamı sona erecek olan, fani",
+    "cevap": "Ölümlü",
+    "alternatifler": [
+      "olumlu",
+      "ÖLÜMLÜ",
+      "OLUMLU",
+      "ölümlü"
+    ]
+  },
+  {
+    "soru": "Taverna müziğinin temsilcilerindendi, Ferdi __",
+    "cevap": "Özbeğen",
+    "alternatifler": [
+      "özbeğen",
+      "OZBEGEN",
+      "ozbegen",
+      "ÖZBEĞEN"
+    ]
+  },
+  {
+    "soru": "Okul idaresinde öğrencilerin de söz sahibi olması",
+    "cevap": "Öz yönetim",
+    "alternatifler": [
+      "ÖZ YÖNETIM",
+      "öz yönetim",
+      "OZ YONETIM",
+      "oz yonetim"
+    ]
+  },
+  {
+    "soru": "Bir işi gerçekleştirmek için ayrılan para",
+    "cevap": "Ödenek",
+    "alternatifler": [
+      "odenek",
+      "ODENEK",
+      "ÖDENEK",
+      "ödenek"
+    ]
+  },
+  {
+    "soru": "Avını ağına düşürmesiyle ünlü eklem bacaklı",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Devletin sorgulanamayan ödenek türü",
+    "cevap": "Örtülü",
+    "alternatifler": [
+      "ORTULU",
+      "örtülü",
+      "ÖRTÜLÜ",
+      "ortulu"
+    ]
+  },
+  {
+    "soru": "Kart kullanarak, şifre girmeden yapılan alışveriş",
+    "cevap": "Ödegeç",
+    "alternatifler": [
+      "odegec",
+      "ödegeç",
+      "ÖDEGEÇ",
+      "ODEGEC"
+    ]
+  },
+  {
+    "soru": "Bir suçu duyulmaması için gizleme",
+    "cevap": "Örtbas",
+    "alternatifler": [
+      "ÖRTBAS",
+      "örtbas",
+      "ORTBAS",
+      "ortbas"
+    ]
+  },
+  {
+    "soru": "Bilimsel araştırmalarda, bütünü temsil eden grup",
+    "cevap": "Örneklem",
+    "alternatifler": [
+      "orneklem",
+      "ÖRNEKLEM",
+      "örneklem",
+      "ORNEKLEM"
+    ]
+  },
+  {
+    "soru": "Şarkıcı Nil Karaibrahimgil'e yakıştırılan lakap",
+    "cevap": "Özgür kız",
+    "alternatifler": [
+      "ÖZGÜR KIZ",
+      "ozgur kiz",
+      "özgür kız",
+      "OZGUR KIZ"
+    ]
+  },
+  {
+    "soru": "Çözüm için bir görüş ortaya koymak, teklif etmek",
+    "cevap": "Önermek",
+    "alternatifler": [
+      "onermek",
+      "ÖNERMEK",
+      "ONERMEK",
+      "önermek"
+    ]
+  },
+  {
+    "soru": "Diriliş: Ertuğrul dizisinde Sırma Hatun'u oynadı",
+    "cevap": "Öykü çelik",
+    "alternatifler": [
+      "OYKU CELIK",
+      "öykü çelik",
+      "oyku celik",
+      "ÖYKÜ ÇELIK"
+    ]
+  },
+  {
+    "soru": "24 Kasım'da bu meslek mensubunun günü kutlanır",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Bir başlangıç barındırmayan, kadim",
+    "cevap": "Öncesiz",
+    "alternatifler": [
+      "öncesiz",
+      "ONCESIZ",
+      "oncesiz",
+      "ÖNCESIZ"
+    ]
+  },
+  {
+    "soru": "Ihlamurlar Altında dizisinde Elif Tekiner'i oynadı",
+    "cevap": "Özge borak",
+    "alternatifler": [
+      "ozge borak",
+      "ÖZGE BORAK",
+      "OZGE BORAK",
+      "özge borak"
+    ]
+  },
+  {
+    "soru": "Yöneliş sözünün tüm harflerine sahip; engel olma",
+    "cevap": "Önleyiş",
+    "alternatifler": [
+      "onleyis",
+      "ÖNLEYIŞ",
+      "ONLEYIS",
+      "önleyiş"
+    ]
+  },
+  {
+    "soru": "Aksaray'da yer alan Anadolu Selçuklu hanı",
+    "cevap": "Öresin",
+    "alternatifler": [
+      "oresin",
+      "ÖRESIN",
+      "öresin",
+      "ORESIN"
+    ]
+  },
+  {
+    "soru": "Balalayka filminin yönetmeni, Ali __",
+    "cevap": "Özgentürk",
+    "alternatifler": [
+      "ÖZGENTÜRK",
+      "ozgenturk",
+      "özgentürk",
+      "OZGENTURK"
+    ]
+  },
+  {
+    "soru": "Athena grubundaki kardeşlerin soyadı",
+    "cevap": "Özoğuz",
+    "alternatifler": [
+      "ÖZOĞUZ",
+      "özoğuz",
+      "ozoguz",
+      "OZOGUZ"
+    ]
+  },
+  {
+    "soru": "Ehemmiyet görme, önde tutulma",
+    "cevap": "Önemsenme",
+    "alternatifler": [
+      "ONEMSENME",
+      "ÖNEMSENME",
+      "önemsenme",
+      "onemsenme"
+    ]
+  },
+  {
+    "soru": "Grip olunca ciğerden gelen havanın ani çıkışı",
+    "cevap": "Öksürme",
+    "alternatifler": [
+      "oksurme",
+      "OKSURME",
+      "öksürme",
+      "ÖKSÜRME"
+    ]
+  },
+  {
+    "soru": "Asla hayatını kaybetmeyen deniz anası türü",
+    "cevap": "Ölümsüz",
+    "alternatifler": [
+      "ÖLÜMSÜZ",
+      "OLUMSUZ",
+      "ölümsüz",
+      "olumsuz"
+    ]
+  },
+  {
+    "soru": "Karadirek Çayı'nda inşa edilen Afyon barajı",
+    "cevap": "Örenler",
+    "alternatifler": [
+      "orenler",
+      "ORENLER",
+      "ÖRENLER",
+      "örenler"
+    ]
+  },
+  {
+    "soru": "Antalya'nın Döşemealtı ilçesinde yer alan mağara",
+    "cevap": "Öküzini",
+    "alternatifler": [
+      "ÖKÜZINI",
+      "OKUZINI",
+      "öküzini",
+      "okuzini"
+    ]
+  },
+  {
+    "soru": "Müziğin korkutucu ifade ile icrasını tarif eder",
+    "cevap": "Öfkeli",
+    "alternatifler": [
+      "ÖFKELI",
+      "öfkeli",
+      "OFKELI",
+      "ofkeli"
+    ]
+  },
+  {
+    "soru": "Ajitasyon içeren etkili bir caydırma sözü",
+    "cevap": "Ölümü gör",
+    "alternatifler": [
+      "ÖLÜMÜ GÖR",
+      "OLUMU GOR",
+      "olumu gor",
+      "ölümü gör"
+    ]
+  },
+  {
+    "soru": "Kamçılı ve tek hücreli bu canlı, tatlı suda yaşar",
+    "cevap": "Öglena",
+    "alternatifler": [
+      "OGLENA",
+      "öglena",
+      "ÖGLENA",
+      "oglena"
+    ]
+  },
+  {
+    "soru": "\"Sevinçli, pürneşe, komik birisin\" anlamındaki söz",
+    "cevap": "Ömürsün",
+    "alternatifler": [
+      "omursun",
+      "OMURSUN",
+      "ömürsün",
+      "ÖMÜRSÜN"
+    ]
+  },
+  {
+    "soru": "Gurbet şarkısının sahibi, __ Erdoğan",
+    "cevap": "Özdemir",
+    "alternatifler": [
+      "özdemir",
+      "OZDEMIR",
+      "ozdemir",
+      "ÖZDEMIR"
+    ]
+  },
+  {
+    "soru": "Kütahya Milli Mücadele Müzesi'nin bulunduğu konak",
+    "cevap": "Özekmekçi",
+    "alternatifler": [
+      "OZEKMEKCI",
+      "ÖZEKMEKÇI",
+      "özekmekçi",
+      "ozekmekci"
+    ]
+  },
+  {
+    "soru": "Survivor'da bunu kazanan takım genelde yemek alır",
+    "cevap": "Ödül oyunu",
+    "alternatifler": [
+      "ODUL OYUNU",
+      "ödül oyunu",
+      "ÖDÜL OYUNU",
+      "odul oyunu"
+    ]
+  },
+  {
+    "soru": "Demet __, Erkenci Kuş dizisinin Sanem'i",
+    "cevap": "Özdemir",
+    "alternatifler": [
+      "özdemir",
+      "OZDEMIR",
+      "ozdemir",
+      "ÖZDEMIR"
+    ]
+  },
+  {
+    "soru": "Yüksek Sosyete dizisinde oynayan aktör, Engin __",
+    "cevap": "Öztürk",
+    "alternatifler": [
+      "ÖZTÜRK",
+      "ozturk",
+      "OZTURK",
+      "öztürk"
+    ]
+  },
+  {
+    "soru": "Manzum şeklindeki didaktik hikaye, fabl",
+    "cevap": "Öykünce",
+    "alternatifler": [
+      "oykunce",
+      "OYKUNCE",
+      "ÖYKÜNCE",
+      "öykünce"
+    ]
+  },
+  {
+    "soru": "Çok büyük eziyeti ifade eden benzetme",
+    "cevap": "Ölüm gibi",
+    "alternatifler": [
+      "OLUM GIBI",
+      "olum gibi",
+      "ÖLÜM GIBI",
+      "ölüm gibi"
+    ]
+  },
+  {
+    "soru": "__ Dünya, 2018 yapımı komedi filmi",
+    "cevap": "Ölümlü",
+    "alternatifler": [
+      "olumlu",
+      "ÖLÜMLÜ",
+      "OLUMLU",
+      "ölümlü"
+    ]
+  },
+  {
+    "soru": "Turkcell reklamındaki Nil Karaibrahimgil karakteri",
+    "cevap": "Özgür kız",
+    "alternatifler": [
+      "ÖZGÜR KIZ",
+      "ozgur kiz",
+      "özgür kız",
+      "OZGUR KIZ"
+    ]
+  },
+  {
+    "soru": "Ezel Bayraktar'ın dizideki ilk adı buydu",
+    "cevap": "Ömer uçar",
+    "alternatifler": [
+      "ömer uçar",
+      "OMER UCAR",
+      "ÖMER UÇAR",
+      "omer ucar"
+    ]
+  },
+  {
+    "soru": "İfade __, anayasa ile güvence altına alınan hak",
+    "cevap": "Özgürlüğü",
+    "alternatifler": [
+      "ozgurlugu",
+      "özgürlüğü",
+      "ÖZGÜRLÜĞÜ",
+      "OZGURLUGU"
+    ]
+  },
+  {
+    "soru": "Abartılı bir şekilde kendisini çok yücelten kişi",
+    "cevap": "Övüngen",
+    "alternatifler": [
+      "ÖVÜNGEN",
+      "övüngen",
+      "ovungen",
+      "OVUNGEN"
+    ]
+  },
+  {
+    "soru": "Geniz ile orta kulak arasındaki kanal, __ borusu",
+    "cevap": "Östaki",
+    "alternatifler": [
+      "ostaki",
+      "östaki",
+      "ÖSTAKI",
+      "OSTAKI"
+    ]
+  },
+  {
+    "soru": "2006'da en güzel kumsal seçilen Muğla beldesi",
+    "cevap": "Ölüdeniz",
+    "alternatifler": [
+      "ÖLÜDENIZ",
+      "ölüdeniz",
+      "OLUDENIZ",
+      "oludeniz"
+    ]
+  },
+  {
+    "soru": "Mutfak çöpü parçalayıp giderden atan alet",
+    "cevap": "Öğütücü",
+    "alternatifler": [
+      "OGUTUCU",
+      "ÖĞÜTÜCÜ",
+      "öğütücü",
+      "ogutucu"
+    ]
+  },
+  {
+    "soru": "Kocaman Ailem dizisinde Güzide'yi canlandırdı",
+    "cevap": "Özge özder",
+    "alternatifler": [
+      "ÖZGE ÖZDER",
+      "OZGE OZDER",
+      "özge özder",
+      "ozge ozder"
+    ]
+  },
+  {
+    "soru": "Okulun temel taşı",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Daha evvel yer alma, ilk olarak bulunma durumu",
+    "cevap": "Öncelik",
+    "alternatifler": [
+      "ÖNCELIK",
+      "öncelik",
+      "oncelik",
+      "ONCELIK"
+    ]
+  },
+  {
+    "soru": "__ Adam; Asıl adı Peter Parker olan süper kahraman",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Kuruluş Osman dizisindeki başrol aktörün soyadı",
+    "cevap": "Özçivit",
+    "alternatifler": [
+      "OZCIVIT",
+      "ÖZÇIVIT",
+      "özçivit",
+      "ozcivit"
+    ]
+  },
+  {
+    "soru": "Yazar Ariel Dorfman'ın filmi de çekilen ünlü oyunu",
+    "cevap": "Ölüm ve kız",
+    "alternatifler": [
+      "ölüm ve kız",
+      "ÖLÜM VE KIZ",
+      "olum ve kiz",
+      "OLUM VE KIZ"
+    ]
+  },
+  {
+    "soru": "Menfaatini ikinci plana atan, fedakar",
+    "cevap": "Özverili",
+    "alternatifler": [
+      "OZVERILI",
+      "ÖZVERILI",
+      "ozverili",
+      "özverili"
+    ]
+  },
+  {
+    "soru": "Bir kişi veya bir şey hakkında verilen peşin hüküm",
+    "cevap": "Ön yargı",
+    "alternatifler": [
+      "ön yargı",
+      "on yargi",
+      "ÖN YARGI",
+      "ON YARGI"
+    ]
+  },
+  {
+    "soru": "Değerli saymak, mühimsemek, ciddiye almak",
+    "cevap": "Önemsemek",
+    "alternatifler": [
+      "ONEMSEMEK",
+      "önemsemek",
+      "onemsemek",
+      "ÖNEMSEMEK"
+    ]
+  },
+  {
+    "soru": "Burak __, Kuruluş Osman dizisinin başrol oyuncusu",
+    "cevap": "Özçivit",
+    "alternatifler": [
+      "OZCIVIT",
+      "ÖZÇIVIT",
+      "özçivit",
+      "ozcivit"
+    ]
+  },
+  {
+    "soru": "Türkçede \"selfie\"",
+    "cevap": "Özçekim",
+    "alternatifler": [
+      "özçekim",
+      "OZCEKIM",
+      "ozcekim",
+      "ÖZÇEKIM"
+    ]
+  },
+  {
+    "soru": "Bile bile, kasten",
+    "cevap": "Özellikle",
+    "alternatifler": [
+      "OZELLIKLE",
+      "özellikle",
+      "ÖZELLIKLE",
+      "ozellikle"
+    ]
+  },
+  {
+    "soru": "Mecaz anlamda dayanıklı olmayan, güçsüz",
+    "cevap": "Ömürsüz",
+    "alternatifler": [
+      "ÖMÜRSÜZ",
+      "OMURSUZ",
+      "omursuz",
+      "ömürsüz"
+    ]
+  },
+  {
+    "soru": "Tibetçedeki lama sözcüğünün anlamı",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Belli bir kurala göre dizili sayılar bütünü",
+    "cevap": "Örüntü",
+    "alternatifler": [
+      "örüntü",
+      "oruntu",
+      "ORUNTU",
+      "ÖRÜNTÜ"
+    ]
+  },
+  {
+    "soru": "Beyaz Show'un sunucusunun soyadı",
+    "cevap": "Öztürk",
+    "alternatifler": [
+      "ÖZTÜRK",
+      "ozturk",
+      "OZTURK",
+      "öztürk"
+    ]
+  },
+  {
+    "soru": "Olayların belirli düzenle ve art arda gelişmesi",
+    "cevap": "Örüntü",
+    "alternatifler": [
+      "örüntü",
+      "oruntu",
+      "ORUNTU",
+      "ÖRÜNTÜ"
+    ]
+  },
+  {
+    "soru": "Türkiye'de yasal olmayan, yaşamı sonlandırma hakkı",
+    "cevap": "Ötanazi",
+    "alternatifler": [
+      "OTANAZI",
+      "ötanazi",
+      "otanazi",
+      "ÖTANAZI"
+    ]
+  },
+  {
+    "soru": "Filmi, kitabı detaya girmeksizin anlatma",
+    "cevap": "Özetleme",
+    "alternatifler": [
+      "ozetleme",
+      "özetleme",
+      "OZETLEME",
+      "ÖZETLEME"
+    ]
+  },
+  {
+    "soru": "Tıptaki 6.sınıf öğrencisi, intern",
+    "cevap": "Ön hekim",
+    "alternatifler": [
+      "ÖN HEKIM",
+      "on hekim",
+      "ön hekim",
+      "ON HEKIM"
+    ]
+  },
+  {
+    "soru": "Rujlu dudakla bundan yapınca iz çıkar",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Verilecek parayı başkasının vermesini sağlamak",
+    "cevap": "Ödetmek",
+    "alternatifler": [
+      "ÖDETMEK",
+      "odetmek",
+      "ödetmek",
+      "ODETMEK"
+    ]
+  },
+  {
+    "soru": "Cihaza otomatik çalışma özelliği ekleyen düzenek",
+    "cevap": "Öz devinim",
+    "alternatifler": [
+      "oz devinim",
+      "OZ DEVINIM",
+      "öz devinim",
+      "ÖZ DEVINIM"
+    ]
+  },
+  {
+    "soru": "Lut Gölü'nün diğer adı",
+    "cevap": "Ölüdeniz",
+    "alternatifler": [
+      "ÖLÜDENIZ",
+      "ölüdeniz",
+      "OLUDENIZ",
+      "oludeniz"
+    ]
+  },
+  {
+    "soru": "Artık kullanılmayan, konuşulmayan lisan",
+    "cevap": "Ölü dil",
+    "alternatifler": [
+      "ÖLÜ DIL",
+      "olu dil",
+      "ölü dil",
+      "OLU DIL"
+    ]
+  },
+  {
+    "soru": "Araknafobiye neden olan böceğin adı",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "2018 yapımı Ali Atay filmi, __ Dünya",
+    "cevap": "Ölümlü",
+    "alternatifler": [
+      "olumlu",
+      "ÖLÜMLÜ",
+      "OLUMLU",
+      "ölümlü"
+    ]
+  },
+  {
+    "soru": "__ Asaf, Cumhuriyet döneminden Türk şair",
+    "cevap": "Özdemir",
+    "alternatifler": [
+      "özdemir",
+      "OZDEMIR",
+      "ozdemir",
+      "ÖZDEMIR"
+    ]
+  },
+  {
+    "soru": "Bazı haklardan vazgeçerek uzlaşmak, taviz vermek",
+    "cevap": "Ödünlemek",
+    "alternatifler": [
+      "ÖDÜNLEMEK",
+      "ODUNLEMEK",
+      "odunlemek",
+      "ödünlemek"
+    ]
+  },
+  {
+    "soru": "Sakıncalı sözcüğün, farklı bir kelimeyle anlatımı",
+    "cevap": "Örtmece",
+    "alternatifler": [
+      "ORTMECE",
+      "örtmece",
+      "ÖRTMECE",
+      "ortmece"
+    ]
+  },
+  {
+    "soru": "Erteleme, ileri tarihe alma",
+    "cevap": "Öteleme",
+    "alternatifler": [
+      "oteleme",
+      "OTELEME",
+      "öteleme",
+      "ÖTELEME"
+    ]
+  },
+  {
+    "soru": "İnsanda orta kulakla burun boşluğunu bağlayan boru",
+    "cevap": "Östaki",
+    "alternatifler": [
+      "ostaki",
+      "östaki",
+      "ÖSTAKI",
+      "OSTAKI"
+    ]
+  },
+  {
+    "soru": "Sinirlenme, çok kızma, hiddetlenme",
+    "cevap": "Öfkelenme",
+    "alternatifler": [
+      "OFKELENME",
+      "ofkelenme",
+      "öfkelenme",
+      "ÖFKELENME"
+    ]
+  },
+  {
+    "soru": "Mühim bir durumda yer alma anlamındaki deyim",
+    "cevap": "Önde gelme",
+    "alternatifler": [
+      "ONDE GELME",
+      "önde gelme",
+      "onde gelme",
+      "ÖNDE GELME"
+    ]
+  },
+  {
+    "soru": "Klimt'in Altın Dönem tablosu",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Marvel karakterini ısırıp güçlendiren böcek",
+    "cevap": "Örümcek",
+    "alternatifler": [
+      "orumcek",
+      "ORUMCEK",
+      "örümcek",
+      "ÖRÜMCEK"
+    ]
+  },
+  {
+    "soru": "Bir evrenin, incelenmek üzere seçilen parçası",
+    "cevap": "Örneklem",
+    "alternatifler": [
+      "orneklem",
+      "ÖRNEKLEM",
+      "örneklem",
+      "ORNEKLEM"
+    ]
+  },
+  {
+    "soru": "Yarı bağımsızlık",
+    "cevap": "Özerklik",
+    "alternatifler": [
+      "ÖZERKLIK",
+      "özerklik",
+      "OZERKLIK",
+      "ozerklik"
+    ]
+  },
+  {
+    "soru": "Bob Marley Faruk'u canlandıran aktör, Rasim __",
+    "cevap": "Öztekin",
+    "alternatifler": [
+      "oztekin",
+      "öztekin",
+      "OZTEKIN",
+      "ÖZTEKIN"
+    ]
+  },
+  {
+    "soru": "Biri ile yarışmak, müsabaka yapmak",
+    "cevap": "Ölçüşmek",
+    "alternatifler": [
+      "ÖLÇÜŞMEK",
+      "OLCUSMEK",
+      "olcusmek",
+      "ölçüşmek"
+    ]
+  },
+  {
+    "soru": "Hizmeti almadan yapılan tediye, avans",
+    "cevap": "Ön ödeme",
+    "alternatifler": [
+      "ön ödeme",
+      "on odeme",
+      "ON ODEME",
+      "ÖN ÖDEME"
+    ]
+  },
+  {
+    "soru": "Olacakları önceden kestirme ve tedbir alma",
+    "cevap": "Öngörü",
+    "alternatifler": [
+      "öngörü",
+      "ÖNGÖRÜ",
+      "ongoru",
+      "ONGORU"
+    ]
+  },
+  {
+    "soru": "Bilimde, ortaya atılan, yanlışlanabilir yargı, sav",
+    "cevap": "Önerme",
+    "alternatifler": [
+      "ÖNERME",
+      "onerme",
+      "önerme",
+      "ONERME"
+    ]
+  },
+  {
+    "soru": "Çıtır çıtır çiçekleri olan, çok uzun ömürlü bitki",
+    "cevap": "Ölmez otu",
+    "alternatifler": [
+      "olmez otu",
+      "ÖLMEZ OTU",
+      "OLMEZ OTU",
+      "ölmez otu"
+    ]
+  },
+  {
+    "soru": "50 İlk __, ABD yapımı romantik komedi filmi",
+    "cevap": "Öpücük",
+    "alternatifler": [
+      "ÖPÜCÜK",
+      "OPUCUK",
+      "opucuk",
+      "öpücük"
+    ]
+  },
+  {
+    "soru": "Sen Sen Sen şiirinin Asaf soyadlı yazarının adı",
+    "cevap": "Özdemir",
+    "alternatifler": [
+      "özdemir",
+      "OZDEMIR",
+      "ozdemir",
+      "ÖZDEMIR"
+    ]
+  },
+  {
+    "soru": "Kırmızısına \"Yılbaşı çiçeği\" denilen, şifalı bitki",
+    "cevap": "Ökse otu",
+    "alternatifler": [
+      "OKSE OTU",
+      "ÖKSE OTU",
+      "okse otu",
+      "ökse otu"
+    ]
+  },
+  {
+    "soru": "İstanbul'un Anadolu yakasındaki içme suyu barajı",
+    "cevap": "Ömerli",
+    "alternatifler": [
+      "omerli",
+      "ÖMERLI",
+      "OMERLI",
+      "ömerli"
+    ]
+  },
+  {
+    "soru": "Hastalıklara engel olmayı şiar edinen tıp",
+    "cevap": "Önleyici",
+    "alternatifler": [
+      "önleyici",
+      "ONLEYICI",
+      "ÖNLEYICI",
+      "onleyici"
+    ]
+  },
+  {
+    "soru": "Bazı filmlerde Ayşecik'e eşlik eden çocuk karakter",
+    "cevap": "Ömercik",
+    "alternatifler": [
+      "ÖMERCIK",
+      "ömercik",
+      "omercik",
+      "OMERCIK"
+    ]
+  },
+  {
+    "soru": "Seren Serengil'in babası olan aktörün adı",
+    "cevap": "Öztürk",
+    "alternatifler": [
+      "ÖZTÜRK",
+      "ozturk",
+      "OZTURK",
+      "öztürk"
+    ]
+  },
+  {
+    "soru": "Göbeklitepe'nin bulunduğu Şanlıurfa köyü",
+    "cevap": "Örencik",
+    "alternatifler": [
+      "ÖRENCIK",
+      "örencik",
+      "ORENCIK",
+      "orencik"
+    ]
+  },
+  {
+    "soru": "Kısa tut, hepsini anlatma manasındaki söz öbeği",
+    "cevap": "Özet geç",
+    "alternatifler": [
+      "ÖZET GEÇ",
+      "OZET GEC",
+      "özet geç",
+      "ozet gec"
+    ]
+  },
+  {
+    "soru": "Evlerinin Önü Boyalı Direk'le ünlenen iki kardeş",
+    "cevap": "Öykü berk",
+    "alternatifler": [
+      "ÖYKÜ BERK",
+      "OYKU BERK",
+      "oyku berk",
+      "öykü berk"
+    ]
+  },
+  {
+    "soru": "Çukur dizisindeki Selim Koçovalı karakteri",
+    "cevap": "Öner erkan",
+    "alternatifler": [
+      "ONER ERKAN",
+      "oner erkan",
+      "ÖNER ERKAN",
+      "öner erkan"
+    ]
+  },
+  {
+    "soru": "Çalıkuşu romanında Feride'nin mesleği buydu",
+    "cevap": "Öğretmen",
+    "alternatifler": [
+      "öğretmen",
+      "ogretmen",
+      "OGRETMEN",
+      "ÖĞRETMEN"
+    ]
+  },
+  {
+    "soru": "Tam olarak eşleşmek, uyuşmak",
+    "cevap": "Örtüşmek",
+    "alternatifler": [
+      "ortusmek",
+      "ÖRTÜŞMEK",
+      "örtüşmek",
+      "ORTUSMEK"
+    ]
+  },
+  {
+    "soru": "Gazların yaşadığı hacim değişikliklerini ölçer",
+    "cevap": "Ödyometre",
+    "alternatifler": [
+      "odyometre",
+      "ödyometre",
+      "ÖDYOMETRE",
+      "ODYOMETRE"
+    ]
+  },
+  {
+    "soru": "Dilek Taşı şarkısını seslendiren sanatçının soyadı",
+    "cevap": "Özbeğen",
+    "alternatifler": [
+      "özbeğen",
+      "OZBEGEN",
+      "ozbegen",
+      "ÖZBEĞEN"
+    ]
+  },
+  {
+    "soru": "Kabuğu kalın ve siyah renkli bir üzüm türü",
+    "cevap": "Öküzgözü",
+    "alternatifler": [
+      "okuzgozu",
+      "öküzgözü",
+      "OKUZGOZU",
+      "ÖKÜZGÖZÜ"
+    ]
+  }
+]
