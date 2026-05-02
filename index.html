@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v34</title>
+<title>PassaWord -v35</title>
 
 <style>
 /* =======================================
@@ -2117,7 +2117,6 @@ window.addEventListener('DOMContentLoaded', () => {
   /* Profil kontrol et */
   const aktifProfil = aktifProfiliGetir();
   if (aktifProfil) {
-    /* Profil var, hazır ekranını göster */
     ekraniGoster('baslangicEkrani');
     document.getElementById('profilOlusturKutu').style.display = 'none';
     document.getElementById('hazirEkrani').style.display = 'flex';
@@ -2127,28 +2126,30 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('hosgeldinIsim').textContent = aktifProfil.ad;
     document.getElementById('aktifProfilAdi').textContent = aktifProfil.ad;
   } else {
-    /* Profil yok, oluşturma ekranını göster */
     ekraniGoster('baslangicEkrani');
   }
 
 /* Aktif profil satırına uzun basma ile silme */
-const aktifSatir = document.getElementById('aktifProfilSatir');
-let aktifSatirZamanlayi;
-aktifSatir.addEventListener('mousedown', () => {
-  aktifSatirZamanlayi = setTimeout(() => {
-    const profil = aktifProfiliGetir();
-    if (profil) profilSilOnay(profil);
-  }, 1000);
-});
-aktifSatir.addEventListener('mouseup', () => clearTimeout(aktifSatirZamanlayi));
-aktifSatir.addEventListener('mouseleave', () => clearTimeout(aktifSatirZamanlayi));
-aktifSatir.addEventListener('touchstart', () => {
-  aktifSatirZamanlayi = setTimeout(() => {
-    const profil = aktifProfiliGetir();
-    if (profil) profilSilOnay(profil);
-  }, 1000);
-});
-aktifSatir.addEventListener('touchend', () => clearTimeout(aktifSatirZamanlayi));
+setTimeout(() => {
+  const aktifSatir = document.getElementById('aktifProfilSatir');
+  if (!aktifSatir) return;
+  let aktifSatirZamanlayi;
+  aktifSatir.addEventListener('mousedown', () => {
+    aktifSatirZamanlayi = setTimeout(() => {
+      const profil = aktifProfiliGetir();
+      if (profil) profilSilOnay(profil);
+    }, 1000);
+  });
+  aktifSatir.addEventListener('mouseup', () => clearTimeout(aktifSatirZamanlayi));
+  aktifSatir.addEventListener('mouseleave', () => clearTimeout(aktifSatirZamanlayi));
+  aktifSatir.addEventListener('touchstart', () => {
+    aktifSatirZamanlayi = setTimeout(() => {
+      const profil = aktifProfiliGetir();
+      if (profil) profilSilOnay(profil);
+    }, 1000);
+  });
+  aktifSatir.addEventListener('touchend', () => clearTimeout(aktifSatirZamanlayi));
+}, 500);
    
   /* Firebase skor tablosunu dinle */
   genelSkorTablosunuDinle();
@@ -3303,10 +3304,12 @@ function profilSilOnay(profil) {
 toastGoster(`"${profil.ad}" silindi`);
 
 /* Hiç profil kalmadıysa profil oluştur ekranına geç */
+/* Hiç profil kalmadıysa profil oluştur ekranına geç */
 const kalanProfiller = profilleriGetir();
 if (kalanProfiller.length === 0) {
   modalKapat('profilSecModal');
   modalKapat('ayarlarModal');
+  ekraniGoster('baslangicEkrani');
   document.getElementById('hazirEkrani').style.display = 'none';
   document.getElementById('profilOlusturKutu').style.display = 'block';
   document.getElementById('hosgeldinIsim').textContent = '';
