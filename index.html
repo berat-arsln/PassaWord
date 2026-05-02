@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v30</title>
+<title>PassaWord -v31</title>
 
 <style>
 /* =======================================
@@ -3327,8 +3327,13 @@ window.profilGeriYukle = function() {
 };
 
    window.genelSifirlaBaslat = function() {
-  const sifre = prompt('Admin şifresini girin:');
-  if (!sifre) return;
+  /* Admin modal şifre ekranını kullan */
+  window._sifirlaModunda = true;
+  document.getElementById('adminSifreEkrani').classList.remove('gizli');
+  document.getElementById('adminIcerik').classList.add('gizli');
+  document.getElementById('adminSifreGiris').value = '';
+  modalAc('adminModal');
+};
 
   import('https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js')
     .then(({ signInWithEmailAndPassword }) => {
@@ -3377,9 +3382,28 @@ window.adminGiris = async function() {
   try {
     const { signInWithEmailAndPassword } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js');
     await signInWithEmailAndPassword(kimlikDogrulama, 'beratarsln@gmail.com', sifre);
-    document.getElementById('adminSifreEkrani').classList.add('gizli');
-    document.getElementById('adminIcerik').classList.remove('gizli');
-    adminOneriYukle();
+
+    if (window._sifirlaModunda) {
+      window._sifirlaModunda = false;
+      modalKapat('adminModal');
+      onayGoster(
+        '⚠️ Genel Skoru Sıfırla',
+        'Tüm genel skor tablosu silinecek. Bu işlem geri alınamaz. Emin misin?',
+        async () => {
+          try {
+            await remove(ref(veritabani, 'skorlar'));
+            toastGoster('✅ Genel skor tablosu sıfırlandı!');
+          } catch (hata) {
+            console.error(hata);
+            toastGoster('❌ Sıfırlama başarısız!');
+          }
+        }
+      );
+    } else {
+      document.getElementById('adminSifreEkrani').classList.add('gizli');
+      document.getElementById('adminIcerik').classList.remove('gizli');
+      adminOneriYukle();
+    }
   } catch (hata) {
     toastGoster('Yanlış şifre!');
   }
