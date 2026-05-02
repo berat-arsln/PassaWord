@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v22</title>
+<title>PassaWord -v23</title>
 
 <style>
 /* =======================================
@@ -3058,23 +3058,25 @@ await push(geriBildirimRef, {
   /* EmailJS ile gönder */
   try {
     await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      {
-        profil_adi: profilAdi,
-        kategori,
-        alt_tur: altTur,
-        mesaj,
-        tarih,
-        name: profilAdi
-      }
-    );
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  {
+    profil_adi:    profilAdi,
+    kategori,
+    alt_tur:       altTur,
+    mesaj,
+    cevap:         cevap        || '(belirtilmedi)',
+    alternatifler: alternatif   || '(yok)',
+    tarih,
+    name:          profilAdi
+  }
+);
     toastGoster('Geri bildiriminiz gönderildi! Teşekkürler 🙏');
     document.getElementById('geriBildirimMesaj').value = '';
     modalKapat('geriBildirimModal');
   } catch (hata) {
     console.warn('EmailJS hatası:', hata);
-    toastGoster('Gönderildi! (E-posta bildirimi gecikmeli olabilir)');
+    toastGoster('Geri bildiriminiz gönderildi! Teşekkürler 🙏');
     modalKapat('geriBildirimModal');
   }
 };
@@ -3315,62 +3317,131 @@ window.adminGiris = async function() {
 /* ========================================
    ADMİN - ÖNERİLEN SORULARI YÜKLE
    ======================================== */
-function adminOneriYukle() {
+function adminOneriYukle(filtre = 'soru') {
   const oneriRef = ref(veritabani, 'geribildirimler');
+  const liste = document.getElementById('adminOneriListe');
+
+  const eskiSekme = document.getElementById('adminSekmeler');
+  if (eskiSekme) eskiSekme.remove();
+
+  const sekmeDiv = document.createElement('div');
+  sekmeDiv.id = 'adminSekmeler';
+  sekmeDiv.style.cssText = 'display:flex;gap:8px;padding:0 16px 12px;flex-wrap:wrap;';
+  [
+    ['soru',    '❓ Soru Önerileri', '#1976d2'],
+    ['sikayet', '⚠️ Şikayetler',    '#d62828'],
+    ['hepsi',   '📋 Tümü',          '#444']
+  ].forEach(([f, etiket, renk]) => {
+    const btn = document.createElement('button');
+    btn.textContent = etiket;
+    btn.style.cssText = `padding:7px 14px;border-radius:8px;border:none;cursor:pointer;
+      font-weight:700;font-size:13px;
+      background:${filtre===f ? renk : 'rgba(255,255,255,0.08)'};
+      color:${filtre===f ? '#fff' : '#8899bb'};`;
+    btn.onclick = () => adminFiltreDegistir(f);
+    sekmeDiv.appendChild(btn);
+  });
+  liste.before(sekmeDiv);
+
   onValue(oneriRef, (anlık) => {
     const veri = anlık.val();
-    const liste = document.getElementById('adminOneriListe');
     liste.innerHTML = '';
 
     if (!veri) {
-      liste.innerHTML = `
-        <div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">
-          Bekleyen öneri yok.
-        </div>`;
+      liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Hiç kayıt yok.</div>`;
       return;
     }
 
-    /* Sadece soru önerilerini göster */
-    Object.entries(veri)
-      .filter(([_, v]) => v.altTur && v.altTur.includes('Soru'))
-      .forEach(([key, oneri]) => {
-        const kart = document.createElement('div');
-        kart.className = 'admin-oneri-kart';
-        kart.innerHTML = `
-          <div class="admin-oneri-soru">${oneri.mesaj}</div>
-          <div class="admin-oneri-meta">
-            👤 ${oneri.profilAdi} &nbsp;•&nbsp;
-            📅 ${new Date(oneri.tarih).toLocaleDateString('tr-TR')}
-          </div>
-          <div class="admin-buton-grubu">
-            <button class="admin-onayla" onclick="adminOneriReddet('${key}')">
-              🗑 Reddet
-            </button>
-          </div>
-        `;
-        liste.appendChild(kart);
-      });
+    const girdiler = Object.entries(veri).filter(([_, v]) => {
+      if (filtre === 'soru')    return v.altTur && v.altTur.includes('Soru');
+      if (filtre === 'sikayet') return v.kategori && v.kategori.includes('Şikayet');
+      return true;
+    });
 
-    if (liste.innerHTML === '') {
-      liste.innerHTML = `
-        <div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">
-          Bekleyen soru önerisi yok.
-        </div>`;
+    if (girdiler.length === 0) {
+      liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Bu kategoride kayıt yok.</div>`;
+      return;
     }
+
+    girdiler.sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih));
+
+    girdiler.forEach(([key, oneri]) => {
+      const soruOneriMi = oneri.altTur && oneri.altTur.includes('Soru');
+      const jsonMetin = soruOneriMi ? JSON.stringify({
+        soru: oneri.mesaj,
+        cevap: oneri.cevap || '',
+        alternatifler: oneri.alternatifler
+          ? oneri.alternatifler.split(',').map(s => s.trim()).filter(Boolean)
+          : []
+      }, null, 2) : null;
+
+      const kart = document.createElement('div');
+      kart.className = 'admin-oneri-kart';
+      kart.dataset.key = key;
+      kart.innerHTML = `
+        <span style="font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700;
+          background:${soruOneriMi ? 'rgba(0,200,83,0.15)' : 'rgba(255,23,68,0.15)'};
+          color:${soruOneriMi ? '#00c853' : '#ff1744'};">
+          ${oneri.altTur || oneri.kategori || '?'}
+        </span>
+        <div class="admin-oneri-soru" style="margin-top:8px;">📝 ${oneri.mesaj}</div>
+        ${soruOneriMi && oneri.cevap
+          ? `<div style="font-size:13px;color:#4fc3f7;margin-top:4px;">✅ Cevap: <b>${oneri.cevap}</b></div>`
+          : ''}
+        ${soruOneriMi && oneri.alternatifler
+          ? `<div style="font-size:12px;color:#8899bb;margin-top:2px;">🔄 ${oneri.alternatifler}</div>`
+          : ''}
+        <div class="admin-oneri-meta" style="margin-top:6px;">
+          👤 ${oneri.profilAdi} &nbsp;•&nbsp;
+          📅 ${new Date(oneri.tarih).toLocaleDateString('tr-TR')}
+          ${new Date(oneri.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}
+        </div>
+        <div class="admin-buton-grubu" style="margin-top:10px;">
+          ${soruOneriMi
+            ? `<button class="admin-onayla" style="background:linear-gradient(145deg,#1976d2,#0d47a1);"
+                onclick="adminJsonKopyala(this,'${btoa(unescape(encodeURIComponent(jsonMetin)))}')">
+                📋 JSON Kopyala
+              </button>`
+            : ''}
+          <button class="admin-reddet" onclick="adminOneriReddet('${key}',this)">
+            🗑 Sil
+          </button>
+        </div>
+      `;
+      liste.appendChild(kart);
+    });
   }, { onlyOnce: true });
 }
-
 /* ========================================
    ADMİN - ÖNERİ REDDET
    ======================================== */
-window.adminOneriReddet = function(key) {
-  const oneriRef = ref(veritabani, `geribildirimler/${key}`);
-  remove(oneriRef)
+window.adminOneriReddet = function(key, btn) {
+  if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
+  remove(ref(veritabani, `geribildirimler/${key}`))
     .then(() => {
-      toastGoster('Öneri reddedildi');
-      adminOneriYukle();
+      toastGoster('✅ Silindi');
+      document.querySelector(`.admin-oneri-kart[data-key="${key}"]`)?.remove();
     })
-    .catch(console.error);
+    .catch((err) => {
+      console.error(err);
+      toastGoster('❌ Silinemedi! Firebase kurallarını kontrol et.');
+      if (btn) { btn.textContent = '🗑 Sil'; btn.disabled = false; }
+    });
+};
+
+window.adminFiltreDegistir = function(filtre) {
+  adminOneriYukle(filtre);
+};
+
+window.adminJsonKopyala = function(btn, b64) {
+  const json = decodeURIComponent(escape(atob(b64)));
+  navigator.clipboard.writeText(json)
+    .then(() => {
+      const orijinal = btn.textContent;
+      btn.textContent = '✅ Kopyalandı!';
+      setTimeout(() => btn.textContent = orijinal, 2000);
+    })
+    .catch(() => toastGoster('Kopyalanamadı'));
 };
 
 /* ========================================
