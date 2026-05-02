@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v28</title>
+<title>PassaWord -v29</title>
 
 <style>
 /* =======================================
@@ -1223,6 +1223,20 @@ textarea.giris-alani {
 .sonuc-soru { font-size: 12px; color: var(--metin-soluk); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sonuc-verilen-cevap { font-size: 13px; font-weight: 700; margin-top: 2px; }
 .sonuc-dogru-cevap { font-size: 11px; color: var(--metin-soluk); margin-top: 2px; }
+  
+   .hata-bildir-buton {
+  background: rgba(255,23,68,0.12);
+  border: 1px solid rgba(255,23,68,0.25);
+  border-radius: 6px;
+  color: #ff6b6b;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  cursor: pointer;
+  margin-top: 4px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
 
 /* Sonuç durumlarına göre renkler */
 .sonuc-kalem.s-dogru .sonuc-harf { background: rgba(0,230,118,0.15); color: #00e676; }
@@ -2534,7 +2548,31 @@ window.pasCek = function() {
   cevapAlaniniTemizle();
   sonrakiSoruya();
 };
+window.hataBildir = async function(harf, btn) {
+  const soruVerisi = oyunDurumu.secilenSorular[harf];
+  if (!soruVerisi) return;
 
+  btn.textContent = '⏳...';
+  btn.disabled = true;
+
+  try {
+    const hataBildirimRef = ref(veritabani, 'hatabildirimler');
+    await push(hataBildirimRef, {
+      harf,
+      soru: soruVerisi.soru,
+      cevap: soruVerisi.cevap,
+      alternatifler: soruVerisi.alternatifler || [],
+      tarih: new Date().toISOString()
+    });
+    btn.textContent = '✓ Bildirildi';
+    btn.style.color = '#00e676';
+    btn.style.borderColor = 'rgba(0,230,118,0.3)';
+  } catch (hata) {
+    console.error(hata);
+    btn.textContent = '⚠ Hata Bildir';
+    btn.disabled = false;
+  }
+};
 /* ========================================
    SONRAKİ SORUYA GEÇ
    ======================================== */
@@ -2728,6 +2766,7 @@ function sonucEkraniniOlustur(bonus) {
         ${durum !== 'dogru'
           ? `<div class="sonuc-dogru-cevap">✓ Doğru: ${veri.dogru}</div>`
           : ''}
+        <button class="hata-bildir-buton" onclick="hataBildir('${harf}', this)">⚠ Hata Bildir</button>
       </div>
     `;
     liste.appendChild(kalem);
@@ -3327,6 +3366,7 @@ function adminOneriYukle(filtre = 'soru') {
   [
     ['soru',    '❓ Soru Önerileri', '#1976d2'],
     ['sikayet', '⚠️ Şikayetler',    '#d62828'],
+    ['hata',    '🔴 Hata Bildirimleri', '#e65100'],
     ['hepsi',   '📋 Tümü',          '#444']
   ].forEach(([f, etiket, renk]) => {
     const btn = document.createElement('button');
@@ -3352,6 +3392,7 @@ function adminOneriYukle(filtre = 'soru') {
     const girdiler = Object.entries(veri).filter(([_, v]) => {
       if (filtre === 'soru')    return v.altTur && v.altTur.includes('Soru');
       if (filtre === 'sikayet') return v.kategori && v.kategori.includes('Şikayet');
+      if (filtre === 'hata')    return false;
       return true;
     });
 
@@ -3408,6 +3449,61 @@ function adminOneriYukle(filtre = 'soru') {
       liste.appendChild(kart);
     });
   }, { onlyOnce: true });
+
+   
+   /* Hata bildirimleri ayrı path'ten yüklenir */
+  if (filtre === 'hata') {
+    liste.innerHTML = '';
+    const hataRef = ref(veritabani, 'hatabildirimler');
+    onValue(hataRef, (anlık) => {
+      const veri = anlık.val();
+      liste.innerHTML = '';
+
+      if (!veri) {
+        liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Hata bildirimi yok.</div>`;
+        return;
+      }
+
+      Object.entries(veri)
+        .sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih))
+        .forEach(([key, hata]) => {
+          const jsonMetin = JSON.stringify({
+            soru: hata.soru,
+            cevap: hata.cevap,
+            alternatifler: hata.alternatifler || []
+          }, null, 2);
+
+          const kart = document.createElement('div');
+          kart.className = 'admin-oneri-kart';
+          kart.dataset.key = key;
+          kart.innerHTML = `
+            <span style="font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700;
+              background:rgba(230,81,0,0.15);color:#ff6d00;">
+              🔴 Hata Bildirimi
+            </span>
+            <div style="font-size:13px;font-weight:700;color:#fff;margin-top:8px;">
+              ${hata.harf} harfi
+            </div>
+            <div class="admin-oneri-soru" style="margin-top:4px;">📝 ${hata.soru}</div>
+            <div style="font-size:13px;color:#4fc3f7;margin-top:4px;">✅ Cevap: <b>${hata.cevap}</b></div>
+            <div class="admin-oneri-meta" style="margin-top:6px;">
+              📅 ${new Date(hata.tarih).toLocaleDateString('tr-TR')}
+              ${new Date(hata.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}
+            </div>
+            <div class="admin-buton-grubu" style="margin-top:10px;">
+              <button class="admin-onayla" style="background:linear-gradient(145deg,#1976d2,#0d47a1);"
+                onclick="adminJsonKopyala(this,'${btoa(unescape(encodeURIComponent(jsonMetin)))}')">
+                📋 JSON Kopyala
+              </button>
+              <button class="admin-reddet" onclick="hataOneriReddet('${key}',this)">
+                🗑 Sil
+              </button>
+            </div>
+          `;
+          liste.appendChild(kart);
+        });
+    }, { onlyOnce: true });
+  }
 }
 /* ========================================
    ADMİN - ÖNERİ REDDET
@@ -3422,6 +3518,20 @@ window.adminOneriReddet = function(key, btn) {
     .catch((err) => {
       console.error(err);
       toastGoster('❌ Silinemedi! Firebase kurallarını kontrol et.');
+      if (btn) { btn.textContent = '🗑 Sil'; btn.disabled = false; }
+    });
+};
+
+   window.hataOneriReddet = function(key, btn) {
+  if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
+  remove(ref(veritabani, `hatabildirimler/${key}`))
+    .then(() => {
+      toastGoster('✅ Silindi');
+      document.querySelector(`.admin-oneri-kart[data-key="${key}"]`)?.remove();
+    })
+    .catch((err) => {
+      console.error(err);
+      toastGoster('❌ Silinemedi!');
       if (btn) { btn.textContent = '🗑 Sil'; btn.disabled = false; }
     });
 };
