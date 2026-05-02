@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v19</title>
+<title>PassaWord -v20</title>
 
 <style>
 /* =======================================
@@ -1796,8 +1796,10 @@ textarea.giris-alani {
       <div class="form-grup">
         <span class="form-etiket">Alt Tür</span>
         <div class="secim-grubu" id="altTurGrubu">
-          <div class="secim-cipi secili" onclick="cipSec(this,'altTurGrubu')">❓ Soru Önerisi</div>
-          <div class="secim-cipi" onclick="cipSec(this,'altTurGrubu')">🎮 Oyun Önerisi</div>
+          <div class="secim-grubu" id="altTurGrubu">
+  <div class="secim-cipi secili" onclick="cipSec(this,'altTurGrubu')">❓ Soru Önerisi</div>
+  <div class="secim-cipi" onclick="cipSec(this,'altTurGrubu')">🎮 Oyunla İlgili Öneri</div>
+</div>
         </div>
       </div>
       <div class="form-grup">
@@ -3082,11 +3084,6 @@ await push(geriBildirimRef, {
 window.altTurGuncelle = function(kategori) {
   const grup = document.getElementById('altTurGrubu');
   grup.innerHTML = '';
-   /* Soru önerisi seçilince alternatif alanını göster */
-  const seciliAltTur = document.querySelector('#altTurGrubu .secim-cipi.secili');
-const soruOneriMi = seciliAltTur && seciliAltTur.textContent.includes('Soru');
-document.getElementById('alternatifGrup').style.display = soruOneriMi ? 'block' : 'none';
-   
 
   const secenekler = kategori === 'oneri'
     ? [['❓ Soru Önerisi', true], ['🎮 Oyunla İlgili Öneri', false]]
@@ -3096,9 +3093,16 @@ document.getElementById('alternatifGrup').style.display = soruOneriMi ? 'block' 
     const cip = document.createElement('div');
     cip.className = `secim-cipi${secili ? ' secili' : ''}`;
     cip.textContent = metin;
-    cip.onclick = () => cipSec(cip, 'altTurGrubu');
+    cip.onclick = () => {
+      cipSec(cip, 'altTurGrubu');
+    };
     grup.appendChild(cip);
   });
+
+  /* Soru önerisi ilk seçili, alternatif alanını ona göre ayarla */
+  const ilkSecili = grup.querySelector('.secim-cipi.secili');
+  const soruOneriMi = ilkSecili && ilkSecili.textContent.includes('Soru');
+  document.getElementById('alternatifGrup').style.display = soruOneriMi ? 'block' : 'none';
 };
 
 /* ========================================
@@ -3145,6 +3149,7 @@ window.modalAc = function(id) {
   if (id === 'skorModal') kisiselSkorTablosunuGuncelle();
   if (id === 'profilSecModal') profilListesiniGuncelle();
   if (id === 'adminModal') {
+  if (id === 'geriBildirimModal') altTurGuncelle('oneri');
     /* Admin modalı açılınca şifre ekranını göster */
     document.getElementById('adminSifreEkrani').classList.remove('gizli');
     document.getElementById('adminIcerik').classList.add('gizli');
