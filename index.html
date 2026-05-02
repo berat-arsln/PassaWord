@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v35</title>
+<title>PassaWord -v36</title>
 
 <style>
 /* =======================================
@@ -3313,6 +3313,14 @@ if (kalanProfiller.length === 0) {
   document.getElementById('hazirEkrani').style.display = 'none';
   document.getElementById('profilOlusturKutu').style.display = 'block';
   document.getElementById('hosgeldinIsim').textContent = '';
+  document.getElementById('aktifProfilAdi').textContent = '—';
+} else {
+  const yeniAktif = aktifProfiliGetir();
+  if (yeniAktif) {
+    document.getElementById('aktifProfilAdi').textContent = yeniAktif.ad;
+    document.getElementById('hosgeldinIsim').textContent = yeniAktif.ad;
+  }
+}
 }
     }
   );
