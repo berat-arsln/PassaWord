@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v26</title>
+<title>PassaWord -v27</title>
 
 <style>
 /* =======================================
@@ -550,7 +550,7 @@ html, body {
   letter-spacing: 0.5px;
   outline: none;
   /* Cihaz klavyesini engelle, sadece özel klavye kullanılsın */
-  caret-color: transparent;
+  caret-color: #fff;
 }
 
 #cevapGiris::placeholder {
@@ -1542,16 +1542,15 @@ textarea.giris-alani {
   <div class="giris-klavye-alani">
     <div class="cevap-satiri">
       <input
-        type="text"
-        id="cevapGiris"
-        placeholder="Cevabınızı yazın..."
-        readonly
-        autocomplete="off"
-      >
+  type="text"
+  id="cevapGiris"
+  placeholder="Cevabınızı yazın..."
+  autocomplete="off"
+  autocorrect="off"
+  autocapitalize="off"
+>
       <button id="pasButon" onclick="pasCek()">PAS</button>
     </div>
-    <!-- Özel Türkçe klavye - JS tarafından oluşturulur -->
-    <div id="ozelKlavye"></div>
   </div>
 
   <!-- Bilgisayar cevap alanı (klavye yok) -->
