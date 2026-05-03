@@ -2029,7 +2029,7 @@ const EMAILJS_TEMPLATE_ID = 'template_dlmjr0w';
 const EMAILJS_PUBLIC_KEY = 'D01aRDtRbWdqpLIjm';
 
 /* Oyun süresi (saniye) */
-const OYUN_SURESI = 240;
+const OYUN_SURESI = 360;
 
 /* ========================================
    OYUN DURUMU
@@ -2155,9 +2155,9 @@ setTimeout(() => {
   genelSkorTablosunuDinle();
 
   /* Service Worker kayıt */
-  if ('serviceWorker' in navigator) {
+  /* if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').catch(console.error);
-  }
+  } */
 
   /* EmailJS yükle */
   emailjsYukle();
