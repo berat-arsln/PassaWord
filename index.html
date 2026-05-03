@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.0.5</title>
+<title>PassaWord -v2.0.6</title>
 
 <style>
 /* =======================================
@@ -1696,7 +1696,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.0.5</div>
+    <div class="versiyon-metin">PassaWord v2.0.6</div>
   </div>
 </div>
 
@@ -1795,7 +1795,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.0.5</div>
+    <div class="versiyon-metin">v2.0.6</div>
   </div>
 </div>
 
@@ -2417,14 +2417,22 @@ mevcut = Math.max(150, Math.min(kullanilabilir, 380));
 }
 
 /* Pencere boyutu değişince daireyi yeniden oluştur */
-window.addEventListener('resize', () => {
+function ekraniYenile() {
   if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
     daireOlustur();
     aktifTopuIsaretle(oyunDurumu.mevcutHarf);
   }
   bilgisayarModunuAyarla();
   yatayModKontrol();
-});
+}
+
+window.addEventListener('resize', ekraniYenile);
+
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', () => {
+    setTimeout(ekraniYenile, 100);
+  });
+}
 
 /* ========================================
    HARFİ AKTİF YAP
