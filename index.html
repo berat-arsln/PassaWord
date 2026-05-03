@@ -2692,7 +2692,11 @@ function cevapKontrol(verilen, dogru, alternatifler) {
 /* ========================================
    CEVAP ALANINI TEMİZLE
    ======================================== */
-document.getElementById('cevapGiris').addEventListener('focus', () => {
+function cevapAlaniniTemizle() {
+  document.getElementById('cevapGiris').value = '';
+  document.getElementById('bilgisayarCevapGiris').value = '';
+}
+   document.getElementById('cevapGiris').addEventListener('focus', () => {
   setTimeout(() => {
     daireOlustur();
     aktifTopuIsaretle(oyunDurumu.mevcutHarf);
