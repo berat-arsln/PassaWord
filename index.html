@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.0.4</title>
+<title>PassaWord -v2.0.5</title>
 
 <style>
 /* =======================================
@@ -1696,7 +1696,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.0.4</div>
+    <div class="versiyon-metin">PassaWord v2.0.5</div>
   </div>
 </div>
 
@@ -1762,7 +1762,7 @@ textarea.giris-alani {
             Doğru cevap: <b style="color:#00e676">+10 puan</b><br>
             Pas sonrası doğru: <b style="color:#00e676">+10 puan</b><br>
             Yanlış cevap: <b style="color:#ff1744">0 puan</b><br>
-            Kalan süre: <b style="color:#4fc3f7"> +1 puan/5 saniye/</b>
+            Kalan süre: <b style="color:#4fc3f7"> +1 puan/5 saniye</b>
           </p>
         </div>
       </div>
@@ -1795,7 +1795,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.0.4</div>
+    <div class="versiyon-metin">v2.0.5</div>
   </div>
 </div>
 
@@ -2392,7 +2392,7 @@ function daireOlustur() {
    ======================================== */
 function daireOlculeriniHesapla() {
   const vg = window.innerWidth;   /* Görüntü alanı genişliği */
-  const vy = window.innerHeight;  /* Görüntü alanı yüksekliği */
+  const vy = window.visualViewport ? window.visualViewport.height : window.innerHeight;  /* Görüntü alanı yüksekliği */
   const dokunmatik = window._dokunmatik;
   const bilgisayarMi = !dokunmatik && vg >= 1025;
 
