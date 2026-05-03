@@ -2197,6 +2197,15 @@ function bilgisayarModunuAyarla() {
   }
 }
 
+   /* Klavye açılınca daireyi yeniden boyutlandır */
+const baslangicYukseklik = window.innerHeight;
+window.visualViewport.addEventListener('resize', () => {
+  if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
+    daireOlustur();
+    aktifTopuIsaretle(oyunDurumu.mevcutHarf);
+  }
+});
+   
 /* ========================================
    YATAY MOD KONTROLÜ
    Telefon yatay çevrilince uyarı göster
