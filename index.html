@@ -2405,10 +2405,10 @@ mevcut = Math.max(180, Math.min(kullanilabilir, 380));
 window.addEventListener('resize', () => {
   if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
     daireOlustur();
-    /* Aktif harfi tekrar işaretle */
     aktifTopuIsaretle(oyunDurumu.mevcutHarf);
   }
   bilgisayarModunuAyarla();
+  yatayModKontrol();
 });
 
 /* ========================================
@@ -2695,6 +2695,12 @@ function cevapKontrol(verilen, dogru, alternatifler) {
 function cevapAlaniniTemizle() {
   document.getElementById('cevapGiris').value = '';
   document.getElementById('bilgisayarCevapGiris').value = '';
+  document.getElementById('cevapGiris').addEventListener('focus', () => {
+  setTimeout(() => {
+    daireOlustur();
+    aktifTopuIsaretle(oyunDurumu.mevcutHarf);
+  }, 400);
+});
 }
 
 /* ========================================
