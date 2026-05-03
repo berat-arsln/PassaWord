@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.0.3</title>
+<title>PassaWord -v2.0.4</title>
 
 <style>
 /* =======================================
@@ -265,6 +265,7 @@ html, body {
    ======================================== */
 #oyunEkrani {
   background: radial-gradient(ellipse at 50% 0%, #0d2050 0%, #0a0e1a 60%);
+   padding-bottom: 70px;
 }
 
 .header {
@@ -527,6 +528,11 @@ html, body {
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255,255,255,0.07);
   padding: 8px 8px 6px;
+  position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 50;
 }
 
 /* Cevap satırı: input + PAS butonu */
@@ -1690,7 +1696,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.0.3</div>
+    <div class="versiyon-metin">PassaWord v2.0.4</div>
   </div>
 </div>
 
@@ -1789,7 +1795,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.0.3</div>
+    <div class="versiyon-metin">v2.0.4</div>
   </div>
 </div>
 
@@ -2391,7 +2397,7 @@ function daireOlculeriniHesapla() {
     /* Mobil/Tablet: klavye var */
     /* Header ~55px, klavye+input alanı ~230px */
 const klavyeYuksekligi = window.screen.height - window.innerHeight;
-const kullanilabilir = Math.min(vg, vy - 55 - 90);
+const kullanilabilir = Math.min(vg, vy - 55 - 70);
 mevcut = Math.max(150, Math.min(kullanilabilir, 380));
   }
 
