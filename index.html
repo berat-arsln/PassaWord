@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.0.2</title>
+<title>PassaWord -v2.0.3</title>
 
 <style>
 /* =======================================
@@ -2695,8 +2695,7 @@ function cevapKontrol(verilen, dogru, alternatifler) {
 function cevapAlaniniTemizle() {
   document.getElementById('cevapGiris').value = '';
   document.getElementById('bilgisayarCevapGiris').value = '';
-}
-   document.getElementById('cevapGiris').addEventListener('focus', () => {
+  document.getElementById('cevapGiris').addEventListener('focus', () => {
   setTimeout(() => {
     daireOlustur();
     aktifTopuIsaretle(oyunDurumu.mevcutHarf);
