@@ -1690,7 +1690,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.0.2</div>
+    <div class="versiyon-metin">PassaWord v2.0.3</div>
   </div>
 </div>
 
@@ -1789,7 +1789,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.0.2</div>
+    <div class="versiyon-metin">v2.0.3</div>
   </div>
 </div>
 
@@ -2391,8 +2391,8 @@ function daireOlculeriniHesapla() {
     /* Mobil/Tablet: klavye var */
     /* Header ~55px, klavye+input alanı ~230px */
 const klavyeYuksekligi = window.screen.height - window.innerHeight;
-const kullanilabilir = Math.min(vg, vy - 55 - 120);
-mevcut = Math.max(180, Math.min(kullanilabilir, 380));
+const kullanilabilir = Math.min(vg, vy - 55 - 90);
+mevcut = Math.max(150, Math.min(kullanilabilir, 380));
   }
 
   /* Top boyutu: daire boyutuna göre orantılı */
@@ -2692,14 +2692,17 @@ function cevapKontrol(verilen, dogru, alternatifler) {
 /* ========================================
    CEVAP ALANINI TEMİZLE
    ======================================== */
-function cevapAlaniniTemizle() {
-  document.getElementById('cevapGiris').value = '';
-  document.getElementById('bilgisayarCevapGiris').value = '';
-  document.getElementById('cevapGiris').addEventListener('focus', () => {
+document.getElementById('cevapGiris').addEventListener('focus', () => {
   setTimeout(() => {
     daireOlustur();
     aktifTopuIsaretle(oyunDurumu.mevcutHarf);
-  }, 400);
+  }, 500);
+});
+document.getElementById('cevapGiris').addEventListener('blur', () => {
+  setTimeout(() => {
+    daireOlustur();
+    aktifTopuIsaretle(oyunDurumu.mevcutHarf);
+  }, 300);
 });
 }
 
