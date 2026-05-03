@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.0.7</title>
+<title>PassaWord -v2.0.8</title>
 
 <style>
 /* =======================================
@@ -1571,6 +1571,7 @@ textarea.giris-alani {
   autocapitalize="none"
   spellcheck="false"
   inputmode="text"
+  readonly
 >
       <button id="pasButon" onclick="pasCek()">PAS</button>
     </div>
@@ -1697,7 +1698,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.0.6</div>
+    <div class="versiyon-metin">PassaWord v2.0.8</div>
   </div>
 </div>
 
@@ -1796,7 +1797,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.0.6</div>
+    <div class="versiyon-metin">v2.0.8</div>
   </div>
 </div>
 
@@ -2213,7 +2214,7 @@ window.visualViewport.addEventListener('resize', () => {
 function yatayModKontrol() {
   const dokunmatik = window._dokunmatik;
   const yatay = window.innerWidth > window.innerHeight;
-  const kucukEkran = window.innerHeight < 500;
+  const kucukEkran = window.innerHeight < 400;
 
   /* Sadece dokunmatik cihazlarda yatay mod uyarısı göster */
   if (dokunmatik && yatay && kucukEkran) {
@@ -2725,6 +2726,9 @@ function cevapKontrol(verilen, dogru, alternatifler) {
 function cevapAlaniniTemizle() {
   document.getElementById('cevapGiris').value = '';
   document.getElementById('bilgisayarCevapGiris').value = '';
+  document.getElementById('cevapGiris').addEventListener('click', function() {
+  this.removeAttribute('readonly');
+});
   document.getElementById('cevapGiris').addEventListener('focus', () => {
   setTimeout(() => {
     daireOlustur();
