@@ -3086,9 +3086,6 @@ document.addEventListener('keydown', (e) => {
   } else {
     /* Mobilde fiziksel klavye desteği (isteğe bağlı) */
     if (e.key === 'Enter') { cevapVer(); return; }
-    if (e.key === 'Backspace') { tusaBasildi('SİL'); e.preventDefault(); return; }
-    if (e.key === ' ') { tusaBasildi(' '); e.preventDefault(); return; }
-    if (e.key.length === 1) tusaBasildi(e.key.toUpperCase());
   }
 });
 
