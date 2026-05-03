@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.0.0</title>
+<title>PassaWord -v2.0.1</title>
 
 <style>
 /* =======================================
@@ -1561,7 +1561,9 @@ textarea.giris-alani {
   placeholder="Cevabınızı yazın..."
   autocomplete="off"
   autocorrect="off"
-  autocapitalize="off"
+  autocapitalize="none"
+  spellcheck="false"
+  inputmode="text"
 >
       <button id="pasButon" onclick="pasCek()">PAS</button>
     </div>
@@ -1688,7 +1690,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.0.0</div>
+    <div class="versiyon-metin">PassaWord v2.0.1</div>
   </div>
 </div>
 
@@ -1787,7 +1789,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.0.0</div>
+    <div class="versiyon-metin">v2.0.1</div>
   </div>
 </div>
 
@@ -2393,8 +2395,9 @@ function daireOlculeriniHesapla() {
   } else {
     /* Mobil/Tablet: klavye var */
     /* Header ~55px, klavye+input alanı ~230px */
-    const kullanilabilir = Math.min(vg, vy - 55 - 235);
-    mevcut = Math.max(240, Math.min(kullanilabilir, 420));
+const klavyeYuksekligi = window.screen.height - window.innerHeight;
+const kullanilabilir = Math.min(vg, vy - 55 - 120);
+mevcut = Math.max(180, Math.min(kullanilabilir, 380));
   }
 
   /* Top boyutu: daire boyutuna göre orantılı */
