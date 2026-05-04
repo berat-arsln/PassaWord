@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.1.0</title>
+<title>PassaWord -v2.1.1</title>
 
 <style>
 /* =======================================
-   GENEL SIFERLAMA VE TEMEL DEĞİŞKENLER
+   GENEL SIFIRLAMA VE TEMEL DEĞİŞKENLER
    Tüm elemanlarda tutarlı stil için
    ======================================== */
 *, *::before, *::after {
@@ -1572,7 +1572,6 @@ textarea.giris-alani {
   autocapitalize="none"
   spellcheck="false"
   inputmode="text"
-  readonly
 >
       <button id="pasButon" onmousedown="event.preventDefault()" onclick="pasCek()">PAS</button>
     </div>
@@ -1699,7 +1698,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.1.0</div>
+    <div class="versiyon-metin">PassaWord v2.1.1</div>
   </div>
 </div>
 
@@ -1798,7 +1797,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.1.0</div>
+    <div class="versiyon-metin">v2.1.1</div>
   </div>
 </div>
 
@@ -2727,10 +2726,6 @@ function cevapKontrol(verilen, dogru, alternatifler) {
 function cevapAlaniniTemizle() {
   document.getElementById('cevapGiris').value = '';
   document.getElementById('bilgisayarCevapGiris').value = '';
-  document.getElementById('cevapGiris').addEventListener('touchstart', function() {
-  this.removeAttribute('readonly');
-  this.focus();
-});
   document.getElementById('cevapGiris').addEventListener('focus', () => {
   setTimeout(() => {
     daireOlustur();
@@ -3087,7 +3082,8 @@ document.addEventListener('keydown', (e) => {
     }
   } else {
     /* Mobilde fiziksel klavye desteği (isteğe bağlı) */
-    if (e.key === 'Enter') { cevapVer(); return; }
+    if (e.key === 'Enter') { e.preventDefault(); cevapVer(); return; }
+    e.preventDefault();
   }
 });
 
