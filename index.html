@@ -2727,8 +2727,9 @@ function cevapKontrol(verilen, dogru, alternatifler) {
 function cevapAlaniniTemizle() {
   document.getElementById('cevapGiris').value = '';
   document.getElementById('bilgisayarCevapGiris').value = '';
-  document.getElementById('cevapGiris').addEventListener('click', function() {
+  document.getElementById('cevapGiris').addEventListener('touchstart', function() {
   this.removeAttribute('readonly');
+  this.focus();
 });
   document.getElementById('cevapGiris').addEventListener('focus', () => {
   setTimeout(() => {
