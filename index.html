@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.0.8</title>
+<title>PassaWord -v2.1.0</title>
 
 <style>
 /* =======================================
@@ -1573,7 +1573,7 @@ textarea.giris-alani {
   inputmode="text"
   readonly
 >
-      <button id="pasButon" onclick="pasCek()">PAS</button>
+      <button id="pasButon" onmousedown="event.preventDefault()" onclick="pasCek()">PAS</button>
     </div>
   </div>
 
@@ -1698,7 +1698,7 @@ textarea.giris-alani {
       </div>
     </div>
 
-    <div class="versiyon-metin">PassaWord v2.0.8</div>
+    <div class="versiyon-metin">PassaWord v2.1.0</div>
   </div>
 </div>
 
@@ -1797,7 +1797,7 @@ textarea.giris-alani {
         </div>
       </div>
     </div>
-    <div class="versiyon-metin">v2.0.8</div>
+    <div class="versiyon-metin">v2.1.0</div>
   </div>
 </div>
 
@@ -2537,7 +2537,7 @@ window.cevapVer = function() {
     ? document.getElementById('bilgisayarCevapGiris').value.trim()
     : document.getElementById('cevapGiris').value.trim();
 
-  if (!ham) return;
+  if (!ham) { pasCek(); return; }
 
   const harf = oyunDurumu.mevcutHarf;
   const soruVerisi = oyunDurumu.secilenSorular[harf];
