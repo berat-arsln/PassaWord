@@ -107,20 +107,20 @@ html, body {
 /* ========================================================================= */
 .canli-istatistik {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Sağ/sol yerine tam ortaya hizalar */
   align-items: center;
+  gap: 20px; /* Puan ile Doğru/Yanlış arasına boşluk koyar */
   width: 100%;
-  padding: 8px 24px;
-  font-size: 16px;
+  padding: 4px 10px;
+  font-size: 15px;
   font-weight: 800;
   transition: all 0.3s ease;
   z-index: 20;
 }
-/* Klavye kapalıyken header altında ortada durur */
 .canli-istatistik.normal {
-  margin-bottom: -10px;
+  margin-top: -5px; /* Başlığa daha yakın olması için */
+  margin-bottom: 5px;
 }
-/* Klavye açıldığında giriş kutusunun hemen üstüne geçer */
 .canli-istatistik.klavye-acik {
   padding: 4px 12px;
   margin-bottom: 4px;
@@ -178,14 +178,13 @@ html, body {
 .tus-sil { max-width: none; flex: 1.8; background: linear-gradient(145deg, #ffd740, #ffb74d); color: #000; }
 
 /* --------- BİLGİSAYAR CEVAP ALANI --------- */
-#bilgisayarCevapAlani { width: 100%; flex-shrink: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.07); padding: 12px 16px; display: none; }
-.bilgisayar-cevap-satiri { display: flex; gap: 10px; max-width: 700px; margin: 0 auto; }
-#bilgisayarCevapGiris { flex: 1; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 17px; font-weight: 600; padding: 0 16px; height: 50px; letter-spacing: 0.5px; outline: none; transition: border-color 0.2s; }
+#bilgisayarCevapAlani { width: 100%; flex-shrink: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.07); padding: 16px 20px; display: none; }
+.bilgisayar-cevap-satiri { display: flex; gap: 12px; max-width: 800px; margin: 0 auto; }
+#bilgisayarCevapGiris { flex: 1; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 20px; font-weight: 600; padding: 0 20px; height: 60px; letter-spacing: 0.5px; outline: none; transition: border-color 0.2s; }
 #bilgisayarCevapGiris:focus { border-color: rgba(79,195,247,0.5); }
 #bilgisayarCevapGiris::placeholder { color: #445; font-weight: 400; }
-#bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 15px; font-weight: 900; width: 80px; height: 50px; cursor: pointer; letter-spacing: 1px; box-shadow: 0 3px 10px rgba(245,166,35,0.35); transition: transform 0.1s; flex-shrink: 0; }
+#bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 18px; font-weight: 900; width: 100px; height: 60px; cursor: pointer; letter-spacing: 1px; box-shadow: 0 3px 10px rgba(245,166,35,0.35); transition: transform 0.1s; flex-shrink: 0; }
 #bilgisayarPasButon:active { transform: scale(0.95); }
-.bilgisayar-ipucu { text-align: center; color: var(--metin-soluk); font-size: 12px; margin-top: 8px; letter-spacing: 0.5px; }
 
 /* --------- MODAL SİSTEMİ --------- */
 .modal-arkaplan { position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 100; display: flex; align-items: flex-end; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
@@ -426,6 +425,16 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
 
 <!-- Sonuç Ekranı -->
 <div class="ekran gizli" id="sonucEkrani">
+    <!-- SONUÇ EKRANINA EKLENEN HEADER BAŞLANGIÇ -->
+  <div class="header">
+    <button class="header-buton" onclick="modalAc('ayarlarModal')" aria-label="Ayarlar">⚙️</button>
+    <span class="header-baslik">PassaWord</span>
+    <div class="header-sag">
+      <button class="header-buton" onclick="modalAc('skorModal')" aria-label="Skor Tablosu">🏆</button>
+      <button class="header-buton" onclick="modalAc('bilgiModal')" aria-label="Nasıl Oynanır">ℹ️</button>
+    </div>
+  </div>
+  <!-- SONUÇ EKRANINA EKLENEN HEADER BİTİŞ -->
   <div class="sonuc-header">
     <h2>🎉 OYUN BİTTİ</h2>
     <div class="sonuc-puan" id="finalPuan">0</div>
@@ -651,11 +660,11 @@ function bilgisayarModunuAyarla() {
   }
 }
 
-// Yatay Uyarı
+// Yatay Uyarı (Klavye açılmasından etkilenmemesi için screen değerleri kullanıldı)
 function yatayModKontrol() {
-  const yatay = window.innerWidth > window.innerHeight;
-  const kucukEkran = window.innerHeight < 400;
-  if (window._dokunmatik && yatay && kucukEkran) {
+  // window.innerHeight yerine cihazın fiziksel ekran oranına (screen) bakıyoruz
+  const yatay = window.screen.width > window.screen.height;
+  if (window._dokunmatik && yatay) {
     document.getElementById('yatayUyari').classList.remove('gizli');
   } else {
     document.getElementById('yatayUyari').classList.add('gizli');
@@ -785,8 +794,8 @@ function daireOlculeriniHesapla() {
 
   let mevcut;
   if (bilgisayarMi) {
-    const kullanilabilir = Math.min(vg * 0.85, vy - 55 - 90);
-    mevcut = Math.max(300, Math.min(kullanilabilir, 600));
+    const kullanilabilir = Math.min(vg * 0.90, vy - 150); // Daha fazla alan kullan
+    mevcut = Math.max(400, Math.min(kullanilabilir, 750)); // Daireyi daha büyük yap
   } else {
     // Mobil/Tablet için klavye açıkken de dinamik hesaplama
     // Header ~55px, İstatistik ~30px, Input ~50px
