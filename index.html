@@ -107,21 +107,23 @@ html, body {
 /* ========================================================================= */
 .canli-istatistik {
   display: flex;
-  justify-content: center; /* Sağ/sol yerine tam ortaya hizalar */
-  align-items: center;
-  gap: 20px; /* Puan ile Doğru/Yanlış arasına boşluk koyar */
   width: 100%;
-  padding: 4px 10px;
-  font-size: 15px;
-  font-weight: 800;
   transition: all 0.3s ease;
   z-index: 20;
 }
+/* Klavye KAPALIYKEN: Ortada ve yan yana */
 .canli-istatistik.normal {
-  margin-top: -5px; /* Başlığa daha yakın olması için */
+  justify-content: center;
+  gap: 20px;
+  padding: 4px 10px;
+  font-size: 15px;
+  margin-top: -5px;
   margin-bottom: 5px;
 }
+/* Klavye AÇIKKEN: Puan solda, Doğru/Yanlış/Pas sağda (Ayrılır) */
 .canli-istatistik.klavye-acik {
+  justify-content: space-between;
+  gap: 0;
   padding: 4px 12px;
   margin-bottom: 4px;
   font-size: 14px;
@@ -699,12 +701,18 @@ function klavyeDurumunuGuncelle() {
   }
 }
 
-// Visual Viewport dinleyicisi: Hem daireyi yeniden boyutlandırır hem istatistiği taşır
+// Visual Viewport dinleyicisi (Klavye animasyonu bitimini yakalamak için gecikmeli)
 if (window.visualViewport) {
+  let klavyeZamanlayici;
   window.visualViewport.addEventListener('resize', () => {
     if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
-      ekraniYenile();
-      klavyeDurumunuGuncelle();
+      // Klavye kayma animasyonu sırasında anlık güncellemeleri temizle
+      clearTimeout(klavyeZamanlayici);
+      // Animasyon bittiği an (yaklaşık 100ms sonra) boyutları tam olarak oturt
+      klavyeZamanlayici = setTimeout(() => {
+        ekraniYenile();
+        klavyeDurumunuGuncelle();
+      }, 100);
     }
   });
 }
@@ -789,19 +797,22 @@ window.oyunuBaslat = async function() {
 // Daire Boyutlandırma ve Oluşturma
 function daireOlculeriniHesapla() {
   const vg = window.innerWidth;
+  // Güvenilir yükseklik: visualViewport varsa onu kullan, yoksa innerHeight
   const vy = window.visualViewport ? window.visualViewport.height : window.innerHeight;
   const bilgisayarMi = !window._dokunmatik && vg >= 1025;
 
+  // Klavyenin açık olup olmadığını net olarak tespit et
+  const klavyeAcikMi = window.visualViewport && (window.screen.height - window.visualViewport.height > 150);
+
   let mevcut;
   if (bilgisayarMi) {
-    const kullanilabilir = Math.min(vg * 0.90, vy - 150); // Daha fazla alan kullan
-    mevcut = Math.max(400, Math.min(kullanilabilir, 750)); // Daireyi daha büyük yap
+    const kullanilabilir = Math.min(vg * 0.90, vy - 150);
+    mevcut = Math.max(400, Math.min(kullanilabilir, 750));
   } else {
-    // Mobil/Tablet için klavye açıkken de dinamik hesaplama
-    // Header ~55px, İstatistik ~30px, Input ~50px
-    const kullanilabilir = Math.min(vg, vy - 55 - 80);
-    mevcut = Math.max(200, Math.min(kullanilabilir, 450));
-  }
+    // Mobil/Tablet için dinamik hesaplama
+    // Klavye açıkken alttaki giriş alanına çarpmaması için güvenlik boşluğunu artırıyoruz (110px)
+    let altBosluk = klavyeAcikMi ? 110 : 70; 
+    const kullanilabilir = Math.min(vg, vy - 55 - altBosluk);
 
   const topBoyutu = Math.round(mevcut / 12);
   return { konteynirBoyutu: mevcut, topBoyutu };
