@@ -3,16 +3,19 @@
 <head>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- ========================================================================= -->
+<!-- EKRAN GÖRÜNÜMÜ AYARLARI (Klavye sorunlarını çözmek için dvh kullanıyoruz) -->
+<!-- ========================================================================= -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-content">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>PassaWord -v2.1.1</title>
+<title>PassaWord -v2.5.0</title>
 
 <style>
-/* =======================================
-   GENEL SIFIRLAMA VE TEMEL DEĞİŞKENLER
-   Tüm elemanlarda tutarlı stil için
-   ======================================== */
+/* ========================================================================= */
+/* CSS TASARIM KODLARI (BAŞLANGIÇ)                                           */
+/* ========================================================================= */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +23,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Renk paleti ve genel değişkenler */
 :root {
   --arka-plan-ana: #0a0e1a;
   --arka-plan-ikincil: #0d1530;
@@ -36,10 +38,11 @@
   --baslik-renk: #4fc3f7;
 }
 
-/* Sayfa ve body temel ayarları */
 html, body {
   width: 100%;
-  height: 100%;
+  /* vh yerine dvh (dynamic viewport height) kullanıyoruz. 
+     Böylece klavye açıldığında ekran kendini buna göre daraltır */
+  height: 100dvh; 
   background: var(--arka-plan-ana);
   color: var(--metin-beyaz);
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -49,11 +52,6 @@ html, body {
   touch-action: manipulation;
 }
 
-/* ========================================
-   EKRAN YÖNETİMİ
-   Tüm ekranlar (başlangıç, oyun, sonuç)
-   için temel yapı
-   ======================================== */
 .ekran {
   position: fixed;
   inset: 0;
@@ -61,1435 +59,291 @@ html, body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  height: 100dvh;
 }
 
-/* Gizli ekranlar */
 .gizli { display: none !important; }
 
-/* ========================================
-   YÜKLEME EKRANI
-   Oyun başlarken sorular yüklenirken
-   gösterilen ekran
-   ======================================== */
-#yuklemEkrani {
-  background: radial-gradient(ellipse at 50% 30%, #0d2050 0%, #0a0e1a 70%);
-  justify-content: center;
+/* --------- YÜKLEME EKRANI --------- */
+#yuklemEkrani { background: radial-gradient(ellipse at 50% 30%, #0d2050 0%, #0a0e1a 70%); justify-content: center; align-items: center; gap: 24px; z-index: 999; }
+.yukleme-logo { font-size: clamp(24px, 7vw, 36px); font-weight: 900; letter-spacing: 4px; background: linear-gradient(135deg, #fff 20%, #a8d4ff 60%, #4fc3f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 16px #4fc3f766); }
+.yukleme-cember { width: 48px; height: 48px; border: 4px solid rgba(255,255,255,0.1); border-top-color: #4fc3f7; border-radius: 50%; animation: donYukleme 0.8s linear infinite; }
+@keyframes donYukleme { to { transform: rotate(360deg); } }
+.yukleme-metin { color: var(--metin-soluk); font-size: 14px; letter-spacing: 1px; }
+
+/* --------- YATAY UYARI --------- */
+#yatayUyari { background: var(--arka-plan-ana); justify-content: center; align-items: center; gap: 20px; z-index: 998; text-align: center; padding: 32px; }
+.yatay-ikon { font-size: 64px; animation: donYatay 2s ease-in-out infinite; }
+@keyframes donYatay { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-90deg); } }
+.yatay-metin { font-size: 18px; font-weight: 700; color: #fff; }
+.yatay-alt { font-size: 14px; color: var(--metin-soluk); }
+
+/* --------- BAŞLANGIÇ EKRANI --------- */
+#baslangicEkrani { background: radial-gradient(ellipse at 50% 30%, #0d2050 0%, #0a0e1a 70%); justify-content: center; gap: 32px; }
+.baslangic-logo { text-align: center; }
+.baslangic-logo h1 { font-size: clamp(28px, 8vw, 42px); font-weight: 900; letter-spacing: 4px; background: linear-gradient(135deg, #fff 20%, #a8d4ff 60%, #4fc3f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 16px #4fc3f766); }
+.baslangic-logo p { color: var(--metin-soluk); font-size: 14px; margin-top: 8px; letter-spacing: 1px; }
+.profil-kutusu { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 24px 20px; width: 88%; max-width: 360px; text-align: center; }
+.profil-kutusu h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.profil-kutusu p { font-size: 13px; color: var(--metin-soluk); margin-bottom: 20px; }
+.giris-alani { width: 100%; background: #111827; border: 1.5px solid rgba(255,255,255,0.15); border-radius: 12px; color: #fff; font-size: 16px; font-weight: 600; padding: 13px 16px; outline: none; margin-bottom: 14px; text-align: center; transition: border-color 0.2s; }
+.giris-alani:focus { border-color: #4fc3f7; }
+.ana-buton { background: linear-gradient(145deg, #1976d2, #0d47a1); border: none; border-radius: 14px; color: #fff; font-size: 16px; font-weight: 800; letter-spacing: 1px; padding: 14px 32px; cursor: pointer; width: 100%; box-shadow: 0 4px 20px rgba(25,118,210,0.4); transition: transform 0.1s, opacity 0.1s; }
+.ana-buton:active { transform: scale(0.96); opacity: 0.9; }
+#hazirEkrani { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 88%; max-width: 360px; }
+.hosgeldin-metin { color: var(--metin-soluk); font-size: 15px; text-align: center; }
+.hosgeldin-metin span { color: #fff; font-weight: 700; }
+
+/* --------- OYUN EKRANI & HEADER --------- */
+#oyunEkrani { background: radial-gradient(ellipse at 50% 0%, #0d2050 0%, #0a0e1a 60%); display: flex; flex-direction: column; }
+.header { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 10px 14px 6px; flex-shrink: 0; z-index: 10; position: relative; }
+.header-baslik { font-size: clamp(16px, 4.5vw, 22px); font-weight: 900; letter-spacing: 3px; background: linear-gradient(135deg, #fff 30%, #a8d4ff 70%, #4fc3f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 8px #4fc3f755); }
+.header-buton { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; transition: background 0.2s, transform 0.1s; flex-shrink: 0; }
+.header-buton:active { transform: scale(0.92); background: rgba(255,255,255,0.15); }
+.header-sag { display: flex; gap: 8px; }
+
+/* ========================================================================= */
+/* OYUN İÇİ CANLI İSTATİSTİKLER (STİL)                                       */
+/* ========================================================================= */
+.canli-istatistik {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  z-index: 999;
-}
-
-.yukleme-logo {
-  font-size: clamp(24px, 7vw, 36px);
-  font-weight: 900;
-  letter-spacing: 4px;
-  background: linear-gradient(135deg, #fff 20%, #a8d4ff 60%, #4fc3f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 16px #4fc3f766);
-}
-
-/* Dönen yükleme animasyonu */
-.yukleme-cember {
-  width: 48px;
-  height: 48px;
-  border: 4px solid rgba(255,255,255,0.1);
-  border-top-color: #4fc3f7;
-  border-radius: 50%;
-  animation: donYukleme 0.8s linear infinite;
-}
-
-@keyframes donYukleme {
-  to { transform: rotate(360deg); }
-}
-
-.yukleme-metin {
-  color: var(--metin-soluk);
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-/* ========================================
-   TELEFON YATAY MOD UYARISI
-   Telefon yatay çevrildiğinde gösterilir
-   ======================================== */
-#yatayUyari {
-  background: var(--arka-plan-ana);
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  z-index: 998;
-  text-align: center;
-  padding: 32px;
-}
-
-.yatay-ikon {
-  font-size: 64px;
-  animation: donYatay 2s ease-in-out infinite;
-}
-
-@keyframes donYatay {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-90deg); }
-}
-
-.yatay-metin {
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.yatay-alt {
-  font-size: 14px;
-  color: var(--metin-soluk);
-}
-
-/* ========================================
-   BAŞLANGIÇ EKRANI
-   Profil oluşturma ve oyuna başlama
-   ======================================== */
-#baslangicEkrani {
-  background: radial-gradient(ellipse at 50% 30%, #0d2050 0%, #0a0e1a 70%);
-  justify-content: center;
-  gap: 32px;
-}
-
-/* Logo ve başlık */
-.baslangic-logo {
-  text-align: center;
-}
-
-.baslangic-logo h1 {
-  font-size: clamp(28px, 8vw, 42px);
-  font-weight: 900;
-  letter-spacing: 4px;
-  background: linear-gradient(135deg, #fff 20%, #a8d4ff 60%, #4fc3f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 16px #4fc3f766);
-}
-
-.baslangic-logo p {
-  color: var(--metin-soluk);
-  font-size: 14px;
-  margin-top: 8px;
-  letter-spacing: 1px;
-}
-
-/* Profil oluşturma kutusu */
-.profil-kutusu {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 20px;
-  padding: 24px 20px;
-  width: 88%;
-  max-width: 360px;
-  text-align: center;
-}
-
-.profil-kutusu h3 {
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.profil-kutusu p {
-  font-size: 13px;
-  color: var(--metin-soluk);
-  margin-bottom: 20px;
-}
-
-/* Metin giriş alanı */
-.giris-alani {
   width: 100%;
-  background: #111827;
-  border: 1.5px solid rgba(255,255,255,0.15);
-  border-radius: 12px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 13px 16px;
-  outline: none;
-  margin-bottom: 14px;
-  text-align: center;
-  transition: border-color 0.2s;
-}
-
-.giris-alani:focus {
-  border-color: #4fc3f7;
-}
-
-/* Ana buton (oyna, devam et) */
-.ana-buton {
-  background: linear-gradient(145deg, #1976d2, #0d47a1);
-  border: none;
-  border-radius: 14px;
-  color: #fff;
+  padding: 8px 24px;
   font-size: 16px;
   font-weight: 800;
-  letter-spacing: 1px;
-  padding: 14px 32px;
-  cursor: pointer;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(25,118,210,0.4);
-  transition: transform 0.1s, opacity 0.1s;
+  transition: all 0.3s ease;
+  z-index: 20;
 }
-
-.ana-buton:active { transform: scale(0.96); opacity: 0.9; }
-
-/* Hazır ekranı (profil oluşturulmuşsa) */
-#hazirEkrani {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  width: 88%;
-  max-width: 360px;
+/* Klavye kapalıyken header altında ortada durur */
+.canli-istatistik.normal {
+  margin-bottom: -10px;
 }
-
-.hosgeldin-metin {
-  color: var(--metin-soluk);
-  font-size: 15px;
-  text-align: center;
+/* Klavye açıldığında giriş kutusunun hemen üstüne geçer */
+.canli-istatistik.klavye-acik {
+  padding: 4px 12px;
+  margin-bottom: 4px;
+  font-size: 14px;
 }
+.ist-sol { color: #4fc3f7; display: flex; gap: 6px; align-items: center;}
+.ist-sag { display: flex; gap: 14px; align-items: center;}
+.ist-dogru { color: var(--dogru-renk); }
+.ist-yanlis { color: var(--yanlis-renk); }
+.ist-pas { color: var(--pas-renk); }
 
-.hosgeldin-metin span {
-  color: #fff;
-  font-weight: 700;
-}
+/* --------- OYUN ALANI & DAİRE --------- */
+.oyun-alani { flex: 1; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 12px; position: relative; overflow: hidden; }
+#daireKonteyneri { position: relative; flex-shrink: 0; }
 
-/* ========================================
-   OYUN EKRANI - HEADER
-   Üst bar: ayarlar, başlık, skor, info
-   ======================================== */
-#oyunEkrani {
-  background: radial-gradient(ellipse at 50% 0%, #0d2050 0%, #0a0e1a 60%);
-   padding-bottom: 70px;
-}
+.harf-topu { position: absolute; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; transform: translate(-50%, -50%); transition: filter 0.3s; cursor: default; background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 55%), radial-gradient(circle at 65% 70%, rgba(0,0,0,0.25) 0%, transparent 50%), linear-gradient(145deg, #7ecf3a 0%, #4a9e1a 40%, #2d6b0a 100%); box-shadow: 0 0 0 2.5px rgba(255,255,255,0.7), 0 0 0 4px rgba(80,160,20,0.6), 0 4px 12px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.4); color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.6); }
+.harf-topu.durum-varsayilan { background: rgba(255,255,255,0.06); box-shadow: 0 0 0 1.5px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.3); color: rgba(255,255,255,0.5); }
+.harf-topu.durum-dogru { background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 55%), radial-gradient(circle at 65% 70%, rgba(0,0,0,0.25) 0%, transparent 50%), linear-gradient(145deg, #69f542 0%, #2db80a 40%, #166b00 100%); box-shadow: 0 0 0 2.5px rgba(255,255,255,0.8), 0 0 0 4px rgba(0,220,80,0.7), 0 4px 14px rgba(0,200,60,0.5), inset 0 1px 2px rgba(255,255,255,0.4); }
+.harf-topu.durum-yanlis { background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.5) 0%, transparent 55%), radial-gradient(circle at 65% 70%, rgba(0,0,0,0.3) 0%, transparent 50%), linear-gradient(145deg, #ff6b6b 0%, #d62828 40%, #7a0000 100%); box-shadow: 0 0 0 2.5px rgba(255,255,255,0.7), 0 0 0 4px rgba(220,0,0,0.6), 0 4px 14px rgba(200,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.3); }
+.harf-topu.durum-pas { background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 55%), radial-gradient(circle at 65% 70%, rgba(0,0,0,0.25) 0%, transparent 50%), linear-gradient(145deg, #ffe066 0%, #f5c200 40%, #a07c00 100%); box-shadow: 0 0 0 2.5px rgba(255,255,255,0.8), 0 0 0 4px rgba(220,180,0,0.7), 0 4px 14px rgba(200,160,0,0.5), inset 0 1px 2px rgba(255,255,255,0.4); }
+.harf-topu.durum-aktif { background: transparent !important; box-shadow: 0 0 0 2.5px rgba(255,255,255,0.9), 0 0 0 4px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.3) !important; animation: topYanipSon 0.75s ease-in-out infinite alternate; }
 
-.header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px 6px;
-  flex-shrink: 0;
-  z-index: 10;
-  position: relative;
-}
-
-/* Header başlık yazısı */
-.header-baslik {
-  font-size: clamp(16px, 4.5vw, 22px);
-  font-weight: 900;
-  letter-spacing: 3px;
-  background: linear-gradient(135deg, #fff 30%, #a8d4ff 70%, #4fc3f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 8px #4fc3f755);
-}
-
-/* Header butonları (ayarlar, skor, info) */
-.header-buton {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 10px;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background 0.2s, transform 0.1s;
-  flex-shrink: 0;
-}
-
-.header-buton:active {
-  transform: scale(0.92);
-  background: rgba(255,255,255,0.15);
-}
-
-.header-sag {
-  display: flex;
-  gap: 8px;
-}
-
-/* ========================================
-   OYUN ALANI
-   Daire ve merkez gösterge
-   ======================================== */
-.oyun-alani {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 12px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Daire konteyneri - JS tarafından boyutlandırılır */
-#daireKonteyneri {
-  position: relative;
-  flex-shrink: 0;
-}
-
-/* ========================================
-   HARF TOPLARI
-   Daire üzerindeki her harf için stil
-   ======================================== */
-.harf-topu {
-  position: absolute;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  transform: translate(-50%, -50%);
-  transition: filter 0.3s;
-  cursor: default;
-
-  /* TV programındaki gibi: dış halka + iç gradient + parlama */
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 55%),
-    radial-gradient(circle at 65% 70%, rgba(0,0,0,0.25) 0%, transparent 50%),
-    linear-gradient(145deg, #7ecf3a 0%, #4a9e1a 40%, #2d6b0a 100%);
-  box-shadow:
-    0 0 0 2.5px rgba(255,255,255,0.7),
-    0 0 0 4px rgba(80,160,20,0.6),
-    0 4px 12px rgba(0,0,0,0.5),
-    inset 0 1px 2px rgba(255,255,255,0.4);
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-}
-
-/* Varsayılan durum - yeşil/altın */
-.harf-topu.durum-varsayilan {
-  background: rgba(255,255,255,0.06);
-  box-shadow:
-    0 0 0 1.5px rgba(255,255,255,0.25),
-    0 2px 8px rgba(0,0,0,0.3);
-  color: rgba(255,255,255,0.5);
-}
-
-/* Doğru cevap durumu - parlak yeşil */
-.harf-topu.durum-dogru {
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 55%),
-    radial-gradient(circle at 65% 70%, rgba(0,0,0,0.25) 0%, transparent 50%),
-    linear-gradient(145deg, #69f542 0%, #2db80a 40%, #166b00 100%);
-  box-shadow:
-    0 0 0 2.5px rgba(255,255,255,0.8),
-    0 0 0 4px rgba(0,220,80,0.7),
-    0 4px 14px rgba(0,200,60,0.5),
-    inset 0 1px 2px rgba(255,255,255,0.4);
-}
-
-/* Yanlış cevap durumu - kırmızı */
-.harf-topu.durum-yanlis {
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.5) 0%, transparent 55%),
-    radial-gradient(circle at 65% 70%, rgba(0,0,0,0.3) 0%, transparent 50%),
-    linear-gradient(145deg, #ff6b6b 0%, #d62828 40%, #7a0000 100%);
-  box-shadow:
-    0 0 0 2.5px rgba(255,255,255,0.7),
-    0 0 0 4px rgba(220,0,0,0.6),
-    0 4px 14px rgba(200,0,0,0.5),
-    inset 0 1px 2px rgba(255,255,255,0.3);
-}
-
-/* Pas durumu - sarı/altın */
-.harf-topu.durum-pas {
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 55%),
-    radial-gradient(circle at 65% 70%, rgba(0,0,0,0.25) 0%, transparent 50%),
-    linear-gradient(145deg, #ffe066 0%, #f5c200 40%, #a07c00 100%);
-  box-shadow:
-    0 0 0 2.5px rgba(255,255,255,0.8),
-    0 0 0 4px rgba(220,180,0,0.7),
-    0 4px 14px rgba(200,160,0,0.5),
-    inset 0 1px 2px rgba(255,255,255,0.4);
-}
-
-/* Aktif durum - şeffaf, yanıp söner */
-.harf-topu.durum-aktif {
-  background: transparent !important;
-  box-shadow:
-    0 0 0 2.5px rgba(255,255,255,0.9),
-    0 0 0 4px rgba(255,255,255,0.4),
-    0 0 20px rgba(255,255,255,0.3) !important;
-  animation: topYanipSon 0.75s ease-in-out infinite alternate;
-}
-
-/* Aktif top yanıp sönme animasyonu */
 @keyframes topYanipSon {
-  0% {
-    opacity: 1;
-    box-shadow:
-      0 0 0 2.5px rgba(255,255,255,0.9),
-      0 0 0 4px rgba(255,255,255,0.5),
-      0 0 20px rgba(255,255,255,0.4);
-  }
-  100% {
-    opacity: 0.2;
-    box-shadow:
-      0 0 0 2px rgba(255,255,255,0.3),
-      0 0 0 3px rgba(255,255,255,0.15),
-      0 0 8px rgba(255,255,255,0.1);
-  }
+  0% { opacity: 1; box-shadow: 0 0 0 2.5px rgba(255,255,255,0.9), 0 0 0 4px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.4); }
+  100% { opacity: 0.2; box-shadow: 0 0 0 2px rgba(255,255,255,0.3), 0 0 0 3px rgba(255,255,255,0.15), 0 0 8px rgba(255,255,255,0.1); }
 }
+@keyframes sagdanSola { from { clip-path: inset(0 100% 0 0); opacity: 0.3; } to { clip-path: inset(0 0% 0 0); opacity: 1; } }
+.harf-topu.gecis-animasyon { animation: sagdanSola 0.35s ease-out forwards, topYanipSon 0.75s 0.35s ease-in-out infinite alternate; }
 
-/* Yeni aktif harfe geçiş animasyonu - sağdan sola süpürme */
-@keyframes sagdanSola {
-  from {
-    clip-path: inset(0 100% 0 0);
-    opacity: 0.3;
-  }
-  to {
-    clip-path: inset(0 0% 0 0);
-    opacity: 1;
-  }
-}
+.merkez-gosterge { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; pointer-events: none; width: 58%; gap: 8px; }
+#surGosterge { font-size: clamp(26px, 7vw, 40px); font-weight: 900; color: var(--zamanlayici-renk); font-family: 'Courier New', monospace; font-variant-numeric: tabular-nums; letter-spacing: 3px; line-height: 1; text-shadow: 0 0 20px rgba(255,50,50,0.5); }
+#surGosterge.kritik { animation: surYanipSon 0.5s ease-in-out infinite alternate; }
+@keyframes surYanipSon { 0% { opacity: 1; } 100% { opacity: 0.3; } }
+#soruMetni { font-size: clamp(12px, 3.5vw, 16px); color: rgba(255,255,255,0.88); line-height: 1.45; font-weight: 500; text-align: center; }
+#soruHarfi { font-weight: 900; color: #f5c842; }
 
-.harf-topu.gecis-animasyon {
-  animation: sagdanSola 0.35s ease-out forwards,
-             topYanipSon 0.75s 0.35s ease-in-out infinite alternate;
-}
-
-/* ========================================
-   MERKEZDEKİ GÖSTERGE
-   Süre ve soru metni
-   ======================================== */
-.merkez-gosterge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  pointer-events: none;
-  width: 58%;
-  gap: 8px;
-}
-
-/* Süre göstergesi */
-#surGosterge {
-  font-size: clamp(26px, 7vw, 40px);
-  font-weight: 900;
-  color: var(--zamanlayici-renk);
-  font-family: 'Courier New', monospace;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 3px;
-  line-height: 1;
-  text-shadow: 0 0 20px rgba(255,50,50,0.5);
-}
-
-/* Son 30 saniyede süre yanıp söner */
-#surGosterge.kritik {
-  animation: surYanipSon 0.5s ease-in-out infinite alternate;
-}
-
-@keyframes surYanipSon {
-  0% { opacity: 1; }
-  100% { opacity: 0.3; }
-}
-
-/* Soru metni */
-#soruMetni {
-  font-size: clamp(12px, 3.5vw, 16px);
-  color: rgba(255,255,255,0.88);
-  line-height: 1.45;
-  font-weight: 500;
-  text-align: center;
-}
-
-/* Soru metnindeki aktif harf vurgusu */
-#soruHarfi {
-  font-weight: 900;
-  color: #f5c842;
-}
-
-/* ========================================
-   GİRİŞ VE KLAVYE ALANI
-   Cevap kutucuğu ve özel klavye
-   (Sadece mobil/tablet'te görünür)
-   ======================================== */
-.giris-klavye-alani {
-  width: 100%;
-  flex-shrink: 0;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding: 8px 8px 6px;
-  position: fixed;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 50;
-}
-
-/* Cevap satırı: input + PAS butonu */
-.cevap-satiri {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-/* Cevap giriş kutusu */
-#cevapGiris {
-  flex: 1;
-  background: #111827;
-  border: 1.5px solid rgba(255,255,255,0.1);
-  border-radius: 10px;
-  color: #fff;
-  font-size: clamp(14px, 3.8vw, 17px);
-  font-weight: 600;
-  padding: 0 14px;
-  height: 46px;
-  letter-spacing: 0.5px;
-  outline: none;
-  /* Cihaz klavyesini engelle, sadece özel klavye kullanılsın */
-  caret-color: #fff;
-}
-
-#cevapGiris::placeholder {
-  color: #334;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-/* Bilgisayarda cevap kutusu - cihaz klavyesi açılabilir */
-#cevapGiris.bilgisayar-modu {
-  caret-color: #fff;
-  cursor: text;
-}
-
-/* PAS butonu */
-#pasButon {
-  background: linear-gradient(145deg, #ffd740, #f5a623);
-  border: none;
-  border-radius: 10px;
-  color: #000;
-  font-size: clamp(13px, 3.5vw, 15px);
-  font-weight: 900;
-  width: 68px;
-  height: 46px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  box-shadow: 0 3px 10px rgba(245,166,35,0.35);
-  transition: transform 0.1s;
-  flex-shrink: 0;
-}
-
+/* --------- GİRİŞ ALANI (KLAVYE ALANI) --------- */
+.giris-klavye-alani { width: 100%; flex-shrink: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.07); padding: 8px 8px 6px; display: flex; flex-direction: column;}
+.cevap-satiri { display: flex; gap: 8px; margin-bottom: 8px; width: 100%;}
+#cevapGiris { flex: 1; background: #111827; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff; font-size: clamp(14px, 3.8vw, 17px); font-weight: 600; padding: 0 14px; height: 46px; letter-spacing: 0.5px; outline: none; caret-color: #fff; }
+#cevapGiris::placeholder { color: #334; font-weight: 400; font-size: 13px; }
+#cevapGiris.bilgisayar-modu { caret-color: #fff; cursor: text; }
+#pasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 10px; color: #000; font-size: clamp(13px, 3.5vw, 15px); font-weight: 900; width: 68px; height: 46px; cursor: pointer; letter-spacing: 1px; box-shadow: 0 3px 10px rgba(245,166,35,0.35); transition: transform 0.1s; flex-shrink: 0; }
 #pasButon:active { transform: scale(0.93); }
 
-/* ========================================
-   ÖZEL TÜRKÇE KLAVYE
-   Sadece mobil ve tablette görünür
-   ======================================== */
-#ozelKlavye {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  align-items: center;
-  width: 100%;
-}
-
-/* Klavye satırı */
-.klavye-satiri {
-  display: flex;
-  gap: 4px;
-  justify-content: center;
-  width: 100%;
-}
-
-/* Klavye tuşu */
-.klavye-tusu {
-  background: #252a3a;
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 10px;
-  color: #fff;
-  font-size: clamp(11px, 3vw, 14px);
-  font-weight: 700;
-  height: 44px;
-  flex: 1;
-  max-width: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.1s, transform 0.08s;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.07);
-  touch-action: manipulation;
-}
-
-.klavye-tusu:active {
-  background: #3a4060;
-  transform: scale(0.92);
-}
-
-/* Geniş tuşlar (boşluk, enter, silme) */
+/* --------- ÖZEL TÜRKÇE KLAVYE --------- */
+#ozelKlavye { display: flex; flex-direction: column; gap: 7px; align-items: center; width: 100%; }
+.klavye-satiri { display: flex; gap: 4px; justify-content: center; width: 100%; }
+.klavye-tusu { background: #252a3a; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; color: #fff; font-size: clamp(11px, 3vw, 14px); font-weight: 700; height: 44px; flex: 1; max-width: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.1s, transform 0.08s; box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.07); touch-action: manipulation; }
+.klavye-tusu:active { background: #3a4060; transform: scale(0.92); }
 .tus-genis { max-width: none; flex: 2; }
-
-/* Boşluk tuşu */
-.tus-bosluk {
-  max-width: none;
-  flex: 5;
-}
-
-/* Enter tuşu - mavi */
-.tus-enter {
-  background: linear-gradient(145deg, #1976d2, #0d47a1);
-  max-width: none;
-  flex: 2.5;
-  box-shadow: 0 2px 8px rgba(25,118,210,0.35), inset 0 1px 0 rgba(255,255,255,0.12);
-}
-
+.tus-bosluk { max-width: none; flex: 5; }
+.tus-enter { background: linear-gradient(145deg, #1976d2, #0d47a1); max-width: none; flex: 2.5; box-shadow: 0 2px 8px rgba(25,118,210,0.35), inset 0 1px 0 rgba(255,255,255,0.12); }
 .tus-enter:active { background: #1565c0; }
+.tus-sil { max-width: none; flex: 1.8; background: linear-gradient(145deg, #ffd740, #ffb74d); color: #000; }
 
-/* Silme tuşu */
-.tus-sil { 
-  max-width: none; 
-  flex: 1.8;
-  background: linear-gradient(145deg, #ffd740, #ffb74d);
-  color: #000;
-}
-
-/* ========================================
-   BİLGİSAYAR MODU - CEVAP ALANI
-   Klavye olmadan sadece input ve PAS
-   ======================================== */
-#bilgisayarCevapAlani {
-  width: 100%;
-  flex-shrink: 0;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding: 12px 16px;
-  display: none; /* JS tarafından gösterilir */
-}
-
-.bilgisayar-cevap-satiri {
-  display: flex;
-  gap: 10px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#bilgisayarCevapGiris {
-  flex: 1;
-  background: #111827;
-  border: 1.5px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 0 16px;
-  height: 50px;
-  letter-spacing: 0.5px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-#bilgisayarCevapGiris:focus {
-  border-color: rgba(79,195,247,0.5);
-}
-
-#bilgisayarCevapGiris::placeholder {
-  color: #445;
-  font-weight: 400;
-}
-
-#bilgisayarPasButon {
-  background: linear-gradient(145deg, #ffd740, #f5a623);
-  border: none;
-  border-radius: 12px;
-  color: #000;
-  font-size: 15px;
-  font-weight: 900;
-  width: 80px;
-  height: 50px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  box-shadow: 0 3px 10px rgba(245,166,35,0.35);
-  transition: transform 0.1s;
-  flex-shrink: 0;
-}
-
+/* --------- BİLGİSAYAR CEVAP ALANI --------- */
+#bilgisayarCevapAlani { width: 100%; flex-shrink: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.07); padding: 12px 16px; display: none; }
+.bilgisayar-cevap-satiri { display: flex; gap: 10px; max-width: 700px; margin: 0 auto; }
+#bilgisayarCevapGiris { flex: 1; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 17px; font-weight: 600; padding: 0 16px; height: 50px; letter-spacing: 0.5px; outline: none; transition: border-color 0.2s; }
+#bilgisayarCevapGiris:focus { border-color: rgba(79,195,247,0.5); }
+#bilgisayarCevapGiris::placeholder { color: #445; font-weight: 400; }
+#bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 15px; font-weight: 900; width: 80px; height: 50px; cursor: pointer; letter-spacing: 1px; box-shadow: 0 3px 10px rgba(245,166,35,0.35); transition: transform 0.1s; flex-shrink: 0; }
 #bilgisayarPasButon:active { transform: scale(0.95); }
+.bilgisayar-ipucu { text-align: center; color: var(--metin-soluk); font-size: 12px; margin-top: 8px; letter-spacing: 0.5px; }
 
-.bilgisayar-ipucu {
-  text-align: center;
-  color: var(--metin-soluk);
-  font-size: 12px;
-  margin-top: 8px;
-  letter-spacing: 0.5px;
-}
+/* --------- MODAL SİSTEMİ --------- */
+.modal-arkaplan { position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 100; display: flex; align-items: flex-end; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.modal-arkaplan.acik { opacity: 1; pointer-events: all; }
+.modal-sayfa { background: linear-gradient(170deg, #111827 0%, #0d1530 100%); border: 1px solid rgba(255,255,255,0.09); border-radius: 20px 20px 0 0; width: 100%; max-width: 560px; max-height: 88dvh; overflow-y: auto; padding: 0 0 24px; transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.32,0.72,0,1); position: relative; }
+.modal-arkaplan.acik .modal-sayfa { transform: translateY(0); }
+.modal-cubuk { width: 40px; height: 4px; background: rgba(255,255,255,0.18); border-radius: 2px; margin: 12px auto 18px; }
+.modal-kapat { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; color: rgba(255,255,255,0.6); font-size: 16px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5;}
+.modal-baslik { font-size: 18px; font-weight: 800; text-align: center; margin-bottom: 20px; letter-spacing: 1px; color: #fff; }
 
-/* ========================================
-   MODAL SİSTEMİ
-   Ayarlar, skor tablosu, info modalları
-   ======================================== */
-.modal-arkaplan {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  backdrop-filter: blur(5px);
-  z-index: 100;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-
-.modal-arkaplan.acik {
-  opacity: 1;
-  pointer-events: all;
-}
-
-/* Modal alt sayfa - aşağıdan yukarı gelir */
-.modal-sayfa {
-  background: linear-gradient(170deg, #111827 0%, #0d1530 100%);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  max-width: 560px;
-  max-height: 88vh;
-  overflow-y: auto;
-  padding: 0 0 24px;
-  transform: translateY(100%);
-  transition: transform 0.35s cubic-bezier(0.32,0.72,0,1);
-}
-
-.modal-arkaplan.acik .modal-sayfa {
-  transform: translateY(0);
-}
-
-/* Modal tutma çubuğu */
-.modal-cubuk {
-  width: 40px;
-  height: 4px;
-  background: rgba(255,255,255,0.18);
-  border-radius: 2px;
-  margin: 12px auto 18px;
-}
-   .modal-kapat {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 32px;
-  height: 32px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 50%;
-  color: rgba(255,255,255,0.6);
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.modal-sayfa {
-  position: relative;
-}
-
-/* Modal başlığı */
-.modal-baslik {
-  font-size: 18px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-/* ========================================
-   AYARLAR MODALİ İÇERİĞİ
-   ======================================== */
-.ayar-bolum {
-  padding: 0 16px;
-  margin-bottom: 18px;
-}
-
-/* Bölüm etiketi */
-.ayar-etiket {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--metin-soluk);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  padding: 0 4px;
-}
-
-/* Ayar kartı */
-.ayar-kart {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-/* Ayar satırı */
-.ayar-satir {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
-  cursor: pointer;
-  transition: background 0.2s;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
+.ayar-bolum { padding: 0 16px; margin-bottom: 18px; }
+.ayar-etiket { font-size: 11px; font-weight: 700; color: var(--metin-soluk); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; padding: 0 4px; }
+.ayar-kart { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; }
+.ayar-satir { display: flex; align-items: center; gap: 12px; padding: 14px 16px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .ayar-satir:last-child { border-bottom: none; }
 .ayar-satir:active { background: rgba(255,255,255,0.07); }
-
-.ayar-ikon {
-  font-size: 22px;
-  width: 32px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
+.ayar-ikon { font-size: 22px; width: 32px; text-align: center; flex-shrink: 0; }
 .ayar-icerik { flex: 1; }
+.ayar-baslik { font-size: 15px; font-weight: 600; color: #fff; }
+.ayar-alt { font-size: 12px; color: var(--metin-soluk); margin-top: 2px; }
+.ayar-ok { color: var(--metin-soluk); font-size: 18px; }
+.rozet-aktif { background: #00e676; color: #000; font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 20px; }
+.versiyon-metin { text-align: center; font-size: 12px; color: rgba(255,255,255,0.2); padding: 10px; margin-top: 4px; }
 
-.ayar-baslik {
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.ayar-alt {
-  font-size: 12px;
-  color: var(--metin-soluk);
-  margin-top: 2px;
-}
-
-.ayar-ok {
-  color: var(--metin-soluk);
-  font-size: 18px;
-}
-
-/* Aktif profil rozeti */
-.rozet-aktif {
-  background: #00e676;
-  color: #000;
-  font-size: 10px;
-  font-weight: 800;
-  padding: 3px 9px;
-  border-radius: 20px;
-}
-
-/* Versiyon yazısı */
-.versiyon-metin {
-  text-align: center;
-  font-size: 12px;
-  color: rgba(255,255,255,0.2);
-  padding: 10px;
-  margin-top: 4px;
-}
-
-/* ========================================
-   SEKMELER (Skor tablosu - Genel/Kişisel)
-   ======================================== */
-.sekmeler {
-  display: flex;
-  margin: 0 16px 16px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 10px;
-  padding: 3px;
-}
-
-.sekme {
-  flex: 1;
-  height: 36px;
-  border-radius: 8px;
-  border: none;
-  background: transparent;
-  color: var(--metin-soluk);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.sekme.aktif {
-  background: rgba(255,255,255,0.11);
-  color: #fff;
-}
-
-/* ========================================
-   SKOR TABLOSU SATIRLARI
-   ======================================== */
-.skor-liste {
-  padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.skor-satir {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
-  padding: 11px 14px;
-}
-
-/* Sıralama numarası */
-.skor-sira {
-  font-size: 18px;
-  font-weight: 900;
-  width: 28px;
-  text-align: center;
-  color: var(--metin-soluk);
-}
-
-/* İlk 3 için madalya renkleri */
+/* --------- SKOR TABLOSU (TOP 20 İÇİN GÜNCELLENDİ) --------- */
+.sekmeler { display: flex; margin: 0 16px 16px; background: rgba(255,255,255,0.05); border-radius: 10px; padding: 3px; }
+.sekme { flex: 1; height: 36px; border-radius: 8px; border: none; background: transparent; color: var(--metin-soluk); font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.sekme.aktif { background: rgba(255,255,255,0.11); color: #fff; }
+.skor-liste { padding: 0 16px; display: flex; flex-direction: column; gap: 8px; }
+.skor-satir { display: flex; flex-direction: column; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 11px 14px; }
+.skor-satir-ust { display: flex; align-items: center; gap: 12px; width: 100%;}
+.skor-satir-alt { display: flex; gap: 10px; margin-top: 6px; padding-left: 40px; font-size: 11px; font-weight: bold;}
+.skor-sira { font-size: 18px; font-weight: 900; width: 28px; text-align: center; color: var(--metin-soluk); }
 .skor-satir:nth-child(1) .skor-sira { color: #ffd700; }
 .skor-satir:nth-child(2) .skor-sira { color: #c0c0c0; }
 .skor-satir:nth-child(3) .skor-sira { color: #cd7f32; }
-
 .skor-isim { flex: 1; font-weight: 700; font-size: 15px; }
+.skor-puan { font-weight: 900; font-size: 16px; color: #4fc3f7; }
 
-.skor-puan {
-  font-weight: 900;
-  font-size: 16px;
-  color: #4fc3f7;
-}
-
-/* ========================================
-   NASIL OYNANIR MODALİ
-   ======================================== */
+/* --------- NASIL OYNANIR & GERİ BİLDİRİM --------- */
 .bilgi-icerik { padding: 0 16px; }
-
-.bilgi-blok {
-  display: flex;
-  gap: 14px;
-  margin-bottom: 20px;
-  align-items: flex-start;
-}
-
-.bilgi-ikon {
-  font-size: 28px;
-  flex-shrink: 0;
-  width: 40px;
-  text-align: center;
-}
-
-.bilgi-metin h3 {
-  font-size: 14px;
-  font-weight: 800;
-  margin-bottom: 5px;
-  color: #fff;
-}
-
-.bilgi-metin p {
-  font-size: 13px;
-  color: var(--metin-soluk);
-  line-height: 1.55;
-}
-
-/* Renk göstergeleri */
-.renk-liste {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 6px;
-}
-
-.renk-satir {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--metin-soluk);
-}
-
-.renk-nokta {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ========================================
-   GERİ BİLDİRİM MODALİ
-   ======================================== */
+.bilgi-blok { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+.bilgi-ikon { font-size: 28px; flex-shrink: 0; width: 40px; text-align: center; }
+.bilgi-metin h3 { font-size: 14px; font-weight: 800; margin-bottom: 5px; color: #fff; }
+.bilgi-metin p { font-size: 13px; color: var(--metin-soluk); line-height: 1.55; }
+.renk-liste { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.renk-satir { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--metin-soluk); }
+.renk-nokta { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; }
 .alt-modal { padding: 0 16px 8px; }
-
 .form-grup { margin-bottom: 16px; }
-
-.form-etiket {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--metin-soluk);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  display: block;
-}
-
-/* Seçim çipleri (Öneri/Şikayet vb.) */
-.secim-grubu {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.secim-cipi {
-  background: rgba(255,255,255,0.05);
-  border: 1.5px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  color: #bbb;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 9px 14px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.secim-cipi.secili {
-  background: rgba(25,118,210,0.22);
-  border-color: #1976d2;
-  color: #fff;
-}
-
-/* Çok satırlı metin girişi */
-textarea.giris-alani {
-  height: 110px;
-  resize: none;
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 13px 16px;
-  font-weight: 400;
-}
-
-/* Gönder butonu */
-.gonder-buton {
-  background: linear-gradient(145deg, #00c853, #007b33);
-  border: none;
-  border-radius: 12px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 800;
-  padding: 14px;
-  width: 100%;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: transform 0.1s, opacity 0.1s;
-}
-
+.form-etiket { font-size: 11px; font-weight: 700; color: var(--metin-soluk); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: block; }
+.secim-grubu { display: flex; gap: 8px; flex-wrap: wrap; }
+.secim-cipi { background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.1); border-radius: 8px; color: #bbb; font-size: 13px; font-weight: 600; padding: 9px 14px; cursor: pointer; transition: all 0.2s; }
+.secim-cipi.secili { background: rgba(25,118,210,0.22); border-color: #1976d2; color: #fff; }
+textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size: 14px; line-height: 1.5; padding: 13px 16px; font-weight: 400; }
+.gonder-buton { background: linear-gradient(145deg, #00c853, #007b33); border: none; border-radius: 12px; color: #fff; font-size: 15px; font-weight: 800; padding: 14px; width: 100%; cursor: pointer; letter-spacing: 1px; transition: transform 0.1s, opacity 0.1s; }
 .gonder-buton:active { transform: scale(0.97); opacity: 0.9; }
 
-/* ========================================
-   PROFİL LİSTESİ
-   Kayıtlı profillerin listesi
-   ======================================== */
-.profil-liste {
-  padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.profil-satir {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 12px;
-  padding: 12px 14px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
+.profil-liste { padding: 0 16px; display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.profil-satir { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 12px 14px; cursor: pointer; transition: background 0.2s; }
 .profil-satir:active { background: rgba(255,255,255,0.09); }
-
-.profil-satir.aktif-profil {
-  border-color: rgba(0,230,118,0.3);
-  background: rgba(0,230,118,0.05);
-}
-
+.profil-satir.aktif-profil { border-color: rgba(0,230,118,0.3); background: rgba(0,230,118,0.05); }
 .profil-adi { flex: 1; font-weight: 700; font-size: 15px; }
 .profil-skor { font-size: 13px; color: var(--metin-soluk); }
 
-/* ========================================
-   SONUÇ EKRANI
-   Oyun bittiğinde gösterilen ekran
-   ======================================== */
-#sonucEkrani {
-  background: radial-gradient(ellipse at 50% 20%, #0d2050 0%, #0a0e1a 80%);
-  overflow-y: auto;
-  justify-content: flex-start;
-  align-items: center;
-  padding-bottom: 32px;
-}
-
-/* Sonuç başlık alanı */
-.sonuc-header {
-  text-align: center;
-  padding: 28px 16px 16px;
-  width: 100%;
-}
-
-.sonuc-header h2 {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-/* Büyük puan göstergesi */
-.sonuc-puan {
-  font-size: 56px;
-  font-weight: 900;
-  color: #ffd600;
-  text-shadow: 0 0 24px rgba(255,214,0,0.45);
-  margin: 10px 0 4px;
-  line-height: 1;
-}
-
-.sonuc-puan-etiket {
-  color: var(--metin-soluk);
-  font-size: 13px;
-}
-
-/* İstatistik çipleri (doğru/yanlış/pas) */
-.sonuc-istatistik {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 14px;
-  flex-wrap: wrap;
-}
-
-.istat-cipi {
-  border-radius: 20px;
-  padding: 7px 16px;
-  font-size: 13px;
-  font-weight: 700;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.09);
-}
-
+/* --------- SONUÇ EKRANI --------- */
+#sonucEkrani { background: radial-gradient(ellipse at 50% 20%, #0d2050 0%, #0a0e1a 80%); overflow-y: auto; justify-content: flex-start; align-items: center; padding-bottom: 32px; }
+.sonuc-header { text-align: center; padding: 28px 16px 16px; width: 100%; }
+.sonuc-header h2 { font-size: 22px; font-weight: 900; letter-spacing: 2px; }
+.sonuc-puan { font-size: 56px; font-weight: 900; color: #ffd600; text-shadow: 0 0 24px rgba(255,214,0,0.45); margin: 10px 0 4px; line-height: 1; }
+.sonuc-puan-etiket { color: var(--metin-soluk); font-size: 13px; }
+.sonuc-istatistik { display: flex; gap: 10px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+.istat-cipi { border-radius: 20px; padding: 7px 16px; font-size: 13px; font-weight: 700; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.09); }
 .istat-cipi.dogru { border-color: rgba(0,230,118,0.4); color: #00e676; }
 .istat-cipi.yanlis { border-color: rgba(255,23,68,0.4); color: #ff1744; }
 .istat-cipi.pas { border-color: rgba(255,214,0,0.4); color: #ffd600; }
 .istat-cipi.bonus { border-color: rgba(79,195,247,0.4); color: #4fc3f7; }
-
-/* Sonuç listesi - her harfin cevabı */
-.sonuc-liste {
-  width: 100%;
-  padding: 0 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.sonuc-kalem {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
-  padding: 11px 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/* Sonuçtaki harf rozeti */
-.sonuc-harf {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
+.sonuc-liste { width: 100%; padding: 0 14px; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.sonuc-kalem { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 11px 14px; display: flex; align-items: center; gap: 12px; }
+.sonuc-harf { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
 .sonuc-bilgi { flex: 1; min-width: 0; }
 .sonuc-soru { font-size: 12px; color: var(--metin-soluk); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sonuc-verilen-cevap { font-size: 13px; font-weight: 700; margin-top: 2px; }
 .sonuc-dogru-cevap { font-size: 11px; color: var(--metin-soluk); margin-top: 2px; }
-  
-   .hata-bildir-buton {
-  background: rgba(255,23,68,0.12);
-  border: 1px solid rgba(255,23,68,0.25);
-  border-radius: 6px;
-  color: #ff6b6b;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 8px;
-  cursor: pointer;
-  margin-top: 4px;
-  display: inline-block;
-  letter-spacing: 0.5px;
-}
-
-/* Sonuç durumlarına göre renkler */
+.hata-bildir-buton { background: rgba(255,23,68,0.12); border: 1px solid rgba(255,23,68,0.25); border-radius: 6px; color: #ff6b6b; font-size: 10px; font-weight: 700; padding: 3px 8px; cursor: pointer; margin-top: 4px; display: inline-block; letter-spacing: 0.5px; }
 .sonuc-kalem.s-dogru .sonuc-harf { background: rgba(0,230,118,0.15); color: #00e676; }
 .sonuc-kalem.s-dogru .sonuc-verilen-cevap { color: #00e676; }
 .sonuc-kalem.s-yanlis .sonuc-harf { background: rgba(255,23,68,0.15); color: #ff1744; }
 .sonuc-kalem.s-yanlis .sonuc-verilen-cevap { color: #ff1744; }
 .sonuc-kalem.s-pas .sonuc-harf { background: rgba(255,214,0,0.15); color: #ffd600; }
 .sonuc-kalem.s-pas .sonuc-verilen-cevap { color: #ffd600; }
-
-/* Sonuç ekranı butonları */
-.sonuc-butonlar {
-  display: flex;
-  gap: 12px;
-  padding: 20px 14px 0;
-  width: 100%;
-}
-
-.sonuc-butonlar button {
-  flex: 1;
-  height: 50px;
-  border-radius: 13px;
-  border: none;
-  font-size: 15px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: transform 0.1s, opacity 0.1s;
-  letter-spacing: 0.5px;
-}
-
+.sonuc-butonlar { display: flex; gap: 12px; padding: 20px 14px 0; width: 100%; }
+.sonuc-butonlar button { flex: 1; height: 50px; border-radius: 13px; border: none; font-size: 15px; font-weight: 800; cursor: pointer; transition: transform 0.1s, opacity 0.1s; letter-spacing: 0.5px; }
 .sonuc-butonlar button:active { transform: scale(0.96); opacity: 0.9; }
+#tekrarOynaButon { background: linear-gradient(145deg, #1976d2, #0d47a1); color: #fff; box-shadow: 0 4px 16px rgba(25,118,210,0.35); }
+#anaSayfaButon { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12) !important; color: #fff; }
 
-#tekrarOynaButon {
-  background: linear-gradient(145deg, #1976d2, #0d47a1);
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(25,118,210,0.35);
-}
-
-#anaSayfaButon {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12) !important;
-  color: #fff;
-}
-
-/* ========================================
-   ADMİN PANELİ
-   Şifreli, soru önerilerini yönetir
-   ======================================== */
-#adminModal .modal-sayfa {
-  max-height: 92vh;
-}
-
-.admin-oneri-kart {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 14px;
-  margin: 0 16px 10px;
-}
-
+/* --------- ADMİN PANELİ --------- */
+#adminModal .modal-sayfa { max-height: 92dvh; }
+.admin-oneri-kart { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px; margin: 0 16px 10px; }
 .admin-oneri-soru { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 6px; }
 .admin-oneri-cevap { font-size: 13px; color: #4fc3f7; margin-bottom: 4px; }
 .admin-oneri-meta { font-size: 11px; color: var(--metin-soluk); margin-bottom: 12px; }
-
 .admin-buton-grubu { display: flex; gap: 8px; }
+.admin-onayla { flex: 1; background: linear-gradient(145deg, #00c853, #007b33); border: none; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 700; padding: 9px; cursor: pointer; }
+.admin-reddet { flex: 1; background: rgba(255,23,68,0.2); border: 1px solid rgba(255,23,68,0.3); border-radius: 8px; color: #ff1744; font-size: 13px; font-weight: 700; padding: 9px; cursor: pointer; }
+.yedek-kod-kutu { background: #0a0e1a; border: 1.5px solid rgba(79,195,247,0.3); border-radius: 10px; padding: 14px; font-family: 'Courier New', monospace; font-size: 14px; color: #4fc3f7; text-align: center; letter-spacing: 2px; word-break: break-all; margin: 8px 0 16px; }
 
-.admin-onayla {
-  flex: 1;
-  background: linear-gradient(145deg, #00c853, #007b33);
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 9px;
-  cursor: pointer;
-}
-
-.admin-reddet {
-  flex: 1;
-  background: rgba(255,23,68,0.2);
-  border: 1px solid rgba(255,23,68,0.3);
-  border-radius: 8px;
-  color: #ff1744;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 9px;
-  cursor: pointer;
-}
-
-/* ========================================
-   YEDEKLEME KODU GÖRÜNÜMÜ
-   ======================================== */
-.yedek-kod-kutu {
-  background: #0a0e1a;
-  border: 1.5px solid rgba(79,195,247,0.3);
-  border-radius: 10px;
-  padding: 14px;
-  font-family: 'Courier New', monospace;
-  font-size: 14px;
-  color: #4fc3f7;
-  text-align: center;
-  letter-spacing: 2px;
-  word-break: break-all;
-  margin: 8px 0 16px;
-}
-
-/* ========================================
-   ONAY DİYALOĞU
-   Profil silme onayı vb.
-   ======================================== */
-.onay-diyalog {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s;
-}
-
-.onay-diyalog.acik {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.onay-kutu {
-  background: #111827;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
-  padding: 24px 20px;
-  max-width: 320px;
-  width: 100%;
-  text-align: center;
-}
-
+/* --------- ONAY DİYALOĞU & TOAST --------- */
+.onay-diyalog { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+.onay-diyalog.acik { opacity: 1; pointer-events: all; }
+.onay-kutu { background: #111827; border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; padding: 24px 20px; max-width: 320px; width: 100%; text-align: center; }
 .onay-baslik { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
 .onay-mesaj { font-size: 14px; color: var(--metin-soluk); margin-bottom: 20px; line-height: 1.5; }
-
 .onay-butonlar { display: flex; gap: 10px; }
+.onay-evet { flex: 1; background: #ff1744; border: none; border-radius: 10px; color: #fff; font-size: 14px; font-weight: 700; padding: 12px; cursor: pointer; }
+.onay-hayir { flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; color: #fff; font-size: 14px; font-weight: 700; padding: 12px; cursor: pointer; }
+#toastBildirim { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(100px); background: rgba(30,40,60,0.97); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 12px 20px; font-size: 14px; font-weight: 600; color: #fff; z-index: 300; transition: transform 0.3s cubic-bezier(0.32,0.72,0,1); white-space: nowrap; pointer-events: none; }
+#toastBildirim.goster { transform: translateX(-50%) translateY(0); }
 
-.onay-evet {
-  flex: 1;
-  background: #ff1744;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 12px;
-  cursor: pointer;
-}
-
-.onay-hayir {
-  flex: 1;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 10px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 12px;
-  cursor: pointer;
-}
-
-/* ========================================
-   BİLDİRİM TOAST
-   Kısa süreli bildirim mesajları
-   ======================================== */
-#toastBildirim {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px);
-  background: rgba(30,40,60,0.97);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  z-index: 300;
-  transition: transform 0.3s cubic-bezier(0.32,0.72,0,1);
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-#toastBildirim.goster {
-  transform: translateX(-50%) translateY(0);
-}
-
-/* ========================================
-   KAYDIRMA ÇUBUĞU STİLİ
-   ======================================== */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 2px; }
 
-/* ========================================
-   BİLGİSAYAR İÇİN MEDYA SORGULARI
-   1025px ve üzeri ekranlar
-   ======================================== */
 @media (min-width: 1025px) {
-  /* Mobil klavye gizlenir */
   .giris-klavye-alani { display: none !important; }
-  /* Bilgisayar cevap alanı gösterilir */
   #bilgisayarCevapAlani { display: block !important; }
 }
-
-/* ========================================
-   TABLET İÇİN MEDYA SORGULARI
-   ======================================== */
 @media (min-width: 769px) and (max-width: 1024px) {
   .klavye-tusu { height: 42px; max-width: 40px; }
 }
+
+/* ========================================================================= */
+/* CSS TASARIM KODLARI (BİTİŞ)                                               */
+/* ========================================================================= */
 </style>
 </head>
 <body>
 
-<!-- ========================================
-     YÜKLEME EKRANI
-     Sorular yüklenirken gösterilir
-     ======================================== -->
+<!-- ========================================================================= -->
+<!-- HTML İSKELETİ (BAŞLANGIÇ)                                               -->
+<!-- ========================================================================= -->
+
+<!-- Yükleme Ekranı -->
 <div class="ekran" id="yuklemEkrani">
   <div class="yukleme-logo">PassaWord</div>
   <div class="yukleme-cember"></div>
   <div class="yukleme-metin" id="yuklemeMesaj">Sorular yükleniyor...</div>
 </div>
 
-<!-- ========================================
-     TELEFON YATAY MOD UYARISI
-     ======================================== -->
+<!-- Telefon Yatay Mod Uyarısı -->
 <div class="ekran gizli" id="yatayUyari">
   <div class="yatay-ikon">📱</div>
   <div class="yatay-metin">Lütfen telefonu dik tutun</div>
   <div class="yatay-alt">Oyun dikey modda oynanmak üzere tasarlandı</div>
 </div>
 
-<!-- ========================================
-     BAŞLANGIÇ EKRANI
-     Profil oluşturma ve oyuna başlama
-     ======================================== -->
+<!-- Başlangıç Ekranı -->
 <div class="ekran gizli" id="baslangicEkrani">
   <div class="header" style="position:absolute;top:0;left:0;right:0;">
     <button class="header-buton" onclick="modalAc('ayarlarModal')" aria-label="Ayarlar">⚙️</button>
@@ -1503,40 +357,20 @@ textarea.giris-alani {
     <h1>PassaWord</h1>
     <p>Türkçe Alfabe Bilgi Yarışması</p>
   </div>
-
-  <!-- Profil oluşturma formu (ilk kez açılıyorsa) -->
   <div class="profil-kutusu" id="profilOlusturKutu">
     <h3>👤 Profil Oluştur</h3>
     <p>Skor tablonuzda görünecek isminizi girin</p>
-    <input
-      type="text"
-      class="giris-alani"
-      id="profilIsimGiris"
-      placeholder="Adınız"
-      maxlength="20"
-      autocomplete="off"
-    >
+    <input type="text" class="giris-alani" id="profilIsimGiris" placeholder="Adınız" maxlength="20" autocomplete="off">
     <button class="ana-buton" onclick="profilOlustur()">Devam Et →</button>
   </div>
-
-  <!-- Profil varsa gösterilen hazır ekranı -->
   <div id="hazirEkrani" style="display:none;">
-    <div class="hosgeldin-metin">
-      Hoş geldin, <span id="hosgeldinIsim"></span>!
-    </div>
-    <button class="ana-buton" onclick="oyunuBaslat()" style="margin-top:8px;">
-      ▶ OYNA
-    </button>
+    <div class="hosgeldin-metin">Hoş geldin, <span id="hosgeldinIsim"></span>!</div>
+    <button class="ana-buton" onclick="oyunuBaslat()" style="margin-top:8px;">▶ OYNA</button>
   </div>
 </div>
 
-<!-- ========================================
-     OYUN EKRANI
-     Ana oyun alanı
-     ======================================== -->
+<!-- Ana Oyun Ekranı -->
 <div class="ekran gizli" id="oyunEkrani">
-
-  <!-- Üst bar -->
   <div class="header">
     <button class="header-buton" onclick="modalAc('ayarlarModal')" aria-label="Ayarlar">⚙️</button>
     <span class="header-baslik">PassaWord</span>
@@ -1546,56 +380,51 @@ textarea.giris-alani {
     </div>
   </div>
 
-  <!-- Oyun alanı: daire + merkez gösterge -->
   <div class="oyun-alani">
+    <!-- ========================================== -->
+    <!-- OYUN İÇİ CANLI İSTATİSTİKLER (BAŞLANGIÇ)   -->
+    <!-- (Bu div, klavye açılınca Javascript ile aşağıya taşınır) -->
+    <!-- ========================================== -->
+    <div id="canliIstatistik" class="canli-istatistik normal">
+      <div class="ist-sol">🏆 <span id="canliPuan">0</span></div>
+      <div class="ist-sag">
+        <span class="ist-dogru">✅ <span id="canliDogru">0</span></span>
+        <span class="ist-yanlis">❌ <span id="canliYanlis">0</span></span>
+        <span class="ist-pas">⏭️ <span id="canliPas">0</span></span>
+      </div>
+    </div>
+    <!-- ========================================== -->
+    <!-- OYUN İÇİ CANLI İSTATİSTİKLER (BİTİŞ)       -->
+    <!-- ========================================== -->
+
     <div id="daireKonteyneri">
-      <!-- Harf topları JS tarafından eklenir -->
-      <!-- Merkez gösterge -->
+      <!-- Harf topları buraya gelir -->
       <div class="merkez-gosterge">
         <div id="surGosterge">06:00</div>
-        <div id="soruMetni">
-          <span id="soruHarfi">A</span>: Yükleniyor...
-        </div>
+        <div id="soruMetni"><span id="soruHarfi">A</span>: Yükleniyor...</div>
       </div>
     </div>
   </div>
 
-  <!-- Mobil/Tablet klavye alanı -->
-  <div class="giris-klavye-alani">
+  <!-- Mobil/Tablet Giriş ve Klavye -->
+  <div class="giris-klavye-alani" id="klavyeAlaniDiv">
     <div class="cevap-satiri">
-      <input
-  type="text"
-  id="cevapGiris"
-  placeholder="Cevabınızı yazın..."
-  autocomplete="off"
-  autocorrect="off"
-  autocapitalize="none"
-  spellcheck="false"
-  inputmode="text"
->
+      <input type="text" id="cevapGiris" placeholder="Cevabınızı yazın..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="text">
       <button id="pasButon" onmousedown="event.preventDefault()" onclick="pasCek()">PAS</button>
     </div>
   </div>
 
-  <!-- Bilgisayar cevap alanı (klavye yok) -->
+  <!-- Bilgisayar Cevap Alanı -->
   <div id="bilgisayarCevapAlani">
     <div class="bilgisayar-cevap-satiri">
-      <input
-        type="text"
-        id="bilgisayarCevapGiris"
-        placeholder="Cevabınızı yazın ve Enter'a basın..."
-        autocomplete="off"
-      >
+      <input type="text" id="bilgisayarCevapGiris" placeholder="Cevabınızı yazın ve Enter'a basın..." autocomplete="off">
       <button id="bilgisayarPasButon" onclick="pasCek()">PAS</button>
     </div>
     <div class="bilgisayar-ipucu">Enter ile cevapla • Boşluk ile pas geç</div>
   </div>
 </div>
 
-<!-- ========================================
-     SONUÇ EKRANI
-     Oyun bittiğinde gösterilir
-     ======================================== -->
+<!-- Sonuç Ekranı -->
 <div class="ekran gizli" id="sonucEkrani">
   <div class="sonuc-header">
     <h2>🎉 OYUN BİTTİ</h2>
@@ -1606,99 +435,51 @@ textarea.giris-alani {
       <div class="istat-cipi yanlis" id="istatYanlis">✗ 0 Yanlış</div>
       <div class="istat-cipi pas" id="istatPas">~ 0 Pas</div>
       <div class="istat-cipi bonus" id="istatBonus">⏱ +0 Bonus</div>
+      <div class="istat-cipi bonus gizli" id="istatKombo" style="border-color:#ba68c8; color:#ba68c8;">🔥 +0 Kombo</div>
     </div>
   </div>
-
   <div class="sonuc-liste" id="sonucListe"></div>
-
   <div class="sonuc-butonlar">
     <button id="tekrarOynaButon" onclick="oyunuBaslat()">🔄 Tekrar Oyna</button>
     <button id="anaSayfaButon" onclick="anaSayfayaGit()">🏠 Ana Sayfa</button>
   </div>
 </div>
 
-<!-- ========================================
-     MODALLAR
-     ======================================== -->
-
 <!-- Ayarlar Modali -->
 <div class="modal-arkaplan" id="ayarlarModal" onclick="disaTiklaKapat(event,'ayarlarModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
+    <button class="modal-kapat" onclick="modalKapat('ayarlarModal')">✕</button>
     <div class="modal-baslik">⚙️ AYARLAR</div>
-
-    <!-- Aktif profil bilgisi -->
     <div class="ayar-bolum">
       <div class="ayar-etiket">Aktif Profil</div>
       <div class="ayar-kart">
        <div class="ayar-satir" id="aktifProfilSatir">
-  <div class="ayar-ikon">👤</div>
-  <div class="ayar-icerik">
-    <div class="ayar-baslik" id="aktifProfilAdi">—</div>
-    <div class="ayar-alt">Şu an aktif profil • Silmek için basılı tut</div>
-  </div>
-  <span class="rozet-aktif">AKTİF</span>
-</div>
+          <div class="ayar-ikon">👤</div>
+          <div class="ayar-icerik">
+            <div class="ayar-baslik" id="aktifProfilAdi">—</div>
+            <div class="ayar-alt">Şu an aktif profil • Silmek için basılı tut</div>
+          </div>
+          <span class="rozet-aktif">AKTİF</span>
+        </div>
       </div>
     </div>
-
-    <!-- Profil yönetimi -->
     <div class="ayar-bolum">
       <div class="ayar-etiket">Profil Yönetimi</div>
       <div class="ayar-kart">
-        <div class="ayar-satir" onclick="modalAc('profilEkleModal')">
-          <div class="ayar-ikon">➕</div>
-          <div class="ayar-icerik">
-            <div class="ayar-baslik">Yeni Profil Ekle</div>
-            <div class="ayar-alt">Farklı kullanıcı için profil oluştur</div>
-          </div>
-          <span class="ayar-ok">›</span>
-        </div>
-        <div class="ayar-satir" onclick="modalAc('profilSecModal')">
-          <div class="ayar-ikon">🔄</div>
-          <div class="ayar-icerik">
-            <div class="ayar-baslik">Profil Değiştir</div>
-            <div class="ayar-alt">Kayıtlı profiller arasında geç</div>
-          </div>
-          <span class="ayar-ok">›</span>
-        </div>
-        <div class="ayar-satir" onclick="yedekKoduGoster()">
-          <div class="ayar-ikon">🔑</div>
-          <div class="ayar-icerik">
-            <div class="ayar-baslik">Yedekleme Kodu</div>
-            <div class="ayar-alt">Profili başka cihaza aktar</div>
-          </div>
-          <span class="ayar-ok">›</span>
-        </div>
-        <div class="ayar-satir" onclick="modalAc('profilYukleModal')">
-          <div class="ayar-ikon">📥</div>
-          <div class="ayar-icerik">
-            <div class="ayar-baslik">Profil Geri Yükle</div>
-            <div class="ayar-alt">Yedekleme kodu ile profil yükle</div>
-          </div>
-          <span class="ayar-ok">›</span>
-        </div>
+        <div class="ayar-satir" onclick="modalAc('profilEkleModal')"><div class="ayar-ikon">➕</div><div class="ayar-icerik"><div class="ayar-baslik">Yeni Profil Ekle</div><div class="ayar-alt">Farklı kullanıcı için profil oluştur</div></div><span class="ayar-ok">›</span></div>
+        <div class="ayar-satir" onclick="modalAc('profilSecModal')"><div class="ayar-ikon">🔄</div><div class="ayar-icerik"><div class="ayar-baslik">Profil Değiştir</div><div class="ayar-alt">Kayıtlı profiller arasında geç</div></div><span class="ayar-ok">›</span></div>
+        <div class="ayar-satir" onclick="yedekKoduGoster()"><div class="ayar-ikon">🔑</div><div class="ayar-icerik"><div class="ayar-baslik">Yedekleme Kodu</div><div class="ayar-alt">Profili başka cihaza aktar</div></div><span class="ayar-ok">›</span></div>
+        <div class="ayar-satir" onclick="modalAc('profilYukleModal')"><div class="ayar-ikon">📥</div><div class="ayar-icerik"><div class="ayar-baslik">Profil Geri Yükle</div><div class="ayar-alt">Yedekleme kodu ile profil yükle</div></div><span class="ayar-ok">›</span></div>
       </div>
     </div>
-
-    <!-- Destek -->
     <div class="ayar-bolum">
       <div class="ayar-etiket">Destek</div>
       <div class="ayar-kart">
-        <div class="ayar-satir" onclick="modalAc('geriBildirimModal')">
-          <div class="ayar-ikon">💬</div>
-          <div class="ayar-icerik">
-            <div class="ayar-baslik">Geri Bildirim</div>
-            <div class="ayar-alt">Öneri ve şikayetleriniz için</div>
-          </div>
-          <span class="ayar-ok">›</span>
-        </div>
+        <div class="ayar-satir" onclick="modalAc('geriBildirimModal')"><div class="ayar-ikon">💬</div><div class="ayar-icerik"><div class="ayar-baslik">Geri Bildirim</div><div class="ayar-alt">Öneri ve şikayetleriniz için</div></div><span class="ayar-ok">›</span></div>
       </div>
     </div>
-
-    <div class="versiyon-metin">PassaWord v2.1.1</div>
+    <div class="versiyon-metin">PassaWord v2.5.0</div>
   </div>
 </div>
 
@@ -1706,98 +487,45 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="skorModal" onclick="disaTiklaKapat(event,'skorModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
+    <button class="modal-kapat" onclick="modalKapat('skorModal')">✕</button>
     <div class="modal-baslik">🏆 SKOR TABLOSU</div>
-
     <div class="sekmeler">
-      <button class="sekme aktif" id="sekmeGenel" onclick="sekmeGec('genel')">Genel</button>
+      <button class="sekme aktif" id="sekmeGenel" onclick="sekmeGec('genel')">Genel (Top 20)</button>
       <button class="sekme" id="sekmeKisisel" onclick="sekmeGec('kisisel')">Kişisel</button>
     </div>
-
-    <!-- Genel skor listesi - Firebase'den gelir -->
-    <div class="skor-liste" id="genelSkorListe">
-      <div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">
-        Yükleniyor...
-      </div>
-    </div>
-
-    <!-- Kişisel skor listesi - localStorage'dan gelir -->
+    <div class="skor-liste" id="genelSkorListe"><div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Yükleniyor...</div></div>
     <div class="skor-liste gizli" id="kisiselSkorListe"></div>
   </div>
 </div>
 
-<!-- Nasıl Oynanır Modali -->
+<!-- Nasıl Oynanır Modali (Yeni Puanlama ile Güncellendi) -->
 <div class="modal-arkaplan" id="bilgiModal" onclick="disaTiklaKapat(event,'bilgiModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
+    <button class="modal-kapat" onclick="modalKapat('bilgiModal')">✕</button>
     <div class="modal-baslik">ℹ️ NASIL OYNANIR?</div>
     <div class="bilgi-icerik">
       <div class="bilgi-blok">
         <div class="bilgi-ikon">🔤</div>
-        <div class="bilgi-metin">
-          <h3>Cevap Harfi</h3>
-          <p>Her soru için cevap, o harfle başlamak zorunda. A harfindeyken cevap A ile, B harfindeyken B ile başlamalı.</p>
-        </div>
+        <div class="bilgi-metin"><h3>Cevap Harfi</h3><p>Her soru için cevap, o harfle başlamak zorunda. A harfindeyken cevap A ile, B harfindeyken B ile başlamalı.</p></div>
       </div>
       <div class="bilgi-blok">
         <div class="bilgi-ikon">⏱️</div>
-        <div class="bilgi-metin">
-          <h3>Süre</h3>
-          <p>Toplam 4 dakikan var. Süre bitmeden tüm harfleri cevaplamaya çalış!</p>
-        </div>
-      </div>
-      <div class="bilgi-blok">
-        <div class="bilgi-ikon">⏭️</div>
-        <div class="bilgi-metin">
-          <h3>Pas Hakkı</h3>
-          <p>Bilmediğin soruyu PAS ile geçebilirsin. Tüm harfler bittikten sonra pas geçilen sorulara geri dönülür.</p>
-        </div>
+        <div class="bilgi-metin"><h3>Süre</h3><p>Toplam 6 dakikan var. Süre bitmeden tüm harfleri cevaplamaya çalış!</p></div>
       </div>
       <div class="bilgi-blok">
         <div class="bilgi-ikon">🎯</div>
         <div class="bilgi-metin">
-          <h3>Puanlama</h3>
+          <h3>Yeni Puanlama Sistemi</h3>
           <p>
-            Doğru cevap: <b style="color:#00e676">+10 puan</b><br>
-            Pas sonrası doğru: <b style="color:#00e676">+10 puan</b><br>
-            Yanlış cevap: <b style="color:#ff1744">0 puan</b><br>
-            Kalan süre: <b style="color:#4fc3f7"> +1 puan/5 saniye</b>
+            Doğru cevap: <b style="color:#00e676">+10 Puan</b><br>
+            Yanlış cevap: <b style="color:#ff1744">-5 Puan</b> (Puanın eksiye düşmez)<br>
+            Kalan süre: Her 10 saniye için <b style="color:#4fc3f7">+1 Puan Bonus</b><br>
+            🔥 Kombo: Toplamda 15 ve üzeri doğru yaparsan, yaptığın doğru sayısı kadar <b style="color:#ba68c8">Ekstra Kombo Puanı</b> kazanırsın!
           </p>
         </div>
       </div>
-      <div class="bilgi-blok">
-        <div class="bilgi-ikon">🟢</div>
-        <div class="bilgi-metin">
-          <h3>Harf Renkleri</h3>
-          <div class="renk-liste">
-            <div class="renk-satir">
-              <div class="renk-nokta" style="background:linear-gradient(145deg,#7ecf3a,#2d6b0a)"></div>
-              Cevaplanmamış
-            </div>
-            <div class="renk-satir">
-              <div class="renk-nokta" style="background:linear-gradient(145deg,#69f542,#166b00)"></div>
-              Doğru cevap
-            </div>
-            <div class="renk-satir">
-              <div class="renk-nokta" style="background:linear-gradient(145deg,#ff6b6b,#7a0000)"></div>
-              Yanlış cevap
-            </div>
-            <div class="renk-satir">
-              <div class="renk-nokta" style="background:linear-gradient(145deg,#ffe066,#a07c00)"></div>
-              Pas geçildi
-            </div>
-            <div class="renk-satir">
-              <div class="renk-nokta" style="background:rgba(255,255,255,0.15);border:2px solid rgba(255,255,255,0.7)"></div>
-              Aktif soru (yanıp söner)
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <div class="versiyon-metin">v2.1.1</div>
   </div>
 </div>
 
@@ -1805,202 +533,45 @@ textarea.giris-alani {
 <div class="modal-arkaplan" id="geriBildirimModal" onclick="disaTiklaKapat(event,'geriBildirimModal')">
   <div class="modal-sayfa">
     <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
+    <button class="modal-kapat" onclick="modalKapat('geriBildirimModal')">✕</button>
     <div class="modal-baslik">💬 GERİ BİLDİRİM</div>
     <div class="alt-modal">
-      <div class="form-grup">
-        <span class="form-etiket">Kategori</span>
-        <div class="secim-grubu" id="kategoriGrubu">
-          <div class="secim-cipi secili" onclick="cipSec(this,'kategoriGrubu'); altTurGuncelle('oneri')">💡 Öneri</div>
-          <div class="secim-cipi" onclick="cipSec(this,'kategoriGrubu'); altTurGuncelle('sikayet')">⚠️ Şikayet</div>
-        </div>
+      <div class="form-grup"><span class="form-etiket">Kategori</span><div class="secim-grubu" id="kategoriGrubu"><div class="secim-cipi secili" onclick="cipSec(this,'kategoriGrubu'); altTurGuncelle('oneri')">💡 Öneri</div><div class="secim-cipi" onclick="cipSec(this,'kategoriGrubu'); altTurGuncelle('sikayet')">⚠️ Şikayet</div></div></div>
+      <div class="form-grup"><span class="form-etiket">Alt Tür</span><div class="secim-grubu" id="altTurGrubu"></div></div>
+      <div class="form-grup"><span class="form-etiket">Mesajınız</span><textarea class="giris-alani" id="geriBildirimMesaj" placeholder="Mesajınızı buraya yazın..."></textarea></div>
+      <div class="form-grup" id="alternatifGrup" style="display:block;">
+        <span class="form-etiket">Doğru Cevap</span><input type="text" class="giris-alani" id="geriBildirimCevap" placeholder="Doğru cevabı yazın..." style="text-align:left;" autocomplete="off">
+        <span class="form-etiket" style="margin-top:10px;display:block;">Alternatif Cevaplar</span><input type="text" class="giris-alani" id="geriBildirimAlternatif" placeholder="Virgülle ayırın: cevap1, cevap2..." style="text-align:left;" autocomplete="off">
       </div>
-      <div class="form-grup">
-        <span class="form-etiket">Alt Tür</span>
-        <div class="secim-grubu" id="altTurGrubu">
-          <div class="secim-grubu" id="altTurGrubu">
-  <div class="secim-cipi secili" onclick="cipSec(this,'altTurGrubu')">❓ Soru Önerisi</div>
-  <div class="secim-cipi" onclick="cipSec(this,'altTurGrubu')">🎮 Oyunla İlgili Öneri</div>
-</div>
-        </div>
-      </div>
-      <div class="form-grup">
-  <span class="form-etiket">Mesajınız</span>
-  <textarea
-    class="giris-alani"
-    id="geriBildirimMesaj"
-    placeholder="Mesajınızı buraya yazın..."
-  ></textarea>
-</div>
-<div class="form-grup" id="alternatifGrup" style="display:block;">
-  <span class="form-etiket">Doğru Cevap</span>
-  <input
-    type="text"
-    class="giris-alani"
-    id="geriBildirimCevap"
-    placeholder="Doğru cevabı yazın..."
-    style="text-align:left;"
-    autocomplete="off"
-  >
-  <span class="form-etiket" style="margin-top:10px;display:block;">Alternatif Cevaplar</span>
-  <input
-    type="text"
-    class="giris-alani"
-    id="geriBildirimAlternatif"
-    placeholder="Virgülle ayırın: cevap1, cevap2..."
-    style="text-align:left;"
-    autocomplete="off"
-  >
-</div>
       <button class="gonder-buton" onclick="geriBildirimGonder()">Gönder ✉️</button>
     </div>
   </div>
 </div>
 
-<!-- Profil Ekle Modali -->
-<div class="modal-arkaplan" id="profilEkleModal" onclick="disaTiklaKapat(event,'profilEkleModal')">
-  <div class="modal-sayfa">
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
-    <div class="modal-cubuk"></div>
-    <div class="modal-baslik">➕ YENİ PROFİL</div>
-    <div class="alt-modal">
-      <div class="form-grup">
-        <span class="form-etiket">Profil Adı</span>
-        <input
-          type="text"
-          class="giris-alani"
-          id="yeniProfilAdi"
-          placeholder="İsim girin..."
-          maxlength="20"
-          style="text-align:left;"
-          autocomplete="off"
-        >
-      </div>
-      <button class="gonder-buton" onclick="yeniProfilEkle()">Profil Oluştur</button>
-    </div>
-  </div>
-</div>
+<!-- Diğer Modallar -->
+<div class="modal-arkaplan" id="profilEkleModal" onclick="disaTiklaKapat(event,'profilEkleModal')"><div class="modal-sayfa"><div class="modal-cubuk"></div><button class="modal-kapat" onclick="modalKapat('profilEkleModal')">✕</button><div class="modal-baslik">➕ YENİ PROFİL</div><div class="alt-modal"><div class="form-grup"><span class="form-etiket">Profil Adı</span><input type="text" class="giris-alani" id="yeniProfilAdi" placeholder="İsim girin..." maxlength="20" style="text-align:left;" autocomplete="off"></div><button class="gonder-buton" onclick="yeniProfilEkle()">Oluştur</button></div></div></div>
+<div class="modal-arkaplan" id="profilSecModal" onclick="disaTiklaKapat(event,'profilSecModal')"><div class="modal-sayfa"><div class="modal-cubuk"></div><button class="modal-kapat" onclick="modalKapat('profilSecModal')">✕</button><div class="modal-baslik">👤 PROFİL SEÇ</div><div class="profil-liste" id="profilListesi"></div></div></div>
+<div class="modal-arkaplan" id="yedekKodModal" onclick="disaTiklaKapat(event,'yedekKodModal')"><div class="modal-sayfa"><div class="modal-cubuk"></div><button class="modal-kapat" onclick="modalKapat('yedekKodModal')">✕</button><div class="modal-baslik">🔑 YEDEKLEME KODU</div><div class="alt-modal"><p style="font-size:13px;color:var(--metin-soluk);margin-bottom:12px;line-height:1.6;">Bu kodu başka bir cihazda "Profil Geri Yükle" ile girerek aktarabilirsin.</p><div class="yedek-kod-kutu" id="yedekKodGosterge"></div><button class="gonder-buton" onclick="kopyala('yedekKodGosterge')">📋 Kodu Kopyala</button></div></div></div>
+<div class="modal-arkaplan" id="profilYukleModal" onclick="disaTiklaKapat(event,'profilYukleModal')"><div class="modal-sayfa"><div class="modal-cubuk"></div><button class="modal-kapat" onclick="modalKapat('profilYukleModal')">✕</button><div class="modal-baslik">📥 PROFİL GERİ YÜKLE</div><div class="alt-modal"><div class="form-grup"><span class="form-etiket">Yedekleme Kodu</span><input type="text" class="giris-alani" id="yedekKodGiris" placeholder="Kodu girin..." style="text-align:left;letter-spacing:2px;" autocomplete="off"></div><button class="gonder-buton" onclick="profilGeriYukle()">Yükle</button></div></div></div>
+<div class="modal-arkaplan" id="adminModal" onclick="disaTiklaKapat(event,'adminModal')"><div class="modal-sayfa"><div class="modal-cubuk"></div><button class="modal-kapat" onclick="modalKapat('adminModal')">✕</button><div class="modal-baslik">🔐 ADMİN PANELİ</div><div id="adminSifreEkrani" class="alt-modal"><div class="form-grup"><span class="form-etiket">Admin Şifresi</span><input type="password" class="giris-alani" id="adminSifreGiris" placeholder="Şifreyi girin..." style="text-align:left;" autocomplete="off"></div><button class="gonder-buton" onclick="adminGiris()">Giriş Yap</button></div><div id="adminIcerik" class="gizli"><div style="padding:0 16px 12px;"><div class="ayar-etiket">Bekleyenler</div></div><div id="adminOneriListe"><div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Yükleniyor...</div></div></div></div></div>
 
-<!-- Profil Seç Modali -->
-<div class="modal-arkaplan" id="profilSecModal" onclick="disaTiklaKapat(event,'profilSecModal')">
-  <div class="modal-sayfa">
-    <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
-    <div class="modal-baslik">👤 PROFİL SEÇ</div>
-    <div class="profil-liste" id="profilListesi"></div>
-  </div>
-</div>
-
-<!-- Yedekleme Kodu Modali -->
-<div class="modal-arkaplan" id="yedekKodModal" onclick="disaTiklaKapat(event,'yedekKodModal')">
-  <div class="modal-sayfa">
-    <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
-    <div class="modal-baslik">🔑 YEDEKLEME KODU</div>
-    <div class="alt-modal">
-      <p style="font-size:13px;color:var(--metin-soluk);margin-bottom:12px;line-height:1.6;">
-        Bu kodu başka bir cihazda "Profil Geri Yükle" seçeneği ile girerek profilini aktarabilirsin.
-      </p>
-      <div class="yedek-kod-kutu" id="yedekKodGosterge"></div>
-      <button class="gonder-buton" onclick="kopyala('yedekKodGosterge')">📋 Kodu Kopyala</button>
-    </div>
-  </div>
-</div>
-
-<!-- Profil Geri Yükle Modali -->
-<div class="modal-arkaplan" id="profilYukleModal" onclick="disaTiklaKapat(event,'profilYukleModal')">
-  <div class="modal-sayfa">
-    <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
-    <div class="modal-baslik">📥 PROFİL GERİ YÜKLE</div>
-    <div class="alt-modal">
-      <div class="form-grup">
-        <span class="form-etiket">Yedekleme Kodu</span>
-        <input
-          type="text"
-          class="giris-alani"
-          id="yedekKodGiris"
-          placeholder="Yedekleme kodunu girin..."
-          style="text-align:left;letter-spacing:2px;"
-          autocomplete="off"
-        >
-      </div>
-      <button class="gonder-buton" onclick="profilGeriYukle()">Profili Yükle</button>
-    </div>
-  </div>
-</div>
-
-<!-- Admin Paneli Modali -->
-<div class="modal-arkaplan" id="adminModal" onclick="disaTiklaKapat(event,'adminModal')">
-  <div class="modal-sayfa">
-    <div class="modal-cubuk"></div>
-     <div class="modal-cubuk"></div>
-<button class="modal-kapat" onclick="modalKapat(this.closest('.modal-arkaplan').id)">✕</button>
-    <div class="modal-baslik">🔐 ADMİN PANELİ</div>
-
-    <!-- Şifre giriş ekranı -->
-    <div id="adminSifreEkrani" class="alt-modal">
-      <div class="form-grup">
-        <span class="form-etiket">Admin Şifresi</span>
-        <input
-          type="password"
-          class="giris-alani"
-          id="adminSifreGiris"
-          placeholder="Şifreyi girin..."
-          style="text-align:left;"
-          autocomplete="off"
-        >
-      </div>
-      <button class="gonder-buton" onclick="adminGiris()">Giriş Yap</button>
-    </div>
-
-    <!-- Admin içerik alanı (şifre doğrulandıktan sonra) -->
-    <div id="adminIcerik" class="gizli">
-      <div style="padding:0 16px 12px;">
-        <div class="ayar-etiket">Bekleyen Soru Önerileri</div>
-      </div>
-      <div id="adminOneriListe">
-        <div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">
-          Yükleniyor...
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Onay Diyaloğu -->
-<div class="onay-diyalog" id="onayDiyalog">
-  <div class="onay-kutu">
-    <div class="onay-baslik" id="onayBaslik">Emin misin?</div>
-    <div class="onay-mesaj" id="onayMesaj">Bu işlem geri alınamaz.</div>
-    <div class="onay-butonlar">
-      <button class="onay-evet" id="onayEvetButon">Evet, Sil</button>
-      <button class="onay-hayir" onclick="onayKapat()">İptal</button>
-    </div>
-  </div>
-</div>
-
-<!-- Toast Bildirimi -->
+<!-- Onay ve Toast -->
+<div class="onay-diyalog" id="onayDiyalog"><div class="onay-kutu"><div class="onay-baslik" id="onayBaslik">Emin misin?</div><div class="onay-mesaj" id="onayMesaj">İşlem geri alınamaz.</div><div class="onay-butonlar"><button class="onay-evet" id="onayEvetButon">Evet, Sil</button><button class="onay-hayir" onclick="onayKapat()">İptal</button></div></div></div>
 <div id="toastBildirim"></div>
 
-<!-- ========================================
-     FIREBASE SDK
-     ======================================== -->
+<!-- ========================================================================= -->
+<!-- HTML İSKELETİ (BİTİŞ)                                                   -->
+<!-- ========================================================================= -->
+
+
+<!-- ========================================================================= -->
+<!-- JAVASCRIPT OYUN MANTIĞI VE FİREBASE (BAŞLANGIÇ)                         -->
+<!-- ========================================================================= -->
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-import { getDatabase, ref, push, onValue, query, orderByChild, limitToLast, set, remove }
-  from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
-import { getAuth, signInAnonymously }
-  from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+import { getDatabase, ref, push, onValue, query, orderByChild, limitToLast, set, remove } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
-/* ========================================
-   FİREBASE YAPILANDIRMASI
-   ======================================== */
 const firebaseYapılandırma = {
   apiKey: "AIzaSyBGELLtIOdSbNbBasEOjI53wTMcY9GlD6Y",
   authDomain: "passaword-3c769.firebaseapp.com",
@@ -2011,162 +582,56 @@ const firebaseYapılandırma = {
   appId: "1:184241248120:web:1e56d87fefd25b0971da8d"
 };
 
-/* Firebase uygulamasını başlat */
 const uygulama = initializeApp(firebaseYapılandırma);
 const veritabani = getDatabase(uygulama);
 const kimlikDogrulama = getAuth(uygulama);
-
-/* Anonim giriş yap */
 signInAnonymously(kimlikDogrulama).catch(console.error);
 
-/* ========================================
-   SABİTLER
-   ======================================== */
-/* Türkçe alfabedeki harfler (Ğ ve J hariç, 27 harf) */
 const HARFLER = ['A','B','C','Ç','D','E','F','G','H','I/İ','K','L','M','N','O','Ö','P','R','S','Ş','T','U','Ü','V','Y','Z'];
-
-/* Her harfin JSON dosyasının yolu */
-const HARF_DOSYA_ESLEME = {
-  'A':'a','B':'b','C':'c','Ç':'ch','D':'d','E':'e','F':'f','G':'g',
-  'H':'h','I/İ':'i','K':'k','L':'l','M':'m','N':'n','O':'o',
-  'Ö':'oo','P':'p','R':'r','S':'s','Ş':'sh','T':'t','U':'u','Ü':'uu',
-  'V':'v','Y':'y','Z':'z'
-};
-
-/* EmailJS yapılandırması */
+const HARF_DOSYA_ESLEME = { 'A':'a','B':'b','C':'c','Ç':'ch','D':'d','E':'e','F':'f','G':'g','H':'h','I/İ':'i','K':'k','L':'l','M':'m','N':'n','O':'o','Ö':'oo','P':'p','R':'r','S':'s','Ş':'sh','T':'t','U':'u','Ü':'uu','V':'v','Y':'y','Z':'z' };
 const EMAILJS_SERVICE_ID = 'service_ojr0p6q';
 const EMAILJS_TEMPLATE_ID = 'template_dlmjr0w';
 const EMAILJS_PUBLIC_KEY = 'D01aRDtRbWdqpLIjm';
-
-/* Oyun süresi (saniye) */
 const OYUN_SURESI = 360;
 
-/* ========================================
-   OYUN DURUMU
-   Tüm oyun değişkenleri burada tutulur
-   ======================================== */
+// Oyun durum değişkenleri (Doğru, yanlış sayıları da buraya eklendi)
 let oyunDurumu = {
-  harfDurumlari: {},      /* Her harfin durumu: varsayilan/dogru/yanlis/pas */
-  harfCevaplari: {},      /* Her harfe verilen cevap bilgisi */
-  yuklenenSorular: {},    /* Yüklenen soru havuzu */
-  secilenSorular: {},     /* Bu oyun için seçilen 27 soru */
-  mevcutHarfIndeks: 0,    /* Şu an sorulan harfin indeksi */
-  mevcutHarf: 'A',        /* Şu an sorulan harf */
-  kalanSure: OYUN_SURESI, /* Kalan süre (saniye) */
-  zamanlayici: null,      /* setInterval referansı */
-  pasKuyrugu: [],         /* Pas geçilen harfler */
-  pasModu: false,         /* Pas turunda mı? */
-  pasIndeks: 0,           /* Pas kuyruğundaki mevcut indeks */
-  calisiyor: false,       /* Oyun aktif mi? */
-  puan: 0                 /* Toplam puan */
+  harfDurumlari: {}, harfCevaplari: {}, yuklenenSorular: {}, secilenSorular: {},
+  mevcutHarfIndeks: 0, mevcutHarf: 'A', kalanSure: OYUN_SURESI,
+  zamanlayici: null, pasKuyrugu: [], pasModu: false, pasIndeks: 0, calisiyor: false,
+  puan: 0, dogruSayisi: 0, yanlisSayisi: 0, pasSayisi: 0
 };
 
-/* ========================================
-   PROFİL YÖNETİMİ
-   localStorage ile profil saklama
-   ======================================== */
-/* Tüm profilleri getir */
-function profilleriGetir() {
-  return JSON.parse(localStorage.getItem('pw_profiller') || '[]');
-}
+// Profiller
+function profilleriGetir() { return JSON.parse(localStorage.getItem('pw_profiller') || '[]'); }
+function aktifProfiliGetir() { const aktifId = localStorage.getItem('pw_aktif_profil'); const profiller = profilleriGetir(); return profiller.find(p => p.id === aktifId) || profiller[0] || null; }
+function profilleriKaydet(profiller) { localStorage.setItem('pw_profiller', JSON.stringify(profiller)); }
+function yedekKoduOlustur(profil) { const veri = JSON.stringify({ id: profil.id, ad: profil.ad, skorlar: profil.skorlar || [], olusturulma: profil.olusturulma }); return btoa(unescape(encodeURIComponent(veri))); }
+function yedekKodunuCoz(kod) { try { return JSON.parse(decodeURIComponent(escape(atob(kod)))); } catch { return null; } }
 
-/* Aktif profili getir */
-function aktifProfiliGetir() {
-  const aktifId = localStorage.getItem('pw_aktif_profil');
-  const profiller = profilleriGetir();
-  return profiller.find(p => p.id === aktifId) || profiller[0] || null;
-}
-
-/* Profilleri kaydet */
-function profilleriKaydet(profiller) {
-  localStorage.setItem('pw_profiller', JSON.stringify(profiller));
-}
-
-/* Yedekleme kodu oluştur */
-function yedekKoduOlustur(profil) {
-  /* Profil verisini base64 ile kodla */
-  const veri = JSON.stringify({
-    id: profil.id,
-    ad: profil.ad,
-    skorlar: profil.skorlar || [],
-    olusturulma: profil.olusturulma
-  });
-  return btoa(unescape(encodeURIComponent(veri)));
-}
-
-/* Yedekleme kodundan profil geri yükle */
-function yedekKodunuCoz(kod) {
-  try {
-    const veri = JSON.parse(decodeURIComponent(escape(atob(kod))));
-    return veri;
-  } catch {
-    return null;
-  }
-}
-
-/* ========================================
-   UYGULAMA BAŞLANGIÇ
-   Sayfa yüklendiğinde çalışır
-   ======================================== */
+// DOM Yüklendiğinde
 window.addEventListener('DOMContentLoaded', () => {
-  /* Dokunmatik ekran tespiti */
-  const dokunmatik = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-  window._dokunmatik = dokunmatik;
-
-  /* Bilgisayar modunu ayarla */
+  window._dokunmatik = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
   bilgisayarModunuAyarla();
-
-  /* Yatay mod kontrolü */
   yatayModKontrol();
   window.addEventListener('resize', yatayModKontrol);
-  window.addEventListener('orientationchange', () => {
-    setTimeout(yatayModKontrol, 300);
-  });
+  window.addEventListener('orientationchange', () => setTimeout(yatayModKontrol, 300));
 
-  /* Profil kontrol et */
   const aktifProfil = aktifProfiliGetir();
   if (aktifProfil) {
     ekraniGoster('baslangicEkrani');
     document.getElementById('profilOlusturKutu').style.display = 'none';
-    document.getElementById('hazirEkrani').style.display = 'flex';
-    document.getElementById('hazirEkrani').style.flexDirection = 'column';
-    document.getElementById('hazirEkrani').style.alignItems = 'center';
-    document.getElementById('hazirEkrani').style.gap = '16px';
+    const hazir = document.getElementById('hazirEkrani');
+    hazir.style.display = 'flex'; hazir.style.flexDirection = 'column';
     document.getElementById('hosgeldinIsim').textContent = aktifProfil.ad;
     document.getElementById('aktifProfilAdi').textContent = aktifProfil.ad;
   } else {
     ekraniGoster('baslangicEkrani');
   }
 
-/* Aktif profil satırına uzun basma ile silme */
-setTimeout(() => {
-  const aktifSatir = document.getElementById('aktifProfilSatir');
-  if (!aktifSatir) return;
-  let aktifSatirZamanlayi;
-  aktifSatir.addEventListener('mousedown', () => {
-    aktifSatirZamanlayi = setTimeout(() => {
-      const profil = aktifProfiliGetir();
-      if (profil) profilSilOnay(profil);
-    }, 1000);
-  });
-  aktifSatir.addEventListener('mouseup', () => clearTimeout(aktifSatirZamanlayi));
-  aktifSatir.addEventListener('mouseleave', () => clearTimeout(aktifSatirZamanlayi));
-  aktifSatir.addEventListener('touchstart', () => {
-    aktifSatirZamanlayi = setTimeout(() => {
-      const profil = aktifProfiliGetir();
-      if (profil) profilSilOnay(profil);
-    }, 1000);
-  });
-  aktifSatir.addEventListener('touchend', () => clearTimeout(aktifSatirZamanlayi));
-}, 500);
-   
-  /* Firebase skor tablosunu dinle */
   genelSkorTablosunuDinle();
-
-  /* EmailJS yükle */
-  emailjsYukle();
-
-  /* Çift dokunma yakınlaştırmayı engelle */
+  
+  // Çift dokunma engelleme
   let sonDokunma = 0;
   document.addEventListener('touchend', (e) => {
     const simdi = Date.now();
@@ -2175,59 +640,77 @@ setTimeout(() => {
   }, { passive: false });
 });
 
-/* ========================================
-   CİHAZ MODU AYARLAMA
-   ======================================== */
+// Bilgisayar/Mobil Modu
 function bilgisayarModunuAyarla() {
-  const dokunmatik = window._dokunmatik;
-  const genislik = window.innerWidth;
-
-  /* Bilgisayar: dokunmatik değil VE geniş ekran */
-  const bilgisayarMi = !dokunmatik && genislik >= 1025;
-
+  const bilgisayarMi = !window._dokunmatik && window.innerWidth >= 1025;
   if (bilgisayarMi) {
-    /* Bilgisayar: fiziksel klavye, input normal çalışsın */
     document.getElementById('bilgisayarCevapAlani').style.display = 'block';
     document.querySelector('.giris-klavye-alani').style.display = 'none';
-
-    /* Bilgisayar input'una enter dinleyicisi ekle */
     const bcGiris = document.getElementById('bilgisayarCevapGiris');
-    bcGiris.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') cevapVer();
-    });
+    bcGiris.addEventListener('keydown', (e) => { if (e.key === 'Enter') cevapVer(); });
   }
 }
 
-   /* Klavye açılınca daireyi yeniden boyutlandır */
-const baslangicYukseklik = window.innerHeight;
-window.visualViewport.addEventListener('resize', () => {
-  if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
-    daireOlustur();
-    aktifTopuIsaretle(oyunDurumu.mevcutHarf);
-  }
-});
-   
-/* ========================================
-   YATAY MOD KONTROLÜ
-   Telefon yatay çevrilince uyarı göster
-   ======================================== */
+// Yatay Uyarı
 function yatayModKontrol() {
-  const dokunmatik = window._dokunmatik;
   const yatay = window.innerWidth > window.innerHeight;
   const kucukEkran = window.innerHeight < 400;
-
-  /* Sadece dokunmatik cihazlarda yatay mod uyarısı göster */
-  if (dokunmatik && yatay && kucukEkran) {
+  if (window._dokunmatik && yatay && kucukEkran) {
     document.getElementById('yatayUyari').classList.remove('gizli');
   } else {
     document.getElementById('yatayUyari').classList.add('gizli');
   }
 }
 
-/* ========================================
-   SORU YÜKLEME
-   Tüm harflerin JSON dosyaları paralel yüklenir
-   ======================================== */
+/* ========================================================================= */
+/* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ (DİNAMİK GÖRÜNÜM)         */
+/* ========================================================================= */
+function klavyeDurumunuGuncelle() {
+  const istatistikBar = document.getElementById('canliIstatistik');
+  const klavyeAlani = document.getElementById('klavyeAlaniDiv');
+  const oyunAlani = document.querySelector('.oyun-alani');
+  
+  // Ekranın ne kadar küçüldüğüne bakarak klavyenin açılıp açılmadığını anlıyoruz (100px barajı)
+  const isKeyboardOpen = window.visualViewport && (window.innerHeight - window.visualViewport.height > 100);
+
+  if (isKeyboardOpen) {
+    // Klavye AÇIK: Barı input alanının içine (üstüne) taşı ve stilini değiştir
+    if (klavyeAlani && istatistikBar) {
+      klavyeAlani.insertBefore(istatistikBar, klavyeAlani.firstChild);
+      istatistikBar.classList.remove('normal');
+      istatistikBar.classList.add('klavye-acik');
+    }
+  } else {
+    // Klavye KAPALI: Barı tekrar dairenin üst kısmına al
+    if (oyunAlani && istatistikBar) {
+      oyunAlani.insertBefore(istatistikBar, oyunAlani.firstChild);
+      istatistikBar.classList.remove('klavye-acik');
+      istatistikBar.classList.add('normal');
+    }
+  }
+}
+
+// Visual Viewport dinleyicisi: Hem daireyi yeniden boyutlandırır hem istatistiği taşır
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', () => {
+    if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
+      ekraniYenile();
+      klavyeDurumunuGuncelle();
+    }
+  });
+}
+
+// Canlı istatistik sayılarını DOM üzerinde güncelleyen fonksiyon
+function canliIstatistikGuncelle() {
+  document.getElementById('canliPuan').textContent = oyunDurumu.puan;
+  document.getElementById('canliDogru').textContent = oyunDurumu.dogruSayisi;
+  document.getElementById('canliYanlis').textContent = oyunDurumu.yanlisSayisi;
+  document.getElementById('canliPas').textContent = oyunDurumu.pasSayisi;
+}
+
+/* ========================================================================= */
+/* JSON DOSYALARINDAN OTOMATİK ID EKLEYEREK SORULARI YÜKLEME                 */
+/* ========================================================================= */
 async function sorulariYukle() {
   document.getElementById('yuklemeMesaj').textContent = 'Sorular yükleniyor...';
   ekraniGoster('yuklemEkrani');
@@ -2236,146 +719,108 @@ async function sorulariYukle() {
     const dosyaAdi = HARF_DOSYA_ESLEME[harf];
     try {
       const yanit = await fetch(`./questions/${dosyaAdi}_questions.json`);
-      if (!yanit.ok) throw new Error(`${harf} harfi yüklenemedi`);
+      if (!yanit.ok) throw new Error(`${harf} yüklenemedi`);
       const sorular = await yanit.json();
-      return { harf, sorular };
+      
+      // JSON'a dokunmadan JS ile gizli ID (_soruSatiri) ekliyoruz!
+      const numaraliSorular = sorular.map((s, idx) => {
+        s._soruSatiri = idx + 1; // 1. sıradan başlar
+        return s;
+      });
+      
+      return { harf, sorular: numaraliSorular };
     } catch (hata) {
-      console.warn(`${harf} harfi yüklenirken hata:`, hata);
+      console.warn(`${harf} hatası:`, hata);
       return { harf, sorular: [] };
     }
   });
 
-  /* Tüm dosyalar paralel yüklenir */
   const sonuclar = await Promise.all(yuklemeSozleri);
-
-  /* Yüklenen soruları sakla */
-  sonuclar.forEach(({ harf, sorular }) => {
-    oyunDurumu.yuklenenSorular[harf] = sorular;
-  });
-
+  sonuclar.forEach(({ harf, sorular }) => { oyunDurumu.yuklenenSorular[harf] = sorular; });
   return true;
 }
 
-/* ========================================
-   HER HARF İÇİN RASTGELE SORU SEÇ
-   ======================================== */
 function sorulariSec() {
   oyunDurumu.secilenSorular = {};
   HARFLER.forEach(harf => {
     const havuz = oyunDurumu.yuklenenSorular[harf] || [];
     if (havuz.length > 0) {
-      /* Rastgele bir soru seç */
       const rastgeleIndeks = Math.floor(Math.random() * havuz.length);
       oyunDurumu.secilenSorular[harf] = havuz[rastgeleIndeks];
     } else {
-      /* Soru yoksa boş bırak */
       oyunDurumu.secilenSorular[harf] = null;
     }
   });
 }
 
-/* ========================================
-   PROFİL OLUŞTURMA
-   ======================================== */
-window.profilOlustur = function() {
-  const isim = document.getElementById('profilIsimGiris').value.trim();
-  if (!isim) {
-    toastGoster('Lütfen bir isim girin!');
-    return;
-  }
-
-  const yeniProfil = {
-    id: 'profil_' + Date.now(),
-    ad: isim,
-    skorlar: [],
-    olusturulma: new Date().toISOString()
-  };
-
-  const profiller = profilleriGetir();
-  profiller.push(yeniProfil);
-  profilleriKaydet(profiller);
-  localStorage.setItem('pw_aktif_profil', yeniProfil.id);
-
-  /* Hazır ekranına geç */
-  document.getElementById('profilOlusturKutu').style.display = 'none';
-  const hazir = document.getElementById('hazirEkrani');
-  hazir.style.display = 'flex';
-  hazir.style.flexDirection = 'column';
-  hazir.style.alignItems = 'center';
-  hazir.style.gap = '16px';
-  document.getElementById('hosgeldinIsim').textContent = isim;
-  document.getElementById('aktifProfilAdi').textContent = isim;
-};
-
-/* ========================================
-   OYUNU BAŞLAT
-   ======================================== */
+// Oyuna Başlama
 window.oyunuBaslat = async function() {
-  /* Soruları yükle */
   await sorulariYukle();
   sorulariSec();
 
-  /* Oyun durumunu sıfırla */
-  oyunDurumu.harfDurumlari = {};
-  oyunDurumu.harfCevaplari = {};
-  oyunDurumu.mevcutHarfIndeks = 0;
-  oyunDurumu.mevcutHarf = HARFLER[0];
-  oyunDurumu.kalanSure = OYUN_SURESI;
-  oyunDurumu.pasKuyrugu = [];
-  oyunDurumu.pasModu = false;
-  oyunDurumu.pasIndeks = 0;
-  oyunDurumu.calisiyor = true;
-  oyunDurumu.puan = 0;
+  oyunDurumu.harfDurumlari = {}; oyunDurumu.harfCevaplari = {};
+  oyunDurumu.mevcutHarfIndeks = 0; oyunDurumu.mevcutHarf = HARFLER[0];
+  oyunDurumu.kalanSure = OYUN_SURESI; oyunDurumu.pasKuyrugu = [];
+  oyunDurumu.pasModu = false; oyunDurumu.pasIndeks = 0; oyunDurumu.calisiyor = true;
+  oyunDurumu.puan = 0; oyunDurumu.dogruSayisi = 0; oyunDurumu.yanlisSayisi = 0; oyunDurumu.pasSayisi = 0;
 
-  /* Tüm harflerin durumunu varsayılan yap */
   HARFLER.forEach(h => { oyunDurumu.harfDurumlari[h] = 'varsayilan'; });
 
-  /* Oyun ekranını göster */
   ekraniGoster('oyunEkrani');
+  canliIstatistikGuncelle();
+  klavyeDurumunuGuncelle(); // İstatistiği doğru yere koy
 
-  /* Daireyi oluştur */
   setTimeout(() => {
     daireOlustur();
     harfiAktifYap(0, true);
     zamanlayiciBaslat();
-    document.querySelector('.oyun-alani').style.justifyContent = 'center';
   }, 100);
 };
 
-/* ========================================
-   DAİRE OLUŞTURMA
-   Harfleri daire şeklinde yerleştirir
-   ======================================== */
+// Daire Boyutlandırma ve Oluşturma
+function daireOlculeriniHesapla() {
+  const vg = window.innerWidth;
+  const vy = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  const bilgisayarMi = !window._dokunmatik && vg >= 1025;
+
+  let mevcut;
+  if (bilgisayarMi) {
+    const kullanilabilir = Math.min(vg * 0.85, vy - 55 - 90);
+    mevcut = Math.max(300, Math.min(kullanilabilir, 600));
+  } else {
+    // Mobil/Tablet için klavye açıkken de dinamik hesaplama
+    // Header ~55px, İstatistik ~30px, Input ~50px
+    const kullanilabilir = Math.min(vg, vy - 55 - 80);
+    mevcut = Math.max(200, Math.min(kullanilabilir, 450));
+  }
+
+  const topBoyutu = Math.round(mevcut / 12);
+  return { konteynirBoyutu: mevcut, topBoyutu };
+}
+
 function daireOlustur() {
   const konteyner = document.getElementById('daireKonteyneri');
-
-  /* Mevcut topları kaldır */
   konteyner.querySelectorAll('.harf-topu').forEach(t => t.remove());
 
-  /* Ekran boyutuna göre daire boyutunu hesapla */
   const olculer = daireOlculeriniHesapla();
   const { konteynirBoyutu, topBoyutu } = olculer;
 
   konteyner.style.width = konteynirBoyutu + 'px';
   konteyner.style.height = konteynirBoyutu + 'px';
-  konteyner.style.position = 'relative';
 
   const mx = konteynirBoyutu / 2;
   const my = konteynirBoyutu / 2;
-  /* Toplar arası boşluk için yarıçapı biraz küçülttük */
   const yaricap = (konteynirBoyutu - topBoyutu * 1.3) / 2;
   const toplamHarf = HARFLER.length;
 
   HARFLER.forEach((harf, i) => {
-    /* Açıyı hesapla (12 o'clock'tan başla) */
     const aci = (2 * Math.PI * i / toplamHarf) - Math.PI / 2;
     const x = mx + yaricap * Math.cos(aci);
     const y = my + yaricap * Math.sin(aci);
 
     const top = document.createElement('div');
-    top.className = 'harf-topu durum-varsayilan';
+    top.className = 'harf-topu durum-' + oyunDurumu.harfDurumlari[harf];
     top.id = 'top-' + harf;
-    top.dataset.harf = harf;
     top.style.width = topBoyutu + 'px';
     top.style.height = topBoyutu + 'px';
     top.style.left = x + 'px';
@@ -2383,159 +828,70 @@ function daireOlustur() {
     top.style.fontSize = Math.round(topBoyutu * 0.36) + 'px';
     top.textContent = harf;
 
-    /* Merkez göstergeden önce ekle */
     konteyner.insertBefore(top, konteyner.querySelector('.merkez-gosterge'));
   });
 }
 
-/* ========================================
-   DAİRE ÖLÇÜSÜNÜ HESAPLA
-   Cihaz tipine göre boyutlandırma
-   ======================================== */
-function daireOlculeriniHesapla() {
-  const vg = window.innerWidth;   /* Görüntü alanı genişliği */
-  const vy = window.visualViewport ? window.visualViewport.height : window.innerHeight;  /* Görüntü alanı yüksekliği */
-  const dokunmatik = window._dokunmatik;
-  const bilgisayarMi = !dokunmatik && vg >= 1025;
-
-  let mevcut;
-  if (bilgisayarMi) {
-    /* Bilgisayar: klavye yok, daha fazla alan var */
-    /* Header ~55px, cevap alanı ~80px */
-    const kullanilabilir = Math.min(vg * 0.85, vy - 55 - 90);
-    mevcut = Math.max(300, Math.min(kullanilabilir, 600));
-  } else {
-    /* Mobil/Tablet: klavye var */
-    /* Header ~55px, klavye+input alanı ~230px */
-const klavyeYuksekligi = window.screen.height - window.innerHeight;
-const kullanilabilir = Math.min(vg, vy - 55 - 30);
-mevcut = Math.max(200, Math.min(kullanilabilir, 450));
-  }
-
-  /* Top boyutu: daire boyutuna göre orantılı */
-  const topBoyutu = Math.round(mevcut / 12);
-
-  return { konteynirBoyutu: mevcut, topBoyutu };
-}
-
-/* Pencere boyutu değişince daireyi yeniden oluştur */
 function ekraniYenile() {
   if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
     daireOlustur();
     aktifTopuIsaretle(oyunDurumu.mevcutHarf);
-    
-    /* Klavye açıksa flex-end, kapalıysa center */
-    const klavyeAcikMi = window.visualViewport && 
-      (window.screen.height - window.visualViewport.height > 150);
-    document.querySelector('.oyun-alani').style.justifyContent = 
-      klavyeAcikMi ? 'flex-end' : 'center';
   }
   bilgisayarModunuAyarla();
-  yatayModKontrol();
 }
-
 window.addEventListener('resize', ekraniYenile);
 
-if (window.visualViewport) {
-  window.visualViewport.addEventListener('resize', () => {
-    setTimeout(ekraniYenile, 100);
-  });
-}
-
-/* ========================================
-   HARFİ AKTİF YAP
-   Yeni soruya geçişte çalışır
-   ======================================== */
+// Harf Aktifleştirme
 function harfiAktifYap(indeks, ilkMi = false) {
-  const harf = oyunDurumu.pasModu
-    ? oyunDurumu.pasKuyrugu[oyunDurumu.pasIndeks]
-    : HARFLER[indeks];
-
-  oyunDurumu.mevcutHarf = harf;
-  oyunDurumu.mevcutHarfIndeks = indeks;
-
-  /* Soruyu göster */
+  const harf = oyunDurumu.pasModu ? oyunDurumu.pasKuyrugu[oyunDurumu.pasIndeks] : HARFLER[indeks];
+  oyunDurumu.mevcutHarf = harf; oyunDurumu.mevcutHarfIndeks = indeks;
+  
   const soruVerisi = oyunDurumu.secilenSorular[harf];
   document.getElementById('soruHarfi').textContent = harf;
-  document.getElementById('soruMetni').innerHTML =
-    `<span id="soruHarfi">${harf}</span>: ${soruVerisi ? soruVerisi.soru : '(Soru bulunamadı)'}`;
+  document.getElementById('soruMetni').innerHTML = `<span id="soruHarfi">${harf}</span>: ${soruVerisi ? soruVerisi.soru : '(Soru bulunamadı)'}`;
 
-  /* Cevap alanını temizle */
   cevapAlaniniTemizle();
-
-  /* Animasyonlu geçiş */
-  if (!ilkMi) {
-    setTimeout(() => aktifTopuIsaretle(harf, true), 30);
-  } else {
-    aktifTopuIsaretle(harf, false);
-  }
+  if (!ilkMi) { setTimeout(() => aktifTopuIsaretle(harf, true), 30); } else { aktifTopuIsaretle(harf, false); }
 }
 
-/* ========================================
-   AKTİF TOPU İŞARETLE
-   ======================================== */
 function aktifTopuIsaretle(harf, animasyonlu = false) {
-  /* Tüm topları durumlarına göre güncelle */
   HARFLER.forEach(h => {
     const top = document.getElementById('top-' + h);
     if (!top) return;
-    const durum = oyunDurumu.harfDurumlari[h];
-    top.className = `harf-topu durum-${durum}`;
+    top.className = `harf-topu durum-${oyunDurumu.harfDurumlari[h]}`;
   });
-
-  /* Aktif topu işaretle */
   const aktifTop = document.getElementById('top-' + harf);
   if (aktifTop) {
     if (animasyonlu) {
       aktifTop.className = 'harf-topu gecis-animasyon durum-aktif';
-      setTimeout(() => {
-        if (aktifTop.classList.contains('gecis-animasyon')) {
-          aktifTop.className = 'harf-topu durum-aktif';
-        }
-      }, 370);
+      setTimeout(() => { if (aktifTop.classList.contains('gecis-animasyon')) aktifTop.className = 'harf-topu durum-aktif'; }, 370);
     } else {
       aktifTop.className = 'harf-topu durum-aktif';
     }
   }
 }
 
-/* ========================================
-   ZAMANLAYICI
-   ======================================== */
 function zamanlayiciBaslat() {
   if (oyunDurumu.zamanlayici) clearInterval(oyunDurumu.zamanlayici);
   oyunDurumu.zamanlayici = setInterval(() => {
-    oyunDurumu.kalanSure--;
-    sureyiGuncelle();
+    oyunDurumu.kalanSure--; sureyiGuncelle();
     if (oyunDurumu.kalanSure <= 0) oyunuBitir();
   }, 1000);
 }
 
 function sureyiGuncelle() {
-  const dk = Math.floor(oyunDurumu.kalanSure / 60);
-  const sn = oyunDurumu.kalanSure % 60;
+  const dk = Math.floor(oyunDurumu.kalanSure / 60); const sn = oyunDurumu.kalanSure % 60;
   const el = document.getElementById('surGosterge');
   el.textContent = `${String(dk).padStart(2,'0')}:${String(sn).padStart(2,'0')}`;
-
-  /* Son 30 saniyede yanıp sönsün */
-  if (oyunDurumu.kalanSure <= 30) {
-    el.classList.add('kritik');
-  } else {
-    el.classList.remove('kritik');
-  }
+  if (oyunDurumu.kalanSure <= 30) el.classList.add('kritik'); else el.classList.remove('kritik');
 }
 
-/* ========================================
-   CEVAP VERME
-   ======================================== */
+/* ========================================================================= */
+/* CEVAP DEĞERLENDİRME & YENİ PUANLAMA MANTIĞI                               */
+/* ========================================================================= */
 window.cevapVer = function() {
-  /* Hangi input aktif? Bilgisayar mı mobil mi? */
-  const dokunmatik = window._dokunmatik;
-  const bilgisayarMi = !dokunmatik && window.innerWidth >= 1025;
-
-  const ham = bilgisayarMi
-    ? document.getElementById('bilgisayarCevapGiris').value.trim()
-    : document.getElementById('cevapGiris').value.trim();
+  const bilgisayarMi = !window._dokunmatik && window.innerWidth >= 1025;
+  const ham = bilgisayarMi ? document.getElementById('bilgisayarCevapGiris').value.trim() : document.getElementById('cevapGiris').value.trim();
 
   if (!ham) { pasCek(); return; }
 
@@ -2544,61 +900,181 @@ window.cevapVer = function() {
   const dogruCevap = soruVerisi ? soruVerisi.cevap : '';
   const alternatifler = soruVerisi ? (soruVerisi.alternatifler || []) : [];
 
-  /* Cevabı değerlendir */
   const dogruMu = cevapKontrol(ham, dogruCevap, alternatifler);
 
-  /* Durumu güncelle */
   if (dogruMu) {
     oyunDurumu.harfDurumlari[harf] = 'dogru';
     oyunDurumu.puan += 10;
-    const top = document.getElementById('top-' + harf);
-    if (top) top.className = 'harf-topu durum-dogru';
+    oyunDurumu.dogruSayisi++;
   } else {
     oyunDurumu.harfDurumlari[harf] = 'yanlis';
-    const top = document.getElementById('top-' + harf);
-    if (top) top.className = 'harf-topu durum-yanlis';
+    // Yanlış cevapta 5 puan düş. Math.max ile 0'ın altına inmesini engelle.
+    oyunDurumu.puan = Math.max(0, oyunDurumu.puan - 5);
+    oyunDurumu.yanlisSayisi++;
   }
 
-  /* Cevap kaydı */
-  oyunDurumu.harfCevaplari[harf] = {
-    verilen: ham,
-    dogru: dogruCevap,
-    soru: soruVerisi ? soruVerisi.soru : '',
-    dogruMu
-  };
+  // Pas kuyruğunda ise pas sayısını düşür ki son istatistik doğru olsun
+  if (oyunDurumu.pasModu || oyunDurumu.pasKuyrugu.includes(harf)) {
+     oyunDurumu.pasSayisi = Math.max(0, oyunDurumu.pasSayisi - 1);
+  }
 
+  oyunDurumu.harfCevaplari[harf] = { verilen: ham, dogru: dogruCevap, soru: soruVerisi ? soruVerisi.soru : '', dogruMu };
+  
+  canliIstatistikGuncelle();
   sonrakiSoruya();
 };
 
-/* ========================================
-   PAS GEÇME
-   ======================================== */
 window.pasCek = function() {
   const harf = oyunDurumu.mevcutHarf;
   const soruVerisi = oyunDurumu.secilenSorular[harf];
 
   if (!oyunDurumu.pasModu) {
-    /* Normal turda pas geç */
     oyunDurumu.harfDurumlari[harf] = 'pas';
     if (!oyunDurumu.pasKuyrugu.includes(harf)) {
       oyunDurumu.pasKuyrugu.push(harf);
+      oyunDurumu.pasSayisi++;
     }
-    const top = document.getElementById('top-' + harf);
-    if (top) top.className = 'harf-topu durum-pas';
-
-    oyunDurumu.harfCevaplari[harf] = {
-      verilen: 'Pas',
-      dogru: soruVerisi ? soruVerisi.cevap : '',
-      soru: soruVerisi ? soruVerisi.soru : '',
-      dogruMu: false
-    };
+    oyunDurumu.harfCevaplari[harf] = { verilen: 'Pas', dogru: soruVerisi ? soruVerisi.cevap : '', soru: soruVerisi ? soruVerisi.soru : '', dogruMu: false };
   }
 
+  canliIstatistikGuncelle();
   cevapAlaniniTemizle();
   sonrakiSoruya();
 };
+
+function cevapKontrol(verilen, dogru, alternatifler) {
+  const normaliz = (s) => s.trim().toLowerCase().replace(/i̇/g, 'i').replace(/ı/g, 'i').replace(/İ/g, 'i').replace(/I/g, 'i').replace(/ğ/g, 'g').replace(/Ğ/g, 'g').replace(/ü/g, 'u').replace(/Ü/g, 'u').replace(/ş/g, 's').replace(/Ş/g, 's').replace(/ö/g, 'o').replace(/Ö/g, 'o').replace(/ç/g, 'c').replace(/Ç/g, 'c');
+  const v = normaliz(verilen); const d = normaliz(dogru);
+  if (v === d) return true;
+  for (const alt of alternatifler) { if (v === normaliz(alt)) return true; }
+  if (v.length >= 3 && (d.includes(v) || v.includes(d))) return true;
+  return false;
+}
+
+function sonrakiSoruya() {
+  cevapAlaniniTemizle();
+  if (oyunDurumu.pasModu) {
+    oyunDurumu.pasIndeks++;
+    while (oyunDurumu.pasIndeks < oyunDurumu.pasKuyrugu.length && oyunDurumu.harfDurumlari[oyunDurumu.pasKuyrugu[oyunDurumu.pasIndeks]] !== 'pas') {
+      oyunDurumu.pasIndeks++;
+    }
+    if (oyunDurumu.pasIndeks >= oyunDurumu.pasKuyrugu.length) {
+      const kalanPaslar = oyunDurumu.pasKuyrugu.filter(h => oyunDurumu.harfDurumlari[h] === 'pas');
+      if (kalanPaslar.length === 0) { oyunuBitir(); return; }
+      oyunDurumu.pasIndeks = 0;
+      while (oyunDurumu.pasIndeks < oyunDurumu.pasKuyrugu.length && oyunDurumu.harfDurumlari[oyunDurumu.pasKuyrugu[oyunDurumu.pasIndeks]] !== 'pas') {
+        oyunDurumu.pasIndeks++;
+      }
+    }
+    harfiAktifYap(oyunDurumu.pasIndeks);
+  } else {
+    oyunDurumu.mevcutHarfIndeks++;
+    if (oyunDurumu.mevcutHarfIndeks >= HARFLER.length) {
+      const kalanPaslar = oyunDurumu.pasKuyrugu.filter(h => oyunDurumu.harfDurumlari[h] === 'pas');
+      if (kalanPaslar.length === 0) { oyunuBitir(); return; }
+      oyunDurumu.pasModu = true; oyunDurumu.pasIndeks = 0;
+      harfiAktifYap(oyunDurumu.pasIndeks);
+    } else {
+      harfiAktifYap(oyunDurumu.mevcutHarfIndeks);
+    }
+  }
+}
+
+function cevapAlaniniTemizle() {
+  document.getElementById('cevapGiris').value = '';
+  document.getElementById('bilgisayarCevapGiris').value = '';
+}
+
+/* ========================================================================= */
+/* OYUNU BİTİRME & YENİ BONUSLAR (10 Saniye, Kombo vs)                       */
+/* ========================================================================= */
+function oyunuBitir() {
+  clearInterval(oyunDurumu.zamanlayici);
+  oyunDurumu.calisiyor = false;
+
+  // Yeni Süre Bonusu: Her 10 saniye için 1 puan
+  const sureBonus = Math.max(0, Math.floor(oyunDurumu.kalanSure / 10));
+  oyunDurumu.puan += sureBonus;
+
+  // Yeni Kombo Bonusu: 15 veya daha fazla doğru yapana ekstra puan
+  let komboBonus = 0;
+  if (oyunDurumu.dogruSayisi >= 15) {
+    komboBonus = oyunDurumu.dogruSayisi; // Örn: 18 doğru = +18 puan
+    oyunDurumu.puan += komboBonus;
+  }
+
+  // Skor kaydetme işlemine istatistikleri de gönderiyoruz
+  skorkaydet(oyunDurumu.puan, oyunDurumu.dogruSayisi, oyunDurumu.yanlisSayisi, oyunDurumu.pasSayisi);
+
+  sonucEkraniniOlustur(sureBonus, komboBonus);
+  ekraniGoster('sonucEkrani');
+}
+
+function skorkaydet(puan, dogru, yanlis, pas) {
+  const profil = aktifProfiliGetir();
+  if (!profil) return;
+
+  const profiller = profilleriGetir();
+  const indeks = profiller.findIndex(p => p.id === profil.id);
+  if (indeks !== -1) {
+    profiller[indeks].skorlar = profiller[indeks].skorlar || [];
+    profiller[indeks].skorlar.push({ puan, dogru, yanlis, pas, tarih: new Date().toISOString() });
+    profiller[indeks].skorlar = profiller[indeks].skorlar.sort((a, b) => b.puan - a.puan).slice(0, 50);
+    profilleriKaydet(profiller);
+  }
+
+  const skorRef = ref(veritabani, 'skorlar');
+  // Veritabanına istatistikleri de yolluyoruz
+  push(skorRef, { isim: profil.ad, puan, dogru, yanlis, pas, tarih: new Date().toISOString() }).catch(console.error);
+}
+
+function sonucEkraniniOlustur(sureBonus, komboBonus) {
+  const liste = document.getElementById('sonucListe');
+  liste.innerHTML = '';
+
+  HARFLER.forEach(harf => {
+    const durum = oyunDurumu.harfDurumlari[harf];
+    const veri = oyunDurumu.harfCevaplari[harf] || { verilen: '—', dogru: oyunDurumu.secilenSorular[harf]?.cevap || '?', soru: oyunDurumu.secilenSorular[harf]?.soru || '' };
+    const sinif = durum === 'dogru' ? 's-dogru' : durum === 'yanlis' ? 's-yanlis' : 's-pas';
+
+    const kalem = document.createElement('div');
+    kalem.className = `sonuc-kalem ${sinif}`;
+    kalem.innerHTML = `
+      <div class="sonuc-harf">${harf}</div>
+      <div class="sonuc-bilgi">
+        <div class="sonuc-soru">${veri.soru}</div>
+        <div class="sonuc-verilen-cevap">${veri.verilen === 'Pas' ? 'Pas geçildi' : veri.verilen}</div>
+        ${durum !== 'dogru' ? `<div class="sonuc-dogru-cevap">✓ Doğru: ${veri.dogru}</div>` : ''}
+        <button class="hata-bildir-buton" onclick="hataBildir('${harf}', this)">⚠ Hata Bildir</button>
+      </div>
+    `;
+    liste.appendChild(kalem);
+  });
+
+  document.getElementById('finalPuan').textContent = oyunDurumu.puan;
+  document.getElementById('istatDogru').textContent = `✓ ${oyunDurumu.dogruSayisi} Doğru`;
+  document.getElementById('istatYanlis').textContent = `✗ ${oyunDurumu.yanlisSayisi} Yanlış`;
+  document.getElementById('istatPas').textContent = `~ ${oyunDurumu.pasSayisi} Pas`;
+  document.getElementById('istatBonus').textContent = `⏱ +${sureBonus} Bonus`;
+  
+  const komboCipi = document.getElementById('istatKombo');
+  if (komboBonus > 0) {
+    komboCipi.textContent = `🔥 +${komboBonus} Kombo`;
+    komboCipi.classList.remove('gizli');
+  } else {
+    komboCipi.classList.add('gizli');
+  }
+}
+
+/* ========================================================================= */
+/* GELİŞMİŞ HATA BİLDİRİMİ (Yeni Bilgilerle Birlikte)                        */
+/* ========================================================================= */
 window.hataBildir = async function(harf, btn) {
   const soruVerisi = oyunDurumu.secilenSorular[harf];
+  const kullaniciCevabi = oyunDurumu.harfCevaplari[harf]?.verilen || 'Belirtilmedi';
+  const profil = aktifProfiliGetir();
+  const profilAdi = profil ? profil.ad : 'Anonim';
+  
   if (!soruVerisi) return;
 
   btn.textContent = '⏳...';
@@ -2608,8 +1084,11 @@ window.hataBildir = async function(harf, btn) {
     const hataBildirimRef = ref(veritabani, 'hatabildirimler');
     await push(hataBildirimRef, {
       harf,
+      soruId: soruVerisi._soruSatiri || 'Bilinmiyor', // JSON'daki Index yeri
       soru: soruVerisi.soru,
       cevap: soruVerisi.cevap,
+      kullanici_cevabi: kullaniciCevabi, // Kullanıcının girdiği yanlış cevap
+      profilAdi: profilAdi, // Hangi kullanıcı bildirdi?
       alternatifler: soruVerisi.alternatifler || [],
       tarih: new Date().toISOString()
     });
@@ -2622,227 +1101,90 @@ window.hataBildir = async function(harf, btn) {
     btn.disabled = false;
   }
 };
-/* ========================================
-   SONRAKİ SORUYA GEÇ
-   ======================================== */
-function sonrakiSoruya() {
-  cevapAlaniniTemizle();
 
-  if (oyunDurumu.pasModu) {
-    /* Pas turunda sonraki geçerli pasa geç */
-    oyunDurumu.pasIndeks++;
+/* ========================================================================= */
+/* GENEL SKOR TABLOSU YÖNETİMİ (TOP 20 ve Yeni İstatistik Rozetleri)         */
+/* ========================================================================= */
+function genelSkorTablosunuDinle() {
+  // Top 10 yerine Top 20 alıyoruz
+  const skorSorgu = query(ref(veritabani, 'skorlar'), orderByChild('puan'), limitToLast(20));
 
-    /* Cevaplanmış pasları atla */
-    while (
-      oyunDurumu.pasIndeks < oyunDurumu.pasKuyrugu.length &&
-      oyunDurumu.harfDurumlari[oyunDurumu.pasKuyrugu[oyunDurumu.pasIndeks]] !== 'pas'
-    ) {
-      oyunDurumu.pasIndeks++;
+  onValue(skorSorgu, (anlık) => {
+    const veri = anlık.val();
+    const liste = document.getElementById('genelSkorListe');
+    liste.innerHTML = '';
+
+    if (!veri) {
+      liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Henüz skor yok. İlk sen ol!</div>`;
+      return;
     }
 
-    if (oyunDurumu.pasIndeks >= oyunDurumu.pasKuyrugu.length) {
-      /* Kuyruk bitti, kalan pas var mı? */
-      const kalanPaslar = oyunDurumu.pasKuyrugu.filter(
-        h => oyunDurumu.harfDurumlari[h] === 'pas'
-      );
-      if (kalanPaslar.length === 0) {
-        oyunuBitir();
-        return;
-      }
-      /* Başa dön */
-      oyunDurumu.pasIndeks = 0;
-      while (
-        oyunDurumu.pasIndeks < oyunDurumu.pasKuyrugu.length &&
-        oyunDurumu.harfDurumlari[oyunDurumu.pasKuyrugu[oyunDurumu.pasIndeks]] !== 'pas'
-      ) {
-        oyunDurumu.pasIndeks++;
-      }
-    }
-    harfiAktifYap(oyunDurumu.pasIndeks);
+    const skorDizisi = Object.values(veri).sort((a, b) => b.puan - a.puan).slice(0, 20);
+    const madalyalar = ['🥇','🥈','🥉'];
 
-  } else {
-    /* Normal turda bir sonraki harfe geç */
-    oyunDurumu.mevcutHarfIndeks++;
+    skorDizisi.forEach((skor, i) => {
+      // Eski skorlarda bu veriler olmayabilir, varsayılan değer (0) koyuyoruz
+      const d = skor.dogru || 0;
+      const y = skor.yanlis || 0;
+      const p = skor.pas || 0;
 
-    if (oyunDurumu.mevcutHarfIndeks >= HARFLER.length) {
-      /* Tüm harfler tamamlandı, pas turuna geç */
-      const kalanPaslar = oyunDurumu.pasKuyrugu.filter(
-        h => oyunDurumu.harfDurumlari[h] === 'pas'
-      );
-      if (kalanPaslar.length === 0) {
-        oyunuBitir();
-        return;
-      }
-      oyunDurumu.pasModu = true;
-      oyunDurumu.pasIndeks = 0;
-      harfiAktifYap(oyunDurumu.pasIndeks);
-    } else {
-      harfiAktifYap(oyunDurumu.mevcutHarfIndeks);
-    }
-  }
-}
-
-/* ========================================
-   CEVAP KONTROL
-   Büyük/küçük harf ve Türkçe karakter duyarsız
-   ======================================== */
-function cevapKontrol(verilen, dogru, alternatifler) {
-  const normaliz = (s) => s.trim().toLowerCase()
-    .replace(/i̇/g, 'i')
-    .replace(/ı/g, 'i')
-    .replace(/İ/g, 'i')
-    .replace(/I/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/Ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/Ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/Ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/Ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .replace(/Ç/g, 'c');
-
-  const v = normaliz(verilen);
-  const d = normaliz(dogru);
-
-  /* Tam eşleşme */
-  if (v === d) return true;
-
-  /* Alternatifler ile karşılaştır */
-  for (const alt of alternatifler) {
-    if (v === normaliz(alt)) return true;
-  }
-
-  /* Kısmi eşleşme (en az 3 karakter) */
-  if (v.length >= 3 && (d.includes(v) || v.includes(d))) return true;
-
-  return false;
-}
-
-/* ========================================
-   CEVAP ALANINI TEMİZLE
-   ======================================== */
-function cevapAlaniniTemizle() {
-  document.getElementById('cevapGiris').value = '';
-  document.getElementById('bilgisayarCevapGiris').value = '';
-  document.getElementById('cevapGiris').addEventListener('focus', () => {
-  setTimeout(() => {
-    daireOlustur();
-    aktifTopuIsaretle(oyunDurumu.mevcutHarf);
-  }, 500);
-});
-document.getElementById('cevapGiris').addEventListener('blur', () => {
-  setTimeout(() => {
-    daireOlustur();
-    aktifTopuIsaretle(oyunDurumu.mevcutHarf);
-  }, 300);
-});
-}
-
-/* ========================================
-   OYUNU BİTİR
-   ======================================== */
-function oyunuBitir() {
-  clearInterval(oyunDurumu.zamanlayici);
-  oyunDurumu.calisiyor = false;
-
-  /* Süre bonusu */
-  const bonus = Math.max(0, Math.floor(oyunDurumu.kalanSure / 5));
-  oyunDurumu.puan += bonus;
-
-  /* Skoru kaydet */
-  skorkaydet(oyunDurumu.puan);
-
-  /* Sonuç ekranını oluştur */
-  sonucEkraniniOlustur(bonus);
-  ekraniGoster('sonucEkrani');
-}
-
-/* ========================================
-   SKOR KAYDET
-   Firebase ve localStorage'a kaydeder
-   ======================================== */
-function skorkaydet(puan) {
-  /* Aktif profili al */
-  const profil = aktifProfiliGetir();
-  if (!profil) return;
-
-  /* Kişisel skoru localStorage'a kaydet */
-  const profiller = profilleriGetir();
-  const indeks = profiller.findIndex(p => p.id === profil.id);
-  if (indeks !== -1) {
-    profiller[indeks].skorlar = profiller[indeks].skorlar || [];
-    profiller[indeks].skorlar.push({
-      puan,
-      tarih: new Date().toISOString()
+      const satir = document.createElement('div');
+      satir.className = 'skor-satir';
+      satir.innerHTML = `
+        <div class="skor-satir-ust">
+          <div class="skor-sira">${madalyalar[i] || (i + 1)}</div>
+          <div class="skor-isim">${skor.isim}</div>
+          <div class="skor-puan">${skor.puan} puan</div>
+        </div>
+        <div class="skor-satir-alt">
+          <span style="color:var(--dogru-renk);">✓ ${d}</span>
+          <span style="color:var(--yanlis-renk);">✗ ${y}</span>
+          <span style="color:var(--pas-renk);">~ ${p}</span>
+        </div>
+      `;
+      liste.appendChild(satir);
     });
-    /* En fazla 50 skor sakla */
-    profiller[indeks].skorlar = profiller[indeks].skorlar
-      .sort((a, b) => b.puan - a.puan)
-      .slice(0, 50);
-    profilleriKaydet(profiller);
-  }
-
-  /* Firebase'e genel skoru gönder */
-  const skorRef = ref(veritabani, 'skorlar');
-  push(skorRef, {
-    isim: profil.ad,
-    puan,
-    tarih: new Date().toISOString()
-  }).catch(console.error);
+  });
 }
 
-/* ========================================
-   SONUÇ EKRANI OLUŞTUR
-   ======================================== */
-function sonucEkraniniOlustur(bonus) {
-  let dogru = 0, yanlis = 0, pas = 0;
-  const liste = document.getElementById('sonucListe');
+function kisiselSkorTablosunuGuncelle() {
+  const profil = aktifProfiliGetir();
+  const liste = document.getElementById('kisiselSkorListe');
   liste.innerHTML = '';
 
-  HARFLER.forEach(harf => {
-    const durum = oyunDurumu.harfDurumlari[harf];
-    if (durum === 'dogru') dogru++;
-    else if (durum === 'yanlis') yanlis++;
-    else if (durum === 'pas') pas++;
+  if (!profil || !profil.skorlar || profil.skorlar.length === 0) {
+    liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Henüz skor yok. Oyna ve rekorunu kır!</div>`;
+    return;
+  }
 
-    const veri = oyunDurumu.harfCevaplari[harf] || {
-      verilen: '—',
-      dogru: oyunDurumu.secilenSorular[harf]?.cevap || '?',
-      soru: oyunDurumu.secilenSorular[harf]?.soru || ''
-    };
+  const kodKutu = document.createElement('div');
+  kodKutu.style.cssText = 'padding:0 16px 12px;';
+  kodKutu.innerHTML = `<div class="ayar-etiket">Yedekleme Kodu</div><div class="yedek-kod-kutu" style="font-size:11px;letter-spacing:1px;cursor:pointer;" onclick="kopyala(this)" title="Kopyalamak için tıkla">${yedekKoduOlustur(profil).substring(0, 40)}...</div>`;
+  liste.appendChild(kodKutu);
 
-    const sinif = durum === 'dogru' ? 's-dogru' : durum === 'yanlis' ? 's-yanlis' : 's-pas';
-
-    const kalem = document.createElement('div');
-    kalem.className = `sonuc-kalem ${sinif}`;
-    kalem.innerHTML = `
-      <div class="sonuc-harf">${harf}</div>
-      <div class="sonuc-bilgi">
-        <div class="sonuc-soru">${veri.soru}</div>
-        <div class="sonuc-verilen-cevap">
-          ${veri.verilen === 'Pas' ? 'Pas geçildi' : veri.verilen}
+  const madalyalar = ['🥇','🥈','🥉'];
+  profil.skorlar.slice(0, 20).forEach((skor, i) => {
+    const tarih = new Date(skor.tarih).toLocaleDateString('tr-TR');
+    const d = skor.dogru || 0; const y = skor.yanlis || 0; const p = skor.pas || 0;
+    
+    const satir = document.createElement('div');
+    satir.className = 'skor-satir';
+    satir.innerHTML = `
+        <div class="skor-satir-ust">
+          <div class="skor-sira">${madalyalar[i] || (i + 1)}</div>
+          <div class="skor-isim">${profil.ad} <span style="font-size:11px;color:var(--metin-soluk)">${tarih}</span></div>
+          <div class="skor-puan">${skor.puan} puan</div>
         </div>
-        ${durum !== 'dogru'
-          ? `<div class="sonuc-dogru-cevap">✓ Doğru: ${veri.dogru}</div>`
-          : ''}
-        <button class="hata-bildir-buton" onclick="hataBildir('${harf}', this)">⚠ Hata Bildir</button>
-      </div>
+        <div class="skor-satir-alt">
+          <span style="color:var(--dogru-renk);">✓ ${d}</span>
+          <span style="color:var(--yanlis-renk);">✗ ${y}</span>
+          <span style="color:var(--pas-renk);">~ ${p}</span>
+        </div>
     `;
-    liste.appendChild(kalem);
+    liste.appendChild(satir);
   });
-
-  document.getElementById('finalPuan').textContent = oyunDurumu.puan;
-  document.getElementById('istatDogru').textContent = `✓ ${dogru} Doğru`;
-  document.getElementById('istatYanlis').textContent = `✗ ${yanlis} Yanlış`;
-  document.getElementById('istatPas').textContent = `~ ${pas} Pas`;
-  document.getElementById('istatBonus').textContent = `⏱ +${bonus} Bonus`;
 }
 
-/* ========================================
-   ANA SAYFAYA GİT
-   ======================================== */
 window.anaSayfayaGit = function() {
   clearInterval(oyunDurumu.zamanlayici);
   oyunDurumu.calisiyor = false;
@@ -2851,260 +1193,50 @@ window.anaSayfayaGit = function() {
   if (aktifProfil) {
     document.getElementById('profilOlusturKutu').style.display = 'none';
     const hazir = document.getElementById('hazirEkrani');
-    hazir.style.display = 'flex';
-    hazir.style.flexDirection = 'column';
-    hazir.style.alignItems = 'center';
-    hazir.style.gap = '16px';
+    hazir.style.display = 'flex'; hazir.style.flexDirection = 'column'; hazir.style.alignItems = 'center'; hazir.style.gap = '16px';
     document.getElementById('hosgeldinIsim').textContent = aktifProfil.ad;
   }
 };
 
-/* ========================================
-   GENEL SKOR TABLOSUNU DİNLE
-   Firebase realtime güncelleme
-   ======================================== */
-function genelSkorTablosunuDinle() {
-  const skorSorgu = query(
-    ref(veritabani, 'skorlar'),
-    orderByChild('puan'),
-    limitToLast(10)
-  );
+window.profilOlustur = function() {
+  const isim = document.getElementById('profilIsimGiris').value.trim();
+  if (!isim) { toastGoster('Lütfen bir isim girin!'); return; }
+  const yeniProfil = { id: 'profil_' + Date.now(), ad: isim, skorlar: [], olusturulma: new Date().toISOString() };
+  const profiller = profilleriGetir(); profiller.push(yeniProfil); profilleriKaydet(profiller);
+  localStorage.setItem('pw_aktif_profil', yeniProfil.id);
+  document.getElementById('profilOlusturKutu').style.display = 'none';
+  const hazir = document.getElementById('hazirEkrani');
+  hazir.style.display = 'flex'; hazir.style.flexDirection = 'column'; hazir.style.alignItems = 'center'; hazir.style.gap = '16px';
+  document.getElementById('hosgeldinIsim').textContent = isim;
+  document.getElementById('aktifProfilAdi').textContent = isim;
+};
 
-  onValue(skorSorgu, (anlık) => {
-    const veri = anlık.val();
-    const liste = document.getElementById('genelSkorListe');
-    liste.innerHTML = '';
-
-    if (!veri) {
-      liste.innerHTML = `
-        <div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">
-          Henüz skor yok. İlk sen ol!
-        </div>`;
-      return;
-    }
-
-    /* Skorları büyükten küçüğe sırala */
-    const skorDizisi = Object.values(veri)
-      .sort((a, b) => b.puan - a.puan)
-      .slice(0, 10);
-
-    const madalyalar = ['🥇','🥈','🥉'];
-
-    skorDizisi.forEach((skor, i) => {
-      const satir = document.createElement('div');
-      satir.className = 'skor-satir';
-      satir.innerHTML = `
-        <div class="skor-sira">${madalyalar[i] || (i + 1)}</div>
-        <div class="skor-isim">${skor.isim}</div>
-        <div class="skor-puan">${skor.puan} puan</div>
-      `;
-      liste.appendChild(satir);
-    });
-  });
-}
-
-/* ========================================
-   KİŞİSEL SKOR TABLOSUNU GÜNCELLE
-   ======================================== */
-function kisiselSkorTablosunuGuncelle() {
-  const profil = aktifProfiliGetir();
-  const liste = document.getElementById('kisiselSkorListe');
-  liste.innerHTML = '';
-
-  if (!profil || !profil.skorlar || profil.skorlar.length === 0) {
-    liste.innerHTML = `
-      <div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">
-        Henüz skor yok. Oyna ve rekorunu kır!
-      </div>`;
-    return;
-  }
-
-  /* Yedekleme kodu göster */
-  const kodKutu = document.createElement('div');
-  kodKutu.style.cssText = 'padding:0 16px 12px;';
-  kodKutu.innerHTML = `
-    <div class="ayar-etiket">Yedekleme Kodu</div>
-    <div class="yedek-kod-kutu" style="font-size:11px;letter-spacing:1px;cursor:pointer;"
-      onclick="kopyala(this)"
-      title="Kopyalamak için tıkla">
-      ${yedekKoduOlustur(profil).substring(0, 40)}...
-    </div>
-  `;
-  liste.appendChild(kodKutu);
-
-  const madalyalar = ['🥇','🥈','🥉'];
-  profil.skorlar.slice(0, 10).forEach((skor, i) => {
-    const tarih = new Date(skor.tarih).toLocaleDateString('tr-TR');
-    const satir = document.createElement('div');
-    satir.className = 'skor-satir';
-    satir.innerHTML = `
-      <div class="skor-sira">${madalyalar[i] || (i + 1)}</div>
-      <div class="skor-isim">${profil.ad} <span style="font-size:11px;color:var(--metin-soluk)">${tarih}</span></div>
-      <div class="skor-puan">${skor.puan} puan</div>
-    `;
-    liste.appendChild(satir);
-  });
-}
-
-/* ========================================
-   ÖZEL TÜRKÇE KLAVYE OLUŞTUR
-   ======================================== */
-function ozelKlavyeOlustur() {
-  /* Klavye düzeni - Türkçe Q klavye */
-  const satirlar = [
-    ['Q','W','E','R','T','Y','U','I','O','P','Ğ','Ü'],
-    ['A','S','D','F','G','H','J','K','L','Ş','İ'],
-    ['Z','X','C','V','B','N','M','Ö','Ç','⌫'],
-    ['BOSLUK','↵']
-  ];
-
-  const klavye = document.getElementById('ozelKlavye');
-  klavye.innerHTML = '';
-
-  satirlar.forEach((satir) => {
-    const satirEl = document.createElement('div');
-    satirEl.className = 'klavye-satiri';
-
-    satir.forEach(tus => {
-      const tusEl = document.createElement('div');
-      tusEl.className = 'klavye-tusu';
-      tusEl.setAttribute('role', 'button');
-
-      if (tus === 'BOSLUK') {
-        /* Boşluk tuşu - evrensel sembol */
-        tusEl.classList.add('tus-bosluk');
-        tusEl.innerHTML = `
-          <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
-            <path d="M2 3 L2 11 L22 11 L22 3"
-              stroke="rgba(255,255,255,0.45)" stroke-width="2"
-              fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>`;
-        tusEl.addEventListener('click', () => tusaBasildi(' '));
-
-      } else if (tus === '⌫') {
-        /* Silme tuşu - SVG */
-        tusEl.classList.add('tus-sil');
-        tusEl.innerHTML = `
-          <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
-            <path d="M9 1L2 8L9 15" stroke="white" stroke-width="2"
-              fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="2" y1="8" x2="21" y2="8"
-              stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <line x1="14" y1="4" x2="21" y2="11"
-              stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <line x1="21" y1="4" x2="14" y2="11"
-              stroke="white" stroke-width="2" stroke-linecap="round"/>
-          </svg>`;
-        let silZamanlayi = null;
-let silBaslangic = null;
-tusEl.addEventListener('touchstart', (e) => {
-  e.preventDefault();
-  silBaslangic = setTimeout(() => {
-    silZamanlayi = setInterval(() => tusaBasildi('SİL'), 80);
-  }, 400);
-});
-tusEl.addEventListener('touchend', () => {
-  clearTimeout(silBaslangic);
-  clearInterval(silZamanlayi);
-  silZamanlayi = null;
-  tusaBasildi('SİL');
-});
-tusEl.addEventListener('touchcancel', () => {
-  clearTimeout(silBaslangic);
-  clearInterval(silZamanlayi);
-  silZamanlayi = null;
-});
-tusEl.addEventListener('click', () => {});
-         
-      } else if (tus === '↵') {
-        /* Enter tuşu - SVG */
-        tusEl.classList.add('tus-enter');
-        tusEl.innerHTML = `
-          <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
-            <path d="M21 2L21 9L3 9"
-              stroke="white" stroke-width="2"
-              fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M7 5L3 9L7 13"
-              stroke="white" stroke-width="2"
-              fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>`;
-        tusEl.addEventListener('click', () => cevapVer());
-
-      } else {
-        /* Normal harf tuşu */
-        tusEl.textContent = tus;
-        tusEl.addEventListener('click', () => tusaBasildi(tus));
-      }
-
-      satirEl.appendChild(tusEl);
-    });
-
-    klavye.appendChild(satirEl);
-  });
-}
-
-/* ========================================
-   TUŞA BASILDI
-   Özel klavye tuş işlemi
-   ======================================== */
-function tusaBasildi(tus) {
-  const giris = document.getElementById('cevapGiris');
-  if (tus === 'SİL') {
-    giris.value = giris.value.slice(0, -1);
-  } else {
-    giris.value += tus;
-  }
-}
-
-/* ========================================
-   FİZİKSEL KLAVYE DESTEĞİ
-   Bilgisayar için
-   ======================================== */
 document.addEventListener('keydown', (e) => {
-  /* Oyun ekranı aktif değilse çalışma */
   if (document.getElementById('oyunEkrani').classList.contains('gizli')) return;
-  /* Modal açıksa çalışma */
   if (document.querySelector('.modal-arkaplan.acik')) return;
-
-  const dokunmatik = window._dokunmatik;
-  const bilgisayarMi = !dokunmatik && window.innerWidth >= 1025;
-
+  const bilgisayarMi = !window._dokunmatik && window.innerWidth >= 1025;
   if (bilgisayarMi) {
-    /* Bilgisayarda Enter ile cevapla */
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      cevapVer();
-    }
-    /* Bilgisayarda boşluk ile pas (input dışında) */
-    if (e.key === ' ' && document.activeElement !== document.getElementById('bilgisayarCevapGiris')) {
-      e.preventDefault();
-      pasCek();
-    }
+    if (e.key === 'Enter') { e.preventDefault(); cevapVer(); }
+    if (e.key === ' ' && document.activeElement !== document.getElementById('bilgisayarCevapGiris')) { e.preventDefault(); pasCek(); }
   } else {
     if (e.key === 'Enter') { e.preventDefault(); cevapVer(); return; }
-     }
+  }
 });
 
-/* ========================================
-   MODAL SİSTEMİ
-   ======================================== */
+/* Modallar */
 window.modalAc = function(id) {
-  /* Skor modalı açılınca kişisel tabloyu güncelle */
   if (id === 'skorModal') kisiselSkorTablosunuGuncelle();
+  if (id === 'profilSecModal') profilListesiniGuncelle();
+  if (id === 'geriBildirimModal') altTurGuncelle('oneri');
+  if (id === 'adminModal') {
+    document.getElementById('adminSifreEkrani').classList.remove('gizli');
+    document.getElementById('adminIcerik').classList.add('gizli');
+    document.getElementById('adminSifreGiris').value = '';
+  }
   document.getElementById(id).classList.add('acik');
 };
-
-window.modalKapat = function(id) {
-  document.getElementById(id).classList.remove('acik');
-};
-
-window.disaTiklaKapat = function(e, id) {
-  if (e.target === document.getElementById(id)) modalKapat(id);
-};
-
-/* ========================================
-   SEKME GEÇİŞİ (Skor tablosu)
-   ======================================== */
+window.modalKapat = function(id) { document.getElementById(id).classList.remove('acik'); };
+window.disaTiklaKapat = function(e, id) { if (e.target === document.getElementById(id)) modalKapat(id); };
 window.sekmeGec = function(sekme) {
   document.getElementById('sekmeGenel').classList.toggle('aktif', sekme === 'genel');
   document.getElementById('sekmeKisisel').classList.toggle('aktif', sekme === 'kisisel');
@@ -3112,618 +1244,219 @@ window.sekmeGec = function(sekme) {
   document.getElementById('kisiselSkorListe').classList.toggle('gizli', sekme !== 'kisisel');
 };
 
-/* ========================================
-   GERİ BİLDİRİM GÖNDER
-   EmailJS ve Firebase ile
-   ======================================== */
+/* Form ve Seçimler */
 window.geriBildirimGonder = async function() {
   const mesaj = document.getElementById('geriBildirimMesaj').value.trim();
   if (!mesaj) { toastGoster('Lütfen mesajınızı yazın!'); return; }
-
   const kategoriEl = document.querySelector('#kategoriGrubu .secim-cipi.secili');
   const altTurEl = document.querySelector('#altTurGrubu .secim-cipi.secili');
-
   const kategori = kategoriEl ? kategoriEl.textContent.trim() : 'Belirsiz';
   const altTur = altTurEl ? altTurEl.textContent.trim() : 'Belirsiz';
   const profil = aktifProfiliGetir();
   const profilAdi = profil ? profil.ad : 'Anonim';
-  const tarih = new Date().toLocaleString('tr-TR');
+  const cevap = document.getElementById('geriBildirimCevap').value.trim();
+  const alternatif = document.getElementById('geriBildirimAlternatif').value.trim();
 
-  /* Firebase'e kaydet */
   try {
     const geriBildirimRef = ref(veritabani, 'geribildirimler');
-    const cevap = document.getElementById('geriBildirimCevap').value.trim();
-const alternatif = document.getElementById('geriBildirimAlternatif').value.trim();
-
-await push(geriBildirimRef, {
-  profilAdi,
-  kategori,
-  altTur,
-  mesaj,
-  cevap: cevap || '',
-  alternatifler: alternatif || '',
-  tarih: new Date().toISOString()
-});
-  } catch (hata) {
-    console.warn('Firebase kayıt hatası:', hata);
-  }
-
-  /* EmailJS ile gönder */
-  try {
-    await emailjs.send(
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-  {
-    profil_adi:    profilAdi,
-    kategori,
-    alt_tur:       altTur,
-    mesaj,
-    cevap:         cevap        || '(belirtilmedi)',
-    alternatifler: alternatif   || '(yok)',
-    tarih,
-    name:          profilAdi
-  }
-);
+    await push(geriBildirimRef, { profilAdi, kategori, altTur, mesaj, cevap: cevap || '', alternatifler: alternatif || '', tarih: new Date().toISOString() });
     toastGoster('Geri bildiriminiz gönderildi! Teşekkürler 🙏');
     document.getElementById('geriBildirimMesaj').value = '';
     modalKapat('geriBildirimModal');
-  } catch (hata) {
-    console.warn('EmailJS hatası:', hata);
-    toastGoster('Geri bildiriminiz gönderildi! Teşekkürler 🙏');
-    modalKapat('geriBildirimModal');
-  }
+  } catch (hata) { console.warn(hata); }
 };
 
-/* ========================================
-   ALT TÜR GÜNCELLE (Geri bildirim formu)
-   ======================================== */
 window.altTurGuncelle = function(kategori) {
-  const grup = document.getElementById('altTurGrubu');
-  grup.innerHTML = '';
-
-  const secenekler = kategori === 'oneri'
-    ? [['❓ Soru Önerisi', true], ['🎮 Oyunla İlgili Öneri', false]]
-    : [['🐛 Soru Hatası', true], ['⚙️ Teknik Hata', false], ['🔤 Harf/Soru Uyumsuzluğu', false]];
-
+  const grup = document.getElementById('altTurGrubu'); grup.innerHTML = '';
+  const secenekler = kategori === 'oneri' ? [['❓ Soru Önerisi', true], ['🎮 Oyunla İlgili Öneri', false]] : [['🐛 Soru Hatası', true], ['⚙️ Teknik Hata', false], ['🔤 Harf/Soru Uyumsuzluğu', false]];
   secenekler.forEach(([metin, secili]) => {
-    const cip = document.createElement('div');
-    cip.className = `secim-cipi${secili ? ' secili' : ''}`;
-    cip.textContent = metin;
-    cip.onclick = () => {
-      cipSec(cip, 'altTurGrubu');
-    };
+    const cip = document.createElement('div'); cip.className = `secim-cipi${secili ? ' secili' : ''}`; cip.textContent = metin;
+    cip.onclick = () => { cipSec(cip, 'altTurGrubu'); };
     grup.appendChild(cip);
   });
-
-  /* Soru önerisi ilk seçili, alternatif alanını ona göre ayarla */
   const ilkSecili = grup.querySelector('.secim-cipi.secili');
   const soruOneriMi = ilkSecili && ilkSecili.textContent.includes('Soru');
   document.getElementById('alternatifGrup').style.display = soruOneriMi ? 'block' : 'none';
 };
-
-/* ========================================
-   CİP SEÇ (Seçim çipleri için)
-   ======================================== */
 window.cipSec = function(el, grupId) {
-  el.closest('.secim-grubu').querySelectorAll('.secim-cipi')
-    .forEach(c => c.classList.remove('secili'));
+  el.closest('.secim-grubu').querySelectorAll('.secim-cipi').forEach(c => c.classList.remove('secili'));
   el.classList.add('secili');
-
-  if (grupId === 'altTurGrubu') {
-    const soruOneriMi = el.textContent.includes('Soru');
-    document.getElementById('alternatifGrup').style.display = soruOneriMi ? 'block' : 'none';
-  }
+  if (grupId === 'altTurGrubu') { document.getElementById('alternatifGrup').style.display = el.textContent.includes('Soru') ? 'block' : 'none'; }
 };
 
-/* ========================================
-   YENİ PROFİL EKLE
-   ======================================== */
 window.yeniProfilEkle = function() {
   const ad = document.getElementById('yeniProfilAdi').value.trim();
   if (!ad) { toastGoster('Lütfen profil adı girin!'); return; }
-
-  const yeniProfil = {
-    id: 'profil_' + Date.now(),
-    ad,
-    skorlar: [],
-    olusturulma: new Date().toISOString()
-  };
-
-  const profiller = profilleriGetir();
-  profiller.push(yeniProfil);
-  profilleriKaydet(profiller);
-
-  document.getElementById('yeniProfilAdi').value = '';
-  modalKapat('profilEkleModal');
-  toastGoster(`"${ad}" profili oluşturuldu!`);
+  const yeniProfil = { id: 'profil_' + Date.now(), ad, skorlar: [], olusturulma: new Date().toISOString() };
+  const profiller = profilleriGetir(); profiller.push(yeniProfil); profilleriKaydet(profiller);
+  document.getElementById('yeniProfilAdi').value = ''; modalKapat('profilEkleModal'); toastGoster(`"${ad}" oluşturuldu!`);
 };
 
-/* ========================================
-   PROFİL SEÇ
-   ======================================== */
-window.modalAc = function(id) {
-  if (id === 'skorModal') kisiselSkorTablosunuGuncelle();
-  if (id === 'profilSecModal') profilListesiniGuncelle();
-  if (id === 'geriBildirimModal') altTurGuncelle('oneri');
-  if (id === 'adminModal') {
-    /* Admin modalı açılınca şifre ekranını göster */
-    document.getElementById('adminSifreEkrani').classList.remove('gizli');
-    document.getElementById('adminIcerik').classList.add('gizli');
-    document.getElementById('adminSifreGiris').value = '';
-  }
-  document.getElementById(id).classList.add('acik');
-};
-
-/* Profil listesini güncelle */
 function profilListesiniGuncelle() {
-  const profiller = profilleriGetir();
-  const aktifProfil = aktifProfiliGetir();
-  const liste = document.getElementById('profilListesi');
-  liste.innerHTML = '';
-
-  if (profiller.length === 0) {
-    liste.innerHTML = `
-      <div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">
-        Kayıtlı profil yok.
-      </div>`;
-    return;
-  }
-
+  const profiller = profilleriGetir(); const aktifProfil = aktifProfiliGetir();
+  const liste = document.getElementById('profilListesi'); liste.innerHTML = '';
+  if (profiller.length === 0) { liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Kayıtlı profil yok.</div>`; return; }
+  
   profiller.forEach(profil => {
     const satir = document.createElement('div');
     satir.className = `profil-satir${profil.id === aktifProfil?.id ? ' aktif-profil' : ''}`;
-
-    const enIyiSkor = profil.skorlar?.length > 0
-      ? Math.max(...profil.skorlar.map(s => s.puan))
-      : 0;
-
-    satir.innerHTML = `
-      <div class="profil-adi">${profil.ad}</div>
-      <div class="profil-skor">${enIyiSkor > 0 ? enIyiSkor + ' puan' : 'Yeni'}</div>
-      ${profil.id === aktifProfil?.id ? '<span class="rozet-aktif">AKTİF</span>' : ''}
-    `;
-
-    /* Tek tıklama: profil seç */
+    const enIyiSkor = profil.skorlar?.length > 0 ? Math.max(...profil.skorlar.map(s => s.puan)) : 0;
+    satir.innerHTML = `<div class="profil-adi">${profil.ad}</div><div class="profil-skor">${enIyiSkor > 0 ? enIyiSkor + ' puan' : 'Yeni'}</div>${profil.id === aktifProfil?.id ? '<span class="rozet-aktif">AKTİF</span>' : ''}`;
+    
     satir.addEventListener('click', () => {
       localStorage.setItem('pw_aktif_profil', profil.id);
       document.getElementById('aktifProfilAdi').textContent = profil.ad;
       document.getElementById('hosgeldinIsim').textContent = profil.ad;
-      profilListesiniGuncelle();
-      toastGoster(`"${profil.ad}" profili seçildi`);
+      profilListesiniGuncelle(); toastGoster(`"${profil.ad}" seçildi`);
     });
-
-    /* Uzun basma: profil sil (dokunmatik) */
+    
     let uzunBasmaZamanlayi;
-    satir.addEventListener('touchstart', () => {
-      uzunBasmaZamanlayi = setTimeout(() => {
-        profilSilOnay(profil);
-      }, 1000);
-    });
+    satir.addEventListener('touchstart', () => { uzunBasmaZamanlayi = setTimeout(() => { profilSilOnay(profil); }, 1000); });
     satir.addEventListener('touchend', () => clearTimeout(uzunBasmaZamanlayi));
     satir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZamanlayi));
-
-    /* Uzun basma: profil sil (bilgisayar) */
-    let mouseBasmaZamanlayi;
-    satir.addEventListener('mousedown', () => {
-      mouseBasmaZamanlayi = setTimeout(() => {
-        profilSilOnay(profil);
-      }, 1000);
-    });
-    satir.addEventListener('mouseup', () => clearTimeout(mouseBasmaZamanlayi));
-    satir.addEventListener('mouseleave', () => clearTimeout(mouseBasmaZamanlayi));
-
+    satir.addEventListener('mousedown', () => { uzunBasmaZamanlayi = setTimeout(() => { profilSilOnay(profil); }, 1000); });
+    satir.addEventListener('mouseup', () => clearTimeout(uzunBasmaZamanlayi));
+    satir.addEventListener('mouseleave', () => clearTimeout(uzunBasmaZamanlayi));
     liste.appendChild(satir);
   });
 }
 
-/* ========================================
-   PROFİL SİL ONAY
-   ======================================== */
 function profilSilOnay(profil) {
-  onayGoster(
-    'Profili Sil',
-    `"${profil.ad}" profilini ve tüm skorlarını silmek istediğine emin misin?`,
-    () => {
-      const profiller = profilleriGetir().filter(p => p.id !== profil.id);
-      profilleriKaydet(profiller);
-
-      /* Silinen profil aktifse başka profil seç */
-      const aktif = aktifProfiliGetir();
-      if (!aktif || aktif.id === profil.id) {
-        if (profiller.length > 0) {
-          localStorage.setItem('pw_aktif_profil', profiller[0].id);
-        } else {
-          localStorage.removeItem('pw_aktif_profil');
-        }
-      }
-
-      profilListesiniGuncelle();
-toastGoster(`"${profil.ad}" silindi`);
-
-/* Hiç profil kalmadıysa profil oluştur ekranına geç */
-/* Hiç profil kalmadıysa profil oluştur ekranına geç */
-const kalanProfiller = profilleriGetir();
-if (kalanProfiller.length === 0) {
-  modalKapat('profilSecModal');
-  modalKapat('ayarlarModal');
-  ekraniGoster('baslangicEkrani');
-  document.getElementById('hazirEkrani').style.display = 'none';
-  document.getElementById('profilOlusturKutu').style.display = 'block';
-  document.getElementById('hosgeldinIsim').textContent = '';
-  document.getElementById('aktifProfilAdi').textContent = '—';
-} else {
-  const yeniAktif = aktifProfiliGetir();
-  if (yeniAktif) {
-    document.getElementById('aktifProfilAdi').textContent = yeniAktif.ad;
-    document.getElementById('hosgeldinIsim').textContent = yeniAktif.ad;
-  }
-}
+  onayGoster('Profili Sil', `"${profil.ad}" profilini silmek istediğine emin misin?`, () => {
+    const profiller = profilleriGetir().filter(p => p.id !== profil.id); profilleriKaydet(profiller);
+    const aktif = aktifProfiliGetir();
+    if (!aktif || aktif.id === profil.id) {
+      if (profiller.length > 0) localStorage.setItem('pw_aktif_profil', profiller[0].id);
+      else localStorage.removeItem('pw_aktif_profil');
     }
-  );
+    profilListesiniGuncelle(); toastGoster(`"${profil.ad}" silindi`);
+    const kalanProfiller = profilleriGetir();
+    if (kalanProfiller.length === 0) {
+      modalKapat('profilSecModal'); modalKapat('ayarlarModal'); ekraniGoster('baslangicEkrani');
+      document.getElementById('hazirEkrani').style.display = 'none'; document.getElementById('profilOlusturKutu').style.display = 'block';
+    } else {
+      const yeniAktif = aktifProfiliGetir();
+      if (yeniAktif) { document.getElementById('aktifProfilAdi').textContent = yeniAktif.ad; document.getElementById('hosgeldinIsim').textContent = yeniAktif.ad; }
+    }
+  });
 }
 
-/* ========================================
-   YEDEKLEME KODU GÖSTER
-   ======================================== */
-window.yedekKoduGoster = function() {
-  const profil = aktifProfiliGetir();
-  if (!profil) { toastGoster('Aktif profil bulunamadı!'); return; }
-  document.getElementById('yedekKodGosterge').textContent = yedekKoduOlustur(profil);
-  modalAc('yedekKodModal');
-};
-
-/* ========================================
-   PROFİL GERİ YÜKLE
-   ======================================== */
+window.yedekKoduGoster = function() { const profil = aktifProfiliGetir(); if (!profil) return; document.getElementById('yedekKodGosterge').textContent = yedekKoduOlustur(profil); modalAc('yedekKodModal'); };
 window.profilGeriYukle = function() {
   const kod = document.getElementById('yedekKodGiris').value.trim();
-  if (!kod) { toastGoster('Lütfen yedekleme kodunu girin!'); return; }
-  
-  if (kod === '/adminpanel') {
-    document.getElementById('yedekKodGiris').value = '';
-    modalKapat('profilYukleModal');
-    modalAc('adminModal');
-    return;
-  }
-
-   if (kod === '/genelsifirla') {
-    document.getElementById('yedekKodGiris').value = '';
-    modalKapat('profilYukleModal');
-    genelSifirlaBaslat();
-    return;
-  }
-   
-  const veri = yedekKodunuCoz(kod);
-  if (!veri) { toastGoster('Geçersiz yedekleme kodu!'); return; }
-
-  const profiller = profilleriGetir();
-  /* Aynı ID varsa güncelle, yoksa ekle */
-  const mevcutIndeks = profiller.findIndex(p => p.id === veri.id);
-  if (mevcutIndeks !== -1) {
-    profiller[mevcutIndeks] = { ...profiller[mevcutIndeks], ...veri };
-  } else {
-    profiller.push(veri);
-  }
-
-  profilleriKaydet(profiller);
-  localStorage.setItem('pw_aktif_profil', veri.id);
-  document.getElementById('yedekKodGiris').value = '';
-  modalKapat('profilYukleModal');
-  toastGoster(`"${veri.ad}" profili geri yüklendi!`);
+  if (!kod) { toastGoster('Lütfen kod girin!'); return; }
+  if (kod === '/adminpanel') { document.getElementById('yedekKodGiris').value = ''; modalKapat('profilYukleModal'); modalAc('adminModal'); return; }
+  if (kod === '/genelsifirla') { document.getElementById('yedekKodGiris').value = ''; modalKapat('profilYukleModal'); genelSifirlaBaslat(); return; }
+  const veri = yedekKodunuCoz(kod); if (!veri) { toastGoster('Geçersiz kod!'); return; }
+  const profiller = profilleriGetir(); const mevcutIndeks = profiller.findIndex(p => p.id === veri.id);
+  if (mevcutIndeks !== -1) profiller[mevcutIndeks] = { ...profiller[mevcutIndeks], ...veri }; else profiller.push(veri);
+  profilleriKaydet(profiller); localStorage.setItem('pw_aktif_profil', veri.id); document.getElementById('yedekKodGiris').value = ''; modalKapat('profilYukleModal'); toastGoster(`"${veri.ad}" yüklendi!`);
 };
 
-   window.genelSifirlaBaslat = function() {
+window.genelSifirlaBaslat = function() {
   window._sifirlaModunda = true;
-  document.getElementById('adminSifreEkrani').classList.remove('gizli');
-  document.getElementById('adminIcerik').classList.add('gizli');
-  document.getElementById('adminSifreGiris').value = '';
-  modalAc('adminModal');
+  document.getElementById('adminSifreEkrani').classList.remove('gizli'); document.getElementById('adminIcerik').classList.add('gizli'); document.getElementById('adminSifreGiris').value = ''; modalAc('adminModal');
 };
+window.kopyala = function(elVeyaId) { const el = typeof elVeyaId === 'string' ? document.getElementById(elVeyaId) : elVeyaId; navigator.clipboard.writeText(el.textContent.trim()).then(() => toastGoster('Kopyalandı! 📋')).catch(() => toastGoster('Kopyalanamadı')); };
 
-  
-/* ========================================
-   KOPYALA
-   ======================================== */
-window.kopyala = function(elVeyaId) {
-  const el = typeof elVeyaId === 'string'
-    ? document.getElementById(elVeyaId)
-    : elVeyaId;
-  const metin = el.textContent.trim();
-  navigator.clipboard.writeText(metin)
-    .then(() => toastGoster('Kopyalandı! 📋'))
-    .catch(() => toastGoster('Kopyalanamadı'));
-};
-
-/* ========================================
-   ADMİN PANELİ GİRİŞ
-   ======================================== */
+/* ========================================================================= */
+/* ADMİN PANELİ (Gelişmiş Görünüm)                                           */
+/* ========================================================================= */
 window.adminGiris = async function() {
   const sifre = document.getElementById('adminSifreGiris').value;
   if (!sifre) { toastGoster('Şifre girin!'); return; }
-  
   try {
     const { signInWithEmailAndPassword } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js');
     await signInWithEmailAndPassword(kimlikDogrulama, 'beratarsln@gmail.com', sifre);
-
     if (window._sifirlaModunda) {
-      window._sifirlaModunda = false;
-      modalKapat('adminModal');
-      onayGoster(
-        '⚠️ Genel Skoru Sıfırla',
-        'Tüm genel skor tablosu silinecek. Bu işlem geri alınamaz. Emin misin?',
-        async () => {
-          try {
-            await remove(ref(veritabani, 'skorlar'));
-            toastGoster('✅ Genel skor tablosu sıfırlandı!');
-          } catch (hata) {
-            console.error(hata);
-            toastGoster('❌ Sıfırlama başarısız!');
-          }
-        }
-      );
+      window._sifirlaModunda = false; modalKapat('adminModal');
+      onayGoster('⚠️ Genel Skoru Sıfırla', 'Tüm genel skor tablosu silinecek. Emin misin?', async () => {
+        try { await remove(ref(veritabani, 'skorlar')); toastGoster('✅ Sıfırlandı!'); } catch (hata) { toastGoster('❌ Başarısız!'); }
+      });
     } else {
-      document.getElementById('adminSifreEkrani').classList.add('gizli');
-      document.getElementById('adminIcerik').classList.remove('gizli');
-      adminOneriYukle();
+      document.getElementById('adminSifreEkrani').classList.add('gizli'); document.getElementById('adminIcerik').classList.remove('gizli'); adminOneriYukle();
     }
-  } catch (hata) {
-    toastGoster('Yanlış şifre!');
-  }
+  } catch (hata) { toastGoster('Yanlış şifre!'); }
 };
 
-/* ========================================
-   ADMİN - ÖNERİLEN SORULARI YÜKLE
-   ======================================== */
 function adminOneriYukle(filtre = 'soru') {
   const oneriRef = ref(veritabani, 'geribildirimler');
   const liste = document.getElementById('adminOneriListe');
+  const eskiSekme = document.getElementById('adminSekmeler'); if (eskiSekme) eskiSekme.remove();
 
-  const eskiSekme = document.getElementById('adminSekmeler');
-  if (eskiSekme) eskiSekme.remove();
-
-  const sekmeDiv = document.createElement('div');
-  sekmeDiv.id = 'adminSekmeler';
-  sekmeDiv.style.cssText = 'display:flex;gap:8px;padding:0 16px 12px;flex-wrap:wrap;';
-  [
-    ['soru',    '❓ Soru Önerileri', '#1976d2'],
-    ['sikayet', '⚠️ Şikayetler',    '#d62828'],
-    ['hata',    '🔴 Hata Bildirimleri', '#e65100'],
-    ['hepsi',   '📋 Tümü',          '#444']
-  ].forEach(([f, etiket, renk]) => {
-    const btn = document.createElement('button');
-    btn.textContent = etiket;
-    btn.style.cssText = `padding:7px 14px;border-radius:8px;border:none;cursor:pointer;
-      font-weight:700;font-size:13px;
-      background:${filtre===f ? renk : 'rgba(255,255,255,0.08)'};
-      color:${filtre===f ? '#fff' : '#8899bb'};`;
-    btn.onclick = () => adminFiltreDegistir(f);
-    sekmeDiv.appendChild(btn);
+  const sekmeDiv = document.createElement('div'); sekmeDiv.id = 'adminSekmeler'; sekmeDiv.style.cssText = 'display:flex;gap:8px;padding:0 16px 12px;flex-wrap:wrap;';
+  [['soru', '❓ Öneriler', '#1976d2'], ['sikayet', '⚠️ Şikayetler', '#d62828'], ['hata', '🔴 Oyun İçi Hatalar', '#e65100'], ['hepsi', '📋 Tümü', '#444']].forEach(([f, etiket, renk]) => {
+    const btn = document.createElement('button'); btn.textContent = etiket; btn.style.cssText = `padding:7px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700;font-size:13px;background:${filtre===f ? renk : 'rgba(255,255,255,0.08)'};color:${filtre===f ? '#fff' : '#8899bb'};`;
+    btn.onclick = () => adminOneriYukle(f); sekmeDiv.appendChild(btn);
   });
   liste.before(sekmeDiv);
 
-  onValue(oneriRef, (anlık) => {
-    const veri = anlık.val();
-    liste.innerHTML = '';
-
-    if (!veri) {
-      liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Hiç kayıt yok.</div>`;
-      return;
-    }
-
-    const girdiler = Object.entries(veri).filter(([_, v]) => {
-      if (filtre === 'soru')    return v.altTur && v.altTur.includes('Soru');
-      if (filtre === 'sikayet') return v.kategori && v.kategori.includes('Şikayet');
-      if (filtre === 'hata')    return false;
-      return true;
-    });
-
-    if (girdiler.length === 0) {
-      liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Bu kategoride kayıt yok.</div>`;
-      return;
-    }
-
-    girdiler.sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih));
-
-    girdiler.forEach(([key, oneri]) => {
-      const soruOneriMi = oneri.altTur && oneri.altTur.includes('Soru');
-      const jsonMetin = soruOneriMi ? JSON.stringify({
-        soru: oneri.mesaj,
-        cevap: oneri.cevap || '',
-        alternatifler: oneri.alternatifler
-          ? oneri.alternatifler.split(',').map(s => s.trim()).filter(Boolean)
-          : []
-      }, null, 2) : null;
-
-      const kart = document.createElement('div');
-      kart.className = 'admin-oneri-kart';
-      kart.dataset.key = key;
-      kart.innerHTML = `
-        <span style="font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700;
-          background:${soruOneriMi ? 'rgba(0,200,83,0.15)' : 'rgba(255,23,68,0.15)'};
-          color:${soruOneriMi ? '#00c853' : '#ff1744'};">
-          ${oneri.altTur || oneri.kategori || '?'}
-        </span>
-        <div class="admin-oneri-soru" style="margin-top:8px;">📝 ${oneri.mesaj}</div>
-        ${soruOneriMi && oneri.cevap
-          ? `<div style="font-size:13px;color:#4fc3f7;margin-top:4px;">✅ Cevap: <b>${oneri.cevap}</b></div>`
-          : ''}
-        ${soruOneriMi && oneri.alternatifler
-          ? `<div style="font-size:12px;color:#8899bb;margin-top:2px;">🔄 ${oneri.alternatifler}</div>`
-          : ''}
-        <div class="admin-oneri-meta" style="margin-top:6px;">
-          👤 ${oneri.profilAdi} &nbsp;•&nbsp;
-          📅 ${new Date(oneri.tarih).toLocaleDateString('tr-TR')}
-          ${new Date(oneri.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}
-        </div>
-        <div class="admin-buton-grubu" style="margin-top:10px;">
-          ${soruOneriMi
-            ? `<button class="admin-onayla" style="background:linear-gradient(145deg,#1976d2,#0d47a1);"
-                onclick="adminJsonKopyala(this,'${btoa(unescape(encodeURIComponent(jsonMetin)))}')">
-                📋 JSON Kopyala
-              </button>`
-            : ''}
-          <button class="admin-reddet" onclick="adminOneriReddet('${key}',this)">
-            🗑 Sil
-          </button>
-        </div>
-      `;
-      liste.appendChild(kart);
-    });
-  }, { onlyOnce: true });
-
-   
-   /* Hata bildirimleri ayrı path'ten yüklenir */
   if (filtre === 'hata') {
-    liste.innerHTML = '';
-    const hataRef = ref(veritabani, 'hatabildirimler');
+    liste.innerHTML = ''; const hataRef = ref(veritabani, 'hatabildirimler');
     onValue(hataRef, (anlık) => {
-      const veri = anlık.val();
-      liste.innerHTML = '';
-
-      if (!veri) {
-        liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Hata bildirimi yok.</div>`;
-        return;
-      }
-
-      Object.entries(veri)
-        .sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih))
-        .forEach(([key, hata]) => {
-          const jsonMetin = JSON.stringify({
-            soru: hata.soru,
-            cevap: hata.cevap,
-            alternatifler: hata.alternatifler || []
-          }, null, 2);
-
-          const kart = document.createElement('div');
-          kart.className = 'admin-oneri-kart';
-          kart.dataset.key = key;
-          kart.innerHTML = `
-            <span style="font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700;
-              background:rgba(230,81,0,0.15);color:#ff6d00;">
-              🔴 Hata Bildirimi
-            </span>
-            <div style="font-size:13px;font-weight:700;color:#fff;margin-top:8px;">
-              ${hata.harf} harfi
-            </div>
-            <div class="admin-oneri-soru" style="margin-top:4px;">📝 ${hata.soru}</div>
-            <div style="font-size:13px;color:#4fc3f7;margin-top:4px;">✅ Cevap: <b>${hata.cevap}</b></div>
-            <div class="admin-oneri-meta" style="margin-top:6px;">
-              📅 ${new Date(hata.tarih).toLocaleDateString('tr-TR')}
-              ${new Date(hata.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}
-            </div>
-            <div class="admin-buton-grubu" style="margin-top:10px;">
-              <button class="admin-onayla" style="background:linear-gradient(145deg,#1976d2,#0d47a1);"
-                onclick="adminJsonKopyala(this,'${btoa(unescape(encodeURIComponent(jsonMetin)))}')">
-                📋 JSON Kopyala
-              </button>
-              <button class="admin-reddet" onclick="hataOneriReddet('${key}',this)">
-                🗑 Sil
-              </button>
-            </div>
-          `;
-          liste.appendChild(kart);
-        });
+      const veri = anlık.val(); liste.innerHTML = '';
+      if (!veri) { liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Hata bildirimi yok.</div>`; return; }
+      Object.entries(veri).sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih)).forEach(([key, hata]) => {
+        const jsonMetin = JSON.stringify({ soru: hata.soru, cevap: hata.cevap, alternatifler: hata.alternatifler || [] }, null, 2);
+        const kart = document.createElement('div'); kart.className = 'admin-oneri-kart'; kart.dataset.key = key;
+        kart.innerHTML = `
+          <span style="font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700; background:rgba(230,81,0,0.15);color:#ff6d00;">🔴 Oyun İçi Hata Bildirimi</span>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin-top:8px;">${hata.harf} Harfi (Dosya Sırası: ${hata.soruId})</div>
+          <div class="admin-oneri-soru" style="margin-top:4px;">📝 ${hata.soru}</div>
+          <div style="font-size:13px;color:#4fc3f7;margin-top:4px;">✅ Sistem Cevabı: <b>${hata.cevap}</b></div>
+          <div style="font-size:13px;color:#ff1744;margin-top:4px;">❌ Kullanıcı Cevabı: <b>${hata.kullanici_cevabi}</b></div>
+          <div class="admin-oneri-meta" style="margin-top:6px;">👤 Bildiren: ${hata.profilAdi} &nbsp;•&nbsp; 📅 ${new Date(hata.tarih).toLocaleDateString('tr-TR')} ${new Date(hata.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}</div>
+          <div class="admin-buton-grubu" style="margin-top:10px;">
+            <button class="admin-onayla" style="background:linear-gradient(145deg,#1976d2,#0d47a1);" onclick="adminJsonKopyala(this,'${btoa(unescape(encodeURIComponent(jsonMetin)))}')">📋 JSON Kopyala</button>
+            <button class="admin-reddet" onclick="hataOneriReddet('${key}',this)">🗑 Sil</button>
+          </div>
+        `;
+        liste.appendChild(kart);
+      });
+    }, { onlyOnce: true });
+  } else {
+    onValue(oneriRef, (anlık) => {
+      const veri = anlık.val(); liste.innerHTML = '';
+      if (!veri) { liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Hiç kayıt yok.</div>`; return; }
+      const girdiler = Object.entries(veri).filter(([_, v]) => {
+        if (filtre === 'soru') return v.altTur && v.altTur.includes('Soru');
+        if (filtre === 'sikayet') return v.kategori && v.kategori.includes('Şikayet');
+        return true;
+      });
+      if (girdiler.length === 0) { liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Kayıt yok.</div>`; return; }
+      girdiler.sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih)).forEach(([key, oneri]) => {
+        const soruOneriMi = oneri.altTur && oneri.altTur.includes('Soru');
+        const jsonMetin = soruOneriMi ? JSON.stringify({ soru: oneri.mesaj, cevap: oneri.cevap || '', alternatifler: oneri.alternatifler ? oneri.alternatifler.split(',').map(s => s.trim()).filter(Boolean) : [] }, null, 2) : null;
+        const kart = document.createElement('div'); kart.className = 'admin-oneri-kart'; kart.dataset.key = key;
+        kart.innerHTML = `
+          <span style="font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700; background:${soruOneriMi ? 'rgba(0,200,83,0.15)' : 'rgba(255,23,68,0.15)'}; color:${soruOneriMi ? '#00c853' : '#ff1744'};">${oneri.altTur || oneri.kategori || '?'}</span>
+          <div class="admin-oneri-soru" style="margin-top:8px;">📝 ${oneri.mesaj}</div>
+          ${soruOneriMi && oneri.cevap ? `<div style="font-size:13px;color:#4fc3f7;margin-top:4px;">✅ Cevap: <b>${oneri.cevap}</b></div>` : ''}
+          <div class="admin-oneri-meta" style="margin-top:6px;">👤 ${oneri.profilAdi} &nbsp;•&nbsp; 📅 ${new Date(oneri.tarih).toLocaleDateString('tr-TR')} ${new Date(oneri.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'})}</div>
+          <div class="admin-buton-grubu" style="margin-top:10px;">
+            ${soruOneriMi ? `<button class="admin-onayla" style="background:linear-gradient(145deg,#1976d2,#0d47a1);" onclick="adminJsonKopyala(this,'${btoa(unescape(encodeURIComponent(jsonMetin)))}')">📋 JSON Kopyala</button>` : ''}
+            <button class="admin-reddet" onclick="adminOneriReddet('${key}',this)">🗑 Sil</button>
+          </div>
+        `;
+        liste.appendChild(kart);
+      });
     }, { onlyOnce: true });
   }
 }
-/* ========================================
-   ADMİN - ÖNERİ REDDET
-   ======================================== */
-window.adminOneriReddet = function(key, btn) {
-  if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
-  remove(ref(veritabani, `geribildirimler/${key}`))
-    .then(() => {
-      toastGoster('✅ Silindi');
-      document.querySelector(`.admin-oneri-kart[data-key="${key}"]`)?.remove();
-    })
-    .catch((err) => {
-      console.error(err);
-      toastGoster('❌ Silinemedi! Firebase kurallarını kontrol et.');
-      if (btn) { btn.textContent = '🗑 Sil'; btn.disabled = false; }
-    });
-};
 
-   window.hataOneriReddet = function(key, btn) {
-  if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
-  remove(ref(veritabani, `hatabildirimler/${key}`))
-    .then(() => {
-      toastGoster('✅ Silindi');
-      document.querySelector(`.admin-oneri-kart[data-key="${key}"]`)?.remove();
-    })
-    .catch((err) => {
-      console.error(err);
-      toastGoster('❌ Silinemedi!');
-      if (btn) { btn.textContent = '🗑 Sil'; btn.disabled = false; }
-    });
-};
+window.adminOneriReddet = function(key, btn) { if (btn) { btn.textContent = '⏳...'; btn.disabled = true; } remove(ref(veritabani, `geribildirimler/${key}`)).then(() => { toastGoster('✅ Silindi'); document.querySelector(`.admin-oneri-kart[data-key="${key}"]`)?.remove(); }).catch(() => toastGoster('❌ Silinemedi!')); };
+window.hataOneriReddet = function(key, btn) { if (btn) { btn.textContent = '⏳...'; btn.disabled = true; } remove(ref(veritabani, `hatabildirimler/${key}`)).then(() => { toastGoster('✅ Silindi'); document.querySelector(`.admin-oneri-kart[data-key="${key}"]`)?.remove(); }).catch(() => toastGoster('❌ Silinemedi!')); };
+window.adminJsonKopyala = function(btn, b64) { navigator.clipboard.writeText(decodeURIComponent(escape(atob(b64)))).then(() => { const orijinal = btn.textContent; btn.textContent = '✅ Kopyalandı!'; setTimeout(() => btn.textContent = orijinal, 2000); }); };
 
-window.adminFiltreDegistir = function(filtre) {
-  adminOneriYukle(filtre);
-};
-
-window.adminJsonKopyala = function(btn, b64) {
-  const json = decodeURIComponent(escape(atob(b64)));
-  navigator.clipboard.writeText(json)
-    .then(() => {
-      const orijinal = btn.textContent;
-      btn.textContent = '✅ Kopyalandı!';
-      setTimeout(() => btn.textContent = orijinal, 2000);
-    })
-    .catch(() => toastGoster('Kopyalanamadı'));
-};
-
-/* ========================================
-   ONAY DİYALOĞU
-   ======================================== */
-function onayGoster(baslik, mesaj, onayCallback) {
-  document.getElementById('onayBaslik').textContent = baslik;
-  document.getElementById('onayMesaj').textContent = mesaj;
-  document.getElementById('onayEvetButon').onclick = () => {
-    onayCallback();
-    onayKapat();
-  };
-  document.getElementById('onayDiyalog').classList.add('acik');
-}
-
-window.onayKapat = function() {
-  document.getElementById('onayDiyalog').classList.remove('acik');
-};
-
-/* ========================================
-   TOAST BİLDİRİM
-   Kısa süreli bildirim göster
-   ======================================== */
-function toastGoster(mesaj, sure = 2500) {
-  const toast = document.getElementById('toastBildirim');
-  toast.textContent = mesaj;
-  toast.classList.add('goster');
-  setTimeout(() => toast.classList.remove('goster'), sure);
-}
-
-/* Global erişim için window'a ata */
+/* Utility Fonksiyonlar */
+function onayGoster(baslik, mesaj, onayCallback) { document.getElementById('onayBaslik').textContent = baslik; document.getElementById('onayMesaj').textContent = mesaj; document.getElementById('onayEvetButon').onclick = () => { onayCallback(); onayKapat(); }; document.getElementById('onayDiyalog').classList.add('acik'); }
+window.onayKapat = function() { document.getElementById('onayDiyalog').classList.remove('acik'); };
+function toastGoster(mesaj, sure = 2500) { const toast = document.getElementById('toastBildirim'); toast.textContent = mesaj; toast.classList.add('goster'); setTimeout(() => toast.classList.remove('goster'), sure); }
 window.toastGoster = toastGoster;
-
-/* ========================================
-   EKRAN YÖNETİMİ
-   ======================================== */
-function ekraniGoster(id) {
-  document.querySelectorAll('.ekran').forEach(e => e.classList.add('gizli'));
-  document.getElementById(id).classList.remove('gizli');
-}
-
-/* ========================================
-   EMAİLJS YÜKLE
-   CDN'den dinamik yükleme
-   ======================================== */
-function emailjsYukle() {
-  const script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
-  script.onload = () => {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
-  };
-  document.head.appendChild(script);
-}
-
+function ekraniGoster(id) { document.querySelectorAll('.ekran').forEach(e => e.classList.add('gizli')); document.getElementById(id).classList.remove('gizli'); }
 </script>
+<!-- ========================================================================= -->
+<!-- JAVASCRIPT OYUN MANTIĞI VE FİREBASE (BİTİŞ)                               -->
+<!-- ========================================================================= -->
 </body>
 </html>
