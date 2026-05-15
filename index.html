@@ -2430,40 +2430,53 @@
         }
       }
 
-      /* ========================================================================= */
-      /* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ                           */
-      /* ========================================================================= */
-      function klavyeDurumunuGuncelle() {
-        const oyunEkrani = document.getElementById("oyunEkrani");
-        // Ekranın 150px'ten fazla daralıp daralmadığına bakıyoruz
-        const isKeyboardOpen =
-          window.visualViewport &&
-          window.screen.height - window.visualViewport.height > 150;
+/* ========================================================================= */
+/* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ                           */
+/* ========================================================================= */
+let maxEkranBoyutu = window.visualViewport ? window.visualViewport.height : window.innerHeight;
 
-        if (isKeyboardOpen) {
-          oyunEkrani.classList.add("klavye-acik"); // CSS sihrini devreye sokar
-        } else {
-          oyunEkrani.classList.remove("klavye-acik"); // Her şeyi eski haline döndürür
-        }
-      }
+// Telefon yan çevrildiğinde maksimum boyutu sıfırlıyoruz ki hesaplama şaşmasın
+window.addEventListener('orientationchange', () => {
+  setTimeout(() => {
+    maxEkranBoyutu = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  }, 300);
+});
 
-      // Visual Viewport dinleyicisi (Klavye animasyonu bitimini yakalamak için gecikmeli)
-      if (window.visualViewport) {
-        let klavyeZamanlayici;
-        window.visualViewport.addEventListener("resize", () => {
-          if (
-            !document.getElementById("oyunEkrani").classList.contains("gizli")
-          ) {
-            // Klavye kayma animasyonu sırasında anlık güncellemeleri temizle
-            clearTimeout(klavyeZamanlayici);
-            // Animasyon bittiği an (yaklaşık 100ms sonra) boyutları tam olarak oturt
-            klavyeZamanlayici = setTimeout(() => {
-              ekraniYenile();
-              klavyeDurumunuGuncelle();
-            }, 100);
-          }
-        });
-      }
+function klavyeDurumunuGuncelle() {
+  const oyunEkrani = document.getElementById('oyunEkrani');
+  
+  if (window.visualViewport) {
+    // Eğer tarayıcı boyutu genişlerse (örn: adres çubuğu gizlenirse) maksimum boyutu güncelle
+    if (window.visualViewport.height > maxEkranBoyutu) {
+      maxEkranBoyutu = window.visualViewport.height;
+    }
+
+    // Cihazın fiziksel ekranı (screen.height) yerine tarayıcının maksimum boyutuyla kıyaslıyoruz
+    const isKeyboardOpen = (maxEkranBoyutu - window.visualViewport.height > 150);
+
+    if (isKeyboardOpen) {
+      oyunEkrani.classList.add('klavye-acik'); // CSS sihrini devreye sokar
+    } else {
+      oyunEkrani.classList.remove('klavye-acik'); // Her şeyi eski haline döndürür
+    }
+  }
+}
+
+// Visual Viewport dinleyicisi (Klavye animasyonu bitimini yakalamak için gecikmeli)
+if (window.visualViewport) {
+  let klavyeZamanlayici;
+  window.visualViewport.addEventListener('resize', () => {
+    if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
+      // Klavye kayma animasyonu sırasında anlık güncellemeleri temizle
+      clearTimeout(klavyeZamanlayici);
+      // Animasyon bittiği an (yaklaşık 100ms sonra) boyutları tam olarak oturt
+      klavyeZamanlayici = setTimeout(() => {
+        ekraniYenile();
+        klavyeDurumunuGuncelle();
+      }, 100);
+    }
+  });
+}
 
       // Canlı istatistik sayılarını DOM üzerinde güncelleyen fonksiyon
       function canliIstatistikGuncelle() {
