@@ -328,22 +328,39 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
   .header-baslik { font-size: 28px; }
   .header-buton { width: 44px; height: 44px; font-size: 20px; }
   
-  /* Birbirlerini ezmemeleri için aralarına boşluk (gap) koyuyoruz */
-  .oyun-alani { gap: 16px; justify-content: center; }
+  .oyun-alani { gap: 16px; justify-content: center; position: relative; }
   
-  /* Canlı İstatistikleri Düzenle */
-  .canli-istatistik.normal { font-size: 18px; margin: 0; padding: 0; }
+  /* CANLI İSTATİSTİKLERİ SAĞ TARAFA ALIYORUZ */
+  .canli-istatistik.normal { 
+    position: absolute; 
+    right: 40px; 
+    top: 0; 
+    flex-direction: column; /* Yan yana değil alt alta diz */
+    align-items: flex-end; 
+    gap: 16px; 
+    font-size: 18px; 
+    width: auto; 
+    padding: 0;
+  }
+  .ist-sag { 
+    flex-direction: column; /* Doğru/Yanlış/Pas alt alta */
+    gap: 12px; 
+    align-items: flex-end;
+  }
   
-  /* Erken Bitir Butonunu Düzenle */
   .erken-bitir-buton { margin-top: 0; padding: 10px 30px; font-size: 14px; }
 
-  /* Alt Cevap Alanı */
-  #bilgisayarCevapAlani { padding: 20px 0; }
+  /* ALT CEVAP ALANI - Siyahlık kalktı, şeffaf oldu ve aşağı itildi */
+  #bilgisayarCevapAlani { 
+    background: transparent; 
+    backdrop-filter: none; 
+    border-top: none; 
+    padding: 0 0 30px 0; /* Kutuyu en aşağıya doğru iter */
+  }
   .bilgisayar-cevap-satiri { display: flex; gap: 16px; max-width: 700px; width: 90%; margin: 0 auto; justify-content: center;}
-  #bilgisayarCevapGiris { flex: 1; max-width: 550px; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 20px; font-weight: 600; padding: 0 20px; height: 60px; outline: none; }
+  #bilgisayarCevapGiris { flex: 1; max-width: 550px; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 18px; font-weight: 600; padding: 0 20px; height: 60px; outline: none; }
   #bilgisayarCevapGiris:focus { border-color: rgba(79,195,247,0.5); }
   #bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 18px; font-weight: 900; width: 120px; height: 60px; cursor: pointer; }
-  .bilgisayar-ipucu { text-align: center; color: var(--metin-soluk); font-size: 14px; margin-top: 12px; }
 }
   
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -477,10 +494,9 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
   <!-- Bilgisayar Cevap Alanı -->
   <div id="bilgisayarCevapAlani">
     <div class="bilgisayar-cevap-satiri">
-      <input type="text" id="bilgisayarCevapGiris" placeholder="Cevabınızı yazın ve Enter'a basın..." autocomplete="off">
+      <input type="text" id="bilgisayarCevapGiris" placeholder="Cevabınızı yazın... (Enter: Cevapla, Boşluk: Pas)" autocomplete="off">
       <button id="bilgisayarPasButon" onclick="pasCek()">PAS</button>
     </div>
-    <div class="bilgisayar-ipucu">Enter ile cevapla • Boşluk ile pas geç</div>
   </div>
 </div>
 
@@ -846,10 +862,9 @@ function daireOlculeriniHesapla() {
   const klavyeAcikMi = window.visualViewport && (window.screen.height - window.visualViewport.height > 150);
 
   let mevcut;
-  if (bilgisayarMi) {
-    // Ekran yüksekliğinden menü, istatistik, buton ve alt kutu için toplam 280px pay çıkarıyoruz
-    const kullanilabilir = Math.min(vg * 0.85, vy - 280);
-    // Zorunlu minimumu 500'den 300'e düşürdük ki laptop ekranlarına tam sığsın ve taşmasın!
+ if (bilgisayarMi) {
+    // Siyah arka plan kalktığı için çıkarılan payı 200'e düşürdük
+    const kullanilabilir = Math.min(vg * 0.85, vy - 200);
     mevcut = Math.max(300, Math.min(kullanilabilir, 750)); 
   } else {
     if (klavyeAcikMi) {
