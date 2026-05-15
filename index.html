@@ -437,8 +437,7 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
         <div id="surGosterge">06:00</div>
         <div id="soruMetni"><span id="soruHarfi">A</span>: Yükleniyor...</div>
       </div>
-    </div>
-  </div>
+      </div>
   <button class="erken-bitir-buton" onclick="erkenBitir()">⏹ OYUNU BİTİR</button>
 
   </div> <!-- Bu div oyun-alani div'inin kapanışıdır -->
@@ -1264,6 +1263,7 @@ window.profilOlustur = function() {
 };
 
 document.addEventListener('keydown', (e) => {
+  if (e.repeat) return; // Çift atlamayı (basılı tutma bug'ını) engeller
   if (document.getElementById('oyunEkrani').classList.contains('gizli')) return;
   if (document.querySelector('.modal-arkaplan.acik')) return;
   const bilgisayarMi = !window._dokunmatik && window.innerWidth >= 1025;
