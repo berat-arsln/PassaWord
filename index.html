@@ -328,14 +328,20 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
   .header-baslik { font-size: 28px; }
   .header-buton { width: 44px; height: 44px; font-size: 20px; }
   
-  .oyun-alani { gap: 16px; justify-content: center; position: relative; }
+  /* Oyun Alanı (Daire ve Butonun bulunduğu orta kısım) */
+  .oyun-alani { 
+    gap: 24px; /* Daire ile buton arasına net boşluk */
+    justify-content: center; 
+    padding-top: 20px; /* Üstten kesilmesini engeller */
+    position: relative;
+  }
   
-  /* CANLI İSTATİSTİKLERİ SAĞ TARAFA ALIYORUZ */
+  /* CANLI İSTATİSTİKLER (Sağ Üst Köşeye Sabitlendi) */
   .canli-istatistik.normal { 
     position: absolute; 
     right: 40px; 
     top: 0; 
-    flex-direction: column; /* Yan yana değil alt alta diz */
+    flex-direction: column; 
     align-items: flex-end; 
     gap: 16px; 
     font-size: 18px; 
@@ -343,25 +349,31 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
     padding: 0;
   }
   .ist-sag { 
-    flex-direction: column; /* Doğru/Yanlış/Pas alt alta */
+    flex-direction: column; 
     gap: 12px; 
     align-items: flex-end;
   }
   
-  .erken-bitir-buton { margin-top: 0; padding: 10px 30px; font-size: 14px; }
+  /* ERKEN BİTİR BUTONU */
+  .erken-bitir-buton { 
+    margin-top: 0; 
+    padding: 10px 30px; 
+    font-size: 14px; 
+    margin-bottom: 20px; /* Input ile arasına mesafe koyar */
+  }
 
-  /* ALT CEVAP ALANI - Siyahlık kalktı, şeffaf oldu ve aşağı itildi */
+  /* ALT CEVAP ALANI - Siyahlık kalktı ve EN ALTA sabitlendi */
   #bilgisayarCevapAlani { 
     background: transparent; 
     backdrop-filter: none; 
     border-top: none; 
-    padding: 0 0 30px 0; /* Kutuyu en aşağıya doğru iter */
+    padding: 0 0 40px 0; /* Sayfanın en altından 40px boşluk bırakır */
+    margin-top: auto; /* Kutuyu kesin olarak sayfanın en altına iter */
   }
   .bilgisayar-cevap-satiri { display: flex; gap: 16px; max-width: 700px; width: 90%; margin: 0 auto; justify-content: center;}
   #bilgisayarCevapGiris { flex: 1; max-width: 550px; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 18px; font-weight: 600; padding: 0 20px; height: 60px; outline: none; }
   #bilgisayarCevapGiris:focus { border-color: rgba(79,195,247,0.5); }
   #bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 18px; font-weight: 900; width: 120px; height: 60px; cursor: pointer; }
-}
   
 @media (min-width: 769px) and (max-width: 1024px) {
   .klavye-tusu { height: 42px; max-width: 40px; }
@@ -862,9 +874,9 @@ function daireOlculeriniHesapla() {
   const klavyeAcikMi = window.visualViewport && (window.screen.height - window.visualViewport.height > 150);
 
   let mevcut;
- if (bilgisayarMi) {
-    // Siyah arka plan kalktığı için çıkarılan payı 200'e düşürdük
-    const kullanilabilir = Math.min(vg * 0.85, vy - 200);
+   if (bilgisayarMi) {
+    // Dairenin üstten ve alttan kesilmemesi için boşluk payını 320px'e çıkardık
+    const kullanilabilir = Math.min(vg * 0.85, vy - 320);
     mevcut = Math.max(300, Math.min(kullanilabilir, 750)); 
   } else {
     if (klavyeAcikMi) {
