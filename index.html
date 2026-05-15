@@ -664,8 +664,6 @@ function bilgisayarModunuAyarla() {
   if (bilgisayarMi) {
     document.getElementById('bilgisayarCevapAlani').style.display = 'block';
     document.querySelector('.giris-klavye-alani').style.display = 'none';
-    const bcGiris = document.getElementById('bilgisayarCevapGiris');
-    bcGiris.addEventListener('keydown', (e) => { if (e.key === 'Enter') cevapVer(); });
   }
 }
 
@@ -1062,7 +1060,7 @@ function sonucEkraniniOlustur(sureBonus, komboBonus) {
       <div class="sonuc-bilgi">
         <div class="sonuc-soru">${veri.soru}</div>
         <div class="sonuc-verilen-cevap">${veri.verilen === 'Pas' ? 'Pas geçildi' : veri.verilen}</div>
-        ${durum !== 'dogru' ? `<div class="sonuc-dogru-cevap">✓ Doğru: ${veri.dogru}</div>` : ''}
+        <div class="sonuc-dogru-cevap">✓ Doğru Cevap: ${veri.dogru}</div>
         <button class="hata-bildir-buton" onclick="hataBildir('${harf}', this)">⚠ Hata Bildir</button>
       </div>
     `;
