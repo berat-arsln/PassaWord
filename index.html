@@ -322,17 +322,28 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
 @media (min-width: 1025px) {
   .giris-klavye-alani { display: none !important; }
   #bilgisayarCevapAlani { display: block !important; }
-
+  
   /* BİLGİSAYAR İÇİN ÖZEL DÜZELTMELER */
-  .header { padding: 20px 40px; } /* Header'a genişlik kazandırır */
-  .header-baslik { font-size: 32px; } /* Masaüstünde başlığı büyütür */
-  .header-buton { width: 48px; height: 48px; font-size: 24px; } /* İkonları büyütür */
+  .header { padding: 16px 40px; }
+  .header-baslik { font-size: 28px; }
+  .header-buton { width: 44px; height: 44px; font-size: 20px; }
   
-  /* Canlı İstatistikleri Büyüt */
-  .canli-istatistik.normal { font-size: 20px; gap: 40px; margin-top: 10px; margin-bottom: 20px; }
+  /* Birbirlerini ezmemeleri için aralarına boşluk (gap) koyuyoruz */
+  .oyun-alani { gap: 16px; justify-content: center; }
   
-  /* Erken Bitir Butonunu Büyüt */
-  .erken-bitir-buton { padding: 12px 36px; font-size: 16px; margin-top: 30px; }
+  /* Canlı İstatistikleri Düzenle */
+  .canli-istatistik.normal { font-size: 18px; margin: 0; padding: 0; }
+  
+  /* Erken Bitir Butonunu Düzenle */
+  .erken-bitir-buton { margin-top: 0; padding: 10px 30px; font-size: 14px; }
+
+  /* Alt Cevap Alanı */
+  #bilgisayarCevapAlani { padding: 20px 0; }
+  .bilgisayar-cevap-satiri { display: flex; gap: 16px; max-width: 700px; width: 90%; margin: 0 auto; justify-content: center;}
+  #bilgisayarCevapGiris { flex: 1; max-width: 550px; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 20px; font-weight: 600; padding: 0 20px; height: 60px; outline: none; }
+  #bilgisayarCevapGiris:focus { border-color: rgba(79,195,247,0.5); }
+  #bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 18px; font-weight: 900; width: 120px; height: 60px; cursor: pointer; }
+  .bilgisayar-ipucu { text-align: center; color: var(--metin-soluk); font-size: 14px; margin-top: 12px; }
 }
   
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -836,10 +847,10 @@ function daireOlculeriniHesapla() {
 
   let mevcut;
   if (bilgisayarMi) {
-    // Masaüstünde ekranın yüksekliğinden header (80px) ve alt kutu (130px) payını çıkar
-    const kullanilabilir = Math.min(vg * 0.90, vy - 210);
-    // Dairenin minimum boyutunu büyük tut ki küçük ekran gibi görünmesin
-    mevcut = Math.max(500, Math.min(kullanilabilir, 850)); 
+    // Ekran yüksekliğinden menü, istatistik, buton ve alt kutu için toplam 280px pay çıkarıyoruz
+    const kullanilabilir = Math.min(vg * 0.85, vy - 280);
+    // Zorunlu minimumu 500'den 300'e düşürdük ki laptop ekranlarına tam sığsın ve taşmasın!
+    mevcut = Math.max(300, Math.min(kullanilabilir, 750)); 
   } else {
     if (klavyeAcikMi) {
       // KLAVYE AÇIK: Üst menü (Header) yok. Sadece Input ve İstatistik barı var.
