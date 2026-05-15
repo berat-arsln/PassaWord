@@ -187,13 +187,14 @@ html, body {
 .tus-sil { max-width: none; flex: 1.8; background: linear-gradient(145deg, #ffd740, #ffb74d); color: #000; }
 
 /* --------- BİLGİSAYAR CEVAP ALANI --------- */
-#bilgisayarCevapAlani { width: 100%; flex-shrink: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.07); padding: 16px 20px; display: none; }
-.bilgisayar-cevap-satiri { display: flex; gap: 12px; max-width: 800px; margin: 0 auto; }
-#bilgisayarCevapGiris { flex: 1; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 20px; font-weight: 600; padding: 0 20px; height: 60px; letter-spacing: 0.5px; outline: none; transition: border-color 0.2s; }
+#bilgisayarCevapAlani { width: 100%; flex-shrink: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.07); padding: 24px 0; display: none; }
+.bilgisayar-cevap-satiri { display: flex; gap: 16px; max-width: 700px; width: 90%; margin: 0 auto; justify-content: center;}
+#bilgisayarCevapGiris { flex: 1; max-width: 550px; background: #111827; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 12px; color: #fff; font-size: 20px; font-weight: 600; padding: 0 20px; height: 60px; letter-spacing: 0.5px; outline: none; transition: border-color 0.2s; }
 #bilgisayarCevapGiris:focus { border-color: rgba(79,195,247,0.5); }
 #bilgisayarCevapGiris::placeholder { color: #445; font-weight: 400; }
-#bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 18px; font-weight: 900; width: 100px; height: 60px; cursor: pointer; letter-spacing: 1px; box-shadow: 0 3px 10px rgba(245,166,35,0.35); transition: transform 0.1s; flex-shrink: 0; }
+#bilgisayarPasButon { background: linear-gradient(145deg, #ffd740, #f5a623); border: none; border-radius: 12px; color: #000; font-size: 18px; font-weight: 900; width: 120px; height: 60px; cursor: pointer; letter-spacing: 1px; box-shadow: 0 3px 10px rgba(245,166,35,0.35); transition: transform 0.1s; flex-shrink: 0; }
 #bilgisayarPasButon:active { transform: scale(0.95); }
+.bilgisayar-ipucu { text-align: center; color: var(--metin-soluk); font-size: 14px; margin-top: 12px; letter-spacing: 0.5px; width: 100%; }
 
 /* --------- MODAL SİSTEMİ --------- */
 .modal-arkaplan { position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 100; display: flex; align-items: flex-end; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
@@ -321,7 +322,19 @@ textarea.giris-alani { height: 110px; resize: none; text-align: left; font-size:
 @media (min-width: 1025px) {
   .giris-klavye-alani { display: none !important; }
   #bilgisayarCevapAlani { display: block !important; }
+
+  /* BİLGİSAYAR İÇİN ÖZEL DÜZELTMELER */
+  .header { padding: 20px 40px; } /* Header'a genişlik kazandırır */
+  .header-baslik { font-size: 32px; } /* Masaüstünde başlığı büyütür */
+  .header-buton { width: 48px; height: 48px; font-size: 24px; } /* İkonları büyütür */
+  
+  /* Canlı İstatistikleri Büyüt */
+  .canli-istatistik.normal { font-size: 20px; gap: 40px; margin-top: 10px; margin-bottom: 20px; }
+  
+  /* Erken Bitir Butonunu Büyüt */
+  .erken-bitir-buton { padding: 12px 36px; font-size: 16px; margin-top: 30px; }
 }
+  
 @media (min-width: 769px) and (max-width: 1024px) {
   .klavye-tusu { height: 42px; max-width: 40px; }
 }
@@ -823,8 +836,10 @@ function daireOlculeriniHesapla() {
 
   let mevcut;
   if (bilgisayarMi) {
-    const kullanilabilir = Math.min(vg * 0.90, vy - 150);
-    mevcut = Math.max(400, Math.min(kullanilabilir, 750));
+    // Masaüstünde ekranın yüksekliğinden header (80px) ve alt kutu (130px) payını çıkar
+    const kullanilabilir = Math.min(vg * 0.90, vy - 210);
+    // Dairenin minimum boyutunu büyük tut ki küçük ekran gibi görünmesin
+    mevcut = Math.max(500, Math.min(kullanilabilir, 850)); 
   } else {
     if (klavyeAcikMi) {
       // KLAVYE AÇIK: Üst menü (Header) yok. Sadece Input ve İstatistik barı var.
