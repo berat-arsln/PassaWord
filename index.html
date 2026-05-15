@@ -798,7 +798,7 @@ function canliIstatistikGuncelle() {
 }
 
 /* ========================================================================= */
-/* JSON DOSYALARINDAN OTOMATİK ID EKLEYEREK SORULARI YÜKLEME                 */
+/* JSON DOSYALARINDAN SORULARI YÜKLEME (BAŞLANGIÇ)                           */
 /* ========================================================================= */
 async function sorulariYukle() {
   document.getElementById('yuklemeMesaj').textContent = 'Sorular yükleniyor...';
@@ -811,9 +811,10 @@ async function sorulariYukle() {
       if (!yanit.ok) throw new Error(`${harf} yüklenemedi`);
       const sorular = await yanit.json();
       
-      // JSON'a dokunmadan JS ile gizli ID (_soruSatiri) ekliyoruz!
+      // JSON dosyasındaki 'id' değerini kullanıyoruz.
+      // Eğer eski formattaki bir dosya denk gelirse diye yedeğe (idx + 1) koyuyoruz.
       const numaraliSorular = sorular.map((s, idx) => {
-        s._soruSatiri = idx + 1; // 1. sıradan başlar
+        s.id = s.id || (idx + 1); 
         return s;
       });
       
@@ -828,6 +829,9 @@ async function sorulariYukle() {
   sonuclar.forEach(({ harf, sorular }) => { oyunDurumu.yuklenenSorular[harf] = sorular; });
   return true;
 }
+/* ========================================================================= */
+/* JSON DOSYALARINDAN SORULARI YÜKLEME (BİTİŞ)                               */
+/* ========================================================================= */
 
 function sorulariSec() {
   oyunDurumu.secilenSorular = {};
@@ -1171,7 +1175,7 @@ function sonucEkraniniOlustur(sureBonus, komboBonus) {
 }
 
 /* ========================================================================= */
-/* GELİŞMİŞ HATA BİLDİRİMİ (Yeni Bilgilerle Birlikte)                        */
+/* GELİŞMİŞ HATA BİLDİRİMİ (BAŞLANGIÇ)                                       */
 /* ========================================================================= */
 window.hataBildir = async function(harf, btn) {
   const soruVerisi = oyunDurumu.secilenSorular[harf];
@@ -1188,7 +1192,7 @@ window.hataBildir = async function(harf, btn) {
     const hataBildirimRef = ref(veritabani, 'hatabildirimler');
     await push(hataBildirimRef, {
       harf,
-      soruId: soruVerisi._soruSatiri || 'Bilinmiyor', // JSON'daki Index yeri
+      soruId: soruVerisi.id || 'Bilinmiyor', // JSON'dan gelen ID'yi veritabanına gönderiyoruz
       soru: soruVerisi.soru,
       cevap: soruVerisi.cevap,
       kullanici_cevabi: kullaniciCevabi, // Kullanıcının girdiği yanlış cevap
@@ -1205,6 +1209,9 @@ window.hataBildir = async function(harf, btn) {
     btn.disabled = false;
   }
 };
+/* ========================================================================= */
+/* GELİŞMİŞ HATA BİLDİRİMİ (BİTİŞ)                                           */
+/* ========================================================================= */
 
 /* ========================================================================= */
 /* GENEL SKOR TABLOSU YÖNETİMİ (TOP 20 ve Yeni İstatistik Rozetleri)         */
@@ -1501,12 +1508,14 @@ function adminOneriYukle(filtre = 'soru') {
     onValue(hataRef, (anlık) => {
       const veri = anlık.val(); liste.innerHTML = '';
       if (!veri) { liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Hata bildirimi yok.</div>`; return; }
-      Object.entries(veri).sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih)).forEach(([key, hata]) => {
+       Object.entries(veri).sort((a, b) => new Date(b[1].tarih) - new Date(a[1].tarih)).forEach(([key, hata]) => {
         const jsonMetin = JSON.stringify({ soru: hata.soru, cevap: hata.cevap, alternatifler: hata.alternatifler || [] }, null, 2);
         const kart = document.createElement('div'); kart.className = 'admin-oneri-kart'; kart.dataset.key = key;
+        
+        // Dosya Sırası yerine "Soru ID" yazdırıyoruz
         kart.innerHTML = `
           <span style="font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700; background:rgba(230,81,0,0.15);color:#ff6d00;">🔴 Oyun İçi Hata Bildirimi</span>
-          <div style="font-size:13px;font-weight:700;color:#fff;margin-top:8px;">${hata.harf} Harfi (Dosya Sırası: ${hata.soruId})</div>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin-top:8px;">${hata.harf} Harfi (Soru ID: ${hata.soruId})</div>
           <div class="admin-oneri-soru" style="margin-top:4px;">📝 ${hata.soru}</div>
           <div style="font-size:13px;color:#4fc3f7;margin-top:4px;">✅ Sistem Cevabı: <b>${hata.cevap}</b></div>
           <div style="font-size:13px;color:#ff1744;margin-top:4px;">❌ Kullanıcı Cevabı: <b>${hata.kullanici_cevabi}</b></div>
