@@ -103,36 +103,43 @@ html, body {
 .header-sag { display: flex; gap: 8px; }
 
 /* ========================================================================= */
-/* OYUN İÇİ CANLI İSTATİSTİKLER (STİL)                                       */
+/* OYUN İÇİ CANLI İSTATİSTİKLER VE KLAVYE GÖRÜNÜMÜ (STİL)                    */
 /* ========================================================================= */
 .canli-istatistik {
   display: flex;
-  width: 100%;
-  transition: all 0.3s ease;
-  z-index: 20;
-}
-/* Klavye KAPALIYKEN: Ortada ve yan yana */
-.canli-istatistik.normal {
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  padding: 4px 10px;
+  width: 100%;
+  padding: 8px 10px;
   font-size: 15px;
-  margin-top: -5px;
-  margin-bottom: 5px;
-}
-/* Klavye AÇIKKEN: Puan solda, Doğru/Yanlış/Pas sağda (Ayrılır) */
-.canli-istatistik.klavye-acik {
-  justify-content: space-between;
-  gap: 0;
-  padding: 4px 12px;
-  margin-bottom: 4px;
-  font-size: 14px;
+  font-weight: 800;
+  z-index: 20;
+  transition: all 0.2s ease;
 }
 .ist-sol { color: #4fc3f7; display: flex; gap: 6px; align-items: center;}
 .ist-sag { display: flex; gap: 14px; align-items: center;}
 .ist-dogru { color: var(--dogru-renk); }
 .ist-yanlis { color: var(--yanlis-renk); }
 .ist-pas { color: var(--pas-renk); }
+
+/* --- KLAVYE AÇILDIĞINDA DEVREYE GİRECEK CSS SİHRİ --- */
+#oyunEkrani.klavye-acik .header {
+  display: none !important; /* Üst menüyü gizle, ekran genişlesin */
+}
+#oyunEkrani.klavye-acik .oyun-alani {
+  padding-bottom: 34px; /* İstatistiklerin daireye çarpmaması için güvenlik boşluğu */
+}
+#oyunEkrani.klavye-acik .canli-istatistik {
+  position: absolute; /* Javascript olmadan doğrudan Input'un üstüne yapıştırır */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between; /* Puanı sola, doğruları sağa ayırır */
+  padding: 8px 16px;
+  gap: 0;
+  font-size: 14px;
+}
   
 /* --------- OYUN ALANI & DAİRE --------- */
 .oyun-alani { flex: 1; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 12px; position: relative; overflow: hidden; }
@@ -674,30 +681,17 @@ function yatayModKontrol() {
 }
 
 /* ========================================================================= */
-/* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ (DİNAMİK GÖRÜNÜM)         */
+/* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ                           */
 /* ========================================================================= */
 function klavyeDurumunuGuncelle() {
-  const istatistikBar = document.getElementById('canliIstatistik');
-  const klavyeAlani = document.getElementById('klavyeAlaniDiv');
-  const oyunAlani = document.querySelector('.oyun-alani');
-  
-  // Ekranın ne kadar küçüldüğüne bakarak klavyenin açılıp açılmadığını anlıyoruz (100px barajı)
-  const isKeyboardOpen = window.visualViewport && (window.innerHeight - window.visualViewport.height > 100);
+  const oyunEkrani = document.getElementById('oyunEkrani');
+  // Ekranın 150px'ten fazla daralıp daralmadığına bakıyoruz
+  const isKeyboardOpen = window.visualViewport && (window.screen.height - window.visualViewport.height > 150);
 
   if (isKeyboardOpen) {
-    // Klavye AÇIK: Barı input alanının içine (üstüne) taşı ve stilini değiştir
-    if (klavyeAlani && istatistikBar) {
-      klavyeAlani.insertBefore(istatistikBar, klavyeAlani.firstChild);
-      istatistikBar.classList.remove('normal');
-      istatistikBar.classList.add('klavye-acik');
-    }
+    oyunEkrani.classList.add('klavye-acik'); // CSS sihrini devreye sokar
   } else {
-    // Klavye KAPALI: Barı tekrar dairenin üst kısmına al
-    if (oyunAlani && istatistikBar) {
-      oyunAlani.insertBefore(istatistikBar, oyunAlani.firstChild);
-      istatistikBar.classList.remove('klavye-acik');
-      istatistikBar.classList.add('normal');
-    }
+    oyunEkrani.classList.remove('klavye-acik'); // Her şeyi eski haline döndürür
   }
 }
 
@@ -797,11 +791,8 @@ window.oyunuBaslat = async function() {
 // Daire Boyutlandırma ve Oluşturma
 function daireOlculeriniHesapla() {
   const vg = window.innerWidth;
-  // Güvenilir yükseklik: visualViewport varsa onu kullan, yoksa innerHeight
   const vy = window.visualViewport ? window.visualViewport.height : window.innerHeight;
   const bilgisayarMi = !window._dokunmatik && vg >= 1025;
-
-  // Klavyenin açık olup olmadığını net olarak tespit et
   const klavyeAcikMi = window.visualViewport && (window.screen.height - window.visualViewport.height > 150);
 
   let mevcut;
@@ -809,13 +800,16 @@ function daireOlculeriniHesapla() {
     const kullanilabilir = Math.min(vg * 0.90, vy - 150);
     mevcut = Math.max(400, Math.min(kullanilabilir, 750));
   } else {
-    // Mobil/Tablet için dinamik hesaplama
-    // Klavye açıkken alttaki giriş alanına çarpmaması için güvenlik boşluğunu artırıyoruz (110px)
-    let altBosluk = klavyeAcikMi ? 110 : 70; 
-    const kullanilabilir = Math.min(vg, vy - 55 - altBosluk);
-    
-    // Daireyi sığdırabilmek için min sınırı 150px'e kadar düşürüyoruz
-    mevcut = Math.max(150, Math.min(kullanilabilir, 450));
+    if (klavyeAcikMi) {
+      // KLAVYE AÇIK: Üst menü (Header) yok. Sadece Input ve İstatistik barı var.
+      // Kalan tüm alanı daireye verebiliriz. Sadece alttan 95px boşluk bırakıyoruz.
+      const kullanilabilir = Math.min(vg * 0.95, vy - 95);
+      mevcut = Math.max(150, Math.min(kullanilabilir, 450));
+    } else {
+      // KLAVYE KAPALI: Header var, Input var. 
+      const kullanilabilir = Math.min(vg * 0.95, vy - 115);
+      mevcut = Math.max(200, Math.min(kullanilabilir, 450));
+    }
   }
 
   const topBoyutu = Math.round(mevcut / 12);
