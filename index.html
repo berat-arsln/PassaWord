@@ -2805,31 +2805,38 @@ if (window.visualViewport) {
       };
 
       function cevapKontrol(verilen, dogru, alternatifler) {
-        const normaliz = (s) =>
-          s
-            .trim()
-            .toLowerCase()
-            .replace(/i̇/g, "i")
-            .replace(/ı/g, "i")
-            .replace(/İ/g, "i")
-            .replace(/I/g, "i")
-            .replace(/ğ/g, "g")
-            .replace(/Ğ/g, "g")
-            .replace(/ü/g, "u")
-            .replace(/Ü/g, "u")
-            .replace(/ş/g, "s")
-            .replace(/Ş/g, "s")
-            .replace(/ö/g, "o")
-            .replace(/Ö/g, "o")
-            .replace(/ç/g, "c")
-            .replace(/Ç/g, "c");
-        const v = normaliz(verilen);
-        const d = normaliz(dogru);
-        if (v === d) return true;
-        for (const alt of alternatifler) {
-          if (v === normaliz(alt)) return true;
-        }
-        return false;
+  const normaliz = (s) =>
+    s.trim().toLowerCase()
+     .replace(/i̇/g, "i").replace(/ı/g, "i").replace(/İ/g, "i").replace(/I/g, "i")
+     .replace(/ğ/g, "g").replace(/Ğ/g, "g")
+     .replace(/ü/g, "u").replace(/Ü/g, "u")
+     .replace(/ş/g, "s").replace(/Ş/g, "s")
+     .replace(/ö/g, "o").replace(/Ö/g, "o")
+     .replace(/ç/g, "c").replace(/Ç/g, "c");
+
+  const v = normaliz(verilen);
+  const d = normaliz(dogru);
+
+  // 1. Tam eşleşme
+  if (v === d) return true;
+
+  // 2. Alternatifler
+  for (const alt of alternatifler) {
+    if (v === normaliz(alt)) return true;
+  }
+
+  // 3. Suffix toleransı: doğru cevap bu eklerden biriyle bitiyorsa
+  //    kullanıcı eki yazmadan da doğru kabul edilsin
+  const ekler = ["lık", "lik", "luk", "lük", "lı", "li", "lu", "lü", "mak", "mek", "ma", "me"];
+
+for (const ek of ekler) {
+  if (d.endsWith(ek)) {
+    const kok = d.slice(0, -ek.length);
+    if (kok.length >= 3 && v === kok) return true;
+  }
+}
+
+  return false;
       }
 
       function sonrakiSoruya() {
