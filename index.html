@@ -548,16 +548,15 @@
       }
 
       /* --------- GİRİŞ ALANI (KLAVYE ALANI) --------- */
-      .giris-klavye-alani {
-        width: 100%;
-        flex-shrink: 0;
-        background: rgba(0, 0, 0, 0.55);
-        backdrop-filter: blur(10px);
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
-        padding: 8px 8px 6px;
-        display: flex;
-        flex-direction: column;
-      }
+     .giris-klavye-alani { 
+       width: 100%; 
+       flex-shrink: 0; 
+       background: rgba(15, 20, 35, 0.98); 
+       border-top: 1px solid rgba(255,255,255,0.07); 
+       padding: 8px 8px 6px; 
+       display: flex; 
+       flex-direction: column;
+     }
       .cevap-satiri {
         display: flex;
         gap: 8px;
@@ -2431,14 +2430,15 @@
       }
 
 /* ========================================================================= */
-/* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ                           */
+/* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ (EVRENSEL KÖKTEN ÇÖZÜM)   */
 /* ========================================================================= */
 let maxEkranBoyutu = window.visualViewport ? window.visualViewport.height : window.innerHeight;
 
-// Telefon yan çevrildiğinde maksimum boyutu sıfırlıyoruz ki hesaplama şaşmasın
+// Cihaz yan çevrildiğinde ekran boyutunu evrensel olarak sıfırla
 window.addEventListener('orientationchange', () => {
   setTimeout(() => {
     maxEkranBoyutu = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    ekraniYenile();
   }, 300);
 });
 
@@ -2446,38 +2446,51 @@ function klavyeDurumunuGuncelle() {
   const oyunEkrani = document.getElementById('oyunEkrani');
   
   if (window.visualViewport) {
-    // Eğer tarayıcı boyutu genişlerse (örn: adres çubuğu gizlenirse) maksimum boyutu güncelle
     if (window.visualViewport.height > maxEkranBoyutu) {
       maxEkranBoyutu = window.visualViewport.height;
     }
 
-    // Cihazın fiziksel ekranı (screen.height) yerine tarayıcının maksimum boyutuyla kıyaslıyoruz
+    // Android ve iOS için ortak klavye algılama mantığı
     const isKeyboardOpen = (maxEkranBoyutu - window.visualViewport.height > 150);
 
     if (isKeyboardOpen) {
-      oyunEkrani.classList.add('klavye-acik'); // CSS sihrini devreye sokar
+      oyunEkrani.classList.add('klavye-acik');
+      // Tüm cihazlarda ekranı tam olarak kalan boşluğa sabitler (Kesilmeyi önler)
+      oyunEkrani.style.height = window.visualViewport.height + 'px';
     } else {
-      oyunEkrani.classList.remove('klavye-acik'); // Her şeyi eski haline döndürür
+      oyunEkrani.classList.remove('klavye-acik');
+      oyunEkrani.style.height = '100dvh'; // Klavye kapanınca normale dön
     }
   }
 }
 
-// Visual Viewport dinleyicisi (Klavye animasyonu bitimini yakalamak için gecikmeli)
 if (window.visualViewport) {
   let klavyeZamanlayici;
   window.visualViewport.addEventListener('resize', () => {
     if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
-      // Klavye kayma animasyonu sırasında anlık güncellemeleri temizle
       clearTimeout(klavyeZamanlayici);
-      // Animasyon bittiği an (yaklaşık 100ms sonra) boyutları tam olarak oturt
+      
+      // Ekran boyutunu anında güncelle (Android/iOS fark etmeksizin)
+      document.getElementById('oyunEkrani').style.height = window.visualViewport.height + 'px';
+      
+      // Tarayıcının kendi kendine sayfayı kaydırmasını (scroll) engelle
+      window.scrollTo(0, 0); 
+
       klavyeZamanlayici = setTimeout(() => {
         ekraniYenile();
         klavyeDurumunuGuncelle();
       }, 100);
     }
   });
-}
 
+  // Evrensel kaydırma kilidi: Oyun oynanırken ana sayfanın kaymasını kesin olarak engeller
+  // (Sonuç ekranındaki liste kaydırmasını etkilemez, sadece dış çerçeveyi kilitler)
+  window.addEventListener('scroll', () => {
+    if (document.getElementById('oyunEkrani').classList.contains('klavye-acik')) {
+      window.scrollTo(0, 0);
+    }
+  });
+}
       // Canlı istatistik sayılarını DOM üzerinde güncelleyen fonksiyon
       function canliIstatistikGuncelle() {
         document.getElementById("canliPuan").textContent = oyunDurumu.puan;
