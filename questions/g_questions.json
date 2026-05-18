@@ -3613,14 +3613,6 @@
     ]
   },
   {
-    "id": 444,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Gayret",
-    "alternatifler": [
-      "GAYRET"
-    ]
-  },
-  {
     "id": 445,
     "soru": "Salak Milyoner'de Halit Akçatepe'nin oynadığı rol",
     "cevap": "Gayret",
@@ -6868,15 +6860,6 @@
     ]
   },
   {
-    "id": 830,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Gemi yolu",
-    "alternatifler": [
-      "GEMI YOLU",
-      "Gemiyolu"
-    ]
-  },
-  {
     "id": 831,
     "soru": "Zeytini ile meşhur Bursa ilçesi",
     "cevap": "Gemlik",
@@ -7413,14 +7396,6 @@
   {
     "id": 891,
     "soru": "Albaydan daha yüksek askeri rütbe",
-    "cevap": "General",
-    "alternatifler": [
-      "GENERAL"
-    ]
-  },
-  {
-    "id": 892,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "General",
     "alternatifler": [
       "GENERAL"

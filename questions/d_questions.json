@@ -8435,14 +8435,6 @@
     ]
   },
   {
-    "id": 1007,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Dejenere",
-    "alternatifler": [
-      "DEJENERE"
-    ]
-  },
-  {
     "id": 1008,
     "soru": "Yozlaşmış, soysuzlaşmış",
     "cevap": "Dejenere",
@@ -20523,14 +20515,6 @@
     ]
   },
   {
-    "id": 2442,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Dinlence",
-    "alternatifler": [
-      "DINLENCE"
-    ]
-  },
-  {
     "id": 2443,
     "soru": "Eğlence ile birlikte, tatilin tamamlayıcısı",
     "cevap": "Dinlence",
@@ -29750,15 +29734,6 @@
     ]
   },
   {
-    "id": 3523,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Dönemeç",
-    "alternatifler": [
-      "DONEMEC",
-      "DÖNEMEÇ"
-    ]
-  },
-  {
     "id": 3524,
     "soru": "Farklı yönlerdeki iki yol arasındaki viraj",
     "cevap": "Dönemeç",
@@ -33541,14 +33516,6 @@
     ]
   },
   {
-    "id": 3960,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Duyuru",
-    "alternatifler": [
-      "DUYURU"
-    ]
-  },
-  {
     "id": 3961,
     "soru": "Vücuttaki organlarla algılanan",
     "cevap": "Duyusal",
@@ -33931,15 +33898,6 @@
     "alternatifler": [
       "DUGMESI",
       "DÜĞMESI"
-    ]
-  },
-  {
-    "id": 4004,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Düğümcük",
-    "alternatifler": [
-      "DUGUMCUK",
-      "DÜĞÜMCÜK"
     ]
   },
   {
@@ -34957,15 +34915,6 @@
     ]
   },
   {
-    "id": 4115,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Düşman",
-    "alternatifler": [
-      "DUSMAN",
-      "DÜŞMAN"
-    ]
-  },
-  {
     "id": 4116,
     "soru": "Denis Villeneuve'ün Jose Saramago uyarlaması",
     "cevap": "Düşman",
@@ -35724,15 +35673,6 @@
     "alternatifler": [
       "DÜZYATAN",
       "DUZYATAN"
-    ]
-  },
-  {
-    "id": 4200,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Düzyazı",
-    "alternatifler": [
-      "DUZYAZI",
-      "DÜZYAZI"
     ]
   },
   {

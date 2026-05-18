@@ -1475,14 +1475,6 @@
     ]
   },
   {
-    "id": 175,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Edebiyat",
-    "alternatifler": [
-      "EDEBIYAT"
-    ]
-  },
-  {
     "id": 176,
     "soru": "Roman ve hikayelerin dahil olduğu sanat türü",
     "cevap": "Edebiyat",
@@ -6931,14 +6923,6 @@
     ]
   },
   {
-    "id": 832,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Eksiksiz",
-    "alternatifler": [
-      "EKSIKSIZ"
-    ]
-  },
-  {
     "id": 833,
     "soru": "Tam, noksanı olmayan",
     "cevap": "Eksiksiz",
@@ -7017,24 +7001,6 @@
     "cevap": "Eksilmek",
     "alternatifler": [
       "EKSILMEK"
-    ]
-  },
-  {
-    "id": 842,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Eksiuç",
-    "alternatifler": [
-      "EKSIUC",
-      "EKSIUÇ"
-    ]
-  },
-  {
-    "id": 843,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Eksiuç",
-    "alternatifler": [
-      "EKSIUC",
-      "EKSIUÇ"
     ]
   },
   {
@@ -17963,80 +17929,12 @@
     ]
   },
   {
-    "id": 2124,
-    "soru": "En basit hali şeker ve limonla yapılan tüy alımı",
-    "cevap": "Epilasyon",
-    "alternatifler": [
-      "EPILASYON"
-    ]
-  },
-  {
-    "id": 2125,
-    "soru": "İstenmeyen tüy temizleyicisi",
-    "cevap": "Epilatör",
-    "alternatifler": [
-      "EPILATÖR",
-      "EPILATOR"
-    ]
-  },
-  {
-    "id": 2126,
-    "soru": "Elektronik ağda",
-    "cevap": "Epilatör",
-    "alternatifler": [
-      "EPILATÖR",
-      "EPILATOR"
-    ]
-  },
-  {
-    "id": 2127,
-    "soru": "İstenmeyen tüy temizleyicisi",
-    "cevap": "Epilatör",
-    "alternatifler": [
-      "EPILATÖR",
-      "EPILATOR"
-    ]
-  },
-  {
     "id": 2128,
     "soru": "Vücuttaki tüyleri alan aletlerin ortak adı",
     "cevap": "Epilatör",
     "alternatifler": [
       "EPILATÖR",
       "EPILATOR"
-    ]
-  },
-  {
-    "id": 2129,
-    "soru": "Vücuttaki tüyleri alan aletlerin ortak adı",
-    "cevap": "Epilatör",
-    "alternatifler": [
-      "EPILATÖR",
-      "EPILATOR"
-    ]
-  },
-  {
-    "id": 2130,
-    "soru": "Sara hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2131,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2132,
-    "soru": "Sara hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
     ]
   },
   {
@@ -18050,78 +17948,6 @@
   {
     "id": 2134,
     "soru": "Sara olarak bilinen nöbet geçirme hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2135,
-    "soru": "Sara hastalığının diğer adı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2136,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2137,
-    "soru": "Sara olarak bilinen nöbet geçirme hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2138,
-    "soru": "Ağızda köpüklü nöbetlere neden olan hastalık, sara",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2139,
-    "soru": "Sara hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2140,
-    "soru": "Anormal elektrik sinyaliyle ilgili beyin hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2141,
-    "soru": "Anormal elektrik sinyaliyle ilgili beyin hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2142,
-    "soru": "Sara hastalığı",
-    "cevap": "Epilepsi",
-    "alternatifler": [
-      "EPILEPSI"
-    ]
-  },
-  {
-    "id": 2143,
-    "soru": "Sara hastalığının diğer adı",
     "cevap": "Epilepsi",
     "alternatifler": [
       "EPILEPSI"

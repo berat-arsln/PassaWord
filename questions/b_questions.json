@@ -1905,15 +1905,6 @@
     ]
   },
   {
-    "id": 223,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Bağımsız",
-    "alternatifler": [
-      "BAGIMSIZ",
-      "BAĞIMSIZ"
-    ]
-  },
-  {
     "id": 224,
     "soru": "Hür, özgür anlamına gelen kelime",
     "cevap": "Bağımsız",
@@ -2483,15 +2474,6 @@
   {
     "id": 287,
     "soru": "Ozanların çaldığı, 6 telli, saz da denilen çalgı",
-    "cevap": "Bağlama",
-    "alternatifler": [
-      "BAGLAMA",
-      "BAĞLAMA"
-    ]
-  },
-  {
-    "id": 288,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Bağlama",
     "alternatifler": [
       "BAGLAMA",
@@ -13644,15 +13626,6 @@
     ]
   },
   {
-    "id": 1618,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Başörtü",
-    "alternatifler": [
-      "BASORTU",
-      "BAŞÖRTÜ"
-    ]
-  },
-  {
     "id": 1619,
     "soru": "Kadınların saçları üzerine bağladığı kumaş",
     "cevap": "Başörtüsü",
@@ -19657,14 +19630,6 @@
     "cevap": "Belgeleme",
     "alternatifler": [
       "BELGELEME"
-    ]
-  },
-  {
-    "id": 2332,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Belgelik",
-    "alternatifler": [
-      "BELGELIK"
     ]
   },
   {
