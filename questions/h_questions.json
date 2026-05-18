@@ -152,14 +152,6 @@
     ]
   },
   {
-    "id": 20,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Haberci",
-    "alternatifler": [
-      "HABERCI"
-    ]
-  },
-  {
     "id": 21,
     "soru": "Coşkun Aral'la özdeşleşen ünlü belgesel programı",
     "cevap": "Haberci",
@@ -8293,14 +8285,6 @@
     ]
   },
   {
-    "id": 1005,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Hasret",
-    "alternatifler": [
-      "HASRET"
-    ]
-  },
-  {
     "id": 1006,
     "soru": "1982 tarihli şiirlerden oluşan Cem Karaca albümü",
     "cevap": "Hasret",
@@ -9191,14 +9175,6 @@
     "cevap": "Hatemo",
     "alternatifler": [
       "HATEMO"
-    ]
-  },
-  {
-    "id": 1111,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Hatıra",
-    "alternatifler": [
-      "HATIRA"
     ]
   },
   {
@@ -13920,14 +13896,6 @@
     ]
   },
   {
-    "id": 1682,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Hemoroid",
-    "alternatifler": [
-      "HEMOROID"
-    ]
-  },
-  {
     "id": 1683,
     "soru": "Basur hastalığının tıbbi adı",
     "cevap": "Hemoroit",
@@ -15326,14 +15294,6 @@
     "cevap": "Herodot",
     "alternatifler": [
       "HERODOT"
-    ]
-  },
-  {
-    "id": 1851,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Herpes",
-    "alternatifler": [
-      "HERPES"
     ]
   },
   {
@@ -18248,14 +18208,6 @@
     "cevap": "Hijyenik",
     "alternatifler": [
       "HIJYENIK"
-    ]
-  },
-  {
-    "id": 2201,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Hikaye",
-    "alternatifler": [
-      "HIKAYE"
     ]
   },
   {
@@ -23845,14 +23797,6 @@
     ]
   },
   {
-    "id": 2878,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Hububat",
-    "alternatifler": [
-      "HUBUBAT"
-    ]
-  },
-  {
     "id": 2879,
     "soru": "Arapça tahıl",
     "cevap": "Hububat",
@@ -23863,14 +23807,6 @@
   {
     "id": 2880,
     "soru": "Buğday ve arpa gibi tahıl tohumlarının genel adı",
-    "cevap": "Hububat",
-    "alternatifler": [
-      "HUBUBAT"
-    ]
-  },
-  {
-    "id": 2881,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Hububat",
     "alternatifler": [
       "HUBUBAT"

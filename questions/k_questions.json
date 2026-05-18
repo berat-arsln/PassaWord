@@ -3578,14 +3578,7 @@
     "alternatifler": [
       "KAFILE"
     ]
-  },
-  {
-    "id": 434,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kafiye",
-    "alternatifler": [
-      "KAFIYE"
-    ]
+  
   },
   {
     "id": 435,
@@ -3682,14 +3675,7 @@
     "alternatifler": [
       "KAFIYE"
     ]
-  },
-  {
-    "id": 447,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kafiye",
-    "alternatifler": [
-      "KAFIYE"
-    ]
+
   },
   {
     "id": 448,
@@ -4779,14 +4765,7 @@
     "alternatifler": [
       "KAINAT"
     ]
-  },
-  {
-    "id": 581,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kainat",
-    "alternatifler": [
-      "KAINAT"
-    ]
+  
   },
   {
     "id": 582,
@@ -9687,14 +9666,7 @@
     "alternatifler": [
       "KAMYONET"
     ]
-  },
-  {
-    "id": 1179,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kamyonet",
-    "alternatifler": [
-      "KAMYONET"
-    ]
+
   },
   {
     "id": 1180,
@@ -9735,14 +9707,7 @@
     "alternatifler": [
       "KAMYONET"
     ]
-  },
-  {
-    "id": 1185,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kamyonet",
-    "alternatifler": [
-      "KAMYONET"
-    ]
+  
   },
   {
     "id": 1186,
@@ -11677,14 +11642,7 @@
     "alternatifler": [
       "KANSER"
     ]
-  },
-  {
-    "id": 1423,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kansızlık",
-    "alternatifler": [
-      "KANSIZLIK"
-    ]
+  
   },
   {
     "id": 1424,
@@ -11741,14 +11699,7 @@
     "alternatifler": [
       "KANSIZLIK"
     ]
-  },
-  {
-    "id": 1431,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kansızlık",
-    "alternatifler": [
-      "KANSIZLIK"
-    ]
+  
   },
   {
     "id": 1432,
@@ -41983,14 +41934,7 @@
     "alternatifler": [
       "KIYAFET"
     ]
-  },
-  {
-    "id": 5044,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kıyafet",
-    "alternatifler": [
-      "KIYAFET"
-    ]
+  
   },
   {
     "id": 5045,
@@ -43126,15 +43070,7 @@
     "alternatifler": [
       "KIZKALESI"
     ]
-  },
-  {
-    "id": 5184,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kızkardeş",
-    "alternatifler": [
-      "KIZKARDEŞ",
-      "KIZKARDES"
-    ]
+
   },
   {
     "id": 5185,
@@ -45896,14 +45832,7 @@
     "alternatifler": [
       "KLAKSON"
     ]
-  },
-  {
-    "id": 5518,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Klakson",
-    "alternatifler": [
-      "KLAKSON"
-    ]
+
   },
   {
     "id": 5519,
@@ -45916,22 +45845,6 @@
   {
     "id": 5520,
     "soru": "Motorlu taşıtlarda işaret için kullanılan korna",
-    "cevap": "Klakson",
-    "alternatifler": [
-      "KLAKSON"
-    ]
-  },
-  {
-    "id": 5521,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Klakson",
-    "alternatifler": [
-      "KLAKSON"
-    ]
-  },
-  {
-    "id": 5522,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Klakson",
     "alternatifler": [
       "KLAKSON"
@@ -60297,15 +60210,7 @@
       "KRALIÇE",
       "KRALICE"
     ]
-  },
-  {
-    "id": 7236,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kraliçe",
-    "alternatifler": [
-      "KRALIÇE",
-      "KRALICE"
-    ]
+
   },
   {
     "id": 7237,
@@ -68411,26 +68316,7 @@
       "KURU SOGAN",
       "Kurusoğan"
     ]
-  },
-  {
-    "id": 8202,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kuru soğuk",
-    "alternatifler": [
-      "KURU SOGUK",
-      "KURU SOĞUK",
-      "Kurusoğuk"
-    ]
-  },
-  {
-    "id": 8203,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kuru soğuk",
-    "alternatifler": [
-      "KURU SOGUK",
-      "KURU SOĞUK",
-      "Kurusoğuk"
-    ]
+  
   },
   {
     "id": 8204,
@@ -70456,14 +70342,6 @@
     "cevap": "Kuvvetler",
     "alternatifler": [
       "KUVVETLER"
-    ]
-  },
-  {
-    "id": 8429,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kuvvetli",
-    "alternatifler": [
-      "KUVVETLI"
     ]
   },
   {
@@ -73243,26 +73121,7 @@
       "KÜL OLMAK",
       "Külolmak"
     ]
-  },
-  {
-    "id": 8744,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kül rengi",
-    "alternatifler": [
-      "KUL RENGI",
-      "KÜL RENGI",
-      "Külrengi"
-    ]
-  },
-  {
-    "id": 8745,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Kül rengi",
-    "alternatifler": [
-      "KUL RENGI",
-      "KÜL RENGI",
-      "Külrengi"
-    ]
+  
   },
   {
     "id": 8746,

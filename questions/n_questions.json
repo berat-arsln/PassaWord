@@ -486,14 +486,7 @@
       "NAHCIVAN",
       "NAHÇIVAN"
     ]
-  },
-  {
-    "id": 61,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Nahiye",
-    "alternatifler": [
-      "NAHIYE"
-    ]
+
   },
   {
     "id": 62,
@@ -9447,14 +9440,7 @@
     "alternatifler": [
       "NITRIK"
     ]
-  },
-  {
-    "id": 1139,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Nitrojen",
-    "alternatifler": [
-      "NITROJEN"
-    ]
+  
   },
   {
     "id": 1140,
@@ -9499,14 +9485,6 @@
   {
     "id": 1145,
     "soru": "Azot elementi bu adla da bilinir",
-    "cevap": "Nitrojen",
-    "alternatifler": [
-      "NITROJEN"
-    ]
-  },
-  {
-    "id": 1146,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Nitrojen",
     "alternatifler": [
       "NITROJEN"
