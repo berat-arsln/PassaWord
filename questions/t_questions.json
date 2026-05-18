@@ -466,14 +466,7 @@
     "alternatifler": [
       "TABANLARI"
     ]
-  },
-  {
-    "id": 57,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Tabanvay",
-    "alternatifler": [
-      "TABANVAY"
-    ]
+  
   },
   {
     "id": 58,
@@ -498,14 +491,7 @@
     "alternatifler": [
       "TABANVAY"
     ]
-  },
-  {
-    "id": 61,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Tabanvay",
-    "alternatifler": [
-      "TABANVAY"
-    ]
+  
   },
   {
     "id": 62,
@@ -595,14 +581,7 @@
       "TABETMEK"
     ]
   },
-  {
-    "id": 73,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Tabiat",
-    "alternatifler": [
-      "TABIAT"
-    ]
-  },
+
   {
     "id": 74,
     "soru": "Canlı ve cansız varlıkları içeren çevre, doğa",
@@ -611,14 +590,7 @@
       "TABIAT"
     ]
   },
-  {
-    "id": 75,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Tabiat",
-    "alternatifler": [
-      "TABIAT"
-    ]
-  },
+  
   {
     "id": 76,
     "soru": "İnsanın hükmetmediği bütün varlıklar, doğa",
@@ -2911,22 +2883,8 @@
       "TAKLITCI",
       "TAKLITÇI"
     ]
-  },
-  {
-    "id": 352,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Takmaisim",
-    "alternatifler": [
-      "TAKMAISIM"
-    ]
-  },
-  {
-    "id": 353,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Takmaisim",
-    "alternatifler": [
-      "TAKMAISIM"
-    ]
+  
+  
   },
   {
     "id": 354,
@@ -11393,14 +11351,7 @@
     "alternatifler": [
       "TAYYARE"
     ]
-  },
-  {
-    "id": 1351,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Tayyare",
-    "alternatifler": [
-      "TAYYARE"
-    ]
+  
   },
   {
     "id": 1352,
@@ -22465,15 +22416,7 @@
       "TESHIR",
       "TEŞHIR"
     ]
-  },
-  {
-    "id": 2678,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Teşhis",
-    "alternatifler": [
-      "TESHIS",
-      "TEŞHIS"
-    ]
+  
   },
   {
     "id": 2679,
@@ -36631,14 +36574,7 @@
       "TUTMAYIN"
     ]
   },
-  {
-    "id": 4391,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Tutsak",
-    "alternatifler": [
-      "TUTSAK"
-    ]
-  },
+  
   {
     "id": 4392,
     "soru": "Savaşta ele geçirilen esir",

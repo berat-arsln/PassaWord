@@ -3414,15 +3414,7 @@
       "YANLIS",
       "YANLIŞ"
     ]
-  },
-  {
-    "id": 403,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Yanlışlık",
-    "alternatifler": [
-      "YANLIŞLIK",
-      "YANLISLIK"
-    ]
+
   },
   {
     "id": 404,
@@ -5454,14 +5446,7 @@
     "alternatifler": [
       "YARDIM"
     ]
-  },
-  {
-    "id": 643,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Yardımcı",
-    "alternatifler": [
-      "YARDIMCI"
-    ]
+  
   },
   {
     "id": 644,
@@ -10102,14 +10087,7 @@
       "YEDI YIL",
       "Yediyıl"
     ]
-  },
-  {
-    "id": 1180,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Yegane",
-    "alternatifler": [
-      "YEGANE"
-    ]
+  
   },
   {
     "id": 1181,
