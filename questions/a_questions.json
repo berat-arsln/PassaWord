@@ -10795,28 +10795,8 @@
     ]
   },
   {
-    "id": 1246,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Ağ yatak",
-    "alternatifler": [
-      "AĞ YATAK",
-      "AG YATAK",
-      "Ağyatak"
-    ]
-  },
-  {
     "id": 1247,
     "soru": "Hamak ile aynı anlama sahip kelime öbeği",
-    "cevap": "Ağ yatak",
-    "alternatifler": [
-      "AĞ YATAK",
-      "AG YATAK",
-      "Ağyatak"
-    ]
-  },
-  {
-    "id": 1248,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Ağ yatak",
     "alternatifler": [
       "AĞ YATAK",
@@ -15118,22 +15098,6 @@
     ]
   },
   {
-    "id": 1762,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Akıtma",
-    "alternatifler": [
-      "AKITMA"
-    ]
-  },
-  {
-    "id": 1763,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Akıtma",
-    "alternatifler": [
-      "AKITMA"
-    ]
-  },
-  {
     "id": 1764,
     "soru": "Un, süt, yumurta ile yapılan ince hamur işi, krep",
     "cevap": "Akıtma",
@@ -15868,14 +15832,6 @@
   {
     "id": 1853,
     "soru": "Aralarında kan bağı olan kişilerin her biri",
-    "cevap": "Akraba",
-    "alternatifler": [
-      "AKRABA"
-    ]
-  },
-  {
-    "id": 1854,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Akraba",
     "alternatifler": [
       "AKRABA"
@@ -43594,24 +43550,8 @@
     ]
   },
   {
-    "id": 5183,
-    "soru": "Aynı bulmaca bulmacaları",
-    "cevap": "Ardiye",
-    "alternatifler": [
-      "ARDIYE"
-    ]
-  },
-  {
     "id": 5184,
     "soru": "Evde depo olarak kullanılan oda",
-    "cevap": "Ardiye",
-    "alternatifler": [
-      "ARDIYE"
-    ]
-  },
-  {
-    "id": 5185,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Ardiye",
     "alternatifler": [
       "ARDIYE"
@@ -43636,14 +43576,6 @@
   {
     "id": 5188,
     "soru": "Evin eşya depolanan bölümü",
-    "cevap": "Ardiye",
-    "alternatifler": [
-      "ARDIYE"
-    ]
-  },
-  {
-    "id": 5189,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Ardiye",
     "alternatifler": [
       "ARDIYE"
@@ -45514,15 +45446,6 @@
   {
     "id": 5413,
     "soru": "Birine verilen ödül veya hediye",
-    "cevap": "Armağan",
-    "alternatifler": [
-      "ARMAĞAN",
-      "ARMAGAN"
-    ]
-  },
-  {
-    "id": 5414,
-    "soru": "Aynı bulmaca bulmacaları",
     "cevap": "Armağan",
     "alternatifler": [
       "ARMAĞAN",
@@ -65030,14 +64953,6 @@
   {
     "id": 7707,
     "soru": "Sudan korkma hastalığı",
-    "cevap": "Aquafobi",
-    "alternatifler": [
-      "AQUAFOBI"
-    ]
-  },
-  {
-    "id": 7708,
-    "soru": "Su korkusu",
     "cevap": "Aquafobi",
     "alternatifler": [
       "AQUAFOBI"
