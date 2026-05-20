@@ -3900,10 +3900,12 @@ for (const ek of ekler) {
           const dosyaVeri = await apiYanit.json();
           const sha = dosyaVeri.sha;
 
-          // İçerik için raw URL (büyük dosyalar için)
-          const rawUrl = `https://raw.githubusercontent.com/berat-arsln/PassaWord/main/questions/${dosyaAdi}_questions.json`;
-          const rawYanit = await fetch(rawUrl + "?t=" + Date.now(), {
-            headers: { "Authorization": `token ${token}` }
+          // İçerik için API raw formatı (büyük dosyalar için)
+          const rawYanit = await fetch(apiUrl, {
+            headers: {
+              "Authorization": `token ${token}`,
+              "Accept": "application/vnd.github.v3.raw"
+            }
           });
           if (!rawYanit.ok) throw new Error(`Dosya okunamadı: ${rawYanit.status}`);
           const icerik = await rawYanit.json();
