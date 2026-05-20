@@ -3908,8 +3908,8 @@ for (const ek of ekler) {
             }
           });
           if (!rawYanit.ok) throw new Error(`Dosya okunamadı: ${rawYanit.status}`);
-          const icerik = await rawYanit.json();
-          
+          const rawMetin = await rawYanit.text();
+          const icerik = JSON.parse(rawMetin);
           const hedefIndex = icerik.findIndex(s => (s.id || 0) === hedefId);
           if (hedefIndex === -1) {
             listesi.innerHTML = `<div style="text-align:center;color:#ff1744;padding:24px;font-size:14px;">❌ ID ${hedefId}, ${harf} harfinde bulunamadı!</div>`;
