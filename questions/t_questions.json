@@ -22579,7 +22579,10 @@
     "soru": "Paslı çivi battığında bu aşıdan yapılır",
     "cevap": "Tetanos",
     "alternatifler": [
-      "TETANOS"
+      "TETANOS",
+      "tetanoz",
+      "tetenos",
+      "tetenoz"
     ]
   },
   {
