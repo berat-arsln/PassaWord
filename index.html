@@ -2236,6 +2236,7 @@
         limitToLast,
         set,
         remove,
+        get,
       } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
       import {
         getAuth,
@@ -3593,6 +3594,7 @@ for (const ek of ekler) {
           ["sikayet", "⚠️ Şikayetler", "#d62828"],
           ["hata", "🔴 Oyun İçi Hatalar", "#e65100"],
           ["hepsi", "📋 Tümü", "#444"],
+          ["duzenle", "✏️ Soru Düzenle", "#7b1fa2"],
         ].forEach(([f, etiket, renk]) => {
           const btn = document.createElement("button");
           btn.textContent = etiket;
@@ -3611,6 +3613,11 @@ for (const ek of ekler) {
         });
         liste.before(sekmeDiv);
 
+        if (filtre === "duzenle") {
+          adminSoruDuzenleGoster();
+          return;
+              }
+        
         if (filtre === "hata") {
           liste.innerHTML = "";
           const hataRef = ref(veritabani, "hatabildirimler");
@@ -3809,6 +3816,223 @@ for (const ek of ekler) {
           });
       };
 
+
+      /* ========================================================================= */
+      /* ADMİN SORU DÜZENLEME (BAŞLANGIÇ)                                          */
+      /* ========================================================================= */
+      window._adminSoruData = null;
+
+      function adminSoruDuzenleGoster() {
+        const liste = document.getElementById("adminOneriListe");
+        liste.innerHTML = `
+          <div style="padding:0 16px 8px;">
+            <div class="form-grup">
+              <span class="form-etiket">Harf Seç</span>
+              <select id="adminHarfSec" class="giris-alani" style="text-align:left;cursor:pointer;appearance:auto;-webkit-appearance:auto;">
+                ${HARFLER.map(h => `<option value="${h}">${h}</option>`).join('')}
+              </select>
+            </div>
+            <div class="form-grup">
+              <span class="form-etiket">Soru ID</span>
+              <input type="number" id="adminSoruIdGiris" class="giris-alani"
+                placeholder="Hata bildirimindeki ID..." 
+                style="text-align:left;" autocomplete="off" />
+            </div>
+            <button class="gonder-buton" onclick="adminSoruYukle()">🔍 Soruları Getir</button>
+          </div>
+          <div id="adminSoruListesi" style="margin-top:4px;"></div>
+        `;
+      }
+
+      function adminSoruKartRender(kart, soru, index) {
+        const hedefId = window._adminSoruData ? window._adminSoruData.hedefId : -1;
+        const aktifMi = soru.id === hedefId;
+        if (aktifMi) kart.style.borderColor = "rgba(79,195,247,0.45)";
+        else kart.style.borderColor = "";
+        kart.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <span style="font-size:12px;font-weight:700;color:${aktifMi ? '#4fc3f7' : 'var(--metin-soluk)'};">
+              ${aktifMi ? '🎯 ' : ''}ID: ${soru.id}
+            </span>
+            <button onclick="adminSoruDuzenleAc(${index})"
+              style="background:rgba(79,195,247,0.15);border:1px solid rgba(79,195,247,0.3);
+              border-radius:8px;color:#4fc3f7;font-size:13px;font-weight:700;
+              padding:6px 12px;cursor:pointer;">✏️ Düzenle</button>
+          </div>
+          <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:4px;">📝 ${soru.soru}</div>
+          <div style="font-size:13px;color:#4fc3f7;">✅ ${soru.cevap}</div>
+          ${soru.alternatifler && soru.alternatifler.length > 0
+            ? `<div style="font-size:12px;color:var(--metin-soluk);margin-top:3px;">📎 ${soru.alternatifler.join(', ')}</div>`
+            : ''}
+        `;
+      }
+
+      window.adminSoruYukle = async function () {
+        const harfEl = document.getElementById("adminHarfSec");
+        const idEl = document.getElementById("adminSoruIdGiris");
+        if (!harfEl || !idEl) return;
+
+        const harf = harfEl.value;
+        const hedefId = parseInt(idEl.value);
+        if (!hedefId || hedefId < 1) { toastGoster("Geçerli bir ID girin!"); return; }
+
+        const listesi = document.getElementById("adminSoruListesi");
+        listesi.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">⏳ Yükleniyor...</div>`;
+
+        const dosyaAdi = HARF_DOSYA_ESLEME[harf];
+        const apiUrl = `https://api.github.com/repos/berat-arsln/PassaWord/contents/questions/${dosyaAdi}_questions.json`;
+
+        try {
+          const tokenSnap = await get(ref(veritabani, "config/githubToken"));
+          const token = tokenSnap.val();
+          if (!token) {
+            listesi.innerHTML = `<div style="text-align:center;color:#ff1744;padding:16px;font-size:14px;">❌ Firebase'de token bulunamadı!</div>`;
+            return;
+          }
+
+          const yanit = await fetch(apiUrl, {
+            headers: {
+              "Authorization": `token ${token}`,
+              "Accept": "application/vnd.github.v3+json"
+            }
+          });
+          if (!yanit.ok) throw new Error(`GitHub API hatası: ${yanit.status}`);
+
+          const dosyaVeri = await yanit.json();
+          const icerik = JSON.parse(atob(dosyaVeri.content.replace(/\n/g, '')));
+          const sha = dosyaVeri.sha;
+
+          const hedefIndex = icerik.findIndex(s => (s.id || 0) === hedefId);
+          if (hedefIndex === -1) {
+            listesi.innerHTML = `<div style="text-align:center;color:#ff1744;padding:24px;font-size:14px;">❌ ID ${hedefId}, ${harf} harfinde bulunamadı!</div>`;
+            return;
+          }
+
+          const baslangic = Math.max(0, hedefIndex - 5);
+          const bitis = Math.min(icerik.length - 1, hedefIndex + 5);
+
+          window._adminSoruData = { tumSorular: icerik, sha, harf, dosyaAdi, hedefId };
+
+          listesi.innerHTML = '';
+          for (let i = baslangic; i <= bitis; i++) {
+            const kart = document.createElement("div");
+            kart.className = "admin-oneri-kart";
+            kart.id = `adminSoruKart_${i}`;
+            adminSoruKartRender(kart, icerik[i], i);
+            listesi.appendChild(kart);
+          }
+
+        } catch (hata) {
+          console.error(hata);
+          listesi.innerHTML = `<div style="text-align:center;color:#ff1744;padding:24px;font-size:14px;">❌ ${hata.message}</div>`;
+        }
+      };
+
+      window.adminSoruDuzenleAc = function (index) {
+        if (!window._adminSoruData) return;
+        const soru = window._adminSoruData.tumSorular[index];
+        const kart = document.getElementById(`adminSoruKart_${index}`);
+        if (!kart) return;
+        kart.innerHTML = `
+          <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:10px;">✏️ ID: ${soru.id} düzenleniyor</div>
+          <span class="form-etiket">Soru</span>
+          <textarea id="duzenle_soru_${index}" style="width:100%;background:#111827;border:1.5px solid rgba(255,255,255,0.12);
+            border-radius:8px;color:#fff;font-size:14px;padding:10px 12px;margin-bottom:8px;
+            outline:none;font-family:inherit;resize:vertical;min-height:70px;display:block;">${soru.soru}</textarea>
+          <span class="form-etiket">Cevap</span>
+          <input type="text" id="duzenle_cevap_${index}" autocomplete="off"
+            style="width:100%;background:#111827;border:1.5px solid rgba(255,255,255,0.12);
+            border-radius:8px;color:#fff;font-size:14px;padding:10px 12px;margin-bottom:8px;outline:none;display:block;"
+            value="${soru.cevap}" />
+          <span class="form-etiket">Alternatifler (virgülle ayır)</span>
+          <input type="text" id="duzenle_alt_${index}" autocomplete="off"
+            style="width:100%;background:#111827;border:1.5px solid rgba(255,255,255,0.12);
+            border-radius:8px;color:#fff;font-size:14px;padding:10px 12px;margin-bottom:10px;outline:none;display:block;"
+            value="${soru.alternatifler ? soru.alternatifler.join(', ') : ''}" />
+          <div class="admin-buton-grubu">
+            <button id="adminKaydetBtn_${index}" onclick="adminSoruKaydet(${index})"
+              style="flex:1;background:linear-gradient(145deg,#00c853,#007b33);border:none;
+              border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">💾 Kaydet</button>
+            <button onclick="adminSoruDuzenleIptal(${index})"
+              style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+              border-radius:8px;color:#888;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">✕ İptal</button>
+          </div>
+        `;
+      };
+
+      window.adminSoruDuzenleIptal = function (index) {
+        if (!window._adminSoruData) return;
+        const kart = document.getElementById(`adminSoruKart_${index}`);
+        if (!kart) return;
+        adminSoruKartRender(kart, window._adminSoruData.tumSorular[index], index);
+      };
+
+      window.adminSoruKaydet = async function (index) {
+        if (!window._adminSoruData) return;
+
+        const yeniSoru = document.getElementById(`duzenle_soru_${index}`)?.value.trim();
+        const yeniCevap = document.getElementById(`duzenle_cevap_${index}`)?.value.trim();
+        const yeniAltRaw = document.getElementById(`duzenle_alt_${index}`)?.value.trim();
+
+        if (!yeniSoru || !yeniCevap) { toastGoster("Soru ve cevap boş olamaz!"); return; }
+
+        const yeniAlternatifler = yeniAltRaw
+          ? yeniAltRaw.split(',').map(s => s.trim()).filter(Boolean)
+          : [];
+
+        const kaydetBtn = document.getElementById(`adminKaydetBtn_${index}`);
+        if (kaydetBtn) { kaydetBtn.textContent = "⏳ Kaydediliyor..."; kaydetBtn.disabled = true; }
+
+        try {
+          const tokenSnap = await get(ref(veritabani, "config/githubToken"));
+          const token = tokenSnap.val();
+          if (!token) { toastGoster("❌ Token bulunamadı!"); return; }
+
+          const { tumSorular, sha, dosyaAdi } = window._adminSoruData;
+          tumSorular[index] = { ...tumSorular[index], soru: yeniSoru, cevap: yeniCevap, alternatifler: yeniAlternatifler };
+
+          const apiUrl = `https://api.github.com/repos/berat-arsln/PassaWord/contents/questions/${dosyaAdi}_questions.json`;
+          const yeniIcerikB64 = btoa(unescape(encodeURIComponent(JSON.stringify(tumSorular, null, 2))));
+
+          const yanit = await fetch(apiUrl, {
+            method: "PUT",
+            headers: {
+              "Authorization": `token ${token}`,
+              "Accept": "application/vnd.github.v3+json",
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              message: `Admin: ID ${tumSorular[index].id} güncellendi`,
+              content: yeniIcerikB64,
+              sha
+            })
+          });
+
+          if (!yanit.ok) {
+            const err = await yanit.json();
+            throw new Error(err.message || `GitHub API: ${yanit.status}`);
+          }
+
+          const sonucVeri = await yanit.json();
+          window._adminSoruData.sha = sonucVeri.content.sha;
+
+          toastGoster("✅ Soru GitHub'a kaydedildi!");
+          const kart = document.getElementById(`adminSoruKart_${index}`);
+          adminSoruKartRender(kart, tumSorular[index], index);
+
+        } catch (hata) {
+          console.error(hata);
+          toastGoster("❌ Kaydetme hatası: " + hata.message);
+          if (kaydetBtn) { kaydetBtn.textContent = "💾 Kaydet"; kaydetBtn.disabled = false; }
+        }
+      };
+
+      /* ========================================================================= */
+      /* ADMİN SORU DÜZENLEME (BİTİŞ)                                              */
+      /* ========================================================================= */
+
+
+      
       /* Utility Fonksiyonlar */
       function onayGoster(baslik, mesaj, onayCallback) {
         document.getElementById("onayBaslik").textContent = baslik;
