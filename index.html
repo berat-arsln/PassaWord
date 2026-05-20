@@ -3913,6 +3913,7 @@ for (const ek of ekler) {
           const icerik = Array.isArray(parsed) ? parsed : Object.values(parsed);
           if (!Array.isArray(icerik)) throw new Error("Veri tipi: " + typeof parsed + " | İlk 100: " + rawMetin.substring(0, 100));
 
+          const hedefIndex = icerik.findIndex(s => (s.id || 0) === hedefId);
           const baslangic = Math.max(0, hedefIndex - 5);
           const bitis = Math.min(icerik.length - 1, hedefIndex + 5);
 
