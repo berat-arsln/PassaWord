@@ -22634,7 +22634,10 @@
     "soru": "Paslı yüzeye temas edince bulaşabilen bir hastalık",
     "cevap": "Tetanos",
     "alternatifler": [
-      "TETANOS"
+      "TETANOS",
+      "tetanoz",
+      "tetenos",
+      "tetenoz"
     ]
   },
   {
