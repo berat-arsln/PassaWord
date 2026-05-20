@@ -22601,7 +22601,10 @@
     "soru": "Diğer adı kazıklı humma olan hastalık",
     "cevap": "Tetanos",
     "alternatifler": [
-      "TETANOS"
+      "TETANOS",
+      "tetanoz",
+      "tetenos",
+      "tetenoz"
     ]
   },
   {
