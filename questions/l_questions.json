@@ -6549,7 +6549,8 @@
     "soru": "Sınırlı sayıda ortağı olabilen şirket türü",
     "cevap": "Limitet",
     "alternatifler": [
-      "LIMITET"
+      "LIMITET",
+      "limited"
     ]
   },
   {
