@@ -4385,10 +4385,10 @@
   },
   {
     "id": 519,
-    "soru": "Para basma işi",
-    "cevap": "Darbetme",
+    "soru": "Para basma merkezi, para basılan yer",
+    "cevap": "Darphane",
     "alternatifler": [
-      "DARBETME"
+      "Darphane"
     ]
   },
   {
