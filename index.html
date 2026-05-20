@@ -3909,12 +3909,9 @@ for (const ek of ekler) {
           });
           if (!rawYanit.ok) throw new Error(`Dosya okunamadı: ${rawYanit.status}`);
           const rawMetin = await rawYanit.text();
-          const icerik = JSON.parse(rawMetin);
-          const hedefIndex = icerik.findIndex(s => (s.id || 0) === hedefId);
-          if (hedefIndex === -1) {
-            listesi.innerHTML = `<div style="text-align:center;color:#ff1744;padding:24px;font-size:14px;">❌ ID ${hedefId}, ${harf} harfinde bulunamadı!</div>`;
-            return;
-          }
+          const parsed = JSON.parse(rawMetin);
+          const icerik = Array.isArray(parsed) ? parsed : Object.values(parsed);
+          if (!Array.isArray(icerik)) throw new Error("Veri tipi: " + typeof parsed + " | İlk 100: " + rawMetin.substring(0, 100));
 
           const baslangic = Math.max(0, hedefIndex - 5);
           const bitis = Math.min(icerik.length - 1, hedefIndex + 5);
