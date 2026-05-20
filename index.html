@@ -3900,18 +3900,11 @@ for (const ek of ekler) {
           const dosyaVeri = await apiYanit.json();
           const sha = dosyaVeri.sha;
 
-          // İçerik için API raw formatı (büyük dosyalar için)
-          const rawYanit = await fetch(apiUrl, {
-            headers: {
-              "Authorization": `token ${token}`,
-              "Accept": "application/vnd.github.v3.raw"
-            }
-          });
+          // İçerik için raw URL (public repo, auth yok, CORS çalışır)
+          const rawUrl = `https://raw.githubusercontent.com/berat-arsln/PassaWord/main/questions/${dosyaAdi}_questions.json`;
+          const rawYanit = await fetch(rawUrl + "?t=" + Date.now());
           if (!rawYanit.ok) throw new Error(`Dosya okunamadı: ${rawYanit.status}`);
-          const rawMetin = await rawYanit.text();
-          const parsed = JSON.parse(rawMetin);
-          const icerik = Array.isArray(parsed) ? parsed : Object.values(parsed);
-          if (!Array.isArray(icerik)) throw new Error("Veri tipi: " + typeof parsed + " | İlk 100: " + rawMetin.substring(0, 100));
+          const icerik = await rawYanit.json();
 
           const hedefIndex = icerik.findIndex(s => (s.id || 0) === hedefId);
           const baslangic = Math.max(0, hedefIndex - 5);
