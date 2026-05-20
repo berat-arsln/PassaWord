@@ -22612,7 +22612,10 @@
     "soru": "Kazıklı humma adıyla bilinen enfeksiyon hastalığı",
     "cevap": "Tetanos",
     "alternatifler": [
-      "TETANOS"
+      "TETANOS",
+      "tetanoz",
+      "tetenos",
+      "tetenoz"
     ]
   },
   {
