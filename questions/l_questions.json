@@ -6567,7 +6567,8 @@
     "soru": "Sermayesi belirli, en az bir ortağı olan şirket",
     "cevap": "Limitet",
     "alternatifler": [
-      "LIMITET"
+      "LIMITET",
+      "limited"
     ]
   },
   {
