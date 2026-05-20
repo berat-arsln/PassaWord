@@ -4396,7 +4396,9 @@
     "soru": "Piyasaya yeni banknot veya madeni para sürme",
     "cevap": "Darbetme",
     "alternatifler": [
-      "DARBETME"
+      "DARBETME",
+      "darp etme",
+      "darpetme"
     ]
   },
   {
