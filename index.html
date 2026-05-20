@@ -3816,7 +3816,6 @@ for (const ek of ekler) {
           });
       };
 
-
       /* ========================================================================= */
       /* ADMİN SORU DÜZENLEME (BAŞLANGIÇ)                                          */
       /* ========================================================================= */
@@ -3890,18 +3889,25 @@ for (const ek of ekler) {
             return;
           }
 
-          const yanit = await fetch(apiUrl, {
+          // SHA için API çağrısı
+          const apiYanit = await fetch(apiUrl, {
             headers: {
               "Authorization": `token ${token}`,
               "Accept": "application/vnd.github.v3+json"
             }
           });
-          if (!yanit.ok) throw new Error(`GitHub API hatası: ${yanit.status}`);
-
-          const dosyaVeri = await yanit.json();
-          const icerik = JSON.parse(atob(dosyaVeri.content.replace(/\n/g, '')));
+          if (!apiYanit.ok) throw new Error(`GitHub API hatası: ${apiYanit.status}`);
+          const dosyaVeri = await apiYanit.json();
           const sha = dosyaVeri.sha;
 
+          // İçerik için raw URL (büyük dosyalar için)
+          const rawUrl = `https://raw.githubusercontent.com/berat-arsln/PassaWord/main/questions/${dosyaAdi}_questions.json`;
+          const rawYanit = await fetch(rawUrl + "?t=" + Date.now(), {
+            headers: { "Authorization": `token ${token}` }
+          });
+          if (!rawYanit.ok) throw new Error(`Dosya okunamadı: ${rawYanit.status}`);
+          const icerik = await rawYanit.json();
+          
           const hedefIndex = icerik.findIndex(s => (s.id || 0) === hedefId);
           if (hedefIndex === -1) {
             listesi.innerHTML = `<div style="text-align:center;color:#ff1744;padding:24px;font-size:14px;">❌ ID ${hedefId}, ${harf} harfinde bulunamadı!</div>`;
