@@ -466,7 +466,6 @@
     "alternatifler": [
       "TABANLARI"
     ]
-  
   },
   {
     "id": 58,
@@ -491,7 +490,6 @@
     "alternatifler": [
       "TABANVAY"
     ]
-  
   },
   {
     "id": 62,
@@ -581,7 +579,6 @@
       "TABETMEK"
     ]
   },
-
   {
     "id": 74,
     "soru": "Canlı ve cansız varlıkları içeren çevre, doğa",
@@ -590,7 +587,6 @@
       "TABIAT"
     ]
   },
-  
   {
     "id": 76,
     "soru": "İnsanın hükmetmediği bütün varlıklar, doğa",
@@ -2883,8 +2879,6 @@
       "TAKLITCI",
       "TAKLITÇI"
     ]
-  
-  
   },
   {
     "id": 354,
@@ -11351,7 +11345,6 @@
     "alternatifler": [
       "TAYYARE"
     ]
-  
   },
   {
     "id": 1352,
@@ -22416,7 +22409,6 @@
       "TESHIR",
       "TEŞHIR"
     ]
-  
   },
   {
     "id": 2679,
@@ -22576,7 +22568,10 @@
     "soru": "Kaza geçirenlere genellikle yapılan aşı",
     "cevap": "Tetanos",
     "alternatifler": [
-      "TETANOS"
+      "TETANOS",
+      "tetanoz",
+      "tetenos",
+      "tetenoz"
     ]
   },
   {
@@ -36574,7 +36569,6 @@
       "TUTMAYIN"
     ]
   },
-  
   {
     "id": 4392,
     "soru": "Savaşta ele geçirilen esir",
