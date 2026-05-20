@@ -22590,7 +22590,10 @@
     "soru": "Paslı demirden bulaşması mümkün olan hastalık",
     "cevap": "Tetanos",
     "alternatifler": [
-      "TETANOS"
+      "TETANOS",
+      "tetanoz",
+      "tetenos",
+      "tetenoz"
     ]
   },
   {
