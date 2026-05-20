@@ -4967,7 +4967,6 @@
     "alternatifler": [
       "LEOPAR"
     ]
-  
   },
   {
     "id": 606,
@@ -6541,7 +6540,8 @@
     "soru": "En az 2 en fazla 50 kişiyle kurulan şirket türü",
     "cevap": "Limitet",
     "alternatifler": [
-      "LIMITET"
+      "LIMITET",
+      "limited"
     ]
   },
   {
