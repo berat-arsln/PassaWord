@@ -358,7 +358,8 @@
     "soru": "Dünyanın ikinci atom bombasının atıldığı şehir",
     "cevap": "Nagasaki",
     "alternatifler": [
-      "NAGASAKI"
+      "NAGASAKI",
+      "nagazaki"
     ]
   },
   {
@@ -486,7 +487,6 @@
       "NAHCIVAN",
       "NAHÇIVAN"
     ]
-
   },
   {
     "id": 62,
@@ -8931,7 +8931,6 @@
     "alternatifler": [
       "NISAIYE"
     ]
-
   },
   {
     "id": 1082,
@@ -9432,7 +9431,6 @@
     "alternatifler": [
       "NITRIK"
     ]
-  
   },
   {
     "id": 1140,
