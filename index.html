@@ -2838,7 +2838,26 @@ for (const ek of ekler) {
     if (kok.length >= 3 && v === kok) return true;
   }
 }
+// 4. Ek çifti toleransı: li↔lik, lı↔lık, lu↔luk, lü↔lük, me↔mek, ma↔mak
+const ekCiftleri = [
+  ["li", "lik"],
+  ["lı", "lık"],
+  ["lu", "luk"],
+  ["lü", "lük"],
+  ["me", "mek"],
+  ["ma", "mak"],
+];
 
+for (const [kisa, uzun] of ekCiftleri) {
+  if (d.endsWith(kisa)) {
+    const kok = d.slice(0, -kisa.length);
+    if (kok.length >= 2 && v === kok + uzun) return true;
+  }
+  if (d.endsWith(uzun)) {
+    const kok = d.slice(0, -uzun.length);
+    if (kok.length >= 2 && v === kok + kisa) return true;
+  }
+  }
   return false;
       }
 
