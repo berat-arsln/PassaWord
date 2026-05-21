@@ -358,8 +358,7 @@
     "soru": "Dünyanın ikinci atom bombasının atıldığı şehir",
     "cevap": "Nagasaki",
     "alternatifler": [
-      "NAGASAKI",
-      "nagazaki"
+      "NAGASAKI"
     ]
   },
   {
@@ -367,8 +366,7 @@
     "soru": "Dünyanın ikinci atom bombasının atıldığı şehir",
     "cevap": "Nagasaki",
     "alternatifler": [
-      "NAGASAKI",
-      "nagazaki"
+      "NAGASAKI"
     ]
   },
   {
@@ -376,8 +374,7 @@
     "soru": "Atom bombası düşen ikinci Japon şehri",
     "cevap": "Nagazaki",
     "alternatifler": [
-      "NAGAZAKI",
-      "nagasaki"
+      "NAGAZAKI"
     ]
   },
   {
@@ -385,8 +382,7 @@
     "soru": "Dünyada atom bombası atılmış son şehir",
     "cevap": "Nagazaki",
     "alternatifler": [
-      "NAGAZAKI",
-      "nagasaki"
+      "NAGAZAKI"
     ]
   },
   {
@@ -394,8 +390,7 @@
     "soru": "Nükleer saldırıya maruz kalan ikinci ve son şehir",
     "cevap": "Nagazaki",
     "alternatifler": [
-      "NAGAZAKI",
-      "nagasaki"
+      "NAGAZAKI"
     ]
   },
   {
@@ -403,8 +398,7 @@
     "soru": "2. Dünya Savaşı'nda atom bombası atılan bir şehir",
     "cevap": "Nagazaki",
     "alternatifler": [
-      "NAGAZAKI",
-      "nagasaki"
+      "NAGAZAKI"
     ]
   },
   {
@@ -412,8 +406,7 @@
     "soru": "Bir nükleer saldırıya maruz kalan son kent",
     "cevap": "Nagazaki",
     "alternatifler": [
-      "NAGAZAKI",
-      "nagasaki"
+      "NAGAZAKI"
     ]
   },
   {
@@ -421,8 +414,7 @@
     "soru": "\"Şişman adam\" adlı atom bombasının atıldığı kent",
     "cevap": "Nagazaki",
     "alternatifler": [
-      "NAGAZAKI",
-      "nagasaki"
+      "NAGAZAKI"
     ]
   },
   {
@@ -8120,7 +8112,8 @@
     "soru": "Türk müziğinde bir makam",
     "cevap": "Nihavent",
     "alternatifler": [
-      "NIHAVENT"
+      "NIHAVENT",
+      "nihavend"
     ]
   },
   {
