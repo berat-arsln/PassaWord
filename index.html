@@ -3977,6 +3977,9 @@ for (const [kisa, uzun] of ekCiftleri) {
               style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
               border-radius:8px;color:#888;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">✕ İptal</button>
           </div>
+          <button id="adminSilBtn_${index}" onclick="adminSoruSil(${index})"
+            style="width:100%;margin-top:8px;background:linear-gradient(145deg,#c62828,#7f0000);border:none;
+            border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">🗑️ Bu Soruyu Sil</button>
         `;
       };
 
@@ -4044,6 +4047,60 @@ for (const [kisa, uzun] of ekCiftleri) {
           console.error(hata);
           toastGoster("❌ Kaydetme hatası: " + hata.message);
           if (kaydetBtn) { kaydetBtn.textContent = "💾 Kaydet"; kaydetBtn.disabled = false; }
+        }
+      };
+
+      window.adminSoruSil = async function (index) {
+        if (!window._adminSoruData) return;
+        const soru = window._adminSoruData.tumSorular[index];
+
+        if (!confirm(`ID ${soru.id} numaralı soruyu silmek istediğinize emin misiniz?\n\n"${soru.soru}"`)) return;
+
+        const silBtn = document.getElementById(`adminSilBtn_${index}`);
+        if (silBtn) { silBtn.textContent = "⏳ Siliniyor..."; silBtn.disabled = true; }
+
+        try {
+          const tokenSnap = await get(ref(veritabani, "config/githubToken"));
+          const token = tokenSnap.val();
+          if (!token) { toastGoster("❌ Token bulunamadı!"); return; }
+
+          const { tumSorular, sha, dosyaAdi } = window._adminSoruData;
+          const yeniListe = tumSorular.filter((_, i) => i !== index);
+
+          const apiUrl = `https://api.github.com/repos/berat-arsln/PassaWord/contents/questions/${dosyaAdi}_questions.json`;
+          const yeniIcerikB64 = btoa(unescape(encodeURIComponent(JSON.stringify(yeniListe, null, 2))));
+
+          const yanit = await fetch(apiUrl, {
+            method: "PUT",
+            headers: {
+              "Authorization": `token ${token}`,
+              "Accept": "application/vnd.github.v3+json",
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              message: `Admin: ID ${soru.id} silindi`,
+              content: yeniIcerikB64,
+              sha
+            })
+          });
+
+          if (!yanit.ok) {
+            const err = await yanit.json();
+            throw new Error(err.message || `GitHub API: ${yanit.status}`);
+          }
+
+          const sonucVeri = await yanit.json();
+          window._adminSoruData.sha = sonucVeri.content.sha;
+          window._adminSoruData.tumSorular = yeniListe;
+
+          toastGoster("✅ Soru silindi!");
+          const kart = document.getElementById(`adminSoruKart_${index}`);
+          if (kart) kart.remove();
+
+        } catch (hata) {
+          console.error(hata);
+          toastGoster("❌ Silme hatası: " + hata.message);
+          if (silBtn) { silBtn.textContent = "🗑️ Bu Soruyu Sil"; silBtn.disabled = false; }
         }
       };
 
