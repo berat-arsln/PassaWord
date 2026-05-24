@@ -16688,7 +16688,7 @@
     "cevap": "Mediatek",
     "alternatifler": [
       "MEDIATEK"
-    ] 
+    ]
   },
   {
     "id": 2040,
@@ -32670,7 +32670,7 @@
     "soru": "Kalp krizinde enfarktus geçiren kas",
     "cevap": "Miyokard",
     "alternatifler": [
-      "MIYOKARD"
+      "miyokart"
     ]
   },
   {
