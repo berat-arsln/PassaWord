@@ -558,13 +558,21 @@
     "cevap": "Ödünlemek",
     "alternatifler": [
       "ODUNLEMEK",
-      "ÖDÜNLEMEK",
-      "ödün vermek",
-      "ödünvermek"
+      "ÖDÜNLEMEK"
     ]
   },
   {
     "id": 61,
+    "soru": "Anlaşmaya varmak için bazı haklardan vazgeçme",
+    "cevap": "Ödün verme",
+    "alternatifler": [
+      "ÖDÜN VERME",
+      "ODUN VERME",
+      "Ödünverme"
+    ]
+  },
+  {
+    "id": 62,
     "soru": "Anlaşmaya varmak için bazı haklardan vazgeçme",
     "cevap": "Ödün verme",
     "alternatifler": [
@@ -591,6 +599,16 @@
       "ÖDÜN VERME",
       "ODUN VERME",
       "Ödünverme"
+    ]
+  },
+  {
+    "id": 65,
+    "soru": "Bir şeyden veya birisinden çok korkmak",
+    "cevap": "Ödü kopmak",
+    "alternatifler": [
+      "ODU KOPMAK",
+      "ÖDÜ KOPMAK",
+      "Ödükopmak"
     ]
   },
   {
@@ -3379,15 +3397,6 @@
   },
   {
     "id": 365,
-    "soru": "Masala göre, kurbağayı prens yapan eylem",
-    "cevap": "Öpülmek",
-    "alternatifler": [
-      "OPULMEK",
-      "ÖPÜLMEK"
-    ]
-  },
-  {
-    "id": 366,
     "soru": "Masala göre, kurbağayı prens yapan eylem",
     "cevap": "Öpülmek",
     "alternatifler": [
