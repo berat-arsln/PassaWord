@@ -3578,7 +3578,6 @@
     "alternatifler": [
       "KAFILE"
     ]
-  
   },
   {
     "id": 435,
@@ -3675,7 +3674,6 @@
     "alternatifler": [
       "KAFIYE"
     ]
-
   },
   {
     "id": 448,
@@ -4765,7 +4763,6 @@
     "alternatifler": [
       "KAINAT"
     ]
-  
   },
   {
     "id": 582,
@@ -9666,7 +9663,6 @@
     "alternatifler": [
       "KAMYONET"
     ]
-
   },
   {
     "id": 1180,
@@ -9707,7 +9703,6 @@
     "alternatifler": [
       "KAMYONET"
     ]
-  
   },
   {
     "id": 1186,
@@ -11642,7 +11637,6 @@
     "alternatifler": [
       "KANSER"
     ]
-  
   },
   {
     "id": 1424,
@@ -11699,7 +11693,6 @@
     "alternatifler": [
       "KANSIZLIK"
     ]
-  
   },
   {
     "id": 1432,
@@ -41934,7 +41927,6 @@
     "alternatifler": [
       "KIYAFET"
     ]
-  
   },
   {
     "id": 5045,
@@ -43070,7 +43062,6 @@
     "alternatifler": [
       "KIZKALESI"
     ]
-
   },
   {
     "id": 5185,
@@ -45832,7 +45823,6 @@
     "alternatifler": [
       "KLAKSON"
     ]
-
   },
   {
     "id": 5519,
@@ -60210,7 +60200,6 @@
       "KRALIÇE",
       "KRALICE"
     ]
-
   },
   {
     "id": 7237,
@@ -68056,7 +68045,8 @@
     "cevap": "Kurusoğan",
     "alternatifler": [
       "KURUSOGAN",
-      "KURUSOĞAN"
+      "KURUSOĞAN",
+      "kuru soğan"
     ]
   },
   {
@@ -68316,7 +68306,6 @@
       "KURU SOGAN",
       "Kurusoğan"
     ]
-  
   },
   {
     "id": 8204,
@@ -73121,7 +73110,6 @@
       "KÜL OLMAK",
       "Külolmak"
     ]
-  
   },
   {
     "id": 8746,
