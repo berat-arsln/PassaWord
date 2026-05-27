@@ -574,16 +574,6 @@
     ]
   },
   {
-    "id": 62,
-    "soru": "Anlaşmaya varmak için bazı haklardan vazgeçme",
-    "cevap": "Ödün verme",
-    "alternatifler": [
-      "ÖDÜN VERME",
-      "ODUN VERME",
-      "Ödünverme"
-    ]
-  },
-  {
     "id": 63,
     "soru": "Tavizde bulunma",
     "cevap": "Ödün verme",
