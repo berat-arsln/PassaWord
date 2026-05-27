@@ -47940,10 +47940,11 @@
   {
     "id": 5777,
     "soru": "Çukur dizisinde mahalleyi yöneten aile",
-    "cevap": "Koçova",
+    "cevap": "Koçovalı",
     "alternatifler": [
       "KOCOVA",
-      "KOÇOVA"
+      "KOÇOVA",
+      "koçovalılar"
     ]
   },
   {
