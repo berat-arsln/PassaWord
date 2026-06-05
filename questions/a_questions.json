@@ -912,8 +912,7 @@
     "soru": "İçene ölümsüzlük kazandırdığına inanılan su",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT",
-      "abı hayat"
+      "ABIHAYAT"
     ]
   },
   {
@@ -921,8 +920,7 @@
     "soru": "Efsanelere göre bu suyu içen kişi ölümsüz oluyor",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT",
-      "abı hayat"
+      "ABIHAYAT"
     ]
   },
   {
@@ -930,8 +928,7 @@
     "soru": "İçildiğinde ölümsüzlüğe erişildiğine inanılan su",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT",
-      "Abı hayat"
+      "ABIHAYAT"
     ]
   },
   {
@@ -939,8 +936,7 @@
     "soru": "Efsanelere göre bu suyu içen kişi ölümsüz oluyor",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT",
-      "abı hayat"
+      "ABIHAYAT"
     ]
   },
   {
@@ -948,8 +944,7 @@
     "soru": "Efsanede, içeni ölümsüz yaptığına inanılan su",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT",
-      "abı hayat"
+      "ABIHAYAT"
     ]
   },
   {
@@ -957,8 +952,7 @@
     "soru": "İçene ölümsüzlük kazandırdığına inanılan su",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT",
-      "abı hayat"
+      "ABIHAYAT"
     ]
   },
   {
@@ -966,8 +960,7 @@
     "soru": "Efsanede, içeni ölümsüz yaptığına inanılan su",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT",
-      "abı hayat"
+      "ABIHAYAT"
     ]
   },
   {
@@ -991,7 +984,8 @@
     "soru": "İçene ölümsüzlük sağladığına inanılan içecek",
     "cevap": "Abıhayat",
     "alternatifler": [
-      "ABIHAYAT"
+      "ABIHAYAT",
+      "abı hayat"
     ]
   },
   {
