@@ -2502,10 +2502,9 @@
   {
     "id": 302,
     "soru": "Atasözüne göre, bu kişi kudurmuştan beterdir",
-    "cevap": "Acıkmış",
+    "cevap": "Alışmış",
     "alternatifler": [
-      "ACIKMIS",
-      "ACIKMIŞ"
+      "Alısmıs"
     ]
   },
   {
