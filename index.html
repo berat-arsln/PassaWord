@@ -2357,11 +2357,25 @@
         localStorage.setItem("pw_profiller", JSON.stringify(profiller));
       }
       async function yedekKoduOlustur(profil) {
+        /* Profilde zaten kod varsa onu kullan */
+        if (profil.yedekKod) {
+          await set(ref(veritabani, `yedekler/${profil.yedekKod}`), {
+            id: profil.id,
+            ad: profil.ad,
+            skorlar: profil.skorlar || [],
+            olusturulma: profil.olusturulma,
+            tarih: new Date().toISOString()
+          });
+          return profil.yedekKod;
+        }
+
+        /* İlk kez oluştur ve profile kaydet */
         const karakterler = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
         let kod = 'PW-';
         for (let i = 0; i < 5; i++) {
           kod += karakterler[Math.floor(Math.random() * karakterler.length)];
         }
+
         await set(ref(veritabani, `yedekler/${kod}`), {
           id: profil.id,
           ad: profil.ad,
@@ -2369,6 +2383,15 @@
           olusturulma: profil.olusturulma,
           tarih: new Date().toISOString()
         });
+
+        /* Kodu profile kaydet */
+        const profiller = profilleriGetir();
+        const indeks = profiller.findIndex(p => p.id === profil.id);
+        if (indeks !== -1) {
+          profiller[indeks].yedekKod = kod;
+          profilleriKaydet(profiller);
+        }
+
         return kod;
       }
       
@@ -2976,6 +2999,18 @@ for (const [kisa, uzun] of ekCiftleri) {
             .sort((a, b) => b.puan - a.puan)
             .slice(0, 50);
           profilleriKaydet(profiller);
+
+          /* Yedek kodu varsa Firebase'i otomatik güncelle */
+          const guncellenenProfil = profiller[indeks];
+          if (guncellenenProfil.yedekKod) {
+            set(ref(veritabani, `yedekler/${guncellenenProfil.yedekKod}`), {
+              id: guncellenenProfil.id,
+              ad: guncellenenProfil.ad,
+              skorlar: guncellenenProfil.skorlar || [],
+              olusturulma: guncellenenProfil.olusturulma,
+              tarih: new Date().toISOString()
+            }).catch(console.error);
+          }
         }
 
         const skorRef = ref(veritabani, "skorlar");
