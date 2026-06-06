@@ -2356,22 +2356,22 @@
       function profilleriKaydet(profiller) {
         localStorage.setItem("pw_profiller", JSON.stringify(profiller));
       }
-      function yedekKoduOlustur(profil) {
-        const veri = JSON.stringify({
+      async function yedekKoduOlustur(profil) {
+        const karakterler = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        let kod = 'PW-';
+        for (let i = 0; i < 5; i++) {
+          kod += karakterler[Math.floor(Math.random() * karakterler.length)];
+        }
+        await set(ref(veritabani, `yedekler/${kod}`), {
           id: profil.id,
           ad: profil.ad,
           skorlar: profil.skorlar || [],
           olusturulma: profil.olusturulma,
+          tarih: new Date().toISOString()
         });
-        return btoa(unescape(encodeURIComponent(veri)));
+        return kod;
       }
-      function yedekKodunuCoz(kod) {
-        try {
-          return JSON.parse(decodeURIComponent(escape(atob(kod))));
-        } catch {
-          return null;
-        }
-      }
+      
 
       // DOM Yüklendiğinde
       window.addEventListener("DOMContentLoaded", () => {
@@ -3501,20 +3501,21 @@ for (const [kisa, uzun] of ekCiftleri) {
         );
       }
 
-      window.yedekKoduGoster = function () {
+      window.yedekKoduGoster = async function () {
         const profil = aktifProfiliGetir();
         if (!profil) return;
-        document.getElementById("yedekKodGosterge").textContent =
-          yedekKoduOlustur(profil);
+        const gosterge = document.getElementById("yedekKodGosterge");
+        gosterge.textContent = "Oluşturuluyor...";
         modalAc("yedekKodModal");
+        const kod = await yedekKoduOlustur(profil);
+        gosterge.textContent = kod;
       };
-      window.profilGeriYukle = function () {
-        const kod = document.getElementById("yedekKodGiris").value.trim();
-        if (!kod) {
-          toastGoster("Lütfen kod girin!");
-          return;
-        }
-        if (kod === "/adminpanel") {
+      
+      window.profilGeriYukle = async function () {
+        const kod = document.getElementById("yedekKodGiris").value.trim().toUpperCase();
+        if (!kod) { toastGoster("Lütfen kod girin!"); return; }
+
+        if (kod === "/pwadmin") {
           document.getElementById("yedekKodGiris").value = "";
           modalKapat("profilYukleModal");
           modalAc("adminModal");
@@ -3526,21 +3527,25 @@ for (const [kisa, uzun] of ekCiftleri) {
           genelSifirlaBaslat();
           return;
         }
-        const veri = yedekKodunuCoz(kod);
-        if (!veri) {
-          toastGoster("Geçersiz kod!");
-          return;
+
+        toastGoster("Aranıyor...");
+        try {
+          const snap = await get(ref(veritabani, `yedekler/${kod}`));
+          if (!snap.exists()) { toastGoster("Kod bulunamadı!"); return; }
+          const veri = snap.val();
+          const profiller = profilleriGetir();
+          const mevcutIndeks = profiller.findIndex(p => p.id === veri.id);
+          if (mevcutIndeks !== -1)
+            profiller[mevcutIndeks] = { ...profiller[mevcutIndeks], ...veri };
+          else profiller.push(veri);
+          profilleriKaydet(profiller);
+          localStorage.setItem("pw_aktif_profil", veri.id);
+          document.getElementById("yedekKodGiris").value = "";
+          modalKapat("profilYukleModal");
+          toastGoster(`"${veri.ad}" yüklendi!`);
+        } catch (hata) {
+          toastGoster("Bağlantı hatası!");
         }
-        const profiller = profilleriGetir();
-        const mevcutIndeks = profiller.findIndex((p) => p.id === veri.id);
-        if (mevcutIndeks !== -1)
-          profiller[mevcutIndeks] = { ...profiller[mevcutIndeks], ...veri };
-        else profiller.push(veri);
-        profilleriKaydet(profiller);
-        localStorage.setItem("pw_aktif_profil", veri.id);
-        document.getElementById("yedekKodGiris").value = "";
-        modalKapat("profilYukleModal");
-        toastGoster(`"${veri.ad}" yüklendi!`);
       };
 
       window.genelSifirlaBaslat = function () {
