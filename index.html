@@ -3545,7 +3545,7 @@ for (const [kisa, uzun] of ekCiftleri) {
       };
       
       window.profilGeriYukle = async function () {
-        const kod = document.getElementById("yedekKodGiris").value.trim().toUpperCase();
+        const kod = document.getElementById("yedekKodGiris").value.trim();
         if (!kod) { toastGoster("Lütfen kod girin!"); return; }
 
         if (kod === "/pwadmin") {
