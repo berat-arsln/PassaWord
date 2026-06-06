@@ -3194,10 +3194,8 @@ for (const [kisa, uzun] of ekCiftleri) {
         const kodKutu = document.createElement("div");
         kodKutu.style.cssText = "padding:0 16px 12px;";
         kodKutu.innerHTML = `<div class="ayar-etiket">Yedekleme Kodu</div><div class="yedek-kod-kutu" 
-        style="font-size:11px;letter-spacing:1px;cursor:pointer;" 
-        onclick="kopyala(this)" title="Kopyalamak için tıkla">${yedekKoduOlustur(
-          profil
-        ).substring(0, 40)}...</div>`;
+        style="font-size:13px;letter-spacing:2px;cursor:pointer;" 
+        onclick="kopyala(this)" title="Kopyalamak için tıkla">${profil.yedekKod || '(Henüz oluşturulmadı)'}</div>`;
         liste.appendChild(kodKutu);
 
         const madalyalar = ["🥇", "🥈", "🥉"];
