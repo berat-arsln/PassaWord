@@ -36,15 +36,6 @@
     ]
   },
   {
-    "id": 5,
-    "soru": "Belirli bir para verilerek çalıştırılan kişi",
-    "cevap": "Ücretli",
-    "alternatifler": [
-      "UCRETLI",
-      "ÜCRETLI"
-    ]
-  },
-  {
     "id": 6,
     "soru": "Maaşta kesintiye yol açmayan izin türü",
     "cevap": "Ücretli",
