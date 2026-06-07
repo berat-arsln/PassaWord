@@ -311,6 +311,11 @@
         display: flex;
         gap: 8px;
       }
+      
+      <!-- Duyuru Bandı (Oyun Ekranı) -->
+<div id="duyuruBandiOyun" class="gizli" style="width:100%;background:linear-gradient(90deg,rgba(255,214,0,0.15),rgba(255,214,0,0.08));border-bottom:1px solid rgba(255,214,0,0.25);padding:7px 16px;text-align:center;flex-shrink:0;">
+  <div id="duyuruMetniOyun" style="font-size:12px;font-weight:700;color:#ffd600;letter-spacing:0.3px;"></div>
+</div>
 
       /* ========================================================================= */
       /* OYUN İÇİ CANLI İSTATİSTİKLER VE KLAVYE GÖRÜNÜMÜ (STİL)                    */
@@ -3894,43 +3899,53 @@ satir.addEventListener('click', () => {
         });
       }
 
-      function profilSilOnay(profil) {
-        onayGoster(
-          "Profili Sil",
-          `"${profil.ad}" profilini silmek istediğine emin misin?`,
-          () => {
-            const profiller = profilleriGetir().filter(
-              (p) => p.id !== profil.id
-            );
-            profilleriKaydet(profiller);
-            const aktif = aktifProfiliGetir();
-            if (!aktif || aktif.id === profil.id) {
-              if (profiller.length > 0)
-                localStorage.setItem("pw_aktif_profil", profiller[0].id);
-              else localStorage.removeItem("pw_aktif_profil");
-            }
-            profilListesiniGuncelle();
-            toastGoster(`"${profil.ad}" silindi`);
-            const kalanProfiller = profilleriGetir();
-            if (kalanProfiller.length === 0) {
-              modalKapat("profilSecModal");
-              modalKapat("ayarlarModal");
-              ekraniGoster("baslangicEkrani");
-              document.getElementById("hazirEkrani").style.display = "none";
-              document.getElementById("profilOlusturKutu").style.display =
-                "block";
-            } else {
-              const yeniAktif = aktifProfiliGetir();
-              if (yeniAktif) {
-                document.getElementById("aktifProfilAdi").textContent =
-                  yeniAktif.ad;
-                document.getElementById("hosgeldinIsim").textContent =
-                  yeniAktif.ad;
-              }
-            }
-          }
-        );
+      function profilSilOnay(profil) { 
+  onayGoster(
+    "Profili Sil",
+    `"${profil.ad}" profilini silmek istediğine emin misin?`, // Backtick kullanıldı
+    async () => {
+      // Firebase'den yedek kodunu da sil
+      if (profil.yedekKod) {
+        try {
+          // Firebase referans yolu backtick içine alındı
+          await remove(ref(veritabani, `yedekler/${profil.yedekKod}`)); 
+        } catch(e) { 
+          console.warn('Firebase silme hatası:', e); 
+        }
       }
+
+      const profiller = profilleriGetir().filter(p => p.id !== profil.id);
+      profilleriKaydet(profiller);
+      
+      const aktif = aktifProfiliGetir();
+      if (!aktif || aktif.id === profil.id) {
+        if (profiller.length > 0) {
+          localStorage.setItem("pw_aktif_profil", profiller[0].id);
+        } else {
+          localStorage.removeItem("pw_aktif_profil");
+        }
+      }
+      
+      profilListesiniGuncelle();
+      toastGoster(`"${profil.ad}" silindi`); // Backtick kullanıldı
+      
+      const kalanProfiller = profilleriGetir();
+      if (kalanProfiller.length === 0) {
+        modalKapat("profilSecModal");
+        modalKapat("ayarlarModal");
+        ekraniGoster("baslangicEkrani");
+        document.getElementById("hazirEkrani").style.display = "none";
+        document.getElementById("profilOlusturKutu").style.display = "block";
+      } else {
+        const yeniAktif = aktifProfiliGetir();
+        if (yeniAktif) {
+          document.getElementById("aktifProfilAdi").textContent = yeniAktif.ad;
+          document.getElementById("hosgeldinIsim").textContent = yeniAktif.ad;
+        }
+      }
+    }
+  );
+}
 
       window.yedekKoduGoster = async function () {
         const profil = aktifProfiliGetir();
@@ -4383,42 +4398,48 @@ satir.addEventListener('click', () => {
     </div>
   </div>
 
-  <!-- ===== OYUN AYARLARI ===== -->
-  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(165,214,167,0.18);border-radius:12px;padding:14px 14px 10px;margin-bottom:10px;">
-    ${_pwBaslik('⚙️','OYUN AYARLARI','#a5d6a7')}
-    <div class="pw-govde">
+<!-- ===== OYUN AYARLARI ===== -->
+<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(165,214,167,0.18);border-radius:12px;padding:14px 14px 10px;margin-bottom:10px;">
+  ${_pwBaslik('⚙️','OYUN AYARLARI','#a5d6a7')}
+  <div class="pw-govde">
 
-      <!-- Duyuru bandı -->
-      <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">DUYURU BANDI</div>
-      <input id="pwDuyuruMetin" class="giris-alani" placeholder="Duyuru metni (boş = gizli)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
-        <input id="pwDuyuruSurGun" class="giris-alani" type="number" placeholder="Süre (gün, 0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
-        <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
-      </div>
-      <div style="display:flex;gap:6px;margin-bottom:10px;">
-        <button onclick="pwDuyuruKaydet()" style="flex:1;background:linear-gradient(145deg,#2e7d32,#1b5e20);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;">💾 Kaydet</button>
-        <button onclick="pwDuyuruSil()" style="flex:1;background:rgba(255,23,68,0.12);border:1px solid rgba(255,23,68,0.25);border-radius:8px;color:#ff6b6b;font-size:13px;font-weight:700;padding:9px;cursor:pointer;">🗑 Sil</button>
-      </div>
-
-      <!-- Bakım modu -->
-      <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">BAKIM MODU</div>
-      <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px 14px;margin-bottom:10px;">
-        <div>
-          <div style="font-size:13px;font-weight:700;color:#fff;">Bakım Modu</div>
-          <div id="pwBakimDurum" style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">Yükleniyor...</div>
-        </div>
-        <button id="pwBakimBtn" onclick="pwBakimToggle()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:7px 14px;cursor:pointer;">
-          ⏳
-        </button>
-      </div>
-
-      <!-- Skor tablosunu sıfırla -->
-      <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">TEHLİKELİ ALAN</div>
-      <button onclick="pwSkorTablosuSifirlaOnay()" style="width:100%;background:rgba(255,23,68,0.12);border:1px solid rgba(255,23,68,0.3);border-radius:8px;color:#ff4444;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">
-        ⚠️ Genel Skor Tablosunu Sıfırla
-      </button>
+    <!-- Duyuru oluştur -->
+    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">YENİ DUYURU EKLE</div>
+    <input id="pwDuyuruMetin" class="giris-alani" placeholder="Duyuru metni" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
+      <input id="pwDuyuruSure" class="giris-alani" type="number" placeholder="Süre (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
+      <select id="pwDuyuruSureBirim" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;">
+        <option value="dakika">Dakika</option>
+        <option value="saat">Saat</option>
+        <option value="gun" selected>Gün</option>
+      </select>
+      <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
     </div>
+    <button onclick="pwDuyuruEkle()" style="width:100%;background:linear-gradient(145deg,#2e7d32,#1b5e20);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:10px;">➕ Duyuru Ekle</button>
+
+    <!-- Mevcut duyurular -->
+    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">MEVCUT DUYURULAR</div>
+    <div id="pwDuyuruListe" style="margin-bottom:10px;">
+      <div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Yükleniyor...</div>
+    </div>
+
+    <!-- Bakım modu -->
+    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">BAKIM MODU</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px 14px;margin-bottom:10px;">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fff;">Bakım Modu</div>
+        <div id="pwBakimDurum" style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">Yükleniyor...</div>
+      </div>
+      <button id="pwBakimBtn" onclick="pwBakimToggle()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:7px 14px;cursor:pointer;">⏳</button>
+    </div>
+
+    <!-- Tehlikeli alan -->
+    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">TEHLİKELİ ALAN</div>
+    <button onclick="pwSkorTablosuSifirlaOnay()" style="width:100%;background:rgba(255,23,68,0.12);border:1px solid rgba(255,23,68,0.3);border-radius:8px;color:#ff4444;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">
+      ⚠️ Genel Skor Tablosunu Sıfırla
+    </button>
   </div>
+</div>
 
 </div>`;
 
@@ -4426,8 +4447,8 @@ satir.addEventListener('click', () => {
         pwSkorListesiYukle();
         /* Bakım modunu kontrol et */
         pwBakimDurumKontrol();
-        /* Mevcut duyuruyu getir */
-        pwDuyuruGetir();
+        /* Mevcut duyuruyu  listesi getir */
+        pwDuyuruListesiYukle();
       }
       /* ========================================================================= */
       /* ADMİN PASSAWORD PANELİ (BİTİŞ)                                           */
@@ -4599,47 +4620,98 @@ satir.addEventListener('click', () => {
       /* ========================================================================= */
       /* ADMİN PASSAWORD - OYUN AYARLARI                                           */
       /* ========================================================================= */
-      async function pwDuyuruGetir() {
-        try {
-          const snap = await get(ref(veritabani, 'ayarlar/duyuru'));
-          const metinEl = document.getElementById('pwDuyuruMetin');
-          const surEl = document.getElementById('pwDuyuruSurGun');
-          const maksEl = document.getElementById('pwDuyuruMaksGorunum');
-          if (snap.exists()) {
-            const veri = snap.val();
-            if (typeof veri === 'string') {
-              if (metinEl) metinEl.value = veri;
-            } else if (typeof veri === 'object') {
-              if (metinEl) metinEl.value = veri.metin || '';
-              if (surEl) surEl.value = veri.surGun || '';
-              if (maksEl) maksEl.value = veri.maksGorunum || '';
-            }
-          }
-        } catch(e) {}
-      }
+      
 
-      window.pwDuyuruKaydet = async function() {
-        const metinEl = document.getElementById('pwDuyuruMetin');
-        const surEl = document.getElementById('pwDuyuruSurGun');
-        const maksEl = document.getElementById('pwDuyuruMaksGorunum');
-        const metin = metinEl?.value.trim() || '';
-        const surGun = parseInt(surEl?.value) || 0;
-        const maksGorunum = parseInt(maksEl?.value) || 0;
-        try {
-          const kayitVeri = { metin, surGun, maksGorunum };
-          await set(ref(veritabani, 'ayarlar/duyuru'), kayitVeri);
-          toastGoster('✅ Duyuru kaydedildi!');
-        } catch(e) { toastGoster('❌ Kaydedilemedi!'); }
-      };
+      /* ========================================================================= */
+/* DUYURU YÖNETİMİ — Çoklu, süre birimli                                    */
+/* ========================================================================= */
 
-      window.pwDuyuruSil = async function() {
-        try {
-          await remove(ref(veritabani, 'ayarlar/duyuru'));
-          const el = document.getElementById('pwDuyuruMetin');
-          if (el) el.value = '';
-          toastGoster('✅ Duyuru silindi');
-        } catch(e) { toastGoster('❌ Silinemedi!'); }
-      };
+window.pwDuyuruEkle = async function() {
+  const metin = document.getElementById('pwDuyuruMetin')?.value.trim();
+  if (!metin) { toastGoster('Duyuru metni girin!'); return; }
+  const sure = parseInt(document.getElementById('pwDuyuruSure')?.value) || 0;
+  const birim = document.getElementById('pwDuyuruSureBirim')?.value || 'gun';
+  const maks = parseInt(document.getElementById('pwDuyuruMaksGorunum')?.value) || 0;
+
+  // Dakikaya çevir (0 = sonsuz)
+  let sureDakika = 0;
+  if (sure > 0) {
+    if (birim === 'dakika') sureDakika = sure;
+    else if (birim === 'saat') sureDakika = sure * 60;
+    else if (birim === 'gun') sureDakika = sure * 60 * 24;
+  }
+
+  try {
+    const yeniRef = push(ref(veritabani, 'ayarlar/duyurular'));
+    await set(yeniRef, {
+      metin,
+      sureDakika,
+      maksGorunum: maks,
+      olusturulma: Date.now()
+    });
+    toastGoster('✅ Duyuru eklendi!');
+    document.getElementById('pwDuyuruMetin').value = '';
+    document.getElementById('pwDuyuruSure').value = '';
+    document.getElementById('pwDuyuruMaksGorunum').value = '';
+    pwDuyuruListesiYukle();
+  } catch(e) { toastGoster('❌ Eklenemedi!'); }
+};
+
+window.pwDuyuruSil = async function(key) {
+  try {
+    // BURASI DÜZELTİLDİ: Backtick (`) eklendi
+    await remove(ref(veritabani, `ayarlar/duyurular/${key}`));
+    toastGoster('✅ Duyuru silindi');
+    pwDuyuruListesiYukle();
+  } catch(e) { toastGoster('❌ Silinemedi!'); }
+};
+
+function pwDuyuruListesiYukle() {
+  const konteyner = document.getElementById('pwDuyuruListe');
+  if (!konteyner) return;
+  get(ref(veritabani, 'ayarlar/duyurular')).then(snap => {
+    if (!snap.exists()) {
+      // BURASI DÜZELTİLDİ: Backtick (`) eklendi
+      konteyner.innerHTML = `<div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Duyuru yok.</div>`;
+      return;
+    }
+    const veri = snap.val();
+    konteyner.innerHTML = '';
+    Object.entries(veri)
+      // BURASI DÜZELTİLDİ: .olusturulma0 hatası düzeltildi
+      .sort((a, b) => (b[1].olusturulma || 0) - (a[1].olusturulma || 0))
+      .forEach(([key, d]) => {
+        const sureMeVarMi = d.sureDakika > 0;
+        let sureYazi = 'Sonsuz';
+        if (sureMeVarMi) {
+          // BURASI DÜZELTİLDİ: İçerideki string yapıları backtick yapıldı
+          if (d.sureDakika < 60) sureYazi = `${d.sureDakika} dk`;
+          else if (d.sureDakika < 1440) sureYazi = `${Math.round(d.sureDakika/60)} saat`;
+          else sureYazi = `${Math.round(d.sureDakika/1440)} gün`;
+        }
+        
+        const div = document.createElement('div');
+        div.style.cssText = 'background:rgba(255,255,255,0.04);border:1px solid rgba(255,214,0,0.2);border-radius:8px;padding:9px 12px;margin-bottom:6px;display:flex;align-items:flex-start;gap:8px;';
+        
+        // BURASI DÜZELTİLDİ: HTML bloğu tamamen backtick (`) içine alındı
+        div.innerHTML = `
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:13px;font-weight:700;color:#ffd600;word-break:break-word;">${d.metin}</div>
+            <div style="font-size:11px;color:var(--metin-soluk);margin-top:3px;">⏱ ${sureYazi} &nbsp;•&nbsp; 👁 Maks: ${d.maksGorunum || 'Sonsuz'}</div>
+          </div>
+          <button onclick="pwDuyuruSil('${key}')" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;white-space:nowrap;flex-shrink:0;">🗑</button>
+        `;
+        konteyner.appendChild(div);
+      });
+  }).catch(() => {
+    const konteyner = document.getElementById('pwDuyuruListe');
+    // BURASI DÜZELTİLDİ: Backtick (`) eklendi
+    if (konteyner) konteyner.innerHTML = `<div style="color:#ff6b6b;font-size:13px;">Yüklenemedi.</div>`;
+  });
+}
+
+
+      
 
       async function pwBakimDurumKontrol() {
         try {
