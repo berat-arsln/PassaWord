@@ -2470,50 +2470,139 @@ color:#fff;font-size:15px;font-weight:700;
         pasSayisi: 0,
       };
 
-      // Profiller
+      // =========================================================================
+      // PROFİL SİSTEMİ - FİREBASE REALTIME DATABASE
+      // localStorage cache olarak kullanılır (offline fallback)
+      // Firebase primary, localStorage secondary
+      // =========================================================================
+
+      // Cihaza özgü benzersiz ID (her cihaz için tek, değişmez)
+      function cihazIdGetir() {
+        let cihazId = localStorage.getItem('pw_cihaz_id');
+        if (!cihazId) {
+          cihazId = 'cihaz_' + Date.now() + '_' + Math.random().toString(36).slice(2, 9);
+          localStorage.setItem('pw_cihaz_id', cihazId);
+        }
+        return cihazId;
+      }
+
+      // localStorage cache'den profil listesi oku
       function profilleriGetir() {
-        return JSON.parse(localStorage.getItem("pw_profiller") || "[]");
+        return JSON.parse(localStorage.getItem('pw_profiller') || '[]');
       }
+
+      // localStorage cache'den aktif profili oku
       function aktifProfiliGetir() {
-        const aktifId = localStorage.getItem("pw_aktif_profil");
+        const aktifId = localStorage.getItem('pw_aktif_profil');
         const profiller = profilleriGetir();
-        return profiller.find((p) => p.id === aktifId) || profiller[0] || null;
+        return profiller.find(p => p.id === aktifId) || profiller[0] || null;
       }
+
+      // localStorage cache'e profil listesini kaydet
       function profilleriKaydet(profiller) {
-        localStorage.setItem("pw_profiller", JSON.stringify(profiller));
+        localStorage.setItem('pw_profiller', JSON.stringify(profiller));
       }
-      
+
+      // Firebase'e profil yaz (ana kayıt + yedekler yolu)
+      async function firebaseProfilGuncelle(profil) {
+        if (!profil || !profil.yedekKod) return;
+        try {
+          await set(ref(veritabani, `yedekler/${profil.yedekKod}`), {
+            id: profil.id,
+            ad: profil.ad,
+            skorlar: profil.skorlar || [],
+            gecmis: profil.gecmis || [],
+            favoriler: profil.favoriler || [],
+            olusturulma: profil.olusturulma,
+            tarih: new Date().toISOString()
+          });
+        } catch(e) {
+          console.warn('Firebase profil güncellenemedi (offline?):', e);
+        }
+      }
+
+      // Mevcut localStorage profilleri Firebase'e migrate et (bir kez çalışır)
+      async function migrasyonYap() {
+        if (localStorage.getItem('pw_firebase_migrate_v1') === 'done') return;
+        const profiller = profilleriGetir();
+        if (profiller.length === 0) {
+          localStorage.setItem('pw_firebase_migrate_v1', 'done');
+          return;
+        }
+        // Her profil için yedek kodu yoksa oluştur ve Firebase'e yaz
+        for (const profil of profiller) {
+          try {
+            await yedekKoduOlustur(profil);
+          } catch(e) {
+            console.warn('Migrasyon hatası:', profil.ad, e);
+          }
+        }
+        localStorage.setItem('pw_firebase_migrate_v1', 'done');
+        console.log('✅ Profil migrasyonu tamamlandı');
+      }
+
+      // Aktif profilin Firebase'de hâlâ var olup olmadığını dinle
+      // Admin sildiyse → profil seçim ekranına yönlendir
+      let _profilSilmeListeneri = null;
+      function aktifProfilSilmeDinleyicisiBaslat(profilId, yedekKod) {
+        if (_profilSilmeListeneri) {
+          _profilSilmeListeneri(); // eski listener'ı temizle
+          _profilSilmeListeneri = null;
+        }
+        if (!yedekKod) return;
+
+        const profilRef = ref(veritabani, `yedekler/${yedekKod}`);
+        _profilSilmeListeneri = onValue(profilRef, (snap) => {
+          if (!snap.exists()) {
+            // Profil Firebase'den silindi — bu cihazda temizle ve yönlendir
+            const profiller = profilleriGetir().filter(p => p.id !== profilId);
+            profilleriKaydet(profiller);
+            if (localStorage.getItem('pw_aktif_profil') === profilId) {
+              if (profiller.length > 0) {
+                localStorage.setItem('pw_aktif_profil', profiller[0].id);
+                toastGoster('⚠️ Aktif profil silindi. Yeni profil seçildi.');
+                // Aktif ekrandan bağımsız olarak profil seçim modali aç
+                setTimeout(() => {
+                  modalAc('profilSecModal');
+                  profilListesiniGuncelle();
+                }, 500);
+              } else {
+                localStorage.removeItem('pw_aktif_profil');
+                toastGoster('⚠️ Profilin silindi. Lütfen yeni profil oluştur.');
+                // Tüm modalleri kapat ve başlangıç ekranına dön
+                document.querySelectorAll('.modal-arkaplan.acik').forEach(m => m.classList.remove('acik'));
+                ekraniGoster('baslangicEkrani');
+                document.getElementById('hazirEkrani').style.display = 'none';
+                document.getElementById('profilOlusturKutu').style.display = 'block';
+              }
+              aktifProfilUiGuncelle();
+            }
+          }
+        });
+      }
+
+      // Geçmişe kaydet (localStorage + Firebase sync)
       function gecmiseKaydet(oyunVerisi) {
-  const profil = aktifProfiliGetir();
-  if (!profil) return;
+        const profil = aktifProfiliGetir();
+        if (!profil) return;
 
-  const profiller = profilleriGetir();
-  const indeks = profiller.findIndex(p => p.id === profil.id);
-  if (indeks === -1) return;
+        const profiller = profilleriGetir();
+        const indeks = profiller.findIndex(p => p.id === profil.id);
+        if (indeks === -1) return;
 
-  profiller[indeks].gecmis = profiller[indeks].gecmis || [];
-  profiller[indeks].gecmis.unshift(oyunVerisi); /* En yenisi başa */
-  profiller[indeks].gecmis = profiller[indeks].gecmis.slice(0, 20); /* Max 20 */
-  profilleriKaydet(profiller);
+        profiller[indeks].gecmis = profiller[indeks].gecmis || [];
+        profiller[indeks].gecmis.unshift(oyunVerisi);
+        profiller[indeks].gecmis = profiller[indeks].gecmis.slice(0, 20);
+        profilleriKaydet(profiller);
 
-  /* Yedek kodu varsa Firebase'i güncelle */
-  const guncellenenProfil = profiller[indeks];
-  if (guncellenenProfil.yedekKod) {
-    set(ref(veritabani, `yedekler/${guncellenenProfil.yedekKod}`), {
-      id: guncellenenProfil.id,
-      ad: guncellenenProfil.ad,
-      skorlar: guncellenenProfil.skorlar || [],
-      gecmis: guncellenenProfil.gecmis || [],
-      favoriler: guncellenenProfil.favoriler || [],
-      olusturulma: guncellenenProfil.olusturulma,
-      tarih: new Date().toISOString()
-    }).catch(console.error);
-  }
-}
-      
-      
+        // Firebase'e sync et
+        firebaseProfilGuncelle(profiller[indeks]);
+      }
+
+      // Yedek kodu oluştur veya mevcut olanı Firebase'e yaz
       async function yedekKoduOlustur(profil) {
         if (profil.yedekKod) {
+          // Mevcut kodu Firebase'e yaz (güncelle)
           await set(ref(veritabani, `yedekler/${profil.yedekKod}`), {
             id: profil.id,
             ad: profil.ad,
@@ -2526,7 +2615,7 @@ color:#fff;font-size:15px;font-weight:700;
           return profil.yedekKod;
         }
 
-        /* İlk kez oluştur ve profile kaydet */
+        // İlk kez oluştur
         const karakterler = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
         let kod = 'PW-';
         for (let i = 0; i < 5; i++) {
@@ -2543,7 +2632,7 @@ color:#fff;font-size:15px;font-weight:700;
           tarih: new Date().toISOString()
         });
 
-        /* Kodu profile kaydet */
+        // Kodu profile kaydet
         const profiller = profilleriGetir();
         const indeks = profiller.findIndex(p => p.id === profil.id);
         if (indeks !== -1) {
@@ -2553,42 +2642,43 @@ color:#fff;font-size:15px;font-weight:700;
 
         return kod;
       }
-      
 
       // DOM Yüklendiğinde
-      window.addEventListener("DOMContentLoaded", () => {
-const aktifProfilSatir = document.getElementById('aktifProfilSatir');
-let uzunBasmaZamanlayi;
-aktifProfilSatir.addEventListener('touchstart', () => {
-  uzunBasmaZamanlayi = setTimeout(() => {
-    const profil = aktifProfiliGetir();
-    if (profil) profilSilOnay(profil);
-  }, 570);
-});
-aktifProfilSatir.addEventListener('touchend', () => clearTimeout(uzunBasmaZamanlayi));
-aktifProfilSatir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZamanlayi));
+      window.addEventListener('DOMContentLoaded', () => {
+        const aktifProfilSatir = document.getElementById('aktifProfilSatir');
+        let uzunBasmaZamanlayi;
+        aktifProfilSatir.addEventListener('touchstart', () => {
+          uzunBasmaZamanlayi = setTimeout(() => {
+            const profil = aktifProfiliGetir();
+            if (profil) profilSilOnay(profil);
+          }, 570);
+        });
+        aktifProfilSatir.addEventListener('touchend', () => clearTimeout(uzunBasmaZamanlayi));
+        aktifProfilSatir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZamanlayi));
 
-        window._dokunmatik =
-          "ontouchstart" in window || navigator.maxTouchPoints > 0;
+        window._dokunmatik = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         bilgisayarModunuAyarla();
         yatayModKontrol();
-        window.addEventListener("resize", yatayModKontrol);
-        window.addEventListener("orientationchange", () =>
-          setTimeout(yatayModKontrol, 300)
-        );
+        window.addEventListener('resize', yatayModKontrol);
+        window.addEventListener('orientationchange', () => setTimeout(yatayModKontrol, 300));
 
         const aktifProfil = aktifProfiliGetir();
         if (aktifProfil) {
-          ekraniGoster("baslangicEkrani");
-          document.getElementById("profilOlusturKutu").style.display = "none";
-          const hazir = document.getElementById("hazirEkrani");
-          hazir.style.display = "flex";
-          hazir.style.flexDirection = "column";
-          document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
+          ekraniGoster('baslangicEkrani');
+          document.getElementById('profilOlusturKutu').style.display = 'none';
+          const hazir = document.getElementById('hazirEkrani');
+          hazir.style.display = 'flex';
+          hazir.style.flexDirection = 'column';
+          document.getElementById('hosgeldinIsim').textContent = aktifProfil.ad;
           aktifProfilUiGuncelle();
+          // Silme listener'ını başlat
+          aktifProfilSilmeDinleyicisiBaslat(aktifProfil.id, aktifProfil.yedekKod);
         } else {
-          ekraniGoster("baslangicEkrani");
+          ekraniGoster('baslangicEkrani');
         }
+
+        // Firebase migrasyonu (arka planda, sessizce)
+        migrasyonYap().catch(console.warn);
 
         // Bakım modu ve duyuru kontrolü
         bakimModuVeDuyuruKontrol();
@@ -2597,16 +2687,13 @@ aktifProfilSatir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZaman
 
         // Çift dokunma engelleme
         let sonDokunma = 0;
-        document.addEventListener(
-          "touchend",
-          (e) => {
-            const simdi = Date.now();
-            if (simdi - sonDokunma < 1) e.preventDefault();
-            sonDokunma = simdi;
-          },
-          { passive: false }
-        );
+        document.addEventListener('touchend', (e) => {
+          const simdi = Date.now();
+          if (simdi - sonDokunma < 1) e.preventDefault();
+          sonDokunma = simdi;
+        }, { passive: false });
       });
+
 
       // Bilgisayar/Mobil Modu
       function bilgisayarModunuAyarla() {
@@ -3205,6 +3292,8 @@ gecmiseKaydet({
               id: guncellenenProfil.id,
               ad: guncellenenProfil.ad,
               skorlar: guncellenenProfil.skorlar || [],
+              gecmis: guncellenenProfil.gecmis || [],
+              favoriler: guncellenenProfil.favoriler || [],
               olusturulma: guncellenenProfil.olusturulma,
               tarih: new Date().toISOString()
             }).catch(console.error);
@@ -3713,6 +3802,12 @@ satir.addEventListener('click', () => {
         // Otomatik yedek kod oluştur
         yedekKoduOlustur(yeniProfil).then(kod => {
           aktifProfilUiGuncelle();
+          // Yeni profil icin silme dinleyicisini baslat
+          const tazeProfiller = profilleriGetir();
+          const tazeProfil = tazeProfiller.find(p => p.id === yeniProfil.id);
+          if (tazeProfil && tazeProfil.yedekKod) {
+            aktifProfilSilmeDinleyicisiBaslat(tazeProfil.id, tazeProfil.yedekKod);
+          }
         }).catch(console.error);
       };
 
@@ -3921,6 +4016,8 @@ satir.addEventListener('click', () => {
             document.getElementById("hosgeldinIsim").textContent = profil.ad;
             profilListesiniGuncelle();
             toastGoster(`"${profil.ad}" seçildi`);
+            // Yeni aktif profil için silme dinleyicisini başlat
+            aktifProfilSilmeDinleyicisiBaslat(profil.id, profil.yedekKod);
           });
 
           let uzunBasmaZamanlayi;
