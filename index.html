@@ -2543,40 +2543,46 @@ color:#fff;font-size:15px;font-weight:700;
 
       // Aktif profilin Firebase'de hâlâ var olup olmadığını dinle
       // Admin sildiyse → profil seçim ekranına yönlendir
-      let _profilSilmeListeneri = null;
-      function aktifProfilSilmeDinleyicisiBaslat(profilId, yedekKod) {
-        if (!yedekKod) return;
-        if (_profilSilmeListeneri) {
-          _profilSilmeListeneri();
-          _profilSilmeListeneri = null;
-        }
-        const profilRef = ref(veritabani, `yedekler/${yedekKod}`);
-        let ilkTetikleme = true;
-        _profilSilmeListeneri = onValue(profilRef, (snap) => {
-          if (ilkTetikleme) { ilkTetikleme = false; return; }
-          if (!snap.exists()) {
-            const profiller = profilleriGetir().filter(p => p.id !== profilId);
-            profilleriKaydet(profiller);
-            if (localStorage.getItem('pw_aktif_profil') === profilId) {
-              if (profiller.length > 0) {
-                localStorage.setItem('pw_aktif_profil', profiller[0].id);
-                toastGoster('⚠️ Aktif profil silindi. Yeni profil seçildi.');
-                setTimeout(() => {
-                  modalAc('profilSecModal');
-                  profilListesiniGuncelle();
-                }, 500);
+      let _profilSilmeListenerleri = {};
+      function tumProfillereSilmeDinleyicisiBaslat() {
+        Object.values(_profilSilmeListenerleri).forEach(unsub => unsub());
+        _profilSilmeListenerleri = {};
+        const profiller = profilleriGetir();
+        profiller.forEach(profil => {
+          if (!profil.yedekKod) return;
+          const profilRef = ref(veritabani, `yedekler/${profil.yedekKod}`);
+          let ilkTetikleme = true;
+          _profilSilmeListenerleri[profil.id] = onValue(profilRef, (snap) => {
+            if (ilkTetikleme) { ilkTetikleme = false; return; }
+            if (!snap.exists()) {
+              const kalanlar = profilleriGetir().filter(p => p.id !== profil.id);
+              profilleriKaydet(kalanlar);
+              if (localStorage.getItem('pw_aktif_profil') === profil.id) {
+                if (kalanlar.length > 0) {
+                  localStorage.setItem('pw_aktif_profil', kalanlar[0].id);
+                  toastGoster('⚠️ Aktif profil silindi.');
+                  setTimeout(() => { modalAc('profilSecModal'); profilListesiniGuncelle(); }, 500);
+                } else {
+                  localStorage.removeItem('pw_aktif_profil');
+                  toastGoster('⚠️ Profilin silindi.');
+                  document.querySelectorAll('.modal-arkaplan.acik').forEach(m => m.classList.remove('acik'));
+                  ekraniGoster('baslangicEkrani');
+                  document.getElementById('hazirEkrani').style.display = 'none';
+                  document.getElementById('profilOlusturKutu').style.display = 'block';
+                }
               } else {
-                localStorage.removeItem('pw_aktif_profil');
-                toastGoster('⚠️ Profilin silindi. Lütfen yeni profil oluştur.');
-                document.querySelectorAll('.modal-arkaplan.acik').forEach(m => m.classList.remove('acik'));
-                ekraniGoster('baslangicEkrani');
-                document.getElementById('hazirEkrani').style.display = 'none';
-                document.getElementById('profilOlusturKutu').style.display = 'block';
+                toastGoster(`⚠️ "${profil.ad}" profili silindi.`);
+                profilListesiniGuncelle();
               }
               aktifProfilUiGuncelle();
+              delete _profilSilmeListenerleri[profil.id];
             }
-          }
+          });
         });
+      }
+
+      function aktifProfilSilmeDinleyicisiBaslat(profilId, yedekKod) {
+        tumProfillereSilmeDinleyicisiBaslat();
       }
 
       // Geçmişe kaydet (localStorage + Firebase sync)
@@ -2670,7 +2676,7 @@ color:#fff;font-size:15px;font-weight:700;
           document.getElementById('hosgeldinIsim').textContent = aktifProfil.ad;
           aktifProfilUiGuncelle();
           // Silme listener'ını başlat
-          aktifProfilSilmeDinleyicisiBaslat(aktifProfil.id, aktifProfil.yedekKod);
+          tumProfillereSilmeDinleyicisiBaslat();
         } else {
           ekraniGoster('baslangicEkrani');
         }
