@@ -1692,12 +1692,12 @@
           ⚙️
         </button>
         <span class="header-baslik" onclick="passaWordMenuAc()" style="cursor:pointer;user-select:none;position:relative;">PassaWord
-          <div id="passaWordMenu" class="gizli" style="position:absolute;top:34px;left:50%;transform:translateX(-50%);background:#0d1530;border:1px solid rgba(79,195,247,0.25);border-radius:12px;padding:6px;z-index:200;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.6);">
-            <div onclick="passaWordPanelSec(event,'skor')" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">🏆 Genel Skor</div>
-            <div onclick="passaWordPanelSec(event,'oyuncu')" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">👤 Oyuncu</div>
-            <div onclick="passaWordPanelSec(event,'ayarlar')" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">⚙️ Oyun Ayarları</div>
-          </div>
-        </span>
+  <div id="passaWordMenu" class="gizli" style="position:absolute;top:34px;left:50%;transform:translateX(-50%);background:#0d1530;border:1px solid rgba(79,195,247,0.25);border-radius:12px;padding:6px;z-index:200;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.6);">
+    <div onclick="passaWordPanelSec(event,'skor')" id="pwNavSkor" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">🏆 Genel Skor</div>
+    <div onclick="passaWordPanelSec(event,'oyuncu')" id="pwNavOyuncu" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">👤 Oyuncu</div>
+    <div onclick="passaWordPanelSec(event,'ayarlar')" id="pwNavAyarlar" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">⚙️ Oyun Ayarları</div>
+  </div>
+</span>
         <div class="header-sag">
           <button
             class="header-buton"
@@ -3362,17 +3362,20 @@ gecmiseKaydet({
       };
 
       window.passaWordPanelSec = function(e, panel) {
-        if (e && e.stopPropagation) e.stopPropagation();
-        const menu = document.getElementById('passaWordMenu');
-        if (menu) menu.classList.add('gizli');
-        if (panel === 'skor') {
-          modalAc('skorModal');
-        } else if (panel === 'oyuncu') {
-          modalAc('profilSecModal');
-        } else if (panel === 'ayarlar') {
-          modalAc('ayarlarModal');
-        }
-      };
+  if (e && e.stopPropagation) e.stopPropagation();
+  const menu = document.getElementById('passaWordMenu');
+  if (menu) menu.classList.add('gizli');
+
+  // Seçili item'ı vurgula (bir sonraki açılışta)
+  ['skor','oyuncu','ayarlar'].forEach(p => {
+    const el = document.getElementById('pwNav' + p.charAt(0).toUpperCase() + p.slice(1));
+    if (el) el.style.background = p === panel ? 'rgba(79,195,247,0.15)' : 'transparent';
+  });
+
+  if (panel === 'skor') modalAc('skorModal');
+  else if (panel === 'oyuncu') modalAc('profilSecModal');
+  else if (panel === 'ayarlar') modalAc('ayarlarModal');
+};
 
       /* ========================================================================= */
       /* BAKIM MODU VE DUYURU KONTROLÜ                                             */
