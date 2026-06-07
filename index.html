@@ -47,6 +47,10 @@
         --baslik-renk: #4fc3f7;
       }
 
+         @keyframes duyuruKay {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
       html,
       body {
         width: 100%;
@@ -156,14 +160,15 @@
 
       /* --------- BAŞLANGIÇ EKRANI --------- */
       #baslangicEkrani {
-        background: radial-gradient(
-          ellipse at 50% 30%,
-          #0d2050 0%,
-          #0a0e1a 70%
-        );
-        justify-content: center;
-        gap: 32px;
-      }
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    #0d2050 0%,
+    #0a0e1a 70%
+  );
+  justify-content: center;
+  gap: 32px;
+  padding-top: 70px;
+}
       .baslangic-logo {
         text-align: center;
       }
@@ -359,7 +364,7 @@
         padding-bottom: 34px; /* İstatistiklerin daireye çarpmaması için güvenlik boşluğu */
       }
       
-      #oyunEkrani.klavye-acik .duyuruBandiOyun {
+      #oyunEkrani.klavye-acik #duyuruBandiOyun {
   display: none !important;
 }
 
@@ -1653,10 +1658,14 @@
           </button>
         </div>
       </div>
-      <!-- Duyuru Bandı -->
-      <div id="duyuruBandi" class="gizli" style="width:100%;background:linear-gradient(90deg,rgba(255,214,0,0.15),rgba(255,214,0,0.08));border-bottom:1px solid rgba(255,214,0,0.25);padding:9px 16px;text-align:center;">
-        <div id="duyuruMetni" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;"></div>
-      </div>
+      
+      <div id="duyuruBandi" class="gizli" style="width:calc(100% - 28px);background:linear-gradient(90deg,rgba(255,214,0,0.18),rgba(255,214,0,0.10));border:1px solid rgba(255,214,0,0.35);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-sizing:border-box;overflow:hidden;">
+  <div style="font-size:18px;flex-shrink:0;">📢</div>
+  <div style="flex:1;overflow:hidden;">
+    <div id="duyuruMetni" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;white-space:nowrap;display:inline-block;animation:duyuruKay 15s linear infinite;"></div>
+  </div>
+</div>
+      
 
       <div class="baslangic-logo">
         <h1>PassaWord</h1>
@@ -1723,8 +1732,11 @@
   </button>
 </div>
       </div>
-      <div id="duyuruBandiOyun" class="gizli" style="width:100%;background:linear-gradient(90deg,rgba(255,214,0,0.15),rgba(255,214,0,0.08));border-bottom:1px solid rgba(255,214,0,0.25);padding:7px 16px;text-align:center;flex-shrink:0;">
-  <div id="duyuruMetniOyun" style="font-size:12px;font-weight:700;color:#ffd600;letter-spacing:0.3px;"></div>
+      <div id="duyuruBandiOyun" class="gizli" style="width:calc(100% - 28px);margin:0 14px;background:linear-gradient(90deg,rgba(255,214,0,0.18),rgba(255,214,0,0.10));border:1px solid rgba(255,214,0,0.35);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-sizing:border-box;overflow:hidden;flex-shrink:0;">
+  <div style="font-size:18px;flex-shrink:0;">📢</div>
+  <div style="flex:1;overflow:hidden;">
+    <div id="duyuruMetniOyun" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;white-space:nowrap;display:inline-block;animation:duyuruKay 15s linear infinite;"></div>
+  </div>
 </div>
 
       <div class="oyun-alani">
@@ -1825,6 +1837,14 @@
           </button>
         </div>
       </div>
+      
+      <div id="duyuruBandiSonuc" class="gizli" style="width:calc(100% - 28px);margin:8px 14px 0;background:linear-gradient(90deg,rgba(255,214,0,0.18),rgba(255,214,0,0.10));border:1px solid rgba(255,214,0,0.35);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-sizing:border-box;overflow:hidden;flex-shrink:0;">
+  <div style="font-size:18px;flex-shrink:0;">📢</div>
+  <div style="flex:1;overflow:hidden;">
+    <div id="duyuruMetniSonuc" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;white-space:nowrap;display:inline-block;animation:duyuruKay 15s linear infinite;"></div>
+  </div>
+</div>
+      
       <!-- SONUÇ EKRANINA EKLENEN HEADER BİTİŞ -->
       <div class="sonuc-header">
         <h2>🎉 OYUN BİTTİ</h2>
@@ -3489,11 +3509,13 @@ function duyurulariGoster(snap) {
     oyunMetni.textContent = metinler;
     oyunBandi.classList.remove('gizli');
   }
-
-  const mevcutEkran = document.querySelector('.ekran:not(.gizli)');
-  if (mevcutEkran && (mevcutEkran.id === 'oyunEkrani' || mevcutEkran.id === 'baslangicEkrani')) {
-    toastGoster('📢 ' + aktifDuyurular[0].metin, 4000);
-  }
+  
+  const sonucBandi = document.getElementById('duyuruBandiSonuc');
+const sonucMetni = document.getElementById('duyuruMetniSonuc');
+if (sonucBandi && sonucMetni) {
+  sonucMetni.textContent = metinler;
+  sonucBandi.classList.remove('gizli');
+}
 }
 
       // Bakım modundaki admin giriş kontrolü
@@ -4374,106 +4396,107 @@ satir.addEventListener('click', () => {
       }
 
       function adminPassaWordPanelGoster() {
-        const liste = document.getElementById("adminOneriListe");
-        liste.innerHTML = `<div style="padding:4px 0 8px;" id="pwPanelKok">
-
-  <!-- ===== GENEL SKOR TABLOSU ===== -->
-  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(79,195,247,0.18);border-radius:12px;padding:14px 14px 10px;margin-bottom:10px;">
-    ${_pwBaslik('🏆','GENEL SKOR TABLOSU','#4fc3f7')}
-    <div class="pw-govde">
-
-      <!-- Mevcut sıralama -->
-      <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">MEVCUT SIRALAMA</div>
-      <div id="pwSkorListe" style="margin-bottom:10px;">
-        <div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:10px 0;">Yükleniyor...</div>
-      </div>
-
-      <!-- Sıralamaya elle kayıt ekle -->
-      <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;letter-spacing:.4px;">ELLE KAYIT EKLE</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
-        <input id="pwEkleIsim" class="giris-alani" placeholder="İsim" style="font-size:13px;padding:9px 10px;text-align:left;">
-        <input id="pwEklePuan" class="giris-alani" type="number" placeholder="Puan" style="font-size:13px;padding:9px 10px;text-align:left;">
-        <input id="pwEkleDogru" class="giris-alani" type="number" placeholder="Doğru" style="font-size:13px;padding:9px 10px;text-align:left;">
-        <input id="pwEkleYanlis" class="giris-alani" type="number" placeholder="Yanlış" style="font-size:13px;padding:9px 10px;text-align:left;">
-        <input id="pwEklePas" class="giris-alani" type="number" placeholder="Pas" style="font-size:13px;padding:9px 10px;text-align:left;">
-      </div>
-      <button onclick="pwSkorEkle()" style="width:100%;background:linear-gradient(145deg,#1976d2,#0d47a1);border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:700;padding:10px;cursor:pointer;margin-top:2px;">
-        ➕ Skoru Ekle
-      </button>
-    </div>
+  const liste = document.getElementById("adminOneriListe");
+  liste.innerHTML = `
+<div style="display:flex;flex-direction:column;gap:0;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:14px;overflow:hidden;margin-bottom:14px;">
+  <div onclick="pwSekmeGec('skor',this)" id="pwSekmeBtn_skor"
+    style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.05);color:#fff;font-size:15px;font-weight:600;">
+    <span>🏆 Genel Skor Tablosu</span><span>›</span>
   </div>
-
-  <!-- ===== OYUNCU YÖNETİMİ ===== -->
-  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(206,147,216,0.18);border-radius:12px;padding:14px 14px 10px;margin-bottom:10px;">
-    ${_pwBaslik('👤','OYUNCU YÖNETİMİ','#ce93d8')}
-    <div class="pw-govde">
-
-      <!-- Yedek kodu ile ara -->
-      <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">YEDEK KODU İLE OYUNCU ARA</div>
-      <div style="display:flex;gap:6px;margin-bottom:8px;">
-        <input id="pwOyuncuKodAra" class="giris-alani" placeholder="PW-XXXXX" style="flex:1;font-size:13px;padding:9px 10px;text-align:left;">
-        <button onclick="pwOyuncuAra()" style="background:rgba(206,147,216,0.2);border:1px solid rgba(206,147,216,0.35);border-radius:8px;color:#ce93d8;font-size:13px;font-weight:700;padding:9px 14px;cursor:pointer;white-space:nowrap;">
-          🔍 Ara
-        </button>
-      </div>
-      <div id="pwOyuncuSonuc"></div>
-
-      <!-- Tüm yedekler listesi -->
-      <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;letter-spacing:.4px;">TÜM KAYITLI PROFİLLER</div>
-      <button onclick="pwTumOyunculariYukle()" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:8px;">
-        📋 Profilleri Listele
-      </button>
-      <div id="pwOyuncuListe"></div>
-    </div>
+  <div onclick="pwSekmeGec('oyuncu',this)" id="pwSekmeBtn_oyuncu"
+    style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.05);color:#fff;font-size:15px;font-weight:600;">
+    <span>👤 Oyuncu Yönetimi</span><span>›</span>
   </div>
-
-<!-- ===== OYUN AYARLARI ===== -->
-<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(165,214,167,0.18);border-radius:12px;padding:14px 14px 10px;margin-bottom:10px;">
-  ${_pwBaslik('⚙️','OYUN AYARLARI','#a5d6a7')}
-  <div class="pw-govde">
-
-    <!-- Duyuru oluştur -->
-    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">YENİ DUYURU EKLE</div>
-    <input id="pwDuyuruMetin" class="giris-alani" placeholder="Duyuru metni" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
-      <input id="pwDuyuruSure" class="giris-alani" type="number" placeholder="Süre (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
-      <select id="pwDuyuruSureBirim" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;">
-        <option value="dakika">Dakika</option>
-        <option value="saat">Saat</option>
-        <option value="gun" selected>Gün</option>
-      </select>
-      <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
-    </div>
-    <button onclick="pwDuyuruEkle()" style="width:100%;background:linear-gradient(145deg,#2e7d32,#1b5e20);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:10px;">➕ Duyuru Ekle</button>
-
-    <!-- Mevcut duyurular -->
-    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">MEVCUT DUYURULAR</div>
-    <div id="pwDuyuruListe" style="margin-bottom:10px;">
-      <div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Yükleniyor...</div>
-    </div>
-
-    <!-- Bakım modu -->
-    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">BAKIM MODU</div>
-    <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px 14px;margin-bottom:10px;">
-      <div>
-        <div style="font-size:13px;font-weight:700;color:#fff;">Bakım Modu</div>
-        <div id="pwBakimDurum" style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">Yükleniyor...</div>
-      </div>
-      <button id="pwBakimBtn" onclick="pwBakimToggle()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:7px 14px;cursor:pointer;">⏳</button>
-    </div>
-
-    <!-- Tehlikeli alan -->
-    <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">TEHLİKELİ ALAN</div>
-    <button onclick="pwSkorTablosuSifirlaOnay()" style="width:100%;background:rgba(255,23,68,0.12);border:1px solid rgba(255,23,68,0.3);border-radius:8px;color:#ff4444;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">
-      ⚠️ Genel Skor Tablosunu Sıfırla
-    </button>
+  <div onclick="pwSekmeGec('ayarlar',this)" id="pwSekmeBtn_ayarlar"
+    style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;cursor:pointer;color:#fff;font-size:15px;font-weight:600;">
+    <span>⚙️ Oyun Ayarları</span><span>›</span>
   </div>
 </div>
 
-</div>`;
+<!-- SKOR PANELİ -->
+<div id="pwPanel_skor">
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">MEVCUT SIRALAMA</div>
+<button onclick="pwSiralamayiGor()" style="width:100%;background:rgba(79,195,247,0.1);border:1px solid rgba(79,195,247,0.3);border-radius:8px;color:#4fc3f7;font-size:14px;font-weight:700;padding:10px;cursor:pointer;margin-bottom:10px;">
+  📊 Sıralamayı Gör
+</button>
+<div id="pwSkorListe" style="margin-bottom:10px;display:none;"></div>
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;letter-spacing:.4px;">ELLE KAYIT EKLE</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
+    <input id="pwEkleIsim" class="giris-alani" placeholder="İsim" style="font-size:13px;padding:9px 10px;text-align:left;">
+    <input id="pwEklePuan" class="giris-alani" type="number" placeholder="Puan" style="font-size:13px;padding:9px 10px;text-align:left;">
+    <input id="pwEkleDogru" class="giris-alani" type="number" placeholder="Doğru" style="font-size:13px;padding:9px 10px;text-align:left;">
+    <input id="pwEkleYanlis" class="giris-alani" type="number" placeholder="Yanlış" style="font-size:13px;padding:9px 10px;text-align:left;">
+    <input id="pwEklePas" class="giris-alani" type="number" placeholder="Pas" style="font-size:13px;padding:9px 10px;text-align:left;">
+  </div>
+  <button onclick="pwSkorEkle()" style="width:100%;background:linear-gradient(145deg,#1976d2,#0d47a1);border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:700;padding:10px;cursor:pointer;margin-bottom:8px;">
+    ➕ Skoru Ekle
+  </button>
+  <button onclick="pwSkorTablosuSifirlaOnay()" style="width:100%;background:rgba(255,23,68,0.12);border:1px solid rgba(255,23,68,0.3);border-radius:8px;color:#ff4444;font-size:13px;font-weight:700;padding:10px;cursor:pointer;">
+    ⚠️ Skor Tablosunu Sıfırla
+  </button>
+</div>
+
+<!-- OYUNCU PANELİ -->
+<div id="pwPanel_oyuncu" style="display:none;">
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">YEDEK KODU İLE OYUNCU ARA</div>
+  <div style="display:flex;gap:6px;margin-bottom:8px;">
+    <input id="pwOyuncuKodAra" class="giris-alani" placeholder="PW-XXXXX" style="flex:1;font-size:13px;padding:9px 10px;text-align:left;">
+    <button onclick="pwOyuncuAra()" style="background:rgba(206,147,216,0.2);border:1px solid rgba(206,147,216,0.35);border-radius:8px;color:#ce93d8;font-size:13px;font-weight:700;padding:9px 14px;cursor:pointer;white-space:nowrap;">
+      🔍 Ara
+    </button>
+  </div>
+  <div id="pwOyuncuSonuc"></div>
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;letter-spacing:.4px;">TÜM KAYITLI PROFİLLER</div>
+  <button onclick="pwTumOyunculariYukle()" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:8px;">
+    📋 Profilleri Listele
+  </button>
+  <div id="pwOyuncuListe"></div>
+</div>
+
+<!-- AYARLAR PANELİ -->
+<div id="pwPanel_ayarlar" style="display:none;">
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">YENİ DUYURU EKLE</div>
+  <input id="pwDuyuruMetin" class="giris-alani" placeholder="Duyuru metni" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
+    <input id="pwDuyuruSure" class="giris-alani" type="number" placeholder="Süre (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
+    <select id="pwDuyuruSureBirim" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;">
+      <option value="dakika">Dakika</option>
+      <option value="saat">Saat</option>
+      <option value="gun" selected>Gün</option>
+    </select>
+    <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
+  </div>
+  <button onclick="pwDuyuruEkle()" style="width:100%;background:linear-gradient(145deg,#2e7d32,#1b5e20);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:10px;">➕ Duyuru Ekle</button>
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">MEVCUT DUYURULAR</div>
+  <div id="pwDuyuruListe" style="margin-bottom:10px;">
+    <div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Yükleniyor...</div>
+  </div>
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">BAKIM MODU</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px 14px;margin-bottom:10px;">
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#fff;">Bakım Modu</div>
+      <div id="pwBakimDurum" style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">Yükleniyor...</div>
+    </div>
+    <button id="pwBakimBtn" onclick="pwBakimToggle()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:7px 14px;cursor:pointer;">⏳</button>
+  </div>
+</div>
+`;
+
+  window.pwSekmeGec = function(sekme, btn) {
+    ['skor','oyuncu','ayarlar'].forEach(s => {
+      document.getElementById('pwPanel_' + s).style.display = s === sekme ? 'block' : 'none';
+      const b = document.getElementById('pwSekmeBtn_' + s);
+      if (b) {
+        b.style.background = s === sekme ? 'rgba(255,255,255,0.11)' : 'transparent';
+        b.style.color = s === sekme ? '#fff' : 'var(--metin-soluk)';
+      }
+    });
+    if (sekme === 'skor') pwSkorListesiYukle();
+    if (sekme === 'ayarlar') { pwBakimDurumKontrol(); pwDuyuruListesiYukle(); }
+  };
 
         /* Sıralamayı yükle */
-        pwSkorListesiYukle();
+        setTimeout(() => pwSekmeGec('ayarlar', document.getElementById('pwSekmeBtn_ayarlar')), 0);
         /* Bakım modunu kontrol et */
         pwBakimDurumKontrol();
         /* Mevcut duyuruyu  listesi getir */
@@ -4482,6 +4505,52 @@ satir.addEventListener('click', () => {
       /* ========================================================================= */
       /* ADMİN PASSAWORD PANELİ (BİTİŞ)                                           */
       /* ========================================================================= */
+
+window.pwSiralamayiGor = function() {
+  const modal = document.createElement('div');
+  modal.id = 'pwSiralamaModal';
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(5px);z-index:200;display:flex;align-items:flex-end;justify-content:center;';
+  modal.innerHTML = `
+    <div style="background:linear-gradient(170deg,#111827,#0d1530);border:1px solid rgba(255,255,255,0.09);border-radius:20px 20px 0 0;width:100%;max-width:560px;max-height:88dvh;overflow-y:auto;padding:0 0 24px;">
+      <div style="width:40px;height:4px;background:rgba(255,255,255,0.18);border-radius:2px;margin:12px auto 18px;"></div>
+<button onclick="document.getElementById('pwSiralamaModal').remove()" style="position:absolute;top:14px;right:14px;width:32px;height:32px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:50%;color:rgba(255,255,255,0.6);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;">✕</button>
+<div style="font-size:18px;font-weight:800;text-align:center;margin-bottom:16px;color:#fff;">🏆 SIRALAMA (TOP 50)</div>
+      <div id="pwSiralamaListe" style="padding:0 16px;">
+        <div style="text-align:center;color:var(--metin-soluk);padding:24px;">Yükleniyor...</div>
+      </div>
+      <div style="padding:0 16px;margin-top:12px;">
+        <button onclick="document.getElementById('pwSiralamaModal').remove()" style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:12px;color:#fff;font-size:15px;font-weight:700;padding:14px;cursor:pointer;">Kapat</button>
+      </div>
+    </div>
+  `;
+  modal.addEventListener('click', e => { if(e.target === modal) modal.remove(); });
+  document.body.appendChild(modal);
+
+  const sorgu = query(ref(veritabani, 'skorlar'), orderByChild('puan'), limitToLast(50));
+  get(sorgu).then(anlık => {
+    const veri = anlık.val();
+    const liste = document.getElementById('pwSiralamaListe');
+    if (!veri) { liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;">Kayıt yok.</div>`; return; }
+    const dizisi = Object.entries(veri).map(([k,v]) => ({_key:k,...v})).sort((a,b) => b.puan - a.puan);
+    liste.innerHTML = '';
+    dizisi.forEach((s, i) => {
+      const tarih = s.tarih ? new Date(s.tarih).toLocaleDateString('tr-TR') : '—';
+      const satir = document.createElement('div');
+      satir.style.cssText = 'display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);margin-bottom:6px;';
+      satir.innerHTML = `
+        <div style="min-width:24px;font-size:13px;font-weight:800;color:${i<3?'#ffd600':'var(--metin-soluk)'};">${i+1}</div>
+        <div style="flex:1;">
+          <div style="font-size:14px;font-weight:700;color:#fff;">${s.isim||'?'}</div>
+          <div style="font-size:11px;color:var(--metin-soluk);margin-top:1px;">${tarih} &nbsp;<span style="color:#00e676;">✓${s.dogru||0}</span> <span style="color:#ff1744;">✗${s.yanlis||0}</span> <span style="color:#ffd600;">~${s.pas||0}</span></div>
+        </div>
+        <div style="font-size:15px;font-weight:800;color:#4fc3f7;">${s.puan}</div>
+        <button onclick="pwSkorSil('${s._key}',this)" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;">🗑</button>
+      `;
+      liste.appendChild(satir);
+    });
+  });
+};
+
 
       /* ========================================================================= */
       /* ADMİN PASSAWORD - SKOR YÖNETİMİ                                          */
@@ -4685,6 +4754,14 @@ window.pwDuyuruEkle = async function() {
   } catch(e) { toastGoster('❌ Eklenemedi!'); }
 };
 
+
+window.pwDuyuruSil = async function(key) {
+  try {
+    await remove(ref(veritabani, `ayarlar/duyurular/${key}`));
+    toastGoster('✅ Duyuru silindi');
+    pwDuyuruListesiYukle();
+  } catch(e) { toastGoster('❌ Silinemedi!'); }
+};
 
 function pwDuyuruListesiYukle() {
   const konteyner = document.getElementById('pwDuyuruListe');
