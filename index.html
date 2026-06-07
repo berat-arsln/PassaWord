@@ -2540,6 +2540,42 @@ color:#fff;font-size:15px;font-weight:700;
         localStorage.setItem('pw_firebase_migrate_v1', 'done');
         console.log('✅ Profil migrasyonu tamamlandı');
       }
+      
+      async function profilleriFirebaseIleEslestir() {
+        const profiller = profilleriGetir();
+        if (profiller.length === 0) return;
+        const kalanlar = [];
+        for (const profil of profiller) {
+          if (!profil.yedekKod) { kalanlar.push(profil); continue; }
+          try {
+            const snap = await get(ref(veritabani, `yedekler/${profil.yedekKod}`));
+            if (snap.exists()) {
+              kalanlar.push(profil);
+            } else {
+              toastGoster(`⚠️ "${profil.ad}" profili sunucuda bulunamadı, silindi.`);
+            }
+          } catch(e) {
+            kalanlar.push(profil);
+          }
+        }
+        if (kalanlar.length !== profiller.length) {
+          profilleriKaydet(kalanlar);
+          const aktifId = localStorage.getItem('pw_aktif_profil');
+          const aktifHalaVar = kalanlar.some(p => p.id === aktifId);
+          if (!aktifHalaVar) {
+            if (kalanlar.length > 0) {
+              localStorage.setItem('pw_aktif_profil', kalanlar[0].id);
+            } else {
+              localStorage.removeItem('pw_aktif_profil');
+              ekraniGoster('baslangicEkrani');
+              document.getElementById('hazirEkrani').style.display = 'none';
+              document.getElementById('profilOlusturKutu').style.display = 'block';
+            }
+          }
+          aktifProfilUiGuncelle();
+          profilListesiniGuncelle();
+        }
+      }
 
       // Aktif profilin Firebase'de hâlâ var olup olmadığını dinle
       // Admin sildiyse → profil seçim ekranına yönlendir
@@ -3841,7 +3877,7 @@ satir.addEventListener('click', () => {
       window.modalAc = function (id) {
         if (id === "skorModal") kisiselSkorTablosunuGuncelle();
         if (id === "ayarlarModal") aktifProfilUiGuncelle();
-        if (id === "profilSecModal") profilListesiniGuncelle();
+        if (id === "profilSecModal") { profilleriFirebaseIleEslestir().then(() => profilListesiniGuncelle()); }
         if (id === "geriBildirimModal") altTurGuncelle("oneri");
         if (id === "gecmisModal") gecmisModalGuncelle();
         if (id === "adminModal") {
