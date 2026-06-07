@@ -312,26 +312,24 @@
         gap: 8px;
       }
       
-      <!-- Duyuru Bandı (Oyun Ekranı) -->
-<div id="duyuruBandiOyun" class="gizli" style="width:100%;background:linear-gradient(90deg,rgba(255,214,0,0.15),rgba(255,214,0,0.08));border-bottom:1px solid rgba(255,214,0,0.25);padding:7px 16px;text-align:center;flex-shrink:0;">
-  <div id="duyuruMetniOyun" style="font-size:12px;font-weight:700;color:#ffd600;letter-spacing:0.3px;"></div>
-</div>
+ 
 
       /* ========================================================================= */
       /* OYUN İÇİ CANLI İSTATİSTİKLER VE KLAVYE GÖRÜNÜMÜ (STİL)                    */
       /* ========================================================================= */
       .canli-istatistik {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        padding: 8px 10px;
-        font-size: 15px;
-        font-weight: 800;
-        z-index: 20;
-        transition: all 0.2s ease;
-      }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: 800;
+  z-index: 20;
+  transition: all 0.2s ease;
+}
       .ist-sol {
         color: #4fc3f7;
         display: flex;
@@ -360,16 +358,26 @@
       #oyunEkrani.klavye-acik .oyun-alani {
         padding-bottom: 34px; /* İstatistiklerin daireye çarpmaması için güvenlik boşluğu */
       }
+      
+      #oyunEkrani.klavye-acik .duyuruBandiOyun {
+  display: none !important;
+}
+
+
       #oyunEkrani.klavye-acik .canli-istatistik {
-        position: absolute; /* Javascript olmadan doğrudan Input'un üstüne yapıştırır */
-        bottom: 0;
-        left: 0;
-        right: 0;
-        justify-content: space-between; /* Puanı sola, doğruları sağa ayırır */
-        padding: 8px 16px;
-        gap: 0;
-        font-size: 14px;
-      }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: row;
+  justify-content: space-between;  /* Puanı sola, doğruları sağa ayırır */
+  align-items: center;
+  padding: 6px 16px;
+  gap: 0;
+  font-size: 13px;
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(4px);
+}
 
       /* --------- OYUN ALANI & DAİRE --------- */
       .oyun-alani {
@@ -1699,15 +1707,25 @@
   </div>
 </span>
         <div class="header-sag">
-          <button
-            class="header-buton"
-            onclick="modalAc('bilgiModal')"
-            aria-label="Nasıl Oynanır"
-          >
-            ℹ️
-          </button>
-        </div>
+  <button
+    class="header-buton"
+    onclick="modalAc('skorModal')"
+    aria-label="Skor Tablosu"
+  >
+    🏆
+  </button>
+  <button
+    class="header-buton"
+    onclick="modalAc('bilgiModal')"
+    aria-label="Nasıl Oynanır"
+  >
+    ℹ️
+  </button>
+</div>
       </div>
+      <div id="duyuruBandiOyun" class="gizli" style="width:100%;background:linear-gradient(90deg,rgba(255,214,0,0.15),rgba(255,214,0,0.08));border-bottom:1px solid rgba(255,214,0,0.25);padding:7px 16px;text-align:center;flex-shrink:0;">
+  <div id="duyuruMetniOyun" style="font-size:12px;font-weight:700;color:#ffd600;letter-spacing:0.3px;"></div>
+</div>
 
       <div class="oyun-alani">
         <!-- ========================================== -->
@@ -1715,13 +1733,13 @@
         <!-- (Bu div, klavye açılınca Javascript ile aşağıya taşınır) -->
         <!-- ========================================== -->
         <div id="canliIstatistik" class="canli-istatistik normal">
-          <div class="ist-sol">🏆 <span id="canliPuan">0</span></div>
-          <div class="ist-sag">
-            <span class="ist-dogru">✅ <span id="canliDogru">0</span></span>
-            <span class="ist-yanlis">❌ <span id="canliYanlis">0</span></span>
-            <span class="ist-pas">⏭️ <span id="canliPas">0</span></span>
-          </div>
-        </div>
+  <div class="ist-sol">🏆 <span id="canliPuan">0</span></div>
+  <div class="ist-sag" style="display:flex;gap:14px;align-items:center;">
+    <span class="ist-dogru">✅ <span id="canliDogru">0</span></span>
+    <span class="ist-yanlis">❌ <span id="canliYanlis">0</span></span>
+    <span class="ist-pas">⏭️ <span id="canliPas">0</span></span>
+  </div>
+</div>
         <!-- ========================================== -->
         <!-- OYUN İÇİ CANLI İSTATİSTİKLER (BİTİŞ)       -->
         <!-- ========================================== -->
@@ -2739,6 +2757,7 @@ if (window.visualViewport) {
         });
 
         ekraniGoster("oyunEkrani");
+        get(ref(veritabani, 'ayarlar/duyurular')).then(snap => duyurulariGoster(snap));
         canliIstatistikGuncelle();
         
 
@@ -3380,95 +3399,102 @@ gecmiseKaydet({
       /* ========================================================================= */
       /* BAKIM MODU VE DUYURU KONTROLÜ                                             */
       /* ========================================================================= */
+      
       async function bakimModuVeDuyuruKontrol() {
-        try {
-          // Bakım modunu dinle (canlı)
-          onValue(ref(veritabani, 'ayarlar/bakimModu'), (snap) => {
-            const bakimAktif = snap.exists() && snap.val() === true;
-            const adminGiris = localStorage.getItem('pw_admin_giris') === 'true';
-            if (bakimAktif && !adminGiris) {
-              ekraniGoster('bakimEkrani');
-            } else {
-              // Bakım kapandıysa ve bakım ekranındaysak geri al
-              const mevcut = document.querySelector('.ekran:not(.gizli)');
-              if (mevcut && mevcut.id === 'bakimEkrani') {
-                const aktifProfil = aktifProfiliGetir();
-                ekraniGoster('baslangicEkrani');
-                if (aktifProfil) {
-                  document.getElementById("profilOlusturKutu").style.display = "none";
-                  const hazir = document.getElementById("hazirEkrani");
-                  hazir.style.display = "flex";
-                  hazir.style.flexDirection = "column";
-                  document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
-                  aktifProfilUiGuncelle();
-                }
-              }
-            }
-          });
-
-          // Duyuruyu dinle (canlı)
-          onValue(ref(veritabani, 'ayarlar/duyuru'), (snap) => {
-            const bandi = document.getElementById('duyuruBandi');
-            const metin = document.getElementById('duyuruMetni');
-            if (!bandi || !metin) return;
-
-            if (snap.exists() && snap.val()) {
-              const duyuruVerisi = snap.val();
-              // Eski format: düz string, yeni format: obje
-              let duyuruMetni = '';
-              let surGun = 0;
-              let maksGorunum = 0;
-
-              if (typeof duyuruVerisi === 'string') {
-                duyuruMetni = duyuruVerisi;
-                // Eski formatta süre/maks yok, hep göster
-              } else if (typeof duyuruVerisi === 'object') {
-                duyuruMetni = duyuruVerisi.metin || '';
-                surGun = duyuruVerisi.surGun || 0;
-                maksGorunum = duyuruVerisi.maksGorunum || 0;
-              }
-
-              if (!duyuruMetni) {
-                bandi.classList.add('gizli');
-                return;
-              }
-
-              // Görüntüleme sayısı kontrolü
-              const gorulmeKey = 'pw_duyuru_gorulme_' + btoa(duyuruMetni).slice(0,16);
-              const gorulme = JSON.parse(localStorage.getItem(gorulmeKey) || '{"sayi":0,"ilkGorulme":0}');
-
-              // Süre kontrolü
-              if (surGun > 0 && gorulme.ilkGorulme > 0) {
-                const gecenGun = (Date.now() - gorulme.ilkGorulme) / (1000 * 60 * 60 * 24);
-                if (gecenGun >= surGun) {
-                  bandi.classList.add('gizli');
-                  return;
-                }
-              }
-              // Maks görüntüleme kontrolü
-              if (maksGorunum > 0 && gorulme.sayi >= maksGorunum) {
-                bandi.classList.add('gizli');
-                return;
-              }
-
-              // Göster
-              metin.textContent = duyuruMetni;
-              bandi.classList.remove('gizli');
-
-              // Sayacı güncelle
-              const yeniGorulme = {
-                sayi: gorulme.sayi + 1,
-                ilkGorulme: gorulme.ilkGorulme || Date.now()
-              };
-              localStorage.setItem(gorulmeKey, JSON.stringify(yeniGorulme));
-            } else {
-              bandi.classList.add('gizli');
-            }
-          });
-        } catch(e) {
-          console.warn('Bakım/duyuru kontrolü hatası:', e);
+  try {
+    onValue(ref(veritabani, 'ayarlar/bakimModu'), (snap) => {
+      const bakimAktif = snap.exists() && snap.val() === true;
+      const adminGiris = localStorage.getItem('pw_admin_giris') === 'true';
+      if (bakimAktif && !adminGiris) {
+        ekraniGoster('bakimEkrani');
+      } else {
+        const mevcut = document.querySelector('.ekran:not(.gizli)');
+        if (mevcut && mevcut.id === 'bakimEkrani') {
+          const aktifProfil = aktifProfiliGetir();
+          ekraniGoster('baslangicEkrani');
+          if (aktifProfil) {
+            document.getElementById("profilOlusturKutu").style.display = "none";
+            const hazir = document.getElementById("hazirEkrani");
+            hazir.style.display = "flex";
+            hazir.style.flexDirection = "column";
+            document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
+            aktifProfilUiGuncelle();
+          }
         }
       }
+    });
+
+    onValue(ref(veritabani, 'ayarlar/duyurular'), (snap) => {
+      duyurulariGoster(snap);
+    });
+
+  } catch(e) {
+    console.warn('Bakım/duyuru kontrolü hatası:', e);
+  }
+}
+
+function duyurulariGoster(snap) {
+  const anasayfaBandi = document.getElementById('duyuruBandi');
+  const anasayfaMetni = document.getElementById('duyuruMetni');
+  const oyunBandi = document.getElementById('duyuruBandiOyun');
+  const oyunMetni = document.getElementById('duyuruMetniOyun');
+
+  if (!snap || !snap.exists()) {
+    if (anasayfaBandi) anasayfaBandi.classList.add('gizli');
+    if (oyunBandi) oyunBandi.classList.add('gizli');
+    return;
+  }
+
+  const veri = snap.val();
+  const simdiki = Date.now();
+
+  const aktifDuyurular = Object.entries(veri)
+    .map(([key, d]) => ({ key, ...d }))
+    .filter(d => {
+      if (!d.metin) return false;
+      const gorulmeKey = 'pw_duyuru_' + d.key;
+      const gorulme = JSON.parse(localStorage.getItem(gorulmeKey) || '{"sayi":0,"ilk":0}');
+      if (d.sureDakika > 0 && gorulme.ilk > 0) {
+        const gecenDakika = (simdiki - gorulme.ilk) / 60000;
+        if (gecenDakika >= d.sureDakika) return false;
+      }
+      if (d.maksGorunum > 0 && gorulme.sayi >= d.maksGorunum) return false;
+      return true;
+    })
+    .sort((a, b) => (b.olusturulma || 0) - (a.olusturulma || 0));
+
+  if (aktifDuyurular.length === 0) {
+    if (anasayfaBandi) anasayfaBandi.classList.add('gizli');
+    if (oyunBandi) oyunBandi.classList.add('gizli');
+    return;
+  }
+
+  const metinler = aktifDuyurular.map(d => d.metin).join(' • ');
+
+  aktifDuyurular.forEach(d => {
+    const gorulmeKey = 'pw_duyuru_' + d.key;
+    const gorulme = JSON.parse(localStorage.getItem(gorulmeKey) || '{"sayi":0,"ilk":0}');
+    localStorage.setItem(gorulmeKey, JSON.stringify({
+      sayi: gorulme.sayi + 1,
+      ilk: gorulme.ilk || simdiki
+    }));
+  });
+
+  if (anasayfaBandi && anasayfaMetni) {
+    anasayfaMetni.textContent = metinler;
+    anasayfaBandi.classList.remove('gizli');
+  }
+
+  if (oyunBandi && oyunMetni) {
+    oyunMetni.textContent = metinler;
+    oyunBandi.classList.remove('gizli');
+  }
+
+  const mevcutEkran = document.querySelector('.ekran:not(.gizli)');
+  if (mevcutEkran && (mevcutEkran.id === 'oyunEkrani' || mevcutEkran.id === 'baslangicEkrani')) {
+    toastGoster('📢 ' + aktifDuyurular[0].metin, 4000);
+  }
+}
 
       // Bakım modundaki admin giriş kontrolü
       window.adminGirisKontrol = function() {
@@ -3905,7 +3931,7 @@ satir.addEventListener('click', () => {
       function profilSilOnay(profil) { 
   onayGoster(
     "Profili Sil",
-    `"${profil.ad}" profilini silmek istediğine emin misin?`, // Backtick kullanıldı
+    `"${profil.ad}" profilini silmek istediğine emin misin? Yedekleme kodu da silinecek; bu profili kullanan diğer cihazlar senkronizasyonunu kaybeder.`,
     async () => {
       // Firebase'den yedek kodunu da sil
       if (profil.yedekKod) {
@@ -4636,7 +4662,6 @@ window.pwDuyuruEkle = async function() {
   const birim = document.getElementById('pwDuyuruSureBirim')?.value || 'gun';
   const maks = parseInt(document.getElementById('pwDuyuruMaksGorunum')?.value) || 0;
 
-  // Dakikaya çevir (0 = sonsuz)
   let sureDakika = 0;
   if (sure > 0) {
     if (birim === 'dakika') sureDakika = sure;
@@ -4660,43 +4685,28 @@ window.pwDuyuruEkle = async function() {
   } catch(e) { toastGoster('❌ Eklenemedi!'); }
 };
 
-window.pwDuyuruSil = async function(key) {
-  try {
-    // BURASI DÜZELTİLDİ: Backtick (`) eklendi
-    await remove(ref(veritabani, `ayarlar/duyurular/${key}`));
-    toastGoster('✅ Duyuru silindi');
-    pwDuyuruListesiYukle();
-  } catch(e) { toastGoster('❌ Silinemedi!'); }
-};
 
 function pwDuyuruListesiYukle() {
   const konteyner = document.getElementById('pwDuyuruListe');
   if (!konteyner) return;
   get(ref(veritabani, 'ayarlar/duyurular')).then(snap => {
     if (!snap.exists()) {
-      // BURASI DÜZELTİLDİ: Backtick (`) eklendi
       konteyner.innerHTML = `<div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Duyuru yok.</div>`;
       return;
     }
     const veri = snap.val();
     konteyner.innerHTML = '';
     Object.entries(veri)
-      // BURASI DÜZELTİLDİ: .olusturulma0 hatası düzeltildi
       .sort((a, b) => (b[1].olusturulma || 0) - (a[1].olusturulma || 0))
       .forEach(([key, d]) => {
-        const sureMeVarMi = d.sureDakika > 0;
         let sureYazi = 'Sonsuz';
-        if (sureMeVarMi) {
-          // BURASI DÜZELTİLDİ: İçerideki string yapıları backtick yapıldı
-          if (d.sureDakika < 60) sureYazi = `${d.sureDakika} dk`;
+        if (d.sureDakika > 0) {
+          if (d.sureDakika < 60) sureYazi = `${d.sureDakika} dakika`;
           else if (d.sureDakika < 1440) sureYazi = `${Math.round(d.sureDakika/60)} saat`;
           else sureYazi = `${Math.round(d.sureDakika/1440)} gün`;
         }
-        
         const div = document.createElement('div');
         div.style.cssText = 'background:rgba(255,255,255,0.04);border:1px solid rgba(255,214,0,0.2);border-radius:8px;padding:9px 12px;margin-bottom:6px;display:flex;align-items:flex-start;gap:8px;';
-        
-        // BURASI DÜZELTİLDİ: HTML bloğu tamamen backtick (`) içine alındı
         div.innerHTML = `
           <div style="flex:1;min-width:0;">
             <div style="font-size:13px;font-weight:700;color:#ffd600;word-break:break-word;">${d.metin}</div>
@@ -4708,11 +4718,9 @@ function pwDuyuruListesiYukle() {
       });
   }).catch(() => {
     const konteyner = document.getElementById('pwDuyuruListe');
-    // BURASI DÜZELTİLDİ: Backtick (`) eklendi
     if (konteyner) konteyner.innerHTML = `<div style="color:#ff6b6b;font-size:13px;">Yüklenemedi.</div>`;
   });
 }
-
 
       
 
@@ -5505,13 +5513,10 @@ window.adminDuzenleSekmeGec = function(sekme) {
         document.getElementById(id).classList.remove("gizli");
         // Duyuru bandını başlangıç ekranında göster, oyun/sonuç ekranında gizle
         const bandi = document.getElementById('duyuruBandi');
-        if (bandi) {
-          if (id === 'baslangicEkrani') {
-            // Duyuru içeriği varsa bandı göster (bakimModuVeDuyuruKontrol zaten yönetiyor)
-          } else {
-            bandi.classList.add('gizli');
-          }
-        }
+const oyunBandi = document.getElementById('duyuruBandiOyun');
+if (bandi && id !== 'baslangicEkrani') bandi.classList.add('gizli');
+if (oyunBandi && id !== 'oyunEkrani') oyunBandi.classList.add('gizli');
+
         // Profil UI'ı güncelle
         if (id === 'baslangicEkrani') aktifProfilUiGuncelle();
       }
