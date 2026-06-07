@@ -3457,30 +3457,11 @@ gecmiseKaydet({
 
       // Bakım modundaki admin giriş kontrolü
       window.adminGirisKontrol = function() {
-        const sifre = prompt('Admin şifresi:');
-        if (!sifre) return;
-        // Admin şifresini ayarlar/adminSifre'den kontrol et
-        get(ref(veritabani, 'config')).then(snap => {
-          const config = snap.val() || {};
-          if (sifre === config.adminSifre || config['beratarsin@gmail.com']) {
-            // Basit kontrol — admin şifresini local'e yaz
-            localStorage.setItem('pw_admin_giris', 'true');
-            toastGoster('✅ Admin girişi yapıldı');
-            ekraniGoster('baslangicEkrani');
-            const aktifProfil = aktifProfiliGetir();
-            if (aktifProfil) {
-              document.getElementById("profilOlusturKutu").style.display = "none";
-              const hazir = document.getElementById("hazirEkrani");
-              hazir.style.display = "flex";
-              hazir.style.flexDirection = "column";
-              document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
-              aktifProfilUiGuncelle();
-            }
-          } else {
-            toastGoster('❌ Yanlış şifre');
-          }
-        }).catch(() => toastGoster('❌ Bağlantı hatası'));
-      };
+  document.getElementById("adminSifreEkrani").classList.remove("gizli");
+  document.getElementById("adminIcerik").classList.add("gizli");
+  document.getElementById("adminSifreGiris").value = "";
+  document.getElementById("adminModal").classList.add("acik");
+};
 
       function genelSkorTablosunuDinle() {
         const skorRef = ref(veritabani, "skorlar");
@@ -4052,9 +4033,25 @@ satir.addEventListener('click', () => {
               }
             );
           } else {
+            localStorage.setItem('pw_admin_giris', 'true');
             document.getElementById("adminSifreEkrani").classList.add("gizli");
             document.getElementById("adminIcerik").classList.remove("gizli");
             adminOneriYukle();
+            // Bakım ekranındaysak çık
+            const mevcutEkran = document.querySelector('.ekran:not(.gizli)');
+            if (mevcutEkran && mevcutEkran.id === 'bakimEkrani') {
+              modalKapat('adminModal');
+              ekraniGoster('baslangicEkrani');
+              const aktifProfil = aktifProfiliGetir();
+              if (aktifProfil) {
+                document.getElementById("profilOlusturKutu").style.display = "none";
+                const hazir = document.getElementById("hazirEkrani");
+                hazir.style.display = "flex";
+                hazir.style.flexDirection = "column";
+                document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
+                aktifProfilUiGuncelle();
+              }
+            }
           }
         } catch (hata) {
           toastGoster("Yanlış şifre!");
