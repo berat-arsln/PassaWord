@@ -2580,20 +2580,22 @@ color:#fff;font-size:15px;font-weight:700;
       // Aktif profilin Firebase'de hâlâ var olup olmadığını dinle
       // Admin sildiyse → profil seçim ekranına yönlendir
       
-      let _profilKontrolInterval = null;
-
+      let _profilSilmeListenerleri = {};
+      
+      
+      
       function tumProfillereSilmeDinleyicisiBaslat() {
         Object.values(_profilSilmeListenerleri).forEach(unsub => unsub());
         _profilSilmeListenerleri = {};
-        if (_profilKontrolInterval) clearInterval(_profilKontrolInterval);
-
-        async function kontrol() {
-          const profiller = profilleriGetir();
-          for (const profil of profiller) {
-            if (!profil.yedekKod) continue;
-            try {
-              const snap = await get(ref(veritabani, `yedekler/${profil.yedekKod}`));
-              if (!snap.exists()) {
+        const profiller = profilleriGetir();
+        profiller.forEach(profil => {
+          if (!profil.yedekKod) return;
+          // Önce bir kez kontrol et, varsa listener başlat
+          get(ref(veritabani, `yedekler/${profil.yedekKod}`)).then(snap => {
+            if (!snap.exists()) return; // Zaten yok, listener başlatma
+            const profilRef = ref(veritabani, `yedekler/${profil.yedekKod}`);
+            _profilSilmeListenerleri[profil.id] = onValue(profilRef, (s) => {
+              if (!s.exists()) {
                 const kalanlar = profilleriGetir().filter(p => p.id !== profil.id);
                 profilleriKaydet(kalanlar);
                 if (localStorage.getItem('pw_aktif_profil') === profil.id) {
@@ -2614,13 +2616,14 @@ color:#fff;font-size:15px;font-weight:700;
                   profilListesiniGuncelle();
                 }
                 aktifProfilUiGuncelle();
+                if (_profilSilmeListenerleri[profil.id]) {
+                  _profilSilmeListenerleri[profil.id]();
+                  delete _profilSilmeListenerleri[profil.id];
+                }
               }
-            } catch(e) {}
-          }
-        }
-
-        kontrol();
-        _profilKontrolInterval = setInterval(kontrol, 15000);
+            });
+          }).catch(() => {});
+        });
       }
 
       function aktifProfilSilmeDinleyicisiBaslat(profilId, yedekKod) {
