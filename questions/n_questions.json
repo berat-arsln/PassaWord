@@ -46,7 +46,7 @@
     "soru": "Çok ender olarak görülebilme durumu",
     "cevap": "Nadidelik",
     "alternatifler": [
-      "nadirlik"
+      "NADIDELIK"
     ]
   },
   {
@@ -66,11 +66,19 @@
     ]
   },
   {
+    "id": 9,
+    "soru": "Çok az, seyrek olarak",
+    "cevap": "Nadiren",
+    "alternatifler": [
+      "NADIREN"
+    ]
+  },
+  {
     "id": 10,
     "soru": "Çok az, seyrek olarak anlamındaki kelime",
     "cevap": "Nadiren",
     "alternatifler": [
-      "NADIREN"
+      "nadir"
     ]
   },
   {
