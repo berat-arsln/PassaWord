@@ -1248,7 +1248,7 @@
       .sonuc-butonlar {
         display: flex;
         gap: 12px;
-        padding: 20px 14px 0;
+        padding: 4px 14px 0;
         width: 100%;
       }
       .sonuc-butonlar button {
@@ -1272,7 +1272,7 @@
         box-shadow: 0 4px 16px rgba(25, 118, 210, 0.35);
       }
       #anaSayfaButon {
-        background: rgba(255, 255, 255, 0.07);
+        background: rgba(255, 65, 255, 0.47);
         border: 1px solid rgba(255, 255, 255, 0.12) !important;
         color: #fff;
       }
@@ -1802,11 +1802,33 @@
           </div>
         </div>
       </div>
-     <div class="sonuc-butonlar" style="padding: 16px 14px 0;">
+      
+      
+<div class="sonuc-butonlar" style="padding: 16px 14px 0;">
         <button id="tekrarOynaButon2" onclick="oyunuBaslat()" style="background:linear-gradient(145deg,#1976d2,#0d47a1);color:#fff;box-shadow:0 4px 16px rgba(25,118,210,0.35);">🔄 Tekrar Oyna</button>
-        <button id="anaSayfaButon2" onclick="anaSayfayaGit()" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:#fff;">🏠 Ana Sayfa</button>
+        <button id="anaSayfaButon2" onclick="anaSayfayaGit()" style="background:rgba(255,65,255,0.47);border:1px solid rgba(255,255,255,0.12);color:#fff;">🏠 Ana Sayfa</button>
+      </div>
+      <div style="padding:4px 14px 8px;width:100%;">
+        <button id="favoriEkleButon2" onclick="sonucFavoriToggle()"
+          style="width:100%;height:46px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);
+          background:rgba(255,255,255,0.07);color:#fff;font-size:15px;font-weight:700;
+          cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+          <span id="favoriButonIkon2"></span>
+          <span id="favoriButonYazi2">Favoriye Ekle</span>
+        </button>
       </div>
       <div class="sonuc-liste" id="sonucListe"></div>
+      <div style="padding:8px 14px 0;width:100%;">
+        <button onclick="sonucFavoriToggle()"
+          style="width:100%;height:46px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);
+          background:rgba(255,255,255,0.08);
+color:#fff;font-size:15px;font-weight:700;
+          cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+          <span id="favoriButonIkon"></span>
+          <span id="favoriButonYazi">Favoriye Ekle</span>
+        </button>
+      </div>
+      
       <div class="sonuc-butonlar">
         <button id="tekrarOynaButon" onclick="oyunuBaslat()">
           🔄 Tekrar Oyna
@@ -1876,6 +1898,19 @@
               <div class="ayar-icerik">
                 <div class="ayar-baslik">Profil Geri Yükle</div>
                 <div class="ayar-alt">Yedekleme kodu ile profil yükle</div>
+              </div>
+              <span class="ayar-ok">›</span>
+            </div>
+          </div>
+        </div>
+        <div class="ayar-bolum">
+          <div class="ayar-etiket">Oyun Geçmişi</div>
+          <div class="ayar-kart">
+            <div class="ayar-satir" onclick="modalAc('gecmisModal')">
+              <div class="ayar-ikon">📋</div>
+              <div class="ayar-icerik">
+                <div class="ayar-baslik">Geçmiş & Favoriler</div>
+                <div class="ayar-alt">Son 20 oyun ve favorilerin</div>
               </div>
               <span class="ayar-ok">›</span>
             </div>
@@ -2208,6 +2243,35 @@
       </div>
     </div>
 
+
+<!-- Geçmiş & Favoriler Modali -->
+<div class="modal-arkaplan" id="gecmisModal" onclick="disaTiklaKapat(event,'gecmisModal')">
+  <div class="modal-sayfa">
+    <div class="modal-cubuk"></div>
+    <button class="modal-kapat" onclick="modalKapat('gecmisModal')">✕</button>
+    <div class="modal-baslik">📋 GEÇMİŞ & FAVORİLER</div>
+    <div class="sekmeler">
+      <button class="sekme aktif" id="sekmeGecmis" onclick="gecmisSekmeGec('gecmis')">🕐 Geçmiş</button>
+      <button class="sekme" id="sekmeFavori" onclick="gecmisSekmeGec('favori')">🔖 Favoriler</button>
+    </div>
+    <div id="gecmisListe" class="skor-liste"></div>
+    <div id="favoriListe" class="skor-liste gizli"></div>
+  </div>
+</div>
+
+<!-- Geçmiş Detay Modali -->
+<div class="modal-arkaplan" id="gecmisDetayModal" onclick="disaTiklaKapat(event,'gecmisDetayModal')">
+  <div class="modal-sayfa">
+    <div class="modal-cubuk"></div>
+    <button class="modal-kapat" onclick="modalKapat('gecmisDetayModal')">✕</button>
+    <div class="modal-baslik" id="gecmisDetayBaslik">Oyun Detayı</div>
+    <div class="sonuc-istatistik" id="gecmisDetayIstat" style="padding:0 16px 12px;"></div>
+    <div class="sonuc-liste" id="gecmisDetayListe" style="padding-bottom:24px;"></div>
+  </div>
+</div>
+
+
+
     <!-- Onay ve Toast -->
     <div class="onay-diyalog" id="onayDiyalog">
       <div class="onay-kutu">
@@ -2356,13 +2420,44 @@
       function profilleriKaydet(profiller) {
         localStorage.setItem("pw_profiller", JSON.stringify(profiller));
       }
+      
+      function gecmiseKaydet(oyunVerisi) {
+  const profil = aktifProfiliGetir();
+  if (!profil) return;
+
+  const profiller = profilleriGetir();
+  const indeks = profiller.findIndex(p => p.id === profil.id);
+  if (indeks === -1) return;
+
+  profiller[indeks].gecmis = profiller[indeks].gecmis || [];
+  profiller[indeks].gecmis.unshift(oyunVerisi); /* En yenisi başa */
+  profiller[indeks].gecmis = profiller[indeks].gecmis.slice(0, 20); /* Max 20 */
+  profilleriKaydet(profiller);
+
+  /* Yedek kodu varsa Firebase'i güncelle */
+  const guncellenenProfil = profiller[indeks];
+  if (guncellenenProfil.yedekKod) {
+    set(ref(veritabani, `yedekler/${guncellenenProfil.yedekKod}`), {
+      id: guncellenenProfil.id,
+      ad: guncellenenProfil.ad,
+      skorlar: guncellenenProfil.skorlar || [],
+      gecmis: guncellenenProfil.gecmis || [],
+      favoriler: guncellenenProfil.favoriler || [],
+      olusturulma: guncellenenProfil.olusturulma,
+      tarih: new Date().toISOString()
+    }).catch(console.error);
+  }
+}
+      
+      
       async function yedekKoduOlustur(profil) {
-        /* Profilde zaten kod varsa onu kullan */
         if (profil.yedekKod) {
           await set(ref(veritabani, `yedekler/${profil.yedekKod}`), {
             id: profil.id,
             ad: profil.ad,
             skorlar: profil.skorlar || [],
+            gecmis: profil.gecmis || [],
+            favoriler: profil.favoriler || [],
             olusturulma: profil.olusturulma,
             tarih: new Date().toISOString()
           });
@@ -2380,6 +2475,8 @@
           id: profil.id,
           ad: profil.ad,
           skorlar: profil.skorlar || [],
+          gecmis: profil.gecmis || [],
+          favoriler: profil.favoriler || [],
           olusturulma: profil.olusturulma,
           tarih: new Date().toISOString()
         });
@@ -2398,6 +2495,17 @@
 
       // DOM Yüklendiğinde
       window.addEventListener("DOMContentLoaded", () => {
+const aktifProfilSatir = document.getElementById('aktifProfilSatir');
+let uzunBasmaZamanlayi;
+aktifProfilSatir.addEventListener('touchstart', () => {
+  uzunBasmaZamanlayi = setTimeout(() => {
+    const profil = aktifProfiliGetir();
+    if (profil) profilSilOnay(profil);
+  }, 570);
+});
+aktifProfilSatir.addEventListener('touchend', () => clearTimeout(uzunBasmaZamanlayi));
+aktifProfilSatir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZamanlayi));
+
         window._dokunmatik =
           "ontouchstart" in window || navigator.maxTouchPoints > 0;
         bilgisayarModunuAyarla();
@@ -2606,9 +2714,10 @@ if (window.visualViewport) {
 
         ekraniGoster("oyunEkrani");
         canliIstatistikGuncelle();
-        klavyeDurumunuGuncelle(); // İstatistiği doğru yere koy
+        
 
         setTimeout(() => {
+        klavyeDurumunuGuncelle(); // İstatistiği doğru yere koy
           daireOlustur();
           harfiAktifYap(0, true);
           zamanlayiciBaslat();
@@ -2950,6 +3059,8 @@ for (const [kisa, uzun] of ekCiftleri) {
         // Tuşa basılırsa oyunu bitir fonksiyonunu "true" (erken bitirildi) parametresiyle çağır
         oyunuBitir(true);
       };
+      
+      
 
       function oyunuBitir(erkenBitirildi = false) {
         clearInterval(oyunDurumu.zamanlayici);
@@ -2968,6 +3079,21 @@ for (const [kisa, uzun] of ekCiftleri) {
           komboBonus = oyunDurumu.dogruSayisi; // Örn: 18 doğru = +18 puan
           oyunDurumu.puan += komboBonus;
         }
+
+gecmiseKaydet({
+  tarih: new Date().toISOString(),
+  puan: oyunDurumu.puan,
+  dogruSayisi: oyunDurumu.dogruSayisi,
+  yanlisSayisi: oyunDurumu.yanlisSayisi,
+  pasSayisi: oyunDurumu.pasSayisi,
+  detay: HARFLER.map(harf => ({
+    harf,
+    durum: oyunDurumu.harfDurumlari[harf] || 'pas',
+    soru: oyunDurumu.secilenSorular[harf]?.soru || '',
+    dogruCevap: oyunDurumu.secilenSorular[harf]?.cevap || '',
+    verilenCevap: oyunDurumu.harfCevaplari[harf]?.verilen || '—'
+  }))
+});
 
         // Skor kaydetme işlemine istatistikleri de gönderiyoruz
         skorkaydet(
@@ -3080,6 +3206,13 @@ for (const [kisa, uzun] of ekCiftleri) {
         } else {
           komboCipi.classList.add("gizli");
         }
+
+        /* Favori butonunu güncelle */
+        const profil = aktifProfiliGetir();
+        const gecmis = profil?.gecmis || [];
+        const sonOyun = gecmis[0];
+        const favoriMi = sonOyun && (profil?.favoriler || []).some(f => f.tarih === sonOyun.tarih);
+        sonucFavoriButonGuncelle(favoriMi);
       }
 
       /* ========================================================================= */
@@ -3221,6 +3354,20 @@ for (const [kisa, uzun] of ekCiftleri) {
           <span style="color:var(--pas-renk);">~ ${p}</span>
         </div>
     `;
+    
+    satir.style.cursor = 'pointer';
+satir.addEventListener('click', () => {
+  const profil = aktifProfiliGetir();
+  const gecmis = profil?.gecmis || [];
+  // Skoru tarihe göre eşleştir
+  const eslesen = gecmis.find(g => g.puan === skor.puan && 
+    new Date(g.tarih).toLocaleDateString('tr-TR') === tarih);
+  if (eslesen) {
+    gecmisDetayGoster(eslesen, 0);
+  } else {
+    toastGoster('Bu oyunun detayı bulunamadı.');
+  }
+});
           liste.appendChild(satir);
         });
       }
@@ -3300,6 +3447,7 @@ for (const [kisa, uzun] of ekCiftleri) {
         if (id === "skorModal") kisiselSkorTablosunuGuncelle();
         if (id === "profilSecModal") profilListesiniGuncelle();
         if (id === "geriBildirimModal") altTurGuncelle("oneri");
+        if (id === "gecmisModal") gecmisModalGuncelle();
         if (id === "adminModal") {
           document.getElementById("adminSifreEkrani").classList.remove("gizli");
           document.getElementById("adminIcerik").classList.add("gizli");
@@ -3473,7 +3621,7 @@ for (const [kisa, uzun] of ekCiftleri) {
           satir.addEventListener("touchstart", () => {
             uzunBasmaZamanlayi = setTimeout(() => {
               profilSilOnay(profil);
-            }, 1000);
+            }, 570);
           });
           satir.addEventListener("touchend", () =>
             clearTimeout(uzunBasmaZamanlayi)
@@ -3484,7 +3632,7 @@ for (const [kisa, uzun] of ekCiftleri) {
           satir.addEventListener("mousedown", () => {
             uzunBasmaZamanlayi = setTimeout(() => {
               profilSilOnay(profil);
-            }, 1000);
+            }, 570);
           });
           satir.addEventListener("mouseup", () =>
             clearTimeout(uzunBasmaZamanlayi)
@@ -3568,9 +3716,18 @@ for (const [kisa, uzun] of ekCiftleri) {
           const veri = snap.val();
           const profiller = profilleriGetir();
           const mevcutIndeks = profiller.findIndex(p => p.id === veri.id);
+          const tamVeri = {
+            id: veri.id,
+            ad: veri.ad,
+            skorlar: veri.skorlar || [],
+            gecmis: veri.gecmis || [],
+            favoriler: veri.favoriler || [],
+            olusturulma: veri.olusturulma,
+            yedekKod: kod
+          };
           if (mevcutIndeks !== -1)
-            profiller[mevcutIndeks] = { ...profiller[mevcutIndeks], ...veri };
-          else profiller.push(veri);
+            profiller[mevcutIndeks] = { ...profiller[mevcutIndeks], ...tamVeri };
+          else profiller.push(tamVeri);
           profilleriKaydet(profiller);
           localStorage.setItem("pw_aktif_profil", veri.id);
           document.getElementById("yedekKodGiris").value = "";
@@ -4162,6 +4319,272 @@ for (const [kisa, uzun] of ekCiftleri) {
         };
         document.getElementById("onayDiyalog").classList.add("acik");
       }
+      
+      
+      window.gecmisSekmeGec = function(sekme) {
+        document.getElementById('sekmeGecmis').classList.toggle('aktif', sekme === 'gecmis');
+        document.getElementById('sekmeFavori').classList.toggle('aktif', sekme === 'favori');
+        document.getElementById('gecmisListe').classList.toggle('gizli', sekme !== 'gecmis');
+        document.getElementById('favoriListe').classList.toggle('gizli', sekme !== 'favori');
+      };
+
+      function gecmisModalGuncelle() {
+        const profil = aktifProfiliGetir();
+        gecmisListesiniOlustur(profil);
+        favoriListesiniOlustur(profil);
+      }
+
+      function gecmisListesiniOlustur(profil) {
+        const liste = document.getElementById('gecmisListe');
+        liste.innerHTML = '';
+        const gecmis = profil?.gecmis || [];
+
+        if (gecmis.length === 0) {
+          liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Henüz oyun oynamadın.</div>`;
+          return;
+        }
+
+        gecmis.forEach((oyun, i) => {
+          const tarih = new Date(oyun.tarih).toLocaleDateString('tr-TR');
+          const saat = new Date(oyun.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit'});
+          const favoriMi = (profil.favoriler || []).some(f => f.tarih === oyun.tarih);
+
+          const satir = document.createElement('div');
+          satir.className = 'skor-satir';
+          satir.style.cursor = 'pointer';
+          satir.innerHTML = `
+            <div class="skor-satir-ust">
+              <div class="skor-sira" style="color:var(--metin-soluk);font-size:14px;">${i + 1}</div>
+              <div class="skor-isim">
+                ${tarih} ${saat}
+                <div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">
+                  <span style="color:var(--dogru-renk);">✓ ${oyun.dogruSayisi}</span> &nbsp;
+                  <span style="color:var(--yanlis-renk);">✗ ${oyun.yanlisSayisi}</span> &nbsp;
+                  <span style="color:var(--pas-renk);">~ ${oyun.pasSayisi}</span>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div class="skor-puan">${oyun.puan}</div>
+                <button onclick="event.stopPropagation();favoriToggle(${i})" style="background:none;border:none;cursor:pointer;padding:4px;">
+                  ${favoriMi ? favoriIkonDolu() : favoriIkonBos()}
+                </button>
+              </div>
+            </div>
+          `;
+          satir.addEventListener('click', () => gecmisDetayGoster(oyun, i));
+          liste.appendChild(satir);
+        });
+      }
+
+      function favoriListesiniOlustur(profil) {
+        const liste = document.getElementById('favoriListe');
+        liste.innerHTML = '';
+        const favoriler = profil?.favoriler || [];
+
+        if (favoriler.length === 0) {
+          liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Henüz favori eklemedin.</div>`;
+          return;
+        }
+
+        const sayfaBasi = window._favoriSayfa || 0;
+        const sayfadakiler = favoriler.slice(sayfaBasi * 20, sayfaBasi * 20 + 20);
+
+        sayfadakiler.forEach((oyun, i) => {
+          const gercekIndeks = sayfaBasi * 20 + i;
+          const tarih = new Date(oyun.tarih).toLocaleDateString('tr-TR');
+          const saat = new Date(oyun.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit'});
+
+          const satir = document.createElement('div');
+          satir.className = 'skor-satir';
+          satir.style.cursor = 'pointer';
+          satir.innerHTML = `
+            <div class="skor-satir-ust">
+              <div class="skor-sira" style="color:var(--metin-soluk);font-size:14px;">${gercekIndeks + 1}</div>
+              <div class="skor-isim">
+                ${tarih} ${saat}
+                <div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">
+                  <span style="color:var(--dogru-renk);">✓ ${oyun.dogruSayisi}</span> &nbsp;
+                  <span style="color:var(--yanlis-renk);">✗ ${oyun.yanlisSayisi}</span> &nbsp;
+                  <span style="color:var(--pas-renk);">~ ${oyun.pasSayisi}</span>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div class="skor-puan">${oyun.puan}</div>
+                <button onclick="event.stopPropagation();favoriKaldir(${gercekIndeks})" style="background:none;border:none;cursor:pointer;padding:4px;">
+                  ${favoriIkonDolu()}
+                </button>
+              </div>
+            </div>
+          `;
+          satir.addEventListener('click', () => gecmisDetayGoster(oyun, gercekIndeks));
+          liste.appendChild(satir);
+        });
+
+        /* Sayfalama */
+        if (favoriler.length > 20) {
+          const toplamSayfa = Math.ceil(favoriler.length / 20);
+          const sayfaDiv = document.createElement('div');
+          sayfaDiv.style.cssText = 'display:flex;justify-content:center;gap:8px;padding:12px;';
+          for (let s = 0; s < toplamSayfa; s++) {
+            const btn = document.createElement('button');
+            btn.textContent = s + 1;
+            btn.style.cssText = `padding:6px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:700;
+              background:${s === sayfaBasi ? '#1976d2' : 'rgba(255,255,255,0.08)'};
+              color:${s === sayfaBasi ? '#fff' : 'var(--metin-soluk)'};`;
+            btn.onclick = () => { window._favoriSayfa = s; favoriListesiniOlustur(aktifProfiliGetir()); };
+            sayfaDiv.appendChild(btn);
+          }
+          liste.appendChild(sayfaDiv);
+        }
+      }
+
+      function favoriIkonBos() {
+        return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>`;
+      }
+
+      function favoriIkonDolu() {
+        return `<svg width="22" height="22" viewBox="0 0 24 24" fill="#e53935" stroke="#e53935" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>`;
+      }
+
+      window.favoriToggle = function(gecmisIndeks) {
+        const profil = aktifProfiliGetir();
+        const profiller = profilleriGetir();
+        const indeks = profiller.findIndex(p => p.id === profil.id);
+        if (indeks === -1) return;
+
+        const oyun = profiller[indeks].gecmis[gecmisIndeks];
+        profiller[indeks].favoriler = profiller[indeks].favoriler || [];
+        const favIndeks = profiller[indeks].favoriler.findIndex(f => f.tarih === oyun.tarih);
+
+        if (favIndeks === -1) {
+          profiller[indeks].favoriler.push(oyun);
+          toastGoster('Favoriye eklendi 🔖');
+        } else {
+          profiller[indeks].favoriler.splice(favIndeks, 1);
+          toastGoster('Favoriden çıkarıldı');
+        }
+
+        profilleriKaydet(profiller);
+        gecmisModalGuncelle();
+
+        /* Firebase güncelle */
+        const gp = profiller[indeks];
+        if (gp.yedekKod) {
+          set(ref(veritabani, `yedekler/${gp.yedekKod}`), {
+            id: gp.id, ad: gp.ad, skorlar: gp.skorlar || [],
+            gecmis: gp.gecmis || [], favoriler: gp.favoriler || [],
+            olusturulma: gp.olusturulma, tarih: new Date().toISOString()
+          }).catch(console.error);
+        }
+      };
+
+      window.favoriKaldir = function(favIndeks) {
+        const profil = aktifProfiliGetir();
+        const profiller = profilleriGetir();
+        const indeks = profiller.findIndex(p => p.id === profil.id);
+        if (indeks === -1) return;
+
+        profiller[indeks].favoriler.splice(favIndeks, 1);
+        profilleriKaydet(profiller);
+        toastGoster('Favoriden çıkarıldı');
+        gecmisModalGuncelle();
+
+        const gp = profiller[indeks];
+        if (gp.yedekKod) {
+          set(ref(veritabani, `yedekler/${gp.yedekKod}`), {
+            id: gp.id, ad: gp.ad, skorlar: gp.skorlar || [],
+            gecmis: gp.gecmis || [], favoriler: gp.favoriler || [],
+            olusturulma: gp.olusturulma, tarih: new Date().toISOString()
+          }).catch(console.error);
+        }
+      };
+
+      window.gecmisDetayGoster = function(oyun, indeks) {
+        /* Mevcut modalı kapat, detay modalını aç */
+        const detayModal = document.getElementById('gecmisDetayModal');
+        const liste = document.getElementById('gecmisDetayListe');
+        const baslik = document.getElementById('gecmisDetayBaslik');
+
+        const tarih = new Date(oyun.tarih).toLocaleDateString('tr-TR');
+        const saat = new Date(oyun.tarih).toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit'});
+        baslik.textContent = `${tarih} ${saat} — ${oyun.puan} puan`;
+
+        liste.innerHTML = '';
+        (oyun.detay || []).forEach(d => {
+          const sinif = d.durum === 'dogru' ? 's-dogru' : d.durum === 'yanlis' ? 's-yanlis' : 's-pas';
+          const kalem = document.createElement('div');
+          kalem.className = `sonuc-kalem ${sinif}`;
+          kalem.innerHTML = `
+            <div class="sonuc-harf">${d.harf}</div>
+            <div class="sonuc-bilgi">
+              <div class="sonuc-soru">${d.soru}</div>
+              <div class="sonuc-verilen-cevap">${d.verilenCevap === 'Pas' ? 'Pas geçildi' : d.verilenCevap}</div>
+              <div class="sonuc-dogru-cevap">✓ Doğru: ${d.dogruCevap}</div>
+            </div>
+          `;
+          liste.appendChild(kalem);
+        });
+
+        document.getElementById('gecmisDetayModal').classList.add('acik');
+      };
+      
+      
+      window.sonucFavoriToggle = function() {
+        const profil = aktifProfiliGetir();
+        const profiller = profilleriGetir();
+        const indeks = profiller.findIndex(p => p.id === profil.id);
+        if (indeks === -1) return;
+
+        const gecmis = profiller[indeks].gecmis || [];
+        if (gecmis.length === 0) return;
+
+        const sonOyun = gecmis[0]; /* En son oynanan */
+        profiller[indeks].favoriler = profiller[indeks].favoriler || [];
+        const favIndeks = profiller[indeks].favoriler.findIndex(f => f.tarih === sonOyun.tarih);
+
+        if (favIndeks === -1) {
+          profiller[indeks].favoriler.push(sonOyun);
+          sonucFavoriButonGuncelle(true);
+          toastGoster('Favoriye eklendi 🔖');
+        } else {
+          profiller[indeks].favoriler.splice(favIndeks, 1);
+          sonucFavoriButonGuncelle(false);
+          toastGoster('Favoriden çıkarıldı');
+        }
+
+        profilleriKaydet(profiller);
+
+        const gp = profiller[indeks];
+        if (gp.yedekKod) {
+          set(ref(veritabani, `yedekler/${gp.yedekKod}`), {
+            id: gp.id, ad: gp.ad, skorlar: gp.skorlar || [],
+            gecmis: gp.gecmis || [], favoriler: gp.favoriler || [],
+            olusturulma: gp.olusturulma, tarih: new Date().toISOString()
+          }).catch(console.error);
+        }
+      };
+
+      function sonucFavoriButonGuncelle(favoriMi) {
+        const ikon = favoriMi ? favoriIkonDolu() : favoriIkonBos();
+        const yazi = favoriMi ? 'Favoriden Çıkar' : 'Favoriye Ekle';
+
+        const ikon1 = document.getElementById('favoriButonIkon');
+        const yazi1 = document.getElementById('favoriButonYazi');
+        const ikon2 = document.getElementById('favoriButonIkon2');
+        const yazi2 = document.getElementById('favoriButonYazi2');
+
+        if (ikon1) ikon1.innerHTML = ikon;
+        if (yazi1) yazi1.textContent = yazi;
+        if (ikon2) ikon2.innerHTML = ikon;
+        if (yazi2) yazi2.textContent = yazi;
+      }
+      
+      
+      
       window.onayKapat = function () {
         document.getElementById("onayDiyalog").classList.remove("acik");
       };
