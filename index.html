@@ -1597,12 +1597,19 @@
       <div class="yatay-alt">Oyun dikey modda oynanmak üzere tasarlandı</div>
     </div>
 
-    <!-- Bakım Ekranı -->
+<!-- Bakım Ekranı -->
     <div class="ekran gizli" id="bakimEkrani" style="background:radial-gradient(ellipse at 50% 30%,#1a0d05 0%,#0a0e1a 70%);justify-content:center;align-items:center;flex-direction:column;gap:20px;text-align:center;padding:32px;">
+      <div class="header" style="position:absolute;top:0;left:0;right:0;">
+        <button class="header-buton" onclick="modalAc('ayarlarModal')" aria-label="Ayarlar">⚙️</button>
+        <span class="header-baslik" style="visibility:hidden;">PassaWord</span>
+        <div class="header-sag">
+          <button class="header-buton" onclick="modalAc('skorModal')" aria-label="Skor Tablosu">🏆</button>
+          <button class="header-buton" onclick="modalAc('bilgiModal')" aria-label="Nasıl Oynanır">ℹ️</button>
+        </div>
+      </div>
       <div style="font-size:64px;">🔧</div>
       <div style="font-size:22px;font-weight:900;color:#fff;letter-spacing:2px;">BAKIM MODU</div>
       <div style="font-size:15px;color:var(--metin-soluk);max-width:280px;line-height:1.6;">Oyun şu an bakımda. Kısa süre içinde geri döneceğiz!</div>
-      <button class="header-buton" onclick="adminGirisKontrol()" aria-label="Ayarlar" style="margin-top:12px;width:46px;height:46px;font-size:20px;">⚙️</button>
     </div>
 
     <!-- Başlangıç Ekranı -->
