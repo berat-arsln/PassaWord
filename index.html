@@ -1597,6 +1597,14 @@
       <div class="yatay-alt">Oyun dikey modda oynanmak üzere tasarlandı</div>
     </div>
 
+    <!-- Bakım Ekranı -->
+    <div class="ekran gizli" id="bakimEkrani" style="background:radial-gradient(ellipse at 50% 30%,#1a0d05 0%,#0a0e1a 70%);justify-content:center;align-items:center;flex-direction:column;gap:20px;text-align:center;padding:32px;">
+      <div style="font-size:64px;">🔧</div>
+      <div style="font-size:22px;font-weight:900;color:#fff;letter-spacing:2px;">BAKIM MODU</div>
+      <div style="font-size:15px;color:var(--metin-soluk);max-width:280px;line-height:1.6;">Oyun şu an bakımda. Kısa süre içinde geri döneceğiz!</div>
+      <button class="header-buton" onclick="adminGirisKontrol()" aria-label="Ayarlar" style="margin-top:12px;width:46px;height:46px;font-size:20px;">⚙️</button>
+    </div>
+
     <!-- Başlangıç Ekranı -->
     <div class="ekran gizli" id="baslangicEkrani">
       <div class="header" style="position: absolute; top: 0; left: 0; right: 0">
@@ -1625,6 +1633,11 @@
           </button>
         </div>
       </div>
+      <!-- Duyuru Bandı -->
+      <div id="duyuruBandi" class="gizli" style="width:100%;background:linear-gradient(90deg,rgba(255,214,0,0.15),rgba(255,214,0,0.08));border-bottom:1px solid rgba(255,214,0,0.25);padding:9px 16px;text-align:center;">
+        <div id="duyuruMetni" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;"></div>
+      </div>
+
       <div class="baslangic-logo">
         <h1>PassaWord</h1>
         <p>Türkçe Alfabe Bilgi Yarışması</p>
@@ -1666,15 +1679,14 @@
         >
           ⚙️
         </button>
-        <span class="header-baslik">PassaWord</span>
+        <span class="header-baslik" onclick="passaWordMenuAc()" style="cursor:pointer;user-select:none;position:relative;">PassaWord
+          <div id="passaWordMenu" class="gizli" style="position:absolute;top:34px;left:50%;transform:translateX(-50%);background:#0d1530;border:1px solid rgba(79,195,247,0.25);border-radius:12px;padding:6px;z-index:200;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.6);">
+            <div onclick="passaWordPanelSec(event,'skor')" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">🏆 Genel Skor</div>
+            <div onclick="passaWordPanelSec(event,'oyuncu')" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">👤 Oyuncu</div>
+            <div onclick="passaWordPanelSec(event,'ayarlar')" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">⚙️ Oyun Ayarları</div>
+          </div>
+        </span>
         <div class="header-sag">
-          <button
-            class="header-buton"
-            onclick="modalAc('skorModal')"
-            aria-label="Skor Tablosu"
-          >
-            🏆
-          </button>
           <button
             class="header-buton"
             onclick="modalAc('bilgiModal')"
@@ -1858,7 +1870,7 @@ color:#fff;font-size:15px;font-weight:700;
               <div class="ayar-ikon">👤</div>
               <div class="ayar-icerik">
                 <div class="ayar-baslik" id="aktifProfilAdi">—</div>
-                <div class="ayar-alt">
+                <div class="ayar-alt" id="aktifProfilAlt">
                   Şu an aktif profil • Silmek için basılı tut
                 </div>
               </div>
@@ -2523,11 +2535,13 @@ aktifProfilSatir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZaman
           hazir.style.display = "flex";
           hazir.style.flexDirection = "column";
           document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
-          document.getElementById("aktifProfilAdi").textContent =
-            aktifProfil.ad;
+          aktifProfilUiGuncelle();
         } else {
           ekraniGoster("baslangicEkrani");
         }
+
+        // Bakım modu ve duyuru kontrolü
+        bakimModuVeDuyuruKontrol();
 
         genelSkorTablosunuDinle();
 
@@ -3296,35 +3310,201 @@ gecmiseKaydet({
       /* ========================================================================= */
       /* GENEL SKOR TABLOSU YÖNETİMİ (TOP 20 ve Yeni İstatistik Rozetleri)         */
       /* ========================================================================= */
-      function genelSkorTablosunuDinle() {
-        // Top 10 yerine Top 20 alıyoruz
-        const skorSorgu = query(
-          ref(veritabani, "skorlar"),
-          orderByChild("puan"),
-          limitToLast(20)
-        );
+      /* ========================================================================= */
+      /* AKTİF PROFİL UI GÜNCELLEME                                               */
+      /* ========================================================================= */
+      function aktifProfilUiGuncelle() {
+        const profil = aktifProfiliGetir();
+        if (!profil) return;
+        const adiEl = document.getElementById('aktifProfilAdi');
+        const altEl = document.getElementById('aktifProfilAlt');
+        if (adiEl) adiEl.textContent = profil.ad;
+        if (altEl) {
+          altEl.innerHTML = profil.yedekKod
+            ? `Şu an aktif profil • Silmek için basılı tut<br><span style="font-size:10px;color:#4fc3f7;letter-spacing:1px;">${profil.yedekKod}</span>`
+            : `Şu an aktif profil • Silmek için basılı tut`;
+        }
+      }
 
-        onValue(skorSorgu, (anlık) => {
+      /* ========================================================================= */
+      /* PASSAWORD NAVIGASYON MENÜSÜ                                               */
+      /* ========================================================================= */
+      window.passaWordMenuAc = function() {
+        const menu = document.getElementById('passaWordMenu');
+        if (!menu) return;
+        const acikMi = !menu.classList.contains('gizli');
+        if (acikMi) {
+          menu.classList.add('gizli');
+        } else {
+          menu.classList.remove('gizli');
+          // Dışarı tıklayınca kapat
+          setTimeout(() => {
+            document.addEventListener('click', function kapat(e) {
+              if (!menu.contains(e.target)) {
+                menu.classList.add('gizli');
+                document.removeEventListener('click', kapat);
+              }
+            });
+          }, 0);
+        }
+      };
+
+      window.passaWordPanelSec = function(e, panel) {
+        if (e && e.stopPropagation) e.stopPropagation();
+        const menu = document.getElementById('passaWordMenu');
+        if (menu) menu.classList.add('gizli');
+        if (panel === 'skor') {
+          modalAc('skorModal');
+        } else if (panel === 'oyuncu') {
+          modalAc('profilSecModal');
+        } else if (panel === 'ayarlar') {
+          modalAc('ayarlarModal');
+        }
+      };
+
+      /* ========================================================================= */
+      /* BAKIM MODU VE DUYURU KONTROLÜ                                             */
+      /* ========================================================================= */
+      async function bakimModuVeDuyuruKontrol() {
+        try {
+          // Bakım modunu dinle (canlı)
+          onValue(ref(veritabani, 'ayarlar/bakimModu'), (snap) => {
+            const bakimAktif = snap.exists() && snap.val() === true;
+            const adminGiris = localStorage.getItem('pw_admin_giris') === 'true';
+            if (bakimAktif && !adminGiris) {
+              ekraniGoster('bakimEkrani');
+            } else {
+              // Bakım kapandıysa ve bakım ekranındaysak geri al
+              const mevcut = document.querySelector('.ekran:not(.gizli)');
+              if (mevcut && mevcut.id === 'bakimEkrani') {
+                const aktifProfil = aktifProfiliGetir();
+                ekraniGoster('baslangicEkrani');
+                if (aktifProfil) {
+                  document.getElementById("profilOlusturKutu").style.display = "none";
+                  const hazir = document.getElementById("hazirEkrani");
+                  hazir.style.display = "flex";
+                  hazir.style.flexDirection = "column";
+                  document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
+                  aktifProfilUiGuncelle();
+                }
+              }
+            }
+          });
+
+          // Duyuruyu dinle (canlı)
+          onValue(ref(veritabani, 'ayarlar/duyuru'), (snap) => {
+            const bandi = document.getElementById('duyuruBandi');
+            const metin = document.getElementById('duyuruMetni');
+            if (!bandi || !metin) return;
+
+            if (snap.exists() && snap.val()) {
+              const duyuruVerisi = snap.val();
+              // Eski format: düz string, yeni format: obje
+              let duyuruMetni = '';
+              let surGun = 0;
+              let maksGorunum = 0;
+
+              if (typeof duyuruVerisi === 'string') {
+                duyuruMetni = duyuruVerisi;
+                // Eski formatta süre/maks yok, hep göster
+              } else if (typeof duyuruVerisi === 'object') {
+                duyuruMetni = duyuruVerisi.metin || '';
+                surGun = duyuruVerisi.surGun || 0;
+                maksGorunum = duyuruVerisi.maksGorunum || 0;
+              }
+
+              if (!duyuruMetni) {
+                bandi.classList.add('gizli');
+                return;
+              }
+
+              // Görüntüleme sayısı kontrolü
+              const gorulmeKey = 'pw_duyuru_gorulme_' + btoa(duyuruMetni).slice(0,16);
+              const gorulme = JSON.parse(localStorage.getItem(gorulmeKey) || '{"sayi":0,"ilkGorulme":0}');
+
+              // Süre kontrolü
+              if (surGun > 0 && gorulme.ilkGorulme > 0) {
+                const gecenGun = (Date.now() - gorulme.ilkGorulme) / (1000 * 60 * 60 * 24);
+                if (gecenGun >= surGun) {
+                  bandi.classList.add('gizli');
+                  return;
+                }
+              }
+              // Maks görüntüleme kontrolü
+              if (maksGorunum > 0 && gorulme.sayi >= maksGorunum) {
+                bandi.classList.add('gizli');
+                return;
+              }
+
+              // Göster
+              metin.textContent = duyuruMetni;
+              bandi.classList.remove('gizli');
+
+              // Sayacı güncelle
+              const yeniGorulme = {
+                sayi: gorulme.sayi + 1,
+                ilkGorulme: gorulme.ilkGorulme || Date.now()
+              };
+              localStorage.setItem(gorulmeKey, JSON.stringify(yeniGorulme));
+            } else {
+              bandi.classList.add('gizli');
+            }
+          });
+        } catch(e) {
+          console.warn('Bakım/duyuru kontrolü hatası:', e);
+        }
+      }
+
+      // Bakım modundaki admin giriş kontrolü
+      window.adminGirisKontrol = function() {
+        const sifre = prompt('Admin şifresi:');
+        if (!sifre) return;
+        // Admin şifresini ayarlar/adminSifre'den kontrol et
+        get(ref(veritabani, 'config')).then(snap => {
+          const config = snap.val() || {};
+          if (sifre === config.adminSifre || config['beratarsin@gmail.com']) {
+            // Basit kontrol — admin şifresini local'e yaz
+            localStorage.setItem('pw_admin_giris', 'true');
+            toastGoster('✅ Admin girişi yapıldı');
+            ekraniGoster('baslangicEkrani');
+            const aktifProfil = aktifProfiliGetir();
+            if (aktifProfil) {
+              document.getElementById("profilOlusturKutu").style.display = "none";
+              const hazir = document.getElementById("hazirEkrani");
+              hazir.style.display = "flex";
+              hazir.style.flexDirection = "column";
+              document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
+              aktifProfilUiGuncelle();
+            }
+          } else {
+            toastGoster('❌ Yanlış şifre');
+          }
+        }).catch(() => toastGoster('❌ Bağlantı hatası'));
+      };
+
+      function genelSkorTablosunuDinle() {
+        const skorRef = ref(veritabani, "skorlar");
+
+        onValue(skorRef, (anlık) => {
           const veri = anlık.val();
           const liste = document.getElementById("genelSkorListe");
           liste.innerHTML = "";
 
           if (!veri) {
-            liste.innerHTML = `<div style="
-            text-align:
-            center;color:var(--metin-soluk);
-            padding:24px;
-            font-size:14px;">Henüz skor yok. İlk sen ol!</div>`;
+            liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);padding:24px;font-size:14px;">Henüz skor yok. İlk sen ol!</div>`;
             return;
           }
 
-          const skorDizisi = Object.values(veri)
+          // Admin mi kontrol et (localStorage'da pw_admin_giris varsa)
+          const adminMi = localStorage.getItem('pw_admin_giris') === 'true';
+
+          const skorDizisi = Object.entries(veri)
+            .map(([k, v]) => ({ _key: k, ...v }))
             .sort((a, b) => b.puan - a.puan)
             .slice(0, 20);
           const madalyalar = ["🥇", "🥈", "🥉"];
 
           skorDizisi.forEach((skor, i) => {
-            // Eski skorlarda bu veriler olmayabilir, varsayılan değer (0) koyuyoruz
             const d = skor.dogru || 0;
             const y = skor.yanlis || 0;
             const p = skor.pas || 0;
@@ -3335,7 +3515,10 @@ gecmiseKaydet({
         <div class="skor-satir-ust">
           <div class="skor-sira">${madalyalar[i] || i + 1}</div>
           <div class="skor-isim">${skor.isim} <span style="font-size:11px;color:var(--metin-soluk)">${new Date(skor.tarih).toLocaleDateString('tr-TR')}</span></div>
-          <div class="skor-puan">${skor.puan} puan</div>
+          <div style="display:flex;align-items:center;gap:6px;">
+            <div class="skor-puan">${skor.puan} puan</div>
+            ${adminMi ? `<button data-key="${skor._key}" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:3px 7px;cursor:pointer;">🗑</button>` : ''}
+          </div>
         </div>
         <div class="skor-satir-alt">
           <span style="color:var(--dogru-renk);">✓ ${d}</span>
@@ -3343,16 +3526,39 @@ gecmiseKaydet({
           <span style="color:var(--pas-renk);">~ ${p}</span>
         </div>
       `;
-      
-      satir.style.cursor = 'pointer';
-satir.addEventListener('click', () => {
-  if (skor.detay && skor.detay.length > 0) {
-    gecmisDetayGoster(skor, 0);
-  } else {
-    toastGoster('Bu oyunun detayı yok.');
-  }
-});
-      
+
+            // Detay tıklaması
+            satir.style.cursor = 'pointer';
+            satir.addEventListener('click', (e) => {
+              if (e.target.tagName === 'BUTTON') return; // Silme butonuna tıklama detay açmasın
+              if (skor.detay && skor.detay.length > 0) {
+                gecmisDetayGoster(skor, 0);
+              } else {
+                toastGoster('Bu oyunun detayı yok.');
+              }
+            });
+
+            // Silme butonu
+            if (adminMi) {
+              const silBtn = satir.querySelector('button[data-key]');
+              if (silBtn) {
+                silBtn.addEventListener('click', async (e) => {
+                  e.stopPropagation();
+                  if (!confirm(`Bu skoru silmek istediğine emin misin?`)) return;
+                  silBtn.textContent = '⏳';
+                  silBtn.disabled = true;
+                  try {
+                    await remove(ref(veritabani, `skorlar/${skor._key}`));
+                    toastGoster('✅ Skor silindi');
+                  } catch(err) {
+                    toastGoster('❌ Silinemedi!');
+                    silBtn.textContent = '🗑';
+                    silBtn.disabled = false;
+                  }
+                });
+              }
+            }
+
             liste.appendChild(satir);
           });
         });
@@ -3460,6 +3666,10 @@ satir.addEventListener('click', () => {
         hazir.style.gap = "16px";
         document.getElementById("hosgeldinIsim").textContent = isim;
         document.getElementById("aktifProfilAdi").textContent = isim;
+        // Otomatik yedek kod oluştur
+        yedekKoduOlustur(yeniProfil).then(kod => {
+          aktifProfilUiGuncelle();
+        }).catch(console.error);
       };
 
       document.addEventListener("keydown", (e) => {
@@ -3625,6 +3835,10 @@ satir.addEventListener('click', () => {
         document.getElementById("yeniProfilAdi").value = "";
         modalKapat("profilEkleModal");
         toastGoster(`"${ad}" oluşturuldu!`);
+        // Otomatik yedek kod oluştur
+        yedekKoduOlustur(yeniProfil).then(() => {
+          profilListesiniGuncelle();
+        }).catch(console.error);
       };
 
       function profilListesiniGuncelle() {
@@ -3649,7 +3863,7 @@ satir.addEventListener('click', () => {
               : 0;
           satir.innerHTML = `<div class="profil-adi">${
             profil.ad
-          }</div><div class="profil-skor">${
+          }${profil.yedekKod ? `<span style="font-size:10px;color:var(--metin-soluk);font-weight:600;margin-left:6px;letter-spacing:1px;">${profil.yedekKod}</span>` : ''}</div><div class="profil-skor">${
             enIyiSkor > 0 ? enIyiSkor + " puan" : "Yeni"
           }</div>${
             profil.id === aktifProfil?.id
@@ -4173,6 +4387,10 @@ satir.addEventListener('click', () => {
       <!-- Duyuru bandı -->
       <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">DUYURU BANDI</div>
       <input id="pwDuyuruMetin" class="giris-alani" placeholder="Duyuru metni (boş = gizli)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
+        <input id="pwDuyuruSurGun" class="giris-alani" type="number" placeholder="Süre (gün, 0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
+        <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
+      </div>
       <div style="display:flex;gap:6px;margin-bottom:10px;">
         <button onclick="pwDuyuruKaydet()" style="flex:1;background:linear-gradient(145deg,#2e7d32,#1b5e20);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;">💾 Kaydet</button>
         <button onclick="pwDuyuruSil()" style="flex:1;background:rgba(255,23,68,0.12);border:1px solid rgba(255,23,68,0.25);border-radius:8px;color:#ff6b6b;font-size:13px;font-weight:700;padding:9px;cursor:pointer;">🗑 Sil</button>
@@ -4380,16 +4598,32 @@ satir.addEventListener('click', () => {
       async function pwDuyuruGetir() {
         try {
           const snap = await get(ref(veritabani, 'ayarlar/duyuru'));
-          const el = document.getElementById('pwDuyuruMetin');
-          if (el && snap.exists()) el.value = snap.val() || '';
+          const metinEl = document.getElementById('pwDuyuruMetin');
+          const surEl = document.getElementById('pwDuyuruSurGun');
+          const maksEl = document.getElementById('pwDuyuruMaksGorunum');
+          if (snap.exists()) {
+            const veri = snap.val();
+            if (typeof veri === 'string') {
+              if (metinEl) metinEl.value = veri;
+            } else if (typeof veri === 'object') {
+              if (metinEl) metinEl.value = veri.metin || '';
+              if (surEl) surEl.value = veri.surGun || '';
+              if (maksEl) maksEl.value = veri.maksGorunum || '';
+            }
+          }
         } catch(e) {}
       }
 
       window.pwDuyuruKaydet = async function() {
-        const el = document.getElementById('pwDuyuruMetin');
-        const metin = el?.value.trim() || '';
+        const metinEl = document.getElementById('pwDuyuruMetin');
+        const surEl = document.getElementById('pwDuyuruSurGun');
+        const maksEl = document.getElementById('pwDuyuruMaksGorunum');
+        const metin = metinEl?.value.trim() || '';
+        const surGun = parseInt(surEl?.value) || 0;
+        const maksGorunum = parseInt(maksEl?.value) || 0;
         try {
-          await set(ref(veritabani, 'ayarlar/duyuru'), metin);
+          const kayitVeri = { metin, surGun, maksGorunum };
+          await set(ref(veritabani, 'ayarlar/duyuru'), kayitVeri);
           toastGoster('✅ Duyuru kaydedildi!');
         } catch(e) { toastGoster('❌ Kaydedilemedi!'); }
       };
@@ -5190,6 +5424,17 @@ window.adminDuzenleSekmeGec = function(sekme) {
           .querySelectorAll(".ekran")
           .forEach((e) => e.classList.add("gizli"));
         document.getElementById(id).classList.remove("gizli");
+        // Duyuru bandını başlangıç ekranında göster, oyun/sonuç ekranında gizle
+        const bandi = document.getElementById('duyuruBandi');
+        if (bandi) {
+          if (id === 'baslangicEkrani') {
+            // Duyuru içeriği varsa bandı göster (bakimModuVeDuyuruKontrol zaten yönetiyor)
+          } else {
+            bandi.classList.add('gizli');
+          }
+        }
+        // Profil UI'ı güncelle
+        if (id === 'baslangicEkrani') aktifProfilUiGuncelle();
       }
     </script>
     <!-- ========================================================================= -->
