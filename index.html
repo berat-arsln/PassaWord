@@ -3097,16 +3097,23 @@ gecmiseKaydet({
 
         // Skor kaydetme işlemine istatistikleri de gönderiyoruz
         skorkaydet(
-          oyunDurumu.puan,
-          oyunDurumu.dogruSayisi,
-          oyunDurumu.yanlisSayisi,
-          oyunDurumu.pasSayisi
-        );
+  oyunDurumu.puan,
+  oyunDurumu.dogruSayisi,
+  oyunDurumu.yanlisSayisi,
+  oyunDurumu.pasSayisi,
+  HARFLER.map(harf => ({
+    harf,
+    durum: oyunDurumu.harfDurumlari[harf] || 'pas',
+    soru: oyunDurumu.secilenSorular[harf]?.soru || '',
+    dogruCevap: oyunDurumu.secilenSorular[harf]?.cevap || '',
+    verilenCevap: oyunDurumu.harfCevaplari[harf]?.verilen || '—'
+  }))
+);
         sonucEkraniniOlustur(sureBonus, komboBonus);
         ekraniGoster("sonucEkrani");
       }
 
-      function skorkaydet(puan, dogru, yanlis, pas) {
+      function skorkaydet(puan, dogru, yanlis, pas, detay) {
         const profil = aktifProfiliGetir();
         if (!profil) return;
 
@@ -3142,12 +3149,13 @@ gecmiseKaydet({
         const skorRef = ref(veritabani, "skorlar");
         // Veritabanına istatistikleri de yolluyoruz
         push(skorRef, {
-          isim: profil.ad,
-          puan,
-          dogru,
-          yanlis,
-          pas,
-          tarih: new Date().toISOString(),
+  isim: profil.ad,
+  puan,
+  dogru,
+  yanlis,
+  pas,
+  detay: detay || [],
+  tarih: new Date().toISOString(),
         }).catch(console.error);
       }
 
@@ -3305,6 +3313,16 @@ gecmiseKaydet({
           <span style="color:var(--pas-renk);">~ ${p}</span>
         </div>
       `;
+      
+      satir.style.cursor = 'pointer';
+satir.addEventListener('click', () => {
+  if (skor.detay && skor.detay.length > 0) {
+    gecmisDetayGoster(skor, 0);
+  } else {
+    toastGoster('Bu oyunun detayı yok.');
+  }
+});
+      
             liste.appendChild(satir);
           });
         });
