@@ -3414,7 +3414,6 @@
       "YANLIS",
       "YANLIŞ"
     ]
-
   },
   {
     "id": 404,
@@ -5446,7 +5445,6 @@
     "alternatifler": [
       "YARDIM"
     ]
-  
   },
   {
     "id": 644,
@@ -10087,7 +10085,6 @@
       "YEDI YIL",
       "Yediyıl"
     ]
-  
   },
   {
     "id": 1181,
@@ -22457,8 +22454,7 @@
     "soru": "Sırt yukarı gelecek şekilde yatmak",
     "cevap": "Yüzükoyun",
     "alternatifler": [
-      "YÜZÜKOYUN",
-      "YUZUKOYUN"
+      "yüzüstü"
     ]
   },
   {
