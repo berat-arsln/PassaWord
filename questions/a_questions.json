@@ -65002,5 +65002,13 @@
       "AXL ROSE",
       "Axlrose"
     ]
+  },
+  {
+    "id": 7714,
+    "soru": "Şu anda bu oyunu oynuyorsunuz.",
+    "cevap": "Passaword",
+    "alternatifler": [
+      "passaword"
+    ]
   }
 ]
