@@ -2913,6 +2913,7 @@ if (window.visualViewport) {
         });
 
         ekraniGoster("oyunEkrani");
+        tumProfillereSilmeDinleyicisiBaslat();
         get(ref(veritabani, 'ayarlar/duyurular')).then(snap => duyurulariGoster(snap));
         canliIstatistikGuncelle();
         
