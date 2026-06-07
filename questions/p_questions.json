@@ -3218,7 +3218,6 @@
     "alternatifler": [
       "PANTER"
     ]
-  
   },
   {
     "id": 394,
@@ -4953,7 +4952,6 @@
     "alternatifler": [
       "PARALEL"
     ]
-  
   },
   {
     "id": 607,
@@ -7101,7 +7099,6 @@
     "alternatifler": [
       "PARLAMAK"
     ]
-  
   },
   {
     "id": 864,
@@ -33218,6 +33215,14 @@
     "cevap": "Python",
     "alternatifler": [
       "PYTHON"
+    ]
+  },
+  {
+    "id": 4031,
+    "soru": "Şu anda bu oyunu oynuyorsunuz.",
+    "cevap": "Passaword",
+    "alternatifler": [
+      "passaword"
     ]
   }
 ]
