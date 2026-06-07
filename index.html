@@ -2545,23 +2545,22 @@ color:#fff;font-size:15px;font-weight:700;
       // Admin sildiyse → profil seçim ekranına yönlendir
       let _profilSilmeListeneri = null;
       function aktifProfilSilmeDinleyicisiBaslat(profilId, yedekKod) {
+        if (!yedekKod) return;
         if (_profilSilmeListeneri) {
-          _profilSilmeListeneri(); // eski listener'ı temizle
+          _profilSilmeListeneri();
           _profilSilmeListeneri = null;
         }
-        if (!yedekKod) return;
-
         const profilRef = ref(veritabani, `yedekler/${yedekKod}`);
+        let ilkTetikleme = true;
         _profilSilmeListeneri = onValue(profilRef, (snap) => {
+          if (ilkTetikleme) { ilkTetikleme = false; return; }
           if (!snap.exists()) {
-            // Profil Firebase'den silindi — bu cihazda temizle ve yönlendir
             const profiller = profilleriGetir().filter(p => p.id !== profilId);
             profilleriKaydet(profiller);
             if (localStorage.getItem('pw_aktif_profil') === profilId) {
               if (profiller.length > 0) {
                 localStorage.setItem('pw_aktif_profil', profiller[0].id);
                 toastGoster('⚠️ Aktif profil silindi. Yeni profil seçildi.');
-                // Aktif ekrandan bağımsız olarak profil seçim modali aç
                 setTimeout(() => {
                   modalAc('profilSecModal');
                   profilListesiniGuncelle();
@@ -2569,7 +2568,6 @@ color:#fff;font-size:15px;font-weight:700;
               } else {
                 localStorage.removeItem('pw_aktif_profil');
                 toastGoster('⚠️ Profilin silindi. Lütfen yeni profil oluştur.');
-                // Tüm modalleri kapat ve başlangıç ekranına dön
                 document.querySelectorAll('.modal-arkaplan.acik').forEach(m => m.classList.remove('acik'));
                 ekraniGoster('baslangicEkrani');
                 document.getElementById('hazirEkrani').style.display = 'none';
@@ -3455,9 +3453,13 @@ gecmiseKaydet({
       /* ========================================================================= */
       function aktifProfilUiGuncelle() {
         const profil = aktifProfiliGetir();
-        if (!profil) return;
         const adiEl = document.getElementById('aktifProfilAdi');
         const altEl = document.getElementById('aktifProfilAlt');
+        if (!profil) {
+          if (adiEl) adiEl.textContent = '—';
+          if (altEl) altEl.innerHTML = 'Henüz profil yok';
+          return;
+        }
         if (adiEl) adiEl.textContent = profil.ad;
         if (altEl) {
           altEl.innerHTML = profil.yedekKod
@@ -3628,8 +3630,7 @@ if (sonucBandi && sonucMetni) {
             return;
           }
 
-          // Admin mi kontrol et (localStorage'da pw_admin_giris varsa)
-          const adminMi = localStorage.getItem('pw_admin_giris') === 'true';
+          
 
           const skorDizisi = Object.entries(veri)
             .map(([k, v]) => ({ _key: k, ...v }))
@@ -3650,7 +3651,7 @@ if (sonucBandi && sonucMetni) {
           <div class="skor-isim">${skor.isim} <span style="font-size:11px;color:var(--metin-soluk)">${new Date(skor.tarih).toLocaleDateString('tr-TR')}</span></div>
           <div style="display:flex;align-items:center;gap:6px;">
             <div class="skor-puan">${skor.puan} puan</div>
-            ${adminMi ? `<button data-key="${skor._key}" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:3px 7px;cursor:pointer;">🗑</button>` : ''}
+            
           </div>
         </div>
         <div class="skor-satir-alt">
@@ -3671,26 +3672,7 @@ if (sonucBandi && sonucMetni) {
               }
             });
 
-            // Silme butonu
-            if (adminMi) {
-              const silBtn = satir.querySelector('button[data-key]');
-              if (silBtn) {
-                silBtn.addEventListener('click', async (e) => {
-                  e.stopPropagation();
-                  if (!confirm(`Bu skoru silmek istediğine emin misin?`)) return;
-                  silBtn.textContent = '⏳';
-                  silBtn.disabled = true;
-                  try {
-                    await remove(ref(veritabani, `skorlar/${skor._key}`));
-                    toastGoster('✅ Skor silindi');
-                  } catch(err) {
-                    toastGoster('❌ Silinemedi!');
-                    silBtn.textContent = '🗑';
-                    silBtn.disabled = false;
-                  }
-                });
-              }
-            }
+            
 
             liste.appendChild(satir);
           });
@@ -3800,14 +3782,24 @@ satir.addEventListener('click', () => {
         document.getElementById("hosgeldinIsim").textContent = isim;
         document.getElementById("aktifProfilAdi").textContent = isim;
         // Otomatik yedek kod oluştur
-        yedekKoduOlustur(yeniProfil).then(kod => {
+        yedekKoduOlustur(yeniProfil).then(() => {
+          localStorage.setItem("pw_aktif_profil", yeniProfil.id);
           aktifProfilUiGuncelle();
-          // Yeni profil icin silme dinleyicisini baslat
+          document.getElementById('hosgeldinIsim').textContent = ad;
+          document.getElementById('profilOlusturKutu').style.display = 'none';
+          const hazir = document.getElementById('hazirEkrani');
+          hazir.style.display = 'flex';
+          hazir.style.flexDirection = 'column';
+          hazir.style.alignItems = 'center';
+          hazir.style.gap = '16px';
+          modalKapat('profilEkleModal');
+          modalKapat('ayarlarModal');
           const tazeProfiller = profilleriGetir();
           const tazeProfil = tazeProfiller.find(p => p.id === yeniProfil.id);
           if (tazeProfil && tazeProfil.yedekKod) {
             aktifProfilSilmeDinleyicisiBaslat(tazeProfil.id, tazeProfil.yedekKod);
           }
+          profilListesiniGuncelle();
         }).catch(console.error);
       };
 
@@ -3842,6 +3834,7 @@ satir.addEventListener('click', () => {
       /* Modallar */
       window.modalAc = function (id) {
         if (id === "skorModal") kisiselSkorTablosunuGuncelle();
+        if (id === "ayarlarModal") aktifProfilUiGuncelle();
         if (id === "profilSecModal") profilListesiniGuncelle();
         if (id === "geriBildirimModal") altTurGuncelle("oneri");
         if (id === "gecmisModal") gecmisModalGuncelle();
@@ -3971,11 +3964,30 @@ satir.addEventListener('click', () => {
         const profiller = profilleriGetir();
         profiller.push(yeniProfil);
         profilleriKaydet(profiller);
+        localStorage.setItem("pw_aktif_profil", yeniProfil.id);
         document.getElementById("yeniProfilAdi").value = "";
-        modalKapat("profilEkleModal");
+
+        // UI'ı hemen güncelle
+        aktifProfilUiGuncelle();
+        document.getElementById('hosgeldinIsim').textContent = ad;
+        document.getElementById('profilOlusturKutu').style.display = 'none';
+        const hazir = document.getElementById('hazirEkrani');
+        hazir.style.display = 'flex';
+        hazir.style.flexDirection = 'column';
+        hazir.style.alignItems = 'center';
+        hazir.style.gap = '16px';
+        modalKapat('profilEkleModal');
+        modalKapat('ayarlarModal');
         toastGoster(`"${ad}" oluşturuldu!`);
-        // Otomatik yedek kod oluştur
+
+        // Firebase'e arka planda yaz
         yedekKoduOlustur(yeniProfil).then(() => {
+          aktifProfilUiGuncelle();
+          const tazeProfiller = profilleriGetir();
+          const tazeProfil = tazeProfiller.find(p => p.id === yeniProfil.id);
+          if (tazeProfil && tazeProfil.yedekKod) {
+            aktifProfilSilmeDinleyicisiBaslat(tazeProfil.id, tazeProfil.yedekKod);
+          }
           profilListesiniGuncelle();
         }).catch(console.error);
       };
@@ -4016,6 +4028,14 @@ satir.addEventListener('click', () => {
             document.getElementById("hosgeldinIsim").textContent = profil.ad;
             profilListesiniGuncelle();
             toastGoster(`"${profil.ad}" seçildi`);
+            document.getElementById('hosgeldinIsim').textContent = profil.ad;
+            document.getElementById('profilOlusturKutu').style.display = 'none';
+            const hazir = document.getElementById('hazirEkrani');
+            hazir.style.display = 'flex';
+            hazir.style.flexDirection = 'column';
+            hazir.style.alignItems = 'center';
+            hazir.style.gap = '16px';
+            aktifProfilUiGuncelle();
             // Yeni aktif profil için silme dinleyicisini başlat
             aktifProfilSilmeDinleyicisiBaslat(profil.id, profil.yedekKod);
           });
@@ -4608,7 +4628,7 @@ window.pwSiralamayiGor = function() {
   modal.id = 'pwSiralamaModal';
   modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(5px);z-index:200;display:flex;align-items:flex-end;justify-content:center;';
   modal.innerHTML = `
-    <div style="background:linear-gradient(170deg,#111827,#0d1530);border:1px solid rgba(255,255,255,0.09);border-radius:20px 20px 0 0;width:100%;max-width:560px;max-height:88dvh;overflow-y:auto;padding:0 0 24px;">
+    <div style="background:linear-gradient(170deg,#111827,#0d1530);border:1px solid rgba(255,255,255,0.09);border-radius:20px 20px 0 0;width:100%;max-width:560px;max-height:88dvh;overflow-y:auto;padding:0 0 24px;position:relative;">
       <div style="width:40px;height:4px;background:rgba(255,255,255,0.18);border-radius:2px;margin:12px auto 18px;"></div>
 <button onclick="document.getElementById('pwSiralamaModal').remove()" style="position:absolute;top:14px;right:14px;width:32px;height:32px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:50%;color:rgba(255,255,255,0.6);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;">✕</button>
 <div style="font-size:18px;font-weight:800;text-align:center;margin-bottom:16px;color:#fff;">🏆 SIRALAMA (TOP 50)</div>
@@ -4806,8 +4826,8 @@ window.pwSiralamayiGor = function() {
         btn.disabled = true;
         remove(ref(veritabani, `yedekler/${kod}`))
           .then(() => {
-            btn.closest('div[style]').remove();
             toastGoster('✅ Profil silindi');
+            pwTumOyunculariYukle();
           })
           .catch(() => { toastGoster('❌ Silinemedi!'); btn.textContent = '🗑 Sil'; btn.disabled = false; });
       };
