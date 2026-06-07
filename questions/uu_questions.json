@@ -72,15 +72,6 @@
     ]
   },
   {
-    "id": 10,
-    "soru": "Para vermeden, bedava",
-    "cevap": "Ücretsiz",
-    "alternatifler": [
-      "UCRETSIZ",
-      "ÜCRETSIZ"
-    ]
-  },
-  {
     "id": 11,
     "soru": "Karşılığında ödeme istenmeyen",
     "cevap": "Ücretsiz",
