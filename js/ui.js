@@ -49,3 +49,44 @@ window.anaSayfayaGit = function () {
           .getElementById("kisiselSkorListe")
           .classList.toggle("gizli", sekme !== "kisisel");
       };
+
+
+      function onayGoster(baslik, mesaj, onayCallback) {
+        document.getElementById("onayBaslik").textContent = baslik;
+        document.getElementById("onayMesaj").textContent = mesaj;
+        document.getElementById("onayEvetButon").onclick = () => {
+          onayCallback();
+          onayKapat();
+        };
+        document.getElementById("onayDiyalog").classList.add("acik");
+      }
+      
+      
+
+      
+      
+      
+      window.onayKapat = function () {
+        document.getElementById("onayDiyalog").classList.remove("acik");
+      };
+      function toastGoster(mesaj, sure = 2500) {
+        const toast = document.getElementById("toastBildirim");
+        toast.textContent = mesaj;
+        toast.classList.add("goster");
+        setTimeout(() => toast.classList.remove("goster"), sure);
+      }
+      window.toastGoster = toastGoster;
+      function ekraniGoster(id) {
+        document
+          .querySelectorAll(".ekran")
+          .forEach((e) => e.classList.add("gizli"));
+        document.getElementById(id).classList.remove("gizli");
+        // Duyuru bandını başlangıç ekranında göster, oyun/sonuç ekranında gizle
+        const bandi = document.getElementById('duyuruBandi');
+const oyunBandi = document.getElementById('duyuruBandiOyun');
+if (bandi && id !== 'baslangicEkrani') bandi.classList.add('gizli');
+if (oyunBandi && id !== 'oyunEkrani') oyunBandi.classList.add('gizli');
+
+        // Profil UI'ı güncelle
+        if (id === 'baslangicEkrani') aktifProfilUiGuncelle();
+      }
