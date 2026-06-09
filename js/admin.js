@@ -1585,3 +1585,37 @@ window.adminGirisKontrol = function () {
   document.getElementById("adminSifreGiris").value = "";
   document.getElementById("adminModal").classList.add("acik");
 };
+
+window.profilGeriGetirAdmin = async function () {
+  const kod = document
+    .getElementById("profilKurtarmaKodu")
+    .value.trim()
+    .toUpperCase();
+
+  if (!kod) {
+    toastGoster("Kod girin!");
+    return;
+  }
+
+  try {
+    const kaynakRef = ref(veritabani, `silinenProfiller/${kod}`);
+    const snap = await get(kaynakRef);
+
+    if (!snap.exists()) {
+      toastGoster("Silinen profil bulunamadı!");
+      return;
+    }
+
+    await set(ref(veritabani, `yedekler/${kod}`), snap.val());
+
+    await remove(kaynakRef);
+
+    toastGoster("✅ Profil geri getirildi!");
+    document.getElementById("profilKurtarmaKodu").value = "";
+  } catch (e) {
+    console.error(e);
+    toastGoster("❌ İşlem başarısız!");
+  }
+};
+
+s;

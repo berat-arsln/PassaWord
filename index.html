@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width,
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
         initial-scale=1.0,
         maximum-scale=1.0,
         user-scalable=no,
-        interactive-widget=resizes-content">
+        interactive-widget=resizes-content"
+    />
 
-  <meta name="theme-color" content="#0a0e1a">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#0a0e1a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <title>PassaWord - v2.5.0</title>
+    <title>PassaWord - v2.5.0</title>
 
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/game.css">
-  <link rel="stylesheet" href="./css/modals.css">
-  <link rel="stylesheet" href="./css/admin.css">
-  <link rel="stylesheet" href="./css/responsive.css">
-</head>
- <body>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/game.css" />
+    <link rel="stylesheet" href="./css/modals.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
     <!-- ========================================================================= -->
     <!-- HTML İSKELETİ (BAŞLANGIÇ)                                               -->
     <!-- ========================================================================= -->
@@ -41,19 +43,71 @@
       <div class="yatay-alt">Oyun dikey modda oynanmak üzere tasarlandı</div>
     </div>
 
-<!-- Bakım Ekranı -->
-    <div class="ekran gizli" id="bakimEkrani" style="background:radial-gradient(ellipse at 50% 30%,#1a0d05 0%,#0a0e1a 70%);justify-content:center;align-items:center;flex-direction:column;gap:20px;text-align:center;padding:32px;">
-      <div class="header" style="position:absolute;top:0;left:0;right:0;">
-        <button class="header-buton" onclick="modalAc('ayarlarModal')" aria-label="Ayarlar">⚙️</button>
-        <span class="header-baslik" style="visibility:hidden;">PassaWord</span>
+    <!-- Bakım Ekranı -->
+    <div
+      class="ekran gizli"
+      id="bakimEkrani"
+      style="
+        background: radial-gradient(
+          ellipse at 50% 30%,
+          #1a0d05 0%,
+          #0a0e1a 70%
+        );
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 32px;
+      "
+    >
+      <div class="header" style="position: absolute; top: 0; left: 0; right: 0">
+        <button
+          class="header-buton"
+          onclick="modalAc('ayarlarModal')"
+          aria-label="Ayarlar"
+        >
+          ⚙️
+        </button>
+        <span class="header-baslik" style="visibility: hidden">PassaWord</span>
         <div class="header-sag">
-          <button class="header-buton" onclick="modalAc('skorModal')" aria-label="Skor Tablosu">🏆</button>
-          <button class="header-buton" onclick="modalAc('bilgiModal')" aria-label="Nasıl Oynanır">ℹ️</button>
+          <button
+            class="header-buton"
+            onclick="modalAc('skorModal')"
+            aria-label="Skor Tablosu"
+          >
+            🏆
+          </button>
+          <button
+            class="header-buton"
+            onclick="modalAc('bilgiModal')"
+            aria-label="Nasıl Oynanır"
+          >
+            ℹ️
+          </button>
         </div>
       </div>
-      <div style="font-size:64px;">🔧</div>
-      <div style="font-size:22px;font-weight:900;color:#fff;letter-spacing:2px;">BAKIM MODU</div>
-      <div style="font-size:15px;color:var(--metin-soluk);max-width:280px;line-height:1.6;">Oyun şu an bakımda. Kısa süre içinde geri döneceğiz!</div>
+      <div style="font-size: 64px">🔧</div>
+      <div
+        style="
+          font-size: 22px;
+          font-weight: 900;
+          color: #fff;
+          letter-spacing: 2px;
+        "
+      >
+        BAKIM MODU
+      </div>
+      <div
+        style="
+          font-size: 15px;
+          color: var(--metin-soluk);
+          max-width: 280px;
+          line-height: 1.6;
+        "
+      >
+        Oyun şu an bakımda. Kısa süre içinde geri döneceğiz!
+      </div>
     </div>
 
     <!-- Başlangıç Ekranı -->
@@ -84,14 +138,43 @@
           </button>
         </div>
       </div>
-      
-      <div id="duyuruBandi" class="gizli" style="width:calc(100% - 28px);background:linear-gradient(90deg,rgba(255,214,0,0.18),rgba(255,214,0,0.10));border:1px solid rgba(255,214,0,0.35);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-sizing:border-box;overflow:hidden;">
-  <div style="font-size:18px;flex-shrink:0;">📢</div>
-  <div style="flex:1;overflow:hidden;">
-    <div id="duyuruMetni" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;white-space:nowrap;display:inline-block;animation:duyuruKay 15s linear infinite;"></div>
-  </div>
-</div>
-      
+
+      <div
+        id="duyuruBandi"
+        class="gizli"
+        style="
+          width: calc(100% - 28px);
+          background: linear-gradient(
+            90deg,
+            rgba(255, 214, 0, 0.18),
+            rgba(255, 214, 0, 0.1)
+          );
+          border: 1px solid rgba(255, 214, 0, 0.35);
+          border-radius: 12px;
+          padding: 10px 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          box-sizing: border-box;
+          overflow: hidden;
+        "
+      >
+        <div style="font-size: 18px; flex-shrink: 0">📢</div>
+        <div style="flex: 1; overflow: hidden">
+          <div
+            id="duyuruMetni"
+            style="
+              font-size: 13px;
+              font-weight: 700;
+              color: #ffd600;
+              letter-spacing: 0.3px;
+              white-space: nowrap;
+              display: inline-block;
+              animation: duyuruKay 15s linear infinite;
+            "
+          ></div>
+        </div>
+      </div>
 
       <div class="baslangic-logo">
         <h1>PassaWord</h1>
@@ -134,36 +217,139 @@
         >
           ⚙️
         </button>
-        <span class="header-baslik" onclick="passaWordMenuAc()" style="cursor:pointer;user-select:none;position:relative;">PassaWord
-  <div id="passaWordMenu" class="gizli" style="position:absolute;top:34px;left:50%;transform:translateX(-50%);background:#0d1530;border:1px solid rgba(79,195,247,0.25);border-radius:12px;padding:6px;z-index:200;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.6);">
-    <div onclick="passaWordPanelSec(event,'skor')" id="pwNavSkor" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">🏆 Genel Skor</div>
-    <div onclick="passaWordPanelSec(event,'oyuncu')" id="pwNavOyuncu" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">👤 Oyuncu</div>
-    <div onclick="passaWordPanelSec(event,'ayarlar')" id="pwNavAyarlar" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;color:#fff;font-size:14px;font-weight:700;-webkit-text-fill-color:#fff;">⚙️ Oyun Ayarları</div>
-  </div>
-</span>
+        <span
+          class="header-baslik"
+          onclick="passaWordMenuAc()"
+          style="cursor: pointer; user-select: none; position: relative"
+          >PassaWord
+          <div
+            id="passaWordMenu"
+            class="gizli"
+            style="
+              position: absolute;
+              top: 34px;
+              left: 50%;
+              transform: translateX(-50%);
+              background: #0d1530;
+              border: 1px solid rgba(79, 195, 247, 0.25);
+              border-radius: 12px;
+              padding: 6px;
+              z-index: 200;
+              min-width: 200px;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            "
+          >
+            <div
+              onclick="passaWordPanelSec(event,'skor')"
+              id="pwNavSkor"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 14px;
+                border-radius: 8px;
+                cursor: pointer;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 700;
+                -webkit-text-fill-color: #fff;
+              "
+            >
+              🏆 Genel Skor
+            </div>
+            <div
+              onclick="passaWordPanelSec(event,'oyuncu')"
+              id="pwNavOyuncu"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 14px;
+                border-radius: 8px;
+                cursor: pointer;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 700;
+                -webkit-text-fill-color: #fff;
+              "
+            >
+              👤 Oyuncu
+            </div>
+            <div
+              onclick="passaWordPanelSec(event,'ayarlar')"
+              id="pwNavAyarlar"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 14px;
+                border-radius: 8px;
+                cursor: pointer;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 700;
+                -webkit-text-fill-color: #fff;
+              "
+            >
+              ⚙️ Oyun Ayarları
+            </div>
+          </div>
+        </span>
         <div class="header-sag">
-  <button
-    class="header-buton"
-    onclick="modalAc('skorModal')"
-    aria-label="Skor Tablosu"
-  >
-    🏆
-  </button>
-  <button
-    class="header-buton"
-    onclick="modalAc('bilgiModal')"
-    aria-label="Nasıl Oynanır"
-  >
-    ℹ️
-  </button>
-</div>
+          <button
+            class="header-buton"
+            onclick="modalAc('skorModal')"
+            aria-label="Skor Tablosu"
+          >
+            🏆
+          </button>
+          <button
+            class="header-buton"
+            onclick="modalAc('bilgiModal')"
+            aria-label="Nasıl Oynanır"
+          >
+            ℹ️
+          </button>
+        </div>
       </div>
-      <div id="duyuruBandiOyun" class="gizli" style="width:calc(100% - 28px);margin:0 14px;background:linear-gradient(90deg,rgba(255,214,0,0.18),rgba(255,214,0,0.10));border:1px solid rgba(255,214,0,0.35);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-sizing:border-box;overflow:hidden;flex-shrink:0;">
-  <div style="font-size:18px;flex-shrink:0;">📢</div>
-  <div style="flex:1;overflow:hidden;">
-    <div id="duyuruMetniOyun" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;white-space:nowrap;display:inline-block;animation:duyuruKay 15s linear infinite;"></div>
-  </div>
-</div>
+      <div
+        id="duyuruBandiOyun"
+        class="gizli"
+        style="
+          width: calc(100% - 28px);
+          margin: 0 14px;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 214, 0, 0.18),
+            rgba(255, 214, 0, 0.1)
+          );
+          border: 1px solid rgba(255, 214, 0, 0.35);
+          border-radius: 12px;
+          padding: 10px 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          box-sizing: border-box;
+          overflow: hidden;
+          flex-shrink: 0;
+        "
+      >
+        <div style="font-size: 18px; flex-shrink: 0">📢</div>
+        <div style="flex: 1; overflow: hidden">
+          <div
+            id="duyuruMetniOyun"
+            style="
+              font-size: 13px;
+              font-weight: 700;
+              color: #ffd600;
+              letter-spacing: 0.3px;
+              white-space: nowrap;
+              display: inline-block;
+              animation: duyuruKay 15s linear infinite;
+            "
+          ></div>
+        </div>
+      </div>
 
       <div class="oyun-alani">
         <!-- ========================================== -->
@@ -171,13 +357,16 @@
         <!-- (Bu div, klavye açılınca Javascript ile aşağıya taşınır) -->
         <!-- ========================================== -->
         <div id="canliIstatistik" class="canli-istatistik normal">
-  <div class="ist-sol">🏆 <span id="canliPuan">0</span></div>
-  <div class="ist-sag" style="display:flex;gap:14px;align-items:center;">
-    <span class="ist-dogru">✅ <span id="canliDogru">0</span></span>
-    <span class="ist-yanlis">❌ <span id="canliYanlis">0</span></span>
-    <span class="ist-pas">⏭️ <span id="canliPas">0</span></span>
-  </div>
-</div>
+          <div class="ist-sol">🏆 <span id="canliPuan">0</span></div>
+          <div
+            class="ist-sag"
+            style="display: flex; gap: 14px; align-items: center"
+          >
+            <span class="ist-dogru">✅ <span id="canliDogru">0</span></span>
+            <span class="ist-yanlis">❌ <span id="canliYanlis">0</span></span>
+            <span class="ist-pas">⏭️ <span id="canliPas">0</span></span>
+          </div>
+        </div>
         <!-- ========================================== -->
         <!-- OYUN İÇİ CANLI İSTATİSTİKLER (BİTİŞ)       -->
         <!-- ========================================== -->
@@ -263,14 +452,46 @@
           </button>
         </div>
       </div>
-      
-      <div id="duyuruBandiSonuc" class="gizli" style="width:calc(100% - 28px);margin:8px 14px 0;background:linear-gradient(90deg,rgba(255,214,0,0.18),rgba(255,214,0,0.10));border:1px solid rgba(255,214,0,0.35);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-sizing:border-box;overflow:hidden;flex-shrink:0;">
-  <div style="font-size:18px;flex-shrink:0;">📢</div>
-  <div style="flex:1;overflow:hidden;">
-    <div id="duyuruMetniSonuc" style="font-size:13px;font-weight:700;color:#ffd600;letter-spacing:0.3px;white-space:nowrap;display:inline-block;animation:duyuruKay 15s linear infinite;"></div>
-  </div>
-</div>
-      
+
+      <div
+        id="duyuruBandiSonuc"
+        class="gizli"
+        style="
+          width: calc(100% - 28px);
+          margin: 8px 14px 0;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 214, 0, 0.18),
+            rgba(255, 214, 0, 0.1)
+          );
+          border: 1px solid rgba(255, 214, 0, 0.35);
+          border-radius: 12px;
+          padding: 10px 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          box-sizing: border-box;
+          overflow: hidden;
+          flex-shrink: 0;
+        "
+      >
+        <div style="font-size: 18px; flex-shrink: 0">📢</div>
+        <div style="flex: 1; overflow: hidden">
+          <div
+            id="duyuruMetniSonuc"
+            style="
+              font-size: 13px;
+              font-weight: 700;
+              color: #ffd600;
+              letter-spacing: 0.3px;
+              white-space: nowrap;
+              display: inline-block;
+              animation: duyuruKay 15s linear infinite;
+            "
+          ></div>
+        </div>
+      </div>
+
       <!-- SONUÇ EKRANINA EKLENEN HEADER BİTİŞ -->
       <div class="sonuc-header">
         <h2>🎉 OYUN BİTTİ</h2>
@@ -290,33 +511,80 @@
           </div>
         </div>
       </div>
-      
-      
-<div class="sonuc-butonlar" style="padding: 16px 14px 0;">
-        <button id="tekrarOynaButon2" onclick="oyunuBaslat()" style="background:linear-gradient(145deg,#1976d2,#0d47a1);color:#fff;box-shadow:0 4px 16px rgba(25,118,210,0.35);">🔄 Tekrar Oyna</button>
-        <button id="anaSayfaButon2" onclick="anaSayfayaGit()" style="background:rgba(255,65,255,0.47);border:1px solid rgba(255,255,255,0.12);color:#fff;">🏠 Ana Sayfa</button>
+
+      <div class="sonuc-butonlar" style="padding: 16px 14px 0">
+        <button
+          id="tekrarOynaButon2"
+          onclick="oyunuBaslat()"
+          style="
+            background: linear-gradient(145deg, #1976d2, #0d47a1);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(25, 118, 210, 0.35);
+          "
+        >
+          🔄 Tekrar Oyna
+        </button>
+        <button
+          id="anaSayfaButon2"
+          onclick="anaSayfayaGit()"
+          style="
+            background: rgba(255, 65, 255, 0.47);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+          "
+        >
+          🏠 Ana Sayfa
+        </button>
       </div>
-      <div style="padding:4px 14px 8px;width:100%;">
-        <button id="favoriEkleButon2" onclick="sonucFavoriToggle()"
-          style="width:100%;height:46px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);
-          background:rgba(255,255,255,0.07);color:#fff;font-size:15px;font-weight:700;
-          cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+      <div style="padding: 4px 14px 8px; width: 100%">
+        <button
+          id="favoriEkleButon2"
+          onclick="sonucFavoriToggle()"
+          style="
+            width: 100%;
+            height: 46px;
+            border-radius: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.07);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+          "
+        >
           <span id="favoriButonIkon2"></span>
           <span id="favoriButonYazi2">Favoriye Ekle</span>
         </button>
       </div>
       <div class="sonuc-liste" id="sonucListe"></div>
-      <div style="padding:8px 14px 0;width:100%;">
-        <button onclick="sonucFavoriToggle()"
-          style="width:100%;height:46px;border-radius:13px;border:1px solid rgba(255,255,255,0.12);
-          background:rgba(255,255,255,0.08);
-color:#fff;font-size:15px;font-weight:700;
-          cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+      <div style="padding: 8px 14px 0; width: 100%">
+        <button
+          onclick="sonucFavoriToggle()"
+          style="
+            width: 100%;
+            height: 46px;
+            border-radius: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+          "
+        >
           <span id="favoriButonIkon"></span>
           <span id="favoriButonYazi">Favoriye Ekle</span>
         </button>
       </div>
-      
+
       <div class="sonuc-butonlar">
         <button id="tekrarOynaButon" onclick="oyunuBaslat()">
           🔄 Tekrar Oyna
@@ -727,38 +995,88 @@ color:#fff;font-size:15px;font-weight:700;
               Yükleniyor...
             </div>
           </div>
+
+          <div style="padding: 16px 16px 12px">
+            <div class="ayar-etiket">♻️ Profil Kurtarma</div>
+
+            <input
+              type="text"
+              id="profilKurtarmaKodu"
+              class="giris-alani"
+              placeholder="PW-XXXXX"
+              style="text-align: left; margin-top: 8px"
+              autocomplete="off"
+            />
+
+            <button
+              class="gonder-buton"
+              onclick="profilGeriGetirAdmin()"
+              style="margin-top: 10px"
+            >
+              Profili Geri Getir
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-
-<!-- Geçmiş & Favoriler Modali -->
-<div class="modal-arkaplan" id="gecmisModal" onclick="disaTiklaKapat(event,'gecmisModal')">
-  <div class="modal-sayfa">
-    <div class="modal-cubuk"></div>
-    <button class="modal-kapat" onclick="modalKapat('gecmisModal')">✕</button>
-    <div class="modal-baslik">📋 GEÇMİŞ & FAVORİLER</div>
-    <div class="sekmeler">
-      <button class="sekme aktif" id="sekmeGecmis" onclick="gecmisSekmeGec('gecmis')">🕐 Geçmiş</button>
-      <button class="sekme" id="sekmeFavori" onclick="gecmisSekmeGec('favori')">🔖 Favoriler</button>
+    <!-- Geçmiş & Favoriler Modali -->
+    <div
+      class="modal-arkaplan"
+      id="gecmisModal"
+      onclick="disaTiklaKapat(event,'gecmisModal')"
+    >
+      <div class="modal-sayfa">
+        <div class="modal-cubuk"></div>
+        <button class="modal-kapat" onclick="modalKapat('gecmisModal')">
+          ✕
+        </button>
+        <div class="modal-baslik">📋 GEÇMİŞ & FAVORİLER</div>
+        <div class="sekmeler">
+          <button
+            class="sekme aktif"
+            id="sekmeGecmis"
+            onclick="gecmisSekmeGec('gecmis')"
+          >
+            🕐 Geçmiş
+          </button>
+          <button
+            class="sekme"
+            id="sekmeFavori"
+            onclick="gecmisSekmeGec('favori')"
+          >
+            🔖 Favoriler
+          </button>
+        </div>
+        <div id="gecmisListe" class="skor-liste"></div>
+        <div id="favoriListe" class="skor-liste gizli"></div>
+      </div>
     </div>
-    <div id="gecmisListe" class="skor-liste"></div>
-    <div id="favoriListe" class="skor-liste gizli"></div>
-  </div>
-</div>
 
-<!-- Geçmiş Detay Modali -->
-<div class="modal-arkaplan" id="gecmisDetayModal" onclick="disaTiklaKapat(event,'gecmisDetayModal')">
-  <div class="modal-sayfa">
-    <div class="modal-cubuk"></div>
-    <button class="modal-kapat" onclick="modalKapat('gecmisDetayModal')">✕</button>
-    <div class="modal-baslik" id="gecmisDetayBaslik">Oyun Detayı</div>
-    <div class="sonuc-istatistik" id="gecmisDetayIstat" style="padding:0 16px 12px;"></div>
-    <div class="sonuc-liste" id="gecmisDetayListe" style="padding-bottom:24px;"></div>
-  </div>
-</div>
-
-
+    <!-- Geçmiş Detay Modali -->
+    <div
+      class="modal-arkaplan"
+      id="gecmisDetayModal"
+      onclick="disaTiklaKapat(event,'gecmisDetayModal')"
+    >
+      <div class="modal-sayfa">
+        <div class="modal-cubuk"></div>
+        <button class="modal-kapat" onclick="modalKapat('gecmisDetayModal')">
+          ✕
+        </button>
+        <div class="modal-baslik" id="gecmisDetayBaslik">Oyun Detayı</div>
+        <div
+          class="sonuc-istatistik"
+          id="gecmisDetayIstat"
+          style="padding: 0 16px 12px"
+        ></div>
+        <div
+          class="sonuc-liste"
+          id="gecmisDetayListe"
+          style="padding-bottom: 24px"
+        ></div>
+      </div>
+    </div>
 
     <!-- Onay ve Toast -->
     <div class="onay-diyalog" id="onayDiyalog">
@@ -773,17 +1091,16 @@ color:#fff;font-size:15px;font-weight:700;
     </div>
     <div id="toastBildirim"></div>
 
-<script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/firebase.js"></script>
 
-<script src="./js/ui.js"></script>
-<script src="./js/profile.js"></script>
-<script src="./js/game.js"></script>
-<script src="./js/history.js"></script>
-<script src="./js/scores.js"></script>
-<script src="./js/feedback.js"></script>
-<script src="./js/admin.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/profile.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/history.js"></script>
+    <script src="./js/scores.js"></script>
+    <script src="./js/feedback.js"></script>
+    <script src="./js/admin.js"></script>
 
-<script src="./js/app.js"></script>
-   
+    <script src="./js/app.js"></script>
   </body>
 </html>
