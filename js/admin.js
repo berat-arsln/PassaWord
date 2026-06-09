@@ -511,11 +511,33 @@ function adminPassaWordPanelGoster() {
     </button>
   </div>
   <div id="pwOyuncuSonuc"></div>
+
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;">
+  ♻️ PROFİL KURTAR
+  </div>
+  
+  <div style="display:flex;gap:6px;margin-bottom:10px;">
+    <input
+      id="pwProfilKurtarKod"
+      class="giris-alani"
+      placeholder="PW-XXXXX"
+      style="flex:1;text-align:left;"
+    >
+  
+    <button
+      onclick="pwProfilKurtar()"
+      class="gonder-buton"
+    >
+      Geri Getir
+    </button>
+  </div>
+
   <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;letter-spacing:.4px;">TÜM KAYITLI PROFİLLER</div>
   <button onclick="pwTumOyunculariYukle()" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:8px;">
     📋 Profilleri Listele
   </button>
   <div id="pwOyuncuListe"></div>
+  
 </div>
 
 <!-- AYARLAR PANELİ -->
@@ -865,20 +887,28 @@ function pwOyuncuKartHtml(kod, p) {
           </div>`;
 }
 
-window.pwOyuncuSil = function (kod, btn) {
-  if (!confirm(`"${kod}" kodlu profil kalıcı silinecek. Emin misin?`)) return;
+window.pwOyuncuSil = async function (kod, btn) {
+  if (!confirm(`"${kod}" kodlu profil silinecek. Emin misin?`)) return;
+
   btn.textContent = "⏳";
   btn.disabled = true;
-  remove(ref(veritabani, `yedekler/${kod}`))
-    .then(() => {
-      toastGoster("✅ Profil silindi");
-      pwTumOyunculariYukle();
-    })
-    .catch(() => {
-      toastGoster("❌ Silinemedi!");
-      btn.textContent = "🗑 Sil";
-      btn.disabled = false;
-    });
+
+  try {
+    const snap = await get(ref(veritabani, `yedekler/${kod}`));
+
+    if (snap.exists()) {
+      await set(ref(veritabani, `silinenProfiller/${kod}`), snap.val());
+    }
+
+    await remove(ref(veritabani, `yedekler/${kod}`));
+
+    toastGoster("✅ Profil silindi");
+    pwTumOyunculariYukle();
+  } catch (e) {
+    toastGoster("❌ Silinemedi!");
+    btn.textContent = "🗑 Sil";
+    btn.disabled = false;
+  }
 };
 
 /* ========================================================================= */
@@ -1614,6 +1644,37 @@ window.profilGeriGetirAdmin = async function () {
     document.getElementById("profilKurtarmaKodu").value = "";
   } catch (e) {
     console.error(e);
+    toastGoster("❌ İşlem başarısız!");
+  }
+};
+
+window.pwProfilKurtar = async function () {
+  const kod = document
+    .getElementById("pwProfilKurtarKod")
+    .value.trim()
+    .toUpperCase();
+
+  if (!kod) {
+    toastGoster("Kod girin!");
+    return;
+  }
+
+  try {
+    const kaynakRef = ref(veritabani, `silinenProfiller/${kod}`);
+    const snap = await get(kaynakRef);
+
+    if (!snap.exists()) {
+      toastGoster("Silinen profil bulunamadı!");
+      return;
+    }
+
+    await set(ref(veritabani, `yedekler/${kod}`), snap.val());
+
+    await remove(kaynakRef);
+
+    toastGoster("✅ Profil geri getirildi!");
+    document.getElementById("pwProfilKurtarKod").value = "";
+  } catch (e) {
     toastGoster("❌ İşlem başarısız!");
   }
 };
