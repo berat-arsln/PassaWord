@@ -39,16 +39,16 @@ const kimlikDogrulama = getAuth(uygulama);
 
 signInAnonymously(kimlikDogrulama).catch(console.error);
 
-export {
-  veritabani,
-  kimlikDogrulama,
-  ref,
-  push,
-  onValue,
-  query,
-  orderByChild,
-  limitToLast,
-  set,
-  remove,
-  get,
-};
+
+window.veritabani = veritabani;
+window.kimlikDogrulama = kimlikDogrulama;
+
+window.ref = ref;
+window.push = push;
+window.onValue = onValue;
+window.query = query;
+window.orderByChild = orderByChild;
+window.limitToLast = limitToLast;
+window.set = set;
+window.remove = remove;
+window.get = get;
