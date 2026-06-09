@@ -1617,5 +1617,3 @@ window.profilGeriGetirAdmin = async function () {
     toastGoster("❌ İşlem başarısız!");
   }
 };
-
-s;
