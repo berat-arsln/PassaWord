@@ -517,17 +517,24 @@ function adminPassaWordPanelGoster() {
   </div>
   
   <div style="display:flex;gap:6px;margin-bottom:10px;">
-    <input
-      id="pwProfilKurtarKod"
-      class="giris-alani"
-      placeholder="PW-XXXXX"
-      style="flex:1;text-align:left;"
-    >
+  <input
+  id="pwProfilKurtarKod"
+  class="giris-alani"
+  placeholder="PW-XXXXX"
+  style="
+    flex:1;
+    text-align:left;
+    height:58px;
+    font-size:16px;
+    padding:0 14px;
+  "
+>
   
-    <button
-      onclick="pwProfilKurtar()"
-      class="gonder-buton"
-    >
+<button
+onclick="pwProfilKurtar()"
+class="gonder-buton"
+style="height:58px;"
+>
       Geri Getir
     </button>
   </div>
