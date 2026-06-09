@@ -686,7 +686,6 @@ function sonucEkraniniOlustur(sureBonus, komboBonus) {
   sonucFavoriButonGuncelle(favoriMi);
 }
 
-console.log("bakimModuVeDuyuruKontrol calisti");
 // DOM Yüklendiğinde
 window.addEventListener("DOMContentLoaded", () => {
   const aktifProfilSatir = document.getElementById("aktifProfilSatir");
@@ -730,7 +729,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Firebase migrasyonu (arka planda, sessizce)
   migrasyonYap().catch(console.warn);
 
-  console.log("bakim kontrol basladi");
   // Bakım modu ve duyuru kontrolü
   bakimModuVeDuyuruKontrol();
 

@@ -44,7 +44,6 @@ window.passaWordPanelSec = function (e, panel) {
 async function bakimModuVeDuyuruKontrol() {
   try {
     onValue(ref(veritabani, "ayarlar/bakimModu"), (snap) => {
-      console.log("BAKIM CALLBACK", snap.exists(), snap.val());
       const bakimAktif = snap.exists() && snap.val() === true;
       const adminGiris = sessionStorage.getItem("pw_admin_giris") === "true";
       if (bakimAktif && !adminGiris) {
