@@ -1,1 +1,66 @@
-/* admin.css */
+      /* --------- ADMİN PANELİ --------- */
+      #adminModal .modal-sayfa {
+        max-height: 92dvh;
+      }
+      .admin-oneri-kart {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 14px;
+        margin: 0 16px 10px;
+      }
+      .admin-oneri-soru {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 6px;
+      }
+      .admin-oneri-cevap {
+        font-size: 13px;
+        color: #4fc3f7;
+        margin-bottom: 4px;
+      }
+      .admin-oneri-meta {
+        font-size: 11px;
+        color: var(--metin-soluk);
+        margin-bottom: 12px;
+      }
+      .admin-buton-grubu {
+        display: flex;
+        gap: 8px;
+      }
+      .admin-onayla {
+        flex: 1;
+        background: linear-gradient(145deg, #00c853, #007b33);
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 9px;
+        cursor: pointer;
+      }
+      .admin-reddet {
+        flex: 1;
+        background: rgba(255, 23, 68, 0.2);
+        border: 1px solid rgba(255, 23, 68, 0.3);
+        border-radius: 8px;
+        color: #ff1744;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 9px;
+        cursor: pointer;
+      }
+      .yedek-kod-kutu {
+        background: #0a0e1a;
+        border: 1.5px solid rgba(79, 195, 247, 0.3);
+        border-radius: 10px;
+        padding: 14px;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        color: #4fc3f7;
+        text-align: center;
+        letter-spacing: 2px;
+        word-break: break-all;
+        margin: 8px 0 16px;
+      }
