@@ -1,12 +1,3 @@
-import {
-  veritabani,
-  ref,
-  set,
-  get,
-  remove
-} from "./firebase.js";
-
-
 // Cihaza özgü benzersiz ID (her cihaz için tek, değişmez)
       function cihazIdGetir() {
         let cihazId = localStorage.getItem('pw_cihaz_id');
