@@ -673,5 +673,152 @@ gecmiseKaydet({
         sonucFavoriButonGuncelle(favoriMi);
                 }
 
+  // DOM Yüklendiğinde
+      window.addEventListener('DOMContentLoaded', () => {
+        const aktifProfilSatir = document.getElementById('aktifProfilSatir');
+        let uzunBasmaZamanlayi;
+        aktifProfilSatir.addEventListener('touchstart', () => {
+          uzunBasmaZamanlayi = setTimeout(() => {
+            const profil = aktifProfiliGetir();
+            if (profil) profilSilOnay(profil);
+          }, 570);
+        });
+        aktifProfilSatir.addEventListener('touchend', () => clearTimeout(uzunBasmaZamanlayi));
+        aktifProfilSatir.addEventListener('touchmove', () => clearTimeout(uzunBasmaZamanlayi));
+
+        window._dokunmatik = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        bilgisayarModunuAyarla();
+        yatayModKontrol();
+        window.addEventListener('resize', yatayModKontrol);
+        window.addEventListener('orientationchange', () => setTimeout(yatayModKontrol, 300));
+
+        const aktifProfil = aktifProfiliGetir();
+        if (aktifProfil) {
+          ekraniGoster('baslangicEkrani');
+          document.getElementById('profilOlusturKutu').style.display = 'none';
+          const hazir = document.getElementById('hazirEkrani');
+          hazir.style.display = 'flex';
+          hazir.style.flexDirection = 'column';
+          document.getElementById('hosgeldinIsim').textContent = aktifProfil.ad;
+          aktifProfilUiGuncelle();
+          // Silme listener'ını başlat
+          tumProfillereSilmeDinleyicisiBaslat();
+        } else {
+          ekraniGoster('baslangicEkrani');
+        }
+
+        // Firebase migrasyonu (arka planda, sessizce)
+        migrasyonYap().catch(console.warn);
+
+        // Bakım modu ve duyuru kontrolü
+        bakimModuVeDuyuruKontrol();
+
+        genelSkorTablosunuDinle();
+
+        // Çift dokunma engelleme
+        let sonDokunma = 0;
+        document.addEventListener('touchend', (e) => {
+          const simdi = Date.now();
+          if (simdi - sonDokunma < 1) e.preventDefault();
+          sonDokunma = simdi;
+        }, { passive: false });
+      });
+
+
+      // Bilgisayar/Mobil Modu
+      function bilgisayarModunuAyarla() {
+        const bilgisayarMi = !window._dokunmatik && window.innerWidth >= 1025;
+        if (bilgisayarMi) {
+          document.getElementById("bilgisayarCevapAlani").style.display =
+            "block";
+          document.querySelector(".giris-klavye-alani").style.display = "none";
+        }
+      }
+
+      // Yatay Uyarı (Klavye açılmasından etkilenmemesi için screen değerleri kullanıldı)
+      function yatayModKontrol() {
+        // window.innerHeight yerine cihazın fiziksel ekran oranına (screen) bakıyoruz
+        const yatay = window.screen.width > window.screen.height;
+        if (window._dokunmatik && yatay) {
+          document.getElementById("yatayUyari").classList.remove("gizli");
+        } else {
+          document.getElementById("yatayUyari").classList.add("gizli");
+        }
+      }
+
+/* ========================================================================= */
+/* KLAVYE AÇILMASI & CANLI İSTATİSTİK YER DEĞİŞİMİ (EVRENSEL KÖKTEN ÇÖZÜM)   */
+/* ========================================================================= */
+let maxEkranBoyutu = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+
+// Cihaz yan çevrildiğinde ekran boyutunu evrensel olarak sıfırla
+window.addEventListener('orientationchange', () => {
+  setTimeout(() => {
+    maxEkranBoyutu = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    ekraniYenile();
+  }, 300);
+});
+
+function klavyeDurumunuGuncelle() {
+  const oyunEkrani = document.getElementById('oyunEkrani');
+  
+  if (window.visualViewport) {
+    if (window.visualViewport.height > maxEkranBoyutu) {
+      maxEkranBoyutu = window.visualViewport.height;
+    }
+
+    // Android ve iOS için ortak klavye algılama mantığı
+    const isKeyboardOpen = (maxEkranBoyutu - window.visualViewport.height > 150);
+
+    if (isKeyboardOpen) {
+      oyunEkrani.classList.add('klavye-acik');
+      // Tüm cihazlarda ekranı tam olarak kalan boşluğa sabitler (Kesilmeyi önler)
+      oyunEkrani.style.height = window.visualViewport.height + 'px';
+    } else {
+      oyunEkrani.classList.remove('klavye-acik');
+      oyunEkrani.style.height = '100dvh'; // Klavye kapanınca normale dön
+    }
+  }
+}
+
+if (window.visualViewport) {
+  let klavyeZamanlayici;
+  window.visualViewport.addEventListener('resize', () => {
+    if (!document.getElementById('oyunEkrani').classList.contains('gizli')) {
+      clearTimeout(klavyeZamanlayici);
+      
+      // Ekran boyutunu anında güncelle (Android/iOS fark etmeksizin)
+      document.getElementById('oyunEkrani').style.height = window.visualViewport.height + 'px';
+      
+      // Tarayıcının kendi kendine sayfayı kaydırmasını (scroll) engelle
+      window.scrollTo(0, 0); 
+
+      klavyeZamanlayici = setTimeout(() => {
+        ekraniYenile();
+        klavyeDurumunuGuncelle();
+      }, 100);
+    }
+  });
+
+  // Evrensel kaydırma kilidi: Oyun oynanırken ana sayfanın kaymasını kesin olarak engeller
+  // (Sonuç ekranındaki liste kaydırmasını etkilemez, sadece dış çerçeveyi kilitler)
+  window.addEventListener('scroll', () => {
+    if (document.getElementById('oyunEkrani').classList.contains('klavye-acik')) {
+      window.scrollTo(0, 0);
+    }
+  });
+}
+      // Canlı istatistik sayılarını DOM üzerinde güncelleyen fonksiyon
+      function canliIstatistikGuncelle() {
+        document.getElementById("canliPuan").textContent = oyunDurumu.puan;
+        document.getElementById("canliDogru").textContent =
+          oyunDurumu.dogruSayisi;
+        document.getElementById("canliYanlis").textContent =
+          oyunDurumu.yanlisSayisi;
+        document.getElementById("canliPas").textContent = oyunDurumu.pasSayisi;
+                  }
+
+
+
 
 
