@@ -534,7 +534,12 @@ import {
       };
 
 
-      window.aktifProfilUiGuncelle = 
-      aktifProfilUiGuncelle;
-      window.profilListesiniGuncelle = 
-      profilListesiniGuncelle;
+window.profilOlustur = profilOlustur;
+window.yeniProfilEkle = yeniProfilEkle;
+window.profilGeriYukle = profilGeriYukle;
+window.yedekKoduGoster = yedekKoduGoster;
+window.genelSifirlaBaslat = genelSifirlaBaslat;
+window.kopyala = kopyala;
+
+window.aktifProfilUiGuncelle = aktifProfilUiGuncelle;
+window.profilListesiniGuncelle = profilListesiniGuncelle;
