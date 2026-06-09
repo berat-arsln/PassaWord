@@ -263,7 +263,7 @@
         yedekKoduOlustur(yeniProfil).then(() => {
           localStorage.setItem("pw_aktif_profil", yeniProfil.id);
           aktifProfilUiGuncelle();
-          document.getElementById('hosgeldinIsim').textContent = ad;
+          document.getElementById('hosgeldinIsim').textContent = isim;
           document.getElementById('profilOlusturKutu').style.display = 'none';
           const hazir = document.getElementById('hazirEkrani');
           hazir.style.display = 'flex';
