@@ -1352,3 +1352,12 @@ window.adminDuzenleSekmeGec = function(sekme) {
   document.getElementById('adminEkleSekme').style.color = sekme === 'ekle' ? '#fff' : 'var(--metin-soluk)';
 };
 
+
+      // Bakım modundaki admin giriş kontrolü
+      window.adminGirisKontrol = function() {
+  document.getElementById("adminSifreEkrani").classList.remove("gizli");
+  document.getElementById("adminIcerik").classList.add("gizli");
+  document.getElementById("adminSifreGiris").value = "";
+  document.getElementById("adminModal").classList.add("acik");
+};
+
