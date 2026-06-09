@@ -1,4 +1,4 @@
-const HARFLER = [l
+const HARFLER = [
         "A",
         "B",
         "C",
