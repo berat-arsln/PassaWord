@@ -360,3 +360,98 @@
         font-size: 13px;
         color: var(--metin-soluk);
       }
+      /* --------- ONAY DİYALOĞU & TOAST --------- */
+      .onay-diyalog {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s;
+      }
+      .onay-diyalog.acik {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .onay-kutu {
+        background: #111827;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 18px;
+        padding: 24px 20px;
+        max-width: 320px;
+        width: 100%;
+        text-align: center;
+      }
+      .onay-baslik {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .onay-mesaj {
+        font-size: 14px;
+        color: var(--metin-soluk);
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      .onay-butonlar {
+        display: flex;
+        gap: 10px;
+      }
+      .onay-evet {
+        flex: 1;
+        background: #ff1744;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 12px;
+        cursor: pointer;
+      }
+      .onay-hayir {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 12px;
+        cursor: pointer;
+      }
+      #toastBildirim {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(100px);
+        background: rgba(30, 40, 60, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        z-index: 300;
+        transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      #toastBildirim.goster {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 2px;
+      }
