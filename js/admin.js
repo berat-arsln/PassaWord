@@ -516,28 +516,26 @@ function adminPassaWordPanelGoster() {
   ♻️ PROFİL KURTAR
   </div>
   
-  <div style="display:flex;gap:6px;margin-bottom:10px;">
+  <div style="margin-bottom:10px;">
   <input
-  id="pwProfilKurtarKod"
-  class="giris-alani"
-  placeholder="PW-XXXXX"
-  style="
-    flex:1;
-    text-align:left;
-    height:58px;
-    font-size:16px;
-    padding:0 14px;
-  "
->
-  
-<button
-onclick="pwProfilKurtar()"
-class="gonder-buton"
-style="height:58px;"
->
-      Geri Getir
-    </button>
-  </div>
+    id="pwProfilKurtarKod"
+    class="giris-alani"
+    placeholder="PW-XXXXX"
+    style="
+      width:100%;
+      text-align:left;
+      margin-bottom:8px;
+    "
+  >
+
+  <button
+    onclick="pwProfilKurtar()"
+    class="gonder-buton"
+    style="width:100%;"
+  >
+    Geri Getir
+  </button>
+</div>
 
   <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;letter-spacing:.4px;">TÜM KAYITLI PROFİLLER</div>
   <button onclick="pwTumOyunculariYukle()" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:8px;">
