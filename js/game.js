@@ -891,5 +891,34 @@ if (window.visualViewport) {
 
 
 
+document.addEventListener("keydown", (e) => {
+        if (e.repeat) return; // Çift atlamayı (basılı tutma bug'ını) engeller
+        if (document.getElementById("oyunEkrani").classList.contains("gizli"))
+          return;
+        if (document.querySelector(".modal-arkaplan.acik")) return;
+        const bilgisayarMi = !window._dokunmatik && window.innerWidth >= 1025;
+        if (bilgisayarMi) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            cevapVer();
+          }
+          if (
+            e.key === " " &&
+            document.activeElement !==
+              document.getElementById("bilgisayarCevapGiris")
+          ) {
+            e.preventDefault();
+            pasCek();
+          }
+        } else {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            cevapVer();
+            return;
+          }
+        }
+      });
+
+
 
 
