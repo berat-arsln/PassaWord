@@ -46,7 +46,7 @@ async function bakimModuVeDuyuruKontrol() {
     onValue(ref(veritabani, "ayarlar/bakimModu"), (snap) => {
       console.log("BAKIM CALLBACK", snap.exists(), snap.val());
       const bakimAktif = snap.exists() && snap.val() === true;
-      const adminGiris = localStorage.getItem("pw_admin_giris") === "true";
+      const adminGiris = sessionStorage.getItem("pw_admin_giris") === "true";
       if (bakimAktif && !adminGiris) {
         ekraniGoster("bakimEkrani");
       } else {
@@ -178,7 +178,7 @@ window.adminGiris = async function () {
         }
       );
     } else {
-      localStorage.setItem("pw_admin_giris", "true");
+      sessionStorage.setItem("pw_admin_giris", "true");
       document.getElementById("adminSifreEkrani").classList.add("gizli");
       document.getElementById("adminIcerik").classList.remove("gizli");
       adminOneriYukle();
