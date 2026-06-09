@@ -1,4 +1,13 @@
-      // Cihaza özgü benzersiz ID (her cihaz için tek, değişmez)
+import {
+  veritabani,
+  ref,
+  set,
+  get,
+  remove
+} from "./firebase.js";
+
+
+// Cihaza özgü benzersiz ID (her cihaz için tek, değişmez)
       function cihazIdGetir() {
         let cihazId = localStorage.getItem('pw_cihaz_id');
         if (!cihazId) {
@@ -213,3 +222,319 @@
 
         return kod;
                 }
+
+
+/* ========================================================================= */
+      /* AKTİF PROFİL UI GÜNCELLEME                                               */
+      /* ========================================================================= */
+      function aktifProfilUiGuncelle() {
+        const profil = aktifProfiliGetir();
+        const adiEl = document.getElementById('aktifProfilAdi');
+        const altEl = document.getElementById('aktifProfilAlt');
+        if (!profil) {
+          if (adiEl) adiEl.textContent = '—';
+          if (altEl) altEl.innerHTML = 'Henüz profil yok';
+          return;
+        }
+        if (adiEl) adiEl.textContent = profil.ad;
+        if (altEl) {
+          altEl.innerHTML = profil.yedekKod
+            ? `Şu an aktif profil • Silmek için basılı tut<br><span style="font-size:10px;color:#4fc3f7;letter-spacing:1px;">${profil.yedekKod}</span>`
+            : `Şu an aktif profil • Silmek için basılı tut`;
+        }
+      }
+
+      window.profilOlustur = function () {
+        const isim = document.getElementById("profilIsimGiris").value.trim();
+        if (!isim) {
+          toastGoster("Lütfen bir isim girin!");
+          return;
+        }
+        const yeniProfil = {
+          id: "profil_" + Date.now(),
+          ad: isim,
+          skorlar: [],
+          olusturulma: new Date().toISOString(),
+        };
+        const profiller = profilleriGetir();
+        profiller.push(yeniProfil);
+        profilleriKaydet(profiller);
+        localStorage.setItem("pw_aktif_profil", yeniProfil.id);
+        document.getElementById("profilOlusturKutu").style.display = "none";
+        const hazir = document.getElementById("hazirEkrani");
+        hazir.style.display = "flex";
+        hazir.style.flexDirection = "column";
+        hazir.style.alignItems = "center";
+        hazir.style.gap = "16px";
+        document.getElementById("hosgeldinIsim").textContent = isim;
+        document.getElementById("aktifProfilAdi").textContent = isim;
+        // Otomatik yedek kod oluştur
+        yedekKoduOlustur(yeniProfil).then(() => {
+          localStorage.setItem("pw_aktif_profil", yeniProfil.id);
+          aktifProfilUiGuncelle();
+          document.getElementById('hosgeldinIsim').textContent = ad;
+          document.getElementById('profilOlusturKutu').style.display = 'none';
+          const hazir = document.getElementById('hazirEkrani');
+          hazir.style.display = 'flex';
+          hazir.style.flexDirection = 'column';
+          hazir.style.alignItems = 'center';
+          hazir.style.gap = '16px';
+          modalKapat('profilEkleModal');
+          modalKapat('ayarlarModal');
+          const tazeProfiller = profilleriGetir();
+          const tazeProfil = tazeProfiller.find(p => p.id === yeniProfil.id);
+          if (tazeProfil && tazeProfil.yedekKod) {
+            aktifProfilSilmeDinleyicisiBaslat(tazeProfil.id, tazeProfil.yedekKod);
+          }
+          profilListesiniGuncelle();
+        }).catch(console.error);
+      };
+
+      window.yeniProfilEkle = function () {
+        const ad = document.getElementById("yeniProfilAdi").value.trim();
+        if (!ad) {
+          toastGoster("Lütfen profil adı girin!");
+          return;
+        }
+        const yeniProfil = {
+          id: "profil_" + Date.now(),
+          ad,
+          skorlar: [],
+          olusturulma: new Date().toISOString(),
+        };
+        const profiller = profilleriGetir();
+        profiller.push(yeniProfil);
+        profilleriKaydet(profiller);
+        localStorage.setItem("pw_aktif_profil", yeniProfil.id);
+        document.getElementById("yeniProfilAdi").value = "";
+
+        // UI'ı hemen güncelle
+        aktifProfilUiGuncelle();
+        document.getElementById('hosgeldinIsim').textContent = ad;
+        document.getElementById('profilOlusturKutu').style.display = 'none';
+        const hazir = document.getElementById('hazirEkrani');
+        hazir.style.display = 'flex';
+        hazir.style.flexDirection = 'column';
+        hazir.style.alignItems = 'center';
+        hazir.style.gap = '16px';
+        modalKapat('profilEkleModal');
+        modalKapat('ayarlarModal');
+        toastGoster(`"${ad}" oluşturuldu!`);
+
+        // Firebase'e arka planda yaz
+        yedekKoduOlustur(yeniProfil).then(() => {
+          aktifProfilUiGuncelle();
+          const tazeProfiller = profilleriGetir();
+          const tazeProfil = tazeProfiller.find(p => p.id === yeniProfil.id);
+          if (tazeProfil && tazeProfil.yedekKod) {
+            aktifProfilSilmeDinleyicisiBaslat(tazeProfil.id, tazeProfil.yedekKod);
+          }
+          profilListesiniGuncelle();
+        }).catch(console.error);
+      };
+
+
+
+      function profilListesiniGuncelle() {
+        const profiller = profilleriGetir();
+        const aktifProfil = aktifProfiliGetir();
+        const liste = document.getElementById("profilListesi");
+        liste.innerHTML = "";
+        if (profiller.length === 0) {
+          liste.innerHTML = `<div style="text-align:center;color:var(--metin-soluk);
+          padding:24px;font-size:14px;">Kayıtlı profil yok.</div>`;
+          return;
+        }
+
+        profiller.forEach((profil) => {
+          const satir = document.createElement("div");
+          satir.className = `profil-satir${
+            profil.id === aktifProfil?.id ? " aktif-profil" : ""
+          }`;
+          const enIyiSkor =
+            profil.skorlar?.length > 0
+              ? Math.max(...profil.skorlar.map((s) => s.puan))
+              : 0;
+          satir.innerHTML = `<div class="profil-adi">${
+            profil.ad
+          }${profil.yedekKod ? `<span style="font-size:10px;color:var(--metin-soluk);font-weight:600;margin-left:6px;letter-spacing:1px;">${profil.yedekKod}</span>` : ''}</div><div class="profil-skor">${
+            enIyiSkor > 0 ? enIyiSkor + " puan" : "Yeni"
+          }</div>${
+            profil.id === aktifProfil?.id
+              ? '<span class="rozet-aktif">AKTİF</span>'
+              : ""
+          }`;
+
+          satir.addEventListener("click", () => {
+            localStorage.setItem("pw_aktif_profil", profil.id);
+            document.getElementById("aktifProfilAdi").textContent = profil.ad;
+            document.getElementById("hosgeldinIsim").textContent = profil.ad;
+            profilListesiniGuncelle();
+            toastGoster(`"${profil.ad}" seçildi`);
+            document.getElementById('hosgeldinIsim').textContent = profil.ad;
+            document.getElementById('profilOlusturKutu').style.display = 'none';
+            const hazir = document.getElementById('hazirEkrani');
+            hazir.style.display = 'flex';
+            hazir.style.flexDirection = 'column';
+            hazir.style.alignItems = 'center';
+            hazir.style.gap = '16px';
+            aktifProfilUiGuncelle();
+            // Yeni aktif profil için silme dinleyicisini başlat
+            aktifProfilSilmeDinleyicisiBaslat(profil.id, profil.yedekKod);
+          });
+
+          let uzunBasmaZamanlayi;
+          satir.addEventListener("touchstart", () => {
+            uzunBasmaZamanlayi = setTimeout(() => {
+              profilSilOnay(profil);
+            }, 570);
+          });
+          satir.addEventListener("touchend", () =>
+            clearTimeout(uzunBasmaZamanlayi)
+          );
+          satir.addEventListener("touchmove", () =>
+            clearTimeout(uzunBasmaZamanlayi)
+          );
+          satir.addEventListener("mousedown", () => {
+            uzunBasmaZamanlayi = setTimeout(() => {
+              profilSilOnay(profil);
+            }, 570);
+          });
+          satir.addEventListener("mouseup", () =>
+            clearTimeout(uzunBasmaZamanlayi)
+          );
+          satir.addEventListener("mouseleave", () =>
+            clearTimeout(uzunBasmaZamanlayi)
+          );
+          liste.appendChild(satir);
+        });
+      }
+
+
+      function profilSilOnay(profil) { 
+  onayGoster(
+    "Profili Sil",
+    `"${profil.ad}" profilini silmek istediğine emin misin? Yedekleme kodu da silinecek; bu profili kullanan diğer cihazlar senkronizasyonunu kaybeder.`,
+    async () => {
+      // Firebase'den yedek kodunu da sil
+      if (profil.yedekKod) {
+        try {
+          // Firebase referans yolu backtick içine alındı
+          await remove(ref(veritabani, `yedekler/${profil.yedekKod}`)); 
+        } catch(e) { 
+          console.warn('Firebase silme hatası:', e); 
+        }
+      }
+
+      const profiller = profilleriGetir().filter(p => p.id !== profil.id);
+      profilleriKaydet(profiller);
+      
+      const aktif = aktifProfiliGetir();
+      if (!aktif || aktif.id === profil.id) {
+        if (profiller.length > 0) {
+          localStorage.setItem("pw_aktif_profil", profiller[0].id);
+        } else {
+          localStorage.removeItem("pw_aktif_profil");
+        }
+      }
+      
+      profilListesiniGuncelle();
+      toastGoster(`"${profil.ad}" silindi`); // Backtick kullanıldı
+      
+      const kalanProfiller = profilleriGetir();
+      if (kalanProfiller.length === 0) {
+        modalKapat("profilSecModal");
+        modalKapat("ayarlarModal");
+        ekraniGoster("baslangicEkrani");
+        document.getElementById("hazirEkrani").style.display = "none";
+        document.getElementById("profilOlusturKutu").style.display = "block";
+      } else {
+        const yeniAktif = aktifProfiliGetir();
+        if (yeniAktif) {
+          document.getElementById("aktifProfilAdi").textContent = yeniAktif.ad;
+          document.getElementById("hosgeldinIsim").textContent = yeniAktif.ad;
+        }
+      }
+    }
+  );
+}
+
+      window.yedekKoduGoster = async function () {
+        const profil = aktifProfiliGetir();
+        if (!profil) return;
+        const gosterge = document.getElementById("yedekKodGosterge");
+        gosterge.textContent = "Oluşturuluyor...";
+        modalAc("yedekKodModal");
+        const kod = await yedekKoduOlustur(profil);
+        gosterge.textContent = kod;
+      };
+      
+      window.profilGeriYukle = async function () {
+        const kod = document.getElementById("yedekKodGiris").value.trim();
+        if (!kod) { toastGoster("Lütfen kod girin!"); return; }
+
+        if (kod === "/pwadmin") {
+          document.getElementById("yedekKodGiris").value = "";
+          modalKapat("profilYukleModal");
+          modalAc("adminModal");
+          return;
+        }
+        if (kod === "/genelsifirla") {
+          document.getElementById("yedekKodGiris").value = "";
+          modalKapat("profilYukleModal");
+          genelSifirlaBaslat();
+          return;
+        }
+
+        toastGoster("Aranıyor...");
+        try {
+          const snap = await get(ref(veritabani, `yedekler/${kod}`));
+          if (!snap.exists()) { toastGoster("Kod bulunamadı!"); return; }
+          const veri = snap.val();
+          const profiller = profilleriGetir();
+          const mevcutIndeks = profiller.findIndex(p => p.id === veri.id);
+          const tamVeri = {
+            id: veri.id,
+            ad: veri.ad,
+            skorlar: veri.skorlar || [],
+            gecmis: veri.gecmis || [],
+            favoriler: veri.favoriler || [],
+            olusturulma: veri.olusturulma,
+            yedekKod: kod
+          };
+          if (mevcutIndeks !== -1)
+            profiller[mevcutIndeks] = { ...profiller[mevcutIndeks], ...tamVeri };
+          else profiller.push(tamVeri);
+          profilleriKaydet(profiller);
+          localStorage.setItem("pw_aktif_profil", veri.id);
+          document.getElementById("yedekKodGiris").value = "";
+          modalKapat("profilYukleModal");
+          toastGoster(`"${veri.ad}" yüklendi!`);
+        } catch (hata) {
+          toastGoster("Bağlantı hatası!");
+        }
+      };
+
+      window.genelSifirlaBaslat = function () {
+        window._sifirlaModunda = true;
+        document.getElementById("adminSifreEkrani").classList.remove("gizli");
+        document.getElementById("adminIcerik").classList.add("gizli");
+        document.getElementById("adminSifreGiris").value = "";
+        modalAc("adminModal");
+      };
+      window.kopyala = function (elVeyaId) {
+        const el =
+          typeof elVeyaId === "string"
+            ? document.getElementById(elVeyaId)
+            : elVeyaId;
+        navigator.clipboard
+          .writeText(el.textContent.trim())
+          .then(() => toastGoster("Kopyalandı! 📋"))
+          .catch(() => toastGoster("Kopyalanamadı"));
+      };
+
+
+      window.aktifProfilUiGuncelle = 
+      aktifProfilUiGuncelle;
+      window.profilListesiniGuncelle = 
+      profilListesiniGuncelle;
