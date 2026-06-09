@@ -206,4 +206,142 @@
       }
 
 
-    </style>
+   /* ========================================================================= */
+      /* PASSAWORD NAVIGASYON MENÜSÜ                                               */
+      /* ========================================================================= */
+      window.passaWordMenuAc = function() {
+        const menu = document.getElementById('passaWordMenu');
+        if (!menu) return;
+        const acikMi = !menu.classList.contains('gizli');
+        if (acikMi) {
+          menu.classList.add('gizli');
+        } else {
+          menu.classList.remove('gizli');
+          // Dışarı tıklayınca kapat
+          setTimeout(() => {
+            document.addEventListener('click', function kapat(e) {
+              if (!menu.contains(e.target)) {
+                menu.classList.add('gizli');
+                document.removeEventListener('click', kapat);
+              }
+            });
+          }, 0);
+        }
+      };
+
+      window.passaWordPanelSec = function(e, panel) {
+  if (e && e.stopPropagation) e.stopPropagation();
+  const menu = document.getElementById('passaWordMenu');
+  if (menu) menu.classList.add('gizli');
+
+  // Seçili item'ı vurgula (bir sonraki açılışta)
+  ['skor','oyuncu','ayarlar'].forEach(p => {
+    const el = document.getElementById('pwNav' + p.charAt(0).toUpperCase() + p.slice(1));
+    if (el) el.style.background = p === panel ? 'rgba(79,195,247,0.15)' : 'transparent';
+  });
+
+  if (panel === 'skor') modalAc('skorModal');
+  else if (panel === 'oyuncu') modalAc('profilSecModal');
+  else if (panel === 'ayarlar') modalAc('ayarlarModal');
+};
+
+      async function bakimModuVeDuyuruKontrol() {
+  try {
+    onValue(ref(veritabani, 'ayarlar/bakimModu'), (snap) => {
+      const bakimAktif = snap.exists() && snap.val() === true;
+      const adminGiris = localStorage.getItem('pw_admin_giris') === 'true';
+      if (bakimAktif && !adminGiris) {
+        ekraniGoster('bakimEkrani');
+      } else {
+        const mevcut = document.querySelector('.ekran:not(.gizli)');
+        if (mevcut && mevcut.id === 'bakimEkrani') {
+          const aktifProfil = aktifProfiliGetir();
+          ekraniGoster('baslangicEkrani');
+          if (aktifProfil) {
+            document.getElementById("profilOlusturKutu").style.display = "none";
+            const hazir = document.getElementById("hazirEkrani");
+            hazir.style.display = "flex";
+            hazir.style.flexDirection = "column";
+            document.getElementById("hosgeldinIsim").textContent = aktifProfil.ad;
+            aktifProfilUiGuncelle();
+          }
+        }
+      }
+    });
+
+    onValue(ref(veritabani, 'ayarlar/duyurular'), (snap) => {
+      duyurulariGoster(snap);
+    });
+
+  } catch(e) {
+    console.warn('Bakım/duyuru kontrolü hatası:', e);
+  }
+}
+
+function duyurulariGoster(snap) {
+  const anasayfaBandi = document.getElementById('duyuruBandi');
+  const anasayfaMetni = document.getElementById('duyuruMetni');
+  const oyunBandi = document.getElementById('duyuruBandiOyun');
+  const oyunMetni = document.getElementById('duyuruMetniOyun');
+
+  if (!snap || !snap.exists()) {
+    if (anasayfaBandi) anasayfaBandi.classList.add('gizli');
+    if (oyunBandi) oyunBandi.classList.add('gizli');
+    return;
+  }
+
+  const veri = snap.val();
+  const simdiki = Date.now();
+
+  const aktifDuyurular = Object.entries(veri)
+    .map(([key, d]) => ({ key, ...d }))
+    .filter(d => {
+      if (!d.metin) return false;
+      const gorulmeKey = 'pw_duyuru_' + d.key;
+      const gorulme = JSON.parse(localStorage.getItem(gorulmeKey) || '{"sayi":0,"ilk":0}');
+      if (d.sureDakika > 0 && gorulme.ilk > 0) {
+        const gecenDakika = (simdiki - gorulme.ilk) / 60000;
+        if (gecenDakika >= d.sureDakika) return false;
+      }
+      if (d.maksGorunum > 0 && gorulme.sayi >= d.maksGorunum) return false;
+      return true;
+    })
+    .sort((a, b) => (b.olusturulma || 0) - (a.olusturulma || 0));
+
+  if (aktifDuyurular.length === 0) {
+    if (anasayfaBandi) anasayfaBandi.classList.add('gizli');
+    if (oyunBandi) oyunBandi.classList.add('gizli');
+    return;
+  }
+
+  const metinler = aktifDuyurular.map(d => d.metin).join(' • ');
+
+  aktifDuyurular.forEach(d => {
+    const gorulmeKey = 'pw_duyuru_' + d.key;
+    const gorulme = JSON.parse(localStorage.getItem(gorulmeKey) || '{"sayi":0,"ilk":0}');
+    localStorage.setItem(gorulmeKey, JSON.stringify({
+      sayi: gorulme.sayi + 1,
+      ilk: gorulme.ilk || simdiki
+    }));
+  });
+
+  if (anasayfaBandi && anasayfaMetni) {
+    anasayfaMetni.textContent = metinler;
+    anasayfaBandi.classList.remove('gizli');
+  }
+
+  if (oyunBandi && oyunMetni) {
+    oyunMetni.textContent = metinler;
+    oyunBandi.classList.remove('gizli');
+  }
+  
+  const sonucBandi = document.getElementById('duyuruBandiSonuc');
+const sonucMetni = document.getElementById('duyuruMetniSonuc');
+if (sonucBandi && sonucMetni) {
+  sonucMetni.textContent = metinler;
+  sonucBandi.classList.remove('gizli');
+}
+     }
+
+
+
