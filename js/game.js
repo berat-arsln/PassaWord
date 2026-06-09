@@ -819,6 +819,77 @@ if (window.visualViewport) {
                   }
 
 
+      /* ========================================================================= */
+      /* GELİŞMİŞ HATA BİLDİRİMİ (BAŞLANGIÇ)                                       */
+      /* ========================================================================= */
+      window.hataBildir = async function (harf, btn) {
+        const soruVerisi = oyunDurumu.secilenSorular[harf];
+        const kullaniciCevabi =
+          oyunDurumu.harfCevaplari[harf]?.verilen || "Belirtilmedi";
+        const profil = aktifProfiliGetir();
+        const profilAdi = profil ? profil.ad : "Anonim";
+
+        if (!soruVerisi) return;
+
+        btn.textContent = "⏳...";
+        btn.disabled = true;
+
+        try {
+          const hataBildirimRef = ref(veritabani, "hatabildirimler");
+          await push(hataBildirimRef, {
+            harf,
+            soruId: soruVerisi.id || "Bilinmiyor", // JSON'dan gelen ID'yi veritabanına gönderiyoruz
+            soru: soruVerisi.soru,
+            cevap: soruVerisi.cevap,
+            kullanici_cevabi: kullaniciCevabi, // Kullanıcının girdiği yanlış cevap
+            profilAdi: profilAdi, // Hangi kullanıcı bildirdi?
+            alternatifler: soruVerisi.alternatifler || [],
+            tarih: new Date().toISOString(),
+          });
+          btn.textContent = "✓ Bildirildi";
+          btn.style.color = "#00e676";
+          btn.style.borderColor = "rgba(0,230,118,0.3)";
+        } catch (hata) {
+          console.error(hata);
+          btn.textContent = "⚠ Hata Bildir";
+          btn.disabled = false;
+        }
+      };
+      /* Geçmiş oyun detayından hata bildirimi */
+      window.gecmisHataBildir = async function(d, btn) {
+        if (btn.disabled) return;
+        btn.textContent = '⏳...';
+        btn.disabled = true;
+
+        const profil = aktifProfiliGetir();
+        const profilAdi = profil ? profil.ad : 'Anonim';
+
+        try {
+          const hataBildirimRef = ref(veritabani, 'hatabildirimler');
+          await push(hataBildirimRef, {
+            harf: d.harf,
+            soruId: d.soruId || 'Bilinmiyor',
+            soru: d.soru,
+            cevap: d.dogruCevap,
+            kullanici_cevabi: d.verilenCevap || 'Belirtilmedi',
+            profilAdi: profilAdi,
+            kaynak: 'gecmis',
+            tarih: new Date().toISOString()
+          });
+          btn.textContent = '✓ Bildirildi';
+          btn.style.color = '#00e676';
+          btn.style.borderColor = 'rgba(0,230,118,0.3)';
+        } catch (hata) {
+          console.error(hata);
+          btn.textContent = '⚠ Hata Bildir';
+          btn.disabled = false;
+        }
+      };
+      /* ========================================================================= */
+      /* GELİŞMİŞ HATA BİLDİRİMİ (BİTİŞ)                                           */
+      /* ========================================================================= */
+
+
 
 
 
