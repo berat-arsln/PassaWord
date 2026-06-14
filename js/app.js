@@ -5,7 +5,7 @@ if (isPWA) {
     const style = document.createElement('style');
     style.textContent = `
         html, body { 
-            overscroll-behavior-y: auto !important; 
+            overscroll-behavior-y: contain !important;
             touch-action: pan-y !important; 
         }
     `;
