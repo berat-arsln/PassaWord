@@ -1,4 +1,3 @@
-// Sadece PWA modunda pull-to-refresh'e izin ver
 const isPWA = new URLSearchParams(window.location.search).get('pwa') === '1';
 
 if (isPWA) {
@@ -10,15 +9,13 @@ if (isPWA) {
     `;
     document.head.appendChild(style);
 
-    let startY = 0;
-    document.addEventListener('touchstart', e => {
-        startY = e.touches[0].clientY;
-    }, { passive: true });
-    document.addEventListener('touchend', e => {
-        const endY = e.changedTouches[0].clientY;
-        const diff = endY - startY;
-        if (diff > 150) {
-            window.location.reload();
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            const oyunEkrani = document.getElementById('oyunEkrani');
+            const oyunGorunur = oyunEkrani && !oyunEkrani.classList.contains('gizli');
+            if (!oyunGorunur) {
+                window.location.reload();
+            }
         }
-    }, { passive: true });
+    });
 }
