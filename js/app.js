@@ -18,7 +18,7 @@ if (isPWA) {
     document.addEventListener('touchend', e => {
         const endY = e.changedTouches[0].clientY;
         const diff = endY - startY;
-        if (diff > 800 && window.scrollY === 0) {
+        if (diff > 80 && window.scrollY === 0) {
             window.location.reload();
         }
     });
