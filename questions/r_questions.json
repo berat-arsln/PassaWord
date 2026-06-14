@@ -1579,7 +1579,6 @@
     "alternatifler": [
       "RANDEVULU"
     ]
-  
   },
   {
     "id": 194,
@@ -10627,9 +10626,9 @@
     "soru": "Altı adet yüzeyi ve rengi olan mekanik bulmaca",
     "cevap": "Rubik küp",
     "alternatifler": [
-      "RUBIK KUP",
-      "RUBIK KÜP",
-      "Rubikküp"
+      "Rubikküp",
+      "rubikküpü",
+      "rubik küpü"
     ]
   },
   {
