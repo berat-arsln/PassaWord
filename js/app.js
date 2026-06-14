@@ -1,11 +1,7 @@
 // Sadece PWA modunda pull-to-refresh'e izin ver
-if (window.matchMedia('(display-mode: fullscreen)').matches || 
-    window.matchMedia('(display-mode: standalone)').matches) {
-    document.body.style.overflowY = 'auto';
-    document.body.style.overscrollBehaviorY = 'auto';
-    document.body.style.touchAction = 'pan-y';
-    document.documentElement.style.overflowY = 'auto';
-    
+const isPWA = new URLSearchParams(window.location.search).get('pwa') === '1';
+
+if (isPWA) {
     const style = document.createElement('style');
     style.textContent = `
         html, body { 
