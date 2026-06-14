@@ -154,6 +154,9 @@ window.oyunuBaslat = async function () {
   });
 
   ekraniGoster("oyunEkrani");
+  const input = document.getElementById("cevapGiris");
+input.focus();
+setTimeout(() => input.blur(), 10);
   tumProfillereSilmeDinleyicisiBaslat();
   get(ref(veritabani, "ayarlar/duyurular")).then((snap) =>
     duyurulariGoster(snap)
