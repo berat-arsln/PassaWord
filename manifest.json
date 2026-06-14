@@ -1,7 +1,7 @@
 {
   "name": "PassaWord",
   "short_name": "PassaWord",
-  "start_url": "./index.html",
+  "start_url": "./index.html?pwa=1",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
