@@ -6,7 +6,6 @@ if (isPWA) {
     style.textContent = `
         html, body { 
             overscroll-behavior-y: contain !important;
-            touch-action: pan-y !important; 
         }
     `;
     document.head.appendChild(style);
@@ -14,12 +13,12 @@ if (isPWA) {
     let startY = 0;
     document.addEventListener('touchstart', e => {
         startY = e.touches[0].clientY;
-    });
+    }, { passive: true });
     document.addEventListener('touchend', e => {
         const endY = e.changedTouches[0].clientY;
         const diff = endY - startY;
-        if (diff > 8 && window.scrollY === 0) {
+        if (diff > 150) {
             window.location.reload();
         }
-    });
+    }, { passive: true });
 }
