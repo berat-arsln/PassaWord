@@ -548,6 +548,7 @@ window.erkenBitir = function () {
 };
 
 function oyunuBitir(erkenBitirildi = false) {
+  if (!oyunDurumu.calisiyor) return;
   clearInterval(oyunDurumu.zamanlayici);
   oyunDurumu.calisiyor = false;
 
@@ -562,6 +563,7 @@ function oyunuBitir(erkenBitirildi = false) {
       bonusKodAciklama = pb.aciklama || "";
       oyunDurumu.puan += bonusKodPuan;
     } catch (e) {}
+
     const kalanHak = (pb.kalanHak || 1) - 1;
     if (kalanHak > 0) {
       localStorage.setItem("pw_pending_bonus", JSON.stringify({ ...pb, kalanHak }));
