@@ -587,11 +587,10 @@ async function bonusKodKontrolEt(girilen) {
     const veri = snap.val();
     const simdiki = Date.now();
 
-    // Girilen kodla eşleşen bonus kodu ara
     const eslesen = Object.entries(veri).find(
       ([_, d]) => d.kod && d.kod.toUpperCase() === girilen.toUpperCase()
     );
-    if (!eslesen) return null; // Bonus kodu değil, normal yedek kodu olabilir
+    if (!eslesen) return null;
 
     const [key, bonusData] = eslesen;
 
@@ -600,38 +599,37 @@ async function bonusKodKontrolEt(girilen) {
       return "gecersiz";
     }
 
-
-// Oyun şu an oynanıyor mu?
+    // Oyun şu an oynanıyor mu?
     if (typeof oyunDurumu !== "undefined" && oyunDurumu.calisiyor) {
       return "oyun_suruyor";
     }
-
 
     // Aktif profil var mı?
     const profil = aktifProfiliGetir();
     if (!profil) return "profil_yok";
 
-    // Bu profil daha önce kullandı mı?
-    // Profil bazlı kontrol
-    const kullanimKey = `pw_bonus_${key}_${profil.id}`;
-    const kullandi = localStorage.getItem(kullanimKey) === "1";
-if (kullandi) return "limit";
+    // Firebase'den kullanım kontrolü
+    const kullananSnap = await get(
+      ref(veritabani, `bonusCodes/${key}/kullananlar/${profil.id}`)
+    );
+    if (kullananSnap.exists()) return "limit";
 
-const cihazKey = `pw_bonus_${key}_cihaz_${cihazIdGetir()}`;
-const cihazKullandi = localStorage.getItem(cihazKey) === "1";
-if (cihazKullandi) return "limit";
-
-    // Geçerli — pendingBonus olarak kaydet
     // Zaten aktif pending bonus var mı?
     const mevcutRaw = localStorage.getItem("pw_pending_bonus");
     if (mevcutRaw) {
       try {
         const mevcut = JSON.parse(mevcutRaw);
-        if (mevcut.key === key) return "limit"; // Aynı kod zaten aktif
+        if (mevcut.key === key) return "limit";
       } catch (e) {}
     }
 
-    // Geçerli — pendingBonus olarak kaydet
+    // Geçerli — Firebase'e kullanımı kaydet
+    await set(
+      ref(veritabani, `bonusCodes/${key}/kullananlar/${profil.id}`),
+      { tarih: new Date().toISOString() }
+    );
+
+    // pendingBonus olarak kaydet
     const pendingBonus = {
       key,
       puan: bonusData.puan,
@@ -639,10 +637,6 @@ if (cihazKullandi) return "limit";
       kalanHak: bonusData.limit,
     };
     localStorage.setItem("pw_pending_bonus", JSON.stringify(pendingBonus));
-
-    // Kullanım sayısını artır
-    localStorage.setItem(kullanimKey, "1");
-localStorage.setItem(cihazKey, "1");
 
     return { puan: bonusData.puan, limit: bonusData.limit };
   } catch (e) {
