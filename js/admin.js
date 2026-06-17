@@ -1760,7 +1760,8 @@ window.pwBonusKodSil = async function (key) {
     toastGoster("✅ Kod silindi");
     pwBonusKodListesiYukle();
   } catch (e) {
-    toastGoster("❌ Silinemedi!");
+    console.error("Silme hatası:", e);
+    toastGoster("❌ Silinemedi: " + e.message);
   }
 };
 
