@@ -499,7 +499,7 @@ window.profilGeriYukle = async function () {
     } else if (bonusKodSonuc === "profil_yok") {
       toastGoster("⚠️ Önce bir profil oluştur!");
     } else {
-      toastGoster(`🎁 Bonus kod kabul edildi! Sonraki oyunda +${bonusKodSonuc} puan kazanacaksın!`);
+      toastGoster(`🎁 Bonus kod kabul edildi! Sonraki ${bonusData.limit} oyununda +${bonusKodSonuc} puan kazanacaksın!`);
     }
     return;
   }
