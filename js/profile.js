@@ -613,9 +613,17 @@ async function bonusKodKontrolEt(girilen) {
     if (!profil) return "profil_yok";
 
     // Bu profil daha önce kullandı mı?
+    // Profil bazlı kontrol
     const kullanimKey = `pw_bonus_${key}_${profil.id}`;
     const kullanimSayisi = parseInt(localStorage.getItem(kullanimKey) || "0");
     if (kullanimSayisi >= bonusData.limit) {
+      return "limit";
+    }
+
+    // Cihaz bazlı kontrol
+    const cihazKey = `pw_bonus_${key}_cihaz_${cihazIdGetir()}`;
+    const cihazKullanimSayisi = parseInt(localStorage.getItem(cihazKey) || "0");
+    if (cihazKullanimSayisi >= bonusData.limit) {
       return "limit";
     }
 
@@ -629,6 +637,7 @@ async function bonusKodKontrolEt(girilen) {
 
     // Kullanım sayısını artır
     localStorage.setItem(kullanimKey, String(kullanimSayisi + 1));
+    localStorage.setItem(cihazKey, String(cihazKullanimSayisi + 1));
 
     return bonusData.puan;
   } catch (e) {
