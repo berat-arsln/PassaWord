@@ -578,6 +578,7 @@ function adminPassaWordPanelGoster() {
   <input id="pwBonusAciklama" class="giris-alani" placeholder="Açıklama (sonuç ekranında görünür)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
   <input id="pwBonusLimit" class="giris-alani" type="number" placeholder="Profil başına kullanım limiti" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
+<input id="pwBonusToplamLimit" class="giris-alani" type="number" placeholder="Toplam kullanım limiti (0=sonsuz)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
     <input id="pwBonusSure" class="giris-alani" type="number" placeholder="Süre (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
     <select id="pwBonusSureBirim" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;">
       <option value="dakika">Dakika</option>
@@ -1708,6 +1709,7 @@ window.pwBonusKodEkle = async function () {
   const puan = parseInt(document.getElementById("pwBonusPuan")?.value) || 0;
   const aciklama = document.getElementById("pwBonusAciklama")?.value.trim();
   const limit = parseInt(document.getElementById("pwBonusLimit")?.value) || 1;
+const toplamLimit = parseInt(document.getElementById("pwBonusToplamLimit")?.value) || 0;
   const sure = parseInt(document.getElementById("pwBonusSure")?.value) || 0;
   const birim = document.getElementById("pwBonusSureBirim")?.value || "gun";
 
@@ -1725,9 +1727,9 @@ window.pwBonusKodEkle = async function () {
 
   try {
     const yeniRef = push(ref(veritabani, "bonusCodes"));
-    await set(yeniRef, { kod, puan, aciklama, limit, expireAt, olusturulma: Date.now() });
-    toastGoster("✅ Bonus kod eklendi!");
-    ["pwBonusKod","pwBonusPuan","pwBonusAciklama","pwBonusLimit","pwBonusSure"]
+await set(yeniRef, { kod, puan, aciklama, limit, toplamLimit, expireAt, olusturulma: Date.now() });
+    toastGoster("✅ Bonus puan eklendi!");
+    ["pwBonusKod","pwBonusPuan","pwBonusAciklama","pwBonusLimit","pwBonusToplamLimit","pwBonusSure"]
       .forEach(id => { const el = document.getElementById(id); if (el) el.value = ""; });
     pwBonusListesiYukle();
   } catch (e) {
@@ -1758,7 +1760,8 @@ if (window._bonusSayacInterval) {
         div.innerHTML = `
           <div style="flex:1;min-width:0;">
             <div style="font-size:14px;font-weight:800;color:#ff9800;">${d.kod}</div>
-            <div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x</div>
+            
+<div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x &nbsp;•&nbsp; ${d.toplamLimit > 0 ? `Toplam: ${d.toplamLimit}x` : "Toplam: Sonsuz"}</div>
             ${d.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${d.aciklama}</div>` : ""}
             <div data-expire="${d.expireAt || 0}" style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
   ${doldu ? "🔴 Süresi doldu" : d.expireAt > 0 ? `🟢 Aktif • ⏱ ${pwKalanSureYazi(d.expireAt)}` : "🟢 Aktif"}
