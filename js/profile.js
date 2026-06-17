@@ -494,6 +494,8 @@ window.profilGeriYukle = async function () {
       toastGoster("❌ Geçersiz veya süresi dolmuş kod!");
     } else if (bonusKodSonuc === "limit") {
       toastGoster("⚠️ Bu kodu zaten kullandın!");
+    } else if (bonusKodSonuc === "oyun_suruyor") {
+      toastGoster("⚠️ Oyun biterken kod kullanılamaz!");
     } else if (bonusKodSonuc === "profil_yok") {
       toastGoster("⚠️ Önce bir profil oluştur!");
     } else {
@@ -598,6 +600,13 @@ async function bonusKodKontrolEt(girilen) {
     if (bonusData.expireAt > 0 && simdiki > bonusData.expireAt) {
       return "gecersiz";
     }
+
+
+// Oyun şu an oynanıyor mu?
+    if (typeof oyunDurumu !== "undefined" && oyunDurumu.calisiyor) {
+      return "oyun_suruyor";
+    }
+
 
     // Aktif profil var mı?
     const profil = aktifProfiliGetir();
