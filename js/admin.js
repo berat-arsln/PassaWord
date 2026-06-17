@@ -1736,6 +1736,10 @@ window.pwBonusKodEkle = async function () {
 };
 
 function pwBonusListesiYukle() {
+if (window._bonusSayacInterval) {
+  clearInterval(window._bonusSayacInterval);
+  window._bonusSayacInterval = null;
+}
   const konteyner = document.getElementById("pwBonusListe");
   if (!konteyner) return;
   get(ref(veritabani, "bonusCodes")).then(snap => {
@@ -1756,7 +1760,7 @@ function pwBonusListesiYukle() {
             <div style="font-size:14px;font-weight:800;color:#ff9800;">${d.kod}</div>
             <div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x</div>
             ${d.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${d.aciklama}</div>` : ""}
-            <div style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
+            <div data-expire="${d.expireAt || 0}" style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
   ${doldu ? "🔴 Süresi doldu" : d.expireAt > 0 ? `🟢 Aktif • ⏱ ${pwKalanSureYazi(d.expireAt)}` : "🟢 Aktif"}
 </div>
             </div>
@@ -1766,17 +1770,30 @@ function pwBonusListesiYukle() {
         konteyner.appendChild(div);
       });
   });
+
+window._bonusSayacInterval = setInterval(() => {
+  document.querySelectorAll("[data-expire]").forEach(el => {
+    const expireAt = parseInt(el.dataset.expire);
+    el.textContent = expireAt > 0 ? `🟢 Aktif • ⏱ ${pwKalanSureYazi(expireAt)}` : "🟢 Aktif";
+    if (expireAt > 0 && Date.now() > expireAt) {
+      el.style.color = "#ff1744";
+      el.textContent = "🔴 Süresi doldu";
+    }
+  });
+}, 1000);
 }
 
 function pwKalanSureYazi(expireAt) {
   const kalan = expireAt - Date.now();
   if (kalan <= 0) return "Süresi doldu";
-  const dk = Math.floor(kalan / 60000);
-  const saat = Math.floor(dk / 60);
-  const gun = Math.floor(saat / 24);
-  if (gun > 0) return `${gun} gün kaldı`;
-  if (saat > 0) return `${saat} saat kaldı`;
-  return `${dk} dakika kaldı`;
+  const gun = Math.floor(kalan / 86400000);
+  const saat = Math.floor((kalan % 86400000) / 3600000);
+  const dk = Math.floor((kalan % 3600000) / 60000);
+  const sn = Math.floor((kalan % 60000) / 1000);
+  let yazi = "";
+  if (gun > 0) yazi += `${gun} gün `;
+  yazi += `${saat} saat ${dk} dakika ${sn} saniye kaldı`;
+  return yazi;
 }
 
 
