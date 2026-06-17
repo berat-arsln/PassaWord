@@ -712,5 +712,14 @@ window.bonusKodKontrolEt = bonusKodKontrolEt;
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => onlineDurumBaslat(), 1000);
+  // Firebase hazır olana kadar bekle, profil de yüklenmiş olsun
+  const dene = (kalan) => {
+    const profil = aktifProfiliGetir();
+    if (profil && profil.yedekKod) {
+      onlineDurumBaslat();
+    } else if (kalan > 0) {
+      setTimeout(() => dene(kalan - 1), 500);
+    }
+  };
+  setTimeout(() => dene(10), 500); // 500ms'de bir, max 10 kez dene (5 saniye)
 });
