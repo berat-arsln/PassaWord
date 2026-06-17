@@ -1756,7 +1756,7 @@ function pwBonusListesiYukle() {
             <div style="font-size:14px;font-weight:800;color:#ff9800;">${d.kod}</div>
             <div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x</div>
             ${d.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${d.aciklama}</div>` : ""}
-            <<div style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
+            <div style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
   ${doldu ? "🔴 Süresi doldu" : d.expireAt > 0 ? `🟢 Aktif • ⏱ ${pwKalanSureYazi(d.expireAt)}` : "🟢 Aktif"}
 </div>
             </div>
