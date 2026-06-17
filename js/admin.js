@@ -1756,8 +1756,9 @@ function pwBonusListesiYukle() {
             <div style="font-size:14px;font-weight:800;color:#ff9800;">${d.kod}</div>
             <div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x</div>
             ${d.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${d.aciklama}</div>` : ""}
-            <div style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
-              ${doldu ? "🔴 Süresi doldu" : "🟢 Aktif"}
+            <<div style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
+  ${doldu ? "🔴 Süresi doldu" : d.expireAt > 0 ? `🟢 Aktif • ⏱ ${pwKalanSureYazi(d.expireAt)}` : "🟢 Aktif"}
+</div>
             </div>
           </div>
           <button onclick="pwBonusKodSil('${key}')" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;white-space:nowrap;flex-shrink:0;">🗑</button>
@@ -1766,6 +1767,18 @@ function pwBonusListesiYukle() {
       });
   });
 }
+
+function pwKalanSureYazi(expireAt) {
+  const kalan = expireAt - Date.now();
+  if (kalan <= 0) return "Süresi doldu";
+  const dk = Math.floor(kalan / 60000);
+  const saat = Math.floor(dk / 60);
+  const gun = Math.floor(saat / 24);
+  if (gun > 0) return `${gun} gün kaldı`;
+  if (saat > 0) return `${saat} saat kaldı`;
+  return `${dk} dakika kaldı`;
+}
+
 
 window.pwBonusKodSil = async function (key) {
   if (!confirm("Bu bonus kodu silmek istediğine emin misin?")) return;
