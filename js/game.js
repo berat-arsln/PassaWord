@@ -550,6 +550,20 @@ window.erkenBitir = function () {
 function oyunuBitir(erkenBitirildi = false) {
   clearInterval(oyunDurumu.zamanlayici);
   oyunDurumu.calisiyor = false;
+
+// BONUS KOD KONTROLÜ
+  const pendingBonusRaw = localStorage.getItem("pw_pending_bonus");
+  let bonusKodPuan = 0;
+  let bonusKodAciklama = "";
+  if (pendingBonusRaw) {
+    try {
+      const pb = JSON.parse(pendingBonusRaw);
+      bonusKodPuan = pb.puan || 0;
+      bonusKodAciklama = pb.aciklama || "";
+      oyunDurumu.puan += bonusKodPuan;
+    } catch (e) {}
+    localStorage.removeItem("pw_pending_bonus");
+  }
   let sureBonus = 0;
 
   // EĞER OYUN ERKEN BİTİRİLMEDİYSE SÜRE BONUSU VER (Erken bitirildiyse 0 kalır) Her 10 saniye için 1 puan
@@ -594,7 +608,7 @@ function oyunuBitir(erkenBitirildi = false) {
       verilenCevap: oyunDurumu.harfCevaplari[harf]?.verilen || "—",
     }))
   );
-  sonucEkraniniOlustur(sureBonus, komboBonus);
+  sonucEkraniniOlustur(sureBonus, komboBonus, bonusKodPuan, bonusKodAciklama);
   ekraniGoster("sonucEkrani");
 }
 
@@ -646,7 +660,7 @@ function skorkaydet(puan, dogru, yanlis, pas, detay) {
   }).catch(console.error);
 }
 
-function sonucEkraniniOlustur(sureBonus, komboBonus) {
+function sonucEkraniniOlustur(sureBonus, komboBonus, bonusKodPuan = 0, bonusKodAciklama = "") {
   const liste = document.getElementById("sonucListe");
   liste.innerHTML = "";
 
@@ -694,6 +708,23 @@ function sonucEkraniniOlustur(sureBonus, komboBonus) {
     komboCipi.classList.remove("gizli");
   } else {
     komboCipi.classList.add("gizli");
+  }
+
+const bonusCipi = document.getElementById("istatBonusKod");
+  if (bonusCipi) {
+    if (bonusKodPuan > 0) {
+      bonusCipi.textContent = `🎁 +${bonusKodPuan} Bonus Kod`;
+      bonusCipi.classList.remove("gizli");
+      const aciklamaEl = document.getElementById("bonusKodAciklama");
+      if (aciklamaEl && bonusKodAciklama) {
+        aciklamaEl.textContent = bonusKodAciklama;
+        aciklamaEl.classList.remove("gizli");
+      }
+    } else {
+      bonusCipi.classList.add("gizli");
+      const aciklamaEl = document.getElementById("bonusKodAciklama");
+      if (aciklamaEl) aciklamaEl.classList.add("gizli");
+    }
   }
 
   /* Favori butonunu güncelle */
