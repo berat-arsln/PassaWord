@@ -148,6 +148,7 @@ window.oyunuBaslat = async function () {
   oyunDurumu.dogruSayisi = 0;
   oyunDurumu.yanlisSayisi = 0;
   oyunDurumu.pasSayisi = 0;
+  oyunDurumu.bonusUygulandı = false;
 
   HARFLER.forEach((h) => {
     oyunDurumu.harfDurumlari[h] = "varsayilan";
@@ -548,7 +549,6 @@ window.erkenBitir = function () {
 };
 
 function oyunuBitir(erkenBitirildi = false) {
-  if (!oyunDurumu.calisiyor) return;
   clearInterval(oyunDurumu.zamanlayici);
   oyunDurumu.calisiyor = false;
 
@@ -556,7 +556,8 @@ function oyunuBitir(erkenBitirildi = false) {
   const pendingBonusRaw = localStorage.getItem("pw_pending_bonus");
   let bonusKodPuan = 0;
   let bonusKodAciklama = "";
-  if (pendingBonusRaw) {
+  if (pendingBonusRaw && !oyunDurumu.bonusUygulandı) {
+    oyunDurumu.bonusUygulandı = true;
     try {
       const pb = JSON.parse(pendingBonusRaw);
       bonusKodPuan = pb.puan || 0;
