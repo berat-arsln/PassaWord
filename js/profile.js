@@ -632,6 +632,7 @@ async function bonusKodKontrolEt(girilen) {
       key,
       puan: bonusData.puan,
       aciklama: bonusData.aciklama,
+      kalanHak: bonusData.limit,
     };
     localStorage.setItem("pw_pending_bonus", JSON.stringify(pendingBonus));
 
