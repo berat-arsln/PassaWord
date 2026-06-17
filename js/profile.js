@@ -614,6 +614,13 @@ async function bonusKodKontrolEt(girilen) {
     );
     if (kullananSnap.exists()) return "limit";
 
+// Cihaz bazlı kontrol
+const cihazId = cihazIdGetir();
+const cihazSnap = await get(
+  ref(veritabani, `bonusCodes/${key}/cihazlar/${cihazId}`)
+);
+if (cihazSnap.exists()) return "limit";
+
     // Zaten aktif pending bonus var mı?
     const mevcutRaw = localStorage.getItem("pw_pending_bonus");
     if (mevcutRaw) {
@@ -628,6 +635,11 @@ async function bonusKodKontrolEt(girilen) {
       ref(veritabani, `bonusCodes/${key}/kullananlar/${profil.id}`),
       { tarih: new Date().toISOString() }
     );
+
+await set(
+  ref(veritabani, `bonusCodes/${key}/cihazlar/${cihazId}`),
+  { tarih: new Date().toISOString() }
+);
 
     // pendingBonus olarak kaydet
     const pendingBonus = {
