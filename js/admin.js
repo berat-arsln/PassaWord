@@ -881,6 +881,25 @@ window.pwTumOyunculariYukle = async function () {
         div.innerHTML = pwOyuncuKartHtml(kod, p);
         konteyner.appendChild(div);
       });
+// Online durumları yükle
+    get(ref(veritabani, "onlineDurum")).then(onlineSnap => {
+      if (!onlineSnap.exists()) return;
+      const onlineVeri = onlineSnap.val();
+      Object.entries(onlineVeri).forEach(([kod, durum]) => {
+        const badge = document.getElementById(`onlineBadge_${kod}`);
+        if (!badge) return;
+        if (durum.online) {
+          badge.innerHTML = `<span style="color:#00e676;font-weight:700;">🟢 Çevrimiçi</span>`;
+        } else {
+          const gecen = Date.now() - (durum.sonGiris || 0);
+          const dk = Math.floor(gecen / 60000);
+          const saat = Math.floor(dk / 60);
+          const gun = Math.floor(saat / 24);
+          const zamanYazi = gun > 0 ? `${gun} gün önce` : saat > 0 ? `${saat} saat önce` : dk > 0 ? `${dk} dk önce` : "az önce";
+          badge.innerHTML = `<span style="color:var(--metin-soluk);">⚫ ${zamanYazi}</span>`;
+        }
+      });
+    });
   } catch (e) {
     konteyner.innerHTML = `<div style="color:#ff6b6b;font-size:13px;">Hata oluştu.</div>`;
   }
@@ -899,7 +918,7 @@ function pwOyuncuKartHtml(kod, p) {
                 <div style="font-size:14px;font-weight:800;color:#fff;">${
                   p.ad || "?"
                 }</div>
-                <div style="font-size:11px;color:var(--metin-soluk);margin-top:1px;">🔑 ${kod} &nbsp;•&nbsp; 📅 ${tarih}</div>
+                <div style="font-size:11px;color:var(--metin-soluk);margin-top:1px;">🔑 ${kod} &nbsp;•&nbsp; 📅 ${tarih} &nbsp;•&nbsp; <span id="onlineBadge_${kod}">⏳</span></div>
               </div>
               <button onclick="pwOyuncuSil('${kod}',this)" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:5px 10px;cursor:pointer;">🗑 Sil</button>
             </div>
