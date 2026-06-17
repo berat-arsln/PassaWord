@@ -614,17 +614,12 @@ async function bonusKodKontrolEt(girilen) {
     // Bu profil daha önce kullandı mı?
     // Profil bazlı kontrol
     const kullanimKey = `pw_bonus_${key}_${profil.id}`;
-    const kullanimSayisi = parseInt(localStorage.getItem(kullanimKey) || "0");
-    if (kullanimSayisi >= bonusData.limit) {
-      return "limit";
-    }
+    const kullandi = localStorage.getItem(kullanimKey) === "1";
+if (kullandi) return "limit";
 
-    // Cihaz bazlı kontrol
-    const cihazKey = `pw_bonus_${key}_cihaz_${cihazIdGetir()}`;
-    const cihazKullanimSayisi = parseInt(localStorage.getItem(cihazKey) || "0");
-    if (cihazKullanimSayisi >= bonusData.limit) {
-      return "limit";
-    }
+const cihazKey = `pw_bonus_${key}_cihaz_${cihazIdGetir()}`;
+const cihazKullandi = localStorage.getItem(cihazKey) === "1";
+if (cihazKullandi) return "limit";
 
     // Geçerli — pendingBonus olarak kaydet
     // Zaten aktif pending bonus var mı?
@@ -646,8 +641,8 @@ async function bonusKodKontrolEt(girilen) {
     localStorage.setItem("pw_pending_bonus", JSON.stringify(pendingBonus));
 
     // Kullanım sayısını artır
-    localStorage.setItem(kullanimKey, String(kullanimSayisi + 1));
-    localStorage.setItem(cihazKey, String(cihazKullanimSayisi + 1));
+    localStorage.setItem(kullanimKey, "1");
+localStorage.setItem(cihazKey, "1");
 
     return { puan: bonusData.puan, limit: bonusData.limit };
   } catch (e) {
