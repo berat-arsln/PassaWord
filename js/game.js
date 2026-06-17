@@ -156,8 +156,10 @@ window.oyunuBaslat = async function () {
 
   ekraniGoster("oyunEkrani");
   const input = document.getElementById("cevapGiris");
-input.focus();
-setTimeout(() => input.blur(), 10);
+input.setAttribute("readonly", "true");
+setTimeout(() => {
+  input.removeAttribute("readonly");
+}, 100);
   tumProfillereSilmeDinleyicisiBaslat();
   get(ref(veritabani, "ayarlar/duyurular")).then((snap) =>
     duyurulariGoster(snap)
