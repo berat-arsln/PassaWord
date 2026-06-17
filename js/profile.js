@@ -599,6 +599,19 @@ async function bonusKodKontrolEt(girilen) {
       return "gecersiz";
     }
 
+// Toplam kullanım limiti kontrolü
+if (bonusData.toplamLimit > 0) {
+  const kullananlarSnap = await get(
+    ref(veritabani, `bonusCodes/${key}/kullananlar`)
+  );
+  const kullananSayisi = kullananlarSnap.exists()
+    ? Object.keys(kullananlarSnap.val()).length
+    : 0;
+  if (kullananSayisi >= bonusData.toplamLimit) {
+    return "gecersiz";
+  }
+}
+
     // Oyun şu an oynanıyor mu?
     if (typeof oyunDurumu !== "undefined" && oyunDurumu.calisiyor) {
       return "oyun_suruyor";
