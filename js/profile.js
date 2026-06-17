@@ -485,6 +485,24 @@ window.profilGeriYukle = async function () {
     return;
   }
 
+// BONUS KOD KONTROLÜ
+  const bonusKodSonuc = await bonusKodKontrolEt(kod);
+  if (bonusKodSonuc !== null) {
+    // Bu bir bonus koduydu, yedekleme kodu değil
+    document.getElementById("yedekKodGiris").value = "";
+    if (bonusKodSonuc === "gecersiz") {
+      toastGoster("❌ Geçersiz veya süresi dolmuş kod!");
+    } else if (bonusKodSonuc === "limit") {
+      toastGoster("⚠️ Bu kodu zaten kullandın!");
+    } else if (bonusKodSonuc === "profil_yok") {
+      toastGoster("⚠️ Önce bir profil oluştur!");
+    } else {
+      toastGoster(`🎁 Bonus kod kabul edildi! Sonraki oyunda +${bonusKodSonuc} puan kazanacaksın!`);
+    }
+    return;
+  }
+
+
   if (kod === "/pwadmin") {
     document.getElementById("yedekKodGiris").value = "";
     modalKapat("profilYukleModal");
@@ -555,3 +573,59 @@ window.kopyala = kopyala;
 
 window.aktifProfilUiGuncelle = aktifProfilUiGuncelle;
 window.profilListesiniGuncelle = profilListesiniGuncelle;
+
+
+/* ========================================================================= */
+/* BONUS KOD KONTROLÜ                                                        */
+/* ========================================================================= */
+async function bonusKodKontrolEt(girilen) {
+  try {
+    const snap = await get(ref(veritabani, "bonusCodes"));
+    if (!snap.exists()) return null;
+
+    const veri = snap.val();
+    const simdiki = Date.now();
+
+    // Girilen kodla eşleşen bonus kodu ara
+    const eslesen = Object.entries(veri).find(
+      ([_, d]) => d.kod && d.kod.toUpperCase() === girilen.toUpperCase()
+    );
+    if (!eslesen) return null; // Bonus kodu değil, normal yedek kodu olabilir
+
+    const [key, bonusData] = eslesen;
+
+    // Süresi dolmuş mu?
+    if (bonusData.expireAt > 0 && simdiki > bonusData.expireAt) {
+      return "gecersiz";
+    }
+
+    // Aktif profil var mı?
+    const profil = aktifProfiliGetir();
+    if (!profil) return "profil_yok";
+
+    // Bu profil daha önce kullandı mı?
+    const kullanimKey = `pw_bonus_${key}_${profil.id}`;
+    const kullanimSayisi = parseInt(localStorage.getItem(kullanimKey) || "0");
+    if (kullanimSayisi >= bonusData.limit) {
+      return "limit";
+    }
+
+    // Geçerli — pendingBonus olarak kaydet
+    const pendingBonus = {
+      key,
+      puan: bonusData.puan,
+      aciklama: bonusData.aciklama,
+    };
+    localStorage.setItem("pw_pending_bonus", JSON.stringify(pendingBonus));
+
+    // Kullanım sayısını artır
+    localStorage.setItem(kullanimKey, String(kullanimSayisi + 1));
+
+    return bonusData.puan;
+  } catch (e) {
+    console.warn("Bonus kod kontrol hatası:", e);
+    return null;
+  }
+}
+
+window.bonusKodKontrolEt = bonusKodKontrolEt;
