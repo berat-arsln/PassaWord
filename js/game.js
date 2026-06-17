@@ -562,7 +562,12 @@ function oyunuBitir(erkenBitirildi = false) {
       bonusKodAciklama = pb.aciklama || "";
       oyunDurumu.puan += bonusKodPuan;
     } catch (e) {}
-    localStorage.removeItem("pw_pending_bonus");
+    const kalanHak = (pb.kalanHak || 1) - 1;
+    if (kalanHak > 0) {
+      localStorage.setItem("pw_pending_bonus", JSON.stringify({ ...pb, kalanHak }));
+    } else {
+      localStorage.removeItem("pw_pending_bonus");
+    }
   }
   let sureBonus = 0;
 
