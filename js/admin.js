@@ -571,6 +571,23 @@ function adminPassaWordPanelGoster() {
     </div>
     <button id="pwBakimBtn" onclick="pwBakimToggle()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:7px 14px;cursor:pointer;">⏳</button>
   </div>
+  
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">🎁 BONUS KOD EKLE</div>
+  <input id="pwBonusKod" class="giris-alani" placeholder="KOD (ÖRN: BERAT)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
+  <input id="pwBonusPuan" class="giris-alani" type="number" placeholder="Bonus puan miktarı" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
+  <input id="pwBonusAciklama" class="giris-alani" placeholder="Açıklama (sonuç ekranında görünür)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
+  <input id="pwBonusLimit" class="giris-alani" type="number" placeholder="Profil başına kullanım limiti" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
+    <input id="pwBonusSure" class="giris-alani" type="number" placeholder="Süre (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
+    <select id="pwBonusSureBirim" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;">
+      <option value="dakika">Dakika</option>
+      <option value="saat">Saat</option>
+      <option value="gun" selected>Gün</option>
+    </select>
+  </div>
+  <button onclick="pwBonusKodEkle()" style="width:100%;background:linear-gradient(145deg,#e65100,#bf360c);border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:700;padding:10px;cursor:pointer;margin-bottom:10px;">➕ Kodu Ekle</button>
+  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">AKTİF BONUS KODLAR</div>
+  <div id="pwBonusListe"></div>
 </div>
 `;
 
@@ -587,9 +604,10 @@ function adminPassaWordPanelGoster() {
     });
     if (sekme === "skor") pwSkorListesiYukle();
     if (sekme === "ayarlar") {
-      pwBakimDurumKontrol();
-      pwDuyuruListesiYukle();
-    }
+  pwBakimDurumKontrol();
+  pwDuyuruListesiYukle();
+  pwBonusListesiYukle();
+}
   };
 
   /* Sıralamayı yükle */
@@ -1681,5 +1699,81 @@ window.pwProfilKurtar = async function () {
     document.getElementById("pwProfilKurtarKod").value = "";
   } catch (e) {
     toastGoster("❌ İşlem başarısız!");
+  }
+};
+
+
+window.pwBonusKodEkle = async function () {
+  const kod = document.getElementById("pwBonusKod")?.value.trim().toUpperCase();
+  const puan = parseInt(document.getElementById("pwBonusPuan")?.value) || 0;
+  const aciklama = document.getElementById("pwBonusAciklama")?.value.trim();
+  const limit = parseInt(document.getElementById("pwBonusLimit")?.value) || 1;
+  const sure = parseInt(document.getElementById("pwBonusSure")?.value) || 0;
+  const birim = document.getElementById("pwBonusSureBirim")?.value || "gun";
+
+  if (!kod) { toastGoster("Kod girin!"); return; }
+  if (puan <= 0) { toastGoster("Geçerli puan girin!"); return; }
+
+  let expireAt = 0;
+  if (sure > 0) {
+    let ms = sure;
+    if (birim === "dakika") ms = sure * 60 * 1000;
+    else if (birim === "saat") ms = sure * 3600 * 1000;
+    else if (birim === "gun") ms = sure * 86400 * 1000;
+    expireAt = Date.now() + ms;
+  }
+
+  try {
+    const yeniRef = push(ref(veritabani, "bonusCodes"));
+    await set(yeniRef, { kod, puan, aciklama, limit, expireAt, olusturulma: Date.now() });
+    toastGoster("✅ Bonus kod eklendi!");
+    ["pwBonusKod","pwBonusPuan","pwBonusAciklama","pwBonusLimit","pwBonusSure"]
+      .forEach(id => { const el = document.getElementById(id); if (el) el.value = ""; });
+    pwBonusListesiYukle();
+  } catch (e) {
+    toastGoster("❌ Eklenemedi!");
+  }
+};
+
+function pwBonusListesiYukle() {
+  const konteyner = document.getElementById("pwBonusListe");
+  if (!konteyner) return;
+  get(ref(veritabani, "bonusCodes")).then(snap => {
+    if (!snap.exists()) {
+      konteyner.innerHTML = `<div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Bonus kod yok.</div>`;
+      return;
+    }
+    const veri = snap.val();
+    konteyner.innerHTML = "";
+    Object.entries(veri)
+      .sort((a, b) => (b[1].olusturulma || 0) - (a[1].olusturulma || 0))
+      .forEach(([key, d]) => {
+        const doldu = d.expireAt > 0 && Date.now() > d.expireAt;
+        const div = document.createElement("div");
+        div.style.cssText = "background:rgba(255,255,255,0.04);border:1px solid rgba(230,81,0,0.25);border-radius:8px;padding:9px 12px;margin-bottom:6px;display:flex;align-items:flex-start;gap:8px;";
+        div.innerHTML = `
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:14px;font-weight:800;color:#ff9800;">${d.kod}</div>
+            <div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x</div>
+            ${d.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${d.aciklama}</div>` : ""}
+            <div style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
+              ${doldu ? "🔴 Süresi doldu" : "🟢 Aktif"}
+            </div>
+          </div>
+          <button onclick="pwBonusKodSil('${key}')" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;white-space:nowrap;flex-shrink:0;">🗑</button>
+        `;
+        konteyner.appendChild(div);
+      });
+  });
+}
+
+window.pwBonusKodSil = async function (key) {
+  if (!confirm("Bu bonus kodu silmek istediğine emin misin?")) return;
+  try {
+    await remove(ref(veritabani, `bonusCodes/${key}`));
+    toastGoster("✅ Silindi");
+    pwBonusListesiYukle();
+  } catch (e) {
+    toastGoster("❌ Silinemedi!");
   }
 };
