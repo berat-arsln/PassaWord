@@ -4,12 +4,26 @@
    ======================================== */
 
 /* Önbellek adı ve versiyonu */
-const ONBELLEK_ADI = 'passaword-v2.0.1';
+const ONBELLEK_ADI = 'passaword-v2.5.2';
 
-/* Önbelleğe alınacak dosyalar */
 const ONBELLEKLENECEK = [
   './',
   './index.html',
+  './manifest.json',
+  './favicon.svg',
+  './css/main.css',
+  './css/game.css',
+  './css/modals.css',
+  './css/admin.css',
+  './css/responsive.css',
+  './js/ui.js',
+  './js/profile.js',
+  './js/game.js',
+  './js/history.js',
+  './js/scores.js',
+  './js/feedback.js',
+  './js/admin.js',
+  './js/app.js',
   './questions/a_questions.json',
   './questions/b_questions.json',
   './questions/c_questions.json',
@@ -20,7 +34,6 @@ const ONBELLEKLENECEK = [
   './questions/g_questions.json',
   './questions/h_questions.json',
   './questions/i_questions.json',
-  './questions/ii_questions.json',
   './questions/k_questions.json',
   './questions/l_questions.json',
   './questions/m_questions.json',
@@ -39,17 +52,15 @@ const ONBELLEKLENECEK = [
   './questions/z_questions.json'
 ];
 
-/* Servis worker kurulumu - dosyaları önbelleğe al */
 self.addEventListener('install', (olay) => {
   olay.waitUntil(
     caches.open(ONBELLEK_ADI).then((onbellek) => {
       return onbellek.addAll(ONBELLEKLENECEK);
     })
   );
-  self.skipWaiting();
+  // skipWaiting YOK — kullanıcıya sormadan geçmesin
 });
 
-/* Aktivasyon - eski önbellekleri temizle */
 self.addEventListener('activate', (olay) => {
   olay.waitUntil(
     caches.keys().then((anahtarlar) => {
@@ -58,35 +69,38 @@ self.addEventListener('activate', (olay) => {
           .filter((anahtar) => anahtar !== ONBELLEK_ADI)
           .map((anahtar) => caches.delete(anahtar))
       );
+    }).then(() => {
+      // Güncelleme olan sekmelere bildirim gönder
+      return self.clients.matchAll({ type: 'window' }).then(clients => {
+        clients.forEach(client => client.postMessage({ tip: 'GUNCELLEME_VAR' }));
+      });
     })
   );
   self.clients.claim();
 });
 
-/* İstekleri yakala - önce önbellekten sun, yoksa ağdan al */
 self.addEventListener('fetch', (olay) => {
-  /* Firebase ve EmailJS isteklerini önbelleğe alma */
   if (
     olay.request.url.includes('firebase') ||
     olay.request.url.includes('emailjs') ||
-    olay.request.url.includes('googleapis')
+    olay.request.url.includes('googleapis') ||
+    olay.request.url.includes('github')
   ) {
     return;
   }
 
+  // Network-first: önce internetten dene, olmassa cache'den sun
   olay.respondWith(
-    caches.match(olay.request).then((onbellekYaniti) => {
-      /* Önbellekte varsa oradan sun */
-      if (onbellekYaniti) return onbellekYaniti;
-      /* Yoksa ağdan al ve önbelleğe ekle */
-      return fetch(olay.request).then((agYaniti) => {
+    fetch(olay.request)
+      .then((agYaniti) => {
         const kopyaYanit = agYaniti.clone();
         caches.open(ONBELLEK_ADI).then((onbellek) => {
           onbellek.put(olay.request, kopyaYanit);
         });
         return agYaniti;
-      });
-    })
+      })
+      .catch(() => {
+        return caches.match(olay.request);
+      })
   );
 });
-
