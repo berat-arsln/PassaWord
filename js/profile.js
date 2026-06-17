@@ -247,6 +247,7 @@ function aktifProfilUiGuncelle() {
 }
 
 window.profilOlustur = function () {
+
   const isim = document.getElementById("profilIsimGiris").value.trim();
   if (!isim) {
     toastGoster("Lütfen bir isim girin!");
@@ -670,4 +671,46 @@ await set(
   }
 }
 
+
+
+function onlineDurumBaslat() {
+  const profil = aktifProfiliGetir();
+  if (!profil || !profil.yedekKod) return;
+
+  const onlineRef = ref(veritabani, `onlineDurum/${profil.yedekKod}`);
+
+  // Çevrimiçi yaz
+  set(onlineRef, {
+    ad: profil.ad,
+    online: true,
+    sonGiris: Date.now()
+  }).catch(() => {});
+
+  // Sekme/uygulama kapanınca offline yaz
+  window.addEventListener("beforeunload", () => {
+    set(onlineRef, {
+      ad: profil.ad,
+      online: false,
+      sonGiris: Date.now()
+    });
+  });
+
+  // Görünürlük değişince güncelle
+  document.addEventListener("visibilitychange", () => {
+    set(onlineRef, {
+      ad: profil.ad,
+      online: document.visibilityState === "visible",
+      sonGiris: Date.now()
+    }).catch(() => {});
+  });
+}
+
+
+
+window.onlineDurumBaslat = onlineDurumBaslat;
 window.bonusKodKontrolEt = bonusKodKontrolEt;
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => onlineDurumBaslat(), 1000);
+});
