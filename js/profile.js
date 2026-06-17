@@ -627,6 +627,16 @@ async function bonusKodKontrolEt(girilen) {
     }
 
     // Geçerli — pendingBonus olarak kaydet
+    // Zaten aktif pending bonus var mı?
+    const mevcutRaw = localStorage.getItem("pw_pending_bonus");
+    if (mevcutRaw) {
+      try {
+        const mevcut = JSON.parse(mevcutRaw);
+        if (mevcut.key === key) return "limit"; // Aynı kod zaten aktif
+      } catch (e) {}
+    }
+
+    // Geçerli — pendingBonus olarak kaydet
     const pendingBonus = {
       key,
       puan: bonusData.puan,
