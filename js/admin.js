@@ -571,26 +571,6 @@ function adminPassaWordPanelGoster() {
     </div>
     <button id="pwBakimBtn" onclick="pwBakimToggle()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:7px 14px;cursor:pointer;">⏳</button>
   </div>
-
-<!-- BONUS KOD YÖNETİMİ -->
-  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin:10px 0 6px;letter-spacing:.4px;">🎁 BONUS KOD EKLE</div>
-  <input id="pwBonusKod" class="giris-alani" placeholder="Kod (örn: berat)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;text-transform:uppercase;">
-  <input id="pwBonusPuan" class="giris-alani" type="number" placeholder="Bonus puan miktarı" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;" min="1">
-  <input id="pwBonusAciklama" class="giris-alani" placeholder="Açıklama (sonuç ekranında görünür)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;">
-  <input id="pwBonusLimit" class="giris-alani" type="number" placeholder="Profil başına kullanım limiti" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;" min="1">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
-    <input id="pwBonusSure" class="giris-alani" type="number" placeholder="Süre (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
-    <select id="pwBonusSureBirim" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;">
-      <option value="dakika">Dakika</option>
-      <option value="saat">Saat</option>
-      <option value="gun" selected>Gün</option>
-    </select>
-  </div>
-  <button onclick="pwBonusKodEkle()" style="width:100%;background:linear-gradient(145deg,#f57c00,#e65100);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:10px;">➕ Kodu Ekle</button>
-  <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">AKTİF BONUS KODLAR</div>
-  <div id="pwBonusKodListe" style="margin-bottom:10px;">
-    <div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Yükleniyor...</div>
-  </div>
 </div>
 `;
 
@@ -607,10 +587,9 @@ function adminPassaWordPanelGoster() {
     });
     if (sekme === "skor") pwSkorListesiYukle();
     if (sekme === "ayarlar") {
-  pwBakimDurumKontrol();
-  pwDuyuruListesiYukle();
-  pwBonusKodListesiYukle();
-}
+      pwBakimDurumKontrol();
+      pwDuyuruListesiYukle();
+    }
   };
 
   /* Sıralamayı yükle */
@@ -1704,108 +1683,3 @@ window.pwProfilKurtar = async function () {
     toastGoster("❌ İşlem başarısız!");
   }
 };
-
-
-
-/* ========================================================================= */
-/* BONUS KOD YÖNETİMİ                                                        */
-/* ========================================================================= */
-
-window.pwBonusKodEkle = async function () {
-  const kodEl = document.getElementById("pwBonusKod");
-  const kod = kodEl?.value.trim().toUpperCase();
-  const puan = parseInt(document.getElementById("pwBonusPuan")?.value) || 0;
-  const aciklama = document.getElementById("pwBonusAciklama")?.value.trim();
-  const limit = parseInt(document.getElementById("pwBonusLimit")?.value) || 1;
-  const sure = parseInt(document.getElementById("pwBonusSure")?.value) || 0;
-  const birim = document.getElementById("pwBonusSureBirim")?.value || "gun";
-
-  if (!kod) { toastGoster("⚠️ Kod boş olamaz!"); return; }
-  if (puan < 1) { toastGoster("⚠️ Puan en az 1 olmalı!"); return; }
-  if (!aciklama) { toastGoster("⚠️ Açıklama boş olamaz!"); return; }
-
-  let expireAt = 0;
-  if (sure > 0) {
-    let ms = 0;
-    if (birim === "dakika") ms = sure * 60 * 1000;
-    else if (birim === "saat") ms = sure * 60 * 60 * 1000;
-    else if (birim === "gun") ms = sure * 24 * 60 * 60 * 1000;
-    expireAt = Date.now() + ms;
-  }
-
-  try {
-    const yeniRef = push(ref(veritabani, "bonusCodes"));
-    await set(yeniRef, {
-      kod,
-      puan,
-      aciklama,
-      limit,
-      expireAt,
-      olusturulma: Date.now(),
-    });
-    toastGoster("✅ Bonus kodu eklendi!");
-    ["pwBonusKod","pwBonusPuan","pwBonusAciklama","pwBonusLimit","pwBonusSure"].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.value = "";
-    });
-    pwBonusKodListesiYukle();
-  } catch (e) {
-    toastGoster("❌ Eklenemedi!");
-  }
-};
-
-window.pwBonusKodSil = async function (key) {
-  try {
-    await remove(ref(veritabani, `bonusCodes/${key}`));
-    toastGoster("✅ Kod silindi");
-    pwBonusKodListesiYukle();
-  } catch (e) {
-    console.error("Silme hatası:", e);
-    toastGoster("❌ Silinemedi: " + e.message);
-  }
-};
-
-function pwBonusKodListesiYukle() {
-  const konteyner = document.getElementById("pwBonusKodListe");
-  if (!konteyner) return;
-  get(ref(veritabani, "bonusCodes")).then((snap) => {
-    if (!snap.exists()) {
-      konteyner.innerHTML = `<div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Aktif kod yok.</div>`;
-      return;
-    }
-    const simdiki = Date.now();
-    const veri = snap.val();
-    konteyner.innerHTML = "";
-    Object.entries(veri)
-      .sort((a, b) => (b[1].olusturulma || 0) - (a[1].olusturulma || 0))
-      .forEach(([key, d]) => {
-        const sureDoldu = d.expireAt > 0 && simdiki > d.expireAt;
-        let sureYazi = "Sonsuz";
-        if (d.expireAt > 0) {
-          if (sureDoldu) {
-            sureYazi = "⛔ Süresi doldu";
-          } else {
-            const kalanMs = d.expireAt - simdiki;
-            const kalanDk = Math.floor(kalanMs / 60000);
-            if (kalanDk < 60) sureYazi = `⏱ ${kalanDk} dakika kaldı`;
-            else if (kalanDk < 1440) sureYazi = `⏱ ${Math.floor(kalanDk/60)} saat kaldı`;
-            else sureYazi = `⏱ ${Math.floor(kalanDk/1440)} gün kaldı`;
-          }
-        }
-        const div = document.createElement("div");
-        div.style.cssText = `background:rgba(255,255,255,0.04);border:1px solid rgba(${sureDoldu ? "255,23,68" : "245,124,0"},0.25);border-radius:8px;padding:9px 12px;margin-bottom:6px;display:flex;align-items:flex-start;gap:8px;opacity:${sureDoldu ? "0.55" : "1"};`;
-        div.innerHTML = `
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:14px;font-weight:800;color:#f57c00;letter-spacing:1px;">${d.kod}</div>
-            <div style="font-size:12px;color:#fff;margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x</div>
-            <div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${d.aciklama}</div>
-            <div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${sureYazi}</div>
-          </div>
-          <button onclick="pwBonusKodSil('${key}')" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;white-space:nowrap;flex-shrink:0;">🗑</button>
-        `;
-        konteyner.appendChild(div);
-      });
-  }).catch(() => {
-    konteyner.innerHTML = `<div style="color:#ff6b6b;font-size:13px;">Yüklenemedi.</div>`;
-  });
-}
