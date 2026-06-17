@@ -619,6 +619,7 @@ function oyunuBitir(erkenBitirildi = false) {
   );
   sonucEkraniniOlustur(sureBonus, komboBonus, bonusKodPuan, bonusKodAciklama);
   ekraniGoster("sonucEkrani");
+  if (window.bekleyenGuncellemeyiKontrolEt) window.bekleyenGuncellemeyiKontrolEt();
 }
 
 function skorkaydet(puan, dogru, yanlis, pas, detay) {
