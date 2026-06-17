@@ -488,7 +488,6 @@ window.profilGeriYukle = async function () {
 // BONUS KOD KONTROLÜ
   const bonusKodSonuc = await bonusKodKontrolEt(kod);
   if (bonusKodSonuc !== null) {
-    // Bu bir bonus koduydu, yedekleme kodu değil
     document.getElementById("yedekKodGiris").value = "";
     if (bonusKodSonuc === "gecersiz") {
       toastGoster("❌ Geçersiz veya süresi dolmuş kod!");
@@ -499,7 +498,7 @@ window.profilGeriYukle = async function () {
     } else if (bonusKodSonuc === "profil_yok") {
       toastGoster("⚠️ Önce bir profil oluştur!");
     } else {
-      toastGoster(`🎁 Bonus kod kabul edildi! Sonraki ${bonusData.limit} oyununda +${bonusKodSonuc} puan kazanacaksın!`);
+      toastGoster(`🎁 Bonus kod kabul edildi! Sonraki ${bonusKodSonuc.limit} oyununda +${bonusKodSonuc.puan} puan kazanacaksın!`);
     }
     return;
   }
@@ -640,7 +639,7 @@ async function bonusKodKontrolEt(girilen) {
     localStorage.setItem(kullanimKey, String(kullanimSayisi + 1));
     localStorage.setItem(cihazKey, String(cihazKullanimSayisi + 1));
 
-    return bonusData.puan;
+    return { puan: bonusData.puan, limit: bonusData.limit };
   } catch (e) {
     console.warn("Bonus kod kontrol hatası:", e);
     return null;
