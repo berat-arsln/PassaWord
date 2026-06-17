@@ -73,6 +73,7 @@ function toastGoster(mesaj, sure = 2500) {
 
 window.toastGoster = toastGoster;
 function ekraniGoster(id) {
+document.body.style.visibility = "visible";
   document.querySelectorAll(".ekran").forEach((e) => e.classList.add("gizli"));
   document.getElementById(id).classList.remove("gizli");
   // Duyuru bandını başlangıç ekranında göster, oyun/sonuç ekranında gizle
