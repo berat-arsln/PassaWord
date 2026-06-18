@@ -93,6 +93,11 @@ function duyurulariGoster(snap) {
     .map(([key, d]) => ({ key, ...d }))
     .filter((d) => {
       if (!d.metin) return false;
+      // Kapsam filtresi — bakım modundaki duyurular genel ekranda görünmez
+      const bakimAktif = document.getElementById("bakimEkrani") && !document.getElementById("bakimEkrani").classList.contains("gizli");
+      if (d.kapsam === "bakim" && !bakimAktif) return false;
+      if (d.kapsam === "genel" && bakimAktif) return false;
+      // kapsam === "her_ikisi" veya undefined ise her zaman göster
       const gorulmeKey = "pw_duyuru_" + d.key;
       const gorulme = JSON.parse(
         localStorage.getItem(gorulmeKey) || '{"sayi":0,"ilk":0}'
@@ -556,8 +561,14 @@ function adminPassaWordPanelGoster() {
       <option value="saat">Saat</option>
       <option value="gun" selected>Gün</option>
     </select>
-    <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme (0=sonsuz)" style="font-size:12px;padding:8px 10px;text-align:left;" min="0">
   </div>
+  <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme (0=sonsuz)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;" min="0">
+  </div>
+<select id="pwDuyuruKapsam" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;margin-bottom:6px;">
+  <option value="genel">🌐 Genel</option>
+  <option value="bakim">🔧 Yalnızca Bakım Modu</option>
+  <option value="her_ikisi">🌐🔧 Her İkisi</option>
+</select>
   <button onclick="pwDuyuruEkle()" style="width:100%;background:linear-gradient(145deg,#2e7d32,#1b5e20);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:9px;cursor:pointer;margin-bottom:10px;">➕ Duyuru Ekle</button>
   <div style="font-size:12px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">MEVCUT DUYURULAR</div>
   <div id="pwDuyuruListe" style="margin-bottom:10px;">
@@ -969,9 +980,12 @@ window.pwDuyuruEkle = async function () {
     return;
   }
   const sure = parseInt(document.getElementById("pwDuyuruSure")?.value) || 0;
-  const birim = document.getElementById("pwDuyuruSureBirim")?.value || "gun";
-  const maks =
-    parseInt(document.getElementById("pwDuyuruMaksGorunum")?.value) || 0;
+ 
+ const birim = document.getElementById("pwDuyuruSureBirim")?.value || "gun";
+  
+const maks = parseInt(document.getElementById("pwDuyuruMaksGorunum")?.value) || 0;
+
+const kapsam = document.getElementById("pwDuyuruKapsam")?.value || "genel";
 
   let sureDakika = 0;
   if (sure > 0) {
@@ -986,6 +1000,7 @@ window.pwDuyuruEkle = async function () {
       metin,
       sureDakika,
       maksGorunum: maks,
+      kapsam,
       olusturulma: Date.now(),
     });
     toastGoster("✅ Duyuru eklendi!");
@@ -1034,12 +1049,15 @@ function pwDuyuruListesiYukle() {
             "background:rgba(255,255,255,0.04);border:1px solid rgba(255,214,0,0.2);border-radius:8px;padding:9px 12px;margin-bottom:6px;display:flex;align-items:flex-start;gap:8px;";
           div.innerHTML = `
           <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;font-weight:700;color:#ffd600;word-break:break-word;">${
+           
+     <div style="font-size:10px;font-weight:700;margin-bottom:4px;color:${d.kapsam === 'bakim' ? '#ff9800' : d.kapsam === 'her_ikisi' ? '#ce93d8' : '#4fc3f7'};">
+  ${d.kapsam === 'bakim' ? '🔧 Yalnızca Bakım Modu' : d.kapsam === 'her_ikisi' ? '🌐🔧 Her İkisi' : '🌐 Genel'}
+             </div>
+      <div style="font-size:13px;font-weight:700;color:#ffd600;word-break:break-word;">${
               d.metin
             }</div>
-            <div style="font-size:11px;color:var(--metin-soluk);margin-top:3px;">⏱ ${sureYazi} &nbsp;•&nbsp; 👁 Maks: ${
-            d.maksGorunum || "Sonsuz"
-          }</div>
+            <div style="font-size:11px;color:var(--metin-soluk);margin-top:3px;">⏱ ${sureYazi} &nbsp;•&nbsp; 👁 Maks: ${d.maksGorunum || "Sonsuz"}</div>
+${d.sureDakika > 0 && d.olusturulma ? `<div style="font-size:11px;margin-top:2px;color:#4fc3f7;">⏳ ${pwDuyuruKalanSureYazi(d.olusturulma, d.sureDakika)}</div>` : ""}
           </div>
           <button onclick="pwDuyuruSil('${key}')" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;white-space:nowrap;flex-shrink:0;">🗑</button>
         `;
@@ -1780,7 +1798,7 @@ if (window._bonusSayacInterval) {
           <div style="flex:1;min-width:0;">
             <div style="font-size:14px;font-weight:800;color:#ff9800;">${d.kod}</div>
             
-<div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x &nbsp;•&nbsp; ${d.toplamLimit > 0 ? `Toplam: ${d.toplamLimit}x` : "Toplam: Sonsuz"}</div>
+<div style="font-size:12px;color:var(--metin-soluk);margin-top:2px;" id="bonusDetay_${key}">+${d.puan} puan &nbsp;•&nbsp; Limit: ${d.limit}x &nbsp;•&nbsp; ${d.toplamLimit > 0 ? `Toplam: ${d.toplamLimit}x &nbsp;•&nbsp; <span id="bonusKalan_${key}">⏳ Kalan yükleniyor...</span>` : "Toplam: Sonsuz"}</div>
             ${d.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${d.aciklama}</div>` : ""}
             <div data-expire="${d.expireAt || 0}" style="font-size:11px;margin-top:3px;color:${doldu ? "#ff1744" : "#00e676"};">
   ${doldu ? "🔴 Süresi doldu" : d.expireAt > 0 ? `🟢 Aktif • ⏱ ${pwKalanSureYazi(d.expireAt)}` : "🟢 Aktif"}
@@ -1792,6 +1810,19 @@ if (window._bonusSayacInterval) {
         konteyner.appendChild(div);
       });
   });
+
+// Kalan kullanım sayısını yükle
+if (d.toplamLimit > 0) {
+  get(ref(veritabani, `bonusCodes/${key}/kullananlar`)).then(kullSnap => {
+    const kullanan = kullSnap.exists() ? Object.keys(kullSnap.val()).length : 0;
+    const kalan = d.toplamLimit - kullanan;
+    const kalanEl = document.getElementById(`bonusKalan_${key}`);
+    if (kalanEl) {
+      kalanEl.textContent = `Kalan: ${kalan}x`;
+      kalanEl.style.color = kalan <= 2 ? "#ff6b6b" : "#00e676";
+    }
+  });
+}
 
 window._bonusSayacInterval = setInterval(() => {
   document.querySelectorAll("[data-expire]").forEach(el => {
@@ -1815,6 +1846,20 @@ function pwKalanSureYazi(expireAt) {
   let yazi = "";
   if (gun > 0) yazi += `${gun} gün `;
   yazi += `${saat} saat ${dk} dakika ${sn} saniye kaldı`;
+  return yazi;
+}
+
+function pwDuyuruKalanSureYazi(olusturulma, sureDakika) {
+  const bitisZamani = olusturulma + sureDakika * 60 * 1000;
+  const kalan = bitisZamani - Date.now();
+  if (kalan <= 0) return "Süresi doldu";
+  const gun = Math.floor(kalan / 86400000);
+  const saat = Math.floor((kalan % 86400000) / 3600000);
+  const dk = Math.floor((kalan % 3600000) / 60000);
+  let yazi = "";
+  if (gun > 0) yazi += `${gun} gün `;
+  if (saat > 0) yazi += `${saat} saat `;
+  yazi += `${dk} dakika kaldı`;
   return yazi;
 }
 
