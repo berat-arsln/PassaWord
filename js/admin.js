@@ -156,7 +156,7 @@ if (duyuruKapsam === "genel" && bakimAktif) return false;
     sonucMetni.textContent = metinler;
     sonucBandi.classList.remove("gizli");
   }
-}
+
 
 
 const bakimBandi = document.getElementById("duyuruBandiBakim");
@@ -168,7 +168,9 @@ if (bakimBandi && bakimMetni) {
   } else {
     bakimBandi.classList.add("gizli");
   }
+ }
 }
+
 window.adminGiris = async function () {
   const sifre = document.getElementById("adminSifreGiris").value;
   if (!sifre) {
