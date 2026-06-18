@@ -96,8 +96,9 @@ function duyurulariGoster(snap) {
       // Kapsam filtresi — bakım modundaki duyurular genel ekranda görünmez
      const bakimEkrani = document.getElementById("bakimEkrani");
 const bakimAktif = bakimEkrani && !bakimEkrani.classList.contains("gizli") && window.getComputedStyle(bakimEkrani).display !== "none";
-      if (d.kapsam === "bakim" && !bakimAktif) return false;
-      if (d.kapsam === "genel" && bakimAktif) return false;
+      const duyuruKapsam = d.kapsam || "genel";
+if (duyuruKapsam === "bakim" && !bakimAktif) return false;
+if (duyuruKapsam === "genel" && bakimAktif) return false;
       // kapsam === "her_ikisi" veya undefined ise her zaman göster
       const gorulmeKey = "pw_duyuru_" + d.key;
       const gorulme = JSON.parse(
