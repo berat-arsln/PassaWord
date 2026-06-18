@@ -677,29 +677,32 @@ function onlineDurumBaslat() {
   const profil = aktifProfiliGetir();
   if (!profil || !profil.yedekKod) return;
 
+  const { onDisconnect } = window._firebaseDatabase || {};
   const onlineRef = ref(veritabani, `onlineDurum/${profil.yedekKod}`);
 
-  // Çevrimiçi yaz
-  set(onlineRef, {
-    ad: profil.ad,
-    online: true,
-    sonGiris: Date.now()
-  }).catch(() => {});
-
-  // Sekme/uygulama kapanınca offline yaz
-  window.addEventListener("beforeunload", () => {
-    set(onlineRef, {
+  // Bağlantı kesilince Firebase otomatik offline yazar
+  import("https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js").then(({ onDisconnect, serverTimestamp }) => {
+    const disconnectRef = onDisconnect(onlineRef);
+    disconnectRef.set({
       ad: profil.ad,
       online: false,
       sonGiris: Date.now()
     });
-  });
 
-  // Görünürlük değişince güncelle
-  document.addEventListener("visibilitychange", () => {
+    // Şu an online yaz
     set(onlineRef, {
       ad: profil.ad,
-      online: document.visibilityState === "visible",
+      online: true,
+      sonGiris: Date.now()
+    }).catch(() => {});
+  });
+
+  // Görünürlük değişince güncelle (arka plana alınınca)
+  document.addEventListener("visibilitychange", () => {
+    const aktif = document.visibilityState === "visible";
+    set(onlineRef, {
+      ad: profil.ad,
+      online: aktif,
       sonGiris: Date.now()
     }).catch(() => {});
   });
