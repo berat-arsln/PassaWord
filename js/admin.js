@@ -1808,21 +1808,22 @@ if (window._bonusSayacInterval) {
           <button onclick="pwBonusKodSil('${key}')" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;white-space:nowrap;flex-shrink:0;">🗑</button>
         `;
         konteyner.appendChild(div);
-      });
-  });
 
-// Kalan kullanım sayısını yükle
-if (d.toplamLimit > 0) {
-  get(ref(veritabani, `bonusCodes/${key}/kullananlar`)).then(kullSnap => {
-    const kullanan = kullSnap.exists() ? Object.keys(kullSnap.val()).length : 0;
-    const kalan = d.toplamLimit - kullanan;
-    const kalanEl = document.getElementById(`bonusKalan_${key}`);
-    if (kalanEl) {
-      kalanEl.textContent = `Kalan: ${kalan}x`;
-      kalanEl.style.color = kalan <= 2 ? "#ff6b6b" : "#00e676";
-    }
-  });
-}
+        // Kalan kullanım sayısını yükle
+        if (d.toplamLimit > 0) {
+          get(ref(veritabani, `bonusCodes/${key}/kullananlar`)).then(kullSnap => {
+            const kullanan = kullSnap.exists() ? Object.keys(kullSnap.val()).length : 0;
+            const kalan = d.toplamLimit - kullanan;
+            const kalanEl = document.getElementById(`bonusKalan_${key}`);
+            if (kalanEl) {
+              kalanEl.textContent = `Kalan: ${kalan}x`;
+              kalanEl.style.color = kalan <= 2 ? "#ff6b6b" : "#00e676";
+            }
+          });
+        }
+
+      });  // forEach sonu
+  });  // get().then sonu
 
 window._bonusSayacInterval = setInterval(() => {
   document.querySelectorAll("[data-expire]").forEach(el => {
