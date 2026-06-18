@@ -47,8 +47,13 @@ async function bakimModuVeDuyuruKontrol() {
       const bakimAktif = snap.exists() && snap.val() === true;
       const adminGiris = sessionStorage.getItem("pw_admin_giris") === "true";
       if (bakimAktif && !adminGiris) {
-        ekraniGoster("bakimEkrani");
-      } else {
+  ekraniGoster("bakimEkrani");
+  setTimeout(() => {
+    get(ref(veritabani, "ayarlar/duyurular")).then(s => {
+      if (s.exists()) duyurulariGoster(s);
+    });
+  }, 300); 
+     } else {
         const mevcut = document.querySelector(".ekran:not(.gizli)");
         if (mevcut && mevcut.id === "bakimEkrani") {
           const aktifProfil = aktifProfiliGetir();
@@ -67,8 +72,8 @@ async function bakimModuVeDuyuruKontrol() {
     });
 
     onValue(ref(veritabani, "ayarlar/duyurular"), (snap) => {
-      duyurulariGoster(snap);
-    });
+  setTimeout(() => duyurulariGoster(snap), 300);
+});
   } catch (e) {
     console.warn("Bakım/duyuru kontrolü hatası:", e);
   }
