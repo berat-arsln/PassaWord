@@ -158,6 +158,17 @@ if (duyuruKapsam === "genel" && bakimAktif) return false;
   }
 }
 
+
+const bakimBandi = document.getElementById("duyuruBandiBakim");
+const bakimMetni = document.getElementById("duyuruMetniBakim");
+if (bakimBandi && bakimMetni) {
+  if (aktifDuyurular.length > 0) {
+    bakimMetni.textContent = metinler;
+    bakimBandi.classList.remove("gizli");
+  } else {
+    bakimBandi.classList.add("gizli");
+  }
+}
 window.adminGiris = async function () {
   const sifre = document.getElementById("adminSifreGiris").value;
   if (!sifre) {
