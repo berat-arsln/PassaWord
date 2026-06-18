@@ -94,7 +94,8 @@ function duyurulariGoster(snap) {
     .filter((d) => {
       if (!d.metin) return false;
       // Kapsam filtresi — bakım modundaki duyurular genel ekranda görünmez
-      const bakimAktif = document.getElementById("bakimEkrani") && !document.getElementById("bakimEkrani").classList.contains("gizli");
+     const bakimEkrani = document.getElementById("bakimEkrani");
+const bakimAktif = bakimEkrani && !bakimEkrani.classList.contains("gizli") && window.getComputedStyle(bakimEkrani).display !== "none";
       if (d.kapsam === "bakim" && !bakimAktif) return false;
       if (d.kapsam === "genel" && bakimAktif) return false;
       // kapsam === "her_ikisi" veya undefined ise her zaman göster
@@ -563,7 +564,6 @@ function adminPassaWordPanelGoster() {
     </select>
   </div>
   <input id="pwDuyuruMaksGorunum" class="giris-alani" type="number" placeholder="Maks görüntüleme (0=sonsuz)" style="font-size:13px;padding:9px 10px;text-align:left;margin-bottom:6px;" min="0">
-  </div>
 <select id="pwDuyuruKapsam" class="giris-alani" style="font-size:12px;padding:8px 10px;background:#111827;color:#fff;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;margin-bottom:6px;">
   <option value="genel">🌐 Genel</option>
   <option value="bakim">🔧 Yalnızca Bakım Modu</option>
