@@ -150,6 +150,26 @@ window.oyunuBaslat = async function () {
   oyunDurumu.pasSayisi = 0;
   oyunDurumu.bonusUygulandı = false;
 
+// BONUS KOD HAKKINI OYUN BAŞLARKEN DÜŞÜR (erken kapatma açığını önler)
+const pendingBonusRaw = localStorage.getItem("pw_pending_bonus");
+oyunDurumu.aktifBonus = null;
+if (pendingBonusRaw) {
+  try {
+    const pb = JSON.parse(pendingBonusRaw);
+    oyunDurumu.aktifBonus = { puan: pb.puan, aciklama: pb.aciklama };
+
+    const kalanHak = (pb.kalanHak || 1) - 1;
+    if (kalanHak > 0) {
+      localStorage.setItem("pw_pending_bonus", JSON.stringify({ ...pb, kalanHak }));
+    } else {
+      localStorage.removeItem("pw_pending_bonus");
+    }
+  } catch (e) {
+    localStorage.removeItem("pw_pending_bonus");
+  }
+}
+
+
   HARFLER.forEach((h) => {
     oyunDurumu.harfDurumlari[h] = "varsayilan";
   });
@@ -537,26 +557,14 @@ function oyunuBitir(erkenBitirildi = false) {
   clearInterval(oyunDurumu.zamanlayici);
   oyunDurumu.calisiyor = false;
 
-// BONUS KOD KONTROLÜ
-  const pendingBonusRaw = localStorage.getItem("pw_pending_bonus");
+// BONUS KOD UYGULAMA (hak zaten oyunuBaslat'ta düşürüldü, burada sadece puanı ekliyoruz)
   let bonusKodPuan = 0;
   let bonusKodAciklama = "";
-  if (pendingBonusRaw && !oyunDurumu.bonusUygulandı) {
+  if (oyunDurumu.aktifBonus && !oyunDurumu.bonusUygulandı) {
     oyunDurumu.bonusUygulandı = true;
-    try {
-      const pb = JSON.parse(pendingBonusRaw);
-      bonusKodPuan = pb.puan || 0;
-      bonusKodAciklama = pb.aciklama || "";
-      oyunDurumu.puan += bonusKodPuan;
-      const kalanHak = (pb.kalanHak || 1) - 1;
-      if (kalanHak > 0) {
-        localStorage.setItem("pw_pending_bonus", JSON.stringify({ ...pb, kalanHak }));
-      } else {
-        localStorage.removeItem("pw_pending_bonus");
-      }
-    } catch (e) {
-      localStorage.removeItem("pw_pending_bonus");
-    }
+    bonusKodPuan = oyunDurumu.aktifBonus.puan || 0;
+    bonusKodAciklama = oyunDurumu.aktifBonus.aciklama || "";
+    oyunDurumu.puan += bonusKodPuan;
   }
   let sureBonus = 0;
 
