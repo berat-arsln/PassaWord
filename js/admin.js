@@ -941,6 +941,7 @@ function pwOyuncuKartHtml(kod, p) {
   const gecmisSayisi = (p.gecmis || []).length;
   const enYuksek =
     skorSayisi > 0 ? Math.max(...(p.skorlar || []).map((s) => s.puan)) : 0;
+  const profilId = p.id || "";
   return `
           <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(206,147,216,0.2);border-radius:10px;padding:10px 12px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
@@ -950,13 +951,17 @@ function pwOyuncuKartHtml(kod, p) {
                 }</div>
                 <div style="font-size:11px;color:var(--metin-soluk);margin-top:1px;">🔑 ${kod} &nbsp;•&nbsp; 📅 ${tarih} &nbsp;•&nbsp; <span id="onlineBadge_${kod}">⏳</span></div>
               </div>
-              <button onclick="pwOyuncuSil('${kod}',this)" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:5px 10px;cursor:pointer;">🗑 Sil</button>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <button onclick="pwOyuncuSil('${kod}',this)" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:5px 10px;cursor:pointer;">🗑 Sil</button>
+                <button onclick="pwOyuncuDetayToggle('${profilId}','${kod}',this)" style="background:rgba(79,195,247,0.15);border:1px solid rgba(79,195,247,0.3);border-radius:6px;color:#4fc3f7;font-size:11px;font-weight:700;padding:5px 10px;cursor:pointer;">ℹ️ Detay</button>
+              </div>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap;">
               <span style="background:rgba(79,195,247,0.1);border-radius:6px;padding:3px 8px;font-size:11px;color:#4fc3f7;">🏆 En yüksek: ${enYuksek}</span>
               <span style="background:rgba(255,255,255,0.06);border-radius:6px;padding:3px 8px;font-size:11px;color:var(--metin-soluk);">🎮 ${skorSayisi} skor</span>
               <span style="background:rgba(255,255,255,0.06);border-radius:6px;padding:3px 8px;font-size:11px;color:var(--metin-soluk);">📋 ${gecmisSayisi} geçmiş</span>
             </div>
+            <div id="pwOyuncuDetay_${profilId}" style="display:none;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.08);"></div>
           </div>`;
 }
 
@@ -981,6 +986,70 @@ window.pwOyuncuSil = async function (kod, btn) {
     toastGoster("❌ Silinemedi!");
     btn.textContent = "🗑 Sil";
     btn.disabled = false;
+  }
+};
+
+window.pwOyuncuDetayToggle = async function (profilId, kod, btn) {
+  const detayDiv = document.getElementById(`pwOyuncuDetay_${profilId}`);
+  if (!detayDiv) return;
+
+  // Zaten açıksa kapat
+  if (detayDiv.style.display === "block") {
+    detayDiv.style.display = "none";
+    return;
+  }
+
+  detayDiv.style.display = "block";
+  detayDiv.innerHTML = `<div style="color:var(--metin-soluk);font-size:12px;text-align:center;padding:8px;">Yükleniyor...</div>`;
+
+  try {
+    const snap = await get(ref(veritabani, "bonusKullanimlari"));
+    if (!snap.exists()) {
+      detayDiv.innerHTML = `<div style="color:var(--metin-soluk);font-size:12px;">🎁 Hiç bonus kod kullanılmamış.</div>`;
+      return;
+    }
+
+    const veri = snap.val();
+    const kullanimlar = Object.values(veri).filter((k) => k.profilId === profilId);
+
+    if (kullanimlar.length === 0) {
+      detayDiv.innerHTML = `<div style="color:var(--metin-soluk);font-size:12px;">🎁 Hiç bonus kod kullanılmamış.</div>`;
+      return;
+    }
+
+    kullanimlar.sort((a, b) => (b.ilkKullanim || 0) - (a.ilkKullanim || 0));
+
+    const satirlar = kullanimlar
+      .map((k) => {
+        const tarihYazi = k.ilkKullanim
+          ? new Date(k.ilkKullanim).toLocaleString("tr-TR", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            })
+          : "—";
+        const hakBitti = k.kalanHak <= 0;
+        return `
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,152,0,0.15);border-radius:8px;padding:8px 10px;margin-bottom:6px;">
+            <div style="font-size:13px;font-weight:700;color:#ff9800;">${k.kod}</div>
+            <div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">
+              +${k.puan} puan &nbsp;•&nbsp; Kalan hak:
+              <span style="color:${hakBitti ? "#ff6b6b" : "#00e676"};font-weight:700;">${k.kalanHak}/${k.baslangicHak}</span>
+            </div>
+            ${k.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${k.aciklama}</div>` : ""}
+            <div style="font-size:10px;color:var(--metin-soluk);margin-top:3px;">📅 ${tarihYazi}</div>
+          </div>`;
+      })
+      .join("");
+
+    detayDiv.innerHTML = `
+      <div style="font-size:11px;font-weight:700;color:var(--metin-soluk);margin-bottom:6px;letter-spacing:.4px;">🎁 KULLANDIĞI BONUS KODLAR</div>
+      ${satirlar}
+    `;
+  } catch (e) {
+    detayDiv.innerHTML = `<div style="color:#ff6b6b;font-size:12px;">Yüklenemedi.</div>`;
   }
 };
 
