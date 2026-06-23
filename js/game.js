@@ -156,6 +156,17 @@ oyunDurumu.aktifBonus = null;
 if (pendingBonusRaw) {
   try {
     const pb = JSON.parse(pendingBonusRaw);
+
+    // İPTAL KONTROLÜ — admin "Profilden Sil" dediyse hakkı burada geçersiz kıl
+    const _profilIptalKontrol = aktifProfiliGetir();
+    if (_profilIptalKontrol && pb.key) {
+      const iptalSnap = await get(ref(veritabani, `bonusCodes/${pb.key}/iptaller/${_profilIptalKontrol.id}`));
+      if (iptalSnap.exists() && iptalSnap.val() === true) {
+        localStorage.removeItem("pw_pending_bonus");
+        throw new Error("Bonus iptal edildi");
+      }
+    }
+
     oyunDurumu.aktifBonus = { puan: pb.puan, aciklama: pb.aciklama };
 
     const kalanHak = (pb.kalanHak || 1) - 1;
