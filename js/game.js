@@ -433,22 +433,22 @@ window.pasCek = function () {
 
 function cevapKontrol(verilen, dogru, alternatifler) {
   const normaliz = (s) =>
-    s
-      .trim()
-.toLowerCase()
-.replace(/ı/g, "i")
-.replace(/İ/g, "i")
-.replace(/I/g, "i")
-.replace(/ğ/g, "g")
-.replace(/Ğ/g, "g")
-.replace(/ü/g, "u")
-.replace(/Ü/g, "u")
-.replace(/ş/g, "s")
-.replace(/Ş/g, "s")
-.replace(/ö/g, "o")
-.replace(/Ö/g, "o")
-.replace(/ç/g, "c")
-.replace(/Ç/g, "c");
+  s
+    .trim()
+    .replace(/İ/g, "i")
+    .replace(/I/g, "ı")
+    .toLowerCase()
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/Ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/Ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/Ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/Ö/g, "o")
+    .replace(/ç/g, "c")
+    .replace(/Ç/g, "c");
 
   const v = normaliz(verilen);
   const d = normaliz(dogru);
