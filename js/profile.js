@@ -647,7 +647,7 @@ if (cihazSnap.exists()) return "limit";
     // Geçerli — Firebase'e kullanımı kaydet
     await set(
       ref(veritabani, `bonusCodes/${key}/kullananlar/${profil.id}`),
-      { tarih: new Date().toISOString() }
+      { tarih: new Date().toISOString(), profilAdi: profil.ad }
     );
 
 await set(
@@ -655,12 +655,28 @@ await set(
   { tarih: new Date().toISOString() }
 );
 
+    // Admin panelinde profil bazlı görmek için kalıcı kullanım kaydı oluştur
+    const kullanimId = `${profil.id}_${key}`;
+    await set(ref(veritabani, `bonusKullanimlari/${kullanimId}`), {
+      profilId: profil.id,
+      profilAdi: profil.ad,
+      kod: bonusData.kod,
+      kodKey: key,
+      puan: bonusData.puan,
+      aciklama: bonusData.aciklama || "",
+      baslangicHak: bonusData.limit,
+      kalanHak: bonusData.limit,
+      ilkKullanim: Date.now(),
+      sonGuncelleme: Date.now(),
+    });
+
     // pendingBonus olarak kaydet
     const pendingBonus = {
       key,
       puan: bonusData.puan,
       aciklama: bonusData.aciklama,
       kalanHak: bonusData.limit,
+      kullanimId, // game.js'de kalanHak güncellemesi için gerekli
     };
     localStorage.setItem("pw_pending_bonus", JSON.stringify(pendingBonus));
 
