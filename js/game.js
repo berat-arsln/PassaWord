@@ -159,15 +159,29 @@ if (pendingBonusRaw) {
     oyunDurumu.aktifBonus = { puan: pb.puan, aciklama: pb.aciklama };
 
     const kalanHak = (pb.kalanHak || 1) - 1;
+    oyunDurumu.aktifBonus.kalanHak = kalanHak;
+
     if (kalanHak > 0) {
       localStorage.setItem("pw_pending_bonus", JSON.stringify({ ...pb, kalanHak }));
     } else {
       localStorage.removeItem("pw_pending_bonus");
     }
+
+    // ADMIN PANELİNDE GÖRMEK İÇİN: Firebase'deki kalıcı kullanım kaydını güncelle
+    if (pb.kullanimId) {
+      set(ref(veritabani, `bonusKullanimlari/${pb.kullanimId}/kalanHak`), kalanHak).catch(console.error);
+      set(ref(veritabani, `bonusKullanimlari/${pb.kullanimId}/sonGuncelleme`), Date.now()).catch(console.error);
+    }
   } catch (e) {
     localStorage.removeItem("pw_pending_bonus");
   }
 }
+
+// Bonus puanı oyun başlarken hemen ekle (anlık puan göstergesinde görünsün)
+if (oyunDurumu.aktifBonus) {
+  oyunDurumu.puan = oyunDurumu.aktifBonus.puan || 0;
+}
+
 
 
   HARFLER.forEach((h) => {
@@ -557,14 +571,15 @@ function oyunuBitir(erkenBitirildi = false) {
   clearInterval(oyunDurumu.zamanlayici);
   oyunDurumu.calisiyor = false;
 
-// BONUS KOD UYGULAMA (hak zaten oyunuBaslat'ta düşürüldü, burada sadece puanı ekliyoruz)
+// BONUS KOD BİLGİSİ (puan zaten oyunuBaslat'ta eklendi, burada sadece rozet/açıklama için bilgi taşıyoruz)
   let bonusKodPuan = 0;
   let bonusKodAciklama = "";
   if (oyunDurumu.aktifBonus && !oyunDurumu.bonusUygulandı) {
     oyunDurumu.bonusUygulandı = true;
     bonusKodPuan = oyunDurumu.aktifBonus.puan || 0;
     bonusKodAciklama = oyunDurumu.aktifBonus.aciklama || "";
-    oyunDurumu.puan += bonusKodPuan;
+    // NOT: oyunDurumu.puan += bonusKodPuan; SATIRI KASITLI OLARAK KALDIRILDI
+    // Çünkü puan zaten oyunuBaslat'ta eklendi, burada tekrar eklersek çift sayılır
   }
   let sureBonus = 0;
 
@@ -723,10 +738,24 @@ const bonusCipi = document.getElementById("istatBonusKod");
         aciklamaEl.textContent = bonusKodAciklama;
         aciklamaEl.classList.remove("gizli");
       }
+      // Kalan bonus kod hakkını göster
+      const kalanHakEl = document.getElementById("bonusKodKalanHak");
+      if (kalanHakEl && oyunDurumu.aktifBonus) {
+        const kalan = oyunDurumu.aktifBonus.kalanHak ?? 0;
+        if (kalan > 0) {
+          kalanHakEl.textContent = `Kalan bonus kod hakkı: ${kalan}`;
+          kalanHakEl.classList.remove("gizli");
+        } else {
+          kalanHakEl.textContent = `Bu kod için son kullanımındı.`;
+          kalanHakEl.classList.remove("gizli");
+        }
+      }
     } else {
       bonusCipi.classList.add("gizli");
       const aciklamaEl = document.getElementById("bonusKodAciklama");
       if (aciklamaEl) aciklamaEl.classList.add("gizli");
+      const kalanHakEl = document.getElementById("bonusKodKalanHak");
+      if (kalanHakEl) kalanHakEl.classList.add("gizli");
     }
   }
 
