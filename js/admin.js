@@ -1010,7 +1010,9 @@ window.pwOyuncuDetayToggle = async function (profilId, kod, btn) {
     }
 
     const veri = snap.val();
-    const kullanimlar = Object.values(veri).filter((k) => k.profilId === profilId);
+    const kullanimlar = Object.entries(veri)
+      .filter(([_, k]) => k.profilId === profilId)
+      .map(([kullanimId, k]) => ({ ...k, kullanimId }));
 
     if (kullanimlar.length === 0) {
       detayDiv.innerHTML = `<div style="color:var(--metin-soluk);font-size:12px;">🎁 Hiç bonus kod kullanılmamış.</div>`;
@@ -1032,14 +1034,20 @@ window.pwOyuncuDetayToggle = async function (profilId, kod, btn) {
           : "—";
         const hakBitti = k.kalanHak <= 0;
         return `
-          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,152,0,0.15);border-radius:8px;padding:8px 10px;margin-bottom:6px;">
-            <div style="font-size:13px;font-weight:700;color:#ff9800;">${k.kod}</div>
-            <div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">
-              +${k.puan} puan &nbsp;•&nbsp; Kalan hak:
-              <span style="color:${hakBitti ? "#ff6b6b" : "#00e676"};font-weight:700;">${k.kalanHak}/${k.baslangicHak}</span>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,152,0,0.15);border-radius:8px;padding:8px 10px;margin-bottom:6px;position:relative;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <div style="flex:1;">
+                <div style="font-size:13px;font-weight:700;color:#ff9800;">${k.kod}</div>
+                <div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">
+                  +${k.puan} puan &nbsp;•&nbsp; Kalan hak:
+                  <span style="color:${hakBitti ? "#ff6b6b" : "#00e676"};font-weight:700;">${k.kalanHak}/${k.baslangicHak}</span>
+                </div>
+                ${k.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${k.aciklama}</div>` : ""}
+                <div style="font-size:10px;color:var(--metin-soluk);margin-top:3px;">📅 ${tarihYazi}</div>
+              </div>
+              <button onclick="pwBonusKullanimSilMenu('${k.kullanimId}','${k.kodKey}','${profilId}',this)" style="background:rgba(255,23,68,0.15);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:11px;font-weight:700;padding:4px 8px;cursor:pointer;flex-shrink:0;margin-left:8px;">🗑</button>
             </div>
-            ${k.aciklama ? `<div style="font-size:11px;color:var(--metin-soluk);margin-top:2px;">${k.aciklama}</div>` : ""}
-            <div style="font-size:10px;color:var(--metin-soluk);margin-top:3px;">📅 ${tarihYazi}</div>
+            <div id="pwBonusSilMenu_${k.kullanimId}" style="display:none;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.08);gap:6px;flex-direction:column;"></div>
           </div>`;
       })
       .join("");
@@ -1962,4 +1970,58 @@ window.pwBonusKodSil = async function (key) {
   } catch (e) {
     toastGoster("❌ Silinemedi!");
   }
+};
+
+
+
+window.pwBonusKullanimSilMenu = function (kullanimId, kodKey, profilId, btn) {
+  const menuDiv = document.getElementById(`pwBonusSilMenu_${kullanimId}`);
+  if (!menuDiv) return;
+
+  if (menuDiv.style.display === "flex") {
+    menuDiv.style.display = "none";
+    return;
+  }
+
+  menuDiv.style.display = "flex";
+  menuDiv.innerHTML = `
+    <button onclick="pwBonusPanelenSilOnay('${kullanimId}','${profilId}')" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#fff;font-size:12px;font-weight:700;padding:8px;cursor:pointer;">📋 Panelden Sil</button>
+    <button onclick="pwBonusProfildenSilOnay('${kullanimId}','${kodKey}','${profilId}')" style="background:rgba(255,23,68,0.12);border:1px solid rgba(255,23,68,0.3);border-radius:6px;color:#ff6b6b;font-size:12px;font-weight:700;padding:8px;cursor:pointer;">👤 Profilden Sil</button>
+    <button onclick="document.getElementById('pwBonusSilMenu_${kullanimId}').style.display='none'" style="background:transparent;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:var(--metin-soluk);font-size:12px;font-weight:700;padding:8px;cursor:pointer;">✕ İptal</button>
+  `;
+};
+
+window.pwBonusPanelenSilOnay = function (kullanimId, profilId) {
+  onayGoster(
+    "Panelden Sil",
+    "Bu kullanım kaydı sadece admin panelinden kaldırılacak. Kullanıcının hakkı etkilenmeyecek, hâlâ kullanabilecek.",
+    async () => {
+      try {
+        await remove(ref(veritabani, `bonusKullanimlari/${kullanimId}`));
+        toastGoster("✅ Panelden silindi");
+        const detayDiv = document.getElementById(`pwOyuncuDetay_${profilId}`);
+        if (detayDiv) pwOyuncuDetayToggle(profilId, null, null), pwOyuncuDetayToggle(profilId, null, null);
+      } catch (e) {
+        toastGoster("❌ Silinemedi!");
+      }
+    }
+  );
+};
+
+window.pwBonusProfildenSilOnay = function (kullanimId, kodKey, profilId) {
+  onayGoster(
+    "Profilden Sil",
+    "Bu kodun kalan hakkı geçersiz kılınacak. Kullanıcı bir dahaki oyuna başladığında bonusu artık kullanamayacak. Şu an oynanan bir oyun varsa ona dokunulmaz. Emin misin?",
+    async () => {
+      try {
+        await set(ref(veritabani, `bonusCodes/${kodKey}/iptaller/${profilId}`), true);
+        await remove(ref(veritabani, `bonusKullanimlari/${kullanimId}`));
+        toastGoster("✅ Profilden silindi, bir dahaki oyunda geçersiz olacak");
+        const detayDiv = document.getElementById(`pwOyuncuDetay_${profilId}`);
+        if (detayDiv) pwOyuncuDetayToggle(profilId, null, null), pwOyuncuDetayToggle(profilId, null, null);
+      } catch (e) {
+        toastGoster("❌ Silinemedi!");
+      }
+    }
+  );
 };
