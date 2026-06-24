@@ -466,11 +466,9 @@ function cevapKontrol(verilen, dogru, alternatifler) {
   const ekler = [
     "lar",
     "ler",
-    "lık",
     "lik",
     "luk",
     "lük",
-    "lı",
     "li",
     "lu",
     "lü",
@@ -478,19 +476,31 @@ function cevapKontrol(verilen, dogru, alternatifler) {
     "mek",
     "ma",
     "me",
+    "ik",
+    "uk",
+    "ük",
+    "ek",
+    "ak",
     "k",
     "i",
     "ca",
-    "cı",
     "ci",
     "cu",
-    "çı",
+    "cü",
   ];
 
   for (const ek of ekler) {
     if (d.endsWith(ek)) {
       const kok = d.slice(0, -ek.length);
       if (kok.length >= 3 && v === kok) return true;
+    }
+  }
+
+// 3.5. Ters suffix toleransı: kullanıcı doğru cevaba ek eklemiş olabilir
+  for (const ek of ekler) {
+    if (v.endsWith(ek)) {
+      const kok = v.slice(0, -ek.length);
+      if (kok.length >= 3 && kok === d) return true;
     }
   }
   // 4. Ek çifti toleransı: li↔lik, lı↔lık, lu↔luk, lü↔lük, me↔mek, ma↔mak
