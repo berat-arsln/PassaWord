@@ -4,7 +4,7 @@
    ======================================== */
 
 /* Önbellek adı ve versiyonu */
-const ONBELLEK_ADI = 'passaword-v2.5.37';
+const ONBELLEK_ADI = 'passaword-v2.5.41';
 
 const ONBELLEKLENECEK = [
   './',
@@ -103,4 +103,8 @@ self.addEventListener('fetch', (olay) => {
         return caches.match(olay.request);
       })
   );
+});
+
+self.addEventListener('message', (e) => {
+  if (e.data?.type === 'SKIP_WAITING') self.skipWaiting();
 });
