@@ -1,1 +1,563 @@
-.
+/* ========================================================================= */
+/* DÜELLO SİSTEMİ STİLLERİ                                                   */
+/* ========================================================================= */
+
+/* --- Düello Menü Ekranı --- */
+.duello-menu-icerik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.duello-baslik {
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.duello-alt-baslik {
+  font-size: 14px;
+  color: var(--metin-soluk);
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* --- Düello Butonları --- */
+.duello-buton {
+  width: 100%;
+  max-width: 320px;
+  height: 56px;
+  border-radius: 16px;
+  border: none;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.duello-buton:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+.duello-buton-birincil {
+  background: linear-gradient(145deg, #7c3aed, #4f1fc7);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.45);
+}
+
+.duello-buton-ikincil {
+  background: linear-gradient(145deg, #1565c0, #0d3c7a);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(21, 101, 192, 0.35);
+}
+
+.duello-buton-geri {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: none;
+}
+
+.duello-buton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Giriş Alanı --- */
+.duello-giris-alani {
+  width: 100%;
+  max-width: 320px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0 16px;
+}
+
+.duello-giris-alani:focus {
+  border-color: rgba(124, 58, 237, 0.6);
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.duello-giris-alani::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* --- Hata / Uyarı Mesajı --- */
+.duello-hata-mesaj {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff5252;
+  text-align: center;
+  min-height: 20px;
+}
+
+/* --- Bekleme Odası --- */
+.duello-oda-kutu {
+  width: 100%;
+  max-width: 340px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.duello-oda-kodu-satir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.duello-oda-kodu-etiket {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--metin-soluk);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.duello-oda-kodu-deger {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ce93d8;
+  letter-spacing: 3px;
+}
+
+.duello-oda-kodu-kopyala {
+  background: rgba(206, 147, 216, 0.15);
+  border: 1px solid rgba(206, 147, 216, 0.3);
+  border-radius: 8px;
+  color: #ce93d8;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.duello-oyuncular {
+  display: flex;
+  gap: 12px;
+}
+
+.duello-oyuncu-karti {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.duello-oyuncu-karti.hazir {
+  border-color: rgba(0, 230, 118, 0.4);
+  background: rgba(0, 230, 118, 0.06);
+}
+
+.duello-oyuncu-ikon {
+  font-size: 28px;
+}
+
+.duello-oyuncu-ad {
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  word-break: break-all;
+}
+
+.duello-oyuncu-ad.bos {
+  color: var(--metin-soluk);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.duello-oyuncu-durum {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.duello-oyuncu-durum.hazir {
+  color: #00e676;
+}
+
+.duello-oyuncu-durum.bekliyor {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Hazır Butonu --- */
+.duello-hazir-buton {
+  width: 100%;
+  max-width: 320px;
+  height: 52px;
+  border-radius: 14px;
+  border: 2px solid rgba(0, 230, 118, 0.4);
+  background: rgba(0, 230, 118, 0.1);
+  color: #00e676;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.duello-hazir-buton.hazir-aktif {
+  background: rgba(0, 230, 118, 0.2);
+  border-color: rgba(0, 230, 118, 0.7);
+}
+
+.duello-hazir-buton:active {
+  transform: scale(0.97);
+}
+
+/* --- Başlat Butonu (sadece host görür) --- */
+.duello-baslat-buton {
+  width: 100%;
+  max-width: 320px;
+  height: 52px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(145deg, #7c3aed, #4f1fc7);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5);
+  transition: transform 0.15s, opacity 0.15s;
+  letter-spacing: 0.5px;
+}
+
+.duello-baslat-buton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.duello-baslat-buton:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+/* --- Rakip Bekleniyor Ekranı --- */
+.duello-bekleme-icerik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  padding: 24px;
+}
+
+.duello-bekleme-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(124, 58, 237, 0.2);
+  border-top-color: #7c3aed;
+  border-radius: 50%;
+  animation: duelloSpin 1s linear infinite;
+}
+
+@keyframes duelloSpin {
+  to { transform: rotate(360deg); }
+}
+
+.duello-bekleme-baslik {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+
+.duello-bekleme-alt {
+  font-size: 14px;
+  color: var(--metin-soluk);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* --- Bağlantı Koptu Ekranı --- */
+.duello-geri-sayim {
+  font-size: 56px;
+  font-weight: 900;
+  color: #ff5252;
+  line-height: 1;
+}
+
+/* --- Sonuç Ekranı --- */
+.duello-sonuc-karsilastirma {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+
+.duello-sonuc-kart {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.duello-sonuc-kart.kazanan {
+  border-color: rgba(255, 214, 0, 0.5);
+  background: rgba(255, 214, 0, 0.07);
+}
+
+.duello-sonuc-kart.kaybeden {
+  opacity: 0.7;
+}
+
+.duello-sonuc-kart.esit {
+  border-color: rgba(79, 195, 247, 0.4);
+}
+
+.duello-sonuc-oyuncu-ad {
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  word-break: break-all;
+}
+
+.duello-sonuc-puan {
+  font-size: 30px;
+  font-weight: 900;
+  color: #4fc3f7;
+  line-height: 1;
+}
+
+.duello-sonuc-puan-etiket {
+  font-size: 11px;
+  color: var(--metin-soluk);
+  font-weight: 600;
+}
+
+.duello-sonuc-istat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.duello-sonuc-istat-satir.dogru { color: #00e676; }
+.duello-sonuc-istat-satir.yanlis { color: #ff5252; }
+.duello-sonuc-istat-satir.pas { color: rgba(255,255,255,0.5); }
+
+.duello-sonuc-rozet {
+  font-size: 22px;
+}
+
+/* --- Sonuç Detay Listesi --- */
+.duello-sonuc-liste {
+  width: 100%;
+  padding: 0 14px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.duello-sonuc-kalem {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.duello-sonuc-harf {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.duello-sonuc-bilgi {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.duello-sonuc-bilgi-soru {
+  font-size: 12px;
+  color: var(--metin-soluk);
+  line-height: 1.4;
+}
+
+.duello-sonuc-bilgi-dogru {
+  font-size: 12px;
+  font-weight: 700;
+  color: #00e676;
+}
+
+.duello-sonuc-cevaplar {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.duello-sonuc-cevap-cipi {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.duello-sonuc-cevap-cipi .cevap-ad {
+  color: var(--metin-soluk);
+  font-weight: 600;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.duello-sonuc-cevap-cipi .cevap-deger {
+  color: #fff;
+}
+
+.duello-sonuc-cevap-cipi .cevap-deger.dogru { color: #00e676; }
+.duello-sonuc-cevap-cipi .cevap-deger.yanlis { color: #ff5252; }
+.duello-sonuc-cevap-cipi .cevap-deger.pas { color: rgba(255,255,255,0.4); }
+
+/* --- Yeni Oyun İsteği Toast --- */
+.duello-istek-toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a2744;
+  border: 1px solid rgba(124, 58, 237, 0.5);
+  border-radius: 16px;
+  padding: 16px 18px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  width: 90%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.duello-istek-metin {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.duello-istek-butonlar {
+  display: flex;
+  gap: 8px;
+}
+
+.duello-istek-kabul {
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(145deg, #388e3c, #1b5e20);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.duello-istek-reddet {
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- Oda Kapatıldı Bildirimi --- */
+.duello-sistem-bildirim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+  padding: 24px;
+}
+
+.duello-sistem-bildirim-kutu {
+  background: #0d1530;
+  border: 1px solid rgba(255, 82, 82, 0.4);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.duello-sistem-bildirim-ikon {
+  font-size: 40px;
+}
+
+.duello-sistem-bildirim-baslik {
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.duello-sistem-bildirim-alt {
+  font-size: 13px;
+  color: var(--metin-soluk);
+  line-height: 1.5;
+}
