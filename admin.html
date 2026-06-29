@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0a0e1a" />
+    <title>PassaWord Admin</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/modals.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <style>
+      body {
+        background: #0a0e1a;
+        min-height: 100dvh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-family: inherit;
+        overflow-x: hidden;
+      }
+
+      /* ── GİRİŞ EKRANI ── */
+      #girisEkrani {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100dvh;
+        padding: 32px 24px;
+        box-sizing: border-box;
+        gap: 24px;
+      }
+
+      .giris-logo {
+        text-align: center;
+      }
+      .giris-logo h1 {
+        font-size: 32px;
+        font-weight: 900;
+        background: linear-gradient(135deg, #4fc3f7, #ce93d8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0 0 4px;
+        letter-spacing: 2px;
+      }
+      .giris-logo p {
+        font-size: 13px;
+        color: var(--metin-soluk, #8899bb);
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+
+      .giris-kart {
+        width: 100%;
+        max-width: 360px;
+        background: linear-gradient(170deg, #111827, #0d1530);
+        border: 1px solid rgba(79, 195, 247, 0.18);
+        border-radius: 20px;
+        padding: 28px 24px;
+        box-sizing: border-box;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .giris-kart h2 {
+        margin: 0 0 20px;
+        font-size: 16px;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: 0.5px;
+        text-align: center;
+      }
+
+      .giris-alan-grup {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .giris-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1.5px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        color: #fff;
+        font-size: 15px;
+        padding: 13px 16px;
+        outline: none;
+        box-sizing: border-box;
+        font-family: inherit;
+        transition: border-color 0.2s;
+      }
+      .giris-input:focus {
+        border-color: rgba(79, 195, 247, 0.5);
+      }
+      .giris-input::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .giris-buton {
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(145deg, #1976d2, #0d47a1);
+        border: none;
+        border-radius: 14px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 800;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 16px rgba(25, 118, 210, 0.35);
+        transition: opacity 0.2s;
+      }
+      .giris-buton:active {
+        opacity: 0.85;
+      }
+      .giris-buton:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      #girisHata {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+        color: #ff6b6b;
+        min-height: 18px;
+        margin-top: 4px;
+      }
+
+      /* ── PANEL EKRANI ── */
+      #panelEkrani {
+        display: none;
+        flex-direction: column;
+        min-height: 100dvh;
+      }
+
+      .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px 14px;
+        background: linear-gradient(180deg, #0d1530, transparent);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .panel-baslik {
+        font-size: 17px;
+        font-weight: 900;
+        background: linear-gradient(135deg, #4fc3f7, #ce93d8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1px;
+      }
+
+      .cikis-buton {
+        background: rgba(255, 65, 65, 0.15);
+        border: 1px solid rgba(255, 65, 65, 0.3);
+        border-radius: 10px;
+        color: #ff6b6b;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 8px 14px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .cikis-buton:active {
+        background: rgba(255, 65, 65, 0.25);
+      }
+
+      .panel-icerik {
+        flex: 1;
+        overflow-y: auto;
+        padding: 16px;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      /* ── TOAST ── */
+      #toastBildirim {
+        position: fixed;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        background: #1a2744;
+        border: 1px solid rgba(79, 195, 247, 0.3);
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s, transform 0.25s;
+        z-index: 9999;
+        white-space: nowrap;
+      }
+      #toastBildirim.goster {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      /* ── ONAY DİYALOĞU ── */
+      .onay-diyalog {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+      .onay-diyalog.acik {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .onay-kutu {
+        background: #111827;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 24px;
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+      .onay-baslik {
+        font-size: 17px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .onay-mesaj {
+        font-size: 14px;
+        color: var(--metin-soluk, #8899bb);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .onay-butonlar {
+        display: flex;
+        gap: 10px;
+      }
+      .onay-evet {
+        flex: 1;
+        height: 44px;
+        background: rgba(255, 23, 68, 0.2);
+        border: 1px solid rgba(255, 23, 68, 0.4);
+        border-radius: 12px;
+        color: #ff4444;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .onay-hayir {
+        flex: 1;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- GİRİŞ EKRANI                          -->
+    <!-- ══════════════════════════════════════ -->
+    <div id="girisEkrani">
+      <div class="giris-logo">
+        <h1>PassaWord</h1>
+        <p>Admin Paneli</p>
+      </div>
+
+      <div class="giris-kart">
+        <h2>🔐 Giriş Yap</h2>
+        <div class="giris-alan-grup">
+          <input
+            type="password"
+            id="adminSifreInput"
+            class="giris-input"
+            placeholder="Şifre"
+            autocomplete="current-password"
+          />
+        </div>
+        <button class="giris-buton" id="girisButon" onclick="adminGirisYap()">
+          Giriş Yap
+        </button>
+        <div id="girisHata"></div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- PANEL EKRANI                          -->
+    <!-- ══════════════════════════════════════ -->
+    <div id="panelEkrani">
+      <div class="panel-header">
+        <span class="panel-baslik">PW Admin</span>
+        <button class="cikis-buton" onclick="adminCikisYap()">Çıkış ↩</button>
+      </div>
+      <div class="panel-icerik">
+
+        <!-- admin.js'in adminOneriYukle() fonksiyonu buraya render eder -->
+        <!-- Sekme butonları -->
+        <div id="adminSekmeler"></div>
+        <!-- İçerik listesi -->
+        <div id="adminOneriListe">
+          <div style="text-align:center;color:var(--metin-soluk,#8899bb);padding:32px;font-size:14px;">
+            Yükleniyor...
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Onay Diyaloğu -->
+    <div class="onay-diyalog" id="onayDiyalog">
+      <div class="onay-kutu">
+        <div class="onay-baslik" id="onayBaslik">Emin misin?</div>
+        <div class="onay-mesaj" id="onayMesaj">İşlem geri alınamaz.</div>
+        <div class="onay-butonlar">
+          <button class="onay-evet" id="onayEvetButon">Evet</button>
+          <button class="onay-hayir" onclick="onayKapat()">İptal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toastBildirim"></div>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SCRIPT'LER                            -->
+    <!-- ══════════════════════════════════════ -->
+
+    <!-- Firebase (module) -->
+    <script type="module" src="./js/firebase.js"></script>
+
+    <!-- admin.js'in ihtiyaç duyduğu sabit değişkenler -->
+    <script>
+      const HARFLER = ["A","B","C","Ç","D","E","F","G","H","I/İ","K","L","M","N","O","Ö","P","R","S","Ş","T","U","Ü","V","Y","Z"];
+      const HARF_DOSYA_ESLEME = { A:"a", B:"b", C:"c", Ç:"ch", D:"d", E:"e", F:"f", G:"g", H:"h", "I/İ":"i", K:"k", L:"l", M:"m", N:"n", O:"o", Ö:"oo", P:"p", R:"r", S:"s", Ş:"sh", T:"t", U:"u", Ü:"uu", V:"v", Y:"y", Z:"z" };
+
+      /* ── UI YARDIMCILARI (admin.js bunları çağırır) ── */
+      function toastGoster(mesaj, sure = 2500) {
+        const toast = document.getElementById("toastBildirim");
+        toast.textContent = mesaj;
+        toast.classList.add("goster");
+        setTimeout(() => toast.classList.remove("goster"), sure);
+      }
+      window.toastGoster = toastGoster;
+
+      function onayGoster(baslik, mesaj, onayCallback) {
+        document.getElementById("onayBaslik").textContent = baslik;
+        document.getElementById("onayMesaj").textContent = mesaj;
+        document.getElementById("onayEvetButon").onclick = () => {
+          onayCallback();
+          onayKapat();
+        };
+        document.getElementById("onayDiyalog").classList.add("acik");
+      }
+      window.onayGoster = onayGoster;
+
+      window.onayKapat = function () {
+        document.getElementById("onayDiyalog").classList.remove("acik");
+      };
+
+      /* modal* fonksiyonları — admin.js bazı yerlerde bunları çağırıyor */
+      window.modalAc = function (id) {
+        const el = document.getElementById(id);
+        if (el) el.classList.add("acik");
+      };
+      window.modalKapat = function (id) {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove("acik");
+      };
+      window.disaTiklaKapat = function (e, id) {
+        if (e.target === document.getElementById(id)) modalKapat(id);
+      };
+
+      /* ── GİRİŞ / ÇIKIŞ ── */
+      window.adminGirisYap = async function () {
+        const sifre = document.getElementById("adminSifreInput").value.trim();
+        const hataEl = document.getElementById("girisHata");
+        const btn = document.getElementById("girisButon");
+        hataEl.textContent = "";
+        if (!sifre) { hataEl.textContent = "Şifre girin."; return; }
+
+        btn.disabled = true;
+        btn.textContent = "⏳ Giriş yapılıyor...";
+
+        try {
+          // veritabani ve kimlikDogrulama firebase.js'den window'a ekleniyor
+          // Biraz bekleyip hazır olmasını sağlıyoruz
+          await new Promise(res => setTimeout(res, 600));
+
+          const { signInWithEmailAndPassword } = await import(
+            "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js"
+          );
+          await signInWithEmailAndPassword(
+            window.kimlikDogrulama,
+            "beratarsln@gmail.com",
+            sifre
+          );
+
+          sessionStorage.setItem("pw_admin_giris", "true");
+          panelAc();
+        } catch (e) {
+          hataEl.textContent = "Yanlış şifre!";
+          btn.disabled = false;
+          btn.textContent = "Giriş Yap";
+        }
+      };
+
+      window.adminCikisYap = function () {
+        sessionStorage.removeItem("pw_admin_giris");
+        document.getElementById("panelEkrani").style.display = "none";
+        document.getElementById("girisEkrani").style.display = "flex";
+        document.getElementById("adminSifreInput").value = "";
+        document.getElementById("girisHata").textContent = "";
+        document.getElementById("girisButon").disabled = false;
+        document.getElementById("girisButon").textContent = "Giriş Yap";
+      };
+
+      function panelAc() {
+        document.getElementById("girisEkrani").style.display = "none";
+        document.getElementById("panelEkrani").style.display = "flex";
+        // adminOneriYukle → admin.js'den geliyor, PassaWord panelini açar
+        if (typeof adminOneriYukle === "function") {
+          adminOneriYukle("passaword");
+        }
+      }
+
+      /* Enter tuşu ile giriş */
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && document.getElementById("girisEkrani").style.display !== "none") {
+          adminGirisYap();
+        }
+      });
+
+      /* Sayfa açılışında oturum kontrolü */
+      window.addEventListener("load", () => {
+        if (sessionStorage.getItem("pw_admin_giris") === "true") {
+          // Firebase hazır olana kadar bekle
+          setTimeout(panelAc, 800);
+        }
+      });
+    </script>
+
+    <!-- Admin panel logic -->
+    <script src="./js/admin.js"></script>
+
+  </body>
+</html>
