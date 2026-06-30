@@ -209,11 +209,13 @@ window.duelloSonucGoster = function (sonucVerisi) {
 // Kendi sonuç objesini oluştur (game.js oyunuBitir'den çağrılır)
 window.duelloSonucObjesiOlustur = function () {
   const HARFLER = window.HARFLER || [];
+  const HARF_DOSYA_ESLEME = window.HARF_DOSYA_ESLEME || {};
   const cevaplar = {};
 
   HARFLER.forEach((harf) => {
     const veri = window.oyunDurumu.harfCevaplari?.[harf];
-    cevaplar[harf] = {
+    const guvenliKey = HARF_DOSYA_ESLEME[harf] || harf;
+    cevaplar[guvenliKey] = {
       verilen: veri?.verilen || "Pas",
       dogruMu: veri?.dogruMu || false,
     };
