@@ -219,6 +219,8 @@ window.duelloSayfaYenilemeyiKontrolEt = async function () {
 
     if (odaVerisi.durum === "oyun" && odaVerisi.oyunVerisi) {
       // Oyun devam ediyorsa kaldığı yerden devam et
+      // Önce soruları Firebase'den yükle (localStorage'da saklanmıyor)
+      duelloSorulariFirebaseDenYukle(odaVerisi.oyunVerisi.sorular);
       duelloOyunDurumunuGeriYukle(kayitliDurum);
       duelloEkraniGoster("oyunEkrani");
 
@@ -312,6 +314,26 @@ function duelloLocalStorageOku() {
 
 function duelloLocalStorageTemizle() {
   localStorage.removeItem("pw_duello_kayit");
+}
+
+function duelloSorulariFirebaseDenYukle(sorularObj) {
+  if (!sorularObj) return;
+
+  const HARFLER = window.HARFLER || [];
+  const HARF_DOSYA_ESLEME = window.HARF_DOSYA_ESLEME || {};
+
+  window.oyunDurumu.secilenSorular = window.oyunDurumu.secilenSorular || {};
+  window.oyunDurumu.duelloModu = true;
+  window.oyunDurumu.duelloSorular = sorularObj;
+
+  HARFLER.forEach((harf) => {
+    const guvenliKey = HARF_DOSYA_ESLEME[harf] || harf;
+    if (sorularObj[guvenliKey]) {
+      window.oyunDurumu.secilenSorular[harf] = sorularObj[guvenliKey];
+    } else {
+      window.oyunDurumu.secilenSorular[harf] = null;
+    }
+  });
 }
 
 function duelloOyunDurumunuGeriYukle(kayit) {
