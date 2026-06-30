@@ -385,8 +385,8 @@ function duelloSonucEkraniniDoldur(sonucVerisi) {
     const soru = sorular?.[guvenliKey];
     if (!soru) return;
 
-    const hostCevap = hostSonuc.cevaplar?.[harf];
-    const misafirCevap = misafirSonuc.cevaplar?.[harf];
+    const hostCevap = hostSonuc.cevaplar?.[guvenliKey];
+    const misafirCevap = misafirSonuc.cevaplar?.[guvenliKey];
 
     const kalem = document.createElement("div");
     kalem.className = "duello-sonuc-kalem";
