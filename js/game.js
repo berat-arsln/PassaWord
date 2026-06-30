@@ -56,6 +56,9 @@ const HARF_DOSYA_ESLEME = {
   Y: "y",
   Z: "z",
 };
+window.HARF_DOSYA_ESLEME = HARF_DOSYA_ESLEME;
+
+
 const EMAILJS_SERVICE_ID = "service_ojr0p6q";
 const EMAILJS_TEMPLATE_ID = "template_dlmjr0w";
 const EMAILJS_PUBLIC_KEY = "D01aRDtRbWdqpLIjm";
