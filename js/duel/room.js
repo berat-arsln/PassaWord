@@ -253,9 +253,9 @@ function odaDinleyicisiniBaslat(kod) {
         const bildirim = document.getElementById("duelloSistemBildirim");
         if (bildirim) bildirim.remove();
 
-        duelloSonuctenCik();
+        if (typeof duelloSonuctenCik === "function") duelloSonuctenCik();
         duelloEkraniGoster("beklemOdasiEkrani");
-        document.getElementById("beklemOdaKodu").textContent = odaKodu;
+        document.getElementById("beklemOdaKodu").textContent = kod;
       }
     }
 
