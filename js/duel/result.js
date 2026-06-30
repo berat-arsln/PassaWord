@@ -167,6 +167,7 @@ window.duelloYeniOyunIste = async function () {
 /* --------- İptal --------- */
 async function _yeniOyunIstegiIptal(odaKodu) {
   try {
+    window._duelloManuelIptal = true;
     await remove(
       ref(veritabani, `duelRooms/${odaKodu}/yeniOyunIstegi`)
     );
@@ -182,7 +183,7 @@ async function _yeniOyunIstegiIptal(odaKodu) {
 }
 
 /* --------- Reddet Dinleyicisi --------- */
-// Karşı taraf reddederse bildirimi kaldır
+// Karşı taraf reddederse bildirim göster, kendi iptal ettiysek sessizce kapat
 function _reddDinleyicisiniBaslat(odaKodu) {
   if (window._duelloReddDinleyici) {
     window._duelloReddDinleyici();
@@ -194,14 +195,33 @@ function _reddDinleyicisiniBaslat(odaKodu) {
     `duelRooms/${odaKodu}/yeniOyunIstegi`
   );
 
+  // İlk değeri atla (henüz var olan isteği "silindi" sanmasın)
+  let ilkDeger = true;
+
   const dinleyici = onValue(istekRef, (snap) => {
+    if (ilkDeger) {
+      ilkDeger = false;
+      return;
+    }
+
     if (!snap.exists()) {
-      // İstek silindi (reddedildi veya iptal)
+      // İstek silindi (reddedildi veya biz iptal ettik)
       dinleyici();
       window._duelloReddDinleyici = null;
 
       const eskiBildirim = document.getElementById("duelloSistemBildirim");
       if (eskiBildirim) eskiBildirim.remove();
+
+      // Kendi iptalimiz değilse (hâlâ sonuç ekranındaysak ve manuel iptal etmediysek) reddedildi mesajı göster
+      if (!window._duelloManuelIptal) {
+        duelloSistemBildirimiGoster(
+          "İstek Reddedildi",
+          "Rakibiniz yeni oyun isteğini reddetti.",
+          "Tamam",
+          () => {}
+        );
+      }
+      window._duelloManuelIptal = false;
     }
   });
 
