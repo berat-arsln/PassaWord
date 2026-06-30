@@ -416,75 +416,7 @@ function duelloPresenceBitir(odaKodu, rol) {
   remove(presenceRef).catch(console.error);
 }
 
-/* --------- Yeni Oyun İsteği --------- */
-window.duelloYeniOyunIste = async function () {
-  const { odaKodu, rolum } = window.duelloDurum;
-  if (!odaKodu || !rolum) {
-    // Oda yoksa (karşı taraf çıkmışsa) direkt yeni oda menüsüne yönlendir
-    duellodenCik();
-    return;
-  }
 
-  try {
-    await set(ref(veritabani, `duelRooms/${odaKodu}/yeniOyunIstegi`), {
-      yapan: rolum,
-      zaman: Date.now(),
-    });
-
-    // "Rakip bekleniyor" benzeri bir mesaj göster
-    duelloSistemBildirimiGoster(
-      "İstek Gönderildi",
-      "Rakibinizin kabulü bekleniyor...",
-      "İptal",
-      () => yeniOyunIstegiIptal(odaKodu)
-    );
-  } catch (hata) {
-    console.error("Yeni oyun isteği hatası:", hata);
-  }
-};
-
-async function yeniOyunIstegiKabul(odaKodu) {
-  try {
-    // İsteği temizle
-    await remove(ref(veritabani, `duelRooms/${odaKodu}/yeniOyunIstegi`));
-
-    // Hazır durumlarını sıfırla
-    await set(ref(veritabani, `duelRooms/${odaKodu}/host/hazir`), false);
-    await set(ref(veritabani, `duelRooms/${odaKodu}/misafir/hazir`), false);
-
-    // Önceki oyun verisini temizle
-    await remove(ref(veritabani, `duelRooms/${odaKodu}/oyunVerisi`));
-    await remove(ref(veritabani, `duelRooms/${odaKodu}/sonuc`));
-
-    // Durumu beklemeye al
-    await set(ref(veritabani, `duelRooms/${odaKodu}/durum`), "bekleme");
-
-    // Sistem bildirimini kapat
-    duelloSistemBildiriminiKapat();
-
-    // Bekleme odasına dön
-    duelloEkraniGoster("beklemOdasiEkrani");
-
-  } catch (hata) {
-    console.error("Yeni oyun kabul hatası:", hata);
-  }
-}
-
-async function yeniOyunIstegiReddet(odaKodu) {
-  try {
-    await remove(ref(veritabani, `duelRooms/${odaKodu}/yeniOyunIstegi`));
-  } catch (hata) {
-    console.error("Yeni oyun reddet hatası:", hata);
-  }
-}
-
-async function yeniOyunIstegiIptal(odaKodu) {
-  try {
-    await remove(ref(veritabani, `duelRooms/${odaKodu}/yeniOyunIstegi`));
-  } catch (hata) {
-    console.error("Yeni oyun iptal hatası:", hata);
-  }
-}
 
 /* --------- Durum Sıfırla --------- */
 function duelloDurumunuSifirla() {
@@ -500,5 +432,3 @@ function duelloDurumunuSifirla() {
 
 window.duelloDurumunuSifirla = duelloDurumunuSifirla;
 window.odaDinleyicisiniBaslat = odaDinleyicisiniBaslat;
-window.yeniOyunIstegiKabul = yeniOyunIstegiKabul;
-window.yeniOyunIstegiReddet = yeniOyunIstegiReddet;
