@@ -7,10 +7,13 @@ window.duelloOyunuBaslat = async function (oyunVerisi) {
   const { sorular, baslangicZamani } = oyunVerisi;
 
   // Soruları oyunDurumu'na yükle (game.js'deki yapıyla uyumlu)
+  // NOT: Firebase'de güvenli key (a, b, c...) ile saklandığı için harf eşlemesiyle geri çeviriyoruz
   const HARFLER = window.HARFLER || [];
+  const HARF_DOSYA_ESLEME = window.HARF_DOSYA_ESLEME || {};
   HARFLER.forEach((harf) => {
-    if (sorular[harf]) {
-      window.oyunDurumu.secilenSorular[harf] = sorular[harf];
+    const guvenliKey = HARF_DOSYA_ESLEME[harf] || harf;
+    if (sorular[guvenliKey]) {
+      window.oyunDurumu.secilenSorular[harf] = sorular[guvenliKey];
     } else {
       window.oyunDurumu.secilenSorular[harf] = null;
     }
