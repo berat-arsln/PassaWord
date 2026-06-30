@@ -26,6 +26,8 @@ const HARFLER = [
   "Y",
   "Z",
 ];
+window.HARFLER = HARFLER;
+
 const HARF_DOSYA_ESLEME = {
   A: "a",
   B: "b",
@@ -58,6 +60,7 @@ const EMAILJS_SERVICE_ID = "service_ojr0p6q";
 const EMAILJS_TEMPLATE_ID = "template_dlmjr0w";
 const EMAILJS_PUBLIC_KEY = "D01aRDtRbWdqpLIjm";
 const OYUN_SURESI = 360;
+window.OYUN_SURESI = OYUN_SURESI;
 
 // Oyun durum değişkenleri (Doğru, yanlış sayıları da buraya eklendi)
 let oyunDurumu = {
@@ -78,6 +81,7 @@ let oyunDurumu = {
   yanlisSayisi: 0,
   pasSayisi: 0,
 };
+window.oyunDurumu = oyunDurumu;
 
 /* ========================================================================= */
 /* JSON DOSYALARINDAN SORULARI YÜKLEME (BAŞLANGIÇ)                           */
