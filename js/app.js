@@ -13,7 +13,26 @@ if (isPWA) {
         if (document.visibilityState === 'visible') {
             const oyunEkrani = document.getElementById('oyunEkrani');
             const oyunGorunur = oyunEkrani && !oyunEkrani.classList.contains('gizli');
-            if (!oyunGorunur) {
+
+            // Düello ile ilgili herhangi bir ekran açıksa reload yapma
+            const duelloEkranIdleri = [
+                'duelloMenuEkrani',
+                'odaOlusturEkrani',
+                'odaGirEkrani',
+                'beklemOdasiEkrani',
+                'rakipBekleniyorEkrani',
+                'baglantiKoptuEkrani',
+                'duelloSonucEkrani',
+            ];
+            const duelloEkraniAcikMi = duelloEkranIdleri.some((id) => {
+                const el = document.getElementById(id);
+                return el && !el.classList.contains('gizli');
+            });
+
+            // Düello modundaysak (tek oyunculu/duello fark etmeksizin oyun ekranındaysak) da reload yapma
+            const duelloModundaMi = window.oyunDurumu?.duelloModu === true;
+
+            if (!oyunGorunur && !duelloEkraniAcikMi && !duelloModundaMi) {
                 window.location.reload();
             }
         }
