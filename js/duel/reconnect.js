@@ -217,7 +217,23 @@ window.duelloSayfaYenilemeyiKontrolEt = async function () {
     // Oda dinleyicisini başlat
     odaDinleyicisiniBaslat(odaKodu);
 
-    if (odaVerisi.durum === "oyun" && odaVerisi.oyunVerisi) {
+    // Kendi sonucumuzu zaten yazmış mıyız kontrol et (rakip bekleniyor durumu)
+    const kendiSonucSnap = await get(
+      ref(veritabani, `duelRooms/${odaKodu}/oyuncuSonuclari/${rolum}`)
+    );
+    const kendiSonucumVar = kendiSonucSnap.exists();
+
+    if (odaVerisi.durum === "bitti" && odaVerisi.sonuc) {
+      duelloLocalStorageTemizle();
+      duelloSonucGoster(odaVerisi.sonuc);
+
+    } else if (odaVerisi.durum === "oyun" && kendiSonucumVar) {
+      // Ben oyunu zaten bitirmişim, rakibi bekliyorum
+      duelloLocalStorageTemizle();
+      duelloEkraniGoster("rakipBekleniyorEkrani");
+      duelloRakipBeklemeBaslat(odaKodu, rolum, kendiSonucSnap.val());
+
+    } else if (odaVerisi.durum === "oyun" && odaVerisi.oyunVerisi) {
       // Oyun devam ediyorsa kaldığı yerden devam et
       // Önce soruları Firebase'den yükle (localStorage'da saklanmıyor)
       duelloSorulariFirebaseDenYukle(odaVerisi.oyunVerisi.sorular);
@@ -239,10 +255,6 @@ window.duelloSayfaYenilemeyiKontrolEt = async function () {
         if (typeof zamanlayiciBaslat === "function") zamanlayiciBaslat();
         if (typeof canliIstatistikGuncelle === "function") canliIstatistikGuncelle();
       }, 100);
-
-    } else if (odaVerisi.durum === "bitti" && odaVerisi.sonuc) {
-      duelloLocalStorageTemizle();
-      duelloSonucGoster(odaVerisi.sonuc);
 
     } else if (odaVerisi.durum === "bekleme") {
       duelloLocalStorageTemizle();
