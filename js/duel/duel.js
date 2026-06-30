@@ -50,20 +50,24 @@ const _orijinalOyunuBitir = window.oyunuBitir;
 
 window.oyunuBitir = function (erkenBitirildi = false) {
   if (!window.oyunDurumu?.duelloModu) {
+    // Normal mod — orijinal fonksiyon
     if (typeof _orijinalOyunuBitir === "function") {
       _orijinalOyunuBitir(erkenBitirildi);
     }
     return;
   }
 
-  // Düello modu — süre bonusu yok, kombo yok, geçmiş yok, skor yok
+  // Düello modu
   clearInterval(window.oyunDurumu.zamanlayici);
   window.oyunDurumu.calisiyor = false;
 
   const sonuc = duelloSonucObjesiOlustur();
   duelloOyunBitti(sonuc);
 
-  duelloLocalStorageTemizle();
+  // NOT: localStorage'ı SİLMİYORUZ — "rakip bekleniyor" durumunda
+  // sayfa yenilenirse bu kayıt sayesinde Firebase'den durumu tekrar kontrol edebiliriz.
+  // Kayıt sadece "oyun" veya "bekleme" durumuna geçince (room.js/result.js) ya da
+  // sonuç ekranı gösterilince temizlenecek.
 };
 
 /* --------- game.js Hook — zamanlayiciBaslat --------- */
