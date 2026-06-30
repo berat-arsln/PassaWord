@@ -379,8 +379,10 @@ function duelloSonucEkraniniDoldur(sonucVerisi) {
   liste.innerHTML = "";
 
   const HARFLER = window.HARFLER || [];
+  const HARF_DOSYA_ESLEME = window.HARF_DOSYA_ESLEME || {};
   HARFLER.forEach((harf) => {
-    const soru = sorular?.[harf];
+    const guvenliKey = HARF_DOSYA_ESLEME[harf] || harf;
+    const soru = sorular?.[guvenliKey];
     if (!soru) return;
 
     const hostCevap = hostSonuc.cevaplar?.[harf];
