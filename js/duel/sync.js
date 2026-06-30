@@ -202,6 +202,7 @@ async function duelloSonucHesapla(odaKodu, benimSonucum, digerSonuc) {
 
 // Sonuç ekranını göster
 window.duelloSonucGoster = function (sonucVerisi) {
+  duelloLocalStorageTemizle();
   duelloSonucEkraniniDoldur(sonucVerisi);
   duelloEkraniGoster("duelloSonucEkrani");
 };
