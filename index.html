@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./css/modals.css" />
     <link rel="stylesheet" href="./css/admin.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+<link rel="stylesheet" href="./css/duel.css" />
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
   </head>
@@ -210,10 +211,17 @@
         </div>
         <button
           class="ana-buton"
-          onclick="oyunuBaslat()"
-          style="margin-top: 8px"
+          onclick="tekOyunculuBaslat()"
+          style="margin-top: 8px; background: linear-gradient(145deg, #1976d2, #0d47a1)"
         >
-          ▶ OYNA
+          🕹 Tek Oyunculu
+        </button>
+        <button
+          class="ana-buton"
+          onclick="duelloMenuAc()"
+          style="margin-top: 12px; background: linear-gradient(145deg, #7c3aed, #4f1fc7); box-shadow: 0 4px 20px rgba(124, 58, 237, 0.45)"
+        >
+          ⚔️ Düello
         </button>
       </div>
     </div>
@@ -1127,6 +1135,13 @@
     <script src="./js/scores.js"></script>
     <script src="./js/feedback.js"></script>
     <script src="./js/admin.js"></script>
+
+    <script src="./js/duel/duel-ui.js"></script>
+    <script src="./js/duel/room.js"></script>
+    <script src="./js/duel/sync.js"></script>
+    <script src="./js/duel/reconnect.js"></script>
+    <script src="./js/duel/result.js"></script>
+    <script src="./js/duel/duel.js"></script>
 
     <script src="./js/app.js"></script>
 
