@@ -224,7 +224,6 @@ function odaDinleyicisiniBaslat(kod) {
 
     // Oyun başlatma sinyali
     if (odaVerisi.durum === "oyun" && odaVerisi.oyunVerisi) {
-      const oyunEkrani = document.getElementById("oyunEkrani");
       const beklemEkraniGizliMi =
         document.getElementById("beklemOdasiEkrani")?.classList.contains("gizli");
 
@@ -239,6 +238,24 @@ function odaDinleyicisiniBaslat(kod) {
       const rakipEkrani = document.getElementById("rakipBekleniyorEkrani");
       if (rakipEkrani && !rakipEkrani.classList.contains("gizli")) {
         duelloSonucGoster(odaVerisi.sonuc);
+      }
+    }
+
+    // "Yeni oyun" kabul edilip durum beklemeye dönünce, sonuç ekranında
+    // bekleyen taraf (isteği gönderen) otomatik bekleme odasına geçsin
+    if (odaVerisi.durum === "bekleme") {
+      const duelloSonucEkrani = document.getElementById("duelloSonucEkrani");
+      const sonucEkraniAcikMi =
+        duelloSonucEkrani && !duelloSonucEkrani.classList.contains("gizli");
+
+      if (sonucEkraniAcikMi) {
+        // Sistem bildirimini kapat (varsa "İstek Gönderildi" bildirimi)
+        const bildirim = document.getElementById("duelloSistemBildirim");
+        if (bildirim) bildirim.remove();
+
+        duelloSonuctenCik();
+        duelloEkraniGoster("beklemOdasiEkrani");
+        document.getElementById("beklemOdaKodu").textContent = odaKodu;
       }
     }
 
