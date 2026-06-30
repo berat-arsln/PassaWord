@@ -1,7 +1,11 @@
       function genelSkorTablosunuDinle() {
-        const skorRef = ref(veritabani, "skorlar");
+  const skorRef = query(
+    ref(veritabani, "skorlar"),
+    orderByChild("puan"),
+    limitToLast(20)
+  );
 
-        onValue(skorRef, (anlık) => {
+  onValue(skorRef, (anlık) => {
           const veri = anlık.val();
           const liste = document.getElementById("genelSkorListe");
           liste.innerHTML = "";
