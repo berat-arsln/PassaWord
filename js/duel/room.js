@@ -288,8 +288,15 @@ window.duelloBaslat = async function () {
   butonuKilitle("oyunuBaslatButon", true);
 
   try {
-    // Soruları seç ve Firebase'e yaz (her iki oyuncu aynı soruları görsün)
-    await sorulariYukle();
+    // Soruları yükle (ekranı DEĞİŞTİRMEDEN, game.js'deki sorulariYukle yerine)
+    const sorularSetiVar =
+      window.oyunDurumu?.yuklenenSorular &&
+      Object.keys(window.oyunDurumu.yuklenenSorular).length > 0;
+
+    if (!sorularSetiVar) {
+      await duelloSorulariSessizceYukle();
+    }
+
     sorulariSec();
 
     // Seçilen soruları Firebase'e kaydet
@@ -326,6 +333,36 @@ window.duelloBaslat = async function () {
     butonuKilitle("oyunuBaslatButon", false);
   }
 };
+
+/* --------- Soruları Sessizce Yükle (ekran değiştirmeden) --------- */
+async function duelloSorulariSessizceYukle() {
+  const HARFLER = window.HARFLER || [];
+  const HARF_DOSYA_ESLEME = window.HARF_DOSYA_ESLEME || {};
+
+  const yuklemeSozleri = HARFLER.map(async (harf) => {
+    const dosyaAdi = HARF_DOSYA_ESLEME[harf];
+    try {
+      const yanit = await fetch(`./questions/${dosyaAdi}_questions.json`);
+      if (!yanit.ok) throw new Error(`${harf} yüklenemedi`);
+      const sorular = await yanit.json();
+
+      const numaraliSorular = sorular.map((s, idx) => {
+        s.id = s.id || idx + 1;
+        return s;
+      });
+
+      return { harf, sorular: numaraliSorular };
+    } catch (hata) {
+      console.warn(`${harf} hatası:`, hata);
+      return { harf, sorular: [] };
+    }
+  });
+
+  const sonuclar = await Promise.all(yuklemeSozleri);
+  sonuclar.forEach(({ harf, sorular }) => {
+    window.oyunDurumu.yuklenenSorular[harf] = sorular;
+  });
+}
 
 /* --------- Odadan Çık --------- */
 window.odadanCik = async function () {
