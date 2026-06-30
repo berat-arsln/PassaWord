@@ -2,6 +2,10 @@
 /* DÜELLO ANA KOORDİNATÖR — Tüm modülleri bağlar, game.js hook'ları         */
 /* ========================================================================= */
 
+window.addEventListener("error", (e) => {
+  alert("HATA: " + e.message + " | " + e.filename + ":" + e.lineno);
+});
+
 /* --------- Başlatma --------- */
 window.duelloSisteminiBaslat = async function () {
   // Ekranları oluştur (DOM'a enjekte et)
