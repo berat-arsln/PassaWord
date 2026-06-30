@@ -293,12 +293,17 @@ window.duelloBaslat = async function () {
     sorulariSec();
 
     // Seçilen soruları Firebase'e kaydet
+    // NOT: HARFLER içindeki "I/İ" gibi harfler Firebase key'i olamaz ("/" yasak)
+    // bu yüzden güvenli anahtar (a, b, c... harf dosya eşlemesi) kullanıyoruz
     const sorularObj = {};
     const HARFLER = window.HARFLER || [];
+    const HARF_DOSYA_ESLEME = window.HARF_DOSYA_ESLEME || {};
     HARFLER.forEach((harf) => {
       const soru = window.oyunDurumu?.secilenSorular?.[harf];
+      const guvenliKey = HARF_DOSYA_ESLEME[harf] || harf;
       if (soru) {
-        sorularObj[harf] = {
+        sorularObj[guvenliKey] = {
+          harf: harf,
           soru: soru.soru,
           cevap: soru.cevap,
           alternatifler: soru.alternatifler || [],
