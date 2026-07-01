@@ -701,7 +701,6 @@ function skorkaydet(puan, dogru, yanlis, pas, detay) {
     dogru,
     yanlis,
     pas,
-    detay: detay || [],
     tarih: new Date().toISOString(),
   }).catch(console.error);
 }
