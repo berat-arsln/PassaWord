@@ -706,6 +706,7 @@ function onlineDurumBaslat() {
     }).catch(() => {});
   };
   document.addEventListener("visibilitychange", window._pwVisibilityListener);
+}
 
 
 
