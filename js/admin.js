@@ -891,7 +891,7 @@ window.pwOyuncuAra = async function () {
   }
 };
 
-window.pwTumOyunculariYukle = async function () {
+window.pwTumOyunculariYukle = async function (tekrarDenemeSayisi = 0) {
   const konteyner = document.getElementById("pwOyuncuListe");
   if (!konteyner) return;
   konteyner.innerHTML = `<div style="color:var(--metin-soluk);font-size:13px;text-align:center;padding:8px;">Yükleniyor...</div>`;
@@ -931,7 +931,12 @@ window.pwTumOyunculariYukle = async function () {
       });
     });
   } catch (e) {
-    konteyner.innerHTML = `<div style="color:#ff6b6b;font-size:13px;">Hata oluştu.</div>`;
+    // Auth token arka plandan dönünce henüz hazır olmayabilir — bir kez daha dene
+    if (tekrarDenemeSayisi < 1) {
+      setTimeout(() => pwTumOyunculariYukle(tekrarDenemeSayisi + 1), 1200);
+      return;
+    }
+    konteyner.innerHTML = `<div style="color:#ff6b6b;font-size:13px;">Hata oluştu. <button onclick="pwTumOyunculariYukle()" style="background:rgba(255,255,255,0.08);border:none;border-radius:6px;color:#fff;padding:4px 10px;font-size:12px;cursor:pointer;margin-left:6px;">🔄 Tekrar Dene</button></div>`;
   }
 };
 
