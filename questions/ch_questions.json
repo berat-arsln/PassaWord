@@ -9039,16 +9039,6 @@
     ]
   },
   {
-    "id": 991,
-    "soru": "Bir şebekeye bağlı olma hali, online",
-    "cevap": "Çevrim içi",
-    "alternatifler": [
-      "ÇEVRIM IÇI",
-      "CEVRIM ICI",
-      "Çevrimiçi"
-    ]
-  },
-  {
     "id": 992,
     "soru": "Bilgisayar sisteminde internete bağlı olma durumu",
     "cevap": "Çevrim içi",
