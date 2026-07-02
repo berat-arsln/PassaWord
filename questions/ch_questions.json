@@ -9074,8 +9074,10 @@
     "soru": "Evlenecek kişi için biriktirilen eşya",
     "cevap": "Çeyizlik",
     "alternatifler": [
-      "ÇEYIZLIK",
-      "CEYIZLIK"
+      "çeyiz seti",
+      "çeyizseti",
+      "çeyizler",
+      "çeyiz"
     ]
   },
   {
