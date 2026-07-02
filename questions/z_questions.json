@@ -1,6 +1,62 @@
 [
   {
     "id": 1,
+    "soru": "Kurgusal karakter Zorro ile özdeşleşen dil işareti",
+    "cevap": "Z harfi",
+    "alternatifler": [
+      "Z HARFI",
+      "Zharfi"
+    ]
+  },
+  {
+    "id": 2,
+    "soru": "Zorro'nun kılıcıyla çizdiği işaret",
+    "cevap": "Z harfi",
+    "alternatifler": [
+      "Z HARFI",
+      "Zharfi"
+    ]
+  },
+  {
+    "id": 3,
+    "soru": "Teknoloji çağında doğup büyüyen jenerasyon",
+    "cevap": "Z kuşağı",
+    "alternatifler": [
+      "Z KUSAGI",
+      "Z KUŞAĞI",
+      "Zkuşağı"
+    ]
+  },
+  {
+    "id": 4,
+    "soru": "Kristal Nesil olarak da bilinen 21. yy çocukları",
+    "cevap": "Z kuşağı",
+    "alternatifler": [
+      "Z KUSAGI",
+      "Z KUŞAĞI",
+      "Zkuşağı"
+    ]
+  },
+  {
+    "id": 5,
+    "soru": "İşletmenin günü kapatırken kasadan aldığı döküm",
+    "cevap": "Z raporu",
+    "alternatifler": [
+      "Z RAPORU",
+      "Zraporu"
+    ]
+  },
+  {
+    "id": 6,
+    "soru": "İşletmenin günü kapatırken kasadan aldığı döküm",
+    "cevap": "Z raporu",
+    "alternatifler": [
+      "Z RAPORU",
+      "Zraporu"
+    ]
+  },
+  {
+    "id": 7,
     "soru": "Kamu düzenini koruyan belediye görevlisi",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -8,7 +64,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 8,
     "soru": "Belediye kolluk görevlisi",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -16,7 +72,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 9,
     "soru": "Belediye polisi",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -24,7 +80,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 10,
     "soru": "Belediyenin huzur ve güvenlik teşkilatı",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -32,7 +88,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 11,
     "soru": "Bir Demet Tiyatro'da Engin Günaydın'ın mesleği",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -40,7 +96,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 12,
     "soru": "Çöpçüler Kralı'nda Şener Şen'in mesleki unvanı",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -48,7 +104,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 13,
     "soru": "Çöpçüler Kralı'nda Şener Şen'in mesleki unvanı",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -56,7 +112,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 14,
     "soru": "Çöpçüler Kralı'nda Şener Şen'in mesleki unvanı",
     "cevap": "Zabıta",
     "alternatifler": [
@@ -64,7 +120,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 15,
     "soru": "Eski dilde tutanak",
     "cevap": "Zabıtname",
     "alternatifler": [
@@ -72,7 +128,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 16,
     "soru": "High School Musical ve 17 Yeniden'de rol aldı",
     "cevap": "Zac efron",
     "alternatifler": [
@@ -81,7 +137,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 17,
     "soru": "High School Musical'ın başrol aktörü",
     "cevap": "Zac efron",
     "alternatifler": [
@@ -90,7 +146,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 18,
     "soru": "High School Musical'ın başrol aktörü",
     "cevap": "Zac efron",
     "alternatifler": [
@@ -99,7 +155,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 19,
     "soru": "Dizi de olan Rick and Morty çizgi romanının yazarı",
     "cevap": "Zac gorman",
     "alternatifler": [
@@ -108,7 +164,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 20,
     "soru": "Eski dilde soylular anlamına gelen söz",
     "cevap": "Zadegan",
     "alternatifler": [
@@ -116,23 +172,7 @@
     ]
   },
   {
-    "id": 15,
-    "soru": "Vaktinde firar, __",
-    "cevap": "Zaferdir",
-    "alternatifler": [
-      "ZAFERDIR"
-    ]
-  },
-  {
-    "id": 16,
-    "soru": "Kütahya'nın Altıntaş ilçesinde bulunan savaş anıtı",
-    "cevap": "Zafertepe",
-    "alternatifler": [
-      "ZAFERTEPE"
-    ]
-  },
-  {
-    "id": 17,
+    "id": 21,
     "soru": "Paris'te Champs-Elysees girişindeki tarihi geçit",
     "cevap": "Zafer takı",
     "alternatifler": [
@@ -141,7 +181,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 22,
     "soru": "Lee Marvin'in oynadığı son film",
     "cevap": "Zafer topu",
     "alternatifler": [
@@ -150,7 +190,23 @@
     ]
   },
   {
-    "id": 19,
+    "id": 23,
+    "soru": "Vaktinde firar, __",
+    "cevap": "Zaferdir",
+    "alternatifler": [
+      "ZAFERDIR"
+    ]
+  },
+  {
+    "id": 24,
+    "soru": "Kütahya'nın Altıntaş ilçesinde bulunan savaş anıtı",
+    "cevap": "Zafertepe",
+    "alternatifler": [
+      "ZAFERTEPE"
+    ]
+  },
+  {
+    "id": 25,
     "soru": "Ziyafet sözünün tüm harflerini içerir; zayıflık",
     "cevap": "Zafiyet",
     "alternatifler": [
@@ -158,7 +214,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 26,
     "soru": "Dermansız, zayıf kalma hastalığı",
     "cevap": "Zafiyet",
     "alternatifler": [
@@ -166,55 +222,55 @@
     ]
   },
   {
-    "id": 21,
-    "soru": "Hırvatistan'ın başkenti",
-    "cevap": "Zagreb",
-    "alternatifler": [
-      "ZAGREB"
-    ]
-  },
-  {
-    "id": 22,
-    "soru": "Hırvatistan'ın başkenti",
-    "cevap": "Zagreb",
-    "alternatifler": [
-      "ZAGREB"
-    ]
-  },
-  {
-    "id": 23,
-    "soru": "Hırvatistan'ın başkenti",
-    "cevap": "Zagreb",
-    "alternatifler": [
-      "ZAGREB"
-    ]
-  },
-  {
-    "id": 24,
-    "soru": "Hırvatistan'ın başkenti",
-    "cevap": "Zagreb",
-    "alternatifler": [
-      "ZAGREB"
-    ]
-  },
-  {
-    "id": 25,
-    "soru": "Hırvatistan'ın başkenti",
-    "cevap": "Zagreb",
-    "alternatifler": [
-      "ZAGREB"
-    ]
-  },
-  {
-    "id": 26,
-    "soru": "Hırvatistan'ın başkenti",
-    "cevap": "Zagreb",
-    "alternatifler": [
-      "ZAGREB"
-    ]
-  },
-  {
     "id": 27,
+    "soru": "Hırvatistan'ın başkenti",
+    "cevap": "Zagreb",
+    "alternatifler": [
+      "ZAGREB"
+    ]
+  },
+  {
+    "id": 28,
+    "soru": "Hırvatistan'ın başkenti",
+    "cevap": "Zagreb",
+    "alternatifler": [
+      "ZAGREB"
+    ]
+  },
+  {
+    "id": 29,
+    "soru": "Hırvatistan'ın başkenti",
+    "cevap": "Zagreb",
+    "alternatifler": [
+      "ZAGREB"
+    ]
+  },
+  {
+    "id": 30,
+    "soru": "Hırvatistan'ın başkenti",
+    "cevap": "Zagreb",
+    "alternatifler": [
+      "ZAGREB"
+    ]
+  },
+  {
+    "id": 31,
+    "soru": "Hırvatistan'ın başkenti",
+    "cevap": "Zagreb",
+    "alternatifler": [
+      "ZAGREB"
+    ]
+  },
+  {
+    "id": 32,
+    "soru": "Hırvatistan'ın başkenti",
+    "cevap": "Zagreb",
+    "alternatifler": [
+      "ZAGREB"
+    ]
+  },
+  {
+    "id": 33,
     "soru": "Kıyafetlerin yakalarının üzerinde olan kürk",
     "cevap": "Zağara",
     "alternatifler": [
@@ -223,7 +279,7 @@
     ]
   },
   {
-    "id": 28,
+    "id": 34,
     "soru": "Osmanlı'da padişahın köpek yetiştiricisi",
     "cevap": "Zağarcı",
     "alternatifler": [
@@ -232,7 +288,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 35,
     "soru": "Trabzon'un merkezinde yer alan tarihi köprü",
     "cevap": "Zağnos",
     "alternatifler": [
@@ -241,7 +297,7 @@
     ]
   },
   {
-    "id": 30,
+    "id": 36,
     "soru": "Soyadı Yetiş olan TV programı sunucusunun adı",
     "cevap": "Zahide",
     "alternatifler": [
@@ -249,7 +305,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": 37,
     "soru": "Ünlü türküde, \"Kurbanın olurum\" denilen kadın adı",
     "cevap": "Zahide",
     "alternatifler": [
@@ -257,7 +313,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": 38,
     "soru": "Depolanmış, sonra kullanılacak olan buğday, arpa",
     "cevap": "Zahire",
     "alternatifler": [
@@ -265,7 +321,7 @@
     ]
   },
   {
-    "id": 33,
+    "id": 39,
     "soru": "Daha sonra kullanılmak için depolanan tahıl, erzak",
     "cevap": "Zahire",
     "alternatifler": [
@@ -273,7 +329,7 @@
     ]
   },
   {
-    "id": 34,
+    "id": 40,
     "soru": "Depolanmış, sonra kullanılacak olan buğday, arpa",
     "cevap": "Zahire",
     "alternatifler": [
@@ -281,7 +337,7 @@
     ]
   },
   {
-    "id": 35,
+    "id": 41,
     "soru": "Zorluk, güçlük",
     "cevap": "Zahmet",
     "alternatifler": [
@@ -289,7 +345,7 @@
     ]
   },
   {
-    "id": 36,
+    "id": 42,
     "soru": "Fiziksel açıdan zorlayıcı işleri yapınca girilir",
     "cevap": "Zahmet",
     "alternatifler": [
@@ -297,7 +353,7 @@
     ]
   },
   {
-    "id": 37,
+    "id": 43,
     "soru": "Bir şey yapılırken çekilen güçlük",
     "cevap": "Zahmet",
     "alternatifler": [
@@ -305,7 +361,7 @@
     ]
   },
   {
-    "id": 38,
+    "id": 44,
     "soru": "Yaparken fazla uğraş gerektiren iş",
     "cevap": "Zahmetli",
     "alternatifler": [
@@ -313,7 +369,7 @@
     ]
   },
   {
-    "id": 39,
+    "id": 45,
     "soru": "Kolayca yapılan, az emek gerektiren",
     "cevap": "Zahmetsiz",
     "alternatifler": [
@@ -321,7 +377,7 @@
     ]
   },
   {
-    "id": 40,
+    "id": 46,
     "soru": "Yaparken güçlük veya zorluk yaratmayan şey",
     "cevap": "Zahmetsiz",
     "alternatifler": [
@@ -329,7 +385,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 47,
     "soru": "__ rahmet olmaz",
     "cevap": "Zahmetsiz",
     "alternatifler": [
@@ -337,7 +393,7 @@
     ]
   },
   {
-    "id": 42,
+    "id": 48,
     "soru": "Yabani ve doğal ortamda yetişen kekik",
     "cevap": "Zahter",
     "alternatifler": [
@@ -345,7 +401,7 @@
     ]
   },
   {
-    "id": 43,
+    "id": 49,
     "soru": "Kekik ailesinin aromatik bir üyesi, kara kekik",
     "cevap": "Zahter",
     "alternatifler": [
@@ -353,7 +409,7 @@
     ]
   },
   {
-    "id": 44,
+    "id": 50,
     "soru": "Anadolu'da yetişen, görünüşü kekiği andıran ot",
     "cevap": "Zahter",
     "alternatifler": [
@@ -361,7 +417,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 51,
     "soru": "Hatay'da salatası meşhur olan kekik türü",
     "cevap": "Zahter",
     "alternatifler": [
@@ -369,7 +425,7 @@
     ]
   },
   {
-    "id": 46,
+    "id": 52,
     "soru": "Özellikle kahvaltıda kullanılan bir kekik türü",
     "cevap": "Zahter",
     "alternatifler": [
@@ -377,7 +433,7 @@
     ]
   },
   {
-    "id": 47,
+    "id": 53,
     "soru": "Yabani ve doğal ortamda yetişen kekik",
     "cevap": "Zahter",
     "alternatifler": [
@@ -385,7 +441,7 @@
     ]
   },
   {
-    "id": 48,
+    "id": 54,
     "soru": "Eskişehir'in Sivrihisar ilçesindeki tarihi konak",
     "cevap": "Zaimağa",
     "alternatifler": [
@@ -394,7 +450,7 @@
     ]
   },
   {
-    "id": 49,
+    "id": 55,
     "soru": "Pembe çiçek açan zehirli bir bitki",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -402,7 +458,7 @@
     ]
   },
   {
-    "id": 50,
+    "id": 56,
     "soru": "Çiçek açan zehirli bir ağaçsı bitki",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -410,7 +466,7 @@
     ]
   },
   {
-    "id": 51,
+    "id": 57,
     "soru": "Kışın yaprak dökmeyen beyaz çiçekli zehirli ağaç",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -418,7 +474,7 @@
     ]
   },
   {
-    "id": 52,
+    "id": 58,
     "soru": "Diğer ismi ağı ağacı olan zehirli bitki",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -426,7 +482,7 @@
     ]
   },
   {
-    "id": 53,
+    "id": 59,
     "soru": "13 ve Bir Gece Yarası albümlerini yapan rock grubu",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -434,7 +490,7 @@
     ]
   },
   {
-    "id": 54,
+    "id": 60,
     "soru": "\"Masadan eksiliyor dostlar\" diyen müzik grubu",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -442,7 +498,7 @@
     ]
   },
   {
-    "id": 55,
+    "id": 61,
     "soru": "Zehirli bir bitki türü; bir Türk müzik grubu",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -450,7 +506,7 @@
     ]
   },
   {
-    "id": 56,
+    "id": 62,
     "soru": "Ağı çiçeği olarak bilinir",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -458,7 +514,7 @@
     ]
   },
   {
-    "id": 57,
+    "id": 63,
     "soru": "Ağı çiçeği olarak da bilinen, zehirli bir çiçek",
     "cevap": "Zakkum",
     "alternatifler": [
@@ -466,15 +522,7 @@
     ]
   },
   {
-    "id": 58,
-    "soru": "1967'de Altın Portakal'ı kazanan Yılmaz Duru filmi",
-    "cevap": "Zalimler",
-    "alternatifler": [
-      "ZALIMLER"
-    ]
-  },
-  {
-    "id": 59,
+    "id": 64,
     "soru": "Kohoz adıyla da bilinen tarihi Bitlis hanı",
     "cevap": "Zal paşa",
     "alternatifler": [
@@ -484,223 +532,15 @@
     ]
   },
   {
-    "id": 60,
-    "soru": "__ Karşı, Andrew Niccol'un yönettiği aksiyon filmi",
-    "cevap": "Zamana",
-    "alternatifler": [
-      "ZAMANA"
-    ]
-  },
-  {
-    "id": 61,
-    "soru": "Eskiler, bugünün gençliğini böyle tanımlar",
-    "cevap": "Zamane",
-    "alternatifler": [
-      "ZAMANE"
-    ]
-  },
-  {
-    "id": 62,
-    "soru": "Çingeneler __, Emir Kusturica'nın meşhur filmi",
-    "cevap": "Zamanı",
-    "alternatifler": [
-      "ZAMANI"
-    ]
-  },
-  {
-    "id": 63,
-    "soru": "Vakti planlama",
-    "cevap": "Zamanlama",
-    "alternatifler": [
-      "ZAMANLAMA"
-    ]
-  },
-  {
-    "id": 64,
-    "soru": "N.B Ceylan filmi, Bir __ Anadolu'da",
-    "cevap": "Zamanlar",
-    "alternatifler": [
-      "ZAMANLAR"
-    ]
-  },
-  {
     "id": 65,
-    "soru": "Bir yıl öncesini anarken denir, \"Geçen sene bu __\"",
-    "cevap": "Zamanlar",
+    "soru": "1967'de Altın Portakal'ı kazanan Yılmaz Duru filmi",
+    "cevap": "Zalimler",
     "alternatifler": [
-      "ZAMANLAR"
+      "ZALIMLER"
     ]
   },
   {
     "id": 66,
-    "soru": "Ünlü bir Charlie Chaplin filmi, Modern __",
-    "cevap": "Zamanlar",
-    "alternatifler": [
-      "ZAMANLAR"
-    ]
-  },
-  {
-    "id": 67,
-    "soru": "Ünlü bir Charlie Chaplin filmi, Modern __",
-    "cevap": "Zamanlar",
-    "alternatifler": [
-      "ZAMANLAR"
-    ]
-  },
-  {
-    "id": 68,
-    "soru": "Vakti tutturulamamış anda yapılan",
-    "cevap": "Zamansız",
-    "alternatifler": [
-      "ZAMANSIZ"
-    ]
-  },
-  {
-    "id": 69,
-    "soru": "Üretildiği çağdan bağımsız eser",
-    "cevap": "Zamansız",
-    "alternatifler": [
-      "ZAMANSIZ"
-    ]
-  },
-  {
-    "id": 70,
-    "soru": "Adı akla gelmeyen objeyi tarif eden söz; zımbırtı",
-    "cevap": "Zamazingo",
-    "alternatifler": [
-      "ZAMAZINGO"
-    ]
-  },
-  {
-    "id": 71,
-    "soru": "Ivır zıvır, zımbırtı anlamına gelen argo sözcük",
-    "cevap": "Zamazingo",
-    "alternatifler": [
-      "ZAMAZINGO"
-    ]
-  },
-  {
-    "id": 72,
-    "soru": "Soğan ile üreyen mevsimlik çiçekli bitki",
-    "cevap": "Zambak",
-    "alternatifler": [
-      "ZAMBAK"
-    ]
-  },
-  {
-    "id": 73,
-    "soru": "Vadideki __, Balzac'ın ünlü romanı",
-    "cevap": "Zambak",
-    "alternatifler": [
-      "ZAMBAK"
-    ]
-  },
-  {
-    "id": 74,
-    "soru": "Balzac'ın ünlü eserine adını veren, vadideki bitki",
-    "cevap": "Zambak",
-    "alternatifler": [
-      "ZAMBAK"
-    ]
-  },
-  {
-    "id": 75,
-    "soru": "Vadide yetişeni ünlü bir romana isim olan çiçek",
-    "cevap": "Zambak",
-    "alternatifler": [
-      "ZAMBAK"
-    ]
-  },
-  {
-    "id": 76,
-    "soru": "Güney Afrika'da denize kıyısı olmayan bir ülke",
-    "cevap": "Zambiya",
-    "alternatifler": [
-      "ZAMBIYA"
-    ]
-  },
-  {
-    "id": 77,
-    "soru": "Başkenti Lusaka olan ülke",
-    "cevap": "Zambiya",
-    "alternatifler": [
-      "ZAMBIYA"
-    ]
-  },
-  {
-    "id": 78,
-    "soru": "Başkenti Lusaka olan Doğu Afrika ülkesi",
-    "cevap": "Zambiya",
-    "alternatifler": [
-      "ZAMBIYA"
-    ]
-  },
-  {
-    "id": 79,
-    "soru": "Bu Afrika ülkesi, ismini Zambezi Nehri'nden alıyor",
-    "cevap": "Zambiya",
-    "alternatifler": [
-      "ZAMBIYA"
-    ]
-  },
-  {
-    "id": 80,
-    "soru": "Güney Afrika'da denize kıyısı olmayan bir ülke",
-    "cevap": "Zambiya",
-    "alternatifler": [
-      "ZAMBIYA"
-    ]
-  },
-  {
-    "id": 81,
-    "soru": "Cümlede adların yerine kullanılan sözler, adıllar",
-    "cevap": "Zamirler",
-    "alternatifler": [
-      "ZAMIRLER"
-    ]
-  },
-  {
-    "id": 82,
-    "soru": "Çapkınlığa meraklı kişi",
-    "cevap": "Zampara",
-    "alternatifler": [
-      "ZAMPARA"
-    ]
-  },
-  {
-    "id": 83,
-    "soru": "Kadınlara düşkün ve sürekli kadın peşindeki erkek",
-    "cevap": "Zampara",
-    "alternatifler": [
-      "ZAMPARA"
-    ]
-  },
-  {
-    "id": 84,
-    "soru": "__ Seyfettin, 1995 yapımı yerli komedi filmi",
-    "cevap": "Zampara",
-    "alternatifler": [
-      "ZAMPARA"
-    ]
-  },
-  {
-    "id": 85,
-    "soru": "Fiyatı ya da çalışanın maaşını artırma",
-    "cevap": "Zamyapma",
-    "alternatifler": [
-      "ZAMYAPMA"
-    ]
-  },
-  {
-    "id": 86,
-    "soru": "Fiyatı ya da çalışanın maaşını artırma",
-    "cevap": "Zamyapma",
-    "alternatifler": [
-      "ZAMYAPMA"
-    ]
-  },
-  {
-    "id": 87,
     "soru": "Fiyatları yukarı yönde güncellemek",
     "cevap": "Zam yapmak",
     "alternatifler": [
@@ -709,7 +549,7 @@
     ]
   },
   {
-    "id": 88,
+    "id": 67,
     "soru": "Bir ürünün veya hizmetin fiyatını artırmak",
     "cevap": "Zam yapmak",
     "alternatifler": [
@@ -718,7 +558,7 @@
     ]
   },
   {
-    "id": 89,
+    "id": 68,
     "soru": "Fiyatları yukarı yönde güncellemek",
     "cevap": "Zam yapmak",
     "alternatifler": [
@@ -727,7 +567,223 @@
     ]
   },
   {
+    "id": 69,
+    "soru": "__ Karşı, Andrew Niccol'un yönettiği aksiyon filmi",
+    "cevap": "Zamana",
+    "alternatifler": [
+      "ZAMANA"
+    ]
+  },
+  {
+    "id": 70,
+    "soru": "Eskiler, bugünün gençliğini böyle tanımlar",
+    "cevap": "Zamane",
+    "alternatifler": [
+      "ZAMANE"
+    ]
+  },
+  {
+    "id": 71,
+    "soru": "Çingeneler __, Emir Kusturica'nın meşhur filmi",
+    "cevap": "Zamanı",
+    "alternatifler": [
+      "ZAMANI"
+    ]
+  },
+  {
+    "id": 72,
+    "soru": "Vakti planlama",
+    "cevap": "Zamanlama",
+    "alternatifler": [
+      "ZAMANLAMA"
+    ]
+  },
+  {
+    "id": 73,
+    "soru": "N.B Ceylan filmi, Bir __ Anadolu'da",
+    "cevap": "Zamanlar",
+    "alternatifler": [
+      "ZAMANLAR"
+    ]
+  },
+  {
+    "id": 74,
+    "soru": "Bir yıl öncesini anarken denir, \"Geçen sene bu __\"",
+    "cevap": "Zamanlar",
+    "alternatifler": [
+      "ZAMANLAR"
+    ]
+  },
+  {
+    "id": 75,
+    "soru": "Ünlü bir Charlie Chaplin filmi, Modern __",
+    "cevap": "Zamanlar",
+    "alternatifler": [
+      "ZAMANLAR"
+    ]
+  },
+  {
+    "id": 76,
+    "soru": "Ünlü bir Charlie Chaplin filmi, Modern __",
+    "cevap": "Zamanlar",
+    "alternatifler": [
+      "ZAMANLAR"
+    ]
+  },
+  {
+    "id": 77,
+    "soru": "Vakti tutturulamamış anda yapılan",
+    "cevap": "Zamansız",
+    "alternatifler": [
+      "ZAMANSIZ"
+    ]
+  },
+  {
+    "id": 78,
+    "soru": "Üretildiği çağdan bağımsız eser",
+    "cevap": "Zamansız",
+    "alternatifler": [
+      "ZAMANSIZ"
+    ]
+  },
+  {
+    "id": 79,
+    "soru": "Adı akla gelmeyen objeyi tarif eden söz; zımbırtı",
+    "cevap": "Zamazingo",
+    "alternatifler": [
+      "ZAMAZINGO"
+    ]
+  },
+  {
+    "id": 80,
+    "soru": "Ivır zıvır, zımbırtı anlamına gelen argo sözcük",
+    "cevap": "Zamazingo",
+    "alternatifler": [
+      "ZAMAZINGO"
+    ]
+  },
+  {
+    "id": 81,
+    "soru": "Soğan ile üreyen mevsimlik çiçekli bitki",
+    "cevap": "Zambak",
+    "alternatifler": [
+      "ZAMBAK"
+    ]
+  },
+  {
+    "id": 82,
+    "soru": "Vadideki __, Balzac'ın ünlü romanı",
+    "cevap": "Zambak",
+    "alternatifler": [
+      "ZAMBAK"
+    ]
+  },
+  {
+    "id": 83,
+    "soru": "Balzac'ın ünlü eserine adını veren, vadideki bitki",
+    "cevap": "Zambak",
+    "alternatifler": [
+      "ZAMBAK"
+    ]
+  },
+  {
+    "id": 84,
+    "soru": "Vadide yetişeni ünlü bir romana isim olan çiçek",
+    "cevap": "Zambak",
+    "alternatifler": [
+      "ZAMBAK"
+    ]
+  },
+  {
+    "id": 85,
+    "soru": "Güney Afrika'da denize kıyısı olmayan bir ülke",
+    "cevap": "Zambiya",
+    "alternatifler": [
+      "ZAMBIYA"
+    ]
+  },
+  {
+    "id": 86,
+    "soru": "Başkenti Lusaka olan ülke",
+    "cevap": "Zambiya",
+    "alternatifler": [
+      "ZAMBIYA"
+    ]
+  },
+  {
+    "id": 87,
+    "soru": "Başkenti Lusaka olan Doğu Afrika ülkesi",
+    "cevap": "Zambiya",
+    "alternatifler": [
+      "ZAMBIYA"
+    ]
+  },
+  {
+    "id": 88,
+    "soru": "Bu Afrika ülkesi, ismini Zambezi Nehri'nden alıyor",
+    "cevap": "Zambiya",
+    "alternatifler": [
+      "ZAMBIYA"
+    ]
+  },
+  {
+    "id": 89,
+    "soru": "Güney Afrika'da denize kıyısı olmayan bir ülke",
+    "cevap": "Zambiya",
+    "alternatifler": [
+      "ZAMBIYA"
+    ]
+  },
+  {
     "id": 90,
+    "soru": "Cümlede adların yerine kullanılan sözler, adıllar",
+    "cevap": "Zamirler",
+    "alternatifler": [
+      "ZAMIRLER"
+    ]
+  },
+  {
+    "id": 91,
+    "soru": "Çapkınlığa meraklı kişi",
+    "cevap": "Zampara",
+    "alternatifler": [
+      "ZAMPARA"
+    ]
+  },
+  {
+    "id": 92,
+    "soru": "Kadınlara düşkün ve sürekli kadın peşindeki erkek",
+    "cevap": "Zampara",
+    "alternatifler": [
+      "ZAMPARA"
+    ]
+  },
+  {
+    "id": 93,
+    "soru": "__ Seyfettin, 1995 yapımı yerli komedi filmi",
+    "cevap": "Zampara",
+    "alternatifler": [
+      "ZAMPARA"
+    ]
+  },
+  {
+    "id": 94,
+    "soru": "Fiyatı ya da çalışanın maaşını artırma",
+    "cevap": "Zamyapma",
+    "alternatifler": [
+      "ZAMYAPMA"
+    ]
+  },
+  {
+    "id": 95,
+    "soru": "Fiyatı ya da çalışanın maaşını artırma",
+    "cevap": "Zamyapma",
+    "alternatifler": [
+      "ZAMYAPMA"
+    ]
+  },
+  {
+    "id": 96,
     "soru": "El ustalığı ile yapılan işler",
     "cevap": "Zanaat",
     "alternatifler": [
@@ -735,7 +791,7 @@
     ]
   },
   {
-    "id": 91,
+    "id": 97,
     "soru": "Deneyim, beceri, ustalık gerektiren el işi",
     "cevap": "Zanaat",
     "alternatifler": [
@@ -743,7 +799,7 @@
     ]
   },
   {
-    "id": 92,
+    "id": 98,
     "soru": "El becerisi gerektiren, zamanla ustalaşılan iş",
     "cevap": "Zanaat",
     "alternatifler": [
@@ -751,7 +807,7 @@
     ]
   },
   {
-    "id": 93,
+    "id": 99,
     "soru": "El becerisi gerektiren işleri yapan kişi",
     "cevap": "Zanaatkar",
     "alternatifler": [
@@ -759,7 +815,7 @@
     ]
   },
   {
-    "id": 94,
+    "id": 100,
     "soru": "El işi ustası",
     "cevap": "Zanaatkar",
     "alternatifler": [
@@ -767,7 +823,7 @@
     ]
   },
   {
-    "id": 95,
+    "id": 101,
     "soru": "Mesleği el işçiliği ile üretmek olan kişi",
     "cevap": "Zanaatkar",
     "alternatifler": [
@@ -775,7 +831,7 @@
     ]
   },
   {
-    "id": 96,
+    "id": 102,
     "soru": "Konya'nın Halkapınar ilçesinin eski adı",
     "cevap": "Zanapa",
     "alternatifler": [
@@ -783,7 +839,7 @@
     ]
   },
   {
-    "id": 97,
+    "id": 103,
     "soru": "Kuvvetli bir sallantıdan çıkan ses",
     "cevap": "Zangırtı",
     "alternatifler": [
@@ -791,7 +847,7 @@
     ]
   },
   {
-    "id": 98,
+    "id": 104,
     "soru": "Notre Dame'ın Kamburu kitabında kahramanın mesleği",
     "cevap": "Zangoçluk",
     "alternatifler": [
@@ -800,7 +856,7 @@
     ]
   },
   {
-    "id": 99,
+    "id": 105,
     "soru": "Tanzanya'nın turistik bir adası",
     "cevap": "Zanzibar",
     "alternatifler": [
@@ -808,7 +864,7 @@
     ]
   },
   {
-    "id": 100,
+    "id": 106,
     "soru": "Freddie Mercury'nin doğduğu Tanzanya bölgesi",
     "cevap": "Zanzibar",
     "alternatifler": [
@@ -816,7 +872,7 @@
     ]
   },
   {
-    "id": 101,
+    "id": 107,
     "soru": "Tanzanya'ya bağlı, iki adalık özerk bölge",
     "cevap": "Zanzibar",
     "alternatifler": [
@@ -824,7 +880,7 @@
     ]
   },
   {
-    "id": 102,
+    "id": 108,
     "soru": "İranlı göçmenlerin kurduğu, Tanzanya'daki ünlü ada",
     "cevap": "Zanzibar",
     "alternatifler": [
@@ -832,128 +888,7 @@
     ]
   },
   {
-    "id": 103,
-    "soru": "1910'daki Meksika Devrimi'nin liderinin soyadı",
-    "cevap": "Zapata",
-    "alternatifler": [
-      "ZAPATA"
-    ]
-  },
-  {
-    "id": 104,
-    "soru": "Adını Emiliano Zapata'dan alan Meksikalı örgüt",
-    "cevap": "Zapatista",
-    "alternatifler": [
-      "ZAPATISTA"
-    ]
-  },
-  {
-    "id": 105,
-    "soru": "Kanallar arasında çılgınca dolaşmak",
-    "cevap": "Zaplamak",
-    "alternatifler": [
-      "ZAPLAMAK"
-    ]
-  },
-  {
-    "id": 106,
-    "soru": "Kanallar arasında çılgınca dolaşmak",
-    "cevap": "Zaplamak",
-    "alternatifler": [
-      "ZAPLAMAK"
-    ]
-  },
-  {
-    "id": 107,
-    "soru": "Aztekler döneminde yaşamış Orta Amerika uygarlığı",
-    "cevap": "Zapotek",
-    "alternatifler": [
-      "ZAPOTEK"
-    ]
-  },
-  {
-    "id": 108,
-    "soru": "Televizyon kanallarını değiştirip durmak",
-    "cevap": "Zapping",
-    "alternatifler": [
-      "ZAPPING"
-    ]
-  },
-  {
     "id": 109,
-    "soru": "Osmanlı'da askeri polis kuruluşu",
-    "cevap": "Zaptiye",
-    "alternatifler": [
-      "ZAPTIYE"
-    ]
-  },
-  {
-    "id": 110,
-    "soru": "Osmanlı'da askeri polise verilen ad",
-    "cevap": "Zaptiye",
-    "alternatifler": [
-      "ZAPTIYE"
-    ]
-  },
-  {
-    "id": 111,
-    "soru": "Osmanlı'da, bir nevi jandarma olan askeri kurum",
-    "cevap": "Zaptiye",
-    "alternatifler": [
-      "ZAPTIYE"
-    ]
-  },
-  {
-    "id": 112,
-    "soru": "Osmanlı'da askeri polise verilen ad",
-    "cevap": "Zaptiye",
-    "alternatifler": [
-      "ZAPTIYE"
-    ]
-  },
-  {
-    "id": 113,
-    "soru": "Osmanlı'da askeri polis kuruluşu",
-    "cevap": "Zaptiye",
-    "alternatifler": [
-      "ZAPTIYE"
-    ]
-  },
-  {
-    "id": 114,
-    "soru": "Sıkı kontrol, disiplin",
-    "cevap": "Zapturapt",
-    "alternatifler": [
-      "ZAPTURAPT"
-    ]
-  },
-  {
-    "id": 115,
-    "soru": "Disiplin anlamındaki, Arapçadan dile giren kelime",
-    "cevap": "Zapturapt",
-    "alternatifler": [
-      "ZAPTURAPT"
-    ]
-  },
-  {
-    "id": 116,
-    "soru": "Belli bir düzenin egemen olması, disiplin",
-    "cevap": "Zapturapt",
-    "alternatifler": [
-      "ZAPTURAPT"
-    ]
-  },
-  {
-    "id": 117,
-    "soru": "Bir şeyi veya bir yeri güç kullanarak ele geçirmek",
-    "cevap": "Zapt etmek",
-    "alternatifler": [
-      "ZAPT ETMEK",
-      "Zaptetmek"
-    ]
-  },
-  {
-    "id": 118,
     "soru": "Hakkari'den Irak'a akan nedir",
     "cevap": "Zap suyu",
     "alternatifler": [
@@ -962,260 +897,191 @@
     ]
   },
   {
-    "id": 119,
-    "soru": "Sahip olunan hoşluk, kibarlık, albeni",
-    "cevap": "Zarafet",
+    "id": 110,
+    "soru": "1910'daki Meksika Devrimi'nin liderinin soyadı",
+    "cevap": "Zapata",
     "alternatifler": [
-      "ZARAFET"
+      "ZAPATA"
+    ]
+  },
+  {
+    "id": 111,
+    "soru": "Adını Emiliano Zapata'dan alan Meksikalı örgüt",
+    "cevap": "Zapatista",
+    "alternatifler": [
+      "ZAPATISTA"
+    ]
+  },
+  {
+    "id": 112,
+    "soru": "Kanallar arasında çılgınca dolaşmak",
+    "cevap": "Zaplamak",
+    "alternatifler": [
+      "ZAPLAMAK"
+    ]
+  },
+  {
+    "id": 113,
+    "soru": "Kanallar arasında çılgınca dolaşmak",
+    "cevap": "Zaplamak",
+    "alternatifler": [
+      "ZAPLAMAK"
+    ]
+  },
+  {
+    "id": 114,
+    "soru": "Aztekler döneminde yaşamış Orta Amerika uygarlığı",
+    "cevap": "Zapotek",
+    "alternatifler": [
+      "ZAPOTEK"
+    ]
+  },
+  {
+    "id": 115,
+    "soru": "Televizyon kanallarını değiştirip durmak",
+    "cevap": "Zapping",
+    "alternatifler": [
+      "ZAPPING"
+    ]
+  },
+  {
+    "id": 116,
+    "soru": "Bir şeyi veya bir yeri güç kullanarak ele geçirmek",
+    "cevap": "Zapt etmek",
+    "alternatifler": [
+      "ZAPT ETMEK",
+      "Zaptetmek"
+    ]
+  },
+  {
+    "id": 117,
+    "soru": "Osmanlı'da askeri polis kuruluşu",
+    "cevap": "Zaptiye",
+    "alternatifler": [
+      "ZAPTIYE"
+    ]
+  },
+  {
+    "id": 118,
+    "soru": "Osmanlı'da askeri polise verilen ad",
+    "cevap": "Zaptiye",
+    "alternatifler": [
+      "ZAPTIYE"
+    ]
+  },
+  {
+    "id": 119,
+    "soru": "Osmanlı'da, bir nevi jandarma olan askeri kurum",
+    "cevap": "Zaptiye",
+    "alternatifler": [
+      "ZAPTIYE"
     ]
   },
   {
     "id": 120,
-    "soru": "Hal ve tavırdaki uyumlu güzelllik, zariflik",
-    "cevap": "Zarafet",
+    "soru": "Osmanlı'da askeri polise verilen ad",
+    "cevap": "Zaptiye",
     "alternatifler": [
-      "ZARAFET"
+      "ZAPTIYE"
     ]
   },
   {
     "id": 121,
-    "soru": "La Seo Katedrali'nin olduğu İspanya kenti",
-    "cevap": "Zaragoza",
+    "soru": "Osmanlı'da askeri polis kuruluşu",
+    "cevap": "Zaptiye",
     "alternatifler": [
-      "ZARAGOZA"
+      "ZAPTIYE"
     ]
   },
   {
     "id": 122,
-    "soru": "Atasözüne göre, bunun neresinden dönülse kardır",
-    "cevap": "Zararın",
+    "soru": "Sıkı kontrol, disiplin",
+    "cevap": "Zapturapt",
     "alternatifler": [
-      "ZARARIN"
+      "ZAPTURAPT"
     ]
   },
   {
     "id": 123,
-    "soru": "Maddi kayıp vererek gerçekleştirilen ürün satışı",
-    "cevap": "Zararına",
+    "soru": "Disiplin anlamındaki, Arapçadan dile giren kelime",
+    "cevap": "Zapturapt",
     "alternatifler": [
-      "ZARARINA"
+      "ZAPTURAPT"
     ]
   },
   {
     "id": 124,
-    "soru": "Maddi kayıp vererek gerçekleştirilen ürün satışı",
-    "cevap": "Zararına",
+    "soru": "Belli bir düzenin egemen olması, disiplin",
+    "cevap": "Zapturapt",
     "alternatifler": [
-      "ZARARINA"
+      "ZAPTURAPT"
     ]
   },
   {
     "id": 125,
-    "soru": "Özüre karşılık verilen bir yanıt, \"Önemli değil\"",
-    "cevap": "Zararı yok",
+    "soru": "Barbut adlı şans oyununda yapılan eylem",
+    "cevap": "Zar atmak",
     "alternatifler": [
-      "ZARARI YOK",
-      "Zararıyok"
+      "ZAR ATMAK",
+      "Zaratmak"
     ]
   },
   {
     "id": 126,
-    "soru": "Özüre karşılık verilen bir yanıt, \"Önemli değil\"",
-    "cevap": "Zararı yok",
+    "soru": "Barbut adlı şans oyununda yapılan eylem",
+    "cevap": "Zar atmak",
     "alternatifler": [
-      "ZARARI YOK",
-      "Zararıyok"
+      "ZAR ATMAK",
+      "Zaratmak"
     ]
   },
   {
     "id": 127,
-    "soru": "Özüre karşılık verilen bir yanıt, \"Önemli değil\"",
-    "cevap": "Zararı yok",
+    "soru": "Barbut adlı şans oyununda yapılan eylem",
+    "cevap": "Zar atmak",
     "alternatifler": [
-      "ZARARI YOK",
-      "Zararıyok"
+      "ZAR ATMAK",
+      "Zaratmak"
     ]
   },
   {
     "id": 128,
-    "soru": "Atasözüne göre öfkeyle kalkanın oturduğu şekil",
-    "cevap": "Zararla",
+    "soru": "Tavlada hile yaparak istenilen sayıyı elde etmek",
+    "cevap": "Zar tutmak",
     "alternatifler": [
-      "ZARARLA"
+      "ZAR TUTMAK",
+      "Zartutmak"
     ]
   },
   {
     "id": 129,
-    "soru": "Ticarette, bir ürünü alış fiyatından ucuza satma",
-    "cevap": "Zarar etme",
+    "soru": "Tavlada istenilen sayının gelmesi için hile yapmak",
+    "cevap": "Zar tutmak",
     "alternatifler": [
-      "ZARAR ETME",
-      "Zararetme"
+      "ZAR TUTMAK",
+      "Zartutmak"
     ]
   },
   {
     "id": 130,
-    "soru": "Ticarette, bir ürünü alış fiyatından ucuza satma",
-    "cevap": "Zarar etme",
+    "soru": "Tavlada hile yaparak istenilen sayıyı elde etmek",
+    "cevap": "Zar tutmak",
     "alternatifler": [
-      "ZARAR ETME",
-      "Zararetme"
+      "ZAR TUTMAK",
+      "Zartutmak"
     ]
   },
   {
     "id": 131,
-    "soru": "Mecazen, gerçeği öğrenme amaçlı nabız yoklama",
-    "cevap": "Zarf atma",
+    "soru": "Tavlada istenilen sayının gelmesi için hile yapmak",
+    "cevap": "Zar tutmak",
     "alternatifler": [
-      "ZARF ATMA",
-      "Zarfatma"
+      "ZAR TUTMAK",
+      "Zartutmak"
     ]
   },
   {
     "id": 132,
-    "soru": "Sivri burunlu, yılan gibi ince yapılı bir balık",
-    "cevap": "Zargana",
-    "alternatifler": [
-      "ZARGANA"
-    ]
-  },
-  {
-    "id": 133,
-    "soru": "Sargan da denilen çok ince ve uzun balık",
-    "cevap": "Zargana",
-    "alternatifler": [
-      "ZARGANA"
-    ]
-  },
-  {
-    "id": 134,
-    "soru": "Bu balık uzun ve incedir, ağzı da sivridir",
-    "cevap": "Zargana",
-    "alternatifler": [
-      "ZARGANA"
-    ]
-  },
-  {
-    "id": 135,
-    "soru": "Uskumrugillerden ağzı sivri bir balık",
-    "cevap": "Zargana",
-    "alternatifler": [
-      "ZARGANA"
-    ]
-  },
-  {
-    "id": 136,
-    "soru": "Karadeniz'de \"Sargan\" da denilen, gagalı bir balık",
-    "cevap": "Zargana",
-    "alternatifler": [
-      "ZARGANA"
-    ]
-  },
-  {
-    "id": 137,
-    "soru": "Sargan da denilen çok ince ve uzun balık",
-    "cevap": "Zargana",
-    "alternatifler": [
-      "ZARGANA"
-    ]
-  },
-  {
-    "id": 138,
-    "soru": "Sargan da denilen çok ince ve uzun balık",
-    "cevap": "Zargana",
-    "alternatifler": [
-      "ZARGANA"
-    ]
-  },
-  {
-    "id": 139,
-    "soru": "Mecburiyet, lüzumluluk",
-    "cevap": "Zaruret",
-    "alternatifler": [
-      "ZARURET"
-    ]
-  },
-  {
-    "id": 140,
-    "soru": "Gerekli, zorunlu ihtiyaçlar",
-    "cevap": "Zaruri",
-    "alternatifler": [
-      "ZARURI"
-    ]
-  },
-  {
-    "id": 141,
-    "soru": "Yapılması lüzumlu olma, mecburiyet, zorunluluk",
-    "cevap": "Zarurilik",
-    "alternatifler": [
-      "ZARURILIK"
-    ]
-  },
-  {
-    "id": 142,
-    "soru": "Barbut adlı şans oyununda yapılan eylem",
-    "cevap": "Zar atmak",
-    "alternatifler": [
-      "ZAR ATMAK",
-      "Zaratmak"
-    ]
-  },
-  {
-    "id": 143,
-    "soru": "Barbut adlı şans oyununda yapılan eylem",
-    "cevap": "Zar atmak",
-    "alternatifler": [
-      "ZAR ATMAK",
-      "Zaratmak"
-    ]
-  },
-  {
-    "id": 144,
-    "soru": "Barbut adlı şans oyununda yapılan eylem",
-    "cevap": "Zar atmak",
-    "alternatifler": [
-      "ZAR ATMAK",
-      "Zaratmak"
-    ]
-  },
-  {
-    "id": 145,
-    "soru": "Tavlada hile yaparak istenilen sayıyı elde etmek",
-    "cevap": "Zar tutmak",
-    "alternatifler": [
-      "ZAR TUTMAK",
-      "Zartutmak"
-    ]
-  },
-  {
-    "id": 146,
-    "soru": "Tavlada istenilen sayının gelmesi için hile yapmak",
-    "cevap": "Zar tutmak",
-    "alternatifler": [
-      "ZAR TUTMAK",
-      "Zartutmak"
-    ]
-  },
-  {
-    "id": 147,
-    "soru": "Tavlada hile yaparak istenilen sayıyı elde etmek",
-    "cevap": "Zar tutmak",
-    "alternatifler": [
-      "ZAR TUTMAK",
-      "Zartutmak"
-    ]
-  },
-  {
-    "id": 148,
-    "soru": "Tavlada istenilen sayının gelmesi için hile yapmak",
-    "cevap": "Zar tutmak",
-    "alternatifler": [
-      "ZAR TUTMAK",
-      "Zartutmak"
-    ]
-  },
-  {
-    "id": 149,
     "soru": "Güçlükle yapılan şey için kullanılan ikileme",
     "cevap": "Zar zor",
     "alternatifler": [
@@ -1224,7 +1090,7 @@
     ]
   },
   {
-    "id": 150,
+    "id": 133,
     "soru": "Gönlü olmadan, istemeyerek",
     "cevap": "Zar zor",
     "alternatifler": [
@@ -1233,7 +1099,7 @@
     ]
   },
   {
-    "id": 151,
+    "id": 134,
     "soru": "Güçlükle yapılan şey için kullanılan ikileme",
     "cevap": "Zar zor",
     "alternatifler": [
@@ -1242,7 +1108,207 @@
     ]
   },
   {
+    "id": 135,
+    "soru": "Sahip olunan hoşluk, kibarlık, albeni",
+    "cevap": "Zarafet",
+    "alternatifler": [
+      "ZARAFET"
+    ]
+  },
+  {
+    "id": 136,
+    "soru": "Hal ve tavırdaki uyumlu güzelllik, zariflik",
+    "cevap": "Zarafet",
+    "alternatifler": [
+      "ZARAFET"
+    ]
+  },
+  {
+    "id": 137,
+    "soru": "La Seo Katedrali'nin olduğu İspanya kenti",
+    "cevap": "Zaragoza",
+    "alternatifler": [
+      "ZARAGOZA"
+    ]
+  },
+  {
+    "id": 138,
+    "soru": "Ticarette, bir ürünü alış fiyatından ucuza satma",
+    "cevap": "Zarar etme",
+    "alternatifler": [
+      "ZARAR ETME",
+      "Zararetme"
+    ]
+  },
+  {
+    "id": 139,
+    "soru": "Ticarette, bir ürünü alış fiyatından ucuza satma",
+    "cevap": "Zarar etme",
+    "alternatifler": [
+      "ZARAR ETME",
+      "Zararetme"
+    ]
+  },
+  {
+    "id": 140,
+    "soru": "Özüre karşılık verilen bir yanıt, \"Önemli değil\"",
+    "cevap": "Zararı yok",
+    "alternatifler": [
+      "ZARARI YOK",
+      "Zararıyok"
+    ]
+  },
+  {
+    "id": 141,
+    "soru": "Özüre karşılık verilen bir yanıt, \"Önemli değil\"",
+    "cevap": "Zararı yok",
+    "alternatifler": [
+      "ZARARI YOK",
+      "Zararıyok"
+    ]
+  },
+  {
+    "id": 142,
+    "soru": "Özüre karşılık verilen bir yanıt, \"Önemli değil\"",
+    "cevap": "Zararı yok",
+    "alternatifler": [
+      "ZARARI YOK",
+      "Zararıyok"
+    ]
+  },
+  {
+    "id": 143,
+    "soru": "Atasözüne göre, bunun neresinden dönülse kardır",
+    "cevap": "Zararın",
+    "alternatifler": [
+      "ZARARIN"
+    ]
+  },
+  {
+    "id": 144,
+    "soru": "Maddi kayıp vererek gerçekleştirilen ürün satışı",
+    "cevap": "Zararına",
+    "alternatifler": [
+      "ZARARINA"
+    ]
+  },
+  {
+    "id": 145,
+    "soru": "Maddi kayıp vererek gerçekleştirilen ürün satışı",
+    "cevap": "Zararına",
+    "alternatifler": [
+      "ZARARINA"
+    ]
+  },
+  {
+    "id": 146,
+    "soru": "Atasözüne göre öfkeyle kalkanın oturduğu şekil",
+    "cevap": "Zararla",
+    "alternatifler": [
+      "ZARARLA"
+    ]
+  },
+  {
+    "id": 147,
+    "soru": "Mecazen, gerçeği öğrenme amaçlı nabız yoklama",
+    "cevap": "Zarf atma",
+    "alternatifler": [
+      "ZARF ATMA",
+      "Zarfatma"
+    ]
+  },
+  {
+    "id": 148,
+    "soru": "Sivri burunlu, yılan gibi ince yapılı bir balık",
+    "cevap": "Zargana",
+    "alternatifler": [
+      "ZARGANA"
+    ]
+  },
+  {
+    "id": 149,
+    "soru": "Sargan da denilen çok ince ve uzun balık",
+    "cevap": "Zargana",
+    "alternatifler": [
+      "ZARGANA"
+    ]
+  },
+  {
+    "id": 150,
+    "soru": "Bu balık uzun ve incedir, ağzı da sivridir",
+    "cevap": "Zargana",
+    "alternatifler": [
+      "ZARGANA"
+    ]
+  },
+  {
+    "id": 151,
+    "soru": "Uskumrugillerden ağzı sivri bir balık",
+    "cevap": "Zargana",
+    "alternatifler": [
+      "ZARGANA"
+    ]
+  },
+  {
     "id": 152,
+    "soru": "Karadeniz'de \"Sargan\" da denilen, gagalı bir balık",
+    "cevap": "Zargana",
+    "alternatifler": [
+      "ZARGANA"
+    ]
+  },
+  {
+    "id": 153,
+    "soru": "Sargan da denilen çok ince ve uzun balık",
+    "cevap": "Zargana",
+    "alternatifler": [
+      "ZARGANA"
+    ]
+  },
+  {
+    "id": 154,
+    "soru": "Sargan da denilen çok ince ve uzun balık",
+    "cevap": "Zargana",
+    "alternatifler": [
+      "ZARGANA"
+    ]
+  },
+  {
+    "id": 155,
+    "soru": "Mecburiyet, lüzumluluk",
+    "cevap": "Zaruret",
+    "alternatifler": [
+      "ZARURET"
+    ]
+  },
+  {
+    "id": 156,
+    "soru": "Gerekli, zorunlu ihtiyaçlar",
+    "cevap": "Zaruri",
+    "alternatifler": [
+      "ZARURI"
+    ]
+  },
+  {
+    "id": 157,
+    "soru": "Yapılması lüzumlu olma, mecburiyet, zorunluluk",
+    "cevap": "Zarurilik",
+    "alternatifler": [
+      "ZARURILIK"
+    ]
+  },
+  {
+    "id": 158,
+    "soru": "Bir kuruluşta yapılan özlük işlemlerinin hepsi",
+    "cevap": "Zat işleri",
+    "alternatifler": [
+      "ZAT IŞLERI",
+      "ZAT ISLERI",
+      "Zatişleri"
+    ]
+  },
+  {
+    "id": 159,
     "soru": "Hem illüzyonist hem büyücü olan kadın DC karakteri",
     "cevap": "Zatanna",
     "alternatifler": [
@@ -1250,7 +1316,7 @@
     ]
   },
   {
-    "id": 153,
+    "id": 160,
     "soru": "Sancılı, atşeli bir akciğer hastalığı",
     "cevap": "Zatülcenp",
     "alternatifler": [
@@ -1259,7 +1325,7 @@
     ]
   },
   {
-    "id": 154,
+    "id": 161,
     "soru": "Akciğerleri saran zarlar arasında sıvı toplanması",
     "cevap": "Zatülcenp",
     "alternatifler": [
@@ -1268,7 +1334,7 @@
     ]
   },
   {
-    "id": 155,
+    "id": 162,
     "soru": "Plörezi hastalığının halk arasında kullanılan ismi",
     "cevap": "Zatülcenp",
     "alternatifler": [
@@ -1277,7 +1343,7 @@
     ]
   },
   {
-    "id": 156,
+    "id": 163,
     "soru": "Eski dilde göğüs sancısına verilen ad",
     "cevap": "Zatülcenp",
     "alternatifler": [
@@ -1286,84 +1352,21 @@
     ]
   },
   {
-    "id": 157,
-    "soru": "Sancılı, atşeli bir akciğer hastalığı",
-    "cevap": "Zatülcenp",
-    "alternatifler": [
-      "ZATÜLCENP",
-      "ZATULCENP"
-    ]
-  },
-  {
-    "id": 158,
-    "soru": "Sancılı, atşeli bir akciğer hastalığı",
-    "cevap": "Zatülcenp",
-    "alternatifler": [
-      "ZATÜLCENP",
-      "ZATULCENP"
-    ]
-  },
-  {
-    "id": 159,
-    "soru": "Akciğer iltihaplanması",
-    "cevap": "Zatürre",
-    "alternatifler": [
-      "ZATURRE",
-      "ZATÜRRE"
-    ]
-  },
-  {
-    "id": 160,
-    "soru": "Akciğer iltihabı kaynaklı, ateşli hastalık",
-    "cevap": "Zatürre",
-    "alternatifler": [
-      "ZATURRE",
-      "ZATÜRRE"
-    ]
-  },
-  {
-    "id": 161,
-    "soru": "Akciğerde iltihap oluşturan hastalık, pnömoni",
-    "cevap": "Zatürre",
-    "alternatifler": [
-      "ZATURRE",
-      "ZATÜRRE"
-    ]
-  },
-  {
-    "id": 162,
-    "soru": "Batar da denilen akciğer hastalığı",
-    "cevap": "Zatürre",
-    "alternatifler": [
-      "ZATURRE",
-      "ZATÜRRE"
-    ]
-  },
-  {
-    "id": 163,
-    "soru": "Akciğer alveollerini etkileyen hastalık",
-    "cevap": "Zatürre",
-    "alternatifler": [
-      "ZATURRE",
-      "ZATÜRRE"
-    ]
-  },
-  {
     "id": 164,
-    "soru": "Bu akciğer hastalığına halk arasında \"batar\" denir",
-    "cevap": "Zatürre",
+    "soru": "Sancılı, atşeli bir akciğer hastalığı",
+    "cevap": "Zatülcenp",
     "alternatifler": [
-      "ZATURRE",
-      "ZATÜRRE"
+      "ZATÜLCENP",
+      "ZATULCENP"
     ]
   },
   {
     "id": 165,
-    "soru": "Eskiler, bu hastalığa \"Batar\" derdi",
-    "cevap": "Zatürre",
+    "soru": "Sancılı, atşeli bir akciğer hastalığı",
+    "cevap": "Zatülcenp",
     "alternatifler": [
-      "ZATURRE",
-      "ZATÜRRE"
+      "ZATÜLCENP",
+      "ZATULCENP"
     ]
   },
   {
@@ -1386,16 +1389,69 @@
   },
   {
     "id": 168,
-    "soru": "Bir kuruluşta yapılan özlük işlemlerinin hepsi",
-    "cevap": "Zat işleri",
+    "soru": "Akciğerde iltihap oluşturan hastalık, pnömoni",
+    "cevap": "Zatürre",
     "alternatifler": [
-      "ZAT IŞLERI",
-      "ZAT ISLERI",
-      "Zatişleri"
+      "ZATURRE",
+      "ZATÜRRE"
     ]
   },
   {
     "id": 169,
+    "soru": "Batar da denilen akciğer hastalığı",
+    "cevap": "Zatürre",
+    "alternatifler": [
+      "ZATURRE",
+      "ZATÜRRE"
+    ]
+  },
+  {
+    "id": 170,
+    "soru": "Akciğer alveollerini etkileyen hastalık",
+    "cevap": "Zatürre",
+    "alternatifler": [
+      "ZATURRE",
+      "ZATÜRRE"
+    ]
+  },
+  {
+    "id": 171,
+    "soru": "Bu akciğer hastalığına halk arasında \"batar\" denir",
+    "cevap": "Zatürre",
+    "alternatifler": [
+      "ZATURRE",
+      "ZATÜRRE"
+    ]
+  },
+  {
+    "id": 172,
+    "soru": "Eskiler, bu hastalığa \"Batar\" derdi",
+    "cevap": "Zatürre",
+    "alternatifler": [
+      "ZATURRE",
+      "ZATÜRRE"
+    ]
+  },
+  {
+    "id": 173,
+    "soru": "Akciğer iltihaplanması",
+    "cevap": "Zatürre",
+    "alternatifler": [
+      "ZATURRE",
+      "ZATÜRRE"
+    ]
+  },
+  {
+    "id": 174,
+    "soru": "Akciğer iltihabı kaynaklı, ateşli hastalık",
+    "cevap": "Zatürre",
+    "alternatifler": [
+      "ZATURRE",
+      "ZATÜRRE"
+    ]
+  },
+  {
+    "id": 175,
     "soru": "Acınacak halde bulunan; İlyas Salman filmi",
     "cevap": "Zavallı",
     "alternatifler": [
@@ -1403,7 +1459,7 @@
     ]
   },
   {
-    "id": 170,
+    "id": 176,
     "soru": "Namık Kemal kitabı, __ Çocuk",
     "cevap": "Zavallı",
     "alternatifler": [
@@ -1411,7 +1467,7 @@
     ]
   },
   {
-    "id": 171,
+    "id": 177,
     "soru": "__ Çocuk, Namık Kemal'in yazdığı piyes",
     "cevap": "Zavallı",
     "alternatifler": [
@@ -1419,7 +1475,7 @@
     ]
   },
   {
-    "id": 172,
+    "id": 178,
     "soru": "Eski dilde derece içeren geometrik biçim, açı",
     "cevap": "Zaviye",
     "alternatifler": [
@@ -1427,59 +1483,11 @@
     ]
   },
   {
-    "id": 173,
+    "id": 179,
     "soru": "Matematikte dereceyle ölçülen değer, açı",
     "cevap": "Zaviye",
     "alternatifler": [
       "ZAVIYE"
-    ]
-  },
-  {
-    "id": 174,
-    "soru": "Kilo kaybetme",
-    "cevap": "Zayıflama",
-    "alternatifler": [
-      "ZAYIFLAMA"
-    ]
-  },
-  {
-    "id": 175,
-    "soru": "Kilo kaybetme, incelme",
-    "cevap": "Zayıflama",
-    "alternatifler": [
-      "ZAYIFLAMA"
-    ]
-  },
-  {
-    "id": 176,
-    "soru": "Meteorolojide yüksek basıncın düşmesi",
-    "cevap": "Zayıflama",
-    "alternatifler": [
-      "ZAYIFLAMA"
-    ]
-  },
-  {
-    "id": 177,
-    "soru": "Kilo kaybetme",
-    "cevap": "Zayıflama",
-    "alternatifler": [
-      "ZAYIFLAMA"
-    ]
-  },
-  {
-    "id": 178,
-    "soru": "Vücuttaki kilonun çoğunu kaybetme, cılızlaşma",
-    "cevap": "Zayıflama",
-    "alternatifler": [
-      "ZAYIFLAMA"
-    ]
-  },
-  {
-    "id": 179,
-    "soru": "Kilo verme",
-    "cevap": "Zayıflama",
-    "alternatifler": [
-      "ZAYIFLAMA"
     ]
   },
   {
@@ -1492,7 +1500,7 @@
   },
   {
     "id": 181,
-    "soru": "Kilolu kişinin diyet yapma amacı",
+    "soru": "Kilo kaybetme, incelme",
     "cevap": "Zayıflama",
     "alternatifler": [
       "ZAYIFLAMA"
@@ -1500,7 +1508,7 @@
   },
   {
     "id": 182,
-    "soru": "Kilo verme",
+    "soru": "Meteorolojide yüksek basıncın düşmesi",
     "cevap": "Zayıflama",
     "alternatifler": [
       "ZAYIFLAMA"
@@ -1516,7 +1524,7 @@
   },
   {
     "id": 184,
-    "soru": "Kilo verme",
+    "soru": "Vücuttaki kilonun çoğunu kaybetme, cılızlaşma",
     "cevap": "Zayıflama",
     "alternatifler": [
       "ZAYIFLAMA"
@@ -1524,14 +1532,54 @@
   },
   {
     "id": 185,
-    "soru": "Vücut ağırlığının normal değerlerden az olması",
-    "cevap": "Zayıflık",
+    "soru": "Kilo verme",
+    "cevap": "Zayıflama",
     "alternatifler": [
-      "ZAYIFLIK"
+      "ZAYIFLAMA"
     ]
   },
   {
     "id": 186,
+    "soru": "Kilo kaybetme",
+    "cevap": "Zayıflama",
+    "alternatifler": [
+      "ZAYIFLAMA"
+    ]
+  },
+  {
+    "id": 187,
+    "soru": "Kilolu kişinin diyet yapma amacı",
+    "cevap": "Zayıflama",
+    "alternatifler": [
+      "ZAYIFLAMA"
+    ]
+  },
+  {
+    "id": 188,
+    "soru": "Kilo verme",
+    "cevap": "Zayıflama",
+    "alternatifler": [
+      "ZAYIFLAMA"
+    ]
+  },
+  {
+    "id": 189,
+    "soru": "Kilo kaybetme",
+    "cevap": "Zayıflama",
+    "alternatifler": [
+      "ZAYIFLAMA"
+    ]
+  },
+  {
+    "id": 190,
+    "soru": "Kilo verme",
+    "cevap": "Zayıflama",
+    "alternatifler": [
+      "ZAYIFLAMA"
+    ]
+  },
+  {
+    "id": 191,
     "soru": "Vücut ağırlığının normal değerlerden az olması",
     "cevap": "Zayıflık",
     "alternatifler": [
@@ -1539,7 +1587,15 @@
     ]
   },
   {
-    "id": 187,
+    "id": 192,
+    "soru": "Vücut ağırlığının normal değerlerden az olması",
+    "cevap": "Zayıflık",
+    "alternatifler": [
+      "ZAYIFLIK"
+    ]
+  },
+  {
+    "id": 193,
     "soru": "Kaybedilimiş, telef olmuş şeyler",
     "cevap": "Zayiat",
     "alternatifler": [
@@ -1547,7 +1603,7 @@
     ]
   },
   {
-    "id": 188,
+    "id": 194,
     "soru": "Kaybedilenler, zararlar, kötü sonuçlar",
     "cevap": "Zayiat",
     "alternatifler": [
@@ -1555,7 +1611,7 @@
     ]
   },
   {
-    "id": 189,
+    "id": 195,
     "soru": "Toplam kayıp",
     "cevap": "Zayiat",
     "alternatifler": [
@@ -1563,7 +1619,7 @@
     ]
   },
   {
-    "id": 190,
+    "id": 196,
     "soru": "Almanca kökenli bir adı olan mizahi haber sitesi",
     "cevap": "Zaytung",
     "alternatifler": [
@@ -1571,7 +1627,7 @@
     ]
   },
   {
-    "id": 191,
+    "id": 197,
     "soru": "Cüsseli, iri yarı kişiler için kullanılan tabir",
     "cevap": "Zebella",
     "alternatifler": [
@@ -1579,7 +1635,7 @@
     ]
   },
   {
-    "id": 192,
+    "id": 198,
     "soru": "Halk ağzında vücudu oldukça gelişmiş, iri kıyım",
     "cevap": "Zebella",
     "alternatifler": [
@@ -1587,7 +1643,7 @@
     ]
   },
   {
-    "id": 193,
+    "id": 199,
     "soru": "Yusuf Atılgan romanı Anayurt Oteli'nin kahramanı",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1595,7 +1651,7 @@
     ]
   },
   {
-    "id": 194,
+    "id": 200,
     "soru": "Anayurt Oteli romanındaki baş kahraman",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1603,7 +1659,7 @@
     ]
   },
   {
-    "id": 195,
+    "id": 201,
     "soru": "Isıya dayanıklı, parlak bir süs eşyası taşı",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1611,7 +1667,7 @@
     ]
   },
   {
-    "id": 196,
+    "id": 202,
     "soru": "Adı Kızıldeniz'deki aynı adadan gelen değerli taş",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1619,7 +1675,7 @@
     ]
   },
   {
-    "id": 197,
+    "id": 203,
     "soru": "Anayurt Oteli romanındaki ana karakter",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1627,7 +1683,7 @@
     ]
   },
   {
-    "id": 198,
+    "id": 204,
     "soru": "Krizolit olarak bilinen mineral",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1635,7 +1691,7 @@
     ]
   },
   {
-    "id": 199,
+    "id": 205,
     "soru": "Anayurt Oteli romanında, oteli işleten görevli",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1643,7 +1699,7 @@
     ]
   },
   {
-    "id": 200,
+    "id": 206,
     "soru": "Anayurt Oteli romanında, oteli işleten görevli",
     "cevap": "Zebercet",
     "alternatifler": [
@@ -1651,7 +1707,7 @@
     ]
   },
   {
-    "id": 201,
+    "id": 207,
     "soru": "Siyah beyaz çizgileri olan, ata benzeyen memeliler",
     "cevap": "Zebralar",
     "alternatifler": [
@@ -1659,7 +1715,7 @@
     ]
   },
   {
-    "id": 202,
+    "id": 208,
     "soru": "Juventus'un siyah beyaz rengine atfedilen lakabı",
     "cevap": "Zebralar",
     "alternatifler": [
@@ -1667,7 +1723,7 @@
     ]
   },
   {
-    "id": 203,
+    "id": 209,
     "soru": "Zarar vermek",
     "cevap": "Zedelemek",
     "alternatifler": [
@@ -1675,7 +1731,7 @@
     ]
   },
   {
-    "id": 204,
+    "id": 210,
     "soru": "Vücuttaki bir dokuyu hafifçe yaralamak",
     "cevap": "Zedelemek",
     "alternatifler": [
@@ -1683,7 +1739,7 @@
     ]
   },
   {
-    "id": 205,
+    "id": 211,
     "soru": "Vücuttaki bir dokuyu hafifçe yaralamak",
     "cevap": "Zedelemek",
     "alternatifler": [
@@ -1691,7 +1747,7 @@
     ]
   },
   {
-    "id": 206,
+    "id": 212,
     "soru": "Birisine, ölüme neden olabilecek bir madde verme",
     "cevap": "Zehirleme",
     "alternatifler": [
@@ -1699,7 +1755,7 @@
     ]
   },
   {
-    "id": 207,
+    "id": 213,
     "soru": "Birisine, ölüme neden olabilecek bir madde verme",
     "cevap": "Zehirleme",
     "alternatifler": [
@@ -1707,7 +1763,7 @@
     ]
   },
   {
-    "id": 208,
+    "id": 214,
     "soru": "Birine toksik madde verme",
     "cevap": "Zehirleme",
     "alternatifler": [
@@ -1715,7 +1771,7 @@
     ]
   },
   {
-    "id": 209,
+    "id": 215,
     "soru": "Toksik",
     "cevap": "Zehirli",
     "alternatifler": [
@@ -1723,7 +1779,7 @@
     ]
   },
   {
-    "id": 210,
+    "id": 216,
     "soru": "Yenilince zarar veren toksik madde",
     "cevap": "Zehirli",
     "alternatifler": [
@@ -1731,7 +1787,7 @@
     ]
   },
   {
-    "id": 211,
+    "id": 217,
     "soru": "Masala göre, Pamuk Prenses'in yediği elma böyledir",
     "cevap": "Zehirli",
     "alternatifler": [
@@ -1739,7 +1795,7 @@
     ]
   },
   {
-    "id": 212,
+    "id": 218,
     "soru": "Toksik",
     "cevap": "Zehirli",
     "alternatifler": [
@@ -1747,7 +1803,7 @@
     ]
   },
   {
-    "id": 213,
+    "id": 219,
     "soru": "Süper kahraman filmi, Venom: __ Öfke",
     "cevap": "Zehirli",
     "alternatifler": [
@@ -1755,7 +1811,7 @@
     ]
   },
   {
-    "id": 214,
+    "id": 220,
     "soru": "Film serisi, Venom: __ Öfke",
     "cevap": "Zehirli",
     "alternatifler": [
@@ -1763,7 +1819,7 @@
     ]
   },
   {
-    "id": 215,
+    "id": 221,
     "soru": "Dünyanın en tehlikeli kurbağa türü",
     "cevap": "Zehirli ok",
     "alternatifler": [
@@ -1772,7 +1828,7 @@
     ]
   },
   {
-    "id": 216,
+    "id": 222,
     "soru": "Dünyanın en tehlikeli kurbağa türü",
     "cevap": "Zehirli ok",
     "alternatifler": [
@@ -1781,15 +1837,7 @@
     ]
   },
   {
-    "id": 217,
-    "soru": "Sivri __, akıllıca ve ilginç fikirleri olan kişi",
-    "cevap": "Zekalı",
-    "alternatifler": [
-      "ZEKALI"
-    ]
-  },
-  {
-    "id": 218,
+    "id": 223,
     "soru": "Rubik bulmacanın Türkçe adı",
     "cevap": "Zeka küpü",
     "alternatifler": [
@@ -1799,7 +1847,7 @@
     ]
   },
   {
-    "id": 219,
+    "id": 224,
     "soru": "En az 6 adet kare yüzü olan renkli oyuncak",
     "cevap": "Zeka küpü",
     "alternatifler": [
@@ -1809,7 +1857,7 @@
     ]
   },
   {
-    "id": 220,
+    "id": 225,
     "soru": "En az 6 adet kare yüzü olan renkli oyuncak",
     "cevap": "Zeka küpü",
     "alternatifler": [
@@ -1819,7 +1867,7 @@
     ]
   },
   {
-    "id": 221,
+    "id": 226,
     "soru": "En az 6 adet kare yüzü olan renkli oyuncak",
     "cevap": "Zeka küpü",
     "alternatifler": [
@@ -1829,7 +1877,7 @@
     ]
   },
   {
-    "id": 222,
+    "id": 227,
     "soru": "IQ seviyesini, zihinsel beceriyi ölçen sınav",
     "cevap": "Zeka testi",
     "alternatifler": [
@@ -1838,7 +1886,7 @@
     ]
   },
   {
-    "id": 223,
+    "id": 228,
     "soru": "IQ seviyesi ölçme yöntemi",
     "cevap": "Zeka testi",
     "alternatifler": [
@@ -1847,7 +1895,7 @@
     ]
   },
   {
-    "id": 224,
+    "id": 229,
     "soru": "IQ seviyesi ölçümü yapma yöntemi",
     "cevap": "Zeka testi",
     "alternatifler": [
@@ -1856,7 +1904,7 @@
     ]
   },
   {
-    "id": 225,
+    "id": 230,
     "soru": "IQ seviyesi ölçme yöntemi",
     "cevap": "Zeka testi",
     "alternatifler": [
@@ -1865,7 +1913,7 @@
     ]
   },
   {
-    "id": 226,
+    "id": 231,
     "soru": "Zihinsel yetiyi sınayan testler yoluyla ölçülür",
     "cevap": "Zeka yaşı",
     "alternatifler": [
@@ -1875,39 +1923,15 @@
     ]
   },
   {
-    "id": 227,
-    "soru": "Uzaylı lakaplı, 80'lerin Türk dizi karakteri",
-    "cevap": "Zekiye",
+    "id": 232,
+    "soru": "Sivri __, akıllıca ve ilginç fikirleri olan kişi",
+    "cevap": "Zekalı",
     "alternatifler": [
-      "ZEKIYE"
+      "ZEKALI"
     ]
   },
   {
-    "id": 228,
-    "soru": "Eski bir yerli komedi dizisi; Uzaylı __",
-    "cevap": "Zekiye",
-    "alternatifler": [
-      "ZEKIYE"
-    ]
-  },
-  {
-    "id": 229,
-    "soru": "TRT'nin 80'lerdeki, uzaylı lakaplı dizi karakteri",
-    "cevap": "Zekiye",
-    "alternatifler": [
-      "ZEKIYE"
-    ]
-  },
-  {
-    "id": 230,
-    "soru": "TRT'nin 80'lerdeki, uzaylı lakaplı dizi karakteri",
-    "cevap": "Zekiye",
-    "alternatifler": [
-      "ZEKIYE"
-    ]
-  },
-  {
-    "id": 231,
+    "id": 233,
     "soru": "Sanat Güneşi olarak da bilinen Türk şarkıcı",
     "cevap": "Zeki müren",
     "alternatifler": [
@@ -1917,28 +1941,8 @@
     ]
   },
   {
-    "id": 232,
-    "soru": "Sanat Güneşi lakaplı sanatçı",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 233,
-    "soru": "Türk müziğinin Sanat Güneşi",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
     "id": 234,
-    "soru": "Sanat Güneşi olarak bilinen ünlü Türk sanatçı",
+    "soru": "Sanat Güneşi lakaplı sanatçı",
     "cevap": "Zeki müren",
     "alternatifler": [
       "ZEKI MÜREN",
@@ -1948,7 +1952,7 @@
   },
   {
     "id": 235,
-    "soru": "1996’da vefat eden Paşa lakaplı devlet sanatçısı",
+    "soru": "Türk müziğinin Sanat Güneşi",
     "cevap": "Zeki müren",
     "alternatifler": [
       "ZEKI MÜREN",
@@ -1958,66 +1962,6 @@
   },
   {
     "id": 236,
-    "soru": "Sanat Güneşi lakaplı sanatçı",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 237,
-    "soru": "Vizontele'de \"Bizi görecek mi?\" sorusunun öznesi",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 238,
-    "soru": "Royal Albert Hall'da konser veren ilk Türk sanatçı",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 239,
-    "soru": "Türkiye'de ilk defa Altın Plak sahibi olan şarkıcı",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 240,
-    "soru": "Doğum günü Türk Sanat Müziği Günü olan sanatçı",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 241,
-    "soru": "1996’da vefat eden Paşa lakaplı devlet sanatçısı",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 242,
     "soru": "Sanat Güneşi olarak bilinen ünlü Türk sanatçı",
     "cevap": "Zeki müren",
     "alternatifler": [
@@ -2027,8 +1971,8 @@
     ]
   },
   {
-    "id": 243,
-    "soru": "Alkışlarla Yaşıyorum, bu sanatçının şarkısıdır",
+    "id": 237,
+    "soru": "1996’da vefat eden Paşa lakaplı devlet sanatçısı",
     "cevap": "Zeki müren",
     "alternatifler": [
       "ZEKI MÜREN",
@@ -2037,57 +1981,7 @@
     ]
   },
   {
-    "id": 244,
-    "soru": "TRT'de, kendisi için yapılan törende ölen sanatçı",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 245,
-    "soru": "Canlı yayında fenalaşıp vefat eden Sanat Güneşimiz",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 246,
-    "soru": "Türkiye'nin Sanat Güneşi",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 247,
-    "soru": "Vizontele'de \"Bizi görecek mi?\" sorusunun öznesi",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 248,
-    "soru": "Canlı yayında fenalaşıp vefat eden Sanat Güneşimiz",
-    "cevap": "Zeki müren",
-    "alternatifler": [
-      "ZEKI MÜREN",
-      "ZEKI MUREN",
-      "Zekimüren"
-    ]
-  },
-  {
-    "id": 249,
+    "id": 238,
     "soru": "Sanat Güneşi lakaplı sanatçı",
     "cevap": "Zeki müren",
     "alternatifler": [
@@ -2097,28 +1991,138 @@
     ]
   },
   {
-    "id": 250,
-    "soru": "Kapıcılar Kralı filminin yönetmeni",
-    "cevap": "Zeki ökten",
+    "id": 239,
+    "soru": "Vizontele'de \"Bizi görecek mi?\" sorusunun öznesi",
+    "cevap": "Zeki müren",
     "alternatifler": [
-      "ZEKI ÖKTEN",
-      "ZEKI OKTEN",
-      "Zekiökten"
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 240,
+    "soru": "Royal Albert Hall'da konser veren ilk Türk sanatçı",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 241,
+    "soru": "Türkiye'de ilk defa Altın Plak sahibi olan şarkıcı",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 242,
+    "soru": "Doğum günü Türk Sanat Müziği Günü olan sanatçı",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 243,
+    "soru": "1996’da vefat eden Paşa lakaplı devlet sanatçısı",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 244,
+    "soru": "Sanat Güneşi olarak bilinen ünlü Türk sanatçı",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 245,
+    "soru": "Alkışlarla Yaşıyorum, bu sanatçının şarkısıdır",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 246,
+    "soru": "TRT'de, kendisi için yapılan törende ölen sanatçı",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 247,
+    "soru": "Canlı yayında fenalaşıp vefat eden Sanat Güneşimiz",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 248,
+    "soru": "Türkiye'nin Sanat Güneşi",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 249,
+    "soru": "Vizontele'de \"Bizi görecek mi?\" sorusunun öznesi",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
+    ]
+  },
+  {
+    "id": 250,
+    "soru": "Canlı yayında fenalaşıp vefat eden Sanat Güneşimiz",
+    "cevap": "Zeki müren",
+    "alternatifler": [
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
     ]
   },
   {
     "id": 251,
-    "soru": "Çöpçüler Kralı’nın yönetmeni",
-    "cevap": "Zeki ökten",
+    "soru": "Sanat Güneşi lakaplı sanatçı",
+    "cevap": "Zeki müren",
     "alternatifler": [
-      "ZEKI ÖKTEN",
-      "ZEKI OKTEN",
-      "Zekiökten"
+      "ZEKI MÜREN",
+      "ZEKI MUREN",
+      "Zekimüren"
     ]
   },
   {
     "id": 252,
-    "soru": "Bol ödüllü 1978 yapımı Sürü'nün yönetmeni",
+    "soru": "Kapıcılar Kralı filminin yönetmeni",
     "cevap": "Zeki ökten",
     "alternatifler": [
       "ZEKI ÖKTEN",
@@ -2128,7 +2132,7 @@
   },
   {
     "id": 253,
-    "soru": "Kapıcılar Kralı filminin yönetmeni",
+    "soru": "Çöpçüler Kralı’nın yönetmeni",
     "cevap": "Zeki ökten",
     "alternatifler": [
       "ZEKI ÖKTEN",
@@ -2138,7 +2142,7 @@
   },
   {
     "id": 254,
-    "soru": "1977 tarihli Kapıcılar Kralı filminin yönetmeni",
+    "soru": "Bol ödüllü 1978 yapımı Sürü'nün yönetmeni",
     "cevap": "Zeki ökten",
     "alternatifler": [
       "ZEKI ÖKTEN",
@@ -2148,7 +2152,7 @@
   },
   {
     "id": 255,
-    "soru": "Kemal Sunal'ın Hanzo, Davacı filmlerinin rejisörü",
+    "soru": "Kapıcılar Kralı filminin yönetmeni",
     "cevap": "Zeki ökten",
     "alternatifler": [
       "ZEKI ÖKTEN",
@@ -2158,7 +2162,7 @@
   },
   {
     "id": 256,
-    "soru": "Çöpçüler Kralı, Kapıcılar Kralı filmlerini yönetti",
+    "soru": "1977 tarihli Kapıcılar Kralı filminin yönetmeni",
     "cevap": "Zeki ökten",
     "alternatifler": [
       "ZEKI ÖKTEN",
@@ -2168,7 +2172,7 @@
   },
   {
     "id": 257,
-    "soru": "Çöpçüler Kralı, Kapıcılar Kralı filmlerini yönetti",
+    "soru": "Kemal Sunal'ın Hanzo, Davacı filmlerinin rejisörü",
     "cevap": "Zeki ökten",
     "alternatifler": [
       "ZEKI ÖKTEN",
@@ -2178,6 +2182,58 @@
   },
   {
     "id": 258,
+    "soru": "Çöpçüler Kralı, Kapıcılar Kralı filmlerini yönetti",
+    "cevap": "Zeki ökten",
+    "alternatifler": [
+      "ZEKI ÖKTEN",
+      "ZEKI OKTEN",
+      "Zekiökten"
+    ]
+  },
+  {
+    "id": 259,
+    "soru": "Çöpçüler Kralı, Kapıcılar Kralı filmlerini yönetti",
+    "cevap": "Zeki ökten",
+    "alternatifler": [
+      "ZEKI ÖKTEN",
+      "ZEKI OKTEN",
+      "Zekiökten"
+    ]
+  },
+  {
+    "id": 260,
+    "soru": "Uzaylı lakaplı, 80'lerin Türk dizi karakteri",
+    "cevap": "Zekiye",
+    "alternatifler": [
+      "ZEKIYE"
+    ]
+  },
+  {
+    "id": 261,
+    "soru": "Eski bir yerli komedi dizisi; Uzaylı __",
+    "cevap": "Zekiye",
+    "alternatifler": [
+      "ZEKIYE"
+    ]
+  },
+  {
+    "id": 262,
+    "soru": "TRT'nin 80'lerdeki, uzaylı lakaplı dizi karakteri",
+    "cevap": "Zekiye",
+    "alternatifler": [
+      "ZEKIYE"
+    ]
+  },
+  {
+    "id": 263,
+    "soru": "TRT'nin 80'lerdeki, uzaylı lakaplı dizi karakteri",
+    "cevap": "Zekiye",
+    "alternatifler": [
+      "ZEKIYE"
+    ]
+  },
+  {
+    "id": 264,
     "soru": "Başkenti Wellington olan, kraliyet ülkesi, Yeni __",
     "cevap": "Zelanda",
     "alternatifler": [
@@ -2185,7 +2241,7 @@
     ]
   },
   {
-    "id": 259,
+    "id": 265,
     "soru": "En son keşfedilen, henüz kabul görmemiş kıta",
     "cevap": "Zelandiya",
     "alternatifler": [
@@ -2193,7 +2249,7 @@
     ]
   },
   {
-    "id": 260,
+    "id": 266,
     "soru": "Varlığı iddia edilen dünyanın sekizinci kıtası",
     "cevap": "Zelandiya",
     "alternatifler": [
@@ -2201,7 +2257,7 @@
     ]
   },
   {
-    "id": 261,
+    "id": 267,
     "soru": "Yük hayvanında büyük yükün üstüne konulan yük",
     "cevap": "Zelber",
     "alternatifler": [
@@ -2209,7 +2265,7 @@
     ]
   },
   {
-    "id": 262,
+    "id": 268,
     "soru": "Yük hayvanında büyük yükün üstüne konulan yük",
     "cevap": "Zelber",
     "alternatifler": [
@@ -2217,7 +2273,7 @@
     ]
   },
   {
-    "id": 263,
+    "id": 269,
     "soru": "Sinem Kobal'ın Analar ve Anneler dizisindeki rolü",
     "cevap": "Zeliha",
     "alternatifler": [
@@ -2225,7 +2281,7 @@
     ]
   },
   {
-    "id": 264,
+    "id": 270,
     "soru": "Bir kişiye karşı küçültücü davranışlarda bulunma",
     "cevap": "Zelil etme",
     "alternatifler": [
@@ -2234,7 +2290,7 @@
     ]
   },
   {
-    "id": 265,
+    "id": 271,
     "soru": "Yer sarsıntısı, deprem",
     "cevap": "Zelzele",
     "alternatifler": [
@@ -2242,56 +2298,8 @@
     ]
   },
   {
-    "id": 266,
-    "soru": "Eski dilde deprem",
-    "cevap": "Zelzele",
-    "alternatifler": [
-      "ZELZELE"
-    ]
-  },
-  {
-    "id": 267,
-    "soru": "Depremle eş anlamlı kelime",
-    "cevap": "Zelzele",
-    "alternatifler": [
-      "ZELZELE"
-    ]
-  },
-  {
-    "id": 268,
-    "soru": "Deprem",
-    "cevap": "Zelzele",
-    "alternatifler": [
-      "ZELZELE"
-    ]
-  },
-  {
-    "id": 269,
-    "soru": "2013'te Pakistan'daki deprem sonucu oluşan ada",
-    "cevap": "Zelzele",
-    "alternatifler": [
-      "ZELZELE"
-    ]
-  },
-  {
-    "id": 270,
-    "soru": "Eski dilde deprem",
-    "cevap": "Zelzele",
-    "alternatifler": [
-      "ZELZELE"
-    ]
-  },
-  {
-    "id": 271,
-    "soru": "Eski dilde deprem",
-    "cevap": "Zelzele",
-    "alternatifler": [
-      "ZELZELE"
-    ]
-  },
-  {
     "id": 272,
-    "soru": "Depremin, ikilemeyi çağrıştıran diğer bir adı",
+    "soru": "Eski dilde deprem",
     "cevap": "Zelzele",
     "alternatifler": [
       "ZELZELE"
@@ -2299,7 +2307,7 @@
   },
   {
     "id": 273,
-    "soru": "Depremin, ikilemeyi çağrıştıran diğer bir adı",
+    "soru": "Depremle eş anlamlı kelime",
     "cevap": "Zelzele",
     "alternatifler": [
       "ZELZELE"
@@ -2307,7 +2315,7 @@
   },
   {
     "id": 274,
-    "soru": "Eski dilde deprem",
+    "soru": "Deprem",
     "cevap": "Zelzele",
     "alternatifler": [
       "ZELZELE"
@@ -2315,55 +2323,55 @@
   },
   {
     "id": 275,
-    "soru": "Mekanik saatlerde kurma kolu",
-    "cevap": "Zemberek",
+    "soru": "2013'te Pakistan'daki deprem sonucu oluşan ada",
+    "cevap": "Zelzele",
     "alternatifler": [
-      "ZEMBEREK"
+      "ZELZELE"
     ]
   },
   {
     "id": 276,
-    "soru": "Saatin çeşitli parçalarını harekete geçiren bölüm",
-    "cevap": "Zemberek",
+    "soru": "Eski dilde deprem",
+    "cevap": "Zelzele",
     "alternatifler": [
-      "ZEMBEREK"
+      "ZELZELE"
     ]
   },
   {
     "id": 277,
-    "soru": "Saatin hareketini sağlayan yay",
-    "cevap": "Zemberek",
+    "soru": "Eski dilde deprem",
+    "cevap": "Zelzele",
     "alternatifler": [
-      "ZEMBEREK"
+      "ZELZELE"
     ]
   },
   {
     "id": 278,
-    "soru": "Mekanik saatlerde kurma kolu",
-    "cevap": "Zemberek",
+    "soru": "Depremin, ikilemeyi çağrıştıran diğer bir adı",
+    "cevap": "Zelzele",
     "alternatifler": [
-      "ZEMBEREK"
+      "ZELZELE"
     ]
   },
   {
     "id": 279,
-    "soru": "Saatlerde parçaları hareket ettiren kısım, yay",
-    "cevap": "Zemberek",
+    "soru": "Depremin, ikilemeyi çağrıştıran diğer bir adı",
+    "cevap": "Zelzele",
     "alternatifler": [
-      "ZEMBEREK"
+      "ZELZELE"
     ]
   },
   {
     "id": 280,
-    "soru": "Saat yapımında kullanılan yay",
-    "cevap": "Zemberek",
+    "soru": "Eski dilde deprem",
+    "cevap": "Zelzele",
     "alternatifler": [
-      "ZEMBEREK"
+      "ZELZELE"
     ]
   },
   {
     "id": 281,
-    "soru": "Saatlerde parçaları hareket ettiren kısım, yay",
+    "soru": "Mekanik saatlerde kurma kolu",
     "cevap": "Zemberek",
     "alternatifler": [
       "ZEMBEREK"
@@ -2371,7 +2379,7 @@
   },
   {
     "id": 282,
-    "soru": "Saat parçalarını harekete geçiren yay",
+    "soru": "Saatin çeşitli parçalarını harekete geçiren bölüm",
     "cevap": "Zemberek",
     "alternatifler": [
       "ZEMBEREK"
@@ -2379,6 +2387,54 @@
   },
   {
     "id": 283,
+    "soru": "Saatin hareketini sağlayan yay",
+    "cevap": "Zemberek",
+    "alternatifler": [
+      "ZEMBEREK"
+    ]
+  },
+  {
+    "id": 284,
+    "soru": "Mekanik saatlerde kurma kolu",
+    "cevap": "Zemberek",
+    "alternatifler": [
+      "ZEMBEREK"
+    ]
+  },
+  {
+    "id": 285,
+    "soru": "Saatlerde parçaları hareket ettiren kısım, yay",
+    "cevap": "Zemberek",
+    "alternatifler": [
+      "ZEMBEREK"
+    ]
+  },
+  {
+    "id": 286,
+    "soru": "Saat yapımında kullanılan yay",
+    "cevap": "Zemberek",
+    "alternatifler": [
+      "ZEMBEREK"
+    ]
+  },
+  {
+    "id": 287,
+    "soru": "Saatlerde parçaları hareket ettiren kısım, yay",
+    "cevap": "Zemberek",
+    "alternatifler": [
+      "ZEMBEREK"
+    ]
+  },
+  {
+    "id": 288,
+    "soru": "Saat parçalarını harekete geçiren yay",
+    "cevap": "Zemberek",
+    "alternatifler": [
+      "ZEMBEREK"
+    ]
+  },
+  {
+    "id": 289,
     "soru": "Yağlı güreşte kispetin taşındığı küçük sepet",
     "cevap": "Zembil",
     "alternatifler": [
@@ -2386,7 +2442,7 @@
     ]
   },
   {
-    "id": 284,
+    "id": 290,
     "soru": "Gökten inişi bir deyime konu olan, hasır çanta",
     "cevap": "Zembil",
     "alternatifler": [
@@ -2394,7 +2450,7 @@
     ]
   },
   {
-    "id": 285,
+    "id": 291,
     "soru": "Kış aylarının en soğuk ve şiddetli geçtiği zaman",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2402,7 +2458,7 @@
     ]
   },
   {
-    "id": 286,
+    "id": 292,
     "soru": "Halk arasında kara kışa verilen isim",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2410,7 +2466,7 @@
     ]
   },
   {
-    "id": 287,
+    "id": 293,
     "soru": "Kış mevsiminin en şiddetli yaşandığı zaman",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2418,7 +2474,7 @@
     ]
   },
   {
-    "id": 288,
+    "id": 294,
     "soru": "Kışın en soğuk zamanı",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2426,7 +2482,7 @@
     ]
   },
   {
-    "id": 289,
+    "id": 295,
     "soru": "Kış mevsiminde çok soğuk geçen dönem",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2434,7 +2490,7 @@
     ]
   },
   {
-    "id": 290,
+    "id": 296,
     "soru": "7 Aralık'ta görülen fırtınanın adı",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2442,7 +2498,7 @@
     ]
   },
   {
-    "id": 291,
+    "id": 297,
     "soru": "Kışın en soğuk zamanı",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2450,7 +2506,7 @@
     ]
   },
   {
-    "id": 292,
+    "id": 298,
     "soru": "Kış mevsiminin, dondurucu soğuklarla geçen zamanı",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2458,7 +2514,7 @@
     ]
   },
   {
-    "id": 293,
+    "id": 299,
     "soru": "Halk dilinde kara kış",
     "cevap": "Zemheri",
     "alternatifler": [
@@ -2466,7 +2522,7 @@
     ]
   },
   {
-    "id": 294,
+    "id": 300,
     "soru": "__ yoğurt isteyen cebinde bir inek taşır",
     "cevap": "Zemheride",
     "alternatifler": [
@@ -2474,7 +2530,7 @@
     ]
   },
   {
-    "id": 295,
+    "id": 301,
     "soru": "Mekke'deki, kutsal olduğu düşünülen su",
     "cevap": "Zemzem",
     "alternatifler": [
@@ -2482,59 +2538,11 @@
     ]
   },
   {
-    "id": 296,
+    "id": 302,
     "soru": "Recaizade Mahmut Ekrem'in 3 ciltlik şiir kitabı",
     "cevap": "Zemzeme",
     "alternatifler": [
       "ZEMZEME"
-    ]
-  },
-  {
-    "id": 297,
-    "soru": "Güney Asya kökenli, her derde deva baharat",
-    "cevap": "Zencefil",
-    "alternatifler": [
-      "ZENCEFIL"
-    ]
-  },
-  {
-    "id": 298,
-    "soru": "Asya mutfağında sıklıkla kullanılan bir kök sebze",
-    "cevap": "Zencefil",
-    "alternatifler": [
-      "ZENCEFIL"
-    ]
-  },
-  {
-    "id": 299,
-    "soru": "Kök hali mideyi andıran, mideye yararlı baharat",
-    "cevap": "Zencefil",
-    "alternatifler": [
-      "ZENCEFIL"
-    ]
-  },
-  {
-    "id": 300,
-    "soru": "Hindistan'da yetişen baskın bir baharat",
-    "cevap": "Zencefil",
-    "alternatifler": [
-      "ZENCEFIL"
-    ]
-  },
-  {
-    "id": 301,
-    "soru": "Yumru benzeri kökü baharat olarak kullanılan bitki",
-    "cevap": "Zencefil",
-    "alternatifler": [
-      "ZENCEFIL"
-    ]
-  },
-  {
-    "id": 302,
-    "soru": "Yumru benzeri kökü baharat olarak kullanılan bitki",
-    "cevap": "Zencefil",
-    "alternatifler": [
-      "ZENCEFIL"
     ]
   },
   {
@@ -2555,6 +2563,54 @@
   },
   {
     "id": 305,
+    "soru": "Kök hali mideyi andıran, mideye yararlı baharat",
+    "cevap": "Zencefil",
+    "alternatifler": [
+      "ZENCEFIL"
+    ]
+  },
+  {
+    "id": 306,
+    "soru": "Hindistan'da yetişen baskın bir baharat",
+    "cevap": "Zencefil",
+    "alternatifler": [
+      "ZENCEFIL"
+    ]
+  },
+  {
+    "id": 307,
+    "soru": "Yumru benzeri kökü baharat olarak kullanılan bitki",
+    "cevap": "Zencefil",
+    "alternatifler": [
+      "ZENCEFIL"
+    ]
+  },
+  {
+    "id": 308,
+    "soru": "Yumru benzeri kökü baharat olarak kullanılan bitki",
+    "cevap": "Zencefil",
+    "alternatifler": [
+      "ZENCEFIL"
+    ]
+  },
+  {
+    "id": 309,
+    "soru": "Güney Asya kökenli, her derde deva baharat",
+    "cevap": "Zencefil",
+    "alternatifler": [
+      "ZENCEFIL"
+    ]
+  },
+  {
+    "id": 310,
+    "soru": "Asya mutfağında sıklıkla kullanılan bir kök sebze",
+    "cevap": "Zencefil",
+    "alternatifler": [
+      "ZENCEFIL"
+    ]
+  },
+  {
+    "id": 311,
     "soru": "Euphoria dizisinin başrol kadın oyuncusu",
     "cevap": "Zendaya",
     "alternatifler": [
@@ -2562,7 +2618,7 @@
     ]
   },
   {
-    "id": 306,
+    "id": 312,
     "soru": "Örümcek-Adam: Evden Uzakta filminde MJ'yi oynadı",
     "cevap": "Zendaya",
     "alternatifler": [
@@ -2570,7 +2626,7 @@
     ]
   },
   {
-    "id": 307,
+    "id": 313,
     "soru": "Dune filminde Chani'yi oynadı",
     "cevap": "Zendaya",
     "alternatifler": [
@@ -2578,7 +2634,7 @@
     ]
   },
   {
-    "id": 308,
+    "id": 314,
     "soru": "Dune filminde Chani'yi oynayan karakter",
     "cevap": "Zendaya",
     "alternatifler": [
@@ -2586,7 +2642,7 @@
     ]
   },
   {
-    "id": 309,
+    "id": 315,
     "soru": "Malatya'nın Darende ilçesindeki Osmanlı kalesi",
     "cevap": "Zengibar",
     "alternatifler": [
@@ -2594,7 +2650,7 @@
     ]
   },
   {
-    "id": 310,
+    "id": 316,
     "soru": "Malatya'nın Darende ilçesindeki Osmanlı kalesi",
     "cevap": "Zengibar",
     "alternatifler": [
@@ -2602,7 +2658,7 @@
     ]
   },
   {
-    "id": 311,
+    "id": 317,
     "soru": "Çok parası, malı, mülkü olan kişi",
     "cevap": "Zengin",
     "alternatifler": [
@@ -2610,7 +2666,7 @@
     ]
   },
   {
-    "id": 312,
+    "id": 318,
     "soru": "Atasözüne göre, horozu bile yumurtlayan kişi",
     "cevap": "Zengin",
     "alternatifler": [
@@ -2618,7 +2674,7 @@
     ]
   },
   {
-    "id": 313,
+    "id": 319,
     "soru": "Çok parası olan, varlıklı",
     "cevap": "Zengin",
     "alternatifler": [
@@ -2626,7 +2682,25 @@
     ]
   },
   {
-    "id": 314,
+    "id": 320,
+    "soru": "Filmlerde fakir oğlan hep ona aşık olur",
+    "cevap": "Zengin kız",
+    "alternatifler": [
+      "ZENGIN KIZ",
+      "Zenginkız"
+    ]
+  },
+  {
+    "id": 321,
+    "soru": "Filmlerde fakir oğlan hep ona aşık olur",
+    "cevap": "Zengin kız",
+    "alternatifler": [
+      "ZENGIN KIZ",
+      "Zenginkız"
+    ]
+  },
+  {
+    "id": 322,
     "soru": "Fakirlik karşıtı",
     "cevap": "Zenginlik",
     "alternatifler": [
@@ -2634,7 +2708,7 @@
     ]
   },
   {
-    "id": 315,
+    "id": 323,
     "soru": "Varlıklı olma durumu",
     "cevap": "Zenginlik",
     "alternatifler": [
@@ -2642,7 +2716,7 @@
     ]
   },
   {
-    "id": 316,
+    "id": 324,
     "soru": "Fakirlik karşıtı",
     "cevap": "Zenginlik",
     "alternatifler": [
@@ -2650,25 +2724,7 @@
     ]
   },
   {
-    "id": 317,
-    "soru": "Filmlerde fakir oğlan hep ona aşık olur",
-    "cevap": "Zengin kız",
-    "alternatifler": [
-      "ZENGIN KIZ",
-      "Zenginkız"
-    ]
-  },
-  {
-    "id": 318,
-    "soru": "Filmlerde fakir oğlan hep ona aşık olur",
-    "cevap": "Zengin kız",
-    "alternatifler": [
-      "ZENGIN KIZ",
-      "Zenginkız"
-    ]
-  },
-  {
-    "id": 319,
+    "id": 325,
     "soru": "Yabancılardan korkma ve nefret etme hastalığı",
     "cevap": "Zenofobi",
     "alternatifler": [
@@ -2676,7 +2732,7 @@
     ]
   },
   {
-    "id": 320,
+    "id": 326,
     "soru": "Kişinin yabancılardan korkması ve nefret etmesi",
     "cevap": "Zenofobi",
     "alternatifler": [
@@ -2684,7 +2740,7 @@
     ]
   },
   {
-    "id": 321,
+    "id": 327,
     "soru": "Yabancılardan korkma ve nefret etme hastalığı",
     "cevap": "Zenofobi",
     "alternatifler": [
@@ -2692,7 +2748,7 @@
     ]
   },
   {
-    "id": 322,
+    "id": 328,
     "soru": "Yabancılara duyulan korku veya nefret",
     "cevap": "Zenofobi",
     "alternatifler": [
@@ -2700,56 +2756,8 @@
     ]
   },
   {
-    "id": 323,
-    "soru": "Üzerindeki balon sayesinde uçan eski hava taşıtı",
-    "cevap": "Zeplin",
-    "alternatifler": [
-      "ZEPLIN"
-    ]
-  },
-  {
-    "id": 324,
-    "soru": "Hava gemisi",
-    "cevap": "Zeplin",
-    "alternatifler": [
-      "ZEPLIN"
-    ]
-  },
-  {
-    "id": 325,
-    "soru": "Balonlu hava gemisi",
-    "cevap": "Zeplin",
-    "alternatifler": [
-      "ZEPLIN"
-    ]
-  },
-  {
-    "id": 326,
-    "soru": "Helyumla şişirilmiş balon şeklinde hava taşıtı",
-    "cevap": "Zeplin",
-    "alternatifler": [
-      "ZEPLIN"
-    ]
-  },
-  {
-    "id": 327,
-    "soru": "Eskiden hava ulaşımı çin kullanılan bir taşıt",
-    "cevap": "Zeplin",
-    "alternatifler": [
-      "ZEPLIN"
-    ]
-  },
-  {
-    "id": 328,
-    "soru": "Motorlu ve balonlu Alman hava gemisi",
-    "cevap": "Zeplin",
-    "alternatifler": [
-      "ZEPLIN"
-    ]
-  },
-  {
     "id": 329,
-    "soru": "Şekli puroya benzer güdümlü balon",
+    "soru": "Üzerindeki balon sayesinde uçan eski hava taşıtı",
     "cevap": "Zeplin",
     "alternatifler": [
       "ZEPLIN"
@@ -2757,7 +2765,7 @@
   },
   {
     "id": 330,
-    "soru": "Helyum gazıyla şişirilmiş hava balonu",
+    "soru": "Hava gemisi",
     "cevap": "Zeplin",
     "alternatifler": [
       "ZEPLIN"
@@ -2765,7 +2773,7 @@
   },
   {
     "id": 331,
-    "soru": "Üzerindeki balon sayesinde uçan eski hava taşıtı",
+    "soru": "Balonlu hava gemisi",
     "cevap": "Zeplin",
     "alternatifler": [
       "ZEPLIN"
@@ -2773,7 +2781,7 @@
   },
   {
     "id": 332,
-    "soru": "1. Dünya Savaşı'nda, havadan bomba atan bir taşıt",
+    "soru": "Helyumla şişirilmiş balon şeklinde hava taşıtı",
     "cevap": "Zeplin",
     "alternatifler": [
       "ZEPLIN"
@@ -2781,6 +2789,54 @@
   },
   {
     "id": 333,
+    "soru": "Eskiden hava ulaşımı çin kullanılan bir taşıt",
+    "cevap": "Zeplin",
+    "alternatifler": [
+      "ZEPLIN"
+    ]
+  },
+  {
+    "id": 334,
+    "soru": "Motorlu ve balonlu Alman hava gemisi",
+    "cevap": "Zeplin",
+    "alternatifler": [
+      "ZEPLIN"
+    ]
+  },
+  {
+    "id": 335,
+    "soru": "Şekli puroya benzer güdümlü balon",
+    "cevap": "Zeplin",
+    "alternatifler": [
+      "ZEPLIN"
+    ]
+  },
+  {
+    "id": 336,
+    "soru": "Helyum gazıyla şişirilmiş hava balonu",
+    "cevap": "Zeplin",
+    "alternatifler": [
+      "ZEPLIN"
+    ]
+  },
+  {
+    "id": 337,
+    "soru": "Üzerindeki balon sayesinde uçan eski hava taşıtı",
+    "cevap": "Zeplin",
+    "alternatifler": [
+      "ZEPLIN"
+    ]
+  },
+  {
+    "id": 338,
+    "soru": "1. Dünya Savaşı'nda, havadan bomba atan bir taşıt",
+    "cevap": "Zeplin",
+    "alternatifler": [
+      "ZEPLIN"
+    ]
+  },
+  {
+    "id": 339,
     "soru": "Stairway to Heaven, bu grubun şarkısıdır, Led __",
     "cevap": "Zeppelın",
     "alternatifler": [
@@ -2788,7 +2844,7 @@
     ]
   },
   {
-    "id": 334,
+    "id": 340,
     "soru": "Lohusa otu",
     "cevap": "Zeravent",
     "alternatifler": [
@@ -2796,7 +2852,7 @@
     ]
   },
   {
-    "id": 335,
+    "id": 341,
     "soru": "Lohusa otu",
     "cevap": "Zeravent",
     "alternatifler": [
@@ -2804,7 +2860,7 @@
     ]
   },
   {
-    "id": 336,
+    "id": 342,
     "soru": "Küçük bir kayısı türü",
     "cevap": "Zerdali",
     "alternatifler": [
@@ -2812,7 +2868,7 @@
     ]
   },
   {
-    "id": 337,
+    "id": 343,
     "soru": "Acı çekirdekli kayısı türü",
     "cevap": "Zerdali",
     "alternatifler": [
@@ -2820,7 +2876,7 @@
     ]
   },
   {
-    "id": 338,
+    "id": 344,
     "soru": "Çekirdeği acı, küçük boyutlu, yabani kayısı türü",
     "cevap": "Zerdali",
     "alternatifler": [
@@ -2828,7 +2884,7 @@
     ]
   },
   {
-    "id": 339,
+    "id": 345,
     "soru": "Kayısının küçüğü",
     "cevap": "Zerdali",
     "alternatifler": [
@@ -2836,7 +2892,7 @@
     ]
   },
   {
-    "id": 340,
+    "id": 346,
     "soru": "Kayısının aşısız hali olan meyve",
     "cevap": "Zerdali",
     "alternatifler": [
@@ -2844,78 +2900,24 @@
     ]
   },
   {
-    "id": 341,
-    "soru": "Kayısı ağacından alınan, genelde acı bir meyve",
-    "cevap": "Zerdali",
-    "alternatifler": [
-      "ZERDALI"
-    ]
-  },
-  {
-    "id": 342,
-    "soru": "Kayısı ağacından alınan, genelde acı bir meyve",
-    "cevap": "Zerdali",
-    "alternatifler": [
-      "ZERDALI"
-    ]
-  },
-  {
-    "id": 343,
-    "soru": "Sarıkök de denen şifalı bir baharat; Hint safranı",
-    "cevap": "Zerdeçal",
-    "alternatifler": [
-      "ZERDECAL",
-      "ZERDEÇAL"
-    ]
-  },
-  {
-    "id": 344,
-    "soru": "Hint safranı olarak bilinen şifalı bitki",
-    "cevap": "Zerdeçal",
-    "alternatifler": [
-      "ZERDECAL",
-      "ZERDEÇAL"
-    ]
-  },
-  {
-    "id": 345,
-    "soru": "Sarı çiçekli, büyük yapraklı, otsu bir bitki",
-    "cevap": "Zerdeçal",
-    "alternatifler": [
-      "ZERDECAL",
-      "ZERDEÇAL"
-    ]
-  },
-  {
-    "id": 346,
-    "soru": "Hint safranı da denilen bir bitki",
-    "cevap": "Zerdeçal",
-    "alternatifler": [
-      "ZERDECAL",
-      "ZERDEÇAL"
-    ]
-  },
-  {
     "id": 347,
-    "soru": "Keskin sarı renkli bir baharat",
-    "cevap": "Zerdeçal",
+    "soru": "Kayısı ağacından alınan, genelde acı bir meyve",
+    "cevap": "Zerdali",
     "alternatifler": [
-      "ZERDECAL",
-      "ZERDEÇAL"
+      "ZERDALI"
     ]
   },
   {
     "id": 348,
-    "soru": "Hint safranı da denilen bir bitki",
-    "cevap": "Zerdeçal",
+    "soru": "Kayısı ağacından alınan, genelde acı bir meyve",
+    "cevap": "Zerdali",
     "alternatifler": [
-      "ZERDECAL",
-      "ZERDEÇAL"
+      "ZERDALI"
     ]
   },
   {
     "id": 349,
-    "soru": "Zencefil ailesinden, sarıboya da denen bir baharat",
+    "soru": "Sarıkök de denen şifalı bir baharat; Hint safranı",
     "cevap": "Zerdeçal",
     "alternatifler": [
       "ZERDECAL",
@@ -2924,7 +2926,7 @@
   },
   {
     "id": 350,
-    "soru": "Hint safranı da denilen bir bitki",
+    "soru": "Hint safranı olarak bilinen şifalı bitki",
     "cevap": "Zerdeçal",
     "alternatifler": [
       "ZERDECAL",
@@ -2933,7 +2935,7 @@
   },
   {
     "id": 351,
-    "soru": "Diğer adı sarıkök olan baharat; Hint safranı",
+    "soru": "Sarı çiçekli, büyük yapraklı, otsu bir bitki",
     "cevap": "Zerdeçal",
     "alternatifler": [
       "ZERDECAL",
@@ -2942,7 +2944,7 @@
   },
   {
     "id": 352,
-    "soru": "Sarıkök de denen şifalı bir baharat; Hint safranı",
+    "soru": "Hint safranı da denilen bir bitki",
     "cevap": "Zerdeçal",
     "alternatifler": [
       "ZERDECAL",
@@ -2960,7 +2962,7 @@
   },
   {
     "id": 354,
-    "soru": "Zencefil ailesinden, sarıboya da denen bir baharat",
+    "soru": "Hint safranı da denilen bir bitki",
     "cevap": "Zerdeçal",
     "alternatifler": [
       "ZERDECAL",
@@ -2969,6 +2971,60 @@
   },
   {
     "id": 355,
+    "soru": "Zencefil ailesinden, sarıboya da denen bir baharat",
+    "cevap": "Zerdeçal",
+    "alternatifler": [
+      "ZERDECAL",
+      "ZERDEÇAL"
+    ]
+  },
+  {
+    "id": 356,
+    "soru": "Hint safranı da denilen bir bitki",
+    "cevap": "Zerdeçal",
+    "alternatifler": [
+      "ZERDECAL",
+      "ZERDEÇAL"
+    ]
+  },
+  {
+    "id": 357,
+    "soru": "Diğer adı sarıkök olan baharat; Hint safranı",
+    "cevap": "Zerdeçal",
+    "alternatifler": [
+      "ZERDECAL",
+      "ZERDEÇAL"
+    ]
+  },
+  {
+    "id": 358,
+    "soru": "Sarıkök de denen şifalı bir baharat; Hint safranı",
+    "cevap": "Zerdeçal",
+    "alternatifler": [
+      "ZERDECAL",
+      "ZERDEÇAL"
+    ]
+  },
+  {
+    "id": 359,
+    "soru": "Keskin sarı renkli bir baharat",
+    "cevap": "Zerdeçal",
+    "alternatifler": [
+      "ZERDECAL",
+      "ZERDEÇAL"
+    ]
+  },
+  {
+    "id": 360,
+    "soru": "Zencefil ailesinden, sarıboya da denen bir baharat",
+    "cevap": "Zerdeçal",
+    "alternatifler": [
+      "ZERDECAL",
+      "ZERDEÇAL"
+    ]
+  },
+  {
+    "id": 361,
     "soru": "Sansargillerden postu değerli memeli, ağaç sansarı",
     "cevap": "Zerdeva",
     "alternatifler": [
@@ -2976,7 +3032,7 @@
     ]
   },
   {
-    "id": 356,
+    "id": 362,
     "soru": "Hayvan biliminde ağaç sansarı",
     "cevap": "Zerdeva",
     "alternatifler": [
@@ -2984,7 +3040,7 @@
     ]
   },
   {
-    "id": 357,
+    "id": 363,
     "soru": "Nietzsche kitabı, Böyle Buyurdu __",
     "cevap": "Zerdüşt",
     "alternatifler": [
@@ -2993,7 +3049,7 @@
     ]
   },
   {
-    "id": 358,
+    "id": 364,
     "soru": "Gönül adlı şarkısıyla Altın Plak almıştı, __ Özer",
     "cevap": "Zerrin",
     "alternatifler": [
@@ -3001,7 +3057,7 @@
     ]
   },
   {
-    "id": 359,
+    "id": 365,
     "soru": "Paşa Gönlüm şarkısını söyleyen şarkıcı, __ Özer",
     "cevap": "Zerrin",
     "alternatifler": [
@@ -3009,7 +3065,7 @@
     ]
   },
   {
-    "id": 360,
+    "id": 366,
     "soru": "Tekindor soyadlı Türk ressam ve aktrisin adı",
     "cevap": "Zerrin",
     "alternatifler": [
@@ -3017,7 +3073,7 @@
     ]
   },
   {
-    "id": 361,
+    "id": 367,
     "soru": "Fulya da denen, nergisgillerden bir bitki türü",
     "cevap": "Zerrin",
     "alternatifler": [
@@ -3025,7 +3081,7 @@
     ]
   },
   {
-    "id": 362,
+    "id": 368,
     "soru": "Tekindor soyadlı Türk kadın tiyatro sanatçısı",
     "cevap": "Zerrin",
     "alternatifler": [
@@ -3033,7 +3089,7 @@
     ]
   },
   {
-    "id": 363,
+    "id": 369,
     "soru": "__ Özer; Paşa Gönlüm şarkısını söyleyen şarkıcı",
     "cevap": "Zerrin",
     "alternatifler": [
@@ -3041,7 +3097,7 @@
     ]
   },
   {
-    "id": 364,
+    "id": 370,
     "soru": "Diyarbakır'ın Çınar ilçesindeki antik Roma kalesi",
     "cevap": "Zerzevan",
     "alternatifler": [
@@ -3049,56 +3105,8 @@
     ]
   },
   {
-    "id": 365,
-    "soru": "Sebzelerin genel adı",
-    "cevap": "Zerzevat",
-    "alternatifler": [
-      "ZERZEVAT"
-    ]
-  },
-  {
-    "id": 366,
-    "soru": "Kebapların yanında verilen sebzelerin genel adı",
-    "cevap": "Zerzevat",
-    "alternatifler": [
-      "ZERZEVAT"
-    ]
-  },
-  {
-    "id": 367,
-    "soru": "Kebapların yanında verilen sebzelerin genel adı",
-    "cevap": "Zerzevat",
-    "alternatifler": [
-      "ZERZEVAT"
-    ]
-  },
-  {
-    "id": 368,
-    "soru": "Halk arasında sebzelerin geneline verilen isim",
-    "cevap": "Zerzevat",
-    "alternatifler": [
-      "ZERZEVAT"
-    ]
-  },
-  {
-    "id": 369,
-    "soru": "Yemek yapmakta kullanılan yeşillik, sebze",
-    "cevap": "Zerzevat",
-    "alternatifler": [
-      "ZERZEVAT"
-    ]
-  },
-  {
-    "id": 370,
-    "soru": "Patlıcan, kabak ve brokolinin ortak adı",
-    "cevap": "Zerzevat",
-    "alternatifler": [
-      "ZERZEVAT"
-    ]
-  },
-  {
     "id": 371,
-    "soru": "Halk arasında sebzelerin geneline verilen isim",
+    "soru": "Sebzelerin genel adı",
     "cevap": "Zerzevat",
     "alternatifler": [
       "ZERZEVAT"
@@ -3114,7 +3122,7 @@
   },
   {
     "id": 373,
-    "soru": "Patlıcan, kabak ve brokolinin ortak adı",
+    "soru": "Kebapların yanında verilen sebzelerin genel adı",
     "cevap": "Zerzevat",
     "alternatifler": [
       "ZERZEVAT"
@@ -3122,6 +3130,54 @@
   },
   {
     "id": 374,
+    "soru": "Halk arasında sebzelerin geneline verilen isim",
+    "cevap": "Zerzevat",
+    "alternatifler": [
+      "ZERZEVAT"
+    ]
+  },
+  {
+    "id": 375,
+    "soru": "Yemek yapmakta kullanılan yeşillik, sebze",
+    "cevap": "Zerzevat",
+    "alternatifler": [
+      "ZERZEVAT"
+    ]
+  },
+  {
+    "id": 376,
+    "soru": "Patlıcan, kabak ve brokolinin ortak adı",
+    "cevap": "Zerzevat",
+    "alternatifler": [
+      "ZERZEVAT"
+    ]
+  },
+  {
+    "id": 377,
+    "soru": "Halk arasında sebzelerin geneline verilen isim",
+    "cevap": "Zerzevat",
+    "alternatifler": [
+      "ZERZEVAT"
+    ]
+  },
+  {
+    "id": 378,
+    "soru": "Kebapların yanında verilen sebzelerin genel adı",
+    "cevap": "Zerzevat",
+    "alternatifler": [
+      "ZERZEVAT"
+    ]
+  },
+  {
+    "id": 379,
+    "soru": "Patlıcan, kabak ve brokolinin ortak adı",
+    "cevap": "Zerzevat",
+    "alternatifler": [
+      "ZERZEVAT"
+    ]
+  },
+  {
+    "id": 380,
     "soru": "Gaziantep'in ünlü antik kenti",
     "cevap": "Zeugma",
     "alternatifler": [
@@ -3129,7 +3185,7 @@
     ]
   },
   {
-    "id": 375,
+    "id": 381,
     "soru": "Çingene Kızı mozaiğinin bulunduğu antik kent",
     "cevap": "Zeugma",
     "alternatifler": [
@@ -3137,7 +3193,7 @@
     ]
   },
   {
-    "id": 376,
+    "id": 382,
     "soru": "Gaziantep'te, mozaikleriyle ünlü antik şehir",
     "cevap": "Zeugma",
     "alternatifler": [
@@ -3145,56 +3201,8 @@
     ]
   },
   {
-    "id": 377,
-    "soru": "Gaziantep'teki antik kentin ismi",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
-    "id": 378,
-    "soru": "Gaziantep'te yer alan mozaik müzesi",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
-    "id": 379,
-    "soru": "Antepte bulunan Mozaik müzesinin adı",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
-    "id": 380,
-    "soru": "Gaziantep'teki antik kentin ismi",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
-    "id": 381,
-    "soru": "Gaziantep'te bulunan antik kent",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
-    "id": 382,
-    "soru": "Gaziantep, mozaik müzesi de bulunan antik kent",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
     "id": 383,
-    "soru": "Mozaikleri meşhur antik kent",
+    "soru": "Gaziantep'teki antik kentin ismi",
     "cevap": "Zeugma",
     "alternatifler": [
       "ZEUGMA"
@@ -3210,22 +3218,6 @@
   },
   {
     "id": 385,
-    "soru": "Gaziantep'in ünlü antik kenti",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
-    "id": 386,
-    "soru": "Gaziantep'te, mozaikleriyle ünlü antik şehir",
-    "cevap": "Zeugma",
-    "alternatifler": [
-      "ZEUGMA"
-    ]
-  },
-  {
-    "id": 387,
     "soru": "Antepte bulunan Mozaik müzesinin adı",
     "cevap": "Zeugma",
     "alternatifler": [
@@ -3233,7 +3225,71 @@
     ]
   },
   {
+    "id": 386,
+    "soru": "Gaziantep'teki antik kentin ismi",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
+    "id": 387,
+    "soru": "Gaziantep'te bulunan antik kent",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
     "id": 388,
+    "soru": "Gaziantep, mozaik müzesi de bulunan antik kent",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
+    "id": 389,
+    "soru": "Mozaikleri meşhur antik kent",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
+    "id": 390,
+    "soru": "Gaziantep'te yer alan mozaik müzesi",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
+    "id": 391,
+    "soru": "Gaziantep'in ünlü antik kenti",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
+    "id": 392,
+    "soru": "Gaziantep'te, mozaikleriyle ünlü antik şehir",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
+    "id": 393,
+    "soru": "Antepte bulunan Mozaik müzesinin adı",
+    "cevap": "Zeugma",
+    "alternatifler": [
+      "ZEUGMA"
+    ]
+  },
+  {
+    "id": 394,
     "soru": "Manzara, dışardan görünüş anlamındaki eski bir söz",
     "cevap": "Zevahir",
     "alternatifler": [
@@ -3241,32 +3297,7 @@
     ]
   },
   {
-    "id": 389,
-    "soru": "Beğeni yetisi olmayan, hoş olmayan",
-    "cevap": "Zevksiz",
-    "alternatifler": [
-      "ZEVKSIZ"
-    ]
-  },
-  {
-    "id": 390,
-    "soru": "Beğenisi çok iyi olmayan, güzelden anlamayan",
-    "cevap": "Zevksiz",
-    "alternatifler": [
-      "ZEVKSIZ"
-    ]
-  },
-  {
-    "id": 391,
-    "soru": "Güzel vakit geçirme, eğlence",
-    "cevap": "Zevküsefa",
-    "alternatifler": [
-      "ZEVKÜSEFA",
-      "ZEVKUSEFA"
-    ]
-  },
-  {
-    "id": 392,
+    "id": 395,
     "soru": "Güzelce vakit geçirme, eğlenme",
     "cevap": "Zevk etme",
     "alternatifler": [
@@ -3275,7 +3306,32 @@
     ]
   },
   {
-    "id": 393,
+    "id": 396,
+    "soru": "Beğeni yetisi olmayan, hoş olmayan",
+    "cevap": "Zevksiz",
+    "alternatifler": [
+      "ZEVKSIZ"
+    ]
+  },
+  {
+    "id": 397,
+    "soru": "Beğenisi çok iyi olmayan, güzelden anlamayan",
+    "cevap": "Zevksiz",
+    "alternatifler": [
+      "ZEVKSIZ"
+    ]
+  },
+  {
+    "id": 398,
+    "soru": "Güzel vakit geçirme, eğlence",
+    "cevap": "Zevküsefa",
+    "alternatifler": [
+      "ZEVKÜSEFA",
+      "ZEVKUSEFA"
+    ]
+  },
+  {
+    "id": 399,
     "soru": "Yerli yersiz, boş ve çok konuşan kimse; Geveze",
     "cevap": "Zevzek",
     "alternatifler": [
@@ -3283,7 +3339,7 @@
     ]
   },
   {
-    "id": 394,
+    "id": 400,
     "soru": "Çok ve boş konuşan",
     "cevap": "Zevzek",
     "alternatifler": [
@@ -3291,56 +3347,8 @@
     ]
   },
   {
-    "id": 395,
-    "soru": "Ege yöresine özgü halk oyunu",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 396,
-    "soru": "Efelerin dansı",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 397,
-    "soru": "Efelerin oynadığı halk oyunu",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 398,
-    "soru": "Osmanlı'da hafif silahlar ile donanmış bir asker",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 399,
-    "soru": "Ege bölgesine ait görkemli bir halk oyunu",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 400,
-    "soru": "Ege yöresinde efelerin oynadığı bir halk oyunu",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
     "id": 401,
-    "soru": "Ege bölgesine ait görkemli bir halk oyunu",
+    "soru": "Ege yöresine özgü halk oyunu",
     "cevap": "Zeybek",
     "alternatifler": [
       "ZEYBEK"
@@ -3348,54 +3356,6 @@
   },
   {
     "id": 402,
-    "soru": "Harmandalı, bu dansın bir türüdür",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 403,
-    "soru": "Batı Anadolu yöresine özgü, popüler halk oyunu",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 404,
-    "soru": "Ege yöresine özgü halk oyunu ve müzik türü",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 405,
-    "soru": "Efe denilen erkeklerin oynadığı Ege dansı",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 406,
-    "soru": "Sarı __, Atatürk'ün hayatını anlatan belgesel",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 407,
-    "soru": "Ege yöresine özgü halk oyunu",
-    "cevap": "Zeybek",
-    "alternatifler": [
-      "ZEYBEK"
-    ]
-  },
-  {
-    "id": 408,
     "soru": "Efelerin dansı",
     "cevap": "Zeybek",
     "alternatifler": [
@@ -3403,7 +3363,47 @@
     ]
   },
   {
-    "id": 409,
+    "id": 403,
+    "soru": "Efelerin oynadığı halk oyunu",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 404,
+    "soru": "Osmanlı'da hafif silahlar ile donanmış bir asker",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 405,
+    "soru": "Ege bölgesine ait görkemli bir halk oyunu",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 406,
+    "soru": "Ege yöresinde efelerin oynadığı bir halk oyunu",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 407,
+    "soru": "Ege bölgesine ait görkemli bir halk oyunu",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 408,
     "soru": "Harmandalı, bu dansın bir türüdür",
     "cevap": "Zeybek",
     "alternatifler": [
@@ -3411,7 +3411,63 @@
     ]
   },
   {
+    "id": 409,
+    "soru": "Batı Anadolu yöresine özgü, popüler halk oyunu",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
     "id": 410,
+    "soru": "Ege yöresine özgü halk oyunu ve müzik türü",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 411,
+    "soru": "Efe denilen erkeklerin oynadığı Ege dansı",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 412,
+    "soru": "Sarı __, Atatürk'ün hayatını anlatan belgesel",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 413,
+    "soru": "Ege yöresine özgü halk oyunu",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 414,
+    "soru": "Efelerin dansı",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 415,
+    "soru": "Harmandalı, bu dansın bir türüdür",
+    "cevap": "Zeybek",
+    "alternatifler": [
+      "ZEYBEK"
+    ]
+  },
+  {
+    "id": 416,
     "soru": "Atatürk'ün eleştiri yaptığı İbrahim Çallı tablosu",
     "cevap": "Zeybekler",
     "alternatifler": [
@@ -3419,7 +3475,7 @@
     ]
   },
   {
-    "id": 411,
+    "id": 417,
     "soru": "Poliçeye ilave olarak hazırlanan belge",
     "cevap": "Zeyilname",
     "alternatifler": [
@@ -3427,7 +3483,7 @@
     ]
   },
   {
-    "id": 412,
+    "id": 418,
     "soru": "Poliçede yapılan değişiklikleri içeren ek sözleşme",
     "cevap": "Zeyilname",
     "alternatifler": [
@@ -3435,7 +3491,7 @@
     ]
   },
   {
-    "id": 413,
+    "id": 419,
     "soru": "Poliçeye ilave olarak hazırlanan belge",
     "cevap": "Zeyilname",
     "alternatifler": [
@@ -3443,7 +3499,7 @@
     ]
   },
   {
-    "id": 414,
+    "id": 420,
     "soru": "Batman'da Akkoyunlular döneminde yapılan kümbet",
     "cevap": "Zeynel bey",
     "alternatifler": [
@@ -3452,7 +3508,7 @@
     ]
   },
   {
-    "id": 415,
+    "id": 421,
     "soru": "1 Erkek 1 Kadın'da Demet Evgar'ın karakteri",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3460,7 +3516,7 @@
     ]
   },
   {
-    "id": 416,
+    "id": 422,
     "soru": "Soyadı Bastık olan kadın şarkıcının adı",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3468,7 +3524,7 @@
     ]
   },
   {
-    "id": 417,
+    "id": 423,
     "soru": "Yasak Elma dizisinin Bastık soyadlı aktrisinin adı",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3476,7 +3532,7 @@
     ]
   },
   {
-    "id": 418,
+    "id": 424,
     "soru": "Bastık soyadlı müzisyenin adı",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3484,7 +3540,7 @@
     ]
   },
   {
-    "id": 419,
+    "id": 425,
     "soru": "Değerli taş, mücevher anlamındaki bir kadın ismi",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3492,7 +3548,7 @@
     ]
   },
   {
-    "id": 420,
+    "id": 426,
     "soru": "Türk-İtalyan ses sanatçısı, __ Casalini",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3500,7 +3556,7 @@
     ]
   },
   {
-    "id": 421,
+    "id": 427,
     "soru": "Casalini soyadlı Türk ve İtalyan şarkıcının adı",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3508,7 +3564,7 @@
     ]
   },
   {
-    "id": 422,
+    "id": 428,
     "soru": "Türk-İtalyan ses sanatçısı, __ Casalini",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3516,7 +3572,7 @@
     ]
   },
   {
-    "id": 423,
+    "id": 429,
     "soru": "Değerli taş, mücevher anlamındaki bir kadın ismi",
     "cevap": "Zeynep",
     "alternatifler": [
@@ -3524,7 +3580,7 @@
     ]
   },
   {
-    "id": 424,
+    "id": 430,
     "soru": "Ege Bölgesi ile özdeşleşmiş olan yağlı meyve",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3532,7 +3588,7 @@
     ]
   },
   {
-    "id": 425,
+    "id": 431,
     "soru": "Barışın simgesi olan meyve",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3540,7 +3596,7 @@
     ]
   },
   {
-    "id": 426,
+    "id": 432,
     "soru": "Akdeniz iklimine özgü bir ağaç türü",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3548,7 +3604,7 @@
     ]
   },
   {
-    "id": 427,
+    "id": 433,
     "soru": "Sizinkiler adlı çizgi seride Limon'un arkadaşı",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3556,7 +3612,7 @@
     ]
   },
   {
-    "id": 428,
+    "id": 434,
     "soru": "Kardan adama göz yapmak için kullanılan bitki",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3564,7 +3620,7 @@
     ]
   },
   {
-    "id": 429,
+    "id": 435,
     "soru": "Tavşan yüreği ve domat adlı türleri olan bitki",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3572,7 +3628,7 @@
     ]
   },
   {
-    "id": 430,
+    "id": 436,
     "soru": "Altında bitki yetişmeyen ağaç türü",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3580,7 +3636,7 @@
     ]
   },
   {
-    "id": 431,
+    "id": 437,
     "soru": "Yeşil veya siyah, çekirdekli kahvaltılık",
     "cevap": "Zeytin",
     "alternatifler": [
@@ -3588,56 +3644,8 @@
     ]
   },
   {
-    "id": 432,
-    "soru": "Ege ve Akdeniz'de bol bulunan, yağı yapılan bitki",
-    "cevap": "Zeytin",
-    "alternatifler": [
-      "ZEYTIN"
-    ]
-  },
-  {
-    "id": 433,
-    "soru": "Serdar Ortaç'ın bir klibinde yediği kahvaltılık",
-    "cevap": "Zeytin",
-    "alternatifler": [
-      "ZEYTIN"
-    ]
-  },
-  {
-    "id": 434,
-    "soru": "Meyvesi yağ veya kahvaltılık yapılan bir ağaç",
-    "cevap": "Zeytin",
-    "alternatifler": [
-      "ZEYTIN"
-    ]
-  },
-  {
-    "id": 435,
-    "soru": "Salih Memecan karikatüründe, Limon'un yoldaşı",
-    "cevap": "Zeytin",
-    "alternatifler": [
-      "ZEYTIN"
-    ]
-  },
-  {
-    "id": 436,
-    "soru": "Ağaçta yetişen, çekirdeği olan bir kahvaltılık",
-    "cevap": "Zeytin",
-    "alternatifler": [
-      "ZEYTIN"
-    ]
-  },
-  {
-    "id": 437,
-    "soru": "Türküde, bunun yağıyla yapılan yemek yiyemem denir",
-    "cevap": "Zeytin",
-    "alternatifler": [
-      "ZEYTIN"
-    ]
-  },
-  {
     "id": 438,
-    "soru": "Salih Memecan karikatüründe, Limon'un yoldaşı",
+    "soru": "Ege ve Akdeniz'de bol bulunan, yağı yapılan bitki",
     "cevap": "Zeytin",
     "alternatifler": [
       "ZEYTIN"
@@ -3645,7 +3653,7 @@
   },
   {
     "id": 439,
-    "soru": "Mudanya'da yetiştirileni dünyaca ünlü olan besin",
+    "soru": "Serdar Ortaç'ın bir klibinde yediği kahvaltılık",
     "cevap": "Zeytin",
     "alternatifler": [
       "ZEYTIN"
@@ -3653,7 +3661,7 @@
   },
   {
     "id": 440,
-    "soru": "Ünlü yerli karikatür serisinde Limon'un partneri",
+    "soru": "Meyvesi yağ veya kahvaltılık yapılan bir ağaç",
     "cevap": "Zeytin",
     "alternatifler": [
       "ZEYTIN"
@@ -3661,7 +3669,7 @@
   },
   {
     "id": 441,
-    "soru": "Bursa'nın Gemlik ilçesi, bu yiyecekle ünlüdür",
+    "soru": "Salih Memecan karikatüründe, Limon'un yoldaşı",
     "cevap": "Zeytin",
     "alternatifler": [
       "ZEYTIN"
@@ -3669,7 +3677,7 @@
   },
   {
     "id": 442,
-    "soru": "Türkiye'de, en çok Ege'de üretilen yağlı yiyecek",
+    "soru": "Ağaçta yetişen, çekirdeği olan bir kahvaltılık",
     "cevap": "Zeytin",
     "alternatifler": [
       "ZEYTIN"
@@ -3677,7 +3685,7 @@
   },
   {
     "id": 443,
-    "soru": "Mudanya'da yetiştirileni dünyaca ünlü olan besin",
+    "soru": "Türküde, bunun yağıyla yapılan yemek yiyemem denir",
     "cevap": "Zeytin",
     "alternatifler": [
       "ZEYTIN"
@@ -3685,7 +3693,7 @@
   },
   {
     "id": 444,
-    "soru": "Ege ve Akdeniz'de bol bulunan, yağı yapılan bitki",
+    "soru": "Salih Memecan karikatüründe, Limon'un yoldaşı",
     "cevap": "Zeytin",
     "alternatifler": [
       "ZEYTIN"
@@ -3693,6 +3701,54 @@
   },
   {
     "id": 445,
+    "soru": "Mudanya'da yetiştirileni dünyaca ünlü olan besin",
+    "cevap": "Zeytin",
+    "alternatifler": [
+      "ZEYTIN"
+    ]
+  },
+  {
+    "id": 446,
+    "soru": "Ünlü yerli karikatür serisinde Limon'un partneri",
+    "cevap": "Zeytin",
+    "alternatifler": [
+      "ZEYTIN"
+    ]
+  },
+  {
+    "id": 447,
+    "soru": "Bursa'nın Gemlik ilçesi, bu yiyecekle ünlüdür",
+    "cevap": "Zeytin",
+    "alternatifler": [
+      "ZEYTIN"
+    ]
+  },
+  {
+    "id": 448,
+    "soru": "Türkiye'de, en çok Ege'de üretilen yağlı yiyecek",
+    "cevap": "Zeytin",
+    "alternatifler": [
+      "ZEYTIN"
+    ]
+  },
+  {
+    "id": 449,
+    "soru": "Mudanya'da yetiştirileni dünyaca ünlü olan besin",
+    "cevap": "Zeytin",
+    "alternatifler": [
+      "ZEYTIN"
+    ]
+  },
+  {
+    "id": 450,
+    "soru": "Ege ve Akdeniz'de bol bulunan, yağı yapılan bitki",
+    "cevap": "Zeytin",
+    "alternatifler": [
+      "ZEYTIN"
+    ]
+  },
+  {
+    "id": 451,
     "soru": "Balıkesir'in Erdek Limanı'nda yer alan ada",
     "cevap": "Zeytinli",
     "alternatifler": [
@@ -3700,7 +3756,7 @@
     ]
   },
   {
-    "id": 446,
+    "id": 452,
     "soru": "Akçay sahilinde düzenlenen rock müzik festivali",
     "cevap": "Zeytinli",
     "alternatifler": [
@@ -3708,7 +3764,7 @@
     ]
   },
   {
-    "id": 447,
+    "id": 453,
     "soru": "Edremit ilçesinde düzenlenen ünlü rock festivali",
     "cevap": "Zeytinli",
     "alternatifler": [
@@ -3716,7 +3772,7 @@
     ]
   },
   {
-    "id": 448,
+    "id": 454,
     "soru": "Balıkesir'in rock festivaliyle ünlü yeri",
     "cevap": "Zeytinli",
     "alternatifler": [
@@ -3724,7 +3780,7 @@
     ]
   },
   {
-    "id": 449,
+    "id": 455,
     "soru": "Akçay sahilinde düzenlenen rock müzik festivali",
     "cevap": "Zeytinli",
     "alternatifler": [
@@ -3732,7 +3788,7 @@
     ]
   },
   {
-    "id": 450,
+    "id": 456,
     "soru": "Balıkesir'in Erdek Limanı'nda yer alan ada",
     "cevap": "Zeytinli",
     "alternatifler": [
@@ -3740,7 +3796,7 @@
     ]
   },
   {
-    "id": 451,
+    "id": 457,
     "soru": "Değerli bir yağlık meyvenin yetiştiği yer",
     "cevap": "Zeytinlik",
     "alternatifler": [
@@ -3748,7 +3804,7 @@
     ]
   },
   {
-    "id": 452,
+    "id": 458,
     "soru": "Değerli bir yağlık meyvenin yetiştiği yer",
     "cevap": "Zeytinlik",
     "alternatifler": [
@@ -3756,7 +3812,7 @@
     ]
   },
   {
-    "id": 453,
+    "id": 459,
     "soru": "Zeytin rengi",
     "cevap": "Zeytuni",
     "alternatifler": [
@@ -3764,7 +3820,7 @@
     ]
   },
   {
-    "id": 454,
+    "id": 460,
     "soru": "Kaplan ve Ejderha'da Jiao Long'u oynayan aktris",
     "cevap": "Zhang zıyı",
     "alternatifler": [
@@ -3773,7 +3829,7 @@
     ]
   },
   {
-    "id": 455,
+    "id": 461,
     "soru": "Futbol tarihine geçen Cezayir asıllı futbolcu",
     "cevap": "Zıdane",
     "alternatifler": [
@@ -3781,7 +3837,7 @@
     ]
   },
   {
-    "id": 456,
+    "id": 462,
     "soru": "Kökü Türkçe bir deyime konu olan bitki",
     "cevap": "Zıkkım",
     "alternatifler": [
@@ -3789,7 +3845,7 @@
     ]
   },
   {
-    "id": 457,
+    "id": 463,
     "soru": "Yemeği beğenmeyene önerilen sitemli menü, __ kökü",
     "cevap": "Zıkkımın",
     "alternatifler": [
@@ -3797,7 +3853,7 @@
     ]
   },
   {
-    "id": 458,
+    "id": 464,
     "soru": "Güneydoğu'da eğlenme amaçlı atılan kadın çığlığı",
     "cevap": "Zılgıt",
     "alternatifler": [
@@ -3805,7 +3861,7 @@
     ]
   },
   {
-    "id": 459,
+    "id": 465,
     "soru": "Çok enerjik kişilere yapılan bir benzetme",
     "cevap": "Zımba gibi",
     "alternatifler": [
@@ -3814,7 +3870,7 @@
     ]
   },
   {
-    "id": 460,
+    "id": 466,
     "soru": "Telli bir çalgıdan çıkan acemice ve kötü ses",
     "cevap": "Zımbırtı",
     "alternatifler": [
@@ -3822,7 +3878,7 @@
     ]
   },
   {
-    "id": 461,
+    "id": 467,
     "soru": "Argoda değersiz nesne, zamazingo",
     "cevap": "Zımbırtı",
     "alternatifler": [
@@ -3830,7 +3886,7 @@
     ]
   },
   {
-    "id": 462,
+    "id": 468,
     "soru": "Değeri olmayan küçük şeyler için kullanılan isim",
     "cevap": "Zımbırtı",
     "alternatifler": [
@@ -3838,7 +3894,7 @@
     ]
   },
   {
-    "id": 463,
+    "id": 469,
     "soru": "Argoda, ismi akla gelmeyen önemsiz nesne",
     "cevap": "Zımbırtı",
     "alternatifler": [
@@ -3846,7 +3902,7 @@
     ]
   },
   {
-    "id": 464,
+    "id": 470,
     "soru": "Eski dilde açık olmayan şekilde, dolaylı olarak",
     "cevap": "Zımnen",
     "alternatifler": [
@@ -3854,7 +3910,7 @@
     ]
   },
   {
-    "id": 465,
+    "id": 471,
     "soru": "Eski dilde açıkça ifade etmeden, dolaylı şekilde",
     "cevap": "Zımnen",
     "alternatifler": [
@@ -3862,7 +3918,7 @@
     ]
   },
   {
-    "id": 466,
+    "id": 472,
     "soru": "Tahtaları düzeltmeye, parlatmaya yarayan nesne",
     "cevap": "Zımpara",
     "alternatifler": [
@@ -3870,7 +3926,7 @@
     ]
   },
   {
-    "id": 467,
+    "id": 473,
     "soru": "Bir yüzeyi aşındırmak için kullanılan kağıt",
     "cevap": "Zımpara",
     "alternatifler": [
@@ -3878,56 +3934,8 @@
     ]
   },
   {
-    "id": 468,
-    "soru": "Ahşabın pürüzünü gidermekte kullanılan sert kağıt",
-    "cevap": "Zımpara",
-    "alternatifler": [
-      "ZIMPARA"
-    ]
-  },
-  {
-    "id": 469,
-    "soru": "Ahşabın pürüzünü gidermekte kullanılan sert kağıt",
-    "cevap": "Zımpara",
-    "alternatifler": [
-      "ZIMPARA"
-    ]
-  },
-  {
-    "id": 470,
-    "soru": "Ahşap ve türevi yüzeyleri pürüzsüzleştiren eşya",
-    "cevap": "Zımpara",
-    "alternatifler": [
-      "ZIMPARA"
-    ]
-  },
-  {
-    "id": 471,
-    "soru": "Ahşap yüzeylerdeki pürüzleri gideren özel kağıt",
-    "cevap": "Zımpara",
-    "alternatifler": [
-      "ZIMPARA"
-    ]
-  },
-  {
-    "id": 472,
-    "soru": "Bir yüzeyi düzleştirmeye yarayan kağıt türü",
-    "cevap": "Zımpara",
-    "alternatifler": [
-      "ZIMPARA"
-    ]
-  },
-  {
-    "id": 473,
-    "soru": "Yüzeye sürüldüğünde pürüzsüz yapan sert kağıt",
-    "cevap": "Zımpara",
-    "alternatifler": [
-      "ZIMPARA"
-    ]
-  },
-  {
     "id": 474,
-    "soru": "Ahşap yüzeylerdeki pürüzleri gideren özel kağıt",
+    "soru": "Ahşabın pürüzünü gidermekte kullanılan sert kağıt",
     "cevap": "Zımpara",
     "alternatifler": [
       "ZIMPARA"
@@ -3935,7 +3943,7 @@
   },
   {
     "id": 475,
-    "soru": "Bir yüzeyi düzleştirmeye yarayan kağıt türü",
+    "soru": "Ahşabın pürüzünü gidermekte kullanılan sert kağıt",
     "cevap": "Zımpara",
     "alternatifler": [
       "ZIMPARA"
@@ -3943,6 +3951,54 @@
   },
   {
     "id": 476,
+    "soru": "Ahşap ve türevi yüzeyleri pürüzsüzleştiren eşya",
+    "cevap": "Zımpara",
+    "alternatifler": [
+      "ZIMPARA"
+    ]
+  },
+  {
+    "id": 477,
+    "soru": "Ahşap yüzeylerdeki pürüzleri gideren özel kağıt",
+    "cevap": "Zımpara",
+    "alternatifler": [
+      "ZIMPARA"
+    ]
+  },
+  {
+    "id": 478,
+    "soru": "Bir yüzeyi düzleştirmeye yarayan kağıt türü",
+    "cevap": "Zımpara",
+    "alternatifler": [
+      "ZIMPARA"
+    ]
+  },
+  {
+    "id": 479,
+    "soru": "Yüzeye sürüldüğünde pürüzsüz yapan sert kağıt",
+    "cevap": "Zımpara",
+    "alternatifler": [
+      "ZIMPARA"
+    ]
+  },
+  {
+    "id": 480,
+    "soru": "Ahşap yüzeylerdeki pürüzleri gideren özel kağıt",
+    "cevap": "Zımpara",
+    "alternatifler": [
+      "ZIMPARA"
+    ]
+  },
+  {
+    "id": 481,
+    "soru": "Bir yüzeyi düzleştirmeye yarayan kağıt türü",
+    "cevap": "Zımpara",
+    "alternatifler": [
+      "ZIMPARA"
+    ]
+  },
+  {
+    "id": 482,
     "soru": "Aniden ve sarsıntıyla anlamına gelen bir zarf",
     "cevap": "Zıngadak",
     "alternatifler": [
@@ -3950,7 +4006,7 @@
     ]
   },
   {
-    "id": 477,
+    "id": 483,
     "soru": "Balık avlamakta kullanılan ok",
     "cevap": "Zıpkın",
     "alternatifler": [
@@ -3958,7 +4014,7 @@
     ]
   },
   {
-    "id": 478,
+    "id": 484,
     "soru": "Balık avlanan barutsuz tabanca",
     "cevap": "Zıpkın",
     "alternatifler": [
@@ -3966,7 +4022,7 @@
     ]
   },
   {
-    "id": 479,
+    "id": 485,
     "soru": "Dalarak balık avlamakta kullanılan araç",
     "cevap": "Zıpkın",
     "alternatifler": [
@@ -3974,7 +4030,7 @@
     ]
   },
   {
-    "id": 480,
+    "id": 486,
     "soru": "Büyük balık avında kullanılan fırlatmalı alet",
     "cevap": "Zıpkın",
     "alternatifler": [
@@ -3982,7 +4038,7 @@
     ]
   },
   {
-    "id": 481,
+    "id": 487,
     "soru": "Savaş Ay'la dile giren söz, \"__ gibi, fişek gibi\"",
     "cevap": "Zıpkın",
     "alternatifler": [
@@ -3990,7 +4046,7 @@
     ]
   },
   {
-    "id": 482,
+    "id": 488,
     "soru": "Ayakları yerden kesen sevinç hareketi",
     "cevap": "Zıplama",
     "alternatifler": [
@@ -3998,7 +4054,7 @@
     ]
   },
   {
-    "id": 483,
+    "id": 489,
     "soru": "Ayakları yerden kesen sevinç hareketi",
     "cevap": "Zıplama",
     "alternatifler": [
@@ -4006,7 +4062,7 @@
     ]
   },
   {
-    "id": 484,
+    "id": 490,
     "soru": "Yerden yukarı doğru sıçramak",
     "cevap": "Zıplamak",
     "alternatifler": [
@@ -4014,7 +4070,7 @@
     ]
   },
   {
-    "id": 485,
+    "id": 491,
     "soru": "Yerden yukarı doğru hızlı bir şekilde fırlamak",
     "cevap": "Zıplamak",
     "alternatifler": [
@@ -4022,7 +4078,7 @@
     ]
   },
   {
-    "id": 486,
+    "id": 492,
     "soru": "Ayakları yerden kesip yukarı doğru fırlamak",
     "cevap": "Zıplamak",
     "alternatifler": [
@@ -4030,7 +4086,7 @@
     ]
   },
   {
-    "id": 487,
+    "id": 493,
     "soru": "Lastikle asılan bebek salıncağı",
     "cevap": "Zıpzıp",
     "alternatifler": [
@@ -4038,7 +4094,7 @@
     ]
   },
   {
-    "id": 488,
+    "id": 494,
     "soru": "Çocukların oynadığı misket için kullanılan bir ad",
     "cevap": "Zıpzıp",
     "alternatifler": [
@@ -4046,7 +4102,7 @@
     ]
   },
   {
-    "id": 489,
+    "id": 495,
     "soru": "Trambolinin halk dilindeki adı",
     "cevap": "Zıpzıp",
     "alternatifler": [
@@ -4054,7 +4110,7 @@
     ]
   },
   {
-    "id": 490,
+    "id": 496,
     "soru": "Önemli kişilerin yüksek güvenlikli makam aracı",
     "cevap": "Zırhlı",
     "alternatifler": [
@@ -4062,7 +4118,7 @@
     ]
   },
   {
-    "id": 491,
+    "id": 497,
     "soru": "Atatürk'ün naaşını taşıyan gemi, Yavuz __",
     "cevap": "Zırhlısı",
     "alternatifler": [
@@ -4070,7 +4126,7 @@
     ]
   },
   {
-    "id": 492,
+    "id": 498,
     "soru": "Halk ağzında, bıkkınlık verecek kadar sızlanan",
     "cevap": "Zırlak",
     "alternatifler": [
@@ -4078,7 +4134,7 @@
     ]
   },
   {
-    "id": 493,
+    "id": 499,
     "soru": "Kesintisiz bir şekilde ağlamak",
     "cevap": "Zırlamak",
     "alternatifler": [
@@ -4086,7 +4142,7 @@
     ]
   },
   {
-    "id": 494,
+    "id": 500,
     "soru": "Diğer adı arsenik olan zehirli element",
     "cevap": "Zırnık",
     "alternatifler": [
@@ -4094,7 +4150,7 @@
     ]
   },
   {
-    "id": 495,
+    "id": 501,
     "soru": "Deyimde de geçen, arsenik zehrinin diğer ismi",
     "cevap": "Zırnık",
     "alternatifler": [
@@ -4102,23 +4158,7 @@
     ]
   },
   {
-    "id": 496,
-    "soru": "Dengesiz hareketleri olan, zıpır",
-    "cevap": "Zırtapoz",
-    "alternatifler": [
-      "ZIRTAPOZ"
-    ]
-  },
-  {
-    "id": 497,
-    "soru": "Ben Stiller'ın bir mankeni anlatan film serisi",
-    "cevap": "Zırtapoz",
-    "alternatifler": [
-      "ZIRTAPOZ"
-    ]
-  },
-  {
-    "id": 498,
+    "id": 502,
     "soru": "İkide bir manasında argo esintili bir ikileme",
     "cevap": "Zırt pırt",
     "alternatifler": [
@@ -4127,7 +4167,23 @@
     ]
   },
   {
-    "id": 499,
+    "id": 503,
+    "soru": "Dengesiz hareketleri olan, zıpır",
+    "cevap": "Zırtapoz",
+    "alternatifler": [
+      "ZIRTAPOZ"
+    ]
+  },
+  {
+    "id": 504,
+    "soru": "Ben Stiller'ın bir mankeni anlatan film serisi",
+    "cevap": "Zırtapoz",
+    "alternatifler": [
+      "ZIRTAPOZ"
+    ]
+  },
+  {
+    "id": 505,
     "soru": "Son derece tutarsız sözler söyleme, saçmalama",
     "cevap": "Zırvalama",
     "alternatifler": [
@@ -4135,51 +4191,7 @@
     ]
   },
   {
-    "id": 500,
-    "soru": "Biriyle sürekli ihtilafli olma",
-    "cevap": "Zıtlaşma",
-    "alternatifler": [
-      "ZITLAŞMA",
-      "ZITLASMA"
-    ]
-  },
-  {
-    "id": 501,
-    "soru": "Biriyle sürekli ihtilaflı olma; tersleşme",
-    "cevap": "Zıtlaşma",
-    "alternatifler": [
-      "ZITLAŞMA",
-      "ZITLASMA"
-    ]
-  },
-  {
-    "id": 502,
-    "soru": "Birbirine karşı aksi hal ve harekette bulunmak",
-    "cevap": "Zıtlaşmak",
-    "alternatifler": [
-      "ZITLAŞMAK",
-      "ZITLASMAK"
-    ]
-  },
-  {
-    "id": 503,
-    "soru": "Ters düşmek, karşılıklı karşı çıkmak",
-    "cevap": "Zıtlaşmak",
-    "alternatifler": [
-      "ZITLAŞMAK",
-      "ZITLASMAK"
-    ]
-  },
-  {
-    "id": 504,
-    "soru": "İki şeyin birbirine karşıt olma durumu, kontrast",
-    "cevap": "Zıtlık",
-    "alternatifler": [
-      "ZITLIK"
-    ]
-  },
-  {
-    "id": 505,
+    "id": 506,
     "soru": "Birisine karşı devamlı olarak aksi davranma",
     "cevap": "Zıt gitme",
     "alternatifler": [
@@ -4188,7 +4200,51 @@
     ]
   },
   {
-    "id": 506,
+    "id": 507,
+    "soru": "Biriyle sürekli ihtilafli olma",
+    "cevap": "Zıtlaşma",
+    "alternatifler": [
+      "ZITLAŞMA",
+      "ZITLASMA"
+    ]
+  },
+  {
+    "id": 508,
+    "soru": "Biriyle sürekli ihtilaflı olma; tersleşme",
+    "cevap": "Zıtlaşma",
+    "alternatifler": [
+      "ZITLAŞMA",
+      "ZITLASMA"
+    ]
+  },
+  {
+    "id": 509,
+    "soru": "Birbirine karşı aksi hal ve harekette bulunmak",
+    "cevap": "Zıtlaşmak",
+    "alternatifler": [
+      "ZITLAŞMAK",
+      "ZITLASMAK"
+    ]
+  },
+  {
+    "id": 510,
+    "soru": "Ters düşmek, karşılıklı karşı çıkmak",
+    "cevap": "Zıtlaşmak",
+    "alternatifler": [
+      "ZITLAŞMAK",
+      "ZITLASMAK"
+    ]
+  },
+  {
+    "id": 511,
+    "soru": "İki şeyin birbirine karşıt olma durumu, kontrast",
+    "cevap": "Zıtlık",
+    "alternatifler": [
+      "ZITLIK"
+    ]
+  },
+  {
+    "id": 512,
     "soru": "Çok öfkelenmeyi belirten bir deyim, __ çıkmak",
     "cevap": "Zıvanadan",
     "alternatifler": [
@@ -4196,7 +4252,7 @@
     ]
   },
   {
-    "id": 507,
+    "id": 513,
     "soru": "Nerede ne yapacağını bilmeyen; komik kıyafetli",
     "cevap": "Zibidi",
     "alternatifler": [
@@ -4204,7 +4260,7 @@
     ]
   },
   {
-    "id": 508,
+    "id": 514,
     "soru": "Bir giysinin kol ve bacaklarının fazla kısa olması",
     "cevap": "Zibidi",
     "alternatifler": [
@@ -4212,7 +4268,7 @@
     ]
   },
   {
-    "id": 509,
+    "id": 515,
     "soru": "Bir giysinin kol ve bacaklarının fazla kısa olması",
     "cevap": "Zibidi",
     "alternatifler": [
@@ -4220,7 +4276,7 @@
     ]
   },
   {
-    "id": 510,
+    "id": 516,
     "soru": "Gümüşhane'yi Trabzon'a bağlayan geçit",
     "cevap": "Zigana",
     "alternatifler": [
@@ -4228,7 +4284,7 @@
     ]
   },
   {
-    "id": 511,
+    "id": 517,
     "soru": "Orta Anadolu'yu Doğu Karadeniz'e bağlayan geçit",
     "cevap": "Zigana",
     "alternatifler": [
@@ -4236,7 +4292,7 @@
     ]
   },
   {
-    "id": 512,
+    "id": 518,
     "soru": "Gümüşhane'de yer alan kayak merkezi",
     "cevap": "Zigana",
     "alternatifler": [
@@ -4244,7 +4300,7 @@
     ]
   },
   {
-    "id": 513,
+    "id": 519,
     "soru": "Trabzon ile Gümüşhane'yi bağlayan geçit",
     "cevap": "Zigana",
     "alternatifler": [
@@ -4252,7 +4308,7 @@
     ]
   },
   {
-    "id": 514,
+    "id": 520,
     "soru": "Kanuni'nin çıktığı son askeri sefer",
     "cevap": "Zigetvar",
     "alternatifler": [
@@ -4260,7 +4316,7 @@
     ]
   },
   {
-    "id": 515,
+    "id": 521,
     "soru": "Kanuni Sultan Süleyman'ın düzenlediği son sefer",
     "cevap": "Zigetvar",
     "alternatifler": [
@@ -4268,7 +4324,7 @@
     ]
   },
   {
-    "id": 516,
+    "id": 522,
     "soru": "Sultan Süleyman'ın ölmeden önceki son seferi",
     "cevap": "Zigetvar",
     "alternatifler": [
@@ -4276,7 +4332,7 @@
     ]
   },
   {
-    "id": 517,
+    "id": 523,
     "soru": "Sultan Süleyman'ın hayatını kaybettiği Macar kenti",
     "cevap": "Zigetvar",
     "alternatifler": [
@@ -4284,7 +4340,7 @@
     ]
   },
   {
-    "id": 518,
+    "id": 524,
     "soru": "Antik Mezopotamya'da yapılan çok katlı tapınak",
     "cevap": "Ziggurat",
     "alternatifler": [
@@ -4292,7 +4348,7 @@
     ]
   },
   {
-    "id": 519,
+    "id": 525,
     "soru": "Mezopotamya'da bulunan piramit benzeri antik yapı",
     "cevap": "Ziggurat",
     "alternatifler": [
@@ -4300,7 +4356,7 @@
     ]
   },
   {
-    "id": 520,
+    "id": 526,
     "soru": "Antik Mezopotamya'da yapılan çok katlı tapınak",
     "cevap": "Ziggurat",
     "alternatifler": [
@@ -4308,7 +4364,7 @@
     ]
   },
   {
-    "id": 521,
+    "id": 527,
     "soru": "Okçuluk sporunda başparmağa takılan alet",
     "cevap": "Zihgir",
     "alternatifler": [
@@ -4316,31 +4372,7 @@
     ]
   },
   {
-    "id": 522,
-    "soru": "Anlayış ve kavrayış ile ilgili olan",
-    "cevap": "Zihinsel",
-    "alternatifler": [
-      "ZIHINSEL"
-    ]
-  },
-  {
-    "id": 523,
-    "soru": "Bedensel sözünün karşıt anlamlısı",
-    "cevap": "Zihinsel",
-    "alternatifler": [
-      "ZIHINSEL"
-    ]
-  },
-  {
-    "id": 524,
-    "soru": "Bilinçle, düşünceyle ilgili olan",
-    "cevap": "Zihinsel",
-    "alternatifler": [
-      "ZIHINSEL"
-    ]
-  },
-  {
-    "id": 525,
+    "id": 528,
     "soru": "Kavrayışı artırma, beyni geliştirme",
     "cevap": "Zihin açma",
     "alternatifler": [
@@ -4350,7 +4382,31 @@
     ]
   },
   {
-    "id": 526,
+    "id": 529,
+    "soru": "Anlayış ve kavrayış ile ilgili olan",
+    "cevap": "Zihinsel",
+    "alternatifler": [
+      "ZIHINSEL"
+    ]
+  },
+  {
+    "id": 530,
+    "soru": "Bedensel sözünün karşıt anlamlısı",
+    "cevap": "Zihinsel",
+    "alternatifler": [
+      "ZIHINSEL"
+    ]
+  },
+  {
+    "id": 531,
+    "soru": "Bilinçle, düşünceyle ilgili olan",
+    "cevap": "Zihinsel",
+    "alternatifler": [
+      "ZIHINSEL"
+    ]
+  },
+  {
+    "id": 532,
     "soru": "Mental, bilinçsel olarak",
     "cevap": "Zihnen",
     "alternatifler": [
@@ -4358,7 +4414,7 @@
     ]
   },
   {
-    "id": 527,
+    "id": 533,
     "soru": "Bir konu hakkında insanlardaki düşünme şekli",
     "cevap": "Zihniyet",
     "alternatifler": [
@@ -4366,7 +4422,7 @@
     ]
   },
   {
-    "id": 528,
+    "id": 534,
     "soru": "Toplumun ya da bireyin düşünme biçimi, mantalite",
     "cevap": "Zihniyet",
     "alternatifler": [
@@ -4374,7 +4430,7 @@
     ]
   },
   {
-    "id": 529,
+    "id": 535,
     "soru": "Düşünme şekli, mantalite",
     "cevap": "Zihniyet",
     "alternatifler": [
@@ -4382,7 +4438,7 @@
     ]
   },
   {
-    "id": 530,
+    "id": 536,
     "soru": "Adını Nijerya'daki ormandan alan hastalık",
     "cevap": "Zika ateşi",
     "alternatifler": [
@@ -4392,7 +4448,7 @@
     ]
   },
   {
-    "id": 531,
+    "id": 537,
     "soru": "Adını Nijerya'daki ormandan alan hastalık",
     "cevap": "Zika ateşi",
     "alternatifler": [
@@ -4402,7 +4458,7 @@
     ]
   },
   {
-    "id": 532,
+    "id": 538,
     "soru": "Eski dilde, ederi yüksek olan, değerli",
     "cevap": "Zikıymet",
     "alternatifler": [
@@ -4410,7 +4466,7 @@
     ]
   },
   {
-    "id": 533,
+    "id": 539,
     "soru": "Ters yönlere açılar çizen desen",
     "cevap": "Zikzak",
     "alternatifler": [
@@ -4418,103 +4474,7 @@
     ]
   },
   {
-    "id": 534,
-    "soru": "Ay takviminde 11. ay",
-    "cevap": "Zilkade",
-    "alternatifler": [
-      "ZILKADE"
-    ]
-  },
-  {
-    "id": 535,
-    "soru": "Ay takvimindeki on birinci ay",
-    "cevap": "Zilkade",
-    "alternatifler": [
-      "ZILKADE"
-    ]
-  },
-  {
-    "id": 536,
-    "soru": "Rize'nin Çamlıhemşin ilçesindeki tarihi hisar",
-    "cevap": "Zilkale",
-    "alternatifler": [
-      "ZILKALE"
-    ]
-  },
-  {
-    "id": 537,
-    "soru": "Baterinin tamamen metalden yapılan parçaları",
-    "cevap": "Ziller",
-    "alternatifler": [
-      "ZILLER"
-    ]
-  },
-  {
-    "id": 538,
-    "soru": "Hukuka göre, kişinin bir mal üzerindeki hakimiyeti",
-    "cevap": "Zilliyet",
-    "alternatifler": [
-      "ZILLIYET"
-    ]
-  },
-  {
-    "id": 539,
-    "soru": "Polonya'da kullanılan para birimi",
-    "cevap": "Ziloti",
-    "alternatifler": [
-      "ZILOTI"
-    ]
-  },
-  {
     "id": 540,
-    "soru": "Hukuken bir malı elinde bulunduran kimse",
-    "cevap": "Zilyet",
-    "alternatifler": [
-      "ZILYET"
-    ]
-  },
-  {
-    "id": 541,
-    "soru": "Hukukta bir malı kullanan kişi, eldeci",
-    "cevap": "Zilyet",
-    "alternatifler": [
-      "ZILYET"
-    ]
-  },
-  {
-    "id": 542,
-    "soru": "Atilla Taş'ın başrolünde olduğu bir komedi dizisi",
-    "cevap": "Zilyoner",
-    "alternatifler": [
-      "ZILYONER"
-    ]
-  },
-  {
-    "id": 543,
-    "soru": "Şarkıcı Atilla Taş, bu dizide Zülküf'ü canlandırdı",
-    "cevap": "Zilyoner",
-    "alternatifler": [
-      "ZILYONER"
-    ]
-  },
-  {
-    "id": 544,
-    "soru": "Kendini bütünüyle kaybetmiş, küfelik olmuş",
-    "cevap": "Zilzurna",
-    "alternatifler": [
-      "ZILZURNA"
-    ]
-  },
-  {
-    "id": 545,
-    "soru": "Kendini bütünüyle kaybetmiş, küfelik olmuş",
-    "cevap": "Zilzurna",
-    "alternatifler": [
-      "ZILZURNA"
-    ]
-  },
-  {
-    "id": 546,
     "soru": "Para olmadığı için zor bir duruma düşmek",
     "cevap": "Zil kalmak",
     "alternatifler": [
@@ -4523,7 +4483,7 @@
     ]
   },
   {
-    "id": 547,
+    "id": 541,
     "soru": "Biri arayınca telefonun çaldığı müzik",
     "cevap": "Zil sesi",
     "alternatifler": [
@@ -4532,7 +4492,7 @@
     ]
   },
   {
-    "id": 548,
+    "id": 542,
     "soru": "Telefon çalarken çıkar",
     "cevap": "Zil sesi",
     "alternatifler": [
@@ -4541,7 +4501,7 @@
     ]
   },
   {
-    "id": 549,
+    "id": 543,
     "soru": "Biri arayınca telefonun çaldığı müzik",
     "cevap": "Zil sesi",
     "alternatifler": [
@@ -4550,7 +4510,103 @@
     ]
   },
   {
+    "id": 544,
+    "soru": "Ay takviminde 11. ay",
+    "cevap": "Zilkade",
+    "alternatifler": [
+      "ZILKADE"
+    ]
+  },
+  {
+    "id": 545,
+    "soru": "Ay takvimindeki on birinci ay",
+    "cevap": "Zilkade",
+    "alternatifler": [
+      "ZILKADE"
+    ]
+  },
+  {
+    "id": 546,
+    "soru": "Rize'nin Çamlıhemşin ilçesindeki tarihi hisar",
+    "cevap": "Zilkale",
+    "alternatifler": [
+      "ZILKALE"
+    ]
+  },
+  {
+    "id": 547,
+    "soru": "Baterinin tamamen metalden yapılan parçaları",
+    "cevap": "Ziller",
+    "alternatifler": [
+      "ZILLER"
+    ]
+  },
+  {
+    "id": 548,
+    "soru": "Hukuka göre, kişinin bir mal üzerindeki hakimiyeti",
+    "cevap": "Zilliyet",
+    "alternatifler": [
+      "ZILLIYET"
+    ]
+  },
+  {
+    "id": 549,
+    "soru": "Polonya'da kullanılan para birimi",
+    "cevap": "Ziloti",
+    "alternatifler": [
+      "ZILOTI"
+    ]
+  },
+  {
     "id": 550,
+    "soru": "Hukuken bir malı elinde bulunduran kimse",
+    "cevap": "Zilyet",
+    "alternatifler": [
+      "ZILYET"
+    ]
+  },
+  {
+    "id": 551,
+    "soru": "Hukukta bir malı kullanan kişi, eldeci",
+    "cevap": "Zilyet",
+    "alternatifler": [
+      "ZILYET"
+    ]
+  },
+  {
+    "id": 552,
+    "soru": "Atilla Taş'ın başrolünde olduğu bir komedi dizisi",
+    "cevap": "Zilyoner",
+    "alternatifler": [
+      "ZILYONER"
+    ]
+  },
+  {
+    "id": 553,
+    "soru": "Şarkıcı Atilla Taş, bu dizide Zülküf'ü canlandırdı",
+    "cevap": "Zilyoner",
+    "alternatifler": [
+      "ZILYONER"
+    ]
+  },
+  {
+    "id": 554,
+    "soru": "Kendini bütünüyle kaybetmiş, küfelik olmuş",
+    "cevap": "Zilzurna",
+    "alternatifler": [
+      "ZILZURNA"
+    ]
+  },
+  {
+    "id": 555,
+    "soru": "Kendini bütünüyle kaybetmiş, küfelik olmuş",
+    "cevap": "Zilzurna",
+    "alternatifler": [
+      "ZILZURNA"
+    ]
+  },
+  {
+    "id": 556,
     "soru": "Eski adı Güney Rodezya olan Afrika ülkesi",
     "cevap": "Zimbabve",
     "alternatifler": [
@@ -4558,7 +4614,7 @@
     ]
   },
   {
-    "id": 551,
+    "id": 557,
     "soru": "Memura imza karşılığı emanet edilen mal",
     "cevap": "Zimmet",
     "alternatifler": [
@@ -4566,7 +4622,7 @@
     ]
   },
   {
-    "id": 552,
+    "id": 558,
     "soru": "İmza karşılığı teslim edilen şirket parası",
     "cevap": "Zimmet",
     "alternatifler": [
@@ -4574,7 +4630,7 @@
     ]
   },
   {
-    "id": 553,
+    "id": 559,
     "soru": "İmza karşılığı bir görevliye teslim edilen para",
     "cevap": "Zimmet",
     "alternatifler": [
@@ -4582,7 +4638,7 @@
     ]
   },
   {
-    "id": 554,
+    "id": 560,
     "soru": "Ticari bir kurumun tüm borçlarını ifade eder",
     "cevap": "Zimmet",
     "alternatifler": [
@@ -4590,7 +4646,7 @@
     ]
   },
   {
-    "id": 555,
+    "id": 561,
     "soru": "Memura imza karşılığı emanet edilen mal",
     "cevap": "Zimmet",
     "alternatifler": [
@@ -4598,7 +4654,7 @@
     ]
   },
   {
-    "id": 556,
+    "id": 562,
     "soru": "Bir kişi veya kurumun üzerine kaydedilmiş eşya",
     "cevap": "Zimmetli",
     "alternatifler": [
@@ -4606,7 +4662,7 @@
     ]
   },
   {
-    "id": 557,
+    "id": 563,
     "soru": "Tokat'ın Reşadiye ilçesinde yer alan tabiat parkı",
     "cevap": "Zinav gölü",
     "alternatifler": [
@@ -4616,7 +4672,7 @@
     ]
   },
   {
-    "id": 558,
+    "id": 564,
     "soru": "Rengi kırmızı olan doğal cıva sülfür",
     "cevap": "Zincifre",
     "alternatifler": [
@@ -4624,56 +4680,8 @@
     ]
   },
   {
-    "id": 559,
-    "soru": "Karda taşıtların tekerleklerine takılan alet",
-    "cevap": "Zincir",
-    "alternatifler": [
-      "ZINCIR"
-    ]
-  },
-  {
-    "id": 560,
-    "soru": "Halka dizisinden oluşur",
-    "cevap": "Zincir",
-    "alternatifler": [
-      "ZINCIR"
-    ]
-  },
-  {
-    "id": 561,
-    "soru": "2000'lerde moda olan kot pantolon aksesuarı",
-    "cevap": "Zincir",
-    "alternatifler": [
-      "ZINCIR"
-    ]
-  },
-  {
-    "id": 562,
-    "soru": "Kolye ya da bileklik ucu geçirilen takı",
-    "cevap": "Zincir",
-    "alternatifler": [
-      "ZINCIR"
-    ]
-  },
-  {
-    "id": 563,
-    "soru": "Birden çok şubesi olan marka tipi",
-    "cevap": "Zincir",
-    "alternatifler": [
-      "ZINCIR"
-    ]
-  },
-  {
-    "id": 564,
-    "soru": "Metal halkalardan oluşan bağ",
-    "cevap": "Zincir",
-    "alternatifler": [
-      "ZINCIR"
-    ]
-  },
-  {
     "id": 565,
-    "soru": "Kolye ya da bileklik ucu geçirilen takı",
+    "soru": "Karda taşıtların tekerleklerine takılan alet",
     "cevap": "Zincir",
     "alternatifler": [
       "ZINCIR"
@@ -4689,6 +4697,54 @@
   },
   {
     "id": 567,
+    "soru": "2000'lerde moda olan kot pantolon aksesuarı",
+    "cevap": "Zincir",
+    "alternatifler": [
+      "ZINCIR"
+    ]
+  },
+  {
+    "id": 568,
+    "soru": "Kolye ya da bileklik ucu geçirilen takı",
+    "cevap": "Zincir",
+    "alternatifler": [
+      "ZINCIR"
+    ]
+  },
+  {
+    "id": 569,
+    "soru": "Birden çok şubesi olan marka tipi",
+    "cevap": "Zincir",
+    "alternatifler": [
+      "ZINCIR"
+    ]
+  },
+  {
+    "id": 570,
+    "soru": "Metal halkalardan oluşan bağ",
+    "cevap": "Zincir",
+    "alternatifler": [
+      "ZINCIR"
+    ]
+  },
+  {
+    "id": 571,
+    "soru": "Kolye ya da bileklik ucu geçirilen takı",
+    "cevap": "Zincir",
+    "alternatifler": [
+      "ZINCIR"
+    ]
+  },
+  {
+    "id": 572,
+    "soru": "Halka dizisinden oluşur",
+    "cevap": "Zincir",
+    "alternatifler": [
+      "ZINCIR"
+    ]
+  },
+  {
+    "id": 573,
     "soru": "Erzincan'ın Kemaliye ilçesinde bulunan ünlü kaya",
     "cevap": "Zincirli",
     "alternatifler": [
@@ -4696,7 +4752,7 @@
     ]
   },
   {
-    "id": 568,
+    "id": 574,
     "soru": "Tarantino'ya Oscar getiren 2012 yapımı film",
     "cevap": "Zincirsiz",
     "alternatifler": [
@@ -4704,7 +4760,7 @@
     ]
   },
   {
-    "id": 569,
+    "id": 575,
     "soru": "Tarantino'ya Oscar kazandıran 2012 tarihli film",
     "cevap": "Zincirsiz",
     "alternatifler": [
@@ -4712,7 +4768,7 @@
     ]
   },
   {
-    "id": 570,
+    "id": 576,
     "soru": "Tarantino'ya Oscar getiren 2012 yapımı film",
     "cevap": "Zincirsiz",
     "alternatifler": [
@@ -4720,7 +4776,7 @@
     ]
   },
   {
-    "id": 571,
+    "id": 577,
     "soru": "Tarantino'ya Oscar kazandıran 2012 tarihli film",
     "cevap": "Zincirsiz",
     "alternatifler": [
@@ -4728,7 +4784,7 @@
     ]
   },
   {
-    "id": 572,
+    "id": 578,
     "soru": "Tarantino'ya Oscar getiren 2012 yapımı film",
     "cevap": "Zincirsiz",
     "alternatifler": [
@@ -4736,7 +4792,7 @@
     ]
   },
   {
-    "id": 573,
+    "id": 579,
     "soru": "Yer altında mahkumların tutulduğu oda veya hücre",
     "cevap": "Zindan",
     "alternatifler": [
@@ -4744,7 +4800,7 @@
     ]
   },
   {
-    "id": 574,
+    "id": 580,
     "soru": "Tutukluların konulduğu karanlık, kapalı yer",
     "cevap": "Zindan",
     "alternatifler": [
@@ -4752,7 +4808,7 @@
     ]
   },
   {
-    "id": 575,
+    "id": 581,
     "soru": "Eskiden tutsakların atıldığı kale hapishanesi",
     "cevap": "Zindan",
     "alternatifler": [
@@ -4760,7 +4816,7 @@
     ]
   },
   {
-    "id": 576,
+    "id": 582,
     "soru": "Gün yüzü görülmeyen yer; karanlık oda",
     "cevap": "Zindan",
     "alternatifler": [
@@ -4768,7 +4824,7 @@
     ]
   },
   {
-    "id": 577,
+    "id": 583,
     "soru": "Yer altında mahkumların tutulduğu oda veya hücre",
     "cevap": "Zindan",
     "alternatifler": [
@@ -4776,7 +4832,7 @@
     ]
   },
   {
-    "id": 578,
+    "id": 584,
     "soru": "Mecaz anlamda ışıksız, kasvetli yer",
     "cevap": "Zindan",
     "alternatifler": [
@@ -4784,7 +4840,7 @@
     ]
   },
   {
-    "id": 579,
+    "id": 585,
     "soru": "__ ve Ejderhalar, fantastik masaüstü oyunu",
     "cevap": "Zindanlar",
     "alternatifler": [
@@ -4792,7 +4848,7 @@
     ]
   },
   {
-    "id": 580,
+    "id": 586,
     "soru": "__ ve Ejderhalar, fantastik masaüstü oyunu",
     "cevap": "Zindanlar",
     "alternatifler": [
@@ -4800,7 +4856,7 @@
     ]
   },
   {
-    "id": 581,
+    "id": 587,
     "soru": "Denizlik kelimesinin anagramı",
     "cevap": "Zindelik",
     "alternatifler": [
@@ -4808,49 +4864,8 @@
     ]
   },
   {
-    "id": 582,
-    "soru": "Türkiye'nin en eski bankası",
-    "cevap": "Ziraat",
-    "alternatifler": [
-      "ZIRAAT"
-    ]
-  },
-  {
-    "id": 583,
-    "soru": "Ekip biçme, hasadı işleyip satma uğraşı",
-    "cevap": "Ziraat",
-    "alternatifler": [
-      "ZIRAAT"
-    ]
-  
-  },
-  {
-    "id": 585,
-    "soru": "1863'te kurulan kamu bankası",
-    "cevap": "Ziraat",
-    "alternatifler": [
-      "ZIRAAT"
-    ]
-  },
-  {
-    "id": 586,
-    "soru": "Osmanlı zamanında kurulan kamu bankası, __ Bankası",
-    "cevap": "Ziraat",
-    "alternatifler": [
-      "ZIRAAT"
-    ]
-  },
-  {
-    "id": 587,
-    "soru": "Amblemi başak olan Türk bankası",
-    "cevap": "Ziraat",
-    "alternatifler": [
-      "ZIRAAT"
-    ]
-  },
-  {
     "id": 588,
-    "soru": "Simgesi başak olan Türk bankasının adı",
+    "soru": "Türkiye'nin en eski bankası",
     "cevap": "Ziraat",
     "alternatifler": [
       "ZIRAAT"
@@ -4858,7 +4873,7 @@
   },
   {
     "id": 589,
-    "soru": "Şubat 2017'den beri, Varlık Fonu'na ait olan banka",
+    "soru": "Ekip biçme, hasadı işleyip satma uğraşı",
     "cevap": "Ziraat",
     "alternatifler": [
       "ZIRAAT"
@@ -4866,7 +4881,7 @@
   },
   {
     "id": 590,
-    "soru": "Bir mühendislik dalına da adını veren yerli banka",
+    "soru": "1863'te kurulan kamu bankası",
     "cevap": "Ziraat",
     "alternatifler": [
       "ZIRAAT"
@@ -4874,7 +4889,7 @@
   },
   {
     "id": 591,
-    "soru": "Türkiye'nin en eski bankası",
+    "soru": "Osmanlı zamanında kurulan kamu bankası, __ Bankası",
     "cevap": "Ziraat",
     "alternatifler": [
       "ZIRAAT"
@@ -4882,7 +4897,7 @@
   },
   {
     "id": 592,
-    "soru": "Türkiye Kupası'na uzun yıllar sponsor olan banka",
+    "soru": "Amblemi başak olan Türk bankası",
     "cevap": "Ziraat",
     "alternatifler": [
       "ZIRAAT"
@@ -4890,7 +4905,7 @@
   },
   {
     "id": 593,
-    "soru": "Bir mühendislik dalına da adını veren yerli banka",
+    "soru": "Simgesi başak olan Türk bankasının adı",
     "cevap": "Ziraat",
     "alternatifler": [
       "ZIRAAT"
@@ -4898,6 +4913,46 @@
   },
   {
     "id": 594,
+    "soru": "Şubat 2017'den beri, Varlık Fonu'na ait olan banka",
+    "cevap": "Ziraat",
+    "alternatifler": [
+      "ZIRAAT"
+    ]
+  },
+  {
+    "id": 595,
+    "soru": "Bir mühendislik dalına da adını veren yerli banka",
+    "cevap": "Ziraat",
+    "alternatifler": [
+      "ZIRAAT"
+    ]
+  },
+  {
+    "id": 596,
+    "soru": "Türkiye'nin en eski bankası",
+    "cevap": "Ziraat",
+    "alternatifler": [
+      "ZIRAAT"
+    ]
+  },
+  {
+    "id": 597,
+    "soru": "Türkiye Kupası'na uzun yıllar sponsor olan banka",
+    "cevap": "Ziraat",
+    "alternatifler": [
+      "ZIRAAT"
+    ]
+  },
+  {
+    "id": 598,
+    "soru": "Bir mühendislik dalına da adını veren yerli banka",
+    "cevap": "Ziraat",
+    "alternatifler": [
+      "ZIRAAT"
+    ]
+  },
+  {
+    "id": 599,
     "soru": "Pırlanta benzeri sentetik cam",
     "cevap": "Zirkon",
     "alternatifler": [
@@ -4905,48 +4960,8 @@
     ]
   },
   {
-    "id": 595,
-    "soru": "Diş kaplamasında da kullanılan Zr simgeli element",
-    "cevap": "Zirkonyum",
-    "alternatifler": [
-      "ZIRKONYUM"
-    ]
-  },
-  {
-    "id": 596,
-    "soru": "Zr ile simgelenen element",
-    "cevap": "Zirkonyum",
-    "alternatifler": [
-      "ZIRKONYUM"
-    ]
-  },
-  {
-    "id": 597,
-    "soru": "Bu elementin atom numarası 40, sembolü Zr'dir",
-    "cevap": "Zirkonyum",
-    "alternatifler": [
-      "ZIRKONYUM"
-    ]
-  },
-  {
-    "id": 598,
-    "soru": "Simgesi Zr olan kimyasal element",
-    "cevap": "Zirkonyum",
-    "alternatifler": [
-      "ZIRKONYUM"
-    ]
-  },
-  {
-    "id": 599,
-    "soru": "Martin Heinrich Klaproth'un keşfettiği element",
-    "cevap": "Zirkonyum",
-    "alternatifler": [
-      "ZIRKONYUM"
-    ]
-  },
-  {
     "id": 600,
-    "soru": "Simgesi Zr olan element",
+    "soru": "Diş kaplamasında da kullanılan Zr simgeli element",
     "cevap": "Zirkonyum",
     "alternatifler": [
       "ZIRKONYUM"
@@ -4954,7 +4969,7 @@
   },
   {
     "id": 601,
-    "soru": "Diş kaplamasında da kullanılan Zr simgeli element",
+    "soru": "Zr ile simgelenen element",
     "cevap": "Zirkonyum",
     "alternatifler": [
       "ZIRKONYUM"
@@ -4962,6 +4977,46 @@
   },
   {
     "id": 602,
+    "soru": "Bu elementin atom numarası 40, sembolü Zr'dir",
+    "cevap": "Zirkonyum",
+    "alternatifler": [
+      "ZIRKONYUM"
+    ]
+  },
+  {
+    "id": 603,
+    "soru": "Simgesi Zr olan kimyasal element",
+    "cevap": "Zirkonyum",
+    "alternatifler": [
+      "ZIRKONYUM"
+    ]
+  },
+  {
+    "id": 604,
+    "soru": "Martin Heinrich Klaproth'un keşfettiği element",
+    "cevap": "Zirkonyum",
+    "alternatifler": [
+      "ZIRKONYUM"
+    ]
+  },
+  {
+    "id": 605,
+    "soru": "Simgesi Zr olan element",
+    "cevap": "Zirkonyum",
+    "alternatifler": [
+      "ZIRKONYUM"
+    ]
+  },
+  {
+    "id": 606,
+    "soru": "Diş kaplamasında da kullanılan Zr simgeli element",
+    "cevap": "Zirkonyum",
+    "alternatifler": [
+      "ZIRKONYUM"
+    ]
+  },
+  {
+    "id": 607,
     "soru": "Bu filmde Dolly Parton ve Sylvester Stallone var",
     "cevap": "Zirvede",
     "alternatifler": [
@@ -4969,7 +5024,7 @@
     ]
   },
   {
-    "id": 603,
+    "id": 608,
     "soru": "Fırlama; bir edebiyat dergisi",
     "cevap": "Zirzop",
     "alternatifler": [
@@ -4977,7 +5032,7 @@
     ]
   },
   {
-    "id": 604,
+    "id": 609,
     "soru": "Siirt'te yetiştirilen, iri taneli ve sulu nar türü",
     "cevap": "Zivzik",
     "alternatifler": [
@@ -4985,7 +5040,7 @@
     ]
   },
   {
-    "id": 605,
+    "id": 610,
     "soru": "Eski dilde aydınlık içeren, ışık alan",
     "cevap": "Ziyadar",
     "alternatifler": [
@@ -4993,7 +5048,7 @@
     ]
   },
   {
-    "id": 606,
+    "id": 611,
     "soru": "Benden öte benden __, bir Barış Manço şarkısı",
     "cevap": "Ziyade",
     "alternatifler": [
@@ -5001,7 +5056,7 @@
     ]
   },
   {
-    "id": 607,
+    "id": 612,
     "soru": "Normal olandan fazla, çok",
     "cevap": "Ziyade",
     "alternatifler": [
@@ -5009,7 +5064,7 @@
     ]
   },
   {
-    "id": 608,
+    "id": 613,
     "soru": "__ olsun, sofraya davet eden kişiye söylenir",
     "cevap": "Ziyade",
     "alternatifler": [
@@ -5017,7 +5072,7 @@
     ]
   },
   {
-    "id": 609,
+    "id": 614,
     "soru": "__ olsun, sofraya davet eden yemek sahibine denir",
     "cevap": "Ziyade",
     "alternatifler": [
@@ -5025,7 +5080,7 @@
     ]
   },
   {
-    "id": 610,
+    "id": 615,
     "soru": "Doyan misafir, \"Çoğalsın\" manasında der, __ olsun",
     "cevap": "Ziyade",
     "alternatifler": [
@@ -5033,7 +5088,7 @@
     ]
   },
   {
-    "id": 611,
+    "id": 616,
     "soru": "Eğlence veya kutlama için verilen büyük yemek",
     "cevap": "Ziyafet",
     "alternatifler": [
@@ -5041,48 +5096,8 @@
     ]
   },
   {
-    "id": 612,
-    "soru": "Önemli misafirler için kurulmuş olan büyük sofra",
-    "cevap": "Ziyafet",
-    "alternatifler": [
-      "ZIYAFET"
-    ]
-  },
-  {
-    "id": 613,
-    "soru": "Bir olayı kutlamak için verilen kalabalık yemek",
-    "cevap": "Ziyafet",
-    "alternatifler": [
-      "ZIYAFET"
-    ]
-  },
-  {
-    "id": 614,
-    "soru": "Kutlama için düzenlenen büyük yemek",
-    "cevap": "Ziyafet",
-    "alternatifler": [
-      "ZIYAFET"
-    ]
-  },
-  {
-    "id": 615,
-    "soru": "Birçok misafirin ağırlandığı büyük yemek",
-    "cevap": "Ziyafet",
-    "alternatifler": [
-      "ZIYAFET"
-    ]
-  },
-  {
-    "id": 616,
-    "soru": "Kutlama için birlikte yenen yemek",
-    "cevap": "Ziyafet",
-    "alternatifler": [
-      "ZIYAFET"
-    ]
-  },
-  {
     "id": 617,
-    "soru": "Kutlama amaçlı şölen yemeği",
+    "soru": "Önemli misafirler için kurulmuş olan büyük sofra",
     "cevap": "Ziyafet",
     "alternatifler": [
       "ZIYAFET"
@@ -5098,7 +5113,7 @@
   },
   {
     "id": 619,
-    "soru": "Eğlence veya kutlama için verilen büyük yemek",
+    "soru": "Kutlama için düzenlenen büyük yemek",
     "cevap": "Ziyafet",
     "alternatifler": [
       "ZIYAFET"
@@ -5106,7 +5121,7 @@
   },
   {
     "id": 620,
-    "soru": "Kutlama için birlikte yenen yemek",
+    "soru": "Birçok misafirin ağırlandığı büyük yemek",
     "cevap": "Ziyafet",
     "alternatifler": [
       "ZIYAFET"
@@ -5114,7 +5129,7 @@
   },
   {
     "id": 621,
-    "soru": "Kutlama yapma amaçlı hazırlanan yemek",
+    "soru": "Kutlama için birlikte yenen yemek",
     "cevap": "Ziyafet",
     "alternatifler": [
       "ZIYAFET"
@@ -5122,6 +5137,46 @@
   },
   {
     "id": 622,
+    "soru": "Kutlama amaçlı şölen yemeği",
+    "cevap": "Ziyafet",
+    "alternatifler": [
+      "ZIYAFET"
+    ]
+  },
+  {
+    "id": 623,
+    "soru": "Bir olayı kutlamak için verilen kalabalık yemek",
+    "cevap": "Ziyafet",
+    "alternatifler": [
+      "ZIYAFET"
+    ]
+  },
+  {
+    "id": 624,
+    "soru": "Eğlence veya kutlama için verilen büyük yemek",
+    "cevap": "Ziyafet",
+    "alternatifler": [
+      "ZIYAFET"
+    ]
+  },
+  {
+    "id": 625,
+    "soru": "Kutlama için birlikte yenen yemek",
+    "cevap": "Ziyafet",
+    "alternatifler": [
+      "ZIYAFET"
+    ]
+  },
+  {
+    "id": 626,
+    "soru": "Kutlama yapma amaçlı hazırlanan yemek",
+    "cevap": "Ziyafet",
+    "alternatifler": [
+      "ZIYAFET"
+    ]
+  },
+  {
+    "id": 627,
     "soru": "Aşk-ı Memnu dizisinde Adnan'ın soy ismi",
     "cevap": "Ziyagil",
     "alternatifler": [
@@ -5129,7 +5184,7 @@
     ]
   },
   {
-    "id": 623,
+    "id": 628,
     "soru": "Aşk-ı Memnu'daki Adnan'ın soyadı",
     "cevap": "Ziyagil",
     "alternatifler": [
@@ -5137,7 +5192,7 @@
     ]
   },
   {
-    "id": 624,
+    "id": 629,
     "soru": "Aşkı Memnu'da, yalıda yaşayan ailenin soyadı",
     "cevap": "Ziyagil",
     "alternatifler": [
@@ -5145,7 +5200,7 @@
     ]
   },
   {
-    "id": 625,
+    "id": 630,
     "soru": "Olumsuz sonuçlanmayan, zararı dokunmayan",
     "cevap": "Ziyansız",
     "alternatifler": [
@@ -5153,7 +5208,7 @@
     ]
   },
   {
-    "id": 626,
+    "id": 631,
     "soru": "Birini veya bir yeri görmeye gitme",
     "cevap": "Ziyaret",
     "alternatifler": [
@@ -5161,7 +5216,7 @@
     ]
   },
   {
-    "id": 627,
+    "id": 632,
     "soru": "Görmeye gitme",
     "cevap": "Ziyaret",
     "alternatifler": [
@@ -5169,7 +5224,7 @@
     ]
   },
   {
-    "id": 628,
+    "id": 633,
     "soru": "Bir müzeyi, sergiyi görmeye giden kişi",
     "cevap": "Ziyaretçi",
     "alternatifler": [
@@ -5178,7 +5233,7 @@
     ]
   },
   {
-    "id": 629,
+    "id": 634,
     "soru": "Bir müzeyi, sergiyi görmeye giden kişi",
     "cevap": "Ziyaretçi",
     "alternatifler": [
@@ -5187,7 +5242,7 @@
     ]
   },
   {
-    "id": 630,
+    "id": 635,
     "soru": "Bir web sayfasına giren kişi için kullanılan ad",
     "cevap": "Ziyaretçi",
     "alternatifler": [
@@ -5196,7 +5251,7 @@
     ]
   },
   {
-    "id": 631,
+    "id": 636,
     "soru": "Bir müzeyi, sergiyi görmeye giden kişi",
     "cevap": "Ziyaretçi",
     "alternatifler": [
@@ -5205,7 +5260,7 @@
     ]
   },
   {
-    "id": 632,
+    "id": 637,
     "soru": "Altın, gümüş gibi kıymetli takı",
     "cevap": "Ziynet",
     "alternatifler": [
@@ -5213,7 +5268,7 @@
     ]
   },
   {
-    "id": 633,
+    "id": 638,
     "soru": "__ Sali, Türk kadın şarkıcı",
     "cevap": "Ziynet",
     "alternatifler": [
@@ -5221,7 +5276,7 @@
     ]
   },
   {
-    "id": 634,
+    "id": 639,
     "soru": "Ibrahimovic soyadlı İsveçli golcünün adı",
     "cevap": "Zlatan",
     "alternatifler": [
@@ -5229,7 +5284,7 @@
     ]
   },
   {
-    "id": 635,
+    "id": 640,
     "soru": "Ünlü İsveçli futbolcu Ibrahimovic'in adı",
     "cevap": "Zlatan",
     "alternatifler": [
@@ -5237,7 +5292,7 @@
     ]
   },
   {
-    "id": 636,
+    "id": 641,
     "soru": "İsveçli futbolcu, __ İbrahimovic",
     "cevap": "Zlatan",
     "alternatifler": [
@@ -5245,7 +5300,7 @@
     ]
   },
   {
-    "id": 637,
+    "id": 642,
     "soru": "Şifreci katilin konu edildiği David Fincher filmi",
     "cevap": "Zodiac",
     "alternatifler": [
@@ -5253,7 +5308,7 @@
     ]
   },
   {
-    "id": 638,
+    "id": 643,
     "soru": "Uzayda burçların oluşturduğu kuşak",
     "cevap": "Zodyak",
     "alternatifler": [
@@ -5261,48 +5316,8 @@
     ]
   },
   {
-    "id": 639,
-    "soru": "Burçlar kuşağı",
-    "cevap": "Zodyak",
-    "alternatifler": [
-      "ZODYAK"
-    ]
-  },
-  {
-    "id": 640,
-    "soru": "Astrolojide burçların yer aldığı kuşak",
-    "cevap": "Zodyak",
-    "alternatifler": [
-      "ZODYAK"
-    ]
-  },
-  {
-    "id": 641,
-    "soru": "Astrolojide, burçların dahil olduğu kuşak",
-    "cevap": "Zodyak",
-    "alternatifler": [
-      "ZODYAK"
-    ]
-  },
-  {
-    "id": 642,
-    "soru": "Gök biliminde burçlar kuşağı",
-    "cevap": "Zodyak",
-    "alternatifler": [
-      "ZODYAK"
-    ]
-  },
-  {
-    "id": 643,
-    "soru": "Astrolojide, burçların dahil olduğu kuşak",
-    "cevap": "Zodyak",
-    "alternatifler": [
-      "ZODYAK"
-    ]
-  },
-  {
     "id": 644,
-    "soru": "David Fincher imzalı, 2007 yılı gerilim filmi",
+    "soru": "Burçlar kuşağı",
     "cevap": "Zodyak",
     "alternatifler": [
       "ZODYAK"
@@ -5310,7 +5325,7 @@
   },
   {
     "id": 645,
-    "soru": "Astrolojide, burçların dizildiği kuşağa verilen ad",
+    "soru": "Astrolojide burçların yer aldığı kuşak",
     "cevap": "Zodyak",
     "alternatifler": [
       "ZODYAK"
@@ -5318,7 +5333,7 @@
   },
   {
     "id": 646,
-    "soru": "Burçlar kuşağı",
+    "soru": "Astrolojide, burçların dahil olduğu kuşak",
     "cevap": "Zodyak",
     "alternatifler": [
       "ZODYAK"
@@ -5326,7 +5341,7 @@
   },
   {
     "id": 647,
-    "soru": "Gök biliminde burçlar kuşağı; David Fincher filmi",
+    "soru": "Gök biliminde burçlar kuşağı",
     "cevap": "Zodyak",
     "alternatifler": [
       "ZODYAK"
@@ -5334,6 +5349,46 @@
   },
   {
     "id": 648,
+    "soru": "Astrolojide, burçların dahil olduğu kuşak",
+    "cevap": "Zodyak",
+    "alternatifler": [
+      "ZODYAK"
+    ]
+  },
+  {
+    "id": 649,
+    "soru": "David Fincher imzalı, 2007 yılı gerilim filmi",
+    "cevap": "Zodyak",
+    "alternatifler": [
+      "ZODYAK"
+    ]
+  },
+  {
+    "id": 650,
+    "soru": "Astrolojide, burçların dizildiği kuşağa verilen ad",
+    "cevap": "Zodyak",
+    "alternatifler": [
+      "ZODYAK"
+    ]
+  },
+  {
+    "id": 651,
+    "soru": "Burçlar kuşağı",
+    "cevap": "Zodyak",
+    "alternatifler": [
+      "ZODYAK"
+    ]
+  },
+  {
+    "id": 652,
+    "soru": "Gök biliminde burçlar kuşağı; David Fincher filmi",
+    "cevap": "Zodyak",
+    "alternatifler": [
+      "ZODYAK"
+    ]
+  },
+  {
+    "id": 653,
     "soru": "Adı domatesi andıran, restoran ve menü sitesiydi",
     "cevap": "Zomato",
     "alternatifler": [
@@ -5341,7 +5396,7 @@
     ]
   },
   {
-    "id": 649,
+    "id": 654,
     "soru": "Restoranlar hakkında menü bilgileri sunan site",
     "cevap": "Zomato",
     "alternatifler": [
@@ -5349,7 +5404,7 @@
     ]
   },
   {
-    "id": 650,
+    "id": 655,
     "soru": "The Walking Dead dizisindeki saldırgan yaratıklar",
     "cevap": "Zombiler",
     "alternatifler": [
@@ -5357,7 +5412,7 @@
     ]
   },
   {
-    "id": 651,
+    "id": 656,
     "soru": "Kömür madenleriyle tanınan Karadeniz ili",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5365,7 +5420,7 @@
     ]
   },
   {
-    "id": 652,
+    "id": 657,
     "soru": "Taş kömürü denince bu il akla gelir",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5373,7 +5428,7 @@
     ]
   },
   {
-    "id": 653,
+    "id": 658,
     "soru": "Kömür madeni ile ünlü il",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5381,7 +5436,7 @@
     ]
   },
   {
-    "id": 654,
+    "id": 659,
     "soru": "Çaycuma yoğurdu ile meşhur olan il",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5389,7 +5444,7 @@
     ]
   },
   {
-    "id": 655,
+    "id": 660,
     "soru": "Devrek ve Ereğli ilçeleri bu şehirdedir",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5397,7 +5452,7 @@
     ]
   },
   {
-    "id": 656,
+    "id": 661,
     "soru": "Düriyemin Güğümleri Kalaylı türküsünün yöresi",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5405,48 +5460,8 @@
     ]
   },
   {
-    "id": 657,
-    "soru": "Taş kömürü kaynakları zengin Batı Karadeniz ili",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 658,
-    "soru": "1990'da 43 bin madencinin grev yaptığı Türkiye ili",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 659,
-    "soru": "Maden ocaklarıyla tanınan Karadeniz ili",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 660,
-    "soru": "Taş kömürü kaynakları zengin Batı Karadeniz ili",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 661,
-    "soru": "Türkiye'de taş kömürünün ilk çıkarıldığı il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
     "id": 662,
-    "soru": "Karabük'ün il olmadan önce bağlı olduğu il",
+    "soru": "Taş kömürü kaynakları zengin Batı Karadeniz ili",
     "cevap": "Zonguldak",
     "alternatifler": [
       "ZONGULDAK"
@@ -5454,7 +5469,7 @@
   },
   {
     "id": 663,
-    "soru": "Eski adı Karaelmas olan üniversitenin bulunduğu il",
+    "soru": "1990'da 43 bin madencinin grev yaptığı Türkiye ili",
     "cevap": "Zonguldak",
     "alternatifler": [
       "ZONGULDAK"
@@ -5462,14 +5477,6 @@
   },
   {
     "id": 664,
-    "soru": "Kömür madeni ile ünlü Karadeniz ili",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 665,
     "soru": "Maden ocaklarıyla tanınan Karadeniz ili",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5477,87 +5484,7 @@
     ]
   },
   {
-    "id": 666,
-    "soru": "Çaycuma Havaalanı'nın bulunduğu il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 667,
-    "soru": "Kozlu kömür ocaklarının bulunduğu il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 668,
-    "soru": "Türkiye'de taş kömürünün ilk çıkarıldığı il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 669,
-    "soru": "\"Emeğin başkenti\" unvanlı madenci kenti",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 670,
-    "soru": "Covid sürecinde 30 büyükşehirle birlikte anılan il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 671,
-    "soru": "Bartın'ın ilçe iken bağlı olduğu il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 672,
-    "soru": "Alfabetik olarak, adı en sonda yer alan il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 673,
-    "soru": "Taş kömürü madenlerinin bulunduğu Türkiye ili",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 674,
-    "soru": "Kara elmas denilen madeniyle ünlü Karadeniz ili",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 675,
-    "soru": "Karabük'ün il olmadan önce bağlı olduğu il",
-    "cevap": "Zonguldak",
-    "alternatifler": [
-      "ZONGULDAK"
-    ]
-  },
-  {
-    "id": 676,
+    "id": 665,
     "soru": "Taş kömürü kaynakları zengin Batı Karadeniz ili",
     "cevap": "Zonguldak",
     "alternatifler": [
@@ -5565,8 +5492,96 @@
     ]
   },
   {
+    "id": 666,
+    "soru": "Türkiye'de taş kömürünün ilk çıkarıldığı il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 667,
+    "soru": "Karabük'ün il olmadan önce bağlı olduğu il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 668,
+    "soru": "Eski adı Karaelmas olan üniversitenin bulunduğu il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 669,
+    "soru": "Kömür madeni ile ünlü Karadeniz ili",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 670,
+    "soru": "Maden ocaklarıyla tanınan Karadeniz ili",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 671,
+    "soru": "Çaycuma Havaalanı'nın bulunduğu il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 672,
+    "soru": "Kozlu kömür ocaklarının bulunduğu il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 673,
+    "soru": "Türkiye'de taş kömürünün ilk çıkarıldığı il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 674,
+    "soru": "\"Emeğin başkenti\" unvanlı madenci kenti",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 675,
+    "soru": "Covid sürecinde 30 büyükşehirle birlikte anılan il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 676,
+    "soru": "Bartın'ın ilçe iken bağlı olduğu il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
     "id": 677,
-    "soru": "Beyaz baklava, bu şehrin ünlü bir tatlısıdır",
+    "soru": "Alfabetik olarak, adı en sonda yer alan il",
     "cevap": "Zonguldak",
     "alternatifler": [
       "ZONGULDAK"
@@ -5574,7 +5589,7 @@
   },
   {
     "id": 678,
-    "soru": "Beyaz baklava, bu şehrin ünlü bir tatlısıdır",
+    "soru": "Taş kömürü madenlerinin bulunduğu Türkiye ili",
     "cevap": "Zonguldak",
     "alternatifler": [
       "ZONGULDAK"
@@ -5582,7 +5597,7 @@
   },
   {
     "id": 679,
-    "soru": "Taş kömürü madenlerinin bulunduğu Türkiye ili",
+    "soru": "Kara elmas denilen madeniyle ünlü Karadeniz ili",
     "cevap": "Zonguldak",
     "alternatifler": [
       "ZONGULDAK"
@@ -5598,6 +5613,46 @@
   },
   {
     "id": 681,
+    "soru": "Taş kömürü kaynakları zengin Batı Karadeniz ili",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 682,
+    "soru": "Beyaz baklava, bu şehrin ünlü bir tatlısıdır",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 683,
+    "soru": "Beyaz baklava, bu şehrin ünlü bir tatlısıdır",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 684,
+    "soru": "Taş kömürü madenlerinin bulunduğu Türkiye ili",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 685,
+    "soru": "Karabük'ün il olmadan önce bağlı olduğu il",
+    "cevap": "Zonguldak",
+    "alternatifler": [
+      "ZONGULDAK"
+    ]
+  },
+  {
+    "id": 686,
     "soru": "Hayvanlardan korkma",
     "cevap": "Zoofobi",
     "alternatifler": [
@@ -5605,7 +5660,7 @@
     ]
   },
   {
-    "id": 682,
+    "id": 687,
     "soru": "Hayvanlara karşı duyulan aşırı korku",
     "cevap": "Zoofobi",
     "alternatifler": [
@@ -5613,7 +5668,7 @@
     ]
   },
   {
-    "id": 683,
+    "id": 688,
     "soru": "Hayvanlardan korkma",
     "cevap": "Zoofobi",
     "alternatifler": [
@@ -5621,7 +5676,7 @@
     ]
   },
   {
-    "id": 684,
+    "id": 689,
     "soru": "Hayvanları farklı yönlerden inceleyen bilim insanı",
     "cevap": "Zoolog",
     "alternatifler": [
@@ -5629,7 +5684,7 @@
     ]
   },
   {
-    "id": 685,
+    "id": 690,
     "soru": "Hayvanların özelliklerini inceleyen bilim insanı",
     "cevap": "Zoolog",
     "alternatifler": [
@@ -5637,7 +5692,7 @@
     ]
   },
   {
-    "id": 686,
+    "id": 691,
     "soru": "Hayvanbilimci",
     "cevap": "Zoolog",
     "alternatifler": [
@@ -5645,7 +5700,7 @@
     ]
   },
   {
-    "id": 687,
+    "id": 692,
     "soru": "Hayvanlarla bilimsel ölçekte ilgilenir",
     "cevap": "Zoolog",
     "alternatifler": [
@@ -5653,7 +5708,7 @@
     ]
   },
   {
-    "id": 688,
+    "id": 693,
     "soru": "Hayvanbilimci",
     "cevap": "Zoolog",
     "alternatifler": [
@@ -5661,48 +5716,8 @@
     ]
   },
   {
-    "id": 689,
-    "soru": "Hayvan bilimi",
-    "cevap": "Zooloji",
-    "alternatifler": [
-      "ZOOLOJI"
-    ]
-  },
-  {
-    "id": 690,
-    "soru": "Hayvanları inceleyen bilim",
-    "cevap": "Zooloji",
-    "alternatifler": [
-      "ZOOLOJI"
-    ]
-  },
-  {
-    "id": 691,
-    "soru": "Hayvan bilimi",
-    "cevap": "Zooloji",
-    "alternatifler": [
-      "ZOOLOJI"
-    ]
-  },
-  {
-    "id": 692,
-    "soru": "Hayvanları birçok yönden inceleyen bilim dalı",
-    "cevap": "Zooloji",
-    "alternatifler": [
-      "ZOOLOJI"
-    ]
-  },
-  {
-    "id": 693,
-    "soru": "Hayvanları inceleyen bilim dalının adı",
-    "cevap": "Zooloji",
-    "alternatifler": [
-      "ZOOLOJI"
-    ]
-  },
-  {
     "id": 694,
-    "soru": "Hayvanları inceleyen bilim",
+    "soru": "Hayvan bilimi",
     "cevap": "Zooloji",
     "alternatifler": [
       "ZOOLOJI"
@@ -5710,7 +5725,7 @@
   },
   {
     "id": 695,
-    "soru": "Hayvan bilimi",
+    "soru": "Hayvanları inceleyen bilim",
     "cevap": "Zooloji",
     "alternatifler": [
       "ZOOLOJI"
@@ -5726,7 +5741,7 @@
   },
   {
     "id": 697,
-    "soru": "Hayvan bilimi",
+    "soru": "Hayvanları birçok yönden inceleyen bilim dalı",
     "cevap": "Zooloji",
     "alternatifler": [
       "ZOOLOJI"
@@ -5734,7 +5749,7 @@
   },
   {
     "id": 698,
-    "soru": "Hayvanları inceleyen bilim",
+    "soru": "Hayvanları inceleyen bilim dalının adı",
     "cevap": "Zooloji",
     "alternatifler": [
       "ZOOLOJI"
@@ -5742,7 +5757,7 @@
   },
   {
     "id": 699,
-    "soru": "Hayvan bilimi",
+    "soru": "Hayvanları inceleyen bilim",
     "cevap": "Zooloji",
     "alternatifler": [
       "ZOOLOJI"
@@ -5782,14 +5797,46 @@
   },
   {
     "id": 704,
-    "soru": "Hayvanlarla ilgili olan",
-    "cevap": "Zoolojik",
+    "soru": "Hayvan bilimi",
+    "cevap": "Zooloji",
     "alternatifler": [
-      "ZOOLOJIK"
+      "ZOOLOJI"
     ]
   },
   {
     "id": 705,
+    "soru": "Hayvan bilimi",
+    "cevap": "Zooloji",
+    "alternatifler": [
+      "ZOOLOJI"
+    ]
+  },
+  {
+    "id": 706,
+    "soru": "Hayvan bilimi",
+    "cevap": "Zooloji",
+    "alternatifler": [
+      "ZOOLOJI"
+    ]
+  },
+  {
+    "id": 707,
+    "soru": "Hayvan bilimi",
+    "cevap": "Zooloji",
+    "alternatifler": [
+      "ZOOLOJI"
+    ]
+  },
+  {
+    "id": 708,
+    "soru": "Hayvanları inceleyen bilim",
+    "cevap": "Zooloji",
+    "alternatifler": [
+      "ZOOLOJI"
+    ]
+  },
+  {
+    "id": 709,
     "soru": "Hayvanlarla ilgili olan",
     "cevap": "Zoolojik",
     "alternatifler": [
@@ -5797,7 +5844,15 @@
     ]
   },
   {
-    "id": 706,
+    "id": 710,
+    "soru": "Hayvanlarla ilgili olan",
+    "cevap": "Zoolojik",
+    "alternatifler": [
+      "ZOOLOJIK"
+    ]
+  },
+  {
+    "id": 711,
     "soru": "Çiftlik hayvanı üretme ve bakma bilimi",
     "cevap": "Zootekni",
     "alternatifler": [
@@ -5805,7 +5860,7 @@
     ]
   },
   {
-    "id": 707,
+    "id": 712,
     "soru": "Tavşan ve tilkinin macerasını konu alan animasyon",
     "cevap": "Zootopıa",
     "alternatifler": [
@@ -5813,121 +5868,7 @@
     ]
   },
   {
-    "id": 708,
-    "soru": "Gönülsüzce gerçekleştirilen",
-    "cevap": "Zoraki",
-    "alternatifler": [
-      "ZORAKI"
-    ]
-  },
-  {
-    "id": 709,
-    "soru": "Gönüllü olmadan, lütfen yapılan",
-    "cevap": "Zoraki",
-    "alternatifler": [
-      "ZORAKI"
-    ]
-  },
-  {
-    "id": 710,
-    "soru": "Kekeme kralın olduğu Oscar ödüllü film, __ Kral",
-    "cevap": "Zoraki",
-    "alternatifler": [
-      "ZORAKI"
-    ]
-  },
-  {
-    "id": 711,
-    "soru": "Gönülsüz manasındaki, Yunanca Farsça karışımı söz",
-    "cevap": "Zoraki",
-    "alternatifler": [
-      "ZORAKI"
-    ]
-  },
-  {
-    "id": 712,
-    "soru": "Bir iş yapılırken güçlük çıkarma",
-    "cevap": "Zora koşma",
-    "alternatifler": [
-      "ZORA KOSMA",
-      "ZORA KOŞMA",
-      "Zorakoşma"
-    ]
-  },
-  {
     "id": 713,
-    "soru": "Başkaları üzerinde zorla hakimiyet kurmak",
-    "cevap": "Zorbalık",
-    "alternatifler": [
-      "ZORBALIK"
-    ]
-  },
-  {
-    "id": 714,
-    "soru": "Güç kullanarak başkasına mani olma, despotluk",
-    "cevap": "Zorbalık",
-    "alternatifler": [
-      "ZORBALIK"
-    ]
-  },
-  {
-    "id": 715,
-    "soru": "Plastik topun içinde yokuş aşağı yuvarlanma sporu",
-    "cevap": "Zorbıng",
-    "alternatifler": [
-      "ZORBING"
-    ]
-  },
-  {
-    "id": 716,
-    "soru": "Osmaniye'nin en büyük yaylası",
-    "cevap": "Zorkun",
-    "alternatifler": [
-      "ZORKUN"
-    ]
-  },
-  {
-    "id": 717,
-    "soru": "3 ila 10 gün arasındaki hapis cezasına verilen ad",
-    "cevap": "Zorlama",
-    "alternatifler": [
-      "ZORLAMA"
-    ]
-  },
-  {
-    "id": 718,
-    "soru": "Zahmetli olma durumu, güçlük",
-    "cevap": "Zorluk",
-    "alternatifler": [
-      "ZORLUK"
-    ]
-  },
-  {
-    "id": 719,
-    "soru": "Kolay olmayan biçimde, güçlükle",
-    "cevap": "Zorlukla",
-    "alternatifler": [
-      "ZORLUKLA"
-    ]
-  },
-  {
-    "id": 720,
-    "soru": "İsteğe bağlı olmayan, mecburi",
-    "cevap": "Zorunlu",
-    "alternatifler": [
-      "ZORUNLU"
-    ]
-  },
-  {
-    "id": 721,
-    "soru": "Kaçınılmaz olma, zarurilik, mecburiyet",
-    "cevap": "Zorunluk",
-    "alternatifler": [
-      "ZORUNLUK"
-    ]
-  },
-  {
-    "id": 722,
     "soru": "Ben Stiller'ın Greg Focker'ı oynadığı film serisi",
     "cevap": "Zor baba",
     "alternatifler": [
@@ -5936,7 +5877,7 @@
     ]
   },
   {
-    "id": 723,
+    "id": 714,
     "soru": "Robert De Niro ve Ben Stiller'ın oynadığı film",
     "cevap": "Zor baba",
     "alternatifler": [
@@ -5945,7 +5886,7 @@
     ]
   },
   {
-    "id": 724,
+    "id": 715,
     "soru": "Ben Stiller'ın Greg Focker'ı oynadığı film serisi",
     "cevap": "Zor baba",
     "alternatifler": [
@@ -5954,7 +5895,7 @@
     ]
   },
   {
-    "id": 725,
+    "id": 716,
     "soru": "Ben Stiller'ın Greg Focker'ı oynadığı film serisi",
     "cevap": "Zor baba",
     "alternatifler": [
@@ -5963,7 +5904,7 @@
     ]
   },
   {
-    "id": 726,
+    "id": 717,
     "soru": "Büyük zahmetler sonucu, güçlükle",
     "cevap": "Zor bela",
     "alternatifler": [
@@ -5972,7 +5913,7 @@
     ]
   },
   {
-    "id": 727,
+    "id": 718,
     "soru": "John Woo'nun yönettiği ilk Hollywood filmi",
     "cevap": "Zor hedef",
     "alternatifler": [
@@ -5981,7 +5922,7 @@
     ]
   },
   {
-    "id": 728,
+    "id": 719,
     "soru": "Sertab Erener'in Voice Male ile yaptığı ünlü düet",
     "cevap": "Zor kadın",
     "alternatifler": [
@@ -5990,7 +5931,7 @@
     ]
   },
   {
-    "id": 729,
+    "id": 720,
     "soru": "Sertab Erener'in \"Gel unuttum gel\" dediği şarkısı",
     "cevap": "Zor kadın",
     "alternatifler": [
@@ -5999,7 +5940,7 @@
     ]
   },
   {
-    "id": 730,
+    "id": 721,
     "soru": "Sertab Erener'in \"Gel unuttum gel\" dediği şarkısı",
     "cevap": "Zor kadın",
     "alternatifler": [
@@ -6008,7 +5949,7 @@
     ]
   },
   {
-    "id": 731,
+    "id": 722,
     "soru": "Sertab Erener'in \"Gel unuttum gel\" dediği şarkısı",
     "cevap": "Zor kadın",
     "alternatifler": [
@@ -6017,7 +5958,7 @@
     ]
   },
   {
-    "id": 732,
+    "id": 723,
     "soru": "Pang kardeşlerin bu filminde Nicolas Cage oynadı",
     "cevap": "Zor karar",
     "alternatifler": [
@@ -6026,7 +5967,7 @@
     ]
   },
   {
-    "id": 733,
+    "id": 724,
     "soru": "Bu filmde Mark Wahlberg ve Dwayne Johnson oynadı",
     "cevap": "Zor kazanç",
     "alternatifler": [
@@ -6036,7 +5977,7 @@
     ]
   },
   {
-    "id": 734,
+    "id": 725,
     "soru": "Ahmet Vefik Paşa'nın Moliere'den uyarladığı oyun",
     "cevap": "Zor nikahı",
     "alternatifler": [
@@ -6045,7 +5986,7 @@
     ]
   },
   {
-    "id": 735,
+    "id": 726,
     "soru": "Bruce Willis'in John McClane rolünde olduğu film",
     "cevap": "Zor ölüm",
     "alternatifler": [
@@ -6055,7 +5996,7 @@
     ]
   },
   {
-    "id": 736,
+    "id": 727,
     "soru": "Bruce Willis'in John McClane rolünde olduğu film",
     "cevap": "Zor ölüm",
     "alternatifler": [
@@ -6065,7 +6006,7 @@
     ]
   },
   {
-    "id": 737,
+    "id": 728,
     "soru": "Bruce Willis bu seride John McClane'i oynadı",
     "cevap": "Zor ölüm",
     "alternatifler": [
@@ -6075,57 +6016,171 @@
     ]
   },
   {
-    "id": 738,
+    "id": 729,
     "soru": "Bruce Willis'in John McClane'yi canlandırdığı film",
     "cevap": "Zor ölüm",
     "alternatifler": [
       "ZOR ÖLÜM",
       "ZOR OLUM",
       "Zorölüm"
+    ]
+  },
+  {
+    "id": 730,
+    "soru": "Bruce Willis'in bir polisi oynadığı film serisi",
+    "cevap": "Zor ölüm",
+    "alternatifler": [
+      "ZOR ÖLÜM",
+      "ZOR OLUM",
+      "Zorölüm"
+    ]
+  },
+  {
+    "id": 731,
+    "soru": "Bruce Willis'in bir polisi oynadığı film serisi",
+    "cevap": "Zor ölüm",
+    "alternatifler": [
+      "ZOR ÖLÜM",
+      "ZOR OLUM",
+      "Zorölüm"
+    ]
+  },
+  {
+    "id": 732,
+    "soru": "Bruce Willis'in John McClane'yi canlandırdığı film",
+    "cevap": "Zor ölüm",
+    "alternatifler": [
+      "ZOR ÖLÜM",
+      "ZOR OLUM",
+      "Zorölüm"
+    ]
+  },
+  {
+    "id": 733,
+    "soru": "Bruce Willis'in bir polisi oynadığı film serisi",
+    "cevap": "Zor ölüm",
+    "alternatifler": [
+      "ZOR ÖLÜM",
+      "ZOR OLUM",
+      "Zorölüm"
+    ]
+  },
+  {
+    "id": 734,
+    "soru": "Bir iş yapılırken güçlük çıkarma",
+    "cevap": "Zora koşma",
+    "alternatifler": [
+      "ZORA KOSMA",
+      "ZORA KOŞMA",
+      "Zorakoşma"
+    ]
+  },
+  {
+    "id": 735,
+    "soru": "Gönülsüzce gerçekleştirilen",
+    "cevap": "Zoraki",
+    "alternatifler": [
+      "ZORAKI"
+    ]
+  },
+  {
+    "id": 736,
+    "soru": "Gönüllü olmadan, lütfen yapılan",
+    "cevap": "Zoraki",
+    "alternatifler": [
+      "ZORAKI"
+    ]
+  },
+  {
+    "id": 737,
+    "soru": "Kekeme kralın olduğu Oscar ödüllü film, __ Kral",
+    "cevap": "Zoraki",
+    "alternatifler": [
+      "ZORAKI"
+    ]
+  },
+  {
+    "id": 738,
+    "soru": "Gönülsüz manasındaki, Yunanca Farsça karışımı söz",
+    "cevap": "Zoraki",
+    "alternatifler": [
+      "ZORAKI"
     ]
   },
   {
     "id": 739,
-    "soru": "Bruce Willis'in bir polisi oynadığı film serisi",
-    "cevap": "Zor ölüm",
+    "soru": "Başkaları üzerinde zorla hakimiyet kurmak",
+    "cevap": "Zorbalık",
     "alternatifler": [
-      "ZOR ÖLÜM",
-      "ZOR OLUM",
-      "Zorölüm"
+      "ZORBALIK"
     ]
   },
   {
     "id": 740,
-    "soru": "Bruce Willis'in bir polisi oynadığı film serisi",
-    "cevap": "Zor ölüm",
+    "soru": "Güç kullanarak başkasına mani olma, despotluk",
+    "cevap": "Zorbalık",
     "alternatifler": [
-      "ZOR ÖLÜM",
-      "ZOR OLUM",
-      "Zorölüm"
+      "ZORBALIK"
     ]
   },
   {
     "id": 741,
-    "soru": "Bruce Willis'in John McClane'yi canlandırdığı film",
-    "cevap": "Zor ölüm",
+    "soru": "Plastik topun içinde yokuş aşağı yuvarlanma sporu",
+    "cevap": "Zorbıng",
     "alternatifler": [
-      "ZOR ÖLÜM",
-      "ZOR OLUM",
-      "Zorölüm"
+      "ZORBING"
     ]
   },
   {
     "id": 742,
-    "soru": "Bruce Willis'in bir polisi oynadığı film serisi",
-    "cevap": "Zor ölüm",
+    "soru": "Osmaniye'nin en büyük yaylası",
+    "cevap": "Zorkun",
     "alternatifler": [
-      "ZOR ÖLÜM",
-      "ZOR OLUM",
-      "Zorölüm"
+      "ZORKUN"
     ]
   },
   {
     "id": 743,
+    "soru": "3 ila 10 gün arasındaki hapis cezasına verilen ad",
+    "cevap": "Zorlama",
+    "alternatifler": [
+      "ZORLAMA"
+    ]
+  },
+  {
+    "id": 744,
+    "soru": "Zahmetli olma durumu, güçlük",
+    "cevap": "Zorluk",
+    "alternatifler": [
+      "ZORLUK"
+    ]
+  },
+  {
+    "id": 745,
+    "soru": "Kolay olmayan biçimde, güçlükle",
+    "cevap": "Zorlukla",
+    "alternatifler": [
+      "ZORLUKLA"
+    ]
+  },
+  {
+    "id": 746,
+    "soru": "İsteğe bağlı olmayan, mecburi",
+    "cevap": "Zorunlu",
+    "alternatifler": [
+      "ZORUNLU"
+    ]
+  },
+  {
+    "id": 747,
+    "soru": "Kaçınılmaz olma, zarurilik, mecburiyet",
+    "cevap": "Zorunluk",
+    "alternatifler": [
+      "ZORUNLUK"
+    ]
+  },
+  {
+    "id": 748,
     "soru": "Ballıbabagillerden olan bu bitkiye çördük denir",
     "cevap": "Zufa otu",
     "alternatifler": [
@@ -6134,15 +6189,7 @@
     ]
   },
   {
-    "id": 744,
-    "soru": "Hesapta olmayan durumlar anlamındaki eski bir söz",
-    "cevap": "Zuhurat",
-    "alternatifler": [
-      "ZUHURAT"
-    ]
-  },
-  {
-    "id": 745,
+    "id": 749,
     "soru": "Görünür hale gelme, ortaya çıkma",
     "cevap": "Zuhur etme",
     "alternatifler": [
@@ -6151,15 +6198,15 @@
     ]
   },
   {
-    "id": 746,
-    "soru": "Gizlemenin argodaki adı, saklamak",
-    "cevap": "Zulalamak",
+    "id": 750,
+    "soru": "Hesapta olmayan durumlar anlamındaki eski bir söz",
+    "cevap": "Zuhurat",
     "alternatifler": [
-      "ZULALAMAK"
+      "ZUHURAT"
     ]
   },
   {
-    "id": 747,
+    "id": 751,
     "soru": "Argoda saklama, görünmeyecek yere koyma",
     "cevap": "Zula etme",
     "alternatifler": [
@@ -6168,7 +6215,7 @@
     ]
   },
   {
-    "id": 748,
+    "id": 752,
     "soru": "Argoda başkalarının malını gizlice çalmak, aşırmak",
     "cevap": "Zula etmek",
     "alternatifler": [
@@ -6177,7 +6224,15 @@
     ]
   },
   {
-    "id": 749,
+    "id": 753,
+    "soru": "Gizlemenin argodaki adı, saklamak",
+    "cevap": "Zulalamak",
+    "alternatifler": [
+      "ZULALAMAK"
+    ]
+  },
+  {
+    "id": 754,
     "soru": "Eski dilde ışık barındırmama durumu, karanlık",
     "cevap": "Zulmet",
     "alternatifler": [
@@ -6185,7 +6240,7 @@
     ]
   },
   {
-    "id": 750,
+    "id": 755,
     "soru": "Objektifin odağını yakınlaştırmak",
     "cevap": "Zumlamak",
     "alternatifler": [
@@ -6193,48 +6248,8 @@
     ]
   },
   {
-    "id": 751,
-    "soru": "Düğünlerde davulcuya eşlik eden çalgıcı",
-    "cevap": "Zurnacı",
-    "alternatifler": [
-      "ZURNACI"
-    ]
-  },
-  {
-    "id": 752,
-    "soru": "Davulcunun iş ortağı",
-    "cevap": "Zurnacı",
-    "alternatifler": [
-      "ZURNACI"
-    ]
-  },
-  {
-    "id": 753,
-    "soru": "Gelin alma seremonisinde davulcunun ekürisi",
-    "cevap": "Zurnacı",
-    "alternatifler": [
-      "ZURNACI"
-    ]
-  },
-  {
-    "id": 754,
-    "soru": "Davulcuyla birlikte düğünlerde çalan müzisyen",
-    "cevap": "Zurnacı",
-    "alternatifler": [
-      "ZURNACI"
-    ]
-  },
-  {
-    "id": 755,
-    "soru": "Düğünlerde davulcuya eşlik eden çalgıcı",
-    "cevap": "Zurnacı",
-    "alternatifler": [
-      "ZURNACI"
-    ]
-  },
-  {
     "id": 756,
-    "soru": "Davulcuyla birlikte düğünlerde çalan müzisyen",
+    "soru": "Düğünlerde davulcuya eşlik eden çalgıcı",
     "cevap": "Zurnacı",
     "alternatifler": [
       "ZURNACI"
@@ -6242,7 +6257,7 @@
   },
   {
     "id": 757,
-    "soru": "Düğünlerde davulcuya eşlik eden çalgıcı",
+    "soru": "Davulcunun iş ortağı",
     "cevap": "Zurnacı",
     "alternatifler": [
       "ZURNACI"
@@ -6250,6 +6265,46 @@
   },
   {
     "id": 758,
+    "soru": "Gelin alma seremonisinde davulcunun ekürisi",
+    "cevap": "Zurnacı",
+    "alternatifler": [
+      "ZURNACI"
+    ]
+  },
+  {
+    "id": 759,
+    "soru": "Davulcuyla birlikte düğünlerde çalan müzisyen",
+    "cevap": "Zurnacı",
+    "alternatifler": [
+      "ZURNACI"
+    ]
+  },
+  {
+    "id": 760,
+    "soru": "Düğünlerde davulcuya eşlik eden çalgıcı",
+    "cevap": "Zurnacı",
+    "alternatifler": [
+      "ZURNACI"
+    ]
+  },
+  {
+    "id": 761,
+    "soru": "Davulcuyla birlikte düğünlerde çalan müzisyen",
+    "cevap": "Zurnacı",
+    "alternatifler": [
+      "ZURNACI"
+    ]
+  },
+  {
+    "id": 762,
+    "soru": "Düğünlerde davulcuya eşlik eden çalgıcı",
+    "cevap": "Zurnacı",
+    "alternatifler": [
+      "ZURNACI"
+    ]
+  },
+  {
+    "id": 763,
     "soru": "__ peşrev olmaz",
     "cevap": "Zurnada",
     "alternatifler": [
@@ -6257,7 +6312,7 @@
     ]
   },
   {
-    "id": 759,
+    "id": 764,
     "soru": "Zerdaliden kaval olmaz, al __ haberi",
     "cevap": "Zurnadan",
     "alternatifler": [
@@ -6265,53 +6320,8 @@
     ]
   },
   {
-    "id": 760,
-    "soru": "Atatürk'ün annesinin adı",
-    "cevap": "Zübeyde",
-    "alternatifler": [
-      "ZÜBEYDE",
-      "ZUBEYDE"
-    ]
-  },
-  {
-    "id": 761,
-    "soru": "Atatürk'ün annesinin ismi",
-    "cevap": "Zübeyde",
-    "alternatifler": [
-      "ZÜBEYDE",
-      "ZUBEYDE"
-    ]
-  },
-  {
-    "id": 762,
-    "soru": "Atatürk'ün annesinin adı",
-    "cevap": "Zübeyde",
-    "alternatifler": [
-      "ZÜBEYDE",
-      "ZUBEYDE"
-    ]
-  },
-  {
-    "id": 763,
-    "soru": "Atatürk'ün annesinin adı",
-    "cevap": "Zübeyde",
-    "alternatifler": [
-      "ZÜBEYDE",
-      "ZUBEYDE"
-    ]
-  },
-  {
-    "id": 764,
-    "soru": "__ Hanım, Atatürk'ün annesinin adı",
-    "cevap": "Zübeyde",
-    "alternatifler": [
-      "ZÜBEYDE",
-      "ZUBEYDE"
-    ]
-  },
-  {
     "id": 765,
-    "soru": "__ Hanım, Atatürk'ün annesinin adı",
+    "soru": "Atatürk'ün annesinin adı",
     "cevap": "Zübeyde",
     "alternatifler": [
       "ZÜBEYDE",
@@ -6320,52 +6330,52 @@
   },
   {
     "id": 766,
-    "soru": "Tabak çanak satılan dükkan",
-    "cevap": "Züccaciye",
+    "soru": "Atatürk'ün annesinin ismi",
+    "cevap": "Zübeyde",
     "alternatifler": [
-      "ZUCCACIYE",
-      "ZÜCCACIYE"
+      "ZÜBEYDE",
+      "ZUBEYDE"
     ]
   },
   {
     "id": 767,
-    "soru": "Porselen veya cam malzemeden yapılmış eşya",
-    "cevap": "Züccaciye",
+    "soru": "Atatürk'ün annesinin adı",
+    "cevap": "Zübeyde",
     "alternatifler": [
-      "ZUCCACIYE",
-      "ZÜCCACIYE"
+      "ZÜBEYDE",
+      "ZUBEYDE"
     ]
   },
   {
     "id": 768,
-    "soru": "Tabak çanak satılan dükkan",
-    "cevap": "Züccaciye",
+    "soru": "Atatürk'ün annesinin adı",
+    "cevap": "Zübeyde",
     "alternatifler": [
-      "ZUCCACIYE",
-      "ZÜCCACIYE"
+      "ZÜBEYDE",
+      "ZUBEYDE"
     ]
   },
   {
     "id": 769,
-    "soru": "Tabak çanak, bardak gibi eşyaya verilen toplu isim",
-    "cevap": "Züccaciye",
+    "soru": "__ Hanım, Atatürk'ün annesinin adı",
+    "cevap": "Zübeyde",
     "alternatifler": [
-      "ZUCCACIYE",
-      "ZÜCCACIYE"
+      "ZÜBEYDE",
+      "ZUBEYDE"
     ]
   },
   {
     "id": 770,
-    "soru": "Porselen veya cam malzemeden yapılmış eşya",
-    "cevap": "Züccaciye",
+    "soru": "__ Hanım, Atatürk'ün annesinin adı",
+    "cevap": "Zübeyde",
     "alternatifler": [
-      "ZUCCACIYE",
-      "ZÜCCACIYE"
+      "ZÜBEYDE",
+      "ZUBEYDE"
     ]
   },
   {
     "id": 771,
-    "soru": "Porselen veya cam malzemeden yapılmış eşya",
+    "soru": "Tabak çanak satılan dükkan",
     "cevap": "Züccaciye",
     "alternatifler": [
       "ZUCCACIYE",
@@ -6374,6 +6384,51 @@
   },
   {
     "id": 772,
+    "soru": "Porselen veya cam malzemeden yapılmış eşya",
+    "cevap": "Züccaciye",
+    "alternatifler": [
+      "ZUCCACIYE",
+      "ZÜCCACIYE"
+    ]
+  },
+  {
+    "id": 773,
+    "soru": "Tabak çanak satılan dükkan",
+    "cevap": "Züccaciye",
+    "alternatifler": [
+      "ZUCCACIYE",
+      "ZÜCCACIYE"
+    ]
+  },
+  {
+    "id": 774,
+    "soru": "Tabak çanak, bardak gibi eşyaya verilen toplu isim",
+    "cevap": "Züccaciye",
+    "alternatifler": [
+      "ZUCCACIYE",
+      "ZÜCCACIYE"
+    ]
+  },
+  {
+    "id": 775,
+    "soru": "Porselen veya cam malzemeden yapılmış eşya",
+    "cevap": "Züccaciye",
+    "alternatifler": [
+      "ZUCCACIYE",
+      "ZÜCCACIYE"
+    ]
+  },
+  {
+    "id": 776,
+    "soru": "Porselen veya cam malzemeden yapılmış eşya",
+    "cevap": "Züccaciye",
+    "alternatifler": [
+      "ZUCCACIYE",
+      "ZÜCCACIYE"
+    ]
+  },
+  {
+    "id": 777,
     "soru": "Zenginin malı, __ çenesini yorar",
     "cevap": "Züğürdün",
     "alternatifler": [
@@ -6382,7 +6437,7 @@
     ]
   },
   {
-    "id": 773,
+    "id": 778,
     "soru": "Şener Şen'in oynadığı 1985 yapımı film, __ Ağa",
     "cevap": "Züğürt",
     "alternatifler": [
@@ -6391,53 +6446,8 @@
     ]
   },
   {
-    "id": 774,
-    "soru": "Parasız, meteliksiz",
-    "cevap": "Züğürt",
-    "alternatifler": [
-      "ZÜĞÜRT",
-      "ZUGURT"
-    ]
-  },
-  {
-    "id": 775,
-    "soru": "Zenginin malını konuşurken çenesi yorulur",
-    "cevap": "Züğürt",
-    "alternatifler": [
-      "ZÜĞÜRT",
-      "ZUGURT"
-    ]
-  },
-  {
-    "id": 776,
-    "soru": "Zenginin malı bu kişinin çenesini yorar",
-    "cevap": "Züğürt",
-    "alternatifler": [
-      "ZÜĞÜRT",
-      "ZUGURT"
-    ]
-  },
-  {
-    "id": 777,
-    "soru": "Birinin parası hakkında konuşmaktan yorulan kişi",
-    "cevap": "Züğürt",
-    "alternatifler": [
-      "ZÜĞÜRT",
-      "ZUGURT"
-    ]
-  },
-  {
-    "id": 778,
-    "soru": "Parasız anlamına gelen bir mecaz",
-    "cevap": "Züğürt",
-    "alternatifler": [
-      "ZÜĞÜRT",
-      "ZUGURT"
-    ]
-  },
-  {
     "id": 779,
-    "soru": "Birinin parası hakkında konuşmaktan yorulan kişi",
+    "soru": "Parasız, meteliksiz",
     "cevap": "Züğürt",
     "alternatifler": [
       "ZÜĞÜRT",
@@ -6455,6 +6465,51 @@
   },
   {
     "id": 781,
+    "soru": "Zenginin malı bu kişinin çenesini yorar",
+    "cevap": "Züğürt",
+    "alternatifler": [
+      "ZÜĞÜRT",
+      "ZUGURT"
+    ]
+  },
+  {
+    "id": 782,
+    "soru": "Birinin parası hakkında konuşmaktan yorulan kişi",
+    "cevap": "Züğürt",
+    "alternatifler": [
+      "ZÜĞÜRT",
+      "ZUGURT"
+    ]
+  },
+  {
+    "id": 783,
+    "soru": "Parasız anlamına gelen bir mecaz",
+    "cevap": "Züğürt",
+    "alternatifler": [
+      "ZÜĞÜRT",
+      "ZUGURT"
+    ]
+  },
+  {
+    "id": 784,
+    "soru": "Birinin parası hakkında konuşmaktan yorulan kişi",
+    "cevap": "Züğürt",
+    "alternatifler": [
+      "ZÜĞÜRT",
+      "ZUGURT"
+    ]
+  },
+  {
+    "id": 785,
+    "soru": "Zenginin malını konuşurken çenesi yorulur",
+    "cevap": "Züğürt",
+    "alternatifler": [
+      "ZÜĞÜRT",
+      "ZUGURT"
+    ]
+  },
+  {
+    "id": 786,
     "soru": "1985 yapımı Şener Şen filmi",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6464,7 +6519,7 @@
     ]
   },
   {
-    "id": 782,
+    "id": 787,
     "soru": "Haraptar Köyü'nden göçü anlatan Şener Şen filmi",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6474,7 +6529,7 @@
     ]
   },
   {
-    "id": 783,
+    "id": 788,
     "soru": "Feodalizm konulu Şener Şen filmi",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6484,7 +6539,7 @@
     ]
   },
   {
-    "id": 784,
+    "id": 789,
     "soru": "Şener Şen'in bir köyün sahibi olduğu, 80'ler filmi",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6494,7 +6549,7 @@
     ]
   },
   {
-    "id": 785,
+    "id": 790,
     "soru": "Şener Şen'in sebze satmak zorunda kaldığı bir film",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6504,7 +6559,7 @@
     ]
   },
   {
-    "id": 786,
+    "id": 791,
     "soru": "Nesli Çölgeçen'in yönettiği bir Şener Şen filmi",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6514,7 +6569,7 @@
     ]
   },
   {
-    "id": 787,
+    "id": 792,
     "soru": "Şener Şen'in bir köyün sahibi olduğu, 80'ler filmi",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6524,7 +6579,7 @@
     ]
   },
   {
-    "id": 788,
+    "id": 793,
     "soru": "Şener Şen'in bir köyün sahibi olduğu, 80'ler filmi",
     "cevap": "Züğürt ağa",
     "alternatifler": [
@@ -6534,7 +6589,7 @@
     ]
   },
   {
-    "id": 789,
+    "id": 794,
     "soru": "Bir adı da soğan aşı olan İç Anadolu yemeği",
     "cevap": "Zülbiye",
     "alternatifler": [
@@ -6543,7 +6598,7 @@
     ]
   },
   {
-    "id": 790,
+    "id": 795,
     "soru": "Bir Zamanlar Çukurova'da Hilal Altınbilek'in rolü",
     "cevap": "Züleyha",
     "alternatifler": [
@@ -6552,7 +6607,7 @@
     ]
   },
   {
-    "id": 791,
+    "id": 796,
     "soru": "Zülfü Livaneli şarkılarını 10 farklı dilde söyledi",
     "cevap": "Züleyha",
     "alternatifler": [
@@ -6561,7 +6616,7 @@
     ]
   },
   {
-    "id": 792,
+    "id": 797,
     "soru": "Yar saçı, sevdiceğin alnına düşen perçem",
     "cevap": "Zülfüyar",
     "alternatifler": [
@@ -6570,7 +6625,7 @@
     ]
   },
   {
-    "id": 793,
+    "id": 798,
     "soru": "Eski dilde, aşık olunan kişinin saçı",
     "cevap": "Zülfüyar",
     "alternatifler": [
@@ -6579,7 +6634,7 @@
     ]
   },
   {
-    "id": 794,
+    "id": 799,
     "soru": "Eski dilde, aşık olunan kişinin saçı",
     "cevap": "Zülfüyar",
     "alternatifler": [
@@ -6588,7 +6643,7 @@
     ]
   },
   {
-    "id": 795,
+    "id": 800,
     "soru": "Parlak, yeşil ve değerli bir süs taşı",
     "cevap": "Zümrüt",
     "alternatifler": [
@@ -6597,53 +6652,8 @@
     ]
   },
   {
-    "id": 796,
-    "soru": "Yeşil renkli, değerli bir taş",
-    "cevap": "Zümrüt",
-    "alternatifler": [
-      "ZÜMRÜT",
-      "ZUMRUT"
-    ]
-  },
-  {
-    "id": 797,
-    "soru": "Yeşil renkli, değerli bir taş",
-    "cevap": "Zümrüt",
-    "alternatifler": [
-      "ZÜMRÜT",
-      "ZUMRUT"
-    ]
-  },
-  {
-    "id": 798,
-    "soru": "Şırnak'ın Beytüşşebap ilçesinde bulunan kaplıca",
-    "cevap": "Zümrüt",
-    "alternatifler": [
-      "ZÜMRÜT",
-      "ZUMRUT"
-    ]
-  },
-  {
-    "id": 799,
-    "soru": "Yeşil renkli, değerli bir taş",
-    "cevap": "Zümrüt",
-    "alternatifler": [
-      "ZÜMRÜT",
-      "ZUMRUT"
-    ]
-  },
-  {
-    "id": 800,
-    "soru": "Elmas benzeri, yeşil değerli taş",
-    "cevap": "Zümrüt",
-    "alternatifler": [
-      "ZÜMRÜT",
-      "ZUMRUT"
-    ]
-  },
-  {
     "id": 801,
-    "soru": "Aşkım Aşkım dizisinde Emel Sayın'ın karakteri",
+    "soru": "Yeşil renkli, değerli bir taş",
     "cevap": "Zümrüt",
     "alternatifler": [
       "ZÜMRÜT",
@@ -6661,7 +6671,7 @@
   },
   {
     "id": 803,
-    "soru": "Kafdağı'nın, bu yeşil taştan yapıldığına inanılır",
+    "soru": "Şırnak'ın Beytüşşebap ilçesinde bulunan kaplıca",
     "cevap": "Zümrüt",
     "alternatifler": [
       "ZÜMRÜT",
@@ -6670,7 +6680,7 @@
   },
   {
     "id": 804,
-    "soru": "Koyu yeşil renkteki değerli taş",
+    "soru": "Yeşil renkli, değerli bir taş",
     "cevap": "Zümrüt",
     "alternatifler": [
       "ZÜMRÜT",
@@ -6679,6 +6689,51 @@
   },
   {
     "id": 805,
+    "soru": "Elmas benzeri, yeşil değerli taş",
+    "cevap": "Zümrüt",
+    "alternatifler": [
+      "ZÜMRÜT",
+      "ZUMRUT"
+    ]
+  },
+  {
+    "id": 806,
+    "soru": "Aşkım Aşkım dizisinde Emel Sayın'ın karakteri",
+    "cevap": "Zümrüt",
+    "alternatifler": [
+      "ZÜMRÜT",
+      "ZUMRUT"
+    ]
+  },
+  {
+    "id": 807,
+    "soru": "Yeşil renkli, değerli bir taş",
+    "cevap": "Zümrüt",
+    "alternatifler": [
+      "ZÜMRÜT",
+      "ZUMRUT"
+    ]
+  },
+  {
+    "id": 808,
+    "soru": "Kafdağı'nın, bu yeşil taştan yapıldığına inanılır",
+    "cevap": "Zümrüt",
+    "alternatifler": [
+      "ZÜMRÜT",
+      "ZUMRUT"
+    ]
+  },
+  {
+    "id": 809,
+    "soru": "Koyu yeşil renkteki değerli taş",
+    "cevap": "Zümrüt",
+    "alternatifler": [
+      "ZÜMRÜT",
+      "ZUMRUT"
+    ]
+  },
+  {
+    "id": 810,
     "soru": "Bir seçkin gibi davranmaya çalışma durumu, snopluk",
     "cevap": "Züppelik",
     "alternatifler": [
@@ -6687,7 +6742,7 @@
     ]
   },
   {
-    "id": 806,
+    "id": 811,
     "soru": "Çok uzun boylu ve boyunlu Afrikalı hayvan",
     "cevap": "Zürafa",
     "alternatifler": [
@@ -6696,7 +6751,7 @@
     ]
   },
   {
-    "id": 807,
+    "id": 812,
     "soru": "Çok uzun boylu, Afrikalı hayvan",
     "cevap": "Zürafa",
     "alternatifler": [
@@ -6705,7 +6760,7 @@
     ]
   },
   {
-    "id": 808,
+    "id": 813,
     "soru": "Karada yaşayan en uzun hayvan",
     "cevap": "Zürafa",
     "alternatifler": [
@@ -6714,53 +6769,8 @@
     ]
   },
   {
-    "id": 809,
-    "soru": "Afrika'da yaşayan çok uzun boylu, benekli hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 810,
-    "soru": "Afrika'da yaşayan çok uzun boylu, benekli hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 811,
-    "soru": "Diliyle kulaklarını kaşıyabilen uzun hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 812,
-    "soru": "En uzun boylu kara memelisi",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 813,
-    "soru": "Gebelik süresi 450 gün süren uzun boyunlu hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
     "id": 814,
-    "soru": "Benekleri ve upuzun boynuyla bilinen tropik hayvan",
+    "soru": "Afrika'da yaşayan çok uzun boylu, benekli hayvan",
     "cevap": "Zürafa",
     "alternatifler": [
       "ZÜRAFA",
@@ -6769,105 +6779,6 @@
   },
   {
     "id": 815,
-    "soru": "En uzun boylu hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 816,
-    "soru": "Uzun boyunlu, sarı renkli, benekli hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 817,
-    "soru": "Uzun boyunlu, iri benekli otçul hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 818,
-    "soru": "Madagaskar animasyonunda Melman bu hayvan türüdür",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 819,
-    "soru": "Diliyle kulağını temizleyebilen Afrika hayvanı",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 820,
-    "soru": "Pepee'de, \"Zulu\" adıyla çağrılan iri hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 821,
-    "soru": "Boynu genellikle 2 metreden uzun olan hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 822,
-    "soru": "En uzun boylu hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 823,
-    "soru": "En uzun boylu kara hayvanı",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 824,
-    "soru": "Boynu genellikle 2 metreden uzun olan hayvan",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 825,
-    "soru": "Yüzemeyen bir Afrika memelisi",
-    "cevap": "Zürafa",
-    "alternatifler": [
-      "ZÜRAFA",
-      "ZURAFA"
-    ]
-  },
-  {
-    "id": 826,
     "soru": "Afrika'da yaşayan çok uzun boylu, benekli hayvan",
     "cevap": "Zürafa",
     "alternatifler": [
@@ -6876,8 +6787,107 @@
     ]
   },
   {
+    "id": 816,
+    "soru": "Diliyle kulaklarını kaşıyabilen uzun hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 817,
+    "soru": "En uzun boylu kara memelisi",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 818,
+    "soru": "Gebelik süresi 450 gün süren uzun boyunlu hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 819,
+    "soru": "Benekleri ve upuzun boynuyla bilinen tropik hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 820,
+    "soru": "En uzun boylu hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 821,
+    "soru": "Uzun boyunlu, sarı renkli, benekli hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 822,
+    "soru": "Uzun boyunlu, iri benekli otçul hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 823,
+    "soru": "Madagaskar animasyonunda Melman bu hayvan türüdür",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 824,
+    "soru": "Diliyle kulağını temizleyebilen Afrika hayvanı",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 825,
+    "soru": "Pepee'de, \"Zulu\" adıyla çağrılan iri hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 826,
+    "soru": "Boynu genellikle 2 metreden uzun olan hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
     "id": 827,
-    "soru": "En uzun boylu kara hayvanı",
+    "soru": "En uzun boylu hayvan",
     "cevap": "Zürafa",
     "alternatifler": [
       "ZÜRAFA",
@@ -6886,7 +6896,7 @@
   },
   {
     "id": 828,
-    "soru": "Adı bir notayla biten, uzun boyunlu hayvan",
+    "soru": "En uzun boylu kara hayvanı",
     "cevap": "Zürafa",
     "alternatifler": [
       "ZÜRAFA",
@@ -6913,6 +6923,51 @@
   },
   {
     "id": 831,
+    "soru": "Afrika'da yaşayan çok uzun boylu, benekli hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 832,
+    "soru": "En uzun boylu kara hayvanı",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 833,
+    "soru": "Adı bir notayla biten, uzun boyunlu hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 834,
+    "soru": "Boynu genellikle 2 metreden uzun olan hayvan",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 835,
+    "soru": "Yüzemeyen bir Afrika memelisi",
+    "cevap": "Zürafa",
+    "alternatifler": [
+      "ZÜRAFA",
+      "ZURAFA"
+    ]
+  },
+  {
+    "id": 836,
     "soru": "Mert Arık'ın çocuk kitabı, Benim __ Uçabilir",
     "cevap": "Zürafam",
     "alternatifler": [
@@ -6921,7 +6976,7 @@
     ]
   },
   {
-    "id": 832,
+    "id": 837,
     "soru": "Afyon'a özgü, dana etli ve arpacık soğanlı yemek",
     "cevap": "Zürbiye",
     "alternatifler": [
@@ -6930,7 +6985,7 @@
     ]
   },
   {
-    "id": 833,
+    "id": 838,
     "soru": "Kışın beyaz giymeye meraklı, nazik kimse",
     "cevap": "Zürefa",
     "alternatifler": [
@@ -6939,68 +6994,12 @@
     ]
   },
   {
-    "id": 834,
+    "id": 839,
     "soru": "Bir söze göre, bunların düşkünü kışın beyaz giyer",
     "cevap": "Zürefa",
     "alternatifler": [
       "ZUREFA",
       "ZÜREFA"
-    ]
-  },
-  {
-    "id": 835,
-    "soru": "Kurgusal karakter Zorro ile özdeşleşen dil işareti",
-    "cevap": "Z harfi",
-    "alternatifler": [
-      "Z HARFI",
-      "Zharfi"
-    ]
-  },
-  {
-    "id": 836,
-    "soru": "Zorro'nun kılıcıyla çizdiği işaret",
-    "cevap": "Z harfi",
-    "alternatifler": [
-      "Z HARFI",
-      "Zharfi"
-    ]
-  },
-  {
-    "id": 837,
-    "soru": "Teknoloji çağında doğup büyüyen jenerasyon",
-    "cevap": "Z kuşağı",
-    "alternatifler": [
-      "Z KUSAGI",
-      "Z KUŞAĞI",
-      "Zkuşağı"
-    ]
-  },
-  {
-    "id": 838,
-    "soru": "Kristal Nesil olarak da bilinen 21. yy çocukları",
-    "cevap": "Z kuşağı",
-    "alternatifler": [
-      "Z KUSAGI",
-      "Z KUŞAĞI",
-      "Zkuşağı"
-    ]
-  },
-  {
-    "id": 839,
-    "soru": "İşletmenin günü kapatırken kasadan aldığı döküm",
-    "cevap": "Z raporu",
-    "alternatifler": [
-      "Z RAPORU",
-      "Zraporu"
-    ]
-  },
-  {
-    "id": 840,
-    "soru": "İşletmenin günü kapatırken kasadan aldığı döküm",
-    "cevap": "Z raporu",
-    "alternatifler": [
-      "Z RAPORU",
-      "Zraporu"
     ]
   }
 ]
