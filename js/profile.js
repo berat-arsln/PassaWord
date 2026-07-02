@@ -34,8 +34,6 @@ async function firebaseProfilGuncelle(profil) {
       id: profil.id,
       ad: profil.ad,
       skorlar: profil.skorlar || [],
-      gecmis: profil.gecmis || [],
-      favoriler: profil.favoriler || [],
       olusturulma: profil.olusturulma,
       tarih: new Date().toISOString(),
     });
@@ -164,24 +162,6 @@ function aktifProfilSilmeDinleyicisiBaslat(profilId, yedekKod) {
   tumProfillereSilmeDinleyicisiBaslat();
 }
 
-// Geçmişe kaydet (localStorage + Firebase sync)
-function gecmiseKaydet(oyunVerisi) {
-  const profil = aktifProfiliGetir();
-  if (!profil) return;
-
-  const profiller = profilleriGetir();
-  const indeks = profiller.findIndex((p) => p.id === profil.id);
-  if (indeks === -1) return;
-
-  profiller[indeks].gecmis = profiller[indeks].gecmis || [];
-  profiller[indeks].gecmis.unshift(oyunVerisi);
-  profiller[indeks].gecmis = profiller[indeks].gecmis.slice(0, 20);
-  profilleriKaydet(profiller);
-
-  // Firebase'e sync et
-  firebaseProfilGuncelle(profiller[indeks]);
-}
-
 // Yedek kodu oluştur veya mevcut olanı Firebase'e yaz
 async function yedekKoduOlustur(profil) {
   if (profil.yedekKod) {
@@ -190,8 +170,6 @@ async function yedekKoduOlustur(profil) {
       id: profil.id,
       ad: profil.ad,
       skorlar: profil.skorlar || [],
-      gecmis: profil.gecmis || [],
-      favoriler: profil.favoriler || [],
       olusturulma: profil.olusturulma,
       tarih: new Date().toISOString(),
     });
@@ -209,8 +187,6 @@ async function yedekKoduOlustur(profil) {
     id: profil.id,
     ad: profil.ad,
     skorlar: profil.skorlar || [],
-    gecmis: profil.gecmis || [],
-    favoriler: profil.favoriler || [],
     olusturulma: profil.olusturulma,
     tarih: new Date().toISOString(),
   });
@@ -532,8 +508,6 @@ window.profilGeriYukle = async function () {
       id: veri.id,
       ad: veri.ad,
       skorlar: veri.skorlar || [],
-      gecmis: veri.gecmis || [],
-      favoriler: veri.favoriler || [],
       olusturulma: veri.olusturulma,
       yedekKod: kod,
     };
