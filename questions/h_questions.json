@@ -5646,8 +5646,7 @@
     "soru": "Hızı, saatte 100 km'yi geçebilen soluk boşalması",
     "cevap": "Hapşırık",
     "alternatifler": [
-      "HAPSIRIK",
-      "HAPŞIRIK"
+      "hapşırmak"
     ]
   },
   {
@@ -5655,7 +5654,8 @@
     "soru": "Ağız ve burundan gürültülü ve ani soluk boşaltmak",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5663,7 +5663,8 @@
     "soru": "Bunu yapana \"Çok yaşa\" denir",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5671,7 +5672,8 @@
     "soru": "\"Çok yaşa\" denecek hale gelmek",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5679,7 +5681,8 @@
     "soru": "Genelde burun kaşıntısıyla gelen vücut tepkisi",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5687,7 +5690,8 @@
     "soru": "Bunu yapana \"Çok yaşa\" denir",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5695,7 +5699,8 @@
     "soru": "Vücudun üşümeye verdiği gürültülü tepki",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hspşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5703,7 +5708,8 @@
     "soru": "Vücudun üşümeye verdiği gürültülü tepki",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5711,7 +5717,8 @@
     "soru": "Öksürük benzeri bu eylem anında kalp duruyor denir",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5719,7 +5726,8 @@
     "soru": "\"Çok yaşa\" denecek hale gelmek",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
@@ -5727,7 +5735,8 @@
     "soru": "Genelde burun kaşıntısıyla gelen vücut tepkisi",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "hapşırık"
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
     ]
   },
   {
