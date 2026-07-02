@@ -688,15 +688,21 @@ function onlineDurumBaslat() {
   });
 
   // Görünürlük değişince güncelle (arka plana alınınca)
-  document.addEventListener("visibilitychange", () => {
+  // Önceki listener'ı temizle (profil değişiminde birikmeyi önler)
+  if (window._pwVisibilityListener) {
+    document.removeEventListener("visibilitychange", window._pwVisibilityListener);
+  }
+  window._pwVisibilityListener = () => {
+    const guncelProfil = aktifProfiliGetir();
+    if (!guncelProfil || guncelProfil.yedekKod !== profil.yedekKod) return;
     const aktif = document.visibilityState === "visible";
     set(onlineRef, {
-      ad: profil.ad,
+      ad: guncelProfil.ad,
       online: aktif,
       sonGiris: Date.now()
     }).catch(() => {});
-  });
-}
+  };
+  document.addEventListener("visibilitychange", window._pwVisibilityListener);
 
 
 
