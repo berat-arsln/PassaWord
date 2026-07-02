@@ -624,41 +624,21 @@ function oyunuBitir(erkenBitirildi = false) {
     oyunDurumu.puan += komboBonus;
   }
 
-  gecmiseKaydet({
-    tarih: new Date().toISOString(),
-    puan: oyunDurumu.puan,
-    dogruSayisi: oyunDurumu.dogruSayisi,
-    yanlisSayisi: oyunDurumu.yanlisSayisi,
-    pasSayisi: oyunDurumu.pasSayisi,
-    detay: HARFLER.map((harf) => ({
-      harf,
-      durum: oyunDurumu.harfDurumlari[harf] || "pas",
-      soru: oyunDurumu.secilenSorular[harf]?.soru || "",
-      dogruCevap: oyunDurumu.secilenSorular[harf]?.cevap || "",
-      verilenCevap: oyunDurumu.harfCevaplari[harf]?.verilen || "—",
-    })),
-  });
-
   // Skor kaydetme işlemine istatistikleri de gönderiyoruz
+  // NOT: Soru/cevap detayları artık kaydedilmiyor (Firebase veri kotasını şişiriyordu).
+  // Detaylar sadece bu oturumdaki sonuç ekranında (oyunDurumu üzerinden) gösterilir.
   skorkaydet(
     oyunDurumu.puan,
     oyunDurumu.dogruSayisi,
     oyunDurumu.yanlisSayisi,
-    oyunDurumu.pasSayisi,
-    HARFLER.map((harf) => ({
-      harf,
-      durum: oyunDurumu.harfDurumlari[harf] || "pas",
-      soru: oyunDurumu.secilenSorular[harf]?.soru || "",
-      dogruCevap: oyunDurumu.secilenSorular[harf]?.cevap || "",
-      verilenCevap: oyunDurumu.harfCevaplari[harf]?.verilen || "—",
-    }))
+    oyunDurumu.pasSayisi
   );
   sonucEkraniniOlustur(sureBonus, komboBonus, bonusKodPuan, bonusKodAciklama);
   ekraniGoster("sonucEkrani");
   if (window.bekleyenGuncellemeyiKontrolEt) window.bekleyenGuncellemeyiKontrolEt();
 }
 
-function skorkaydet(puan, dogru, yanlis, pas, detay) {
+function skorkaydet(puan, dogru, yanlis, pas) {
   const profil = aktifProfiliGetir();
   if (!profil) return;
 
@@ -685,8 +665,6 @@ function skorkaydet(puan, dogru, yanlis, pas, detay) {
         id: guncellenenProfil.id,
         ad: guncellenenProfil.ad,
         skorlar: guncellenenProfil.skorlar || [],
-        gecmis: guncellenenProfil.gecmis || [],
-        favoriler: guncellenenProfil.favoriler || [],
         olusturulma: guncellenenProfil.olusturulma,
         tarih: new Date().toISOString(),
       }).catch(console.error);
@@ -786,13 +764,6 @@ const bonusCipi = document.getElementById("istatBonusKod");
     }
   }
 
-  /* Favori butonunu güncelle */
-  const profil = aktifProfiliGetir();
-  const gecmis = profil?.gecmis || [];
-  const sonOyun = gecmis[0];
-  const favoriMi =
-    sonOyun && (profil?.favoriler || []).some((f) => f.tarih === sonOyun.tarih);
-  sonucFavoriButonGuncelle(favoriMi);
 }
 
 // DOM Yüklendiğinde
@@ -978,36 +949,6 @@ window.hataBildir = async function (harf, btn) {
       kullanici_cevabi: kullaniciCevabi, // Kullanıcının girdiği yanlış cevap
       profilAdi: profilAdi, // Hangi kullanıcı bildirdi?
       alternatifler: soruVerisi.alternatifler || [],
-      tarih: new Date().toISOString(),
-    });
-    btn.textContent = "✓ Bildirildi";
-    btn.style.color = "#00e676";
-    btn.style.borderColor = "rgba(0,230,118,0.3)";
-  } catch (hata) {
-    console.error(hata);
-    btn.textContent = "⚠ Hata Bildir";
-    btn.disabled = false;
-  }
-};
-/* Geçmiş oyun detayından hata bildirimi */
-window.gecmisHataBildir = async function (d, btn) {
-  if (btn.disabled) return;
-  btn.textContent = "⏳...";
-  btn.disabled = true;
-
-  const profil = aktifProfiliGetir();
-  const profilAdi = profil ? profil.ad : "Anonim";
-
-  try {
-    const hataBildirimRef = ref(veritabani, "hatabildirimler");
-    await push(hataBildirimRef, {
-      harf: d.harf,
-      soruId: d.soruId || "Bilinmiyor",
-      soru: d.soru,
-      cevap: d.dogruCevap,
-      kullanici_cevabi: d.verilenCevap || "Belirtilmedi",
-      profilAdi: profilAdi,
-      kaynak: "gecmis",
       tarih: new Date().toISOString(),
     });
     btn.textContent = "✓ Bildirildi";
