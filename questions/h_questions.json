@@ -5669,6 +5669,15 @@
     ]
   },
   {
+    "id": 684,
+    "soru": "\"Çok yaşa\" denecek hale gelmek",
+    "cevap": "Hapşırmak",
+    "alternatifler": [
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
+    ]
+  },
+  {
     "id": 685,
     "soru": "Genelde burun kaşıntısıyla gelen vücut tepkisi",
     "cevap": "Hapşırmak",
@@ -5688,6 +5697,15 @@
   },
   {
     "id": 687,
+    "soru": "Vücudun üşümeye verdiği gürültülü tepki",
+    "cevap": "Hapşırmak",
+    "alternatifler": [
+      "HAPŞIRMAK",
+      "HAPSIRMAK"
+    ]
+  },
+  {
+    "id": 688,
     "soru": "Vücudun üşümeye verdiği gürültülü tepki",
     "cevap": "Hapşırmak",
     "alternatifler": [
@@ -5718,8 +5736,7 @@
     "soru": "Genelde burun kaşıntısıyla gelen vücut tepkisi",
     "cevap": "Hapşırmak",
     "alternatifler": [
-      "HAPŞIRMAK",
-      "HAPSIRMAK"
+      "hapşırık"
     ]
   },
   {
