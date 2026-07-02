@@ -22,7 +22,6 @@ window.modalAc = function (id) {
     profilleriFirebaseIleEslestir().then(() => profilListesiniGuncelle());
   }
   if (id === "geriBildirimModal") altTurGuncelle("oneri");
-  if (id === "gecmisModal") gecmisModalGuncelle();
   if (id === "adminModal") {
     document.getElementById("adminSifreEkrani").classList.remove("gizli");
     document.getElementById("adminIcerik").classList.add("gizli");
