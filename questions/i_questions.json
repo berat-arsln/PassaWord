@@ -12793,7 +12793,6 @@
       "ILTIHAP",
       "İltihap"
     ]
- 
   },
   {
     "id": 1378,
@@ -12831,7 +12830,6 @@
       "İltihap"
     ]
   },
-  
   {
     "id": 1383,
     "soru": "Canlı dokunun yabancı etkene verdiği viral yanıt",
@@ -36998,8 +36996,8 @@
     "soru": "Kulak aracılığıyla duyulabilen",
     "cevap": "Işitsel",
     "alternatifler": [
-      "IŞITSEL",
-      "İsitsel"
+      "işitme",
+      "işitmek"
     ]
   },
   {
@@ -51626,7 +51624,6 @@
       "İ̇mrenmek",
       "İMRENMEK"
     ]
-  
   },
   {
     "id": 5543,
@@ -51647,7 +51644,6 @@
       "İ̇mtihan",
       "İMTIHAN"
     ]
-
   },
   {
     "id": 5546,
@@ -51658,7 +51654,6 @@
       "İ̇mtihan",
       "İMTIHAN"
     ]
-  
   },
   {
     "id": 5548,
