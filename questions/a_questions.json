@@ -15547,12 +15547,20 @@
     "soru": "Adını temize çıkarma",
     "cevap": "Aklama",
     "alternatifler": [
-      "aklanma"
+      "AKLAMA"
     ]
   },
   {
     "id": 1813,
     "soru": "Bir kişiyi, olayı veya parayı temize çıkarma",
+    "cevap": "Aklama",
+    "alternatifler": [
+      "AKLAMA"
+    ]
+  },
+  {
+    "id": 1814,
+    "soru": "Adını temize çıkarma",
     "cevap": "Aklama",
     "alternatifler": [
       "AKLAMA"
@@ -15571,7 +15579,15 @@
     "soru": "İbra olma, suçlu bulunmama",
     "cevap": "Aklanma",
     "alternatifler": [
-      "aklama"
+      "AKLANMA"
+    ]
+  },
+  {
+    "id": 1817,
+    "soru": "Anlamak sözünün anagramı; davada suçsuz bulunma",
+    "cevap": "Aklanma",
+    "alternatifler": [
+      "AKLANMA"
     ]
   },
   {
@@ -46576,7 +46592,7 @@
     "soru": "Yelesi olan büyük kedi türünün eski Türkçedeki adı",
     "cevap": "Arslan",
     "alternatifler": [
-      "ARSLAN"
+      "aslan"
     ]
   },
   {
