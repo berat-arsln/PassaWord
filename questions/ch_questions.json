@@ -9095,9 +9095,10 @@
     "soru": "Evlenirken takım halinde getirilen ev eşyası",
     "cevap": "Çeyiz seti",
     "alternatifler": [
-      "CEYIZ SETI",
-      "ÇEYIZ SETI",
-      "Çeyizseti"
+      "çeyizseti",
+      "çeyizler",
+      "çeyiz",
+      "çeyizlik"
     ]
   },
   {
