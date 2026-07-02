@@ -46,19 +46,6 @@
         </div>
       `;
 
-            // Detay tıklaması
-            satir.style.cursor = 'pointer';
-            satir.addEventListener('click', (e) => {
-              if (e.target.tagName === 'BUTTON') return; // Silme butonuna tıklama detay açmasın
-              if (skor.detay && skor.detay.length > 0) {
-                gecmisDetayGoster(skor, 0);
-              } else {
-                toastGoster('Bu oyunun detayı yok.');
-              }
-            });
-
-            
-
             liste.appendChild(satir);
           });
         });
@@ -108,20 +95,7 @@
           <span style="color:var(--pas-renk);">~ ${p}</span>
         </div>
     `;
-    
-    satir.style.cursor = 'pointer';
-satir.addEventListener('click', () => {
-  const profil = aktifProfiliGetir();
-  const gecmis = profil?.gecmis || [];
-  // Skoru tarihe göre eşleştir
-  const eslesen = gecmis.find(g => g.puan === skor.puan && 
-    new Date(g.tarih).toLocaleDateString('tr-TR') === tarih);
-  if (eslesen) {
-    gecmisDetayGoster(eslesen, 0);
-  } else {
-    toastGoster('Bu oyunun detayı bulunamadı.');
-  }
-});
+
           liste.appendChild(satir);
         });
       }
