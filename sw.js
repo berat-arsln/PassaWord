@@ -4,7 +4,7 @@
    ======================================== */
 
 /* Önbellek adı ve versiyonu */
-const ONBELLEK_ADI = 'passaword-v2.5.53';
+const ONBELLEK_ADI = 'passaword-v2.6.0';
 
 const ONBELLEKLENECEK = [
   './',
@@ -19,7 +19,6 @@ const ONBELLEKLENECEK = [
   './js/ui.js',
   './js/profile.js',
   './js/game.js',
-  './js/history.js',
   './js/scores.js',
   './js/feedback.js',
   './js/admin.js',
