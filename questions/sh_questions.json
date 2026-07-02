@@ -46,11 +46,12 @@
   },
   {
     "id": 6,
-    "soru": "Cami avlusundaki kubbeli, açık havuz",
-    "cevap": "Şadırvan",
+    "soru": "Başsağlığı için söylenen bir söz öbeği, \"Ruhu __\"",
+    "cevap": "Şad olsun",
     "alternatifler": [
-      "SADIRVAN",
-      "ŞADIRVAN"
+      "SAD OLSUN",
+      "ŞAD OLSUN",
+      "Şadolsun"
     ]
   },
   {
@@ -65,12 +66,11 @@
   },
   {
     "id": 8,
-    "soru": "Başsağlığı için söylenen bir söz öbeği, \"Ruhu __\"",
-    "cevap": "Şad olsun",
+    "soru": "Cami avlusundaki kubbeli, açık havuz",
+    "cevap": "Şadırvan",
     "alternatifler": [
-      "SAD OLSUN",
-      "ŞAD OLSUN",
-      "Şadolsun"
+      "SADIRVAN",
+      "ŞADIRVAN"
     ]
   },
   {
@@ -151,738 +151,6 @@
   },
   {
     "id": 17,
-    "soru": "Uygur kardeşlerin sunduğu program, __ Pazar",
-    "cevap": "Şahane",
-    "alternatifler": [
-      "SAHANE",
-      "ŞAHANE"
-    ]
-  },
-  {
-    "id": 18,
-    "soru": "Kahve bahane diyenin sohbet için söylediği söz",
-    "cevap": "Şahane",
-    "alternatifler": [
-      "SAHANE",
-      "ŞAHANE"
-    ]
-  },
-  {
-    "id": 19,
-    "soru": "Aşhane anagramı; mükemmel",
-    "cevap": "Şahane",
-    "alternatifler": [
-      "SAHANE",
-      "ŞAHANE"
-    ]
-  },
-  {
-    "id": 20,
-    "soru": "Süheyl ve Behzat Uygur'un pazar programı, __ Pazar",
-    "cevap": "Şahane",
-    "alternatifler": [
-      "SAHANE",
-      "ŞAHANE"
-    ]
-  },
-  {
-    "id": 21,
-    "soru": "Uygur kardeşlerin yıllarca sunduğu şov, __ Pazar",
-    "cevap": "Şahane",
-    "alternatifler": [
-      "SAHANE",
-      "ŞAHANE"
-    ]
-  },
-  {
-    "id": 22,
-    "soru": "Süheyl ve Behzat Uygur'un pazar programı, __ Pazar",
-    "cevap": "Şahane",
-    "alternatifler": [
-      "SAHANE",
-      "ŞAHANE"
-    ]
-  },
-  {
-    "id": 23,
-    "soru": "Murat Bardakçı'nın Sultan Vahideddin kitabı",
-    "cevap": "Şahbaba",
-    "alternatifler": [
-      "ŞAHBABA",
-      "SAHBABA"
-    ]
-  },
-  {
-    "id": 24,
-    "soru": "Şahtı, __ oldu!",
-    "cevap": "Şahbaz",
-    "alternatifler": [
-      "SAHBAZ",
-      "ŞAHBAZ"
-    ]
-  },
-  {
-    "id": 25,
-    "soru": "Son derece iri olan, beyaz renkli bir doğan türü",
-    "cevap": "Şahbaz",
-    "alternatifler": [
-      "SAHBAZ",
-      "ŞAHBAZ"
-    ]
-  },
-  {
-    "id": 26,
-    "soru": "Doğuş Grubu'nun sahibi olan ailenin soyadı",
-    "cevap": "Şahenk",
-    "alternatifler": [
-      "SAHENK",
-      "ŞAHENK"
-    ]
-  },
-  {
-    "id": 27,
-    "soru": "Kendi türünde başyapıt olan sanat çalışması",
-    "cevap": "Şaheser",
-    "alternatifler": [
-      "ŞAHESER",
-      "SAHESER"
-    ]
-  },
-  {
-    "id": 28,
-    "soru": "Çok üstün değere sahip olan sanatsal çalışma",
-    "cevap": "Şaheser",
-    "alternatifler": [
-      "ŞAHESER",
-      "SAHESER"
-    ]
-  },
-  {
-    "id": 29,
-    "soru": "Her açıdan kusursuz olan sanatsal ürün, başyapıt",
-    "cevap": "Şaheser",
-    "alternatifler": [
-      "ŞAHESER",
-      "SAHESER"
-    ]
-  },
-  {
-    "id": 30,
-    "soru": "Neredeyse kusursuzca ortaya çıkarılan başyapıt",
-    "cevap": "Şaheser",
-    "alternatifler": [
-      "ŞAHESER",
-      "SAHESER"
-    ]
-  },
-  {
-    "id": 31,
-    "soru": "Neredeyse kusursuzca ortaya çıkarılan başyapıt",
-    "cevap": "Şaheser",
-    "alternatifler": [
-      "ŞAHESER",
-      "SAHESER"
-    ]
-  },
-  {
-    "id": 32,
-    "soru": "Harry Potter'da idama mahkum edilen hayvan",
-    "cevap": "Şahgaga",
-    "alternatifler": [
-      "SAHGAGA",
-      "ŞAHGAGA"
-    ]
-  },
-  {
-    "id": 33,
-    "soru": "Harry Potter'da idama mahkum edilen hayvan",
-    "cevap": "Şahgaga",
-    "alternatifler": [
-      "SAHGAGA",
-      "ŞAHGAGA"
-    ]
-  },
-  {
-    "id": 34,
-    "soru": "Dağ, ağaç gibi yerlerin en yüksek noktası",
-    "cevap": "Şahika",
-    "alternatifler": [
-      "SAHIKA",
-      "ŞAHIKA"
-    ]
-  },
-  {
-    "id": 35,
-    "soru": "Avrupa Yakası'nın lahmacun aşığı karakterinin ismi",
-    "cevap": "Şahika",
-    "alternatifler": [
-      "SAHIKA",
-      "ŞAHIKA"
-    ]
-  },
-  {
-    "id": 36,
-    "soru": "\"Paçoz!\" repliğiyle ünlü, Avrupa Yakası karakteri",
-    "cevap": "Şahika",
-    "alternatifler": [
-      "SAHIKA",
-      "ŞAHIKA"
-    ]
-  },
-  {
-    "id": 37,
-    "soru": "\"Paçoz!\" repliğiyle ünlü, Avrupa Yakası karakteri",
-    "cevap": "Şahika",
-    "alternatifler": [
-      "SAHIKA",
-      "ŞAHIKA"
-    ]
-  },
-  {
-    "id": 38,
-    "soru": "\"Paçoz!\" repliğiyle ünlü, Avrupa Yakası karakteri",
-    "cevap": "Şahika",
-    "alternatifler": [
-      "SAHIKA",
-      "ŞAHIKA"
-    ]
-  },
-  {
-    "id": 39,
-    "soru": "Avrupa Yakası'nın lahmacun aşığı karakterinin ismi",
-    "cevap": "Şahika",
-    "alternatifler": [
-      "SAHIKA",
-      "ŞAHIKA"
-    ]
-  },
-  {
-    "id": 40,
-    "soru": "Cem Yılmaz'ın Pek Yakında filminde çekilen film",
-    "cevap": "Şahikalar",
-    "alternatifler": [
-      "ŞAHIKALAR",
-      "SAHIKALAR"
-    ]
-  },
-  {
-    "id": 41,
-    "soru": "Atatürk'ün nüfusa kayıtlı olduğu Gaziantep ilçesi",
-    "cevap": "Şahinbey",
-    "alternatifler": [
-      "ŞAHINBEY",
-      "SAHINBEY"
-    ]
-  },
-  {
-    "id": 42,
-    "soru": "Gaziantep'in en kalabalık ilçesi",
-    "cevap": "Şahinbey",
-    "alternatifler": [
-      "ŞAHINBEY",
-      "SAHINBEY"
-    ]
-  },
-  {
-    "id": 43,
-    "soru": "Gaziantep'in en büyük ilçesi",
-    "cevap": "Şahinbey",
-    "alternatifler": [
-      "ŞAHINBEY",
-      "SAHINBEY"
-    ]
-  },
-  {
-    "id": 44,
-    "soru": "Kaptan Amerika'nın yardımcılarından, Hawkeye",
-    "cevap": "Şahingöz",
-    "alternatifler": [
-      "SAHINGOZ",
-      "ŞAHINGÖZ"
-    ]
-  },
-  {
-    "id": 45,
-    "soru": "Kaptan Amerika'nın yardımcılarından, Hawkeye",
-    "cevap": "Şahingöz",
-    "alternatifler": [
-      "SAHINGOZ",
-      "ŞAHINGÖZ"
-    ]
-  },
-  {
-    "id": 46,
-    "soru": "Samsun'un Vezirköprü ilçesinde yer alan kanyon",
-    "cevap": "Şahinkaya",
-    "alternatifler": [
-      "SAHINKAYA",
-      "ŞAHINKAYA"
-    ]
-  },
-  {
-    "id": 47,
-    "soru": "Doğana benzeyen, geniş kanatlı yırtıcı kuşlar",
-    "cevap": "Şahinler",
-    "alternatifler": [
-      "ŞAHINLER",
-      "SAHINLER"
-    ]
-  },
-  {
-    "id": 48,
-    "soru": "Zerda dizisinde Yavuz Bingöl'ün oynadığı karakter",
-    "cevap": "Şahin ağa",
-    "alternatifler": [
-      "SAHIN AGA",
-      "ŞAHIN AĞA",
-      "Şahinağa"
-    ]
-  },
-  {
-    "id": 49,
-    "soru": "Zerda dizisinde Yavuz Bingöl'ün oynadığı karakter",
-    "cevap": "Şahin ağa",
-    "alternatifler": [
-      "SAHIN AGA",
-      "ŞAHIN AĞA",
-      "Şahinağa"
-    ]
-  },
-  {
-    "id": 50,
-    "soru": "Teniste milimetrik hesap yapan çizgi teknolojisi",
-    "cevap": "Şahin gözü",
-    "alternatifler": [
-      "SAHIN GOZU",
-      "ŞAHIN GÖZÜ",
-      "Şahingözü"
-    ]
-  },
-  {
-    "id": 51,
-    "soru": "Memur, nikahı bunların huzurunda kıydığını söyler",
-    "cevap": "Şahitler",
-    "alternatifler": [
-      "ŞAHITLER",
-      "SAHITLER"
-    ]
-  },
-  {
-    "id": 52,
-    "soru": "Memur, nikahı bunların huzurunda kıydığını söyler",
-    "cevap": "Şahitler",
-    "alternatifler": [
-      "ŞAHITLER",
-      "SAHITLER"
-    ]
-  },
-  {
-    "id": 53,
-    "soru": "Atın gövde gösterisi olan hareketi",
-    "cevap": "Şahlanmak",
-    "alternatifler": [
-      "ŞAHLANMAK",
-      "SAHLANMAK"
-    ]
-  },
-  {
-    "id": 54,
-    "soru": "İnsan başlı yılan gövdeli masal kahramanı",
-    "cevap": "Şahmaran",
-    "alternatifler": [
-      "ŞAHMARAN",
-      "SAHMARAN"
-    ]
-  },
-  {
-    "id": 55,
-    "soru": "Türkan Şoray'ın dev bir yılanı oynadığı Türk filmi",
-    "cevap": "Şahmaran",
-    "alternatifler": [
-      "ŞAHMARAN",
-      "SAHMARAN"
-    ]
-  },
-  {
-    "id": 56,
-    "soru": "Türkan Şoray'ın rol aldığı Zülfü Livaneli filmi",
-    "cevap": "Şahmaran",
-    "alternatifler": [
-      "ŞAHMARAN",
-      "SAHMARAN"
-    ]
-  },
-  {
-    "id": 57,
-    "soru": "Serenay Sarıkaya'nın başrol olduğu Netflix dizisi",
-    "cevap": "Şahmaran",
-    "alternatifler": [
-      "ŞAHMARAN",
-      "SAHMARAN"
-    ]
-  },
-  {
-    "id": 58,
-    "soru": "Serenay Sarıkaya'nın başrol olduğu Netflix dizisi",
-    "cevap": "Şahmaran",
-    "alternatifler": [
-      "ŞAHMARAN",
-      "SAHMARAN"
-    ]
-  },
-  {
-    "id": 59,
-    "soru": "Pers mitolojisinde, insan başlı, iyi huylu yılan",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 60,
-    "soru": "Bilekle orta parmak arasına takılan takı",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 61,
-    "soru": "Parmağa geçen bir el takısı; Gaye Su Akyol şarkısı",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 62,
-    "soru": "Kafası insan, gövdesi yılan olan efsanevi yaratık",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 63,
-    "soru": "Türk ve İran mitolojisinde yarı insan yarı yılan",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 64,
-    "soru": "Adana'da bulunan Yılankale'nin diğer ismi",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 65,
-    "soru": "Gaye Su Akyol şarkısı; yaşlanmayan mitolojik canlı",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 66,
-    "soru": "Yılan gövdeli, insan başlı efsanevi yaratık",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 67,
-    "soru": "Yılan gövdeli, insan başlı efsanevi yaratık",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 68,
-    "soru": "Türk ve İran mitolojisinde yarı insan yarı yılan",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 69,
-    "soru": "Gaye Su Akyol şarkısı; yaşlanmayan mitolojik canlı",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 70,
-    "soru": "Kafası insan, gövdesi yılan olan efsanevi yaratık",
-    "cevap": "Şahmeran",
-    "alternatifler": [
-      "ŞAHMERAN",
-      "SAHMERAN"
-    ]
-  },
-  {
-    "id": 71,
-    "soru": "Toprağa kazık çakmakta kullanılan ağır tokmak",
-    "cevap": "Şahmerdan",
-    "alternatifler": [
-      "ŞAHMERDAN",
-      "SAHMERDAN"
-    ]
-  },
-  {
-    "id": 72,
-    "soru": "Kazık çakmakta kullanılan bir mekanizma",
-    "cevap": "Şahmerdan",
-    "alternatifler": [
-      "ŞAHMERDAN",
-      "SAHMERDAN"
-    ]
-  },
-  {
-    "id": 73,
-    "soru": "Toprağa kazık çakmakta kullanılan ağır tokmak",
-    "cevap": "Şahmerdan",
-    "alternatifler": [
-      "ŞAHMERDAN",
-      "SAHMERDAN"
-    ]
-  },
-  {
-    "id": 74,
-    "soru": "Firdevsi'nin ünlü manzum destanı",
-    "cevap": "Şahname",
-    "alternatifler": [
-      "SAHNAME",
-      "ŞAHNAME"
-    ]
-  },
-  {
-    "id": 75,
-    "soru": "Firdevsi'nin ünlü manzum destanı",
-    "cevap": "Şahname",
-    "alternatifler": [
-      "SAHNAME",
-      "ŞAHNAME"
-    ]
-  },
-  {
-    "id": 76,
-    "soru": "Firdevsi'nin ünlü manzum destanı",
-    "cevap": "Şahname",
-    "alternatifler": [
-      "SAHNAME",
-      "ŞAHNAME"
-    ]
-  },
-  {
-    "id": 77,
-    "soru": "Bir oda içindeki, üç tarafı da pencereli çıkıntı",
-    "cevap": "Şahniş",
-    "alternatifler": [
-      "ŞAHNIŞ",
-      "SAHNIS"
-    ]
-  },
-  {
-    "id": 78,
-    "soru": "Eski Türk evlerinde bulunan pencereli çıkıntı",
-    "cevap": "Şahniş",
-    "alternatifler": [
-      "ŞAHNIŞ",
-      "SAHNIS"
-    ]
-  },
-  {
-    "id": 79,
-    "soru": "Dulkadiroğulları döneminde yapılan Kayseri köprüsü",
-    "cevap": "Şahruh",
-    "alternatifler": [
-      "ŞAHRUH",
-      "SAHRUH"
-    ]
-  },
-  {
-    "id": 80,
-    "soru": "Bizzat, kişisel olarak",
-    "cevap": "Şahsen",
-    "alternatifler": [
-      "ŞAHSEN",
-      "SAHSEN"
-    ]
-  },
-  {
-    "id": 81,
-    "soru": "Seyyah albümüyle çıkış yapan Özbek şarkıcı",
-    "cevap": "Şahsenem",
-    "alternatifler": [
-      "SAHSENEM",
-      "ŞAHSENEM"
-    ]
-  },
-  {
-    "id": 82,
-    "soru": "Seyyah albümüyle çıkış yapan Özbek şarkıcı",
-    "cevap": "Şahsenem",
-    "alternatifler": [
-      "SAHSENEM",
-      "ŞAHSENEM"
-    ]
-  },
-  {
-    "id": 83,
-    "soru": "Onur Saylak'ın yönettiği internet dizisi",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 84,
-    "soru": "Kişilik",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 85,
-    "soru": "Haluk Bilginer bu dizide Agah Beyoğlu'nu oynadı",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 86,
-    "soru": "Onur Saylak'ın yönettiği 2019 yapımı PuhuTV dizisi",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 87,
-    "soru": "Cansu Dere'nin Nevra Elmas rolünü oynadığı dizi",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 88,
-    "soru": "Haluk Bilginer bu dizideki rolüyle Emmy ödülü aldı",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 89,
-    "soru": "Ayırt edici özellik, kişilik, karakter",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 90,
-    "soru": "Haluk Bilginer'e uluslararası ödül kazandıran dizi",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 91,
-    "soru": "Hakan Günday'ın yazdığı Haluk Bilginer dizisi",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 92,
-    "soru": "Cansu Dere'nin Nevra Elmas rolünü oynadığı dizi",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 93,
-    "soru": "Onur Saylak'ın yönettiği internet dizisi",
-    "cevap": "Şahsiyet",
-    "alternatifler": [
-      "ŞAHSIYET",
-      "SAHSIYET"
-    ]
-  },
-  {
-    "id": 94,
-    "soru": "Bir tür donanma gemisi",
-    "cevap": "Şahtur",
-    "alternatifler": [
-      "ŞAHTUR",
-      "SAHTUR"
-    ]
-  },
-  {
-    "id": 95,
-    "soru": "Binbir Gece Masallarındaki kardeşler, Şehriyar __",
-    "cevap": "Şahzaman",
-    "alternatifler": [
-      "SAHZAMAN",
-      "ŞAHZAMAN"
-    ]
-  },
-  {
-    "id": 96,
-    "soru": "Binbir Gece Masallarındaki kardeşler, Şehriyar __",
-    "cevap": "Şahzaman",
-    "alternatifler": [
-      "SAHZAMAN",
-      "ŞAHZAMAN"
-    ]
-  },
-  {
-    "id": 97,
-    "soru": "Binbir Gece Masallarındaki kardeşler, Şehriyar __",
-    "cevap": "Şahzaman",
-    "alternatifler": [
-      "SAHZAMAN",
-      "ŞAHZAMAN"
-    ]
-  },
-  {
-    "id": 98,
     "soru": "Tac Mahal'i yaptıran Hint hükümdarı",
     "cevap": "Şah cihan",
     "alternatifler": [
@@ -892,7 +160,7 @@
     ]
   },
   {
-    "id": 99,
+    "id": 18,
     "soru": "Satrançta en önemli taşı tehdit etmek",
     "cevap": "Şah çekmek",
     "alternatifler": [
@@ -902,7 +170,7 @@
     ]
   },
   {
-    "id": 100,
+    "id": 19,
     "soru": "Satrançta rakibe son hamle uyarısı yapmak",
     "cevap": "Şah çekmek",
     "alternatifler": [
@@ -912,7 +180,7 @@
     ]
   },
   {
-    "id": 101,
+    "id": 20,
     "soru": "Satrançta en önemli taşı tehdit etmek",
     "cevap": "Şah çekmek",
     "alternatifler": [
@@ -922,7 +190,7 @@
     ]
   },
   {
-    "id": 102,
+    "id": 21,
     "soru": "Kanı boyundan başa iletir",
     "cevap": "Şah damarı",
     "alternatifler": [
@@ -932,7 +200,7 @@
     ]
   },
   {
-    "id": 103,
+    "id": 22,
     "soru": "Beyne kan taşıyan ana iki kanaldan her biri",
     "cevap": "Şah damarı",
     "alternatifler": [
@@ -942,7 +210,7 @@
     ]
   },
   {
-    "id": 104,
+    "id": 23,
     "soru": "Boyunda yer alıp, kanı başa taşır",
     "cevap": "Şah damarı",
     "alternatifler": [
@@ -952,7 +220,7 @@
     ]
   },
   {
-    "id": 105,
+    "id": 24,
     "soru": "Kanı boyundan başa iletir",
     "cevap": "Şah damarı",
     "alternatifler": [
@@ -962,7 +230,7 @@
     ]
   },
   {
-    "id": 106,
+    "id": 25,
     "soru": "Yavuz Selim'e yenilen Safevi hükümdarı",
     "cevap": "Şah ismail",
     "alternatifler": [
@@ -972,7 +240,7 @@
     ]
   },
   {
-    "id": 107,
+    "id": 26,
     "soru": "Yavuz Selim'e yenilen Safevi hükümdarı",
     "cevap": "Şah ismail",
     "alternatifler": [
@@ -982,7 +250,7 @@
     ]
   },
   {
-    "id": 108,
+    "id": 27,
     "soru": "Çaldıran Muharebesi'nde bu lidere karşı savaşıldı",
     "cevap": "Şah ismail",
     "alternatifler": [
@@ -992,7 +260,7 @@
     ]
   },
   {
-    "id": 109,
+    "id": 28,
     "soru": "Satrançta bitirici hamle",
     "cevap": "Şah mat",
     "alternatifler": [
@@ -1002,7 +270,7 @@
     ]
   },
   {
-    "id": 110,
+    "id": 29,
     "soru": "Satrançta rakibin en önemli taşını alarak kazanmak",
     "cevap": "Şah mat",
     "alternatifler": [
@@ -1012,7 +280,7 @@
     ]
   },
   {
-    "id": 111,
+    "id": 30,
     "soru": "Satrançta oyunu bitirme sözü",
     "cevap": "Şah mat",
     "alternatifler": [
@@ -1022,7 +290,7 @@
     ]
   },
   {
-    "id": 112,
+    "id": 31,
     "soru": "Satrançta oyunu bitirme sözü",
     "cevap": "Şah mat",
     "alternatifler": [
@@ -1032,7 +300,7 @@
     ]
   },
   {
-    "id": 113,
+    "id": 32,
     "soru": "Satrançta rakibini yenme anlamındaki söz",
     "cevap": "Şah mat",
     "alternatifler": [
@@ -1042,7 +310,7 @@
     ]
   },
   {
-    "id": 114,
+    "id": 33,
     "soru": "Satrançta oyunu bitirme hamlesi",
     "cevap": "Şah mat",
     "alternatifler": [
@@ -1052,7 +320,7 @@
     ]
   },
   {
-    "id": 115,
+    "id": 34,
     "soru": "Rakibin elini kolunu bağlayan satranç hamlesi",
     "cevap": "Şah mat",
     "alternatifler": [
@@ -1062,7 +330,7 @@
     ]
   },
   {
-    "id": 116,
+    "id": 35,
     "soru": "Muhteşem Yüzyıl dizisinde Deniz Çakır'ın karakteri",
     "cevap": "Şah sultan",
     "alternatifler": [
@@ -1072,7 +340,7 @@
     ]
   },
   {
-    "id": 117,
+    "id": 36,
     "soru": "Satrançta, en kudretli iki taş",
     "cevap": "Şah vezir",
     "alternatifler": [
@@ -1082,13 +350,745 @@
     ]
   },
   {
-    "id": 118,
+    "id": 37,
     "soru": "Satrançta, en kudretli iki taş",
     "cevap": "Şah vezir",
     "alternatifler": [
       "SAH VEZIR",
       "ŞAH VEZIR",
       "Şahvezir"
+    ]
+  },
+  {
+    "id": 38,
+    "soru": "Uygur kardeşlerin sunduğu program, __ Pazar",
+    "cevap": "Şahane",
+    "alternatifler": [
+      "SAHANE",
+      "ŞAHANE"
+    ]
+  },
+  {
+    "id": 39,
+    "soru": "Kahve bahane diyenin sohbet için söylediği söz",
+    "cevap": "Şahane",
+    "alternatifler": [
+      "SAHANE",
+      "ŞAHANE"
+    ]
+  },
+  {
+    "id": 40,
+    "soru": "Aşhane anagramı; mükemmel",
+    "cevap": "Şahane",
+    "alternatifler": [
+      "SAHANE",
+      "ŞAHANE"
+    ]
+  },
+  {
+    "id": 41,
+    "soru": "Süheyl ve Behzat Uygur'un pazar programı, __ Pazar",
+    "cevap": "Şahane",
+    "alternatifler": [
+      "SAHANE",
+      "ŞAHANE"
+    ]
+  },
+  {
+    "id": 42,
+    "soru": "Uygur kardeşlerin yıllarca sunduğu şov, __ Pazar",
+    "cevap": "Şahane",
+    "alternatifler": [
+      "SAHANE",
+      "ŞAHANE"
+    ]
+  },
+  {
+    "id": 43,
+    "soru": "Süheyl ve Behzat Uygur'un pazar programı, __ Pazar",
+    "cevap": "Şahane",
+    "alternatifler": [
+      "SAHANE",
+      "ŞAHANE"
+    ]
+  },
+  {
+    "id": 44,
+    "soru": "Murat Bardakçı'nın Sultan Vahideddin kitabı",
+    "cevap": "Şahbaba",
+    "alternatifler": [
+      "ŞAHBABA",
+      "SAHBABA"
+    ]
+  },
+  {
+    "id": 45,
+    "soru": "Şahtı, __ oldu!",
+    "cevap": "Şahbaz",
+    "alternatifler": [
+      "SAHBAZ",
+      "ŞAHBAZ"
+    ]
+  },
+  {
+    "id": 46,
+    "soru": "Son derece iri olan, beyaz renkli bir doğan türü",
+    "cevap": "Şahbaz",
+    "alternatifler": [
+      "SAHBAZ",
+      "ŞAHBAZ"
+    ]
+  },
+  {
+    "id": 47,
+    "soru": "Doğuş Grubu'nun sahibi olan ailenin soyadı",
+    "cevap": "Şahenk",
+    "alternatifler": [
+      "SAHENK",
+      "ŞAHENK"
+    ]
+  },
+  {
+    "id": 48,
+    "soru": "Kendi türünde başyapıt olan sanat çalışması",
+    "cevap": "Şaheser",
+    "alternatifler": [
+      "ŞAHESER",
+      "SAHESER"
+    ]
+  },
+  {
+    "id": 49,
+    "soru": "Çok üstün değere sahip olan sanatsal çalışma",
+    "cevap": "Şaheser",
+    "alternatifler": [
+      "ŞAHESER",
+      "SAHESER"
+    ]
+  },
+  {
+    "id": 50,
+    "soru": "Her açıdan kusursuz olan sanatsal ürün, başyapıt",
+    "cevap": "Şaheser",
+    "alternatifler": [
+      "ŞAHESER",
+      "SAHESER"
+    ]
+  },
+  {
+    "id": 51,
+    "soru": "Neredeyse kusursuzca ortaya çıkarılan başyapıt",
+    "cevap": "Şaheser",
+    "alternatifler": [
+      "ŞAHESER",
+      "SAHESER"
+    ]
+  },
+  {
+    "id": 52,
+    "soru": "Neredeyse kusursuzca ortaya çıkarılan başyapıt",
+    "cevap": "Şaheser",
+    "alternatifler": [
+      "ŞAHESER",
+      "SAHESER"
+    ]
+  },
+  {
+    "id": 53,
+    "soru": "Harry Potter'da idama mahkum edilen hayvan",
+    "cevap": "Şahgaga",
+    "alternatifler": [
+      "SAHGAGA",
+      "ŞAHGAGA"
+    ]
+  },
+  {
+    "id": 54,
+    "soru": "Harry Potter'da idama mahkum edilen hayvan",
+    "cevap": "Şahgaga",
+    "alternatifler": [
+      "SAHGAGA",
+      "ŞAHGAGA"
+    ]
+  },
+  {
+    "id": 55,
+    "soru": "Dağ, ağaç gibi yerlerin en yüksek noktası",
+    "cevap": "Şahika",
+    "alternatifler": [
+      "SAHIKA",
+      "ŞAHIKA"
+    ]
+  },
+  {
+    "id": 56,
+    "soru": "Avrupa Yakası'nın lahmacun aşığı karakterinin ismi",
+    "cevap": "Şahika",
+    "alternatifler": [
+      "SAHIKA",
+      "ŞAHIKA"
+    ]
+  },
+  {
+    "id": 57,
+    "soru": "\"Paçoz!\" repliğiyle ünlü, Avrupa Yakası karakteri",
+    "cevap": "Şahika",
+    "alternatifler": [
+      "SAHIKA",
+      "ŞAHIKA"
+    ]
+  },
+  {
+    "id": 58,
+    "soru": "\"Paçoz!\" repliğiyle ünlü, Avrupa Yakası karakteri",
+    "cevap": "Şahika",
+    "alternatifler": [
+      "SAHIKA",
+      "ŞAHIKA"
+    ]
+  },
+  {
+    "id": 59,
+    "soru": "\"Paçoz!\" repliğiyle ünlü, Avrupa Yakası karakteri",
+    "cevap": "Şahika",
+    "alternatifler": [
+      "SAHIKA",
+      "ŞAHIKA"
+    ]
+  },
+  {
+    "id": 60,
+    "soru": "Avrupa Yakası'nın lahmacun aşığı karakterinin ismi",
+    "cevap": "Şahika",
+    "alternatifler": [
+      "SAHIKA",
+      "ŞAHIKA"
+    ]
+  },
+  {
+    "id": 61,
+    "soru": "Cem Yılmaz'ın Pek Yakında filminde çekilen film",
+    "cevap": "Şahikalar",
+    "alternatifler": [
+      "ŞAHIKALAR",
+      "SAHIKALAR"
+    ]
+  },
+  {
+    "id": 62,
+    "soru": "Zerda dizisinde Yavuz Bingöl'ün oynadığı karakter",
+    "cevap": "Şahin ağa",
+    "alternatifler": [
+      "SAHIN AGA",
+      "ŞAHIN AĞA",
+      "Şahinağa"
+    ]
+  },
+  {
+    "id": 63,
+    "soru": "Zerda dizisinde Yavuz Bingöl'ün oynadığı karakter",
+    "cevap": "Şahin ağa",
+    "alternatifler": [
+      "SAHIN AGA",
+      "ŞAHIN AĞA",
+      "Şahinağa"
+    ]
+  },
+  {
+    "id": 64,
+    "soru": "Teniste milimetrik hesap yapan çizgi teknolojisi",
+    "cevap": "Şahin gözü",
+    "alternatifler": [
+      "SAHIN GOZU",
+      "ŞAHIN GÖZÜ",
+      "Şahingözü"
+    ]
+  },
+  {
+    "id": 65,
+    "soru": "Atatürk'ün nüfusa kayıtlı olduğu Gaziantep ilçesi",
+    "cevap": "Şahinbey",
+    "alternatifler": [
+      "ŞAHINBEY",
+      "SAHINBEY"
+    ]
+  },
+  {
+    "id": 66,
+    "soru": "Gaziantep'in en kalabalık ilçesi",
+    "cevap": "Şahinbey",
+    "alternatifler": [
+      "ŞAHINBEY",
+      "SAHINBEY"
+    ]
+  },
+  {
+    "id": 67,
+    "soru": "Gaziantep'in en büyük ilçesi",
+    "cevap": "Şahinbey",
+    "alternatifler": [
+      "ŞAHINBEY",
+      "SAHINBEY"
+    ]
+  },
+  {
+    "id": 68,
+    "soru": "Kaptan Amerika'nın yardımcılarından, Hawkeye",
+    "cevap": "Şahingöz",
+    "alternatifler": [
+      "SAHINGOZ",
+      "ŞAHINGÖZ"
+    ]
+  },
+  {
+    "id": 69,
+    "soru": "Kaptan Amerika'nın yardımcılarından, Hawkeye",
+    "cevap": "Şahingöz",
+    "alternatifler": [
+      "SAHINGOZ",
+      "ŞAHINGÖZ"
+    ]
+  },
+  {
+    "id": 70,
+    "soru": "Samsun'un Vezirköprü ilçesinde yer alan kanyon",
+    "cevap": "Şahinkaya",
+    "alternatifler": [
+      "SAHINKAYA",
+      "ŞAHINKAYA"
+    ]
+  },
+  {
+    "id": 71,
+    "soru": "Doğana benzeyen, geniş kanatlı yırtıcı kuşlar",
+    "cevap": "Şahinler",
+    "alternatifler": [
+      "ŞAHINLER",
+      "SAHINLER"
+    ]
+  },
+  {
+    "id": 72,
+    "soru": "Memur, nikahı bunların huzurunda kıydığını söyler",
+    "cevap": "Şahitler",
+    "alternatifler": [
+      "ŞAHITLER",
+      "SAHITLER"
+    ]
+  },
+  {
+    "id": 73,
+    "soru": "Memur, nikahı bunların huzurunda kıydığını söyler",
+    "cevap": "Şahitler",
+    "alternatifler": [
+      "ŞAHITLER",
+      "SAHITLER"
+    ]
+  },
+  {
+    "id": 74,
+    "soru": "Atın gövde gösterisi olan hareketi",
+    "cevap": "Şahlanmak",
+    "alternatifler": [
+      "ŞAHLANMAK",
+      "SAHLANMAK"
+    ]
+  },
+  {
+    "id": 75,
+    "soru": "İnsan başlı yılan gövdeli masal kahramanı",
+    "cevap": "Şahmaran",
+    "alternatifler": [
+      "ŞAHMARAN",
+      "SAHMARAN"
+    ]
+  },
+  {
+    "id": 76,
+    "soru": "Türkan Şoray'ın dev bir yılanı oynadığı Türk filmi",
+    "cevap": "Şahmaran",
+    "alternatifler": [
+      "ŞAHMARAN",
+      "SAHMARAN"
+    ]
+  },
+  {
+    "id": 77,
+    "soru": "Türkan Şoray'ın rol aldığı Zülfü Livaneli filmi",
+    "cevap": "Şahmaran",
+    "alternatifler": [
+      "ŞAHMARAN",
+      "SAHMARAN"
+    ]
+  },
+  {
+    "id": 78,
+    "soru": "Serenay Sarıkaya'nın başrol olduğu Netflix dizisi",
+    "cevap": "Şahmaran",
+    "alternatifler": [
+      "ŞAHMARAN",
+      "SAHMARAN"
+    ]
+  },
+  {
+    "id": 79,
+    "soru": "Serenay Sarıkaya'nın başrol olduğu Netflix dizisi",
+    "cevap": "Şahmaran",
+    "alternatifler": [
+      "ŞAHMARAN",
+      "SAHMARAN"
+    ]
+  },
+  {
+    "id": 80,
+    "soru": "Pers mitolojisinde, insan başlı, iyi huylu yılan",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 81,
+    "soru": "Bilekle orta parmak arasına takılan takı",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 82,
+    "soru": "Parmağa geçen bir el takısı; Gaye Su Akyol şarkısı",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 83,
+    "soru": "Kafası insan, gövdesi yılan olan efsanevi yaratık",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 84,
+    "soru": "Türk ve İran mitolojisinde yarı insan yarı yılan",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 85,
+    "soru": "Adana'da bulunan Yılankale'nin diğer ismi",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 86,
+    "soru": "Gaye Su Akyol şarkısı; yaşlanmayan mitolojik canlı",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 87,
+    "soru": "Yılan gövdeli, insan başlı efsanevi yaratık",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 88,
+    "soru": "Yılan gövdeli, insan başlı efsanevi yaratık",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 89,
+    "soru": "Türk ve İran mitolojisinde yarı insan yarı yılan",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 90,
+    "soru": "Gaye Su Akyol şarkısı; yaşlanmayan mitolojik canlı",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 91,
+    "soru": "Kafası insan, gövdesi yılan olan efsanevi yaratık",
+    "cevap": "Şahmeran",
+    "alternatifler": [
+      "ŞAHMERAN",
+      "SAHMERAN"
+    ]
+  },
+  {
+    "id": 92,
+    "soru": "Toprağa kazık çakmakta kullanılan ağır tokmak",
+    "cevap": "Şahmerdan",
+    "alternatifler": [
+      "ŞAHMERDAN",
+      "SAHMERDAN"
+    ]
+  },
+  {
+    "id": 93,
+    "soru": "Kazık çakmakta kullanılan bir mekanizma",
+    "cevap": "Şahmerdan",
+    "alternatifler": [
+      "ŞAHMERDAN",
+      "SAHMERDAN"
+    ]
+  },
+  {
+    "id": 94,
+    "soru": "Toprağa kazık çakmakta kullanılan ağır tokmak",
+    "cevap": "Şahmerdan",
+    "alternatifler": [
+      "ŞAHMERDAN",
+      "SAHMERDAN"
+    ]
+  },
+  {
+    "id": 95,
+    "soru": "Firdevsi'nin ünlü manzum destanı",
+    "cevap": "Şahname",
+    "alternatifler": [
+      "SAHNAME",
+      "ŞAHNAME"
+    ]
+  },
+  {
+    "id": 96,
+    "soru": "Firdevsi'nin ünlü manzum destanı",
+    "cevap": "Şahname",
+    "alternatifler": [
+      "SAHNAME",
+      "ŞAHNAME"
+    ]
+  },
+  {
+    "id": 97,
+    "soru": "Firdevsi'nin ünlü manzum destanı",
+    "cevap": "Şahname",
+    "alternatifler": [
+      "SAHNAME",
+      "ŞAHNAME"
+    ]
+  },
+  {
+    "id": 98,
+    "soru": "Bir oda içindeki, üç tarafı da pencereli çıkıntı",
+    "cevap": "Şahniş",
+    "alternatifler": [
+      "ŞAHNIŞ",
+      "SAHNIS"
+    ]
+  },
+  {
+    "id": 99,
+    "soru": "Eski Türk evlerinde bulunan pencereli çıkıntı",
+    "cevap": "Şahniş",
+    "alternatifler": [
+      "ŞAHNIŞ",
+      "SAHNIS"
+    ]
+  },
+  {
+    "id": 100,
+    "soru": "Dulkadiroğulları döneminde yapılan Kayseri köprüsü",
+    "cevap": "Şahruh",
+    "alternatifler": [
+      "ŞAHRUH",
+      "SAHRUH"
+    ]
+  },
+  {
+    "id": 101,
+    "soru": "Bizzat, kişisel olarak",
+    "cevap": "Şahsen",
+    "alternatifler": [
+      "ŞAHSEN",
+      "SAHSEN"
+    ]
+  },
+  {
+    "id": 102,
+    "soru": "Seyyah albümüyle çıkış yapan Özbek şarkıcı",
+    "cevap": "Şahsenem",
+    "alternatifler": [
+      "SAHSENEM",
+      "ŞAHSENEM"
+    ]
+  },
+  {
+    "id": 103,
+    "soru": "Seyyah albümüyle çıkış yapan Özbek şarkıcı",
+    "cevap": "Şahsenem",
+    "alternatifler": [
+      "SAHSENEM",
+      "ŞAHSENEM"
+    ]
+  },
+  {
+    "id": 104,
+    "soru": "Onur Saylak'ın yönettiği internet dizisi",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 105,
+    "soru": "Kişilik",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 106,
+    "soru": "Haluk Bilginer bu dizide Agah Beyoğlu'nu oynadı",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 107,
+    "soru": "Onur Saylak'ın yönettiği 2019 yapımı PuhuTV dizisi",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 108,
+    "soru": "Cansu Dere'nin Nevra Elmas rolünü oynadığı dizi",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 109,
+    "soru": "Haluk Bilginer bu dizideki rolüyle Emmy ödülü aldı",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 110,
+    "soru": "Ayırt edici özellik, kişilik, karakter",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 111,
+    "soru": "Haluk Bilginer'e uluslararası ödül kazandıran dizi",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 112,
+    "soru": "Hakan Günday'ın yazdığı Haluk Bilginer dizisi",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 113,
+    "soru": "Cansu Dere'nin Nevra Elmas rolünü oynadığı dizi",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 114,
+    "soru": "Onur Saylak'ın yönettiği internet dizisi",
+    "cevap": "Şahsiyet",
+    "alternatifler": [
+      "ŞAHSIYET",
+      "SAHSIYET"
+    ]
+  },
+  {
+    "id": 115,
+    "soru": "Bir tür donanma gemisi",
+    "cevap": "Şahtur",
+    "alternatifler": [
+      "ŞAHTUR",
+      "SAHTUR"
+    ]
+  },
+  {
+    "id": 116,
+    "soru": "Binbir Gece Masallarındaki kardeşler, Şehriyar __",
+    "cevap": "Şahzaman",
+    "alternatifler": [
+      "SAHZAMAN",
+      "ŞAHZAMAN"
+    ]
+  },
+  {
+    "id": 117,
+    "soru": "Binbir Gece Masallarındaki kardeşler, Şehriyar __",
+    "cevap": "Şahzaman",
+    "alternatifler": [
+      "SAHZAMAN",
+      "ŞAHZAMAN"
+    ]
+  },
+  {
+    "id": 118,
+    "soru": "Binbir Gece Masallarındaki kardeşler, Şehriyar __",
+    "cevap": "Şahzaman",
+    "alternatifler": [
+      "SAHZAMAN",
+      "ŞAHZAMAN"
     ]
   },
   {
@@ -1138,69 +1138,6 @@
   },
   {
     "id": 124,
-    "soru": "Şiir gibi olan",
-    "cevap": "Şairane",
-    "alternatifler": [
-      "ŞAIRANE",
-      "SAIRANE"
-    ]
-  },
-  {
-    "id": 125,
-    "soru": "Şiir yazan bir kişiye yakışacak biçimde",
-    "cevap": "Şairane",
-    "alternatifler": [
-      "ŞAIRANE",
-      "SAIRANE"
-    ]
-  },
-  {
-    "id": 126,
-    "soru": "Bir ozan tarafından yazılmış gibi, ozanca",
-    "cevap": "Şairane",
-    "alternatifler": [
-      "ŞAIRANE",
-      "SAIRANE"
-    ]
-  },
-  {
-    "id": 127,
-    "soru": "Şiir yazan bir kişiye yakışacak biçimde",
-    "cevap": "Şairane",
-    "alternatifler": [
-      "ŞAIRANE",
-      "SAIRANE"
-    ]
-  },
-  {
-    "id": 128,
-    "soru": "Şiir alanında eser verenler, ozanlar",
-    "cevap": "Şairler",
-    "alternatifler": [
-      "ŞAIRLER",
-      "SAIRLER"
-    ]
-  },
-  {
-    "id": 129,
-    "soru": "Mısralarla düşünen kişilerin mesleği, ozanlık",
-    "cevap": "Şairlik",
-    "alternatifler": [
-      "SAIRLIK",
-      "ŞAIRLIK"
-    ]
-  },
-  {
-    "id": 130,
-    "soru": "Mısralarla düşünen kişilerin mesleği, ozanlık",
-    "cevap": "Şairlik",
-    "alternatifler": [
-      "SAIRLIK",
-      "ŞAIRLIK"
-    ]
-  },
-  {
-    "id": 131,
     "soru": "Barış Yıldız'ın Tutunamayanlar dizisindeki rolü",
     "cevap": "Şair lütfü",
     "alternatifler": [
@@ -1210,81 +1147,100 @@
     ]
   },
   {
-    "id": 132,
+    "id": 125,
     "soru": "Muhteşem Yüzyıl'da, Serkan Keskin canlandırmıştı",
     "cevap": "Şair nefi",
     "alternatifler": [
       "ŞAIR NEFI",
       "SAIR NEFI",
       "Şairnefi"
+    ]
+  },
+  {
+    "id": 126,
+    "soru": "Muhteşem Yüzyıl'da, Serkan Keskin canlandırmıştı",
+    "cevap": "Şair nefi",
+    "alternatifler": [
+      "ŞAIR NEFI",
+      "SAIR NEFI",
+      "Şairnefi"
+    ]
+  },
+  {
+    "id": 127,
+    "soru": "Şiir gibi olan",
+    "cevap": "Şairane",
+    "alternatifler": [
+      "ŞAIRANE",
+      "SAIRANE"
+    ]
+  },
+  {
+    "id": 128,
+    "soru": "Şiir yazan bir kişiye yakışacak biçimde",
+    "cevap": "Şairane",
+    "alternatifler": [
+      "ŞAIRANE",
+      "SAIRANE"
+    ]
+  },
+  {
+    "id": 129,
+    "soru": "Bir ozan tarafından yazılmış gibi, ozanca",
+    "cevap": "Şairane",
+    "alternatifler": [
+      "ŞAIRANE",
+      "SAIRANE"
+    ]
+  },
+  {
+    "id": 130,
+    "soru": "Şiir yazan bir kişiye yakışacak biçimde",
+    "cevap": "Şairane",
+    "alternatifler": [
+      "ŞAIRANE",
+      "SAIRANE"
+    ]
+  },
+  {
+    "id": 131,
+    "soru": "Şiir alanında eser verenler, ozanlar",
+    "cevap": "Şairler",
+    "alternatifler": [
+      "ŞAIRLER",
+      "SAIRLER"
+    ]
+  },
+  {
+    "id": 132,
+    "soru": "Mısralarla düşünen kişilerin mesleği, ozanlık",
+    "cevap": "Şairlik",
+    "alternatifler": [
+      "SAIRLIK",
+      "ŞAIRLIK"
     ]
   },
   {
     "id": 133,
-    "soru": "Muhteşem Yüzyıl'da, Serkan Keskin canlandırmıştı",
-    "cevap": "Şair nefi",
+    "soru": "Mısralarla düşünen kişilerin mesleği, ozanlık",
+    "cevap": "Şairlik",
     "alternatifler": [
-      "ŞAIR NEFI",
-      "SAIR NEFI",
-      "Şairnefi"
+      "SAIRLIK",
+      "ŞAIRLIK"
     ]
   },
   {
     "id": 134,
-    "soru": "Nüktedan",
-    "cevap": "Şakacı",
+    "soru": "Bir anda, ansızın anlamlarındaki söz öbeği",
+    "cevap": "Şak diye",
     "alternatifler": [
-      "ŞAKACI",
-      "SAKACI"
+      "SAK DIYE",
+      "ŞAK DIYE",
+      "Şakdiye"
     ]
   },
   {
     "id": 135,
-    "soru": "Çetin Çiftçioğlu'nun lakabı",
-    "cevap": "Şakacı",
-    "alternatifler": [
-      "ŞAKACI",
-      "SAKACI"
-    ]
-  },
-  {
-    "id": 136,
-    "soru": "Nüktedan",
-    "cevap": "Şakacı",
-    "alternatifler": [
-      "ŞAKACI",
-      "SAKACI"
-    ]
-  },
-  {
-    "id": 137,
-    "soru": "Latife niyetine, mahsus",
-    "cevap": "Şakadan",
-    "alternatifler": [
-      "SAKADAN",
-      "ŞAKADAN"
-    ]
-  },
-  {
-    "id": 138,
-    "soru": "Latife olsun diye, mahsus",
-    "cevap": "Şakadan",
-    "alternatifler": [
-      "SAKADAN",
-      "ŞAKADAN"
-    ]
-  },
-  {
-    "id": 139,
-    "soru": "Expo 2016 Antalya Fuarı'nın sembolü seçilen çiçek",
-    "cevap": "Şakayık",
-    "alternatifler": [
-      "ŞAKAYIK",
-      "SAKAYIK"
-    ]
-  },
-  {
-    "id": 140,
     "soru": "1 Nisan'a verilen ad",
     "cevap": "Şaka günü",
     "alternatifler": [
@@ -1294,47 +1250,92 @@
     ]
   },
   {
-    "id": 141,
+    "id": 136,
     "soru": "Ciddi bir konuyu esprili dille söylemeye denir",
     "cevap": "Şaka yollu",
     "alternatifler": [
       "ŞAKA YOLLU",
       "SAKA YOLLU",
       "Şakayollu"
+    ]
+  },
+  {
+    "id": 137,
+    "soru": "Ciddi bir konuyu esprili dille söylemeye denir",
+    "cevap": "Şaka yollu",
+    "alternatifler": [
+      "ŞAKA YOLLU",
+      "SAKA YOLLU",
+      "Şakayollu"
+    ]
+  },
+  {
+    "id": 138,
+    "soru": "Ciddi bir konuyu esprili dille söylemeye denir",
+    "cevap": "Şaka yollu",
+    "alternatifler": [
+      "ŞAKA YOLLU",
+      "SAKA YOLLU",
+      "Şakayollu"
+    ]
+  },
+  {
+    "id": 139,
+    "soru": "Nüktedan",
+    "cevap": "Şakacı",
+    "alternatifler": [
+      "ŞAKACI",
+      "SAKACI"
+    ]
+  },
+  {
+    "id": 140,
+    "soru": "Çetin Çiftçioğlu'nun lakabı",
+    "cevap": "Şakacı",
+    "alternatifler": [
+      "ŞAKACI",
+      "SAKACI"
+    ]
+  },
+  {
+    "id": 141,
+    "soru": "Nüktedan",
+    "cevap": "Şakacı",
+    "alternatifler": [
+      "ŞAKACI",
+      "SAKACI"
     ]
   },
   {
     "id": 142,
-    "soru": "Ciddi bir konuyu esprili dille söylemeye denir",
-    "cevap": "Şaka yollu",
+    "soru": "Latife niyetine, mahsus",
+    "cevap": "Şakadan",
     "alternatifler": [
-      "ŞAKA YOLLU",
-      "SAKA YOLLU",
-      "Şakayollu"
+      "SAKADAN",
+      "ŞAKADAN"
     ]
   },
   {
     "id": 143,
-    "soru": "Ciddi bir konuyu esprili dille söylemeye denir",
-    "cevap": "Şaka yollu",
+    "soru": "Latife olsun diye, mahsus",
+    "cevap": "Şakadan",
     "alternatifler": [
-      "ŞAKA YOLLU",
-      "SAKA YOLLU",
-      "Şakayollu"
+      "SAKADAN",
+      "ŞAKADAN"
     ]
   },
   {
     "id": 144,
-    "soru": "Bülbülün kulağa hoş gelen sesiyle ötmesi",
-    "cevap": "Şakıma",
+    "soru": "Expo 2016 Antalya Fuarı'nın sembolü seçilen çiçek",
+    "cevap": "Şakayık",
     "alternatifler": [
-      "ŞAKIMA",
-      "SAKIMA"
+      "ŞAKAYIK",
+      "SAKAYIK"
     ]
   },
   {
     "id": 145,
-    "soru": "Kaşıma kelimesinin bütün harflerini içerir; ötme",
+    "soru": "Bülbülün kulağa hoş gelen sesiyle ötmesi",
     "cevap": "Şakıma",
     "alternatifler": [
       "ŞAKIMA",
@@ -1343,15 +1344,6 @@
   },
   {
     "id": 146,
-    "soru": "Bülbülün kulağa hoş gelen sesiyle ötmesi",
-    "cevap": "Şakıma",
-    "alternatifler": [
-      "ŞAKIMA",
-      "SAKIMA"
-    ]
-  },
-  {
-    "id": 147,
     "soru": "Kaşıma kelimesinin bütün harflerini içerir; ötme",
     "cevap": "Şakıma",
     "alternatifler": [
@@ -1360,17 +1352,26 @@
     ]
   },
   {
-    "id": 148,
-    "soru": "Mecaz anlamda, güzel bir şekilde şarkı söylemek",
-    "cevap": "Şakımak",
+    "id": 147,
+    "soru": "Bülbülün kulağa hoş gelen sesiyle ötmesi",
+    "cevap": "Şakıma",
     "alternatifler": [
-      "SAKIMAK",
-      "ŞAKIMAK"
+      "ŞAKIMA",
+      "SAKIMA"
+    ]
+  },
+  {
+    "id": 148,
+    "soru": "Kaşıma kelimesinin bütün harflerini içerir; ötme",
+    "cevap": "Şakıma",
+    "alternatifler": [
+      "ŞAKIMA",
+      "SAKIMA"
     ]
   },
   {
     "id": 149,
-    "soru": "Mecazen bülbül gibi güzel ses çıkarmak",
+    "soru": "Mecaz anlamda, güzel bir şekilde şarkı söylemek",
     "cevap": "Şakımak",
     "alternatifler": [
       "SAKIMAK",
@@ -1388,16 +1389,16 @@
   },
   {
     "id": 151,
-    "soru": "Adana havaalanının adı",
-    "cevap": "Şakirpaşa",
+    "soru": "Mecazen bülbül gibi güzel ses çıkarmak",
+    "cevap": "Şakımak",
     "alternatifler": [
-      "SAKIRPASA",
-      "ŞAKIRPAŞA"
+      "SAKIMAK",
+      "ŞAKIMAK"
     ]
   },
   {
     "id": 152,
-    "soru": "Adana'da yer alan havalimanının adı",
+    "soru": "Adana havaalanının adı",
     "cevap": "Şakirpaşa",
     "alternatifler": [
       "SAKIRPASA",
@@ -1415,7 +1416,7 @@
   },
   {
     "id": 154,
-    "soru": "Adana'daki uluslararası havalimanının adıdır",
+    "soru": "Adana'da yer alan havalimanının adı",
     "cevap": "Şakirpaşa",
     "alternatifler": [
       "SAKIRPASA",
@@ -1433,6 +1434,15 @@
   },
   {
     "id": 156,
+    "soru": "Adana'daki uluslararası havalimanının adıdır",
+    "cevap": "Şakirpaşa",
+    "alternatifler": [
+      "SAKIRPASA",
+      "ŞAKIRPAŞA"
+    ]
+  },
+  {
+    "id": 157,
     "soru": "Sürekli şakalar ve espriler yapan kişi",
     "cevap": "Şaklaban",
     "alternatifler": [
@@ -1441,7 +1451,7 @@
     ]
   },
   {
-    "id": 157,
+    "id": 158,
     "soru": "Komik, şakacı ve şen kişi anlamında sözcük",
     "cevap": "Şaklaban",
     "alternatifler": [
@@ -1450,7 +1460,7 @@
     ]
   },
   {
-    "id": 158,
+    "id": 159,
     "soru": "Komiklik yapmayı huy edinmiş, latifeci",
     "cevap": "Şaklaban",
     "alternatifler": [
@@ -1459,7 +1469,7 @@
     ]
   },
   {
-    "id": 159,
+    "id": 160,
     "soru": "Kulağa hoş gelen sesler çıkarmak",
     "cevap": "Şakramak",
     "alternatifler": [
@@ -1468,17 +1478,8 @@
     ]
   },
   {
-    "id": 160,
-    "soru": "Para veya çıkar için birini devamlı alkışlayan",
-    "cevap": "Şakşakçı",
-    "alternatifler": [
-      "SAKSAKCI",
-      "ŞAKŞAKÇI"
-    ]
-  },
-  {
     "id": 161,
-    "soru": "Bir kişiyi veya olayı sürekli alkışlayıp öven kişi",
+    "soru": "Para veya çıkar için birini devamlı alkışlayan",
     "cevap": "Şakşakçı",
     "alternatifler": [
       "SAKSAKCI",
@@ -1496,16 +1497,16 @@
   },
   {
     "id": 163,
-    "soru": "Patlıcan, biber ve patatesle yapılan soslu meze",
-    "cevap": "Şakşuka",
+    "soru": "Bir kişiyi veya olayı sürekli alkışlayıp öven kişi",
+    "cevap": "Şakşakçı",
     "alternatifler": [
-      "SAKSUKA",
-      "ŞAKŞUKA"
+      "SAKSAKCI",
+      "ŞAKŞAKÇI"
     ]
   },
   {
     "id": 164,
-    "soru": "Domates, patlıcan, patates, kabakla yapılan yemek",
+    "soru": "Patlıcan, biber ve patatesle yapılan soslu meze",
     "cevap": "Şakşuka",
     "alternatifler": [
       "SAKSUKA",
@@ -1514,24 +1515,6 @@
   },
   {
     "id": 165,
-    "soru": "Patlıcan, biber ve patatesle yapılan soslu meze",
-    "cevap": "Şakşuka",
-    "alternatifler": [
-      "SAKSUKA",
-      "ŞAKŞUKA"
-    ]
-  },
-  {
-    "id": 166,
-    "soru": "Patlıcanla yapılan domatesli bir meze",
-    "cevap": "Şakşuka",
-    "alternatifler": [
-      "SAKSUKA",
-      "ŞAKŞUKA"
-    ]
-  },
-  {
-    "id": 167,
     "soru": "Domates, patlıcan, patates, kabakla yapılan yemek",
     "cevap": "Şakşuka",
     "alternatifler": [
@@ -1540,8 +1523,8 @@
     ]
   },
   {
-    "id": 168,
-    "soru": "Bir şarkıda \"Tarif edeyim, öğreteyim\" denilen meze",
+    "id": 166,
+    "soru": "Patlıcan, biber ve patatesle yapılan soslu meze",
     "cevap": "Şakşuka",
     "alternatifler": [
       "SAKSUKA",
@@ -1549,7 +1532,7 @@
     ]
   },
   {
-    "id": 169,
+    "id": 167,
     "soru": "Patlıcanla yapılan domatesli bir meze",
     "cevap": "Şakşuka",
     "alternatifler": [
@@ -1558,8 +1541,8 @@
     ]
   },
   {
-    "id": 170,
-    "soru": "Kızarmış patlıcan, kabak ve biberle yapılan  meze",
+    "id": 168,
+    "soru": "Domates, patlıcan, patates, kabakla yapılan yemek",
     "cevap": "Şakşuka",
     "alternatifler": [
       "SAKSUKA",
@@ -1567,7 +1550,7 @@
     ]
   },
   {
-    "id": 171,
+    "id": 169,
     "soru": "Bir şarkıda \"Tarif edeyim, öğreteyim\" denilen meze",
     "cevap": "Şakşuka",
     "alternatifler": [
@@ -1576,22 +1559,39 @@
     ]
   },
   {
+    "id": 170,
+    "soru": "Patlıcanla yapılan domatesli bir meze",
+    "cevap": "Şakşuka",
+    "alternatifler": [
+      "SAKSUKA",
+      "ŞAKŞUKA"
+    ]
+  },
+  {
+    "id": 171,
+    "soru": "Kızarmış patlıcan, kabak ve biberle yapılan  meze",
+    "cevap": "Şakşuka",
+    "alternatifler": [
+      "SAKSUKA",
+      "ŞAKŞUKA"
+    ]
+  },
+  {
     "id": 172,
+    "soru": "Bir şarkıda \"Tarif edeyim, öğreteyim\" denilen meze",
+    "cevap": "Şakşuka",
+    "alternatifler": [
+      "SAKSUKA",
+      "ŞAKŞUKA"
+    ]
+  },
+  {
+    "id": 173,
     "soru": "Matematikte düşey",
     "cevap": "Şakuli",
     "alternatifler": [
       "SAKULI",
       "ŞAKULI"
-    ]
-  },
-  {
-    "id": 173,
-    "soru": "Bir anda, ansızın anlamlarındaki söz öbeği",
-    "cevap": "Şak diye",
-    "alternatifler": [
-      "SAK DIYE",
-      "ŞAK DIYE",
-      "Şakdiye"
     ]
   },
   {
@@ -2534,25 +2534,27 @@
   },
   {
     "id": 278,
-    "soru": "Futbolda topu kalecinin üzerinden aşırtma",
-    "cevap": "Şandel",
+    "soru": "Eski Bulgar Türklerine ait destan",
+    "cevap": "Şan kızı",
     "alternatifler": [
-      "SANDEL",
-      "ŞANDEL"
+      "SAN KIZI",
+      "ŞAN KIZI",
+      "Şankızı"
     ]
   },
   {
     "id": 279,
-    "soru": "Futbolda topu kalecinin üzerinden aşırtma",
-    "cevap": "Şandel",
+    "soru": "İdil Bulgarlarına ait destan",
+    "cevap": "Şan kızı",
     "alternatifler": [
-      "SANDEL",
-      "ŞANDEL"
+      "SAN KIZI",
+      "ŞAN KIZI",
+      "Şankızı"
     ]
   },
   {
     "id": 280,
-    "soru": "Futbolda, topu kalecinin üstünden aşırtarak atma",
+    "soru": "Futbolda topu kalecinin üzerinden aşırtma",
     "cevap": "Şandel",
     "alternatifler": [
       "SANDEL",
@@ -2561,6 +2563,24 @@
   },
   {
     "id": 281,
+    "soru": "Futbolda topu kalecinin üzerinden aşırtma",
+    "cevap": "Şandel",
+    "alternatifler": [
+      "SANDEL",
+      "ŞANDEL"
+    ]
+  },
+  {
+    "id": 282,
+    "soru": "Futbolda, topu kalecinin üstünden aşırtarak atma",
+    "cevap": "Şandel",
+    "alternatifler": [
+      "SANDEL",
+      "ŞANDEL"
+    ]
+  },
+  {
+    "id": 283,
     "soru": "Çin'in en önemli liman şehri",
     "cevap": "Şangay",
     "alternatifler": [
@@ -2569,25 +2589,25 @@
     ]
   },
   {
-    "id": 282,
-    "soru": "Bulunduğu şehirle aynı adı taşıyan Çin borsası",
-    "cevap": "Şanghay",
-    "alternatifler": [
-      "ŞANGHAY",
-      "SANGHAY"
-    ]
-  },
-  {
-    "id": 283,
-    "soru": "Bulunduğu şehirle aynı adı taşıyan Çin borsası",
-    "cevap": "Şanghay",
-    "alternatifler": [
-      "ŞANGHAY",
-      "SANGHAY"
-    ]
-  },
-  {
     "id": 284,
+    "soru": "Bulunduğu şehirle aynı adı taşıyan Çin borsası",
+    "cevap": "Şanghay",
+    "alternatifler": [
+      "ŞANGHAY",
+      "SANGHAY"
+    ]
+  },
+  {
+    "id": 285,
+    "soru": "Bulunduğu şehirle aynı adı taşıyan Çin borsası",
+    "cevap": "Şanghay",
+    "alternatifler": [
+      "ŞANGHAY",
+      "SANGHAY"
+    ]
+  },
+  {
+    "id": 286,
     "soru": "Tabak çanağın kırılırken çıkardığı yüksek ses",
     "cevap": "Şangırtı",
     "alternatifler": [
@@ -2596,7 +2616,7 @@
     ]
   },
   {
-    "id": 285,
+    "id": 287,
     "soru": "__ İnanma, Sezen Aksu şarkısı",
     "cevap": "Şanıma",
     "alternatifler": [
@@ -2605,30 +2625,12 @@
     ]
   },
   {
-    "id": 286,
+    "id": 288,
     "soru": "Asıl adı Sarp Palaur olan tanınmış şarkıcı",
     "cevap": "Şanışer",
     "alternatifler": [
       "SANISER",
       "ŞANIŞER"
-    ]
-  },
-  {
-    "id": 287,
-    "soru": "Göbeklitepe'nin bulunduğu şehir",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 288,
-    "soru": "Balıklıgöl bu ili serinletir",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
     ]
   },
   {
@@ -2642,7 +2644,7 @@
   },
   {
     "id": 290,
-    "soru": "Balıklıgöl bu ilde bulunur",
+    "soru": "Balıklıgöl bu ili serinletir",
     "cevap": "Şanlıurfa",
     "alternatifler": [
       "ŞANLIURFA",
@@ -2651,7 +2653,7 @@
   },
   {
     "id": 291,
-    "soru": "Çiğ köftesi ile ünlü Güneydoğu ilimiz",
+    "soru": "Göbeklitepe'nin bulunduğu şehir",
     "cevap": "Şanlıurfa",
     "alternatifler": [
       "ŞANLIURFA",
@@ -2660,7 +2662,7 @@
   },
   {
     "id": 292,
-    "soru": "Şabut balığı, bu Güneydoğu ilimize özgüdür",
+    "soru": "Balıklıgöl bu ilde bulunur",
     "cevap": "Şanlıurfa",
     "alternatifler": [
       "ŞANLIURFA",
@@ -2669,7 +2671,7 @@
   },
   {
     "id": 293,
-    "soru": "Balıklıgöl’ün bulunduğu il",
+    "soru": "Çiğ köftesi ile ünlü Güneydoğu ilimiz",
     "cevap": "Şanlıurfa",
     "alternatifler": [
       "ŞANLIURFA",
@@ -2678,7 +2680,7 @@
   },
   {
     "id": 294,
-    "soru": "Balıklıgöl bu ili serinletir",
+    "soru": "Şabut balığı, bu Güneydoğu ilimize özgüdür",
     "cevap": "Şanlıurfa",
     "alternatifler": [
       "ŞANLIURFA",
@@ -2687,7 +2689,7 @@
   },
   {
     "id": 295,
-    "soru": "Ekmek yapılan en eski yerlerden olan Türkiye ili",
+    "soru": "Balıklıgöl’ün bulunduğu il",
     "cevap": "Şanlıurfa",
     "alternatifler": [
       "ŞANLIURFA",
@@ -2696,150 +2698,6 @@
   },
   {
     "id": 296,
-    "soru": "İsot biberin yetiştiği Güneydoğu Anadolu ili",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 297,
-    "soru": "Acısız Adana kebaba adını veren il",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 298,
-    "soru": "Maraş ve Antep ile birlikte unvan kazanan şehir",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 299,
-    "soru": "Balıklı Göl'ün bulunduğu şehir",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 300,
-    "soru": "Dünya Mirası olan Göbeklitepe bu şehirdedir",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 301,
-    "soru": "Müslüm Gürses'in doğduğu il",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 302,
-    "soru": "Harran Üniversitesi'nin bulunduğu ilimiz",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 303,
-    "soru": "GAP adlı havaalanının bulunduğu il",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 304,
-    "soru": "Göbeklitepe’nin bulunduğu doğu ilimiz",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 305,
-    "soru": "İsot adlı biber türü, bu Güneydoğu iline özgüdür",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 306,
-    "soru": "İsot adlı biber türü, bu Güneydoğu iline özgüdür",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 307,
-    "soru": "Acısız bir kebap türüne adını veren Güneydoğu ili",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 308,
-    "soru": "Güneydoğu Anadolu'nun en kalabalık ilidir",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 309,
-    "soru": "İbrahim Tatlıses'in doğum yeri",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 310,
-    "soru": "2020 itibarıyla antep fıstığı ve pamuk lideri il",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 311,
-    "soru": "Güneydoğu Anadolu'nun en kalabalık ilidir",
-    "cevap": "Şanlıurfa",
-    "alternatifler": [
-      "ŞANLIURFA",
-      "SANLIURFA"
-    ]
-  },
-  {
-    "id": 312,
     "soru": "Balıklıgöl bu ili serinletir",
     "cevap": "Şanlıurfa",
     "alternatifler": [
@@ -2848,7 +2706,97 @@
     ]
   },
   {
-    "id": 313,
+    "id": 297,
+    "soru": "Ekmek yapılan en eski yerlerden olan Türkiye ili",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 298,
+    "soru": "İsot biberin yetiştiği Güneydoğu Anadolu ili",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 299,
+    "soru": "Acısız Adana kebaba adını veren il",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 300,
+    "soru": "Maraş ve Antep ile birlikte unvan kazanan şehir",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 301,
+    "soru": "Balıklı Göl'ün bulunduğu şehir",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 302,
+    "soru": "Dünya Mirası olan Göbeklitepe bu şehirdedir",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 303,
+    "soru": "Müslüm Gürses'in doğduğu il",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 304,
+    "soru": "Harran Üniversitesi'nin bulunduğu ilimiz",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 305,
+    "soru": "GAP adlı havaalanının bulunduğu il",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 306,
+    "soru": "Göbeklitepe’nin bulunduğu doğu ilimiz",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 307,
     "soru": "İsot adlı biber türü, bu Güneydoğu iline özgüdür",
     "cevap": "Şanlıurfa",
     "alternatifler": [
@@ -2857,7 +2805,43 @@
     ]
   },
   {
-    "id": 314,
+    "id": 308,
+    "soru": "İsot adlı biber türü, bu Güneydoğu iline özgüdür",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 309,
+    "soru": "Acısız bir kebap türüne adını veren Güneydoğu ili",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 310,
+    "soru": "Güneydoğu Anadolu'nun en kalabalık ilidir",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 311,
+    "soru": "İbrahim Tatlıses'in doğum yeri",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 312,
     "soru": "2020 itibarıyla antep fıstığı ve pamuk lideri il",
     "cevap": "Şanlıurfa",
     "alternatifler": [
@@ -2866,16 +2850,103 @@
     ]
   },
   {
-    "id": 315,
-    "soru": "Maraton adlı programın sunucusuydu, __ Büyüka",
-    "cevap": "Şansal",
+    "id": 313,
+    "soru": "Güneydoğu Anadolu'nun en kalabalık ilidir",
+    "cevap": "Şanlıurfa",
     "alternatifler": [
-      "ŞANSAL",
-      "SANSAL"
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 314,
+    "soru": "Balıklıgöl bu ili serinletir",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 315,
+    "soru": "İsot adlı biber türü, bu Güneydoğu iline özgüdür",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
     ]
   },
   {
     "id": 316,
+    "soru": "2020 itibarıyla antep fıstığı ve pamuk lideri il",
+    "cevap": "Şanlıurfa",
+    "alternatifler": [
+      "ŞANLIURFA",
+      "SANLIURFA"
+    ]
+  },
+  {
+    "id": 317,
+    "soru": "Loto, piyango gibi türleri vardır",
+    "cevap": "Şans oyunu",
+    "alternatifler": [
+      "SANS OYUNU",
+      "ŞANS OYUNU",
+      "Şansoyunu"
+    ]
+  },
+  {
+    "id": 318,
+    "soru": "Loto, piyango gibi türleri vardır",
+    "cevap": "Şans oyunu",
+    "alternatifler": [
+      "SANS OYUNU",
+      "ŞANS OYUNU",
+      "Şansoyunu"
+    ]
+  },
+  {
+    "id": 319,
+    "soru": "Loto, piyango gibi türleri vardır",
+    "cevap": "Şans oyunu",
+    "alternatifler": [
+      "SANS OYUNU",
+      "ŞANS OYUNU",
+      "Şansoyunu"
+    ]
+  },
+  {
+    "id": 320,
+    "soru": "Loto, piyango gibi türleri vardır",
+    "cevap": "Şans oyunu",
+    "alternatifler": [
+      "SANS OYUNU",
+      "ŞANS OYUNU",
+      "Şansoyunu"
+    ]
+  },
+  {
+    "id": 321,
+    "soru": "Her Çarşamba çekilişi yapılan talih oyunu",
+    "cevap": "Şans topu",
+    "alternatifler": [
+      "SANS TOPU",
+      "ŞANS TOPU",
+      "Şanstopu"
+    ]
+  },
+  {
+    "id": 322,
+    "soru": "Her Çarşamba çekilişi yapılan talih oyunu",
+    "cevap": "Şans topu",
+    "alternatifler": [
+      "SANS TOPU",
+      "ŞANS TOPU",
+      "Şanstopu"
+    ]
+  },
+  {
+    "id": 323,
     "soru": "Maraton adlı programın sunucusuydu, __ Büyüka",
     "cevap": "Şansal",
     "alternatifler": [
@@ -2884,7 +2955,16 @@
     ]
   },
   {
-    "id": 317,
+    "id": 324,
+    "soru": "Maraton adlı programın sunucusuydu, __ Büyüka",
+    "cevap": "Şansal",
+    "alternatifler": [
+      "ŞANSAL",
+      "SANSAL"
+    ]
+  },
+  {
+    "id": 325,
     "soru": "Tavlada daima ihtiyacı olan zarı atar",
     "cevap": "Şanslı",
     "alternatifler": [
@@ -2893,7 +2973,7 @@
     ]
   },
   {
-    "id": 318,
+    "id": 326,
     "soru": "Red Kit'in orijinalinden çevrilen adı, __ Luke",
     "cevap": "Şanslı",
     "alternatifler": [
@@ -2902,7 +2982,7 @@
     ]
   },
   {
-    "id": 319,
+    "id": 327,
     "soru": "Fransızlara özgü bir müzik türü",
     "cevap": "Şanson",
     "alternatifler": [
@@ -2911,7 +2991,7 @@
     ]
   },
   {
-    "id": 320,
+    "id": 328,
     "soru": "Fransa’da şarkı, lirik şiir",
     "cevap": "Şanson",
     "alternatifler": [
@@ -2920,7 +3000,7 @@
     ]
   },
   {
-    "id": 321,
+    "id": 329,
     "soru": "Fransızca seslendirilen şarkılara verilen ad",
     "cevap": "Şanson",
     "alternatifler": [
@@ -2929,7 +3009,7 @@
     ]
   },
   {
-    "id": 322,
+    "id": 330,
     "soru": "Kısa Fransız türküsü",
     "cevap": "Şansonet",
     "alternatifler": [
@@ -2938,7 +3018,7 @@
     ]
   },
   {
-    "id": 323,
+    "id": 331,
     "soru": "Kısa süren Fransızca şarkı",
     "cevap": "Şansonet",
     "alternatifler": [
@@ -2947,80 +3027,8 @@
     ]
   },
   {
-    "id": 324,
-    "soru": "Almanya'da hükümet başkanı",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
-    "id": 325,
-    "soru": "Almanya'da hükümet başkanı",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
-    "id": 326,
-    "soru": "Almanya'da hükümet başkanı",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
-    "id": 327,
-    "soru": "Almanya'da hükümet başkanı",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
-    "id": 328,
-    "soru": "Almanya'da başbakana verilen ad",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
-    "id": 329,
-    "soru": "Almanya'da hükümete başkanlık yapan kişi",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
-    "id": 330,
-    "soru": "Almanya ve Avusturya'da hükümet başkanına denir",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
-    "id": 331,
-    "soru": "Angela Merkel'in, 2005'te aldığı unvan",
-    "cevap": "Şansölye",
-    "alternatifler": [
-      "ŞANSÖLYE",
-      "SANSOLYE"
-    ]
-  },
-  {
     "id": 332,
-    "soru": "Almanya'da, devlet başkanlarına verilen unvan",
+    "soru": "Almanya'da hükümet başkanı",
     "cevap": "Şansölye",
     "alternatifler": [
       "ŞANSÖLYE",
@@ -3029,7 +3037,7 @@
   },
   {
     "id": 333,
-    "soru": "Almanya'da, başbakanın karşılığı olan unvan",
+    "soru": "Almanya'da hükümet başkanı",
     "cevap": "Şansölye",
     "alternatifler": [
       "ŞANSÖLYE",
@@ -3038,7 +3046,7 @@
   },
   {
     "id": 334,
-    "soru": "Almanya'da, devlet başkanlarına verilen unvan",
+    "soru": "Almanya'da hükümet başkanı",
     "cevap": "Şansölye",
     "alternatifler": [
       "ŞANSÖLYE",
@@ -3047,7 +3055,7 @@
   },
   {
     "id": 335,
-    "soru": "Almanya ve Avusturya'da hükümet başkanına denir",
+    "soru": "Almanya'da hükümet başkanı",
     "cevap": "Şansölye",
     "alternatifler": [
       "ŞANSÖLYE",
@@ -3056,6 +3064,78 @@
   },
   {
     "id": 336,
+    "soru": "Almanya'da başbakana verilen ad",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 337,
+    "soru": "Almanya'da hükümete başkanlık yapan kişi",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 338,
+    "soru": "Almanya ve Avusturya'da hükümet başkanına denir",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 339,
+    "soru": "Angela Merkel'in, 2005'te aldığı unvan",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 340,
+    "soru": "Almanya'da, devlet başkanlarına verilen unvan",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 341,
+    "soru": "Almanya'da, başbakanın karşılığı olan unvan",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 342,
+    "soru": "Almanya'da, devlet başkanlarına verilen unvan",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 343,
+    "soru": "Almanya ve Avusturya'da hükümet başkanına denir",
+    "cevap": "Şansölye",
+    "alternatifler": [
+      "ŞANSÖLYE",
+      "SANSOLYE"
+    ]
+  },
+  {
+    "id": 344,
     "soru": "Bahtı kapalı, talihi yüzüne gülmeyen",
     "cevap": "Şanssız",
     "alternatifler": [
@@ -3064,7 +3144,7 @@
     ]
   },
   {
-    "id": 337,
+    "id": 345,
     "soru": "Talihsiz, bahtsız",
     "cevap": "Şanssız",
     "alternatifler": [
@@ -3073,104 +3153,26 @@
     ]
   },
   {
-    "id": 338,
-    "soru": "Bahtı kapanmış olan, talihsiz",
-    "cevap": "Şanssız",
-    "alternatifler": [
-      "ŞANSSIZ",
-      "SANSSIZ"
-    ]
-  },
-  {
-    "id": 339,
-    "soru": "Bahtı kapanmış olan, talihsiz",
-    "cevap": "Şanssız",
-    "alternatifler": [
-      "ŞANSSIZ",
-      "SANSSIZ"
-    ]
-  },
-  {
-    "id": 340,
-    "soru": "Loto, piyango gibi türleri vardır",
-    "cevap": "Şans oyunu",
-    "alternatifler": [
-      "SANS OYUNU",
-      "ŞANS OYUNU",
-      "Şansoyunu"
-    ]
-  },
-  {
-    "id": 341,
-    "soru": "Loto, piyango gibi türleri vardır",
-    "cevap": "Şans oyunu",
-    "alternatifler": [
-      "SANS OYUNU",
-      "ŞANS OYUNU",
-      "Şansoyunu"
-    ]
-  },
-  {
-    "id": 342,
-    "soru": "Loto, piyango gibi türleri vardır",
-    "cevap": "Şans oyunu",
-    "alternatifler": [
-      "SANS OYUNU",
-      "ŞANS OYUNU",
-      "Şansoyunu"
-    ]
-  },
-  {
-    "id": 343,
-    "soru": "Loto, piyango gibi türleri vardır",
-    "cevap": "Şans oyunu",
-    "alternatifler": [
-      "SANS OYUNU",
-      "ŞANS OYUNU",
-      "Şansoyunu"
-    ]
-  },
-  {
-    "id": 344,
-    "soru": "Her Çarşamba çekilişi yapılan talih oyunu",
-    "cevap": "Şans topu",
-    "alternatifler": [
-      "SANS TOPU",
-      "ŞANS TOPU",
-      "Şanstopu"
-    ]
-  },
-  {
-    "id": 345,
-    "soru": "Her Çarşamba çekilişi yapılan talih oyunu",
-    "cevap": "Şans topu",
-    "alternatifler": [
-      "SANS TOPU",
-      "ŞANS TOPU",
-      "Şanstopu"
-    ]
-  },
-  {
     "id": 346,
-    "soru": "Birine ait gizli bilgiyi yaymakla tehdit etme",
-    "cevap": "Şantaj",
+    "soru": "Bahtı kapanmış olan, talihsiz",
+    "cevap": "Şanssız",
     "alternatifler": [
-      "ŞANTAJ",
-      "SANTAJ"
+      "ŞANSSIZ",
+      "SANSSIZ"
     ]
   },
   {
     "id": 347,
-    "soru": "Birisini bir açığını kullanarak tehdit etme",
-    "cevap": "Şantaj",
+    "soru": "Bahtı kapanmış olan, talihsiz",
+    "cevap": "Şanssız",
     "alternatifler": [
-      "ŞANTAJ",
-      "SANTAJ"
+      "ŞANSSIZ",
+      "SANSSIZ"
     ]
   },
   {
     "id": 348,
-    "soru": "Tehdit yoluyla baskı kurma",
+    "soru": "Birine ait gizli bilgiyi yaymakla tehdit etme",
     "cevap": "Şantaj",
     "alternatifler": [
       "ŞANTAJ",
@@ -3179,7 +3181,7 @@
   },
   {
     "id": 349,
-    "soru": "Sırrını ifşa etme tehdidiyle birini korkutma",
+    "soru": "Birisini bir açığını kullanarak tehdit etme",
     "cevap": "Şantaj",
     "alternatifler": [
       "ŞANTAJ",
@@ -3188,15 +3190,6 @@
   },
   {
     "id": 350,
-    "soru": "Para ya da çıkar sağlamak için gözdağı vermek",
-    "cevap": "Şantaj",
-    "alternatifler": [
-      "ŞANTAJ",
-      "SANTAJ"
-    ]
-  },
-  {
-    "id": 351,
     "soru": "Tehdit yoluyla baskı kurma",
     "cevap": "Şantaj",
     "alternatifler": [
@@ -3205,8 +3198,17 @@
     ]
   },
   {
+    "id": 351,
+    "soru": "Sırrını ifşa etme tehdidiyle birini korkutma",
+    "cevap": "Şantaj",
+    "alternatifler": [
+      "ŞANTAJ",
+      "SANTAJ"
+    ]
+  },
+  {
     "id": 352,
-    "soru": "Birine ait gizli bilgiyi yaymakla tehdit etme",
+    "soru": "Para ya da çıkar sağlamak için gözdağı vermek",
     "cevap": "Şantaj",
     "alternatifler": [
       "ŞANTAJ",
@@ -3215,6 +3217,24 @@
   },
   {
     "id": 353,
+    "soru": "Tehdit yoluyla baskı kurma",
+    "cevap": "Şantaj",
+    "alternatifler": [
+      "ŞANTAJ",
+      "SANTAJ"
+    ]
+  },
+  {
+    "id": 354,
+    "soru": "Birine ait gizli bilgiyi yaymakla tehdit etme",
+    "cevap": "Şantaj",
+    "alternatifler": [
+      "ŞANTAJ",
+      "SANTAJ"
+    ]
+  },
+  {
+    "id": 355,
     "soru": "İnşaat yapılan alan",
     "cevap": "Şantiye",
     "alternatifler": [
@@ -3223,26 +3243,8 @@
     ]
   },
   {
-    "id": 354,
-    "soru": "İnşaat alanı",
-    "cevap": "Şantiye",
-    "alternatifler": [
-      "SANTIYE",
-      "ŞANTIYE"
-    ]
-  },
-  {
-    "id": 355,
-    "soru": "İnşaat tesisinin ve malzemelerinin bulunduğu yer",
-    "cevap": "Şantiye",
-    "alternatifler": [
-      "SANTIYE",
-      "ŞANTIYE"
-    ]
-  },
-  {
     "id": 356,
-    "soru": "Bu alana baretsiz ve yetkisiz girilmez",
+    "soru": "İnşaat alanı",
     "cevap": "Şantiye",
     "alternatifler": [
       "SANTIYE",
@@ -3251,7 +3253,7 @@
   },
   {
     "id": 357,
-    "soru": "İnşaat alanı",
+    "soru": "İnşaat tesisinin ve malzemelerinin bulunduğu yer",
     "cevap": "Şantiye",
     "alternatifler": [
       "SANTIYE",
@@ -3260,7 +3262,7 @@
   },
   {
     "id": 358,
-    "soru": "İnşaatı devam eden yapı",
+    "soru": "Bu alana baretsiz ve yetkisiz girilmez",
     "cevap": "Şantiye",
     "alternatifler": [
       "SANTIYE",
@@ -3278,7 +3280,7 @@
   },
   {
     "id": 360,
-    "soru": "İnşaat alanı",
+    "soru": "İnşaatı devam eden yapı",
     "cevap": "Şantiye",
     "alternatifler": [
       "SANTIYE",
@@ -3287,6 +3289,24 @@
   },
   {
     "id": 361,
+    "soru": "İnşaat alanı",
+    "cevap": "Şantiye",
+    "alternatifler": [
+      "SANTIYE",
+      "ŞANTIYE"
+    ]
+  },
+  {
+    "id": 362,
+    "soru": "İnşaat alanı",
+    "cevap": "Şantiye",
+    "alternatifler": [
+      "SANTIYE",
+      "ŞANTIYE"
+    ]
+  },
+  {
+    "id": 363,
     "soru": "Erkek şarkıcı",
     "cevap": "Şantör",
     "alternatifler": [
@@ -3295,7 +3315,7 @@
     ]
   },
   {
-    "id": 362,
+    "id": 364,
     "soru": "Kadın şarkıcı",
     "cevap": "Şantöz",
     "alternatifler": [
@@ -3304,7 +3324,7 @@
     ]
   },
   {
-    "id": 363,
+    "id": 365,
     "soru": "Çin'e özgü, yazlık elbiselere uygun kumaş türü",
     "cevap": "Şantuk",
     "alternatifler": [
@@ -3313,7 +3333,7 @@
     ]
   },
   {
-    "id": 364,
+    "id": 366,
     "soru": "Adı Çin'den gelen, kendinden desenli, ipekli kumaş",
     "cevap": "Şantung",
     "alternatifler": [
@@ -3322,7 +3342,7 @@
     ]
   },
   {
-    "id": 365,
+    "id": 367,
     "soru": "Çin'e has desenli, ham ipekten üretilen bir kumaş",
     "cevap": "Şantung",
     "alternatifler": [
@@ -3331,7 +3351,7 @@
     ]
   },
   {
-    "id": 366,
+    "id": 368,
     "soru": "Ham ipekten yapılan Çin kumaşı",
     "cevap": "Şantung",
     "alternatifler": [
@@ -3340,26 +3360,8 @@
     ]
   },
   {
-    "id": 367,
-    "soru": "Paris'in en ünlü caddesi; Champs-Elysees",
-    "cevap": "Şanzelize",
-    "alternatifler": [
-      "SANZELIZE",
-      "ŞANZELIZE"
-    ]
-  },
-  {
-    "id": 368,
-    "soru": "Paris'in en ünlü caddesi; Champs-Elysees",
-    "cevap": "Şanzelize",
-    "alternatifler": [
-      "SANZELIZE",
-      "ŞANZELIZE"
-    ]
-  },
-  {
     "id": 369,
-    "soru": "Paris'teki Champs-Elysees'in Türkçe söylenişi",
+    "soru": "Paris'in en ünlü caddesi; Champs-Elysees",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3368,7 +3370,7 @@
   },
   {
     "id": 370,
-    "soru": "Paris'in, ismini mitolojiden alan ünlü bulvarı",
+    "soru": "Paris'in en ünlü caddesi; Champs-Elysees",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3377,7 +3379,7 @@
   },
   {
     "id": 371,
-    "soru": "Adı şarkılara konu olan, ünlü Paris caddesi",
+    "soru": "Paris'teki Champs-Elysees'in Türkçe söylenişi",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3386,7 +3388,7 @@
   },
   {
     "id": 372,
-    "soru": "Paris'in cafeleriyle ünlü bir turistik caddesi",
+    "soru": "Paris'in, ismini mitolojiden alan ünlü bulvarı",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3404,7 +3406,7 @@
   },
   {
     "id": 374,
-    "soru": "Paris'teki meşhur alışveriş caddesi",
+    "soru": "Paris'in cafeleriyle ünlü bir turistik caddesi",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3413,7 +3415,7 @@
   },
   {
     "id": 375,
-    "soru": "Paris'teki meşhur alışveriş caddesi",
+    "soru": "Adı şarkılara konu olan, ünlü Paris caddesi",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3422,7 +3424,7 @@
   },
   {
     "id": 376,
-    "soru": "Ünlü, \"Champs Elysees\" caddesinin Türkçe telaffuzu",
+    "soru": "Paris'teki meşhur alışveriş caddesi",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3431,7 +3433,7 @@
   },
   {
     "id": 377,
-    "soru": "Ünlü, \"Champs Elysees\" caddesinin Türkçe telaffuzu",
+    "soru": "Paris'teki meşhur alışveriş caddesi",
     "cevap": "Şanzelize",
     "alternatifler": [
       "SANZELIZE",
@@ -3449,6 +3451,24 @@
   },
   {
     "id": 379,
+    "soru": "Ünlü, \"Champs Elysees\" caddesinin Türkçe telaffuzu",
+    "cevap": "Şanzelize",
+    "alternatifler": [
+      "SANZELIZE",
+      "ŞANZELIZE"
+    ]
+  },
+  {
+    "id": 380,
+    "soru": "Ünlü, \"Champs Elysees\" caddesinin Türkçe telaffuzu",
+    "cevap": "Şanzelize",
+    "alternatifler": [
+      "SANZELIZE",
+      "ŞANZELIZE"
+    ]
+  },
+  {
+    "id": 381,
     "soru": "Arabada vites değiştirmeye yarayan dişli sistemi",
     "cevap": "Şanzıman",
     "alternatifler": [
@@ -3457,7 +3477,7 @@
     ]
   },
   {
-    "id": 380,
+    "id": 382,
     "soru": "Otomobilde hız değiştirmeye yarayan dişli sistemi",
     "cevap": "Şanzıman",
     "alternatifler": [
@@ -3466,7 +3486,7 @@
     ]
   },
   {
-    "id": 381,
+    "id": 383,
     "soru": "Gaz fren __ halim duman, bir Çiçek Abbas repliği",
     "cevap": "Şanzıman",
     "alternatifler": [
@@ -3475,7 +3495,7 @@
     ]
   },
   {
-    "id": 382,
+    "id": 384,
     "soru": "Arabanın hızını ayarlayan dişliler topluluğu",
     "cevap": "Şanzıman",
     "alternatifler": [
@@ -3484,26 +3504,8 @@
     ]
   },
   {
-    "id": 383,
-    "soru": "Arabalarda düz veya otomatik seçenekleri olur",
-    "cevap": "Şanzıman",
-    "alternatifler": [
-      "SANZIMAN",
-      "ŞANZIMAN"
-    ]
-  },
-  {
-    "id": 384,
-    "soru": "Motorlu taşıtlardaki vites değiştirme kutusu",
-    "cevap": "Şanzıman",
-    "alternatifler": [
-      "SANZIMAN",
-      "ŞANZIMAN"
-    ]
-  },
-  {
     "id": 385,
-    "soru": "Otomobil vitesinin bağlı olduğu düzenek",
+    "soru": "Arabalarda düz veya otomatik seçenekleri olur",
     "cevap": "Şanzıman",
     "alternatifler": [
       "SANZIMAN",
@@ -3521,22 +3523,20 @@
   },
   {
     "id": 387,
-    "soru": "Eski Bulgar Türklerine ait destan",
-    "cevap": "Şan kızı",
+    "soru": "Otomobil vitesinin bağlı olduğu düzenek",
+    "cevap": "Şanzıman",
     "alternatifler": [
-      "SAN KIZI",
-      "ŞAN KIZI",
-      "Şankızı"
+      "SANZIMAN",
+      "ŞANZIMAN"
     ]
   },
   {
     "id": 388,
-    "soru": "İdil Bulgarlarına ait destan",
-    "cevap": "Şan kızı",
+    "soru": "Motorlu taşıtlardaki vites değiştirme kutusu",
+    "cevap": "Şanzıman",
     "alternatifler": [
-      "SAN KIZI",
-      "ŞAN KIZI",
-      "Şankızı"
+      "SANZIMAN",
+      "ŞANZIMAN"
     ]
   },
   {
@@ -3759,114 +3759,6 @@
   },
   {
     "id": 413,
-    "soru": "Enerjisi tekrar tekrar doldurulabilen cihaz",
-    "cevap": "Şarjlı",
-    "alternatifler": [
-      "ŞARJLI",
-      "SARJLI"
-    ]
-  },
-  {
-    "id": 414,
-    "soru": "Enerjisi tekrar tekrar doldurulabilen cihaz",
-    "cevap": "Şarjlı",
-    "alternatifler": [
-      "ŞARJLI",
-      "SARJLI"
-    ]
-  },
-  {
-    "id": 415,
-    "soru": "Bu tip süpürge fişe takılmadan kullanım sağlar",
-    "cevap": "Şarjlı",
-    "alternatifler": [
-      "ŞARJLI",
-      "SARJLI"
-    ]
-  },
-  {
-    "id": 416,
-    "soru": "Bu tip süpürge fişe takılmadan kullanım sağlar",
-    "cevap": "Şarjlı",
-    "alternatifler": [
-      "ŞARJLI",
-      "SARJLI"
-    ]
-  },
-  {
-    "id": 417,
-    "soru": "Ateşli silahların mermilerinin konulduğu kısım",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 418,
-    "soru": "Otomatik silahlarda mermi buraya yerleştirilir",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 419,
-    "soru": "Silahlarda, mermilerin içine konduğu mekanizma",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 420,
-    "soru": "Silahlarda, mermilerin içine konduğu mekanizma",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 421,
-    "soru": "Silahın mermilerinin takıldığı kısım",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 422,
-    "soru": "Ateşli silahların mermilerinin konulduğu kısım",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 423,
-    "soru": "Otomatik silahlarda mermi buraya yerleştirilir",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 424,
-    "soru": "Silahlarda, mermilerin içine konduğu mekanizma",
-    "cevap": "Şarjör",
-    "alternatifler": [
-      "ŞARJÖR",
-      "SARJOR"
-    ]
-  },
-  {
-    "id": 425,
     "soru": "Z ile söyleyenler hata yaparlar",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3876,7 +3768,7 @@
     ]
   },
   {
-    "id": 426,
+    "id": 414,
     "soru": "Cep telefonlarımızın yaşam ünitesi",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3886,7 +3778,7 @@
     ]
   },
   {
-    "id": 427,
+    "id": 415,
     "soru": "Cep telefonlarımızın yaşam ünitesi",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3896,7 +3788,7 @@
     ]
   },
   {
-    "id": 428,
+    "id": 416,
     "soru": "Cep telefonunun bataryasını doldurmaya yarar",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3906,7 +3798,7 @@
     ]
   },
   {
-    "id": 429,
+    "id": 417,
     "soru": "Elektrikli aletin pilini doldurmaya yarayan aygıt",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3916,7 +3808,7 @@
     ]
   },
   {
-    "id": 430,
+    "id": 418,
     "soru": "Elektrikli aletin pilini doldurmaya yarayan aygıt",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3926,7 +3818,7 @@
     ]
   },
   {
-    "id": 431,
+    "id": 419,
     "soru": "Telefon ve bilgisayara hayat veren kablo",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3936,7 +3828,7 @@
     ]
   },
   {
-    "id": 432,
+    "id": 420,
     "soru": "Elektrikli aletin pilini doldurmaya yarayan aygıt",
     "cevap": "Şarj aleti",
     "alternatifler": [
@@ -3946,7 +3838,7 @@
     ]
   },
   {
-    "id": 433,
+    "id": 421,
     "soru": "Telefonun biten pilini yeniden doldurma",
     "cevap": "Şarj etme",
     "alternatifler": [
@@ -3956,7 +3848,7 @@
     ]
   },
   {
-    "id": 434,
+    "id": 422,
     "soru": "Telefonun biten pilini yeniden doldurma",
     "cevap": "Şarj etme",
     "alternatifler": [
@@ -3966,7 +3858,7 @@
     ]
   },
   {
-    "id": 435,
+    "id": 423,
     "soru": "Argoda, söylenen şeyi idrak etmeye başlamak",
     "cevap": "Şarj etmek",
     "alternatifler": [
@@ -3976,7 +3868,7 @@
     ]
   },
   {
-    "id": 436,
+    "id": 424,
     "soru": "Telefonun bataryası bittiğinde yaptığımız eylem",
     "cevap": "Şarj etmek",
     "alternatifler": [
@@ -3986,13 +3878,121 @@
     ]
   },
   {
-    "id": 437,
+    "id": 425,
     "soru": "Telefonun bataryası bittiğinde yaptığımız eylem",
     "cevap": "Şarj etmek",
     "alternatifler": [
       "ŞARJ ETMEK",
       "SARJ ETMEK",
       "Şarjetmek"
+    ]
+  },
+  {
+    "id": 426,
+    "soru": "Enerjisi tekrar tekrar doldurulabilen cihaz",
+    "cevap": "Şarjlı",
+    "alternatifler": [
+      "ŞARJLI",
+      "SARJLI"
+    ]
+  },
+  {
+    "id": 427,
+    "soru": "Enerjisi tekrar tekrar doldurulabilen cihaz",
+    "cevap": "Şarjlı",
+    "alternatifler": [
+      "ŞARJLI",
+      "SARJLI"
+    ]
+  },
+  {
+    "id": 428,
+    "soru": "Bu tip süpürge fişe takılmadan kullanım sağlar",
+    "cevap": "Şarjlı",
+    "alternatifler": [
+      "ŞARJLI",
+      "SARJLI"
+    ]
+  },
+  {
+    "id": 429,
+    "soru": "Bu tip süpürge fişe takılmadan kullanım sağlar",
+    "cevap": "Şarjlı",
+    "alternatifler": [
+      "ŞARJLI",
+      "SARJLI"
+    ]
+  },
+  {
+    "id": 430,
+    "soru": "Ateşli silahların mermilerinin konulduğu kısım",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
+    ]
+  },
+  {
+    "id": 431,
+    "soru": "Otomatik silahlarda mermi buraya yerleştirilir",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
+    ]
+  },
+  {
+    "id": 432,
+    "soru": "Silahlarda, mermilerin içine konduğu mekanizma",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
+    ]
+  },
+  {
+    "id": 433,
+    "soru": "Silahlarda, mermilerin içine konduğu mekanizma",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
+    ]
+  },
+  {
+    "id": 434,
+    "soru": "Silahın mermilerinin takıldığı kısım",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
+    ]
+  },
+  {
+    "id": 435,
+    "soru": "Ateşli silahların mermilerinin konulduğu kısım",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
+    ]
+  },
+  {
+    "id": 436,
+    "soru": "Otomatik silahlarda mermi buraya yerleştirilir",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
+    ]
+  },
+  {
+    "id": 437,
+    "soru": "Silahlarda, mermilerin içine konduğu mekanizma",
+    "cevap": "Şarjör",
+    "alternatifler": [
+      "ŞARJÖR",
+      "SARJOR"
     ]
   },
   {
@@ -4186,16 +4186,17 @@
   },
   {
     "id": 459,
-    "soru": "Bir tahliye türü; koşullara bağlı",
-    "cevap": "Şartlı",
+    "soru": "Yemin sözü olarak kullanılan bir deyim",
+    "cevap": "Şart olsun",
     "alternatifler": [
-      "SARTLI",
-      "ŞARTLI"
+      "ŞART OLSUN",
+      "SART OLSUN",
+      "Şartolsun"
     ]
   },
   {
     "id": 460,
-    "soru": "İyi davranma koşuluyla yapılan tahliye şekli",
+    "soru": "Bir tahliye türü; koşullara bağlı",
     "cevap": "Şartlı",
     "alternatifler": [
       "SARTLI",
@@ -4204,15 +4205,6 @@
   },
   {
     "id": 461,
-    "soru": "Bir tahliye türü; koşullara bağlı",
-    "cevap": "Şartlı",
-    "alternatifler": [
-      "SARTLI",
-      "ŞARTLI"
-    ]
-  },
-  {
-    "id": 462,
     "soru": "İyi davranma koşuluyla yapılan tahliye şekli",
     "cevap": "Şartlı",
     "alternatifler": [
@@ -4221,12 +4213,21 @@
     ]
   },
   {
-    "id": 463,
-    "soru": "İhale koşullarını listeleyen belge",
-    "cevap": "Şartname",
+    "id": 462,
+    "soru": "Bir tahliye türü; koşullara bağlı",
+    "cevap": "Şartlı",
     "alternatifler": [
-      "SARTNAME",
-      "ŞARTNAME"
+      "SARTLI",
+      "ŞARTLI"
+    ]
+  },
+  {
+    "id": 463,
+    "soru": "İyi davranma koşuluyla yapılan tahliye şekli",
+    "cevap": "Şartlı",
+    "alternatifler": [
+      "SARTLI",
+      "ŞARTLI"
     ]
   },
   {
@@ -4240,11 +4241,11 @@
   },
   {
     "id": 465,
-    "soru": "Koşulsuz kelimesinin eş anlamlısı",
-    "cevap": "Şartsız",
+    "soru": "İhale koşullarını listeleyen belge",
+    "cevap": "Şartname",
     "alternatifler": [
-      "ŞARTSIZ",
-      "SARTSIZ"
+      "SARTNAME",
+      "ŞARTNAME"
     ]
   },
   {
@@ -4258,12 +4259,11 @@
   },
   {
     "id": 467,
-    "soru": "Yemin sözü olarak kullanılan bir deyim",
-    "cevap": "Şart olsun",
+    "soru": "Koşulsuz kelimesinin eş anlamlısı",
+    "cevap": "Şartsız",
     "alternatifler": [
-      "ŞART OLSUN",
-      "SART OLSUN",
-      "Şartolsun"
+      "ŞARTSIZ",
+      "SARTSIZ"
     ]
   },
   {
@@ -4646,6 +4646,16 @@
   },
   {
     "id": 510,
+    "soru": "Mevlana'nın öldüğü güne verilen ad",
+    "cevap": "Şeb i arus",
+    "alternatifler": [
+      "ŞEB I ARUS",
+      "SEB I ARUS",
+      "Şebiarus"
+    ]
+  },
+  {
+    "id": 511,
     "soru": "Farsçada gece kokusu anlamına gelen bitki",
     "cevap": "Şebboy",
     "alternatifler": [
@@ -4654,7 +4664,7 @@
     ]
   },
   {
-    "id": 511,
+    "id": 512,
     "soru": "Turpgiller familyasından, kokusu güzel süs bitkisi",
     "cevap": "Şebboy",
     "alternatifler": [
@@ -4663,7 +4673,7 @@
     ]
   },
   {
-    "id": 512,
+    "id": 513,
     "soru": "Latince ismi matthiola olan, hoş kokulu çiçek",
     "cevap": "Şebboy",
     "alternatifler": [
@@ -4672,7 +4682,7 @@
     ]
   },
   {
-    "id": 513,
+    "id": 514,
     "soru": "Sidney Lumet'in TV dünyasıyla ilgili ünlü filmi",
     "cevap": "Şebeke",
     "alternatifler": [
@@ -4681,7 +4691,7 @@
     ]
   },
   {
-    "id": 514,
+    "id": 515,
     "soru": "Enerji dağıtım ağı",
     "cevap": "Şebeke",
     "alternatifler": [
@@ -4690,7 +4700,7 @@
     ]
   },
   {
-    "id": 515,
+    "id": 516,
     "soru": "Telekomünikasyon servislerinin sunulduğu ağ",
     "cevap": "Şebeke",
     "alternatifler": [
@@ -4699,17 +4709,8 @@
     ]
   },
   {
-    "id": 516,
-    "soru": "Kelimeler Yetse albümünün sahibi, __ Ferah",
-    "cevap": "Şebnem",
-    "alternatifler": [
-      "ŞEBNEM",
-      "SEBNEM"
-    ]
-  },
-  {
     "id": 517,
-    "soru": "Anlamı çiy olan kadın ismi",
+    "soru": "Kelimeler Yetse albümünün sahibi, __ Ferah",
     "cevap": "Şebnem",
     "alternatifler": [
       "ŞEBNEM",
@@ -4718,7 +4719,7 @@
   },
   {
     "id": 518,
-    "soru": "Dinle eseriyle Eurovision'da 3. olmuştu, __ Paker",
+    "soru": "Anlamı çiy olan kadın ismi",
     "cevap": "Şebnem",
     "alternatifler": [
       "ŞEBNEM",
@@ -4727,7 +4728,7 @@
   },
   {
     "id": 519,
-    "soru": "Ferah soyadlı Türk kadın rock sanatçısının adı",
+    "soru": "Dinle eseriyle Eurovision'da 3. olmuştu, __ Paker",
     "cevap": "Şebnem",
     "alternatifler": [
       "ŞEBNEM",
@@ -4736,7 +4737,7 @@
   },
   {
     "id": 520,
-    "soru": "Bozoklu soyadlı Türk kadın oyuncu",
+    "soru": "Ferah soyadlı Türk kadın rock sanatçısının adı",
     "cevap": "Şebnem",
     "alternatifler": [
       "ŞEBNEM",
@@ -4745,7 +4746,7 @@
   },
   {
     "id": 521,
-    "soru": "__ Ferah, kadın Türk rock müzik sanatçısı",
+    "soru": "Bozoklu soyadlı Türk kadın oyuncu",
     "cevap": "Şebnem",
     "alternatifler": [
       "ŞEBNEM",
@@ -4754,7 +4755,7 @@
   },
   {
     "id": 522,
-    "soru": "90'larda, Eurovision üçüncülüğü olan Türk'ün adı",
+    "soru": "__ Ferah, kadın Türk rock müzik sanatçısı",
     "cevap": "Şebnem",
     "alternatifler": [
       "ŞEBNEM",
@@ -4763,7 +4764,7 @@
   },
   {
     "id": 523,
-    "soru": "Bitkideki su damlası; bir kadın ismi",
+    "soru": "90'larda, Eurovision üçüncülüğü olan Türk'ün adı",
     "cevap": "Şebnem",
     "alternatifler": [
       "ŞEBNEM",
@@ -4772,33 +4773,6 @@
   },
   {
     "id": 524,
-    "soru": "2 yıl üst üste Eurovision'a katılmıştı, __ Paker",
-    "cevap": "Şebnem",
-    "alternatifler": [
-      "ŞEBNEM",
-      "SEBNEM"
-    ]
-  },
-  {
-    "id": 525,
-    "soru": "__  Ferah, Mayın Tarlası şarkısının sahibi şarkıcı",
-    "cevap": "Şebnem",
-    "alternatifler": [
-      "ŞEBNEM",
-      "SEBNEM"
-    ]
-  },
-  {
-    "id": 526,
-    "soru": "Kelimeler Yetse albümünün sahibi, __ Ferah",
-    "cevap": "Şebnem",
-    "alternatifler": [
-      "ŞEBNEM",
-      "SEBNEM"
-    ]
-  },
-  {
-    "id": 527,
     "soru": "Bitkideki su damlası; bir kadın ismi",
     "cevap": "Şebnem",
     "alternatifler": [
@@ -4807,13 +4781,39 @@
     ]
   },
   {
-    "id": 528,
-    "soru": "Mevlana'nın öldüğü güne verilen ad",
-    "cevap": "Şeb i arus",
+    "id": 525,
+    "soru": "2 yıl üst üste Eurovision'a katılmıştı, __ Paker",
+    "cevap": "Şebnem",
     "alternatifler": [
-      "ŞEB I ARUS",
-      "SEB I ARUS",
-      "Şebiarus"
+      "ŞEBNEM",
+      "SEBNEM"
+    ]
+  },
+  {
+    "id": 526,
+    "soru": "__  Ferah, Mayın Tarlası şarkısının sahibi şarkıcı",
+    "cevap": "Şebnem",
+    "alternatifler": [
+      "ŞEBNEM",
+      "SEBNEM"
+    ]
+  },
+  {
+    "id": 527,
+    "soru": "Kelimeler Yetse albümünün sahibi, __ Ferah",
+    "cevap": "Şebnem",
+    "alternatifler": [
+      "ŞEBNEM",
+      "SEBNEM"
+    ]
+  },
+  {
+    "id": 528,
+    "soru": "Bitkideki su damlası; bir kadın ismi",
+    "cevap": "Şebnem",
+    "alternatifler": [
+      "ŞEBNEM",
+      "SEBNEM"
     ]
   },
   {
@@ -4845,6 +4845,46 @@
   },
   {
     "id": 532,
+    "soru": "Doğrama ve dilimlemede kullanılan fonksiyonel alet",
+    "cevap": "Şef bıçağı",
+    "alternatifler": [
+      "ŞEF BIÇAĞI",
+      "SEF BICAGI",
+      "Şefbıçağı"
+    ]
+  },
+  {
+    "id": 533,
+    "soru": "Doğrama ve dilimlemede kullanılan fonksiyonel alet",
+    "cevap": "Şef bıçağı",
+    "alternatifler": [
+      "ŞEF BIÇAĞI",
+      "SEF BICAGI",
+      "Şefbıçağı"
+    ]
+  },
+  {
+    "id": 534,
+    "soru": "Lokanta servis elemanlarının en kıdemlisi",
+    "cevap": "Şef garson",
+    "alternatifler": [
+      "ŞEF GARSON",
+      "SEF GARSON",
+      "Şefgarson"
+    ]
+  },
+  {
+    "id": 535,
+    "soru": "Lokanta servis elemanlarının en kıdemlisi",
+    "cevap": "Şef garson",
+    "alternatifler": [
+      "ŞEF GARSON",
+      "SEF GARSON",
+      "Şefgarson"
+    ]
+  },
+  {
+    "id": 536,
     "soru": "Saydam, transparan anlamlarındaki söz",
     "cevap": "Şeffaf",
     "alternatifler": [
@@ -4853,7 +4893,7 @@
     ]
   },
   {
-    "id": 533,
+    "id": 537,
     "soru": "Stephen King'in şair Jim Gardener'ı anlatan kitabı",
     "cevap": "Şeffaf",
     "alternatifler": [
@@ -4862,7 +4902,7 @@
     ]
   },
   {
-    "id": 534,
+    "id": 538,
     "soru": "Saydam, ısı geçiren",
     "cevap": "Şeffaf",
     "alternatifler": [
@@ -4871,7 +4911,7 @@
     ]
   },
   {
-    "id": 535,
+    "id": 539,
     "soru": "Bakıldığında arkası görülebilen; Deniz Seki albümü",
     "cevap": "Şeffaf",
     "alternatifler": [
@@ -4880,7 +4920,7 @@
     ]
   },
   {
-    "id": 536,
+    "id": 540,
     "soru": "Işık geçirebilirlik, saydamlık",
     "cevap": "Şeffaflık",
     "alternatifler": [
@@ -4889,7 +4929,7 @@
     ]
   },
   {
-    "id": 537,
+    "id": 541,
     "soru": "Kurumların mali ve idari yönden açık olması",
     "cevap": "Şeffaflık",
     "alternatifler": [
@@ -4898,7 +4938,7 @@
     ]
   },
   {
-    "id": 538,
+    "id": 542,
     "soru": "Sihirli Flüt lakaplı Türk müzisyen, __ Kutluer",
     "cevap": "Şefika",
     "alternatifler": [
@@ -4907,7 +4947,7 @@
     ]
   },
   {
-    "id": 539,
+    "id": 543,
     "soru": "Genelde annelikle özdeşleştirilen sevecenlik",
     "cevap": "Şefkat",
     "alternatifler": [
@@ -4916,7 +4956,7 @@
     ]
   },
   {
-    "id": 540,
+    "id": 544,
     "soru": "Atasözüne göre lokma karın doyurmaz, bunu artırır",
     "cevap": "Şefkat",
     "alternatifler": [
@@ -4925,7 +4965,7 @@
     ]
   },
   {
-    "id": 541,
+    "id": 545,
     "soru": "Lokma karın doyurmaz, __ artırır",
     "cevap": "Şefkat",
     "alternatifler": [
@@ -4934,7 +4974,7 @@
     ]
   },
   {
-    "id": 542,
+    "id": 546,
     "soru": "Lokma karın doyurmaz, __ artırır; bir atasözü",
     "cevap": "Şefkat",
     "alternatifler": [
@@ -4943,7 +4983,7 @@
     ]
   },
   {
-    "id": 543,
+    "id": 547,
     "soru": "Sevecen, müşfik",
     "cevap": "Şefkatli",
     "alternatifler": [
@@ -4952,7 +4992,7 @@
     ]
   },
   {
-    "id": 544,
+    "id": 548,
     "soru": "Yetkiye sahip kişinin yaptığı iş, yöneticilik",
     "cevap": "Şeflik",
     "alternatifler": [
@@ -4961,7 +5001,7 @@
     ]
   },
   {
-    "id": 545,
+    "id": 549,
     "soru": "Bursa'da bolca yetişen tatlı ve sulu meyve",
     "cevap": "Şeftali",
     "alternatifler": [
@@ -4970,7 +5010,7 @@
     ]
   },
   {
-    "id": 546,
+    "id": 550,
     "soru": "Sulu, tüylü bir meyve",
     "cevap": "Şeftali",
     "alternatifler": [
@@ -4979,7 +5019,7 @@
     ]
   },
   {
-    "id": 547,
+    "id": 551,
     "soru": "Üzerinde minik tüyleri olan iri, turuncu meyve",
     "cevap": "Şeftali",
     "alternatifler": [
@@ -4988,7 +5028,7 @@
     ]
   },
   {
-    "id": 548,
+    "id": 552,
     "soru": "Özünden nektar yapılan tüylü meyve",
     "cevap": "Şeftali",
     "alternatifler": [
@@ -4997,7 +5037,7 @@
     ]
   },
   {
-    "id": 549,
+    "id": 553,
     "soru": "Buz Devri'nde mamut Manfred'in kızının adı",
     "cevap": "Şeftali",
     "alternatifler": [
@@ -5006,44 +5046,8 @@
     ]
   },
   {
-    "id": 550,
-    "soru": "Dal ucunda tüylü top bilmecesinin cevabı",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 551,
-    "soru": "Tüylü, nektarine benzeyen meyve",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 552,
-    "soru": "Dal ucunda tüylü top bilmecesinin cevabı",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 553,
-    "soru": "Ay üzerinde yenilen ilk meyve",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
     "id": 554,
-    "soru": "Neil Armstrong Ay'a indiğinde, bu meyveyi yemişti",
+    "soru": "Dal ucunda tüylü top bilmecesinin cevabı",
     "cevap": "Şeftali",
     "alternatifler": [
       "SEFTALI",
@@ -5052,7 +5056,7 @@
   },
   {
     "id": 555,
-    "soru": "İçi sulu, dışı tüylü meyve",
+    "soru": "Tüylü, nektarine benzeyen meyve",
     "cevap": "Şeftali",
     "alternatifler": [
       "SEFTALI",
@@ -5061,7 +5065,7 @@
   },
   {
     "id": 556,
-    "soru": "Tüysüz olanına nektarin denilen yaz meyvesi",
+    "soru": "Dal ucunda tüylü top bilmecesinin cevabı",
     "cevap": "Şeftali",
     "alternatifler": [
       "SEFTALI",
@@ -5070,7 +5074,7 @@
   },
   {
     "id": 557,
-    "soru": "Kabuğu tüylü olabilen tatlı ve sulu meyve",
+    "soru": "Ay üzerinde yenilen ilk meyve",
     "cevap": "Şeftali",
     "alternatifler": [
       "SEFTALI",
@@ -5079,7 +5083,7 @@
   },
   {
     "id": 558,
-    "soru": "Bursa'da birçok türü yetişen, bir yaz meyvesi",
+    "soru": "Neil Armstrong Ay'a indiğinde, bu meyveyi yemişti",
     "cevap": "Şeftali",
     "alternatifler": [
       "SEFTALI",
@@ -5088,60 +5092,6 @@
   },
   {
     "id": 559,
-    "soru": "Bursa'da birçok türü yetişen, bir yaz meyvesi",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 560,
-    "soru": "Bursa'da birçok türü yetişen, bir yaz meyvesi",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 561,
-    "soru": "Gülgiller ailesinden, içi sarı dışı turuncu meyve",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 562,
-    "soru": "Gülgiller ailesinden, içi sarı dışı turuncu meyve",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 563,
-    "soru": "Bursa'da yetişeni coğrafi tescilli olan meyve",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 564,
-    "soru": "Tüysüz olanına nektarin denilen yaz meyvesi",
-    "cevap": "Şeftali",
-    "alternatifler": [
-      "SEFTALI",
-      "ŞEFTALI"
-    ]
-  },
-  {
-    "id": 565,
     "soru": "İçi sulu, dışı tüylü meyve",
     "cevap": "Şeftali",
     "alternatifler": [
@@ -5150,43 +5100,93 @@
     ]
   },
   {
-    "id": 566,
-    "soru": "Doğrama ve dilimlemede kullanılan fonksiyonel alet",
-    "cevap": "Şef bıçağı",
+    "id": 560,
+    "soru": "Tüysüz olanına nektarin denilen yaz meyvesi",
+    "cevap": "Şeftali",
     "alternatifler": [
-      "ŞEF BIÇAĞI",
-      "SEF BICAGI",
-      "Şefbıçağı"
+      "SEFTALI",
+      "ŞEFTALI"
+    ]
+  },
+  {
+    "id": 561,
+    "soru": "Kabuğu tüylü olabilen tatlı ve sulu meyve",
+    "cevap": "Şeftali",
+    "alternatifler": [
+      "SEFTALI",
+      "ŞEFTALI"
+    ]
+  },
+  {
+    "id": 562,
+    "soru": "Bursa'da birçok türü yetişen, bir yaz meyvesi",
+    "cevap": "Şeftali",
+    "alternatifler": [
+      "SEFTALI",
+      "ŞEFTALI"
+    ]
+  },
+  {
+    "id": 563,
+    "soru": "Bursa'da birçok türü yetişen, bir yaz meyvesi",
+    "cevap": "Şeftali",
+    "alternatifler": [
+      "SEFTALI",
+      "ŞEFTALI"
+    ]
+  },
+  {
+    "id": 564,
+    "soru": "Bursa'da birçok türü yetişen, bir yaz meyvesi",
+    "cevap": "Şeftali",
+    "alternatifler": [
+      "SEFTALI",
+      "ŞEFTALI"
+    ]
+  },
+  {
+    "id": 565,
+    "soru": "Gülgiller ailesinden, içi sarı dışı turuncu meyve",
+    "cevap": "Şeftali",
+    "alternatifler": [
+      "SEFTALI",
+      "ŞEFTALI"
+    ]
+  },
+  {
+    "id": 566,
+    "soru": "Gülgiller ailesinden, içi sarı dışı turuncu meyve",
+    "cevap": "Şeftali",
+    "alternatifler": [
+      "SEFTALI",
+      "ŞEFTALI"
     ]
   },
   {
     "id": 567,
-    "soru": "Doğrama ve dilimlemede kullanılan fonksiyonel alet",
-    "cevap": "Şef bıçağı",
+    "soru": "Bursa'da yetişeni coğrafi tescilli olan meyve",
+    "cevap": "Şeftali",
     "alternatifler": [
-      "ŞEF BIÇAĞI",
-      "SEF BICAGI",
-      "Şefbıçağı"
+      "SEFTALI",
+      "ŞEFTALI"
     ]
   },
   {
     "id": 568,
-    "soru": "Lokanta servis elemanlarının en kıdemlisi",
-    "cevap": "Şef garson",
+    "soru": "Tüysüz olanına nektarin denilen yaz meyvesi",
+    "cevap": "Şeftali",
     "alternatifler": [
-      "ŞEF GARSON",
-      "SEF GARSON",
-      "Şefgarson"
+      "SEFTALI",
+      "ŞEFTALI"
     ]
   },
   {
     "id": 569,
-    "soru": "Lokanta servis elemanlarının en kıdemlisi",
-    "cevap": "Şef garson",
+    "soru": "İçi sulu, dışı tüylü meyve",
+    "cevap": "Şeftali",
     "alternatifler": [
-      "ŞEF GARSON",
-      "SEF GARSON",
-      "Şefgarson"
+      "SEFTALI",
+      "ŞEFTALI"
     ]
   },
   {
@@ -5857,402 +5857,6 @@
   },
   {
     "id": 644,
-    "soru": "1953'te Pancar Kooperatifleri adıyla kuruldu",
-    "cevap": "Şekerbank",
-    "alternatifler": [
-      "SEKERBANK",
-      "ŞEKERBANK"
-    ]
-  },
-  {
-    "id": 645,
-    "soru": "Eski adı Pancar Kooperatifi olan ticari kurum",
-    "cevap": "Şekerbank",
-    "alternatifler": [
-      "SEKERBANK",
-      "ŞEKERBANK"
-    ]
-  },
-  {
-    "id": 646,
-    "soru": "Yeniçerilere ulufe günü dağıtılırdı, akide __",
-    "cevap": "Şekeri",
-    "alternatifler": [
-      "SEKERI",
-      "ŞEKERI"
-    ]
-  },
-  {
-    "id": 647,
-    "soru": "Kadınların sıklıkla kullandığı samimiyet sözü",
-    "cevap": "Şekerim",
-    "alternatifler": [
-      "SEKERIM",
-      "ŞEKERIM"
-    ]
-  },
-  {
-    "id": 648,
-    "soru": "Shake It Up __, Kenan Doğulu şarkısı",
-    "cevap": "Şekerim",
-    "alternatifler": [
-      "SEKERIM",
-      "ŞEKERIM"
-    ]
-  },
-  {
-    "id": 649,
-    "soru": "Shake It Up __, ülkemizin 2007 Eurovision şarkısı",
-    "cevap": "Şekerim",
-    "alternatifler": [
-      "SEKERIM",
-      "ŞEKERIM"
-    ]
-  },
-  {
-    "id": 650,
-    "soru": "Akide bu tatlı sınıfının bir üyesidir",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 651,
-    "soru": "Kısa ve hafif uyku",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 652,
-    "soru": "Çok fazla sürmeyen uyku",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 653,
-    "soru": "Glikoz ve meyve özünden yapılan tatlı",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 654,
-    "soru": "Gün içinde kısa süreliğine uyuma",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 655,
-    "soru": "Gün içinde kısa süreliğine uyuma",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 656,
-    "soru": "Akide bu tatlı sınıfının bir üyesidir",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 657,
-    "soru": "Akide bu tatlı sınıfının bir üyesidir",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 658,
-    "soru": "Glikoz ve meyve özünden yapılan tatlı",
-    "cevap": "Şekerleme",
-    "alternatifler": [
-      "ŞEKERLEME",
-      "SEKERLEME"
-    ]
-  },
-  {
-    "id": 659,
-    "soru": "Toz ya da küp tatlandırıcı eklenmiş içecek",
-    "cevap": "Şekerli",
-    "alternatifler": [
-      "ŞEKERLI",
-      "SEKERLI"
-    ]
-  },
-  {
-    "id": 660,
-    "soru": "Bayramda ikramlık tatlıların konduğu kase",
-    "cevap": "Şekerlik",
-    "alternatifler": [
-      "ŞEKERLIK",
-      "SEKERLIK"
-    ]
-  },
-  {
-    "id": 661,
-    "soru": "Çayı sade içemeyenin gözü bunu arar",
-    "cevap": "Şekerlik",
-    "alternatifler": [
-      "ŞEKERLIK",
-      "SEKERLIK"
-    ]
-  },
-  {
-    "id": 662,
-    "soru": "Çayını tatlı içenler için masada bulunan kap",
-    "cevap": "Şekerlik",
-    "alternatifler": [
-      "ŞEKERLIK",
-      "SEKERLIK"
-    ]
-  },
-  {
-    "id": 663,
-    "soru": "Bir Türk filmine ismini vermiş tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 664,
-    "soru": "Şerbetli bir Türk tatlısı; tatlı bir kayısı türü",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 665,
-    "soru": "Genelde her birinin üzerine fındık konulan tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 666,
-    "soru": "Bir İlyas Salman komedisi; bir Türk tatlısı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 667,
-    "soru": "Şener Şen ve İlyas Salman'ın karakol temalı film",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 668,
-    "soru": "Şener Şen'in \"Ziver\" rolünde olduğu film",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 669,
-    "soru": "Şener Şen'in Ziver karakterini canlandırdığı film",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 670,
-    "soru": "Ortası fındıklı şerbetli kurabiye",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 671,
-    "soru": "Üstüne bir adet kuru yemiş konan şerbetli tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 672,
-    "soru": "Şerbetli bir Türk tatlısı; tatlı bir kayısı türü",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 673,
-    "soru": "Şener Şen bu filmde komiser Ziver'i canlandırdı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 674,
-    "soru": "Bir hamur tatlısı; Şener Şen'in bir filmi",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 675,
-    "soru": "Şener Şen'in Ziver karakterini canlandırdığı film",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 676,
-    "soru": "İlyas Salman'ın, sürgündeki zabıtayı oynadığı film",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 677,
-    "soru": "Ortasına badem, fındık koyulan yuvarlak bir tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 678,
-    "soru": "Ortasına badem, fındık koyulan yuvarlak bir tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 679,
-    "soru": "Üstüne bir adet kuru yemiş konan şerbetli tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 680,
-    "soru": "İlyas Salman'ın, sürgündeki zabıtayı oynadığı film",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 681,
-    "soru": "Ortası fındıklı şerbetli kurabiye",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 682,
-    "soru": "Genelde her birinin üzerine fındık konulan tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 683,
-    "soru": "Ortasına badem, fındık koyulan yuvarlak bir tatlı",
-    "cevap": "Şekerpare",
-    "alternatifler": [
-      "SEKERPARE",
-      "ŞEKERPARE"
-    ]
-  },
-  {
-    "id": 684,
-    "soru": "İki kişinin dostluk ilişkilerinin bozuk olması",
-    "cevap": "Şekerrenk",
-    "alternatifler": [
-      "SEKERRENK",
-      "ŞEKERRENK"
-    ]
-  },
-  {
-    "id": 685,
-    "soru": "Türk kahvesinin sade hali",
-    "cevap": "Şekersiz",
-    "alternatifler": [
-      "SEKERSIZ",
-      "ŞEKERSIZ"
-    ]
-  },
-  {
-    "id": 686,
-    "soru": "Glikoz oranı en az olan Türk kahvesi türü",
-    "cevap": "Şekersiz",
-    "alternatifler": [
-      "SEKERSIZ",
-      "ŞEKERSIZ"
-    ]
-  },
-  {
-    "id": 687,
-    "soru": "Türk kahvesinin sade hali",
-    "cevap": "Şekersiz",
-    "alternatifler": [
-      "SEKERSIZ",
-      "ŞEKERSIZ"
-    ]
-  },
-  {
-    "id": 688,
     "soru": "Tatlı veya sevimli bir şeyi tanımlarken kullanılır",
     "cevap": "Şeker gibi",
     "alternatifler": [
@@ -6262,7 +5866,7 @@
     ]
   },
   {
-    "id": 689,
+    "id": 645,
     "soru": "Şarkıda, çocuğun dolabı açınca karıştırdığı ikili",
     "cevap": "Şeker ilaç",
     "alternatifler": [
@@ -6272,7 +5876,7 @@
     ]
   },
   {
-    "id": 690,
+    "id": 646,
     "soru": "Şarkıda, çocuğun dolabı açınca karıştırdığı ikili",
     "cevap": "Şeker ilaç",
     "alternatifler": [
@@ -6282,7 +5886,7 @@
     ]
   },
   {
-    "id": 691,
+    "id": 647,
     "soru": "Özgün adı Candy Candy olan çizgi karakterin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6292,7 +5896,7 @@
     ]
   },
   {
-    "id": 692,
+    "id": 648,
     "soru": "__ Candy, 1979'da TRT'de yayınlanan çizgi dizi",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6302,7 +5906,7 @@
     ]
   },
   {
-    "id": 693,
+    "id": 649,
     "soru": "Bir Japon çizgi film karakteri Candy'nin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6312,7 +5916,7 @@
     ]
   },
   {
-    "id": 694,
+    "id": 650,
     "soru": "__ Candy, 1979'da TRT'de yayınlanan çizgi dizi",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6322,7 +5926,7 @@
     ]
   },
   {
-    "id": 695,
+    "id": 651,
     "soru": "Bir Japon çizgi film karakteri Candy'nin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6332,7 +5936,7 @@
     ]
   },
   {
-    "id": 696,
+    "id": 652,
     "soru": "Çizgi film kahramanı Candy'nin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6342,7 +5946,7 @@
     ]
   },
   {
-    "id": 697,
+    "id": 653,
     "soru": "Çizgi film kahramanı Candy'nin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6352,7 +5956,7 @@
     ]
   },
   {
-    "id": 698,
+    "id": 654,
     "soru": "Çizgi film kahramanı Candy'nin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6362,7 +5966,7 @@
     ]
   },
   {
-    "id": 699,
+    "id": 655,
     "soru": "Bir Japon çizgi film karakteri Candy'nin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6372,7 +5976,7 @@
     ]
   },
   {
-    "id": 700,
+    "id": 656,
     "soru": "Çizgi film kahramanı Candy'nin lakabı",
     "cevap": "Şeker kız",
     "alternatifler": [
@@ -6382,7 +5986,7 @@
     ]
   },
   {
-    "id": 701,
+    "id": 657,
     "soru": "Üç beyaz denilen gıdalardan zıt tatlı olanlar",
     "cevap": "Şeker tuz",
     "alternatifler": [
@@ -6392,7 +5996,413 @@
     ]
   },
   {
+    "id": 658,
+    "soru": "1953'te Pancar Kooperatifleri adıyla kuruldu",
+    "cevap": "Şekerbank",
+    "alternatifler": [
+      "SEKERBANK",
+      "ŞEKERBANK"
+    ]
+  },
+  {
+    "id": 659,
+    "soru": "Eski adı Pancar Kooperatifi olan ticari kurum",
+    "cevap": "Şekerbank",
+    "alternatifler": [
+      "SEKERBANK",
+      "ŞEKERBANK"
+    ]
+  },
+  {
+    "id": 660,
+    "soru": "Yeniçerilere ulufe günü dağıtılırdı, akide __",
+    "cevap": "Şekeri",
+    "alternatifler": [
+      "SEKERI",
+      "ŞEKERI"
+    ]
+  },
+  {
+    "id": 661,
+    "soru": "Kadınların sıklıkla kullandığı samimiyet sözü",
+    "cevap": "Şekerim",
+    "alternatifler": [
+      "SEKERIM",
+      "ŞEKERIM"
+    ]
+  },
+  {
+    "id": 662,
+    "soru": "Shake It Up __, Kenan Doğulu şarkısı",
+    "cevap": "Şekerim",
+    "alternatifler": [
+      "SEKERIM",
+      "ŞEKERIM"
+    ]
+  },
+  {
+    "id": 663,
+    "soru": "Shake It Up __, ülkemizin 2007 Eurovision şarkısı",
+    "cevap": "Şekerim",
+    "alternatifler": [
+      "SEKERIM",
+      "ŞEKERIM"
+    ]
+  },
+  {
+    "id": 664,
+    "soru": "Akide bu tatlı sınıfının bir üyesidir",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 665,
+    "soru": "Kısa ve hafif uyku",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 666,
+    "soru": "Çok fazla sürmeyen uyku",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 667,
+    "soru": "Glikoz ve meyve özünden yapılan tatlı",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 668,
+    "soru": "Gün içinde kısa süreliğine uyuma",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 669,
+    "soru": "Gün içinde kısa süreliğine uyuma",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 670,
+    "soru": "Akide bu tatlı sınıfının bir üyesidir",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 671,
+    "soru": "Akide bu tatlı sınıfının bir üyesidir",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 672,
+    "soru": "Glikoz ve meyve özünden yapılan tatlı",
+    "cevap": "Şekerleme",
+    "alternatifler": [
+      "ŞEKERLEME",
+      "SEKERLEME"
+    ]
+  },
+  {
+    "id": 673,
+    "soru": "Toz ya da küp tatlandırıcı eklenmiş içecek",
+    "cevap": "Şekerli",
+    "alternatifler": [
+      "ŞEKERLI",
+      "SEKERLI"
+    ]
+  },
+  {
+    "id": 674,
+    "soru": "Bayramda ikramlık tatlıların konduğu kase",
+    "cevap": "Şekerlik",
+    "alternatifler": [
+      "ŞEKERLIK",
+      "SEKERLIK"
+    ]
+  },
+  {
+    "id": 675,
+    "soru": "Çayı sade içemeyenin gözü bunu arar",
+    "cevap": "Şekerlik",
+    "alternatifler": [
+      "ŞEKERLIK",
+      "SEKERLIK"
+    ]
+  },
+  {
+    "id": 676,
+    "soru": "Çayını tatlı içenler için masada bulunan kap",
+    "cevap": "Şekerlik",
+    "alternatifler": [
+      "ŞEKERLIK",
+      "SEKERLIK"
+    ]
+  },
+  {
+    "id": 677,
+    "soru": "Bir Türk filmine ismini vermiş tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 678,
+    "soru": "Şerbetli bir Türk tatlısı; tatlı bir kayısı türü",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 679,
+    "soru": "Genelde her birinin üzerine fındık konulan tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 680,
+    "soru": "Bir İlyas Salman komedisi; bir Türk tatlısı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 681,
+    "soru": "Şener Şen ve İlyas Salman'ın karakol temalı film",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 682,
+    "soru": "Şener Şen'in \"Ziver\" rolünde olduğu film",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 683,
+    "soru": "Şener Şen'in Ziver karakterini canlandırdığı film",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 684,
+    "soru": "Ortası fındıklı şerbetli kurabiye",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 685,
+    "soru": "Üstüne bir adet kuru yemiş konan şerbetli tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 686,
+    "soru": "Şerbetli bir Türk tatlısı; tatlı bir kayısı türü",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 687,
+    "soru": "Şener Şen bu filmde komiser Ziver'i canlandırdı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 688,
+    "soru": "Bir hamur tatlısı; Şener Şen'in bir filmi",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 689,
+    "soru": "Şener Şen'in Ziver karakterini canlandırdığı film",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 690,
+    "soru": "İlyas Salman'ın, sürgündeki zabıtayı oynadığı film",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 691,
+    "soru": "Ortasına badem, fındık koyulan yuvarlak bir tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 692,
+    "soru": "Ortasına badem, fındık koyulan yuvarlak bir tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 693,
+    "soru": "Üstüne bir adet kuru yemiş konan şerbetli tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 694,
+    "soru": "İlyas Salman'ın, sürgündeki zabıtayı oynadığı film",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 695,
+    "soru": "Ortası fındıklı şerbetli kurabiye",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 696,
+    "soru": "Genelde her birinin üzerine fındık konulan tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 697,
+    "soru": "Ortasına badem, fındık koyulan yuvarlak bir tatlı",
+    "cevap": "Şekerpare",
+    "alternatifler": [
+      "SEKERPARE",
+      "ŞEKERPARE"
+    ]
+  },
+  {
+    "id": 698,
+    "soru": "İki kişinin dostluk ilişkilerinin bozuk olması",
+    "cevap": "Şekerrenk",
+    "alternatifler": [
+      "SEKERRENK",
+      "ŞEKERRENK"
+    ]
+  },
+  {
+    "id": 699,
+    "soru": "Türk kahvesinin sade hali",
+    "cevap": "Şekersiz",
+    "alternatifler": [
+      "SEKERSIZ",
+      "ŞEKERSIZ"
+    ]
+  },
+  {
+    "id": 700,
+    "soru": "Glikoz oranı en az olan Türk kahvesi türü",
+    "cevap": "Şekersiz",
+    "alternatifler": [
+      "SEKERSIZ",
+      "ŞEKERSIZ"
+    ]
+  },
+  {
+    "id": 701,
+    "soru": "Türk kahvesinin sade hali",
+    "cevap": "Şekersiz",
+    "alternatifler": [
+      "SEKERSIZ",
+      "ŞEKERSIZ"
+    ]
+  },
+  {
     "id": 702,
+    "soru": "Belli bir kalıbın formuna bürünme, biçim kazanma",
+    "cevap": "Şekil alma",
+    "alternatifler": [
+      "SEKIL ALMA",
+      "ŞEKIL ALMA",
+      "Şekilalma"
+    ]
+  },
+  {
+    "id": 703,
     "soru": "Biçime ve imaja tutkun olan",
     "cevap": "Şekilci",
     "alternatifler": [
@@ -6401,7 +6411,7 @@
     ]
   },
   {
-    "id": 703,
+    "id": 704,
     "soru": "Belirli bir formu olmayan; biçim yoksunu",
     "cevap": "Şekilsiz",
     "alternatifler": [
@@ -6410,22 +6420,12 @@
     ]
   },
   {
-    "id": 704,
+    "id": 705,
     "soru": "Eşsizlik sözünün anagramı; biçime sahip olmayan",
     "cevap": "Şekilsiz",
     "alternatifler": [
       "SEKILSIZ",
       "ŞEKILSIZ"
-    ]
-  },
-  {
-    "id": 705,
-    "soru": "Belli bir kalıbın formuna bürünme, biçim kazanma",
-    "cevap": "Şekil alma",
-    "alternatifler": [
-      "SEKIL ALMA",
-      "ŞEKIL ALMA",
-      "Şekilalma"
     ]
   },
   {
@@ -6880,332 +6880,6 @@
   },
   {
     "id": 756,
-    "soru": "Eski dilde alçakça hareket etme, iğrençlik, şer",
-    "cevap": "Şenaat",
-    "alternatifler": [
-      "SENAAT",
-      "ŞENAAT"
-    ]
-  },
-  {
-    "id": 757,
-    "soru": "Kaplamalarda kullanılan, kalın olmayan tahta",
-    "cevap": "Şendere",
-    "alternatifler": [
-      "SENDERE",
-      "ŞENDERE"
-    ]
-  },
-  {
-    "id": 758,
-    "soru": "Halk ağzında, sevinç duymak, memnun olmak",
-    "cevap": "Şenelmek",
-    "alternatifler": [
-      "SENELMEK",
-      "ŞENELMEK"
-    ]
-  },
-  {
-    "id": 759,
-    "soru": "Hababam Sınıfı'nın Badi Ekrem'i",
-    "cevap": "Şenerşen",
-    "alternatifler": [
-      "SENERSEN",
-      "ŞENERŞEN"
-    ]
-  },
-  {
-    "id": 760,
-    "soru": "Eşkıya filminin aktörü",
-    "cevap": "Şenerşen",
-    "alternatifler": [
-      "SENERSEN",
-      "ŞENERŞEN"
-    ]
-  },
-  {
-    "id": 761,
-    "soru": "Eşkıya filminin başrol oyuncusu",
-    "cevap": "Şenerşen",
-    "alternatifler": [
-      "SENERSEN",
-      "ŞENERŞEN"
-    ]
-  },
-  {
-    "id": 762,
-    "soru": "Ali Haydar rolüyle İkinci Bahar'da oynadı",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 763,
-    "soru": "Yavuz Turgul filmlerinin vazgeçilmez oyuncusu",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 764,
-    "soru": "Muhsin Bey filminde başrolü oynadı",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 765,
-    "soru": "Hababam Sınıfı'nda Badi Ekrem'i oynayan aktör",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 766,
-    "soru": "Eşkıya ve Züğürt Ağa filmlerinin başrol oyuncusu",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 767,
-    "soru": "\"Atma Ziya\" lafının muhatabı olan aktör",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 768,
-    "soru": "Şalvar Davası filmiyle ünlenen usta oyuncu",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 769,
-    "soru": "Gönül Yarası filminin başrol erkek oyuncusu",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 770,
-    "soru": "Süt Kardeşler'de Hüsamettin rolünü oynayan oyuncu",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 771,
-    "soru": "Çiçek Abbas'ın baş düşmanı Şakir'e hayat verdi",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 772,
-    "soru": "Gönül Yarası filminin başrol erkek oyuncusu",
-    "cevap": "Şener şen",
-    "alternatifler": [
-      "ŞENER ŞEN",
-      "SENER SEN",
-      "Şenerşen"
-    ]
-  },
-  {
-    "id": 773,
-    "soru": "Türkiye'nin en ünlü jeoloji profesorü, Celal __",
-    "cevap": "Şengör",
-    "alternatifler": [
-      "SENGOR",
-      "ŞENGÖR"
-    ]
-  },
-  {
-    "id": 774,
-    "soru": "Celal isimli popüler Jeoloji profesörünün soyadı",
-    "cevap": "Şengör",
-    "alternatifler": [
-      "SENGOR",
-      "ŞENGÖR"
-    ]
-  },
-  {
-    "id": 775,
-    "soru": "Bilimin Büyüsü kitabının yazarı, Celal __",
-    "cevap": "Şengör",
-    "alternatifler": [
-      "SENGOR",
-      "ŞENGÖR"
-    ]
-  },
-  {
-    "id": 776,
-    "soru": "Celal __, Rus Bilimler Akademisi'ne seçilen jeolog",
-    "cevap": "Şengör",
-    "alternatifler": [
-      "SENGOR",
-      "ŞENGÖR"
-    ]
-  },
-  {
-    "id": 777,
-    "soru": "Celal isimli popüler Jeoloji profesörünün soyadı",
-    "cevap": "Şengör",
-    "alternatifler": [
-      "SENGOR",
-      "ŞENGÖR"
-    ]
-  },
-  {
-    "id": 778,
-    "soru": "Özel günlerde düzenlenen eğlenceler, festival",
-    "cevap": "Şenlik",
-    "alternatifler": [
-      "ŞENLIK",
-      "SENLIK"
-    ]
-  },
-  {
-    "id": 779,
-    "soru": "Belli günlerde yapılan coşkulu eğlence",
-    "cevap": "Şenlik",
-    "alternatifler": [
-      "ŞENLIK",
-      "SENLIK"
-    ]
-  },
-  {
-    "id": 780,
-    "soru": "Özel günlerde düzenlenen eğlenceler, festival",
-    "cevap": "Şenlik",
-    "alternatifler": [
-      "ŞENLIK",
-      "SENLIK"
-    ]
-  },
-  {
-    "id": 781,
-    "soru": "WTA'da final oynayan ilk Türk tenisçi, İpek __",
-    "cevap": "Şenoğlu",
-    "alternatifler": [
-      "SENOGLU",
-      "ŞENOĞLU"
-    ]
-  },
-  {
-    "id": 782,
-    "soru": "Kuzeyinde Cide bulunan Kastamonu ilçesi",
-    "cevap": "Şenpazar",
-    "alternatifler": [
-      "SENPAZAR",
-      "ŞENPAZAR"
-    ]
-  },
-  {
-    "id": 783,
-    "soru": "Kuzeyinde Cide bulunan Kastamonu ilçesi",
-    "cevap": "Şenpazar",
-    "alternatifler": [
-      "SENPAZAR",
-      "ŞENPAZAR"
-    ]
-  },
-  {
-    "id": 784,
-    "soru": "Ferhan __, Ferhangi Şeyler",
-    "cevap": "Şensoy",
-    "alternatifler": [
-      "SENSOY",
-      "ŞENSOY"
-    ]
-  },
-  {
-    "id": 785,
-    "soru": "Ferhan __, Pardon filminin başrolü usta oyuncu",
-    "cevap": "Şensoy",
-    "alternatifler": [
-      "SENSOY",
-      "ŞENSOY"
-    ]
-  },
-  {
-    "id": 786,
-    "soru": "Ferhangi Şeyler oyununun yazarı, Ferhan __",
-    "cevap": "Şensoy",
-    "alternatifler": [
-      "SENSOY",
-      "ŞENSOY"
-    ]
-  },
-  {
-    "id": 787,
-    "soru": "Metin isimli görme engelli Türk şarkıcının soyadı",
-    "cevap": "Şentürk",
-    "alternatifler": [
-      "ŞENTÜRK",
-      "SENTURK"
-    ]
-  },
-  {
-    "id": 788,
-    "soru": "Metin isimli görme engelli Türk şarkıcının soyadı",
-    "cevap": "Şentürk",
-    "alternatifler": [
-      "ŞENTÜRK",
-      "SENTURK"
-    ]
-  },
-  {
-    "id": 789,
-    "soru": "Olimpiyat madalyası alan ilk Türk kadın, Hülya __",
-    "cevap": "Şenyurt",
-    "alternatifler": [
-      "ŞENYURT",
-      "SENYURT"
-    ]
-  },
-  {
-    "id": 790,
-    "soru": "Rize'nin Çamlıhemşin ilçesindeki tarihi köprü",
-    "cevap": "Şenyuva",
-    "alternatifler": [
-      "SENYUVA",
-      "ŞENYUVA"
-    ]
-  },
-  {
-    "id": 791,
     "soru": "Nietzsche'nin en çok şiirini içeren eser",
     "cevap": "Şen bilim",
     "alternatifler": [
@@ -7215,7 +6889,7 @@
     ]
   },
   {
-    "id": 792,
+    "id": 757,
     "soru": "Müzisyen Franz Lehar'ın ünlü opereti",
     "cevap": "Şen dul",
     "alternatifler": [
@@ -7225,7 +6899,7 @@
     ]
   },
   {
-    "id": 793,
+    "id": 758,
     "soru": "Yazar Paul Pörtner'ın interaktif komedi oyunu",
     "cevap": "Şen makas",
     "alternatifler": [
@@ -7235,7 +6909,7 @@
     ]
   },
   {
-    "id": 794,
+    "id": 759,
     "soru": "Çok neşeli kişiler için kullanılan bir ikileme",
     "cevap": "Şen şakrak",
     "alternatifler": [
@@ -7245,13 +6919,339 @@
     ]
   },
   {
-    "id": 795,
+    "id": 760,
     "soru": "Çok keyifli, neşeli anlamlarında bir ikileme",
     "cevap": "Şen şakrak",
     "alternatifler": [
       "ŞEN ŞAKRAK",
       "SEN SAKRAK",
       "Şenşakrak"
+    ]
+  },
+  {
+    "id": 761,
+    "soru": "Eski dilde alçakça hareket etme, iğrençlik, şer",
+    "cevap": "Şenaat",
+    "alternatifler": [
+      "SENAAT",
+      "ŞENAAT"
+    ]
+  },
+  {
+    "id": 762,
+    "soru": "Kaplamalarda kullanılan, kalın olmayan tahta",
+    "cevap": "Şendere",
+    "alternatifler": [
+      "SENDERE",
+      "ŞENDERE"
+    ]
+  },
+  {
+    "id": 763,
+    "soru": "Halk ağzında, sevinç duymak, memnun olmak",
+    "cevap": "Şenelmek",
+    "alternatifler": [
+      "SENELMEK",
+      "ŞENELMEK"
+    ]
+  },
+  {
+    "id": 764,
+    "soru": "Ali Haydar rolüyle İkinci Bahar'da oynadı",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 765,
+    "soru": "Yavuz Turgul filmlerinin vazgeçilmez oyuncusu",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 766,
+    "soru": "Muhsin Bey filminde başrolü oynadı",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 767,
+    "soru": "Hababam Sınıfı'nda Badi Ekrem'i oynayan aktör",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 768,
+    "soru": "Eşkıya ve Züğürt Ağa filmlerinin başrol oyuncusu",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 769,
+    "soru": "\"Atma Ziya\" lafının muhatabı olan aktör",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 770,
+    "soru": "Şalvar Davası filmiyle ünlenen usta oyuncu",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 771,
+    "soru": "Gönül Yarası filminin başrol erkek oyuncusu",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 772,
+    "soru": "Süt Kardeşler'de Hüsamettin rolünü oynayan oyuncu",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 773,
+    "soru": "Çiçek Abbas'ın baş düşmanı Şakir'e hayat verdi",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 774,
+    "soru": "Gönül Yarası filminin başrol erkek oyuncusu",
+    "cevap": "Şener şen",
+    "alternatifler": [
+      "ŞENER ŞEN",
+      "SENER SEN",
+      "Şenerşen"
+    ]
+  },
+  {
+    "id": 775,
+    "soru": "Hababam Sınıfı'nın Badi Ekrem'i",
+    "cevap": "Şenerşen",
+    "alternatifler": [
+      "SENERSEN",
+      "ŞENERŞEN"
+    ]
+  },
+  {
+    "id": 776,
+    "soru": "Eşkıya filminin aktörü",
+    "cevap": "Şenerşen",
+    "alternatifler": [
+      "SENERSEN",
+      "ŞENERŞEN"
+    ]
+  },
+  {
+    "id": 777,
+    "soru": "Eşkıya filminin başrol oyuncusu",
+    "cevap": "Şenerşen",
+    "alternatifler": [
+      "SENERSEN",
+      "ŞENERŞEN"
+    ]
+  },
+  {
+    "id": 778,
+    "soru": "Türkiye'nin en ünlü jeoloji profesorü, Celal __",
+    "cevap": "Şengör",
+    "alternatifler": [
+      "SENGOR",
+      "ŞENGÖR"
+    ]
+  },
+  {
+    "id": 779,
+    "soru": "Celal isimli popüler Jeoloji profesörünün soyadı",
+    "cevap": "Şengör",
+    "alternatifler": [
+      "SENGOR",
+      "ŞENGÖR"
+    ]
+  },
+  {
+    "id": 780,
+    "soru": "Bilimin Büyüsü kitabının yazarı, Celal __",
+    "cevap": "Şengör",
+    "alternatifler": [
+      "SENGOR",
+      "ŞENGÖR"
+    ]
+  },
+  {
+    "id": 781,
+    "soru": "Celal __, Rus Bilimler Akademisi'ne seçilen jeolog",
+    "cevap": "Şengör",
+    "alternatifler": [
+      "SENGOR",
+      "ŞENGÖR"
+    ]
+  },
+  {
+    "id": 782,
+    "soru": "Celal isimli popüler Jeoloji profesörünün soyadı",
+    "cevap": "Şengör",
+    "alternatifler": [
+      "SENGOR",
+      "ŞENGÖR"
+    ]
+  },
+  {
+    "id": 783,
+    "soru": "Özel günlerde düzenlenen eğlenceler, festival",
+    "cevap": "Şenlik",
+    "alternatifler": [
+      "ŞENLIK",
+      "SENLIK"
+    ]
+  },
+  {
+    "id": 784,
+    "soru": "Belli günlerde yapılan coşkulu eğlence",
+    "cevap": "Şenlik",
+    "alternatifler": [
+      "ŞENLIK",
+      "SENLIK"
+    ]
+  },
+  {
+    "id": 785,
+    "soru": "Özel günlerde düzenlenen eğlenceler, festival",
+    "cevap": "Şenlik",
+    "alternatifler": [
+      "ŞENLIK",
+      "SENLIK"
+    ]
+  },
+  {
+    "id": 786,
+    "soru": "WTA'da final oynayan ilk Türk tenisçi, İpek __",
+    "cevap": "Şenoğlu",
+    "alternatifler": [
+      "SENOGLU",
+      "ŞENOĞLU"
+    ]
+  },
+  {
+    "id": 787,
+    "soru": "Kuzeyinde Cide bulunan Kastamonu ilçesi",
+    "cevap": "Şenpazar",
+    "alternatifler": [
+      "SENPAZAR",
+      "ŞENPAZAR"
+    ]
+  },
+  {
+    "id": 788,
+    "soru": "Kuzeyinde Cide bulunan Kastamonu ilçesi",
+    "cevap": "Şenpazar",
+    "alternatifler": [
+      "SENPAZAR",
+      "ŞENPAZAR"
+    ]
+  },
+  {
+    "id": 789,
+    "soru": "Ferhan __, Ferhangi Şeyler",
+    "cevap": "Şensoy",
+    "alternatifler": [
+      "SENSOY",
+      "ŞENSOY"
+    ]
+  },
+  {
+    "id": 790,
+    "soru": "Ferhan __, Pardon filminin başrolü usta oyuncu",
+    "cevap": "Şensoy",
+    "alternatifler": [
+      "SENSOY",
+      "ŞENSOY"
+    ]
+  },
+  {
+    "id": 791,
+    "soru": "Ferhangi Şeyler oyununun yazarı, Ferhan __",
+    "cevap": "Şensoy",
+    "alternatifler": [
+      "SENSOY",
+      "ŞENSOY"
+    ]
+  },
+  {
+    "id": 792,
+    "soru": "Metin isimli görme engelli Türk şarkıcının soyadı",
+    "cevap": "Şentürk",
+    "alternatifler": [
+      "ŞENTÜRK",
+      "SENTURK"
+    ]
+  },
+  {
+    "id": 793,
+    "soru": "Metin isimli görme engelli Türk şarkıcının soyadı",
+    "cevap": "Şentürk",
+    "alternatifler": [
+      "ŞENTÜRK",
+      "SENTURK"
+    ]
+  },
+  {
+    "id": 794,
+    "soru": "Olimpiyat madalyası alan ilk Türk kadın, Hülya __",
+    "cevap": "Şenyurt",
+    "alternatifler": [
+      "ŞENYURT",
+      "SENYURT"
+    ]
+  },
+  {
+    "id": 795,
+    "soru": "Rize'nin Çamlıhemşin ilçesindeki tarihi köprü",
+    "cevap": "Şenyuva",
+    "alternatifler": [
+      "SENYUVA",
+      "ŞENYUVA"
     ]
   },
   {
@@ -7445,6 +7445,16 @@
   },
   {
     "id": 817,
+    "soru": "Kişinin onurunu ön plana koyduğu önemli vaat",
+    "cevap": "Şeref sözü",
+    "alternatifler": [
+      "SEREF SOZU",
+      "ŞEREF SÖZÜ",
+      "Şerefsözü"
+    ]
+  },
+  {
+    "id": 818,
     "soru": "Münir Özkul'un Rıza'yı canlandırdığı film; Aile __",
     "cevap": "Şerefi",
     "alternatifler": [
@@ -7453,17 +7463,8 @@
     ]
   },
   {
-    "id": 818,
-    "soru": "Yaşar Usta'nın tiradıyla ünlü film, Aile __",
-    "cevap": "Şerefi",
-    "alternatifler": [
-      "ŞEREFI",
-      "SEREFI"
-    ]
-  },
-  {
     "id": 819,
-    "soru": "Oktay adlı kötü karakter olan Türk filmi, Aile __",
+    "soru": "Yaşar Usta'nın tiradıyla ünlü film, Aile __",
     "cevap": "Şerefi",
     "alternatifler": [
       "ŞEREFI",
@@ -7481,6 +7482,15 @@
   },
   {
     "id": 821,
+    "soru": "Oktay adlı kötü karakter olan Türk filmi, Aile __",
+    "cevap": "Şerefi",
+    "alternatifler": [
+      "ŞEREFI",
+      "SEREFI"
+    ]
+  },
+  {
+    "id": 822,
     "soru": "Etrafı güzelleştirilen mülklerden alınan ek ücret",
     "cevap": "Şerefiye",
     "alternatifler": [
@@ -7489,7 +7499,7 @@
     ]
   },
   {
-    "id": 822,
+    "id": 823,
     "soru": "Onurlu, gururlu kişi",
     "cevap": "Şerefli",
     "alternatifler": [
@@ -7498,7 +7508,7 @@
     ]
   },
   {
-    "id": 823,
+    "id": 824,
     "soru": "Ankara'nın iki ilçesinin unvanları, kahraman, __",
     "cevap": "Şerefli",
     "alternatifler": [
@@ -7507,17 +7517,17 @@
     ]
   },
   {
-    "id": 824,
-    "soru": "Kişinin onurunu ön plana koyduğu önemli vaat",
-    "cevap": "Şeref sözü",
+    "id": 825,
+    "soru": "TBMM'de ilk konuşmayı yapan Sinop milletvekili",
+    "cevap": "Şerif bey",
     "alternatifler": [
-      "SEREF SOZU",
-      "ŞEREF SÖZÜ",
-      "Şerefsözü"
+      "SERIF BEY",
+      "ŞERIF BEY",
+      "Şerifbey"
     ]
   },
   {
-    "id": 825,
+    "id": 826,
     "soru": "Ünlü aktris Perihan Savaş'ın ilk ismi",
     "cevap": "Şerife",
     "alternatifler": [
@@ -7526,22 +7536,12 @@
     ]
   },
   {
-    "id": 826,
+    "id": 827,
     "soru": "Kurtuluş Savaşı'nın kahramanlarındandır, __ Bacı",
     "cevap": "Şerife",
     "alternatifler": [
       "SERIFE",
       "ŞERIFE"
-    ]
-  },
-  {
-    "id": 827,
-    "soru": "TBMM'de ilk konuşmayı yapan Sinop milletvekili",
-    "cevap": "Şerif bey",
-    "alternatifler": [
-      "SERIF BEY",
-      "ŞERIF BEY",
-      "Şerifbey"
     ]
   },
   {
@@ -7555,11 +7555,12 @@
   },
   {
     "id": 829,
-    "soru": "Tavlada 6-5 gelen zar",
-    "cevap": "Şeşbeş",
+    "soru": "Toplamı 11 olan iki zara, tavlada verilen ad",
+    "cevap": "Şeş beş",
     "alternatifler": [
-      "SESBES",
-      "ŞEŞBEŞ"
+      "SES BES",
+      "ŞEŞ BEŞ",
+      "Şeşbeş"
     ]
   },
   {
@@ -7582,16 +7583,16 @@
   },
   {
     "id": 832,
-    "soru": "Tavlada, atılan zarların 6-4 gelmesi",
-    "cevap": "Şeşcihar",
+    "soru": "Tavlada 6-5 gelen zar",
+    "cevap": "Şeşbeş",
     "alternatifler": [
-      "ŞEŞCIHAR",
-      "SESCIHAR"
+      "SESBES",
+      "ŞEŞBEŞ"
     ]
   },
   {
     "id": 833,
-    "soru": "Tavlada 6-4 gelen zar",
+    "soru": "Tavlada, atılan zarların 6-4 gelmesi",
     "cevap": "Şeşcihar",
     "alternatifler": [
       "ŞEŞCIHAR",
@@ -7600,7 +7601,7 @@
   },
   {
     "id": 834,
-    "soru": "Tavlada, atılan zarların 6-4 gelmesi",
+    "soru": "Tavlada 6-4 gelen zar",
     "cevap": "Şeşcihar",
     "alternatifler": [
       "ŞEŞCIHAR",
@@ -7609,6 +7610,15 @@
   },
   {
     "id": 835,
+    "soru": "Tavlada, atılan zarların 6-4 gelmesi",
+    "cevap": "Şeşcihar",
+    "alternatifler": [
+      "ŞEŞCIHAR",
+      "SESCIHAR"
+    ]
+  },
+  {
+    "id": 836,
     "soru": "Altı kaval, üstü __",
     "cevap": "Şeşhane",
     "alternatifler": [
@@ -7617,17 +7627,8 @@
     ]
   },
   {
-    "id": 836,
-    "soru": "Tavlada, atılan zarların 6-2 gelmesi",
-    "cevap": "Şeşüdü",
-    "alternatifler": [
-      "SESUDU",
-      "ŞEŞÜDÜ"
-    ]
-  },
-  {
     "id": 837,
-    "soru": "Tavlada 6-2 gelen zar",
+    "soru": "Tavlada, atılan zarların 6-2 gelmesi",
     "cevap": "Şeşüdü",
     "alternatifler": [
       "SESUDU",
@@ -7636,7 +7637,7 @@
   },
   {
     "id": 838,
-    "soru": "Tavlada, atılan zarların 6-2 gelmesi",
+    "soru": "Tavlada 6-2 gelen zar",
     "cevap": "Şeşüdü",
     "alternatifler": [
       "SESUDU",
@@ -7645,16 +7646,16 @@
   },
   {
     "id": 839,
-    "soru": "Tavlada, atılan zarların 6-3 gelmesi",
-    "cevap": "Şeşüse",
+    "soru": "Tavlada, atılan zarların 6-2 gelmesi",
+    "cevap": "Şeşüdü",
     "alternatifler": [
-      "ŞEŞÜSE",
-      "SESUSE"
+      "SESUDU",
+      "ŞEŞÜDÜ"
     ]
   },
   {
     "id": 840,
-    "soru": "Tavlada 6-3 gelen zar",
+    "soru": "Tavlada, atılan zarların 6-3 gelmesi",
     "cevap": "Şeşüse",
     "alternatifler": [
       "ŞEŞÜSE",
@@ -7663,7 +7664,7 @@
   },
   {
     "id": 841,
-    "soru": "Tavlada, atılan zarların 6-3 gelmesi",
+    "soru": "Tavlada 6-3 gelen zar",
     "cevap": "Şeşüse",
     "alternatifler": [
       "ŞEŞÜSE",
@@ -7672,7 +7673,7 @@
   },
   {
     "id": 842,
-    "soru": "Tavlada 6-3 gelen zar",
+    "soru": "Tavlada, atılan zarların 6-3 gelmesi",
     "cevap": "Şeşüse",
     "alternatifler": [
       "ŞEŞÜSE",
@@ -7690,7 +7691,7 @@
   },
   {
     "id": 844,
-    "soru": "Tavlada, atılan zarların 6-3 gelmesi",
+    "soru": "Tavlada 6-3 gelen zar",
     "cevap": "Şeşüse",
     "alternatifler": [
       "ŞEŞÜSE",
@@ -7699,16 +7700,16 @@
   },
   {
     "id": 845,
-    "soru": "Tavlada 6-1 gelen zar",
-    "cevap": "Şeşyek",
+    "soru": "Tavlada, atılan zarların 6-3 gelmesi",
+    "cevap": "Şeşüse",
     "alternatifler": [
-      "SESYEK",
-      "ŞEŞYEK"
+      "ŞEŞÜSE",
+      "SESUSE"
     ]
   },
   {
     "id": 846,
-    "soru": "Tavlada, atılan zarların 6-1 gelmesi",
+    "soru": "Tavlada 6-1 gelen zar",
     "cevap": "Şeşyek",
     "alternatifler": [
       "SESYEK",
@@ -7726,12 +7727,11 @@
   },
   {
     "id": 848,
-    "soru": "Toplamı 11 olan iki zara, tavlada verilen ad",
-    "cevap": "Şeş beş",
+    "soru": "Tavlada, atılan zarların 6-1 gelmesi",
+    "cevap": "Şeşyek",
     "alternatifler": [
-      "SES BES",
-      "ŞEŞ BEŞ",
-      "Şeşbeş"
+      "SESYEK",
+      "ŞEŞYEK"
     ]
   },
   {
@@ -7865,11 +7865,12 @@
   },
   {
     "id": 863,
-    "soru": "Bir Yılmaz Erdoğan oyunu, Bana Bir __ Oluyor",
-    "cevap": "Şeyhler",
+    "soru": "Kafkasya'nın ünlü halk kahramanı",
+    "cevap": "Şeyh şamil",
     "alternatifler": [
-      "SEYHLER",
-      "ŞEYHLER"
+      "SEYH SAMIL",
+      "ŞEYH ŞAMIL",
+      "Şeyhşamil"
     ]
   },
   {
@@ -7883,12 +7884,11 @@
   },
   {
     "id": 865,
-    "soru": "Kafkasya'nın ünlü halk kahramanı",
-    "cevap": "Şeyh şamil",
+    "soru": "Bir Yılmaz Erdoğan oyunu, Bana Bir __ Oluyor",
+    "cevap": "Şeyhler",
     "alternatifler": [
-      "SEYH SAMIL",
-      "ŞEYH ŞAMIL",
-      "Şeyhşamil"
+      "SEYHLER",
+      "ŞEYHLER"
     ]
   },
   {
@@ -8622,6 +8622,26 @@
   },
   {
     "id": 947,
+    "soru": "Geçirilen bir hastalıktan sonra iyileşme, iyi olma",
+    "cevap": "Şifa bulma",
+    "alternatifler": [
+      "ŞIFA BULMA",
+      "SIFA BULMA",
+      "Şifabulma"
+    ]
+  },
+  {
+    "id": 948,
+    "soru": "Geçirilen bir hastalıktan sonra iyileşme, iyi olma",
+    "cevap": "Şifa bulma",
+    "alternatifler": [
+      "ŞIFA BULMA",
+      "SIFA BULMA",
+      "Şifabulma"
+    ]
+  },
+  {
+    "id": 949,
     "soru": "Eski çağlarda değişik yollarla tedavi yapan kişi",
     "cevap": "Şifacı",
     "alternatifler": [
@@ -8630,7 +8650,7 @@
     ]
   },
   {
-    "id": 948,
+    "id": 950,
     "soru": "Hastanenin eski adı",
     "cevap": "Şifahane",
     "alternatifler": [
@@ -8639,7 +8659,7 @@
     ]
   },
   {
-    "id": 949,
+    "id": 951,
     "soru": "Sivas il merkezinde yer alan tarihi medrese",
     "cevap": "Şifaiye",
     "alternatifler": [
@@ -8648,7 +8668,7 @@
     ]
   },
   {
-    "id": 950,
+    "id": 952,
     "soru": "Hasta kişiye acil olarak dilenen şeyler",
     "cevap": "Şifalar",
     "alternatifler": [
@@ -8657,41 +8677,21 @@
     ]
   },
   {
-    "id": 951,
-    "soru": "Sağlığa iyi gelen, hastalıktan kurtaran",
-    "cevap": "Şifalı",
-    "alternatifler": [
-      "ŞIFALI",
-      "SIFALI"
-    ]
-  },
-  {
-    "id": 952,
-    "soru": "Sağlığa iyi gelen, hastalıktan kurtaran",
-    "cevap": "Şifalı",
-    "alternatifler": [
-      "ŞIFALI",
-      "SIFALI"
-    ]
-  },
-  {
     "id": 953,
-    "soru": "Geçirilen bir hastalıktan sonra iyileşme, iyi olma",
-    "cevap": "Şifa bulma",
+    "soru": "Sağlığa iyi gelen, hastalıktan kurtaran",
+    "cevap": "Şifalı",
     "alternatifler": [
-      "ŞIFA BULMA",
-      "SIFA BULMA",
-      "Şifabulma"
+      "ŞIFALI",
+      "SIFALI"
     ]
   },
   {
     "id": 954,
-    "soru": "Geçirilen bir hastalıktan sonra iyileşme, iyi olma",
-    "cevap": "Şifa bulma",
+    "soru": "Sağlığa iyi gelen, hastalıktan kurtaran",
+    "cevap": "Şifalı",
     "alternatifler": [
-      "ŞIFA BULMA",
-      "SIFA BULMA",
-      "Şifabulma"
+      "ŞIFALI",
+      "SIFALI"
     ]
   },
   {
@@ -9065,11 +9065,12 @@
   },
   {
     "id": 996,
-    "soru": "Ekşili kelimesinin anagramı",
-    "cevap": "Şikeli",
+    "soru": "Sporda bir maçın sonucunu çıkar amaçlı değiştirme",
+    "cevap": "Şike yapma",
     "alternatifler": [
-      "ŞIKELI",
-      "SIKELI"
+      "SIKE YAPMA",
+      "ŞIKE YAPMA",
+      "Şikeyapma"
     ]
   },
   {
@@ -9084,12 +9085,11 @@
   },
   {
     "id": 998,
-    "soru": "Sporda bir maçın sonucunu çıkar amaçlı değiştirme",
-    "cevap": "Şike yapma",
+    "soru": "Ekşili kelimesinin anagramı",
+    "cevap": "Şikeli",
     "alternatifler": [
-      "SIKE YAPMA",
-      "ŞIKE YAPMA",
-      "Şikeyapma"
+      "ŞIKELI",
+      "SIKELI"
     ]
   },
   {
@@ -9586,29 +9586,32 @@
   },
   {
     "id": 1053,
-    "soru": "Üzüm bağları ile ünlü İzmir köyü",
-    "cevap": "Şirince",
+    "soru": "Gargamel'in sevmediği köyün en yaşlısı",
+    "cevap": "Şirin baba",
     "alternatifler": [
-      "ŞIRINCE",
-      "SIRINCE"
+      "ŞIRIN BABA",
+      "SIRIN BABA",
+      "Şirinbaba"
     ]
   },
   {
     "id": 1054,
-    "soru": "Beyaz boyalı tarihi evleriyle tanınan İzmir köyü",
-    "cevap": "Şirince",
+    "soru": "Gargamel'in sevmediği köyün en yaşlısı",
+    "cevap": "Şirin baba",
     "alternatifler": [
-      "ŞIRINCE",
-      "SIRINCE"
+      "ŞIRIN BABA",
+      "SIRIN BABA",
+      "Şirinbaba"
     ]
   },
   {
     "id": 1055,
-    "soru": "2012 felaketinden kaçanların sığındığı İzmir köyü",
-    "cevap": "Şirince",
+    "soru": "Gargamel'in sevmediği köyün en yaşlısı",
+    "cevap": "Şirin baba",
     "alternatifler": [
-      "ŞIRINCE",
-      "SIRINCE"
+      "ŞIRIN BABA",
+      "SIRIN BABA",
+      "Şirinbaba"
     ]
   },
   {
@@ -9622,7 +9625,7 @@
   },
   {
     "id": 1057,
-    "soru": "İzmir Selçuk ilçesinde bulunan turistik bir köy",
+    "soru": "Beyaz boyalı tarihi evleriyle tanınan İzmir köyü",
     "cevap": "Şirince",
     "alternatifler": [
       "ŞIRINCE",
@@ -9631,7 +9634,7 @@
   },
   {
     "id": 1058,
-    "soru": "2012'de insanlar kıyamet korkusuyla bu köye kaçtı",
+    "soru": "2012 felaketinden kaçanların sığındığı İzmir köyü",
     "cevap": "Şirince",
     "alternatifler": [
       "ŞIRINCE",
@@ -9640,7 +9643,7 @@
   },
   {
     "id": 1059,
-    "soru": "İzmir Selçuk ilçesinde bulunan turistik bir köy",
+    "soru": "Üzüm bağları ile ünlü İzmir köyü",
     "cevap": "Şirince",
     "alternatifler": [
       "ŞIRINCE",
@@ -9649,24 +9652,33 @@
   },
   {
     "id": 1060,
-    "soru": "Mavi çizgi film kahramanlarının içindeki tek dişi",
-    "cevap": "Şirine",
+    "soru": "İzmir Selçuk ilçesinde bulunan turistik bir köy",
+    "cevap": "Şirince",
     "alternatifler": [
-      "ŞIRINE",
-      "SIRINE"
+      "ŞIRINCE",
+      "SIRINCE"
     ]
   },
   {
     "id": 1061,
-    "soru": "Mavi çizgi film kahramanlarının içindeki tek dişi",
-    "cevap": "Şirine",
+    "soru": "2012'de insanlar kıyamet korkusuyla bu köye kaçtı",
+    "cevap": "Şirince",
     "alternatifler": [
-      "ŞIRINE",
-      "SIRINE"
+      "ŞIRINCE",
+      "SIRINCE"
     ]
   },
   {
     "id": 1062,
+    "soru": "İzmir Selçuk ilçesinde bulunan turistik bir köy",
+    "cevap": "Şirince",
+    "alternatifler": [
+      "ŞIRINCE",
+      "SIRINCE"
+    ]
+  },
+  {
+    "id": 1063,
     "soru": "Mavi çizgi film kahramanlarının içindeki tek dişi",
     "cevap": "Şirine",
     "alternatifler": [
@@ -9675,7 +9687,25 @@
     ]
   },
   {
-    "id": 1063,
+    "id": 1064,
+    "soru": "Mavi çizgi film kahramanlarının içindeki tek dişi",
+    "cevap": "Şirine",
+    "alternatifler": [
+      "ŞIRINE",
+      "SIRINE"
+    ]
+  },
+  {
+    "id": 1065,
+    "soru": "Mavi çizgi film kahramanlarının içindeki tek dişi",
+    "cevap": "Şirine",
+    "alternatifler": [
+      "ŞIRINE",
+      "SIRINE"
+    ]
+  },
+  {
+    "id": 1066,
     "soru": "Uslu çocukların bir gün görebileceği mavi canlılar",
     "cevap": "Şirinler",
     "alternatifler": [
@@ -9684,7 +9714,7 @@
     ]
   },
   {
-    "id": 1064,
+    "id": 1067,
     "soru": "Mavi tenli küçük yaratıklar ile ilgili çizgi film",
     "cevap": "Şirinler",
     "alternatifler": [
@@ -9693,7 +9723,7 @@
     ]
   },
   {
-    "id": 1065,
+    "id": 1068,
     "soru": "Küçük, mavi karakterleriyle bilinen animasyon",
     "cevap": "Şirinler",
     "alternatifler": [
@@ -9702,7 +9732,7 @@
     ]
   },
   {
-    "id": 1066,
+    "id": 1069,
     "soru": "Küçük mavi karakterleri konu alan çizgi film",
     "cevap": "Şirinler",
     "alternatifler": [
@@ -9711,7 +9741,7 @@
     ]
   },
   {
-    "id": 1067,
+    "id": 1070,
     "soru": "Mavi renkli çizgi film karakterleri",
     "cevap": "Şirinler",
     "alternatifler": [
@@ -9720,35 +9750,8 @@
     ]
   },
   {
-    "id": 1068,
-    "soru": "Kötü karakteri Gargamel olan çizgi film",
-    "cevap": "Şirinler",
-    "alternatifler": [
-      "SIRINLER",
-      "ŞIRINLER"
-    ]
-  },
-  {
-    "id": 1069,
-    "soru": "Gargamel'in yakalamaya çalıştığı mavi yaratıklar",
-    "cevap": "Şirinler",
-    "alternatifler": [
-      "SIRINLER",
-      "ŞIRINLER"
-    ]
-  },
-  {
-    "id": 1070,
-    "soru": "Kötü karakteri Gargamel olan çizgi film",
-    "cevap": "Şirinler",
-    "alternatifler": [
-      "SIRINLER",
-      "ŞIRINLER"
-    ]
-  },
-  {
     "id": 1071,
-    "soru": "Küçük, mavi çizgi film karakterleri",
+    "soru": "Kötü karakteri Gargamel olan çizgi film",
     "cevap": "Şirinler",
     "alternatifler": [
       "SIRINLER",
@@ -9757,24 +9760,6 @@
   },
   {
     "id": 1072,
-    "soru": "Gargamel karakteri bu çizgi filmdendir",
-    "cevap": "Şirinler",
-    "alternatifler": [
-      "SIRINLER",
-      "ŞIRINLER"
-    ]
-  },
-  {
-    "id": 1073,
-    "soru": "Azman'ın yeme hayali kurduğu mavi karakterler",
-    "cevap": "Şirinler",
-    "alternatifler": [
-      "SIRINLER",
-      "ŞIRINLER"
-    ]
-  },
-  {
-    "id": 1074,
     "soru": "Gargamel'in yakalamaya çalıştığı mavi yaratıklar",
     "cevap": "Şirinler",
     "alternatifler": [
@@ -9783,8 +9768,26 @@
     ]
   },
   {
+    "id": 1073,
+    "soru": "Kötü karakteri Gargamel olan çizgi film",
+    "cevap": "Şirinler",
+    "alternatifler": [
+      "SIRINLER",
+      "ŞIRINLER"
+    ]
+  },
+  {
+    "id": 1074,
+    "soru": "Küçük, mavi çizgi film karakterleri",
+    "cevap": "Şirinler",
+    "alternatifler": [
+      "SIRINLER",
+      "ŞIRINLER"
+    ]
+  },
+  {
     "id": 1075,
-    "soru": "Azman'ın yeme hayali kurduğu mavi karakterler",
+    "soru": "Gargamel karakteri bu çizgi filmdendir",
     "cevap": "Şirinler",
     "alternatifler": [
       "SIRINLER",
@@ -9811,7 +9814,7 @@
   },
   {
     "id": 1078,
-    "soru": "Gargamel'in yakalamaya çalıştığı mavi yaratıklar",
+    "soru": "Azman'ın yeme hayali kurduğu mavi karakterler",
     "cevap": "Şirinler",
     "alternatifler": [
       "SIRINLER",
@@ -9820,6 +9823,33 @@
   },
   {
     "id": 1079,
+    "soru": "Azman'ın yeme hayali kurduğu mavi karakterler",
+    "cevap": "Şirinler",
+    "alternatifler": [
+      "SIRINLER",
+      "ŞIRINLER"
+    ]
+  },
+  {
+    "id": 1080,
+    "soru": "Gargamel'in yakalamaya çalıştığı mavi yaratıklar",
+    "cevap": "Şirinler",
+    "alternatifler": [
+      "SIRINLER",
+      "ŞIRINLER"
+    ]
+  },
+  {
+    "id": 1081,
+    "soru": "Gargamel'in yakalamaya çalıştığı mavi yaratıklar",
+    "cevap": "Şirinler",
+    "alternatifler": [
+      "SIRINLER",
+      "ŞIRINLER"
+    ]
+  },
+  {
+    "id": 1082,
     "soru": "İzmir'in Buca ilçesinde yer alan hipodrom",
     "cevap": "Şirinyer",
     "alternatifler": [
@@ -9828,42 +9858,12 @@
     ]
   },
   {
-    "id": 1080,
+    "id": 1083,
     "soru": "Türkiye'de ilk at yarışı yapılan İzmir hipodromu",
     "cevap": "Şirinyer",
     "alternatifler": [
       "ŞIRINYER",
       "SIRINYER"
-    ]
-  },
-  {
-    "id": 1081,
-    "soru": "Gargamel'in sevmediği köyün en yaşlısı",
-    "cevap": "Şirin baba",
-    "alternatifler": [
-      "ŞIRIN BABA",
-      "SIRIN BABA",
-      "Şirinbaba"
-    ]
-  },
-  {
-    "id": 1082,
-    "soru": "Gargamel'in sevmediği köyün en yaşlısı",
-    "cevap": "Şirin baba",
-    "alternatifler": [
-      "ŞIRIN BABA",
-      "SIRIN BABA",
-      "Şirinbaba"
-    ]
-  },
-  {
-    "id": 1083,
-    "soru": "Gargamel'in sevmediği köyün en yaşlısı",
-    "cevap": "Şirin baba",
-    "alternatifler": [
-      "ŞIRIN BABA",
-      "SIRIN BABA",
-      "Şirinbaba"
     ]
   },
   {
@@ -10021,33 +10021,16 @@
   },
   {
     "id": 1101,
-    "soru": "Paşabahçe'nin ana firması",
-    "cevap": "Şişecam",
+    "soru": "Bir Türk, bu yemek sayesinde Guinness'e girmişti",
+    "cevap": "Şiş kebap",
     "alternatifler": [
-      "SISECAM",
-      "ŞIŞECAM"
+      "SIS KEBAP",
+      "ŞIŞ KEBAP",
+      "Şişkebap"
     ]
   },
   {
     "id": 1102,
-    "soru": "Bir sıvıyı, dar ağızlı uzun kaplara doldurmak",
-    "cevap": "Şişelemek",
-    "alternatifler": [
-      "SISELEMEK",
-      "ŞIŞELEMEK"
-    ]
-  },
-  {
-    "id": 1103,
-    "soru": "Bir sıvıyı, dar ağızlı uzun kaplara doldurmak",
-    "cevap": "Şişelemek",
-    "alternatifler": [
-      "SISELEMEK",
-      "ŞIŞELEMEK"
-    ]
-  },
-  {
-    "id": 1104,
     "soru": "Çok kalın gözlük camları buna benzetilir",
     "cevap": "Şişe dibi",
     "alternatifler": [
@@ -10057,7 +10040,34 @@
     ]
   },
   {
+    "id": 1103,
+    "soru": "Paşabahçe'nin ana firması",
+    "cevap": "Şişecam",
+    "alternatifler": [
+      "SISECAM",
+      "ŞIŞECAM"
+    ]
+  },
+  {
+    "id": 1104,
+    "soru": "Bir sıvıyı, dar ağızlı uzun kaplara doldurmak",
+    "cevap": "Şişelemek",
+    "alternatifler": [
+      "SISELEMEK",
+      "ŞIŞELEMEK"
+    ]
+  },
+  {
     "id": 1105,
+    "soru": "Bir sıvıyı, dar ağızlı uzun kaplara doldurmak",
+    "cevap": "Şişelemek",
+    "alternatifler": [
+      "SISELEMEK",
+      "ŞIŞELEMEK"
+    ]
+  },
+  {
+    "id": 1106,
     "soru": "Namlusunda altı yiv olan tüfek; İstanbul semti",
     "cevap": "Şişhane",
     "alternatifler": [
@@ -10066,7 +10076,7 @@
     ]
   },
   {
-    "id": 1106,
+    "id": 1107,
     "soru": "Tarihi Tünel'in bağladığı iki semt, Karaköy __",
     "cevap": "Şişhane",
     "alternatifler": [
@@ -10075,7 +10085,7 @@
     ]
   },
   {
-    "id": 1107,
+    "id": 1108,
     "soru": "Mecazen, hiç özenilmeden yapılmış kötü iş",
     "cevap": "Şişirme",
     "alternatifler": [
@@ -10084,17 +10094,8 @@
     ]
   },
   {
-    "id": 1108,
-    "soru": "Futbolda topu uzun bir mesafeye havadan yollamak",
-    "cevap": "Şişirmek",
-    "alternatifler": [
-      "SISIRMEK",
-      "ŞIŞIRMEK"
-    ]
-  },
-  {
     "id": 1109,
-    "soru": "Balonun içine hava üfleyerek büyümesini sağlamak",
+    "soru": "Futbolda topu uzun bir mesafeye havadan yollamak",
     "cevap": "Şişirmek",
     "alternatifler": [
       "SISIRMEK",
@@ -10103,7 +10104,7 @@
   },
   {
     "id": 1110,
-    "soru": "Futbolda topu uzun bir mesafeye havadan yollamak",
+    "soru": "Balonun içine hava üfleyerek büyümesini sağlamak",
     "cevap": "Şişirmek",
     "alternatifler": [
       "SISIRMEK",
@@ -10112,6 +10113,15 @@
   },
   {
     "id": 1111,
+    "soru": "Futbolda topu uzun bir mesafeye havadan yollamak",
+    "cevap": "Şişirmek",
+    "alternatifler": [
+      "SISIRMEK",
+      "ŞIŞIRMEK"
+    ]
+  },
+  {
+    "id": 1112,
     "soru": "İçi hava ile doldurulmuş",
     "cevap": "Şişkin",
     "alternatifler": [
@@ -10120,17 +10130,8 @@
     ]
   },
   {
-    "id": 1112,
-    "soru": "Gaz yapıcı yiyecekler yenince midede oluşur",
-    "cevap": "Şişkinlik",
-    "alternatifler": [
-      "SISKINLIK",
-      "ŞIŞKINLIK"
-    ]
-  },
-  {
     "id": 1113,
-    "soru": "Mide ve bağırsaklardaki gazın yarattığı durum",
+    "soru": "Gaz yapıcı yiyecekler yenince midede oluşur",
     "cevap": "Şişkinlik",
     "alternatifler": [
       "SISKINLIK",
@@ -10148,7 +10149,7 @@
   },
   {
     "id": 1115,
-    "soru": "Gaz yapıcı yiyecekler yenince midede oluşur",
+    "soru": "Mide ve bağırsaklardaki gazın yarattığı durum",
     "cevap": "Şişkinlik",
     "alternatifler": [
       "SISKINLIK",
@@ -10157,7 +10158,7 @@
   },
   {
     "id": 1116,
-    "soru": "Karın bölgesinde, hazımsızlığa yol açan gerginlik",
+    "soru": "Gaz yapıcı yiyecekler yenince midede oluşur",
     "cevap": "Şişkinlik",
     "alternatifler": [
       "SISKINLIK",
@@ -10166,11 +10167,11 @@
   },
   {
     "id": 1117,
-    "soru": "Çekilmiş kuzu etiyle yapılan bir tür kebap",
-    "cevap": "Şişköfte",
+    "soru": "Karın bölgesinde, hazımsızlığa yol açan gerginlik",
+    "cevap": "Şişkinlik",
     "alternatifler": [
-      "SISKOFTE",
-      "ŞIŞKÖFTE"
+      "SISKINLIK",
+      "ŞIŞKINLIK"
     ]
   },
   {
@@ -10184,6 +10185,15 @@
   },
   {
     "id": 1119,
+    "soru": "Çekilmiş kuzu etiyle yapılan bir tür kebap",
+    "cevap": "Şişköfte",
+    "alternatifler": [
+      "SISKOFTE",
+      "ŞIŞKÖFTE"
+    ]
+  },
+  {
+    "id": 1120,
     "soru": "Argoda, delici aletle yaralamak",
     "cevap": "Şişlemek",
     "alternatifler": [
@@ -10192,21 +10202,12 @@
     ]
   },
   {
-    "id": 1120,
+    "id": 1121,
     "soru": "Argoda, kesici bir aletle birisini yaralamak",
     "cevap": "Şişlemek",
     "alternatifler": [
       "SISLEMEK",
       "ŞIŞLEMEK"
-    ]
-  },
-  {
-    "id": 1121,
-    "soru": "Ödemin en belirgin semptomu",
-    "cevap": "Şişlik",
-    "alternatifler": [
-      "SISLIK",
-      "ŞIŞLIK"
     ]
   },
   {
@@ -10220,6 +10221,15 @@
   },
   {
     "id": 1123,
+    "soru": "Ödemin en belirgin semptomu",
+    "cevap": "Şişlik",
+    "alternatifler": [
+      "SISLIK",
+      "ŞIŞLIK"
+    ]
+  },
+  {
+    "id": 1124,
     "soru": "Fazla kilolu kişi",
     "cevap": "Şişman",
     "alternatifler": [
@@ -10228,7 +10238,7 @@
     ]
   },
   {
-    "id": 1124,
+    "id": 1125,
     "soru": "Çok kilo almış kişi",
     "cevap": "Şişman",
     "alternatifler": [
@@ -10237,7 +10247,7 @@
     ]
   },
   {
-    "id": 1125,
+    "id": 1126,
     "soru": "James Mangold'un ilk uzun metrajlı filmi",
     "cevap": "Şişman",
     "alternatifler": [
@@ -10246,17 +10256,8 @@
     ]
   },
   {
-    "id": 1126,
-    "soru": "Normal ölçülerin üzerinde kilolu olma durumu",
-    "cevap": "Şişmanlık",
-    "alternatifler": [
-      "ŞIŞMANLIK",
-      "SISMANLIK"
-    ]
-  },
-  {
     "id": 1127,
-    "soru": "Normal kabul edilen kilonun çok üzerinde olma",
+    "soru": "Normal ölçülerin üzerinde kilolu olma durumu",
     "cevap": "Şişmanlık",
     "alternatifler": [
       "ŞIŞMANLIK",
@@ -10265,24 +10266,6 @@
   },
   {
     "id": 1128,
-    "soru": "Obezitenin en belirgin semptomu",
-    "cevap": "Şişmanlık",
-    "alternatifler": [
-      "ŞIŞMANLIK",
-      "SISMANLIK"
-    ]
-  },
-  {
-    "id": 1129,
-    "soru": "Normal ölçülerin üzerinde kilolu olma durumu",
-    "cevap": "Şişmanlık",
-    "alternatifler": [
-      "ŞIŞMANLIK",
-      "SISMANLIK"
-    ]
-  },
-  {
-    "id": 1130,
     "soru": "Normal kabul edilen kilonun çok üzerinde olma",
     "cevap": "Şişmanlık",
     "alternatifler": [
@@ -10291,22 +10274,39 @@
     ]
   },
   {
+    "id": 1129,
+    "soru": "Obezitenin en belirgin semptomu",
+    "cevap": "Şişmanlık",
+    "alternatifler": [
+      "ŞIŞMANLIK",
+      "SISMANLIK"
+    ]
+  },
+  {
+    "id": 1130,
+    "soru": "Normal ölçülerin üzerinde kilolu olma durumu",
+    "cevap": "Şişmanlık",
+    "alternatifler": [
+      "ŞIŞMANLIK",
+      "SISMANLIK"
+    ]
+  },
+  {
     "id": 1131,
+    "soru": "Normal kabul edilen kilonun çok üzerinde olma",
+    "cevap": "Şişmanlık",
+    "alternatifler": [
+      "ŞIŞMANLIK",
+      "SISMANLIK"
+    ]
+  },
+  {
+    "id": 1132,
     "soru": "Şimşek kelimesinin her harfini içerir; genişlemek",
     "cevap": "Şişmek",
     "alternatifler": [
       "SISMEK",
       "ŞIŞMEK"
-    ]
-  },
-  {
-    "id": 1132,
-    "soru": "Bir Türk, bu yemek sayesinde Guinness'e girmişti",
-    "cevap": "Şiş kebap",
-    "alternatifler": [
-      "SIS KEBAP",
-      "ŞIŞ KEBAP",
-      "Şişkebap"
     ]
   },
   {
@@ -10830,21 +10830,21 @@
   },
   {
     "id": 1190,
-    "soru": "Gösteri yapan adam",
-    "cevap": "Şovmen",
-    "alternatifler": [
-      "SOVMEN",
-      "ŞOVMEN"
-    ]
-  },
-  {
-    "id": 1191,
     "soru": "Nilüfer ve Model grubunun birlikte çalıştığı şarkı",
     "cevap": "Şov yapma",
     "alternatifler": [
       "SOV YAPMA",
       "ŞOV YAPMA",
       "Şovyapma"
+    ]
+  },
+  {
+    "id": 1191,
+    "soru": "Gösteri yapan adam",
+    "cevap": "Şovmen",
+    "alternatifler": [
+      "SOVMEN",
+      "ŞOVMEN"
     ]
   },
   {
@@ -11344,107 +11344,6 @@
   },
   {
     "id": 1247,
-    "soru": "Şanlıurfa'nın Harran ilçesinde bulunan antik şehir",
-    "cevap": "Şuayip",
-    "alternatifler": [
-      "SUAYIP",
-      "ŞUAYIP"
-    ]
-  },
-  {
-    "id": 1248,
-    "soru": "__ sonundan, Mart'ın onundan kork; atasözü",
-    "cevap": "Şubatın",
-    "alternatifler": [
-      "SUBATIN",
-      "ŞUBATIN"
-    ]
-  },
-  {
-    "id": 1249,
-    "soru": "__ sonundan, Mart'ın onundan kork; atasözü",
-    "cevap": "Şubatın",
-    "alternatifler": [
-      "SUBATIN",
-      "ŞUBATIN"
-    ]
-  },
-  {
-    "id": 1250,
-    "soru": "Tuşlamak sözünün her harfine sahip; argoda, kovmak",
-    "cevap": "Şutlamak",
-    "alternatifler": [
-      "ŞUTLAMAK",
-      "SUTLAMAK"
-    ]
-  },
-  {
-    "id": 1251,
-    "soru": "Futbolda gol atmak için, topa ayakla sertçe vurmak",
-    "cevap": "Şut çekmek",
-    "alternatifler": [
-      "ŞUT ÇEKMEK",
-      "SUT CEKMEK",
-      "Şutçekmek"
-    ]
-  },
-  {
-    "id": 1252,
-    "soru": "Bastırılmış duyguların saklandığı zihin bölgesi",
-    "cevap": "Şuuraltı",
-    "alternatifler": [
-      "ŞUURALTI",
-      "SUURALTI"
-    ]
-  },
-  {
-    "id": 1253,
-    "soru": "Bastırılmış duygu ve düşüncelerin bulunduğu yer",
-    "cevap": "Şuuraltı",
-    "alternatifler": [
-      "ŞUURALTI",
-      "SUURALTI"
-    ]
-  },
-  {
-    "id": 1254,
-    "soru": "Ruh biliminde bilinçdışı",
-    "cevap": "Şuuraltı",
-    "alternatifler": [
-      "ŞUURALTI",
-      "SUURALTI"
-    ]
-  },
-  {
-    "id": 1255,
-    "soru": "Kendi davranışlarını ayırt edebilen, bilinçli",
-    "cevap": "Şuurlu",
-    "alternatifler": [
-      "ŞUURLU",
-      "SUURLU"
-    ]
-  },
-  {
-    "id": 1256,
-    "soru": "Yaptığının bilincinde olmayan, kendini bilmeyen",
-    "cevap": "Şuursuz",
-    "alternatifler": [
-      "ŞUURSUZ",
-      "SUURSUZ"
-    ]
-  },
-  {
-    "id": 1257,
-    "soru": "Bilinç kaybı yaşamış, bilincini yitirmiş",
-    "cevap": "Şuursuz",
-    "alternatifler": [
-      "ŞUURSUZ",
-      "SUURSUZ"
-    ]
-
-  },
-  {
-    "id": 1259,
     "soru": "Bir türküde, üzerindeki kar olmak istenen yer",
     "cevap": "Şu dağlar",
     "alternatifler": [
@@ -11454,7 +11353,7 @@
     ]
   },
   {
-    "id": 1260,
+    "id": 1248,
     "soru": "Profiteroldeki her bir top bundan yapılır",
     "cevap": "Şu hamuru",
     "alternatifler": [
@@ -11464,7 +11363,7 @@
     ]
   },
   {
-    "id": 1261,
+    "id": 1249,
     "soru": "Profiteroldeki her bir top bundan yapılır",
     "cevap": "Şu hamuru",
     "alternatifler": [
@@ -11474,7 +11373,7 @@
     ]
   },
   {
-    "id": 1262,
+    "id": 1250,
     "soru": "Linet'in seslendirdiği Sezen Aksu şarkısı",
     "cevap": "Şu saniye",
     "alternatifler": [
@@ -11484,7 +11383,107 @@
     ]
   },
   {
-    "id": 1263,
+    "id": 1251,
+    "soru": "Şanlıurfa'nın Harran ilçesinde bulunan antik şehir",
+    "cevap": "Şuayip",
+    "alternatifler": [
+      "SUAYIP",
+      "ŞUAYIP"
+    ]
+  },
+  {
+    "id": 1252,
+    "soru": "__ sonundan, Mart'ın onundan kork; atasözü",
+    "cevap": "Şubatın",
+    "alternatifler": [
+      "SUBATIN",
+      "ŞUBATIN"
+    ]
+  },
+  {
+    "id": 1253,
+    "soru": "__ sonundan, Mart'ın onundan kork; atasözü",
+    "cevap": "Şubatın",
+    "alternatifler": [
+      "SUBATIN",
+      "ŞUBATIN"
+    ]
+  },
+  {
+    "id": 1254,
+    "soru": "Futbolda gol atmak için, topa ayakla sertçe vurmak",
+    "cevap": "Şut çekmek",
+    "alternatifler": [
+      "ŞUT ÇEKMEK",
+      "SUT CEKMEK",
+      "Şutçekmek"
+    ]
+  },
+  {
+    "id": 1255,
+    "soru": "Tuşlamak sözünün her harfine sahip; argoda, kovmak",
+    "cevap": "Şutlamak",
+    "alternatifler": [
+      "ŞUTLAMAK",
+      "SUTLAMAK"
+    ]
+  },
+  {
+    "id": 1256,
+    "soru": "Bastırılmış duyguların saklandığı zihin bölgesi",
+    "cevap": "Şuuraltı",
+    "alternatifler": [
+      "ŞUURALTI",
+      "SUURALTI"
+    ]
+  },
+  {
+    "id": 1257,
+    "soru": "Bastırılmış duygu ve düşüncelerin bulunduğu yer",
+    "cevap": "Şuuraltı",
+    "alternatifler": [
+      "ŞUURALTI",
+      "SUURALTI"
+    ]
+  },
+  {
+    "id": 1258,
+    "soru": "Ruh biliminde bilinçdışı",
+    "cevap": "Şuuraltı",
+    "alternatifler": [
+      "ŞUURALTI",
+      "SUURALTI"
+    ]
+  },
+  {
+    "id": 1259,
+    "soru": "Kendi davranışlarını ayırt edebilen, bilinçli",
+    "cevap": "Şuurlu",
+    "alternatifler": [
+      "ŞUURLU",
+      "SUURLU"
+    ]
+  },
+  {
+    "id": 1260,
+    "soru": "Yaptığının bilincinde olmayan, kendini bilmeyen",
+    "cevap": "Şuursuz",
+    "alternatifler": [
+      "ŞUURSUZ",
+      "SUURSUZ"
+    ]
+  },
+  {
+    "id": 1261,
+    "soru": "Bilinç kaybı yaşamış, bilincini yitirmiş",
+    "cevap": "Şuursuz",
+    "alternatifler": [
+      "ŞUURSUZ",
+      "SUURSUZ"
+    ]
+  },
+  {
+    "id": 1262,
     "soru": "Mehmet Akif Ersoy'a göre, toprağı sıkınca fışkırır",
     "cevap": "Şüheda",
     "alternatifler": [
@@ -11493,7 +11492,7 @@
     ]
   },
   {
-    "id": 1264,
+    "id": 1263,
     "soru": "Milli marşta da geçen, şehit kelimesinin çoğulu",
     "cevap": "Şüheda",
     "alternatifler": [
@@ -11502,7 +11501,7 @@
     ]
   },
   {
-    "id": 1265,
+    "id": 1264,
     "soru": "Bir kadın ismi, anlamı teşekkürdür",
     "cevap": "Şükran",
     "alternatifler": [
@@ -11511,7 +11510,7 @@
     ]
   },
   {
-    "id": 1266,
+    "id": 1265,
     "soru": "En Son Babalar Duyar'da Ayşegül Atik'in karakteri",
     "cevap": "Şükran",
     "alternatifler": [
@@ -11520,7 +11519,7 @@
     ]
   },
   {
-    "id": 1267,
+    "id": 1266,
     "soru": "Karşıtı küfran olan, minnettarlık ifade eden söz",
     "cevap": "Şükran",
     "alternatifler": [
@@ -11529,7 +11528,7 @@
     ]
   },
   {
-    "id": 1268,
+    "id": 1267,
     "soru": "Gönül borcu, minnet",
     "cevap": "Şükran",
     "alternatifler": [
@@ -11538,7 +11537,7 @@
     ]
   },
   {
-    "id": 1269,
+    "id": 1268,
     "soru": "__ Ovalı, 1985 İzmir doğumlu Türk aktris",
     "cevap": "Şükran",
     "alternatifler": [
@@ -11547,7 +11546,7 @@
     ]
   },
   {
-    "id": 1270,
+    "id": 1269,
     "soru": "Gönül borcu, minnet",
     "cevap": "Şükran",
     "alternatifler": [
@@ -11556,7 +11555,7 @@
     ]
   },
   {
-    "id": 1271,
+    "id": 1270,
     "soru": "Müşterek kelimesinin anagramı",
     "cevap": "Şükretme",
     "alternatifler": [
@@ -11565,12 +11564,21 @@
     ]
   },
   {
-    "id": 1272,
+    "id": 1271,
     "soru": "Türk halk müziği sanatçısı, __ Tutkun",
     "cevap": "Şükriye",
     "alternatifler": [
       "SUKRIYE",
       "ŞÜKRIYE"
+    ]
+  },
+  {
+    "id": 1272,
+    "soru": "Geniş Aile'de Zuhal Topal'ın karakterinin adıydı",
+    "cevap": "Şükufe",
+    "alternatifler": [
+      "SUKUFE",
+      "ŞÜKUFE"
     ]
   },
   {
@@ -11584,16 +11592,16 @@
   },
   {
     "id": 1274,
-    "soru": "Geniş Aile'de Zuhal Topal'ın karakterinin adıydı",
-    "cevap": "Şükufe",
+    "soru": "Suç işlediği düşünülen kişi",
+    "cevap": "Şüpheli",
     "alternatifler": [
-      "SUKUFE",
-      "ŞÜKUFE"
+      "SUPHELI",
+      "ŞÜPHELI"
     ]
   },
   {
     "id": 1275,
-    "soru": "Suç işlediği düşünülen kişi",
+    "soru": "Suç işlediği iddia edilen kişi",
     "cevap": "Şüpheli",
     "alternatifler": [
       "SUPHELI",
@@ -11602,15 +11610,6 @@
   },
   {
     "id": 1276,
-    "soru": "Suç işlediği iddia edilen kişi",
-    "cevap": "Şüpheli",
-    "alternatifler": [
-      "SUPHELI",
-      "ŞÜPHELI"
-    ]
-  },
-  {
-    "id": 1277,
     "soru": "Bir suçu işlediği düşünülen kimse",
     "cevap": "Şüpheli",
     "alternatifler": [
@@ -11619,7 +11618,7 @@
     ]
   },
   {
-    "id": 1278,
+    "id": 1277,
     "soru": "Suç işlediği düşünülen kişi",
     "cevap": "Şüpheli",
     "alternatifler": [
@@ -11628,7 +11627,7 @@
     ]
   },
   {
-    "id": 1279,
+    "id": 1278,
     "soru": "Kuşku uyandıran",
     "cevap": "Şüpheli",
     "alternatifler": [
@@ -11637,7 +11636,7 @@
     ]
   },
   {
-    "id": 1280,
+    "id": 1279,
     "soru": "Suça karışmış olmasından kuşkulanılan, zanlı",
     "cevap": "Şüpheli",
     "alternatifler": [
@@ -11646,7 +11645,7 @@
     ]
   },
   {
-    "id": 1281,
+    "id": 1280,
     "soru": "Suç işlediği düşünülen kişi",
     "cevap": "Şüpheli",
     "alternatifler": [
@@ -11655,7 +11654,7 @@
     ]
   },
   {
-    "id": 1282,
+    "id": 1281,
     "soru": "Suç işlediği iddia edilen kişi",
     "cevap": "Şüpheli",
     "alternatifler": [
@@ -11664,7 +11663,7 @@
     ]
   },
   {
-    "id": 1283,
+    "id": 1282,
     "soru": "Kuşkuyu ortadan kaldıracak biçimde",
     "cevap": "Şüphesiz",
     "alternatifler": [
