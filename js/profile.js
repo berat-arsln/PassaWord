@@ -252,6 +252,7 @@ window.profilOlustur = function () {
     .then(() => {
       localStorage.setItem("pw_aktif_profil", yeniProfil.id);
       aktifProfilUiGuncelle();
+      onlineDurumBaslat();
       document.getElementById("hosgeldinIsim").textContent = isim;
       document.getElementById("profilOlusturKutu").style.display = "none";
       const hazir = document.getElementById("hazirEkrani");
@@ -291,6 +292,7 @@ window.yeniProfilEkle = function () {
 
   // UI'ı hemen güncelle
   aktifProfilUiGuncelle();
+  onlineDurumBaslat();
   document.getElementById("hosgeldinIsim").textContent = ad;
   document.getElementById("profilOlusturKutu").style.display = "none";
   const hazir = document.getElementById("hazirEkrani");
@@ -362,6 +364,7 @@ function profilListesiniGuncelle() {
       hazir.style.alignItems = "center";
       hazir.style.gap = "16px";
       aktifProfilUiGuncelle();
+      onlineDurumBaslat();
       // Yeni aktif profil için silme dinleyicisini başlat
       aktifProfilSilmeDinleyicisiBaslat(profil.id, profil.yedekKod);
     });
