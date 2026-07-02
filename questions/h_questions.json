@@ -5628,8 +5628,7 @@
     "soru": "Hızı, saatte 100 km'yi geçebilen soluk boşalması",
     "cevap": "Hapşırık",
     "alternatifler": [
-      "HAPSIRIK",
-      "HAPŞIRIK"
+      "hapşırmak"
     ]
   },
   {
